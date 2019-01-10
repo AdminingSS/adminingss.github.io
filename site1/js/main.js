@@ -67,7 +67,7 @@ $(document).ready(function() {
   
   // Header scroll top
   
-  $(window).scroll(function(){
+  /*$(window).scroll(function(){
     if($(window).width() > 1240){
       if($(window).scrollTop() > 40){
         $('.header').css('padding-bottom', 16);
@@ -79,7 +79,7 @@ $(document).ready(function() {
         $('.logo').css('padding-top', 18);
       }
     }
-  });
+  });*/
   
   // Footer list
   

@@ -1,10 +1,558 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RUStrains</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="4iffRkuOQ8hhT2tj8XptOE5mHIKL5SzJ1z1Rcrtx">
+
+    <link rel="stylesheet" href="site1/css/slick.css">
+    <link rel="stylesheet" href="site1/css/fonts.css">
+    <link rel="stylesheet" href="site1/css/fontawesome-all.css">
+    <link rel="stylesheet" href="site1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site1/css/swiper.min.css">
+    <link rel="stylesheet" href="site1/css/select2.min.css">
+    <link rel="stylesheet" href="site1/scss/style.css">
+
+     <!-- #TODO need to remove it later -->
+    <link rel="stylesheet" href="site1/css/media.css">
 </head>
+
 <body>
+<div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <div class="burger-wrap">
+            <div class="burger"></div>
+            <span class="burger-text">menu</span>
+        </div>
+        <div class="menu-body">
+            <div class="menu-content">
+                <div class="menu-close">
+                    close
+                    <i class="fa fa-window-close"></i>
+                </div>
+                <form action="post" class="btn-items">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                            en
+                        </button>
+                        <ul class="dropdown-menu">
+
+                            <li class="dropdown-item"><a href="http://rustrains.com">en</a></li>
+                            <li class="dropdown-item"><a href="http://de.rustrains.com">de</a></li>
+                            <li class="dropdown-item"><a href="http://pl.rustrains.com">pl</a></li>
+                            <li class="dropdown-item"><a href="http://cn.rustrains.com">zh</a></li>
+                            <li class="dropdown-item"><a href="http://jp.rustrains.com">ja</a></li>
+                            <li class="dropdown-item"><a href="http://tr.rustrains.com">tr</a></li>
+                            <li class="dropdown-item"><a href="http://ko.rustrains.com">ko</a></li>
+                            <li class="dropdown-item"><a href="http://fi.rustrains.com">fi</a></li>
+                            <li class="dropdown-item"><a href="http://se.rustrains.com">swe</a></li>
+                            <li class="dropdown-item"><a href="http://es.rustrains.com">es</a></li>
+                            <li class="dropdown-item"><a href="http://pt.rustrains.com">pt</a></li>
+                            <li class="dropdown-item"><a href="http://it.rustrains.com">it</a></li>
+                            <li class="dropdown-item"><a href="http://fr.rustrains.com">fr</a></li>
+                            <li class="dropdown-item"><a href="http://ru.rustrains.com">ru</a></li>
+                        </ul>                </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">rub</button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="http://rustrains.com/set-currency/rub">rub</a></li>
+                            <li class="dropdown-item"><a href="http://rustrains.com/set-currency/usd">usd</a></li>
+                            <li class="dropdown-item"><a href="http://rustrains.com/set-currency/eur">eur</a></li>
+                        </ul>
+                    </div>
+                </form>
+                <div class="contact-info">
+                    <a href="#" class="contact-tel">
+                        <i class="fa fa-phone-square phone"></i>
+                        <span>+7 (921) 123-45-67</span>
+                        <i class="fa fa-angle-down arrow"></i>
+                    </a>
+                    <ul class="contact-list">
+                        <li><a href="tel:79211234567">+7 (921) 123-45-67</a></li>
+                        <li><a href="tel:79211234567">+7 (921) 123-45-67</a></li>
+                    </ul>
+                    <a class="nav-link" href="http://rustrains.com/login">Login</a> |
+                    <a class="nav-link" href="http://rustrains.com/register">Register</a>
+                </div>
+
+
+                <ul class="top-line-links">
+                    <li>
+                        <a href="/faq">FAQ</a>
+                    </li>
+                </ul>
+                <ul class="mobile-nav">
+                </ul>
+                <ul class="header-links">
+                    <li>
+                        <a href="/trains">Popular Trains</a>
+                    </li>
+                    <li>
+                        <a href="/destinations">Routes and Planning</a>
+                    </li>
+                    <li>
+                        <a href="/support ">Customer Support</a>
+                    </li>
+                    <li>
+                        <a href="/about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+
+    <header class="header navbar fixed-top navbar-expand navbar-light bg-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="site1/images/logo.png" alt="">
+            </a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/trains">Popular Trains</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/destinations">Routes and Planning</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/support ">Customer Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+            </ul>
+
+            <a href="http://rustrains.com/login" class="btn btn-secondary">Personal cabinet</a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">en</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com">en</a>
+                        <a class="dropdown-item" href="http://de.rustrains.com">de</a>
+                        <a class="dropdown-item" href="http://pl.rustrains.com">pl</a>
+                        <a class="dropdown-item" href="http://cn.rustrains.com">zh</a>
+                        <a class="dropdown-item" href="http://jp.rustrains.com">ja</a>
+                        <a class="dropdown-item" href="http://tr.rustrains.com">tr</a>
+                        <a class="dropdown-item" href="http://ko.rustrains.com">ko</a>
+                        <a class="dropdown-item" href="http://fi.rustrains.com">fi</a>
+                        <a class="dropdown-item" href="http://se.rustrains.com">swe</a>
+                        <a class="dropdown-item" href="http://es.rustrains.com">es</a>
+                        <a class="dropdown-item" href="http://pt.rustrains.com">pt</a>
+                        <a class="dropdown-item" href="http://it.rustrains.com">it</a>
+                        <a class="dropdown-item" href="http://fr.rustrains.com">fr</a>
+                        <a class="dropdown-item" href="http://ru.rustrains.com">ru</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- Showcase -->
+    <div class="showcase-wrap  showcase-home " id="app">
+        <div class="container">
+            <div class="showcase">
+                <div class="showcase-body">
+                    <form method="GET" action="http://rustrains.com/rzd" accept-charset="UTF-8"
+                          onsubmit="$('#common_preloader').show();" class="showcase-form">
+                        <div class="one-trip-active">
+                            <div class="showcase-checks"><label class="showcase-check active">
+                                <div class="radio"><input type="radio" value="0" name="trip">
+                                    &lt; <span></span></div>
+                                <div class="check-text">One-Way Trip</div>
+                            </label> <label class="showcase-check">
+                                <div class="radio"><input type="radio" value="1" name="trip"> <span></span></div>
+                                <div class="check-text">Return Trip</div>
+                            </label> <label class="showcase-check">
+                                <div class="radio"><input type="radio" value="2" name="trip"> <span></span></div>
+                                <div class="check-text">Multi-Leg Trip</div>
+                            </label></div>
+                            <div class="showcase-items">
+                                <div class="showcase-item">
+                                    <div class="label">departure city</div>
+                                    <input type="hidden" name="from" required="required">
+                                    <div data-v-0a1d7fe4="" class="container">
+                                        <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                       placeholder="From where?" required="required"
+                                                                       autocomplete="off" class="menu__link--toggle">
+                                            <!----></div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary change-item"><i
+                                            class="fas fa-exchange-alt"></i></button>
+                                </div>
+                                <div class="showcase-item">
+                                    <div class="label">arrival city</div>
+                                    <input type="hidden" name="to" required="required">
+                                    <div data-v-0a1d7fe4="" class="container">
+                                        <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                       placeholder="To where?" required="required"
+                                                                       autocomplete="off" class="menu__link--toggle">
+                                            <!----></div>
+                                    </div>
+                                </div>
+                                <label class="showcase-item  showcase-date">
+                                    <div class="label">date</div>
+                                    <input type="text" class="form-control" required="required" name="date_from"
+                                           readonly="readonly" autocomplete="off" placeholder="" value=""></label>
+                                <!---->
+                                <div class="showcase-item showcase-quantity ticket-toggle">
+                                    <div class="label">Passengers</div>
+                                    <select name="amount" autocomplete="off">
+                                        <option value="1">1 passenger</option>
+                                        <option value="2">2 passengers</option>
+                                        <option value="3">3 passengers</option>
+                                        <option value="4">4 passengers</option>
+                                        <option value="5">5 passengers</option>
+                                        <option value="6">6 passengers</option>
+                                        <option value="7">7 passengers</option>
+                                        <option value="8">8 passengers</option>
+                                        <option value="9">9 passengers</option>
+                                        <option value="10">10 passengers</option>
+                                        <option value="11">11 passengers</option>
+                                        <option value="12">12 passengers</option>
+                                        <option value="13">13 passengers</option>
+                                        <option value="14">14 passengers</option>
+                                        <option value="15">15 passengers</option>
+                                        <option value="16">16 passengers</option>
+                                        <option value="17">17 passengers</option>
+                                        <option value="18">18 passengers</option>
+                                        <option value="19">19 passengers</option>
+                                        <option value="20">20 passengers</option>
+                                        <option value="21">21 passengers</option>
+                                        <option value="22">22 passengers</option>
+                                        <option value="23">23 passengers</option>
+                                        <option value="24">24 passengers</option>
+                                        <option value="25">25 passengers</option>
+                                        <option value="26">26 passengers</option>
+                                        <option value="27">27 passengers</option>
+                                        <option value="28">28 passengers</option>
+                                        <option value="29">29 passengers</option>
+                                        <option value="30">30 passengers</option>
+                                        <option value="31">31 passengers</option>
+                                        <option value="32">32 passengers</option>
+                                        <option value="33">33 passengers</option>
+                                        <option value="34">34 passengers</option>
+                                        <option value="35">35 passengers</option>
+                                        <option value="36">36 passengers</option>
+                                        <option value="37">37 passengers</option>
+                                        <option value="38">38 passengers</option>
+                                        <option value="39">39 passengers</option>
+                                        <option value="40">40 passengers</option>
+                                    </select></div>
+                            </div>
+
+                          <!--  <div class="showcase-items">
+                                <div class="showcase-item">
+                                    <div class="label">departure city</div>
+                                    <input type="hidden" name="from" required="required" value="">
+                                    <div data-v-0a1d7fe4="" class="container">
+                                        <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                       placeholder="From where?" required="required"
+                                                                       autocomplete="off" class="menu__link&#45;&#45;toggle">
+                                            &lt;!&ndash;&ndash;&gt;</div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary change-item"><i
+                                            class="fas fa-exchange-alt"></i></button>
+                                </div>
+                                <div class="showcase-item">
+                                    <div class="label">arrival city</div>
+                                    <input type="hidden" name="to" required="required" value="">
+                                    <div data-v-0a1d7fe4="" class="container">
+                                        <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                       placeholder="To where?" required="required"
+                                                                       autocomplete="off" class="menu__link&#45;&#45;toggle">
+                                            &lt;!&ndash;&ndash;&gt;</div>
+                                    </div>
+                                </div>
+                                <label class="showcase-item  showcase-date">
+                                    <div class="label">date</div>
+                                    <input type="text" class="form-control" required="required" name="date_from"
+                                           readonly="readonly" autocomplete="off" placeholder="" value=""></label>
+                                <label class="showcase-item showcase-date">
+                                    <div class="label">return date</div>
+                                    <input type="text" class="form-control" name="date_to" readonly="readonly" value=""
+                                           autocomplete="off"></label>
+                                <div class="showcase-item showcase-quantity ticket-toggle">
+                                    <div class="label">Passengers</div>
+                                    <select name="amount" autocomplete="off">
+                                        <option value="1">1 passenger</option>
+                                        <option value="2">2 passengers</option>
+                                        <option value="3">3 passengers</option>
+                                        <option value="4">4 passengers</option>
+                                        <option value="5">5 passengers</option>
+                                        <option value="6">6 passengers</option>
+                                        <option value="7">7 passengers</option>
+                                        <option value="8">8 passengers</option>
+                                        <option value="9">9 passengers</option>
+                                        <option value="10">10 passengers</option>
+                                        <option value="11">11 passengers</option>
+                                        <option value="12">12 passengers</option>
+                                        <option value="13">13 passengers</option>
+                                        <option value="14">14 passengers</option>
+                                        <option value="15">15 passengers</option>
+                                        <option value="16">16 passengers</option>
+                                        <option value="17">17 passengers</option>
+                                        <option value="18">18 passengers</option>
+                                        <option value="19">19 passengers</option>
+                                        <option value="20">20 passengers</option>
+                                        <option value="21">21 passengers</option>
+                                        <option value="22">22 passengers</option>
+                                        <option value="23">23 passengers</option>
+                                        <option value="24">24 passengers</option>
+                                        <option value="25">25 passengers</option>
+                                        <option value="26">26 passengers</option>
+                                        <option value="27">27 passengers</option>
+                                        <option value="28">28 passengers</option>
+                                        <option value="29">29 passengers</option>
+                                        <option value="30">30 passengers</option>
+                                        <option value="31">31 passengers</option>
+                                        <option value="32">32 passengers</option>
+                                        <option value="33">33 passengers</option>
+                                        <option value="34">34 passengers</option>
+                                        <option value="35">35 passengers</option>
+                                        <option value="36">36 passengers</option>
+                                        <option value="37">37 passengers</option>
+                                        <option value="38">38 passengers</option>
+                                        <option value="39">39 passengers</option>
+                                        <option value="40">40 passengers</option>
+                                    </select></div>
+                            </div>
+
+                            <div>
+                                <div class="showcase-items">
+                                    <div class="showcase-item">
+                                        <div class="label">departure city</div>
+                                        <input type="hidden" name="from_multi[]" required="required">
+                                        <div data-v-0a1d7fe4="" class="container">
+                                            <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                           placeholder="From where?" required="required"
+                                                                           autocomplete="off"
+                                                                           class="menu__link&#45;&#45;toggle"> &lt;!&ndash;&ndash;&gt;</div>
+                                        </div>
+                                        <button type="button" class="btn btn-primary change-item"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                    </div>
+                                    <div class="showcase-item">
+                                        <div class="label">arrival city</div>
+                                        <input type="hidden" name="to_multi[]" required="required">
+                                        <div data-v-0a1d7fe4="" class="container">
+                                            <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                           placeholder="To where?" required="required"
+                                                                           autocomplete="off"
+                                                                           class="menu__link&#45;&#45;toggle"> &lt;!&ndash;&ndash;&gt;</div>
+                                        </div>
+                                    </div>
+                                    <label class="showcase-item showcase-date">
+                                        <div class="label">date</div>
+                                        <input type="text" class="form-control" readonly="readonly" required="required"
+                                               name="date_from_multi[]" autocomplete="off" placeholder=""
+                                               value=""></label></div>
+                                <div class="showcase-items">
+                                    <div class="showcase-item">
+                                        <div class="label">departure city</div>
+                                        <input type="hidden" name="from_multi[]" required="required">
+                                        <div data-v-0a1d7fe4="" class="container">
+                                            <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                           placeholder="From where?" required="required"
+                                                                           autocomplete="off"
+                                                                           class="menu__link&#45;&#45;toggle"> &lt;!&ndash;&ndash;&gt;</div>
+                                        </div>
+                                        <button type="button" class="btn btn-primary change-item"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                    </div>
+                                    <div class="showcase-item">
+                                        <div class="label">arrival city</div>
+                                        <input type="hidden" name="to_multi[]" required="required">
+                                        <div data-v-0a1d7fe4="" class="container">
+                                            <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                           placeholder="To where?" required="required"
+                                                                           autocomplete="off"
+                                                                           class="menu__link&#45;&#45;toggle"> &lt;!&ndash;&ndash;&gt;</div>
+                                        </div>
+                                    </div>
+                                    <label class="showcase-item showcase-date">
+                                        <div class="label">date</div>
+                                        <input type="text" class="form-control" readonly="readonly" required="required"
+                                               name="date_from_multi[]" autocomplete="off" placeholder=""
+                                               value=""></label></div>
+                            </div>-->
+
+                            <div class="showcase-buttons"><!----> <!----> <!---->
+                                <button type="submit" class="link">SEARCH</button>
+                            </div>
+                            <!--<div class="showcase-buttons">
+                                <button type="button" class="add-trip">+ add</button>
+                                <button type="button" class="remove-trip">- remove</button>
+                                <div class="showcase-item showcase-quantity ticket-toggle">
+                                    <div class="label">Passengers</div>
+                                    <select name="amount_multi" autocomplete="off">
+                                        <option value="1">1 passenger</option>
+                                        <option value="2">2 passengers</option>
+                                        <option value="3">3 passengers</option>
+                                        <option value="4">4 passengers</option>
+                                        <option value="5">5 passengers</option>
+                                        <option value="6">6 passengers</option>
+                                        <option value="7">7 passengers</option>
+                                        <option value="8">8 passengers</option>
+                                        <option value="9">9 passengers</option>
+                                        <option value="10">10 passengers</option>
+                                        <option value="11">11 passengers</option>
+                                        <option value="12">12 passengers</option>
+                                        <option value="13">13 passengers</option>
+                                        <option value="14">14 passengers</option>
+                                        <option value="15">15 passengers</option>
+                                        <option value="16">16 passengers</option>
+                                        <option value="17">17 passengers</option>
+                                        <option value="18">18 passengers</option>
+                                        <option value="19">19 passengers</option>
+                                        <option value="20">20 passengers</option>
+                                        <option value="21">21 passengers</option>
+                                        <option value="22">22 passengers</option>
+                                        <option value="23">23 passengers</option>
+                                        <option value="24">24 passengers</option>
+                                        <option value="25">25 passengers</option>
+                                        <option value="26">26 passengers</option>
+                                        <option value="27">27 passengers</option>
+                                        <option value="28">28 passengers</option>
+                                        <option value="29">29 passengers</option>
+                                        <option value="30">30 passengers</option>
+                                        <option value="31">31 passengers</option>
+                                        <option value="32">32 passengers</option>
+                                        <option value="33">33 passengers</option>
+                                        <option value="34">34 passengers</option>
+                                        <option value="35">35 passengers</option>
+                                        <option value="36">36 passengers</option>
+                                        <option value="37">37 passengers</option>
+                                        <option value="38">38 passengers</option>
+                                        <option value="39">39 passengers</option>
+                                        <option value="40">40 passengers</option>
+                                    </select></div>
+                                <button type="submit" class="link">SEARCH</button>
+                            </div>-->
+
+                            <!---->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ticket-menu">
+        <div class="ticket-menu-search">
+            Search <i class="fas fa-search"></i>
+        </div>
+        <div class="ticket-menu-filter">
+            Filters <i class="fas fa-sliders-h"></i>
+        </div>
+    </div>
+    <div class="destinations-wrap">
+        <div class="container">
+            <div class="destinations">
+                <div class="head">destinations</div>
+                <div class="text">Know where to go by train and why</div>
+                <div class="destinations-items">
+                    <div class="destinations-item">
+                        <div class="destinations-content">
+                            <h2>Trans-Siberian Trains</h2>
+                            <p></p>
+                            <a href="/destination-trans-siberian-railway" class="link">Read more</a>
+                        </div>
+                    </div>
+                    <div class="destinations-item">
+                        <div class="destinations-content">
+                            <h2>Train From Moscow To St. Petersburg</h2>
+                            <p></p>
+                            <a href="/destination-moscow-st-petersburg-railway" class="link">Read more</a>
+                        </div>
+                    </div>
+                    <div class="destinations-item">
+                        <div class="destinations-content">
+                            <h2>Train From St. Petersburg To Helsinki</h2>
+                            <p></p>
+                            <a href="/destination-st-petersburg-helsinki-railway" class="link">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="trains-wrap">
+        <div class="container">
+            <div class="trains">
+                <div class="head">Russian trains</div>
+                <div class="text">What trains can you take?</div>
+                <div class="trains-items">
+                    <div class="trains-item">
+                        <div class="trains-img">
+                            <a href="/train-sapsanishche">
+                                <img src="/storage/photos/shares/16af4d8d0516155b612bdc5536d7d0cf.jpg" alt="сапсанище">
+                            </a>
+                            <a href="/train-sapsanishche" class="link">Read more</a>
+                        </div>
+                        <div class="trains-content">
+                            <div class="trains-item__head">сапсанище</div>
+                            <div class="trains-item__direction">Moscow - Saint-Petersburg</div>
+                            <div class="trains-item__descr"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <div class="footer-wrap">
+        <div class="container">
+            <div class="footer">
+                <div class="footer-items">
+                </div>
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="/"><img src="site1/images/logoWhiteMain.png" alt=""></a>
+                    </div>
+                    <div class="footer-copyright">© 2018  - 2019  <b>RUStrains</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="common_preloader" style="display:none">
+    <img src="icons/train.gif" />
+</div>
+
+<!-- Scripts -->
+<script src="js/lang.js"></script>
+<script src="http://rustrains.com/js/app_public.js"></script>
+<script src="site1/js/slick.min.js"></script>
+<script src="site1/js/popper.js"></script>
+<script src="site1/js/swiper.min.js"></script>
+<script src="site1/js/select2.min.js"></script>
+<script src="site1/js/fotorama.js"></script>
+<script src="site1/js/jquery.ui.touch-punch.min.js"></script>
+<script src="site1/js/main.js"></script>
 
 </body>
 </html>

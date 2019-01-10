@@ -37,7 +37,7 @@ a {
 
 img {
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
 }
 
 a img {
@@ -672,192 +672,14 @@ a.ui-button:active,
   }
 }
 
-// Top line
-
-.top-line {
-  background-color: #e1e1e1;
-  padding: 3px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  &-item {
-    display: flex;
-    align-items: center;
-  }
-  &__descr {
-    text-transform: uppercase;
-    margin-right: 30px;
-    font-size: 10px;
-  }
-  &-links {
-    display: flex;
-    align-items: center;
-    margin: -2px 10px 0 0;
-    padding: 0;
-    list-style: none;
-    li {
-      margin-right: 14px;
-      &:last-child {
-        margin-right: 0;
-      }
-      a {
-        font-size: 12px;
-        font-weight: 800;
-      }
-    }
-  }
-}
-
-// Top line btn
-
-.btn {
-  padding: 0;
-  background-color: transparent;
-  font-size: 10px;
-  text-transform: uppercase;
-  color: $gray;
-  img {
-    width: 13px;
-    height: 13px;
-    margin-right: 1px;
-  }
-  &-items {
-    display: flex;
-    align-items: center;
-  }
-  &-group {
-    margin-right: 10px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.dropdown {
-  &-menu {
-    min-width: 0;
-    padding: 4px 0;
-  }
-  &-item {
-    padding: 0;
-    a {
-      color: $gray;
-      text-transform: uppercase;
-      font-size: 10px;
-      padding: 4px 10px;
-      img {
-        margin-right: 4px;
-      }
-    }
-  }
-  &-toggle::after {
-    background: url(../images/arrowDown.png) no-repeat 50%;
-    width: 8px;
-    height: 5px;
-    border: none;
-    vertical-align: middle;
-    margin-left: 1;
-  }
-}
-
-// Top line contact
-
-.top-line-item .contact {
-  display: flex;
-  align-items: center;
-  &__head {
-    font-size: 10px;
-    margin: 2px 8px 0 0;
-    text-transform: uppercase;
-  }
-  &-info {
-    position: relative;
-  }
-  &-tel {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-    &:hover {
-      color: $gray;
-    }
-    .phone {
-      font-size: 16px;
-      margin-right: 6px;
-    }
-    .arrow {
-      font-size: 12px;
-      margin-left: 6px;
-    }
-  }
-  &-list {
-    margin: 18px 0 0;
-    padding: 3px 6px;
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 99;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.15);
-    opacity: 0;
-    visibility: hidden;
-    transition: 300ms ease-out;
-    &.active {
-      margin-top: 4px;
-      opacity: 1;
-      visibility: visible;
-    }
-    li {
-      margin: 3px 0;
-      a {
-        white-space: nowrap;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1240px) {
-  .top-line {
-    display: none;
-  }
-}
-
 // Header
 
-.logo {
-  width: 261px;
-  padding-top: 18px;
-  transition: 300ms;
-  &-white {
-    display: none;
-  }
+.navbar-brand {
+  width: 262px;
 }
 
 .header {
-  padding: 6px 24px 22px;
-  background-color: #fff;
-  transition: 300ms;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  &-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 15;
-  }
-  &-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
+
   &-links {
     margin: 0 0 6px;
     padding: 0;
@@ -882,55 +704,20 @@ a.ui-button:active,
   }
 }
 
-.header-wrap.transparent {
-  .logo {
-    &-black {
-      display: none;
-    }
-    &-white {
-      display: block;
-    }
+.dropdown {
+
+  &-menu {
+    min-width: 100%;
+    border: none;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.1);
   }
-  .top-line {
-    background-color: rgba(0, 0, 0, .5);
-    color: #fff;
-    a {
-      color: #fff;
-    }
-    &-item {
-      .contact-list li a {
-        color: $gray;
-      }
-    }
-    &-links {
-      li a:hover {
-        color: #e1e1e1;
-      }
-    }
-    .btn {
-      color: #fff;
-    }
-    .dropdown {
-      &-toggle {
-        &:after {
-          background-image: url(../images/arrowDownWhite.png);
-        }
-      }
-      &-item {
-        a {
-          color: $gray;
-        }
-      }
-    }
-  }
-  .header {
-    background-color: transparent;
-    a {
-      color: #fff;
-    }
-  }
-  .custom-nav-list > a:hover {
-    border-bottom: 2px solid #fff;
+
+  &-toggle::after {
+    background: url(../images/arrowDown.png) no-repeat 50%;
+    width: 8px;
+    height: 5px;
+    border: none;
+    vertical-align: middle;
   }
 }
 
