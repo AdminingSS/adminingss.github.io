@@ -16,12 +16,11 @@ body {
 
 a {
   display: inline-block;
-  font: 300 17px 'Montserrat', sans-serif;
-  transition: 300ms;
+  transition: 200ms;
   color: #555; }
   a:hover {
     text-decoration: none;
-    color: #888; }
+    color: #999; }
 
 img {
   max-width: 100%;
@@ -521,34 +520,42 @@ a.ui-button:active,
 .navbar-brand {
   width: 262px; }
 
-.header-links {
-  margin: 0 0 6px;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  align-items: center; }
-  .header-links li {
-    margin-right: 14px;
-    line-height: 1; }
-    .header-links li:last-child {
-      margin-right: 0; }
-    .header-links li a {
-      font-size: 10px;
-      text-decoration: underline;
-      text-transform: uppercase; }
-      .header-links li a:hover {
-        text-decoration: none; }
-
 .dropdown-menu {
   min-width: 100%;
+  font-size: 10px;
   border: none;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1); }
+.dropdown-item {
+  padding: 4px 15px; }
 .dropdown-toggle::after {
   background: url(../images/arrowDown.png) no-repeat 50%;
   width: 8px;
   height: 5px;
   border: none;
   vertical-align: middle; }
+
+.navbar-nav .dropdown-toggle::after {
+  display: none; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: #555; }
+  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: #4b4b4b; }
+
+.menu-main .nav-link {
+  border-bottom: 2px solid transparent; }
+  .menu-main .nav-link:hover, .menu-main .nav-link:focus {
+    border-color: #ca0002; }
+
+.menu-lang {
+  font-size: 12px; }
+  .menu-lang > li + li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 0;
+    border-left: 1px solid #555; }
 
 @media (max-width: 1240px) {
   .logo {
