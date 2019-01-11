@@ -167,7 +167,7 @@ $(document).ready(function() {
 
   //Destination
     (function () {
-        var $destinationsSlider = $('.destinations-slider');
+        var $destinationsSlider = $('.articles-slider');
 
         $destinationsSlider.slick({
             infinite: true,
