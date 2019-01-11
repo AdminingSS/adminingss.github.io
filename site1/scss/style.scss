@@ -758,33 +758,17 @@ a.ui-button:active,
   }
 }
 
-@media (max-width: 1240px) {
-  .logo {
-    padding-top: 0 !important;
-    width: 180px;
-    &-white {
-      display: none !important;
+@media (max-width: 1199px) {
+ /* .menu-main {
+
+    .dropdown-menu {
+      display: flex;
     }
-    &-black {
-      display: block !important;
-    }
-  }
-  .header {
-    padding-top: 8px;
-    padding-bottom: 8px !important;
-    background-color: #fff !important;
-    &-content {
-      display: none;
-    }
-  }
+  }*/
+
 }
 @media (max-width: 767px) {
-  .logo {
-    width: 102px;
-  }
-  .header {
-    padding: 10px 12px 10px 18px !important;
-  }
+
 }
 
 // Nav 
