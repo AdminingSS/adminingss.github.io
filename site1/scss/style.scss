@@ -691,6 +691,37 @@ a.ui-button:active,
       border-color: #ca0002;
     }
   }
+
+  .dropdown {
+
+    &-menu {
+      margin: 0;
+      font-size: 14px;
+      background: #f8f9fa;
+
+      &.show {
+        display: flex;
+      }
+    }
+
+    &-header {
+      font-size: 16px;
+      color: #555;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    &-item {
+      color: #555;
+
+      &:focus, &:hover {
+        color: #000;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
 .menu-lang {

@@ -520,6 +520,22 @@ a.ui-button:active,
   border-bottom: 2px solid transparent; }
   .menu-main .nav-link:hover, .menu-main .nav-link:focus {
     border-color: #ca0002; }
+.menu-main .dropdown-menu {
+  margin: 0;
+  font-size: 14px;
+  background: #f8f9fa; }
+  .menu-main .dropdown-menu.show {
+    display: flex; }
+.menu-main .dropdown-header {
+  font-size: 16px;
+  color: #555; }
+  .menu-main .dropdown-header:hover {
+    color: #000; }
+.menu-main .dropdown-item {
+  color: #555; }
+  .menu-main .dropdown-item:focus, .menu-main .dropdown-item:hover {
+    color: #000;
+    background-color: transparent; }
 
 .menu-lang {
   font-size: 12px; }
