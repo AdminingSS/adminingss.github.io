@@ -663,33 +663,12 @@ a.ui-button:active,
 
 .dropdown {
 
-  &-menu {
-    min-width: 100%;
-    font-size: 10px;
-    border: none;
-    box-shadow: 0 0 4px 1px rgba(0,0,0,.1);
-  }
-
-  &-item {
-    padding: 4px 15px;
-  }
-
   &-toggle::after {
     background: url(../images/arrowDown.png) no-repeat 50%;
     width: 8px;
     height: 5px;
     border: none;
     vertical-align: middle;
-  }
-}
-
-.navbar-nav {
-
-  .dropdown {
-
-    &-toggle::after {
-      display: none;
-    }
   }
 }
 
@@ -726,6 +705,24 @@ a.ui-button:active,
       bottom: 10px;
       left: 0;
       border-left: 1px solid $gray;
+    }
+  }
+
+  .dropdown {
+
+    &-menu {
+      min-width: 100%;
+      font-size: 10px;
+      border: none;
+      box-shadow: 0 0 4px 1px rgba(0,0,0,.1);
+    }
+
+    &-item {
+      padding: 4px 15px;
+    }
+
+    &-toggle::after {
+      display: none;
     }
   }
 }
@@ -4017,8 +4014,8 @@ a.ui-button:active,
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
 
-  a {
-    color: $orange;
+  a:not(.btn) {
+    color: #ffae00;
 
     &:hover {
       color: #999;

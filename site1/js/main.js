@@ -463,6 +463,17 @@ $(document).ready(function() {
 
     })();
 
+    //Dropdown hover
+    (function () {
+        var $dropdownHover = $('.dropdown-hover');
+        var $dropdownMenu = $dropdownHover.siblings('.dropdown-hover-menu');
+
+        $dropdownHover.on('mouseenter', function (e) {
+            $dropdownHover.dropdown('toggle');
+        })
+
+    })();
+
   
 });
 
