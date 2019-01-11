@@ -164,6 +164,34 @@ $(document).ready(function() {
     swipe: false,
     touchMove: false
   });
+
+  //Destination
+    (function () {
+        var $destinationsSlider = $('.destinations-slider');
+
+        $destinationsSlider.slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                    breakpoint: 786,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    })();
+
   
   // Product
   

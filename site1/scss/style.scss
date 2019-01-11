@@ -20,7 +20,7 @@ button:focus {
 
 body {
   position: relative;
-  font: 300 17px 'Montserrat', sans-serif;
+  font: 300 16px 'Montserrat', sans-serif;
   color: $gray;
 }
 
@@ -62,11 +62,10 @@ a img {
   }
 }
 
-.head {
+h2, .head {
   color: $gray;
   line-height: 1;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 30px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 44px;
@@ -85,12 +84,6 @@ a img {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
-}
-
-.container {
-  max-width: 1200px;
-  padding: 0;
-  margin: 0 auto;
 }
 
 @media (max-width: 1240px) {
@@ -739,8 +732,8 @@ a.ui-button:active,
     &::before {
       content: '';
       position: absolute;
-      top: 8px;
-      bottom: 8px;
+      top: 10px;
+      bottom: 10px;
       left: 0;
       border-left: 1px solid $gray;
     }
@@ -2886,52 +2879,113 @@ a.ui-button:active,
 // Destinations
 
 .destinations {
-  padding: 64px 0 62px;
-  .head {
-    margin-bottom: 14px;
+  padding: 60px 0;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 10px;
   }
+
+  h3 {
+    color: $gray;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
   .text {
     margin-bottom: 40px;
     color: $gray;
+    text-transform: none;
   }
-  &-items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+
   &-item {
-    width: 282px;
-    margin-right: 24px;
-    text-align: center;
-    &:last-child {
-      margin-right: 0;
+    padding: 0 20px;
+  }
+
+  &-link-wrap {
+    position: relative;
+    margin-bottom: 20px;
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+
+      .btn {
+        visibility: visible;
+        opacity: 1;
+      }
     }
+
     img {
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      transition: all 0.3s linear;
+    }
+
+    .link-image {
+      display: block;
+      text-decoration: none;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all 0.3s linear;
+      transform: translate3d(-50%, -50%, 0);
+      visibility: hidden;
+      opacity: 0;
     }
   }
-  &-content {
-    padding: 8px 18px 0;
-    h2 {
-      color: $gray;
-      font-size: 24px;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 0 6px;
-      margin-bottom: 2px;
+}
+
+.destinations-slider {
+
+  .slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    &::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 20px;
+      opacity: .75;
+      color: #555;
+      transition: all 0.2s ease-in-out;
     }
-    p {
-      font-size: 18px;
-      margin-bottom: 6px;
+
+    &:hover::before {
+      opacity: 1;
     }
-    .link {
-      background-color: $blue;
-      padding: 0 18px;
-      font-size: 17px;
-      &:hover {
-        color: #fff;
-        transform: scale(1.1);
-      }
+  }
+
+  .slick-prev {
+    left: -25px;
+
+    &::before {
+      content: "\f053";
+    }
+  }
+
+  .slick-next {
+    right: -25px;
+
+    &::before {
+      content: "\f054";
     }
   }
 }
