@@ -1178,6 +1178,7 @@ a.ui-button:active,
 // Footer
 
 .footer {
+  padding-bottom: 20px;
   font-size: 14px;
   color: #fff;
   background-color: $graybrown;
@@ -3937,6 +3938,7 @@ a.ui-button:active,
   }
 
   &-slider {
+    padding: 0 10px;
 
     .slick-prev, .slick-next {
       font-size: 0;
@@ -3971,7 +3973,7 @@ a.ui-button:active,
     }
 
     .slick-prev {
-      left: -25px;
+      left: -10px;
 
       &::before {
         content: "\f053";
@@ -3979,7 +3981,7 @@ a.ui-button:active,
     }
 
     .slick-next {
-      right: -25px;
+      right: -10px;
 
       &::before {
         content: "\f054";
