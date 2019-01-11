@@ -2838,6 +2838,7 @@ a.ui-button:active,
     display: block; }
 
 .cookie {
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;

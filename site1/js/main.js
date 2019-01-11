@@ -445,6 +445,24 @@ $(document).ready(function() {
       $('.search-history-body').fadeOut();
     }
   });
+
+  //Cookie
+    (function () {
+        var $cookiePanel = $('#cookie');
+        var cookieName = 'cookie_accepted';
+
+        if (Cookies.get(cookieName)) return;
+
+        $cookiePanel.fadeIn(100);
+        $cookiePanel.on('click', '.cookie-accept', function (e) {
+            e.preventDefault();
+
+            Cookies.set(cookieName, true);
+            $cookiePanel.fadeOut(100);
+        })
+
+    })();
+
   
 });
 
