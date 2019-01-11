@@ -2837,4 +2837,20 @@ a.ui-button:active,
   .articles-slider .slick-slide .articles-item {
     display: block; }
 
+.cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  line-height: 24px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .cookie a {
+    color: #e49100; }
+    .cookie a:hover {
+      color: #999; }
+
 /*# sourceMappingURL=style.css.map */

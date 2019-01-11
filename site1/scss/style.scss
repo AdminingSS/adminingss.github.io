@@ -4003,3 +4003,24 @@ a.ui-button:active,
 @media (max-width: 767px) {
 
 }
+
+.cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  line-height: 24px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  a {
+    color: $orange;
+
+    &:hover {
+      color: #999;
+    }
+  }
+}
