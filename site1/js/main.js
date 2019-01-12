@@ -169,6 +169,22 @@ $(document).ready(function () {
     (function () {
         var $destinationsSlider = $('.articles-slider');
 
+        $destinationsSlider.on('setPosition', function (e, slick) {
+            var $img = slick.$slides.filter('.slick-current.slick-active').find('.link-image');
+            var $slider = slick.$slider;
+            var $arrows = slick.$prevArrow.add(slick.$nextArrow);
+            var imgPos = $img.offset();
+            var sliderPos = $slider.offset();
+
+            if (!$img.length) return;
+
+            $arrows.css({
+                top: (sliderPos.top - imgPos.top) + $img.height() / 2 + 'px',
+            });
+
+        });
+        console.log($destinationsSlider.length);
+
         $destinationsSlider.slick({
             infinite: true,
             slidesToShow: 3,
@@ -449,6 +465,9 @@ $(document).ready(function () {
     (function () {
         var $cookiePanel = $('#cookie');
         var cookieName = 'cookie_accepted';
+        var options = {
+            expires: 365,
+        };
 
         if (Cookies.get(cookieName)) return;
 
@@ -456,7 +475,7 @@ $(document).ready(function () {
         $cookiePanel.on('click', '.cookie-accept', function (e) {
             e.preventDefault();
 
-            Cookies.set(cookieName, true);
+            Cookies.set(cookieName, true, options);
             $cookiePanel.fadeOut(100);
         })
 
@@ -464,6 +483,10 @@ $(document).ready(function () {
 
     //Dropdown hover
     (function () {
+        var tap = ("ontouchstart" in document.documentElement);
+
+        if (tap) return;
+
         var $dropdownHovers = $('.dropdown-hover');
 
         $dropdownHovers.each(function () {
@@ -475,13 +498,18 @@ $(document).ready(function () {
 
             $dropdownItems.on({
                 'mouseenter': function () {
+                    var tap = ("ontouchstart" in document.documentElement);
+
+                    if (tap) return;
                     if (isActive) return;
 
                     $dropdownHover.dropdown('show');
                 },
                 'mouseleave': function (e) {
+                    var tap = ("ontouchstart" in document.documentElement);
                     var $relatedTarget = $(e.relatedTarget);
 
+                    if (tap) return;
                     if (!isActive) return;
                     if ($relatedTarget.closest($dropdownItems).length) return;
 
@@ -499,7 +527,6 @@ $(document).ready(function () {
             });
         });
     })();
-
 
 });
 
