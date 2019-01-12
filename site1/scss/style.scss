@@ -4153,10 +4153,7 @@ a.ui-button:active,
 
   &-item {
     padding: 0 20px;
-
-    img {
-      opacity: 0;
-    }
+    display: none;
   }
 
   &-link-wrap {
@@ -4246,8 +4243,8 @@ a.ui-button:active,
       }
     }
 
-    .slick-slide .articles-item img {
-      opacity: 1;
+    .slick-slide .articles-item {
+      display: block;
     }
   }
 }
