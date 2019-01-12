@@ -137,12 +137,9 @@ h2, .head {
       margin-left: 3px;
       margin-top: 2px; } }
 .check {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 24px;
   height: 24px;
-  background-color: #fff;
   text-align: center; }
   .check input {
     width: 100%;
@@ -161,7 +158,8 @@ h2, .head {
     position: absolute;
     left: 0;
     top: 0;
-    color: #dfe7da; }
+    color: #dfe7da;
+    background-color: #fff; }
     .check span:before {
       content: '\2714';
       display: block;
@@ -176,52 +174,49 @@ h2, .head {
   .check-text {
     text-align: left;
     color: #fff;
-    padding-left: 28px;
+    padding-left: 10px;
     font-size: 18px;
     font-weight: 800; }
 
 .radio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  background-color: #fff; }
+  position: relative;
+  width: 16px;
+  height: 16px; }
   .radio-wrap {
     position: relative;
     cursor: pointer;
     margin-bottom: 0; }
   .radio input {
-    width: 100%;
-    height: 100%;
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     z-index: 5; }
     .radio input:checked + span:before {
       background-color: #00c5c5; }
   .radio span {
-    width: 100%;
-    height: 100%;
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 50%; }
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff; }
     .radio span:before {
       content: '';
       display: block;
       position: absolute;
-      top: 6px;
-      right: 6px;
-      bottom: 6px;
-      left: 6px;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      left: 3px;
       background-color: #e5f9f9;
       border-radius: 50%;
       transition: 300ms; }
   .radio-text {
-    padding: 2px 0 0 40px;
+    padding: 2px 0 0 20px;
     font-size: 20px;
     font-weight: 800; }
 
@@ -671,16 +666,10 @@ a.ui-button:active,
     text-transform: none; }
 
 .showcase {
-  height: 624px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .showcase-wrap {
-    background: url(../images/showcase-bg.jpg) no-repeat 50%;
-    background-size: cover;
-    position: relative; }
-  .showcase-body {
-    text-align: center; }
+  position: relative;
+  min-height: 624px;
+  background: url(../images/showcase-bg.jpg) no-repeat 50%;
+  background-size: cover; }
   .showcase__head {
     color: #fefefe;
     font-size: 55px;
@@ -696,15 +685,21 @@ a.ui-button:active,
     margin-bottom: 28px; }
   .showcase-items {
     display: flex;
-    align-items: center;
-    margin-bottom: 12px; }
+    align-items: center; }
+    .showcase-items + .showcase-items {
+      margin-top: 2px; }
+    .showcase-items label {
+      margin-bottom: 0; }
     .showcase-items .link {
       font-weight: 700; }
   .showcase-item {
     position: relative;
     width: 226px;
-    height: 48px;
-    margin-right: 2px; }
+    height: 48px; }
+    .showcase-item + .showcase-item {
+      margin-left: 2px; }
+    .showcase-item .showcase-item {
+      width: 100%; }
     .showcase-item .label {
       position: absolute;
       top: 4px;
@@ -714,17 +709,34 @@ a.ui-button:active,
       font-size: 10px;
       line-height: 1;
       text-transform: uppercase; }
+    .showcase-item input {
+      width: 100%;
+      height: 48px;
+      padding: 20px 10px 10px;
+      border-radius: 0;
+      border: none;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    .showcase-item .container {
+      padding: 0; }
+      .showcase-item .container input {
+        padding-right: 36px; }
+    .showcase-item .change-item {
+      position: absolute;
+      top: 13px;
+      right: 13px;
+      color: rgba(60, 60, 60, 0.5) !important;
+      font-size: 16px;
+      background-color: transparent;
+      border: none; }
   .showcase-quantity {
     position: relative;
-    width: 118px;
-    line-height: 48px;
+    width: 140px;
+    line-height: 47px;
     margin-right: 2px;
-    padding: 0 20px 0 10px;
     background-color: #fff;
     text-align: left;
-    font-size: 18px;
-    border-right: 1px solid #e4e4e4;
-    border-left: 1px solid #e4e4e4; }
+    font-size: 18px; }
     .showcase-quantity .amount {
       position: absolute;
       top: 0;
@@ -745,22 +757,56 @@ a.ui-button:active,
         display: flex;
         align-items: center;
         justify-content: center; }
-
-.showcase-checks {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-right: 116px; }
-.showcase-check {
-  position: relative;
-  margin: 0;
-  cursor: pointer;
-  margin-right: 36px; }
-  .showcase-check:last-child {
-    margin-right: 0; }
-
-.showcase-inner .showcase {
-  padding-top: 78px; }
+    .showcase-quantity .options_list {
+      width: 100%;
+      line-height: 1.3; }
+      .showcase-quantity .options_list .list li {
+        padding: 10px 15px; }
+    .showcase-quantity select {
+      padding: 20px 10px 10px;
+      height: 48px;
+      font-size: 14px;
+      width: 100%;
+      line-height: normal;
+      background: none;
+      border: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none; }
+  .showcase-form {
+    position: relative;
+    padding-right: 122px; }
+    .showcase-form button[type="submit"] {
+      font-size: 16px;
+      padding: 0 25px;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+  .showcase-checks, .showcase-check {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .showcase-check {
+    position: relative;
+    cursor: pointer; }
+    .showcase-check + .showcase-check {
+      margin-left: 35px; }
+  .showcase-home {
+    padding-top: 230px; }
+  .showcase-inner {
+    padding-top: 78px; }
+  .showcase-date {
+    width: 140px; }
+    .showcase-date input {
+      padding-left: 36px; }
+    .showcase-date::after {
+      content: "\f073";
+      display: block;
+      font-family: "Font Awesome 5 Free";
+      line-height: 1;
+      position: absolute;
+      left: 8px;
+      top: 20px; }
 
 .showcase-payment {
   position: absolute;
