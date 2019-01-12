@@ -2915,9 +2915,8 @@ a.ui-button:active,
         color: #fff; }
 
 .articles-item {
-  padding: 0 20px; }
-  .articles-item image {
-    opacity: 0; }
+  padding: 0 20px;
+  display: none; }
 .articles-link-wrap {
   position: relative;
   margin-bottom: 20px; }
@@ -2976,8 +2975,8 @@ a.ui-button:active,
     right: -10px; }
     .articles-slider .slick-next::before {
       content: "\f054"; }
-  .articles-slider .slick-slide .articles-item image {
-    opacity: 1; }
+  .articles-slider .slick-slide .articles-item {
+    display: block; }
 
 .cookie {
   display: none;
