@@ -960,10 +960,7 @@ a.ui-button:active,
   &-items {
     display: flex;
     align-items: center;
-
-    + .showcase-items {
-      margin-top: 2px;
-    }
+    margin-bottom: 2px;
 
     label {
       margin-bottom: 0;
@@ -1020,6 +1017,7 @@ a.ui-button:active,
       position: absolute;
       top: 13px;
       right: 13px;
+      padding: 0;
       color: rgba(60,60,60,.5) !important;
       font-size: 16px;
       background-color: transparent;
@@ -1092,7 +1090,7 @@ a.ui-button:active,
       padding: 0 25px;
       position: absolute;
       right: 0;
-      bottom: 0;
+      top: 30px;
     }
   }
 
@@ -1134,6 +1132,115 @@ a.ui-button:active,
       position: absolute;
       left: 8px;
       top: 20px;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  .add-trip,
+  .remove-trip {
+    width: 226px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 2px;
+    border: none;
+    background-color: rgba(255,255,255,.8);
+    transition: 300ms;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+/* Search history */
+
+.search-history {
+  margin-top: 10px;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+
+  &-title {
+    font-size: 18px;
+  }
+
+  &-header {
+    margin-bottom: 5px;
+  }
+
+  &-show {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+
+    i {
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+  }
+
+  &-container {
+    transition: 300ms;
+
+    &.invisible {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &-body {
+    position: absolute;
+    margin-top: -64px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
+    padding: 20px;
+    color: #555555;
+    z-index: 9999;
+    display: none;
+
+    h3 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 14px;
+    cursor: pointer;
+
+    &:hover {
+      color: #d81818;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .direction {
+      width: 50%;
+      flex-shrink: 0;
+    }
+
+    .date {
+      flex-shrink: 0;
     }
   }
 }
