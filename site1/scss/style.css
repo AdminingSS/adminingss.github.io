@@ -502,7 +502,8 @@ a.ui-button:active,
   .mobile-menu {
     display: block; } }
 .navbar-brand {
-  width: 262px; }
+  width: 262px;
+  margin: 0; }
 
 .dropdown-toggle::after {
   background: url(../images/arrowDown.png) no-repeat 50%;
@@ -563,7 +564,13 @@ a.ui-button:active,
     top: 10px;
     bottom: 10px;
     left: 0;
-    border-left: 1px solid #555; } }
+    border-left: 1px solid #555; }
+
+  .navbar-brand {
+    margin-right: 15px; } }
+@media (max-width: 576px) {
+  .navbar-brand {
+    width: 210px; } }
 .custom-nav {
   display: flex;
   align-items: center;
