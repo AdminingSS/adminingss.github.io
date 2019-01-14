@@ -709,14 +709,19 @@ a.ui-button:active,
 
   .dropdown {
 
+    &:hover .dropdown-menu {
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+    }
+
     &-menu {
       margin: 0;
       font-size: 12px;
       background: #f8f9fa;
-
-      &.show {
-        display: flex;
-      }
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
     }
 
     &-header {

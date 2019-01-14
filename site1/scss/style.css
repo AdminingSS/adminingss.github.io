@@ -522,12 +522,17 @@ a.ui-button:active,
     border-bottom: 2px solid transparent; }
     .menu-main .nav-link:hover, .menu-main .nav-link:focus {
       border-color: #ca0002; }
+  .menu-main .dropdown:hover .dropdown-menu {
+    display: flex;
+    visibility: visible;
+    opacity: 1; }
   .menu-main .dropdown-menu {
     margin: 0;
     font-size: 12px;
-    background: #f8f9fa; }
-    .menu-main .dropdown-menu.show {
-      display: flex; }
+    background: #f8f9fa;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out; }
   .menu-main .dropdown-header {
     font-size: 14px;
     color: #555; }

@@ -481,53 +481,6 @@ $(document).ready(function () {
 
     })();
 
-    //Dropdown hover
-    (function () {
-        var tap = ("ontouchstart" in document.documentElement);
-
-        if (tap) return;
-
-        var $dropdownHovers = $('.dropdown-hover');
-
-        $dropdownHovers.each(function () {
-            var $dropdownHover = $(this);
-            var $dropdownMenu = $dropdownHover.siblings('.dropdown-hover-menu');
-            var $dropdownItems = $dropdownHover.add($dropdownMenu);
-            var $parent = $dropdownHover.parent();
-            var isActive = false;
-
-            $dropdownItems.on({
-                'mouseenter': function () {
-                    var tap = ("ontouchstart" in document.documentElement);
-
-                    if (tap) return;
-                    if (isActive) return;
-
-                    $dropdownHover.dropdown('show');
-                },
-                'mouseleave': function (e) {
-                    var tap = ("ontouchstart" in document.documentElement);
-                    var $relatedTarget = $(e.relatedTarget);
-
-                    if (tap) return;
-                    if (!isActive) return;
-                    if ($relatedTarget.closest($dropdownItems).length) return;
-
-                    $dropdownHover.dropdown('hide');
-                },
-            });
-
-            $parent.on({
-                'show.bs.dropdown': function () {
-                    isActive = true;
-                },
-                'hide.bs.dropdown': function () {
-                    isActive = false;
-                },
-            });
-        });
-    })();
-
 });
 
 
