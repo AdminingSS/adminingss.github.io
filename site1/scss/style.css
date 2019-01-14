@@ -576,7 +576,9 @@ a.ui-button:active,
     margin-right: 15px; } }
 @media (max-width: 1199px) {
   .menu-main .dropdown-menu {
-    display: block; } }
+    display: block;
+    visibility: visible;
+    opacity: 1; } }
 @media (max-width: 576px) {
   .navbar-brand {
     width: 210px; } }
