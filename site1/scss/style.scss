@@ -791,6 +791,13 @@ a.ui-button:active,
   }
 }
 
+@media (max-width: 1199px) {
+
+  .menu-main .dropdown-menu {
+    display: block;
+  }
+}
+
 @media (max-width: 576px) {
 
   .navbar-brand {
