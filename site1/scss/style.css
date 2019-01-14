@@ -3029,4 +3029,14 @@ a.ui-button:active,
     .cookie a:not(.btn):hover {
       color: #999; }
 
+.tm-footer-popup {
+  font-size: 26px; }
+  .tm-footer-popup h2 {
+    font-size: 42px;
+    margin: 0;
+    text-transform: none;
+    color: #fff; }
+  .tm-footer-popup .tm-flags {
+    font-size: 16px; }
+
 /*# sourceMappingURL=style.css.map */
