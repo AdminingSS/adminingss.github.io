@@ -662,6 +662,14 @@ a.ui-button:active,
 
 // Header
 
+.header {
+
+  .btn {
+    line-height: 24px;
+    font-size: 14px;
+  }
+}
+
 .navbar-brand {
   width: 262px;
   margin: 0;
@@ -688,6 +696,7 @@ a.ui-button:active,
 }
 
 .menu-main {
+  font-size: 14px;
 
   .nav-link {
     border-bottom: 2px solid transparent;
@@ -702,7 +711,7 @@ a.ui-button:active,
 
     &-menu {
       margin: 0;
-      font-size: 14px;
+      font-size: 12px;
       background: #f8f9fa;
 
       &.show {
@@ -711,7 +720,7 @@ a.ui-button:active,
     }
 
     &-header {
-      font-size: 16px;
+      font-size: 14px;
       color: #555;
 
       &:hover {
