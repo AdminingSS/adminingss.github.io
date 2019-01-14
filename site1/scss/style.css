@@ -930,6 +930,8 @@ a.ui-button:active,
       font-size: 14px; }
     .showcase-form button[type="submit"] {
       top: 24px; }
+    .showcase .add-trip, .showcase .remove-trip {
+      width: 157px; }
 
   .check-text {
     font-size: 12px; }
@@ -943,7 +945,9 @@ a.ui-button:active,
   .showcase-item {
     width: 146px; }
   .showcase-quantity {
-    width: 144px; } }
+    width: 144px; }
+  .showcase .add-trip, .showcase .remove-trip {
+    width: 146px; } }
 @media (max-width: 767px) {
   .showcase {
     height: auto;
@@ -995,6 +999,10 @@ a.ui-button:active,
       padding-right: 0; }
       .showcase-form button[type="submit"] {
         position: static; }
+    .showcase-buttons {
+      flex-wrap: wrap; }
+    .showcase .add-trip, .showcase .remove-trip {
+      width: 49%; }
 
   .showcase-inner .showcase {
     padding: 80px 0 104px; }
@@ -1007,7 +1015,17 @@ a.ui-button:active,
       margin-top: 40px; }
 
   .check-text {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .multi-trip-active .showcase-items {
+    justify-content: center; }
+  .multi-trip-active .showcase-item, .multi-trip-active .showcase-quantity {
+    width: 80%; }
+  .multi-trip-active .showcase-buttons {
+    justify-content: center; }
+  .multi-trip-active .add-trip, .multi-trip-active .remove-trip {
+    width: 80%;
+    margin-bottom: 2px; } }
 .footer {
   padding-bottom: 20px;
   font-size: 14px;

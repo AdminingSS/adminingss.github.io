@@ -1317,6 +1317,10 @@ a.ui-button:active,
     &-form button[type="submit"] {
       top: 24px;
     }
+
+    .add-trip, .remove-trip {
+      width: 157px;
+    }
   }
   .check {
     &-text {
@@ -1337,6 +1341,10 @@ a.ui-button:active,
     }
     &-quantity {
       width: 144px;
+    }
+
+    .add-trip, .remove-trip {
+      width: 146px;
     }
   }
 }
@@ -1419,6 +1427,14 @@ a.ui-button:active,
         position: static;
       }
     }
+
+    &-buttons {
+      flex-wrap: wrap;
+    }
+
+    .add-trip, .remove-trip {
+      width: 49%;
+    }
   }
   .showcase-inner .showcase {
     padding: 80px 0 104px;
@@ -1436,6 +1452,29 @@ a.ui-button:active,
 
   .check-text {
     padding-left: 0;
+  }
+
+  .multi-trip-active {
+
+    .showcase {
+
+      &-items {
+        justify-content: center;
+      }
+
+      &-item, &-quantity {
+        width: 80%;
+      }
+
+      &-buttons {
+        justify-content: center;
+      }
+    }
+
+    .add-trip, .remove-trip {
+      width: 80%;
+      margin-bottom: 2px;
+    }
   }
 }
 
