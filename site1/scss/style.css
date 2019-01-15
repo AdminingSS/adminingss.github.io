@@ -516,6 +516,7 @@ a.ui-button:active,
     color: #4b4b4b; }
 
 .navbar-toggler {
+  font-size: 16px;
   padding: 4px 8px; }
 
 .menu-main {
@@ -581,14 +582,18 @@ a.ui-button:active,
   .menu-main {
     width: 100%;
     padding-top: 20px; }
+    .menu-main .nav-link {
+      padding: 5px 0; }
     .menu-main .dropdown-menu {
       display: block;
       visibility: visible;
       opacity: 1;
       padding: 0;
       border: none; }
+      .menu-main .dropdown-menu .nav {
+        padding-left: 15px; }
     .menu-main .dropdown-item, .menu-main .dropdown-header {
-      padding: 5px 0; }
+      padding: 3px 0; }
 
   .menu-lang {
     flex-direction: row; }
@@ -599,7 +604,8 @@ a.ui-button:active,
       position: absolute; } }
 @media (max-width: 576px) {
   .navbar-brand {
-    width: 210px; } }
+    width: 140px;
+    margin-right: 5px; } }
 .custom-nav {
   display: flex;
   align-items: center;

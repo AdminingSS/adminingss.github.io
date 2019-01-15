@@ -695,6 +695,7 @@ a.ui-button:active,
 }
 
 .navbar-toggler {
+  font-size: 16px;
   padding: 4px 8px;
 }
 
@@ -812,16 +813,24 @@ a.ui-button:active,
     width: 100%;
     padding-top: 20px;
 
+    .nav-link {
+      padding: 5px 0;
+    }
+
     .dropdown-menu {
       display: block;
       visibility: visible;
       opacity: 1;
       padding: 0;
       border: none;
+
+      .nav {
+        padding-left: 15px;
+      }
     }
 
     .dropdown-item, .dropdown-header {
-      padding: 5px 0;
+      padding: 3px 0;
     }
   }
 
@@ -842,7 +851,8 @@ a.ui-button:active,
 @media (max-width: 576px) {
 
   .navbar-brand {
-    width: 210px;
+    width: 140px;
+    margin-right: 5px;
   }
 }
 
