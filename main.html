@@ -37,7 +37,52 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="navbar-collapse collapse justify-content-between justify-content-lg-end" id="navbarTogglerLg">
+            <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Log-in / Personal cabinet (for logged in) -->
+                    <div class="menu-user dropdown mr-xl-3">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My cabinet
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+
+                    <!-- Lang menu -->
+                    <ul class="menu-lang navbar-nav text-uppercase">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span class="flag-icon flag-icon-gb"></span> en</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="http://rustrains.com"><span class="flag-icon flag-icon-gb"></span> en</a>
+                                <a class="dropdown-item" href="http://de.rustrains.com"><span class="flag-icon flag-icon-de"></span> de</a>
+                                <a class="dropdown-item" href="http://pl.rustrains.com"><span class="flag-icon flag-icon-pl"></span> pl</a>
+                                <a class="dropdown-item" href="http://cn.rustrains.com"><span class="flag-icon flag-icon-cn"></span> zh</a>
+                                <a class="dropdown-item" href="http://jp.rustrains.com"><span class="flag-icon flag-icon-jp"></span> ja</a>
+                                <a class="dropdown-item" href="http://tr.rustrains.com"><span class="flag-icon flag-icon-tr"></span> tr</a>
+                                <a class="dropdown-item" href="http://ko.rustrains.com"><span class="flag-icon flag-icon-kr"></span> ko</a>
+                                <a class="dropdown-item" href="http://fi.rustrains.com"><span class="flag-icon flag-icon-fi"></span> fi</a>
+                                <a class="dropdown-item" href="http://se.rustrains.com"><span class="flag-icon flag-icon-se"></span> se</a>
+                                <a class="dropdown-item" href="http://es.rustrains.com"><span class="flag-icon flag-icon-es"></span> es</a>
+                                <a class="dropdown-item" href="http://pt.rustrains.com"><span class="flag-icon flag-icon-pt"></span> pt</a>
+                                <a class="dropdown-item" href="http://it.rustrains.com"><span class="flag-icon flag-icon-it"></span> it</a>
+                                <a class="dropdown-item" href="http://fr.rustrains.com"><span class="flag-icon flag-icon-fr"></span> fr</a>
+                                <a class="dropdown-item" href="http://ru.rustrains.com"><span class="flag-icon flag-icon-ru"></span> ru</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
+                                <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
+                                <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
                 <!-- Menu -->
                 <ul class="menu-main navbar-nav mr-xl-2">
                     <li class="nav-item dropdown">
@@ -147,49 +192,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About Us</a>
-                    </li>
-                </ul>
-
-                <!-- Log-in / Personal cabinet (for logged in) -->
-                <div class="dropdown mr-xl-3">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        My cabinet
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-
-                <!-- Lang menu -->
-                <ul class="menu-lang navbar-nav text-uppercase">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span class="flag-icon flag-icon-gb"></span> en</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="http://rustrains.com"><span class="flag-icon flag-icon-gb"></span> en</a>
-                            <a class="dropdown-item" href="http://de.rustrains.com"><span class="flag-icon flag-icon-de"></span> de</a>
-                            <a class="dropdown-item" href="http://pl.rustrains.com"><span class="flag-icon flag-icon-pl"></span> pl</a>
-                            <a class="dropdown-item" href="http://cn.rustrains.com"><span class="flag-icon flag-icon-cn"></span> zh</a>
-                            <a class="dropdown-item" href="http://jp.rustrains.com"><span class="flag-icon flag-icon-jp"></span> ja</a>
-                            <a class="dropdown-item" href="http://tr.rustrains.com"><span class="flag-icon flag-icon-tr"></span> tr</a>
-                            <a class="dropdown-item" href="http://ko.rustrains.com"><span class="flag-icon flag-icon-kr"></span> ko</a>
-                            <a class="dropdown-item" href="http://fi.rustrains.com"><span class="flag-icon flag-icon-fi"></span> fi</a>
-                            <a class="dropdown-item" href="http://se.rustrains.com"><span class="flag-icon flag-icon-se"></span> se</a>
-                            <a class="dropdown-item" href="http://es.rustrains.com"><span class="flag-icon flag-icon-es"></span> es</a>
-                            <a class="dropdown-item" href="http://pt.rustrains.com"><span class="flag-icon flag-icon-pt"></span> pt</a>
-                            <a class="dropdown-item" href="http://it.rustrains.com"><span class="flag-icon flag-icon-it"></span> it</a>
-                            <a class="dropdown-item" href="http://fr.rustrains.com"><span class="flag-icon flag-icon-fr"></span> fr</a>
-                            <a class="dropdown-item" href="http://ru.rustrains.com"><span class="flag-icon flag-icon-ru"></span> ru</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
-                            <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
-                            <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
-                        </div>
                     </li>
                 </ul>
             </div>

@@ -501,8 +501,7 @@ a.ui-button:active,
   font-size: 14px; }
 
 .navbar-brand {
-  width: 262px;
-  margin: 0; }
+  width: 262px; }
 
 .dropdown-toggle::after {
   background: url(../images/arrowDown.png) no-repeat 50%;
@@ -569,15 +568,12 @@ a.ui-button:active,
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1030; }
-
-  .navbar-brand {
-    margin-right: 15px; } }
+    z-index: 1030; } }
 @media (max-width: 1199px) {
   .header .navbar-collapse {
-    flex-wrap: wrap; }
+    padding-top: 20px; }
   .header .collapse.show {
-    display: flex; }
+    display: block; }
 
   .menu-main {
     width: 100%;
@@ -597,7 +593,10 @@ a.ui-button:active,
       padding-right: 10px;
       padding-left: 10px; }
     .menu-lang .dropdown-menu {
-      position: absolute; } }
+      position: absolute; }
+
+  .menu-user .dropdown-menu {
+    max-width: 220px !important; } }
 @media (max-width: 576px) {
   .navbar-brand {
     width: 210px; } }

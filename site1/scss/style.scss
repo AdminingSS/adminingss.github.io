@@ -672,7 +672,6 @@ a.ui-button:active,
 
 .navbar-brand {
   width: 262px;
-  margin: 0;
 }
 
 .dropdown {
@@ -790,10 +789,6 @@ a.ui-button:active,
     left: 0;
     z-index: 1030
   }
-
-  .navbar-brand {
-    margin-right: 15px;
-  }
 }
 
 @media (max-width: 1199px) {
@@ -801,11 +796,11 @@ a.ui-button:active,
   .header {
 
     .navbar-collapse {
-      flex-wrap: wrap;
+      padding-top: 20px;
     }
 
     .collapse.show {
-      display: flex;
+      display: block;
     }
   }
 
@@ -836,6 +831,13 @@ a.ui-button:active,
 
     .dropdown-menu {
       position: absolute;
+    }
+  }
+
+  .menu-user {
+
+    .dropdown-menu {
+      max-width: 220px !important;
     }
   }
 }
