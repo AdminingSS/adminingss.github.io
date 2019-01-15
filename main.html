@@ -1036,7 +1036,7 @@
 </div>
 
 <div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="tm-modal modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <!--<h5 class="modal-title" id="authModalLabel"></h5>-->
@@ -1045,12 +1045,93 @@
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                    <div class="row no-gutters">
+                        <div class="col-12 col-md-6 d-none d-md-block">
+                            <img src="https://via.placeholder.com/480x750" alt="">
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                            <ul class="nav nav-tabs nav-justified" id="authModalTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Sign in</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign up</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="authModalTabContent">
+                                <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                                    <div class="px-4 py-3 d-flex flex-column justify-content-between">
+                                        <h3 class="mb-3 text-center">Welcome back!</h3>
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="signinInputEmail">Email address</label>
+                                                <input type="email" class="form-control" id="signinInputEmail" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signinInputPassword">Password</label>
+                                                <div class="tm-password">
+                                                    <input type="password" class="form-control" id="signinInputPassword" placeholder="Password">
+                                                    <div class="tm-password-eye"><i class="fas fa-eye"></i></div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="tm-btn-red btn w-100 mb-4">Log in</button>
+                                            <a href="#">Forgot your password?</a>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                                    <div class="px-4 py-3 d-flex flex-column justify-content-between">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <label for="signupInputFName">First Name</label>
+                                                    <input type="text" class="form-control" id="signupInputFName" placeholder="First name">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="signupInputLName">Last Name</label>
+                                                    <input type="text" class="form-control" id="signupInputLName" placeholder="Last name">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signupInputEmail">Email address</label>
+                                                <input type="email" class="form-control" id="signupInputEmail" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signupInputPassword">Password</label>
+                                                <div class="tm-password">
+                                                    <input type="password" class="form-control" id="signupInputPassword" placeholder="Password" aria-describedby="signupPasswordHelp">
+                                                    <div class="tm-password-eye"><i class="fas fa-eye"></i></div>
+                                                    <small id="signupPasswordHelp" class="form-text text-muted text-right">Password strenght: <span></span></small>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="signupInputPasswordConf">Confirm Password</label>
+                                                <div class="tm-password">
+                                                    <input type="password" class="form-control" id="signupInputPasswordConf" placeholder="Password" aria-describedby="signupPasswordHelpMatch">
+                                                    <div class="tm-password-eye"><i class="fas fa-eye"></i></div>
+                                                    <small id="signupPasswordHelpMatch" class="form-text text-muted text-right">Password match: <span></span></small>
+                                                </div>
+                                            </div>
+                                            <div class="form-check mb-4">
+                                                <input type="checkbox" class="form-check-input" id="signupCheck">
+                                                <label class="form-check-label" for="signupCheck">I have read and accept <a href="#">Company's Terms and Conditions</a> and <a href="#">Privacy Policy Statement</a></label>
+                                            </div>
+                                            <button type="submit" class="tm-btn-red btn w-100 mb-4">Create new account</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
         </div>
     </div>
 </div>

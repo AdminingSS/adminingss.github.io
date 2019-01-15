@@ -564,7 +564,7 @@ a.ui-button:active,
 
 @media (min-width: 1200px) {
   .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
@@ -13138,5 +13138,46 @@ article .block-title {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1em; }
+
+.modal-open .cookie {
+  margin-right: 17px; }
+
+.tm-modal .modal-content {
+  border: 1px solid gray;
+  border-radius: 0; }
+  .tm-modal .modal-content .btn {
+    text-transform: uppercase; }
+.tm-modal .modal-header {
+  background-color: #000;
+  min-height: 50px;
+  border-radius: 0; }
+.tm-modal .modal-body {
+  padding: 0;
+  font-size: 16px;
+  color: #000; }
+  .tm-modal .modal-body h3 {
+    font-size: 24px; }
+.tm-modal .nav-tabs {
+  background-color: #ccc;
+  font-size: 20px;
+  color: #000;
+  text-transform: uppercase; }
+
+.tm-btn-red {
+  background-color: #e40000;
+  border-color: #e40000;
+  color: #fff; }
+
+.tm-password {
+  position: relative; }
+
+.tm-password-eye {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  cursor: pointer;
+  color: #909090; }
 
 /*# sourceMappingURL=style.css.map */
