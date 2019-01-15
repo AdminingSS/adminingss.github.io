@@ -694,6 +694,10 @@ a.ui-button:active,
   }
 }
 
+.navbar-toggler {
+  padding: 4px 8px;
+}
+
 .menu-main {
   font-size: 14px;
 
@@ -831,13 +835,6 @@ a.ui-button:active,
 
     .dropdown-menu {
       position: absolute;
-    }
-  }
-
-  .menu-user {
-
-    .dropdown-menu {
-      max-width: 220px !important;
     }
   }
 }
