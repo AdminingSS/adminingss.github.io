@@ -13125,36 +13125,60 @@ article .block-title {
 .tm-modal {
   max-width: 700px; }
   .tm-modal .modal-content {
-    border: 1px solid gray;
+    border: none;
     border-radius: 0; }
     .tm-modal .modal-content .close {
-      color: #bbb;
-      opacity: 1; }
+      top: 0;
+      color: #fff;
+      outline: none;
+      opacity: 0.75; }
       .tm-modal .modal-content .close:hover, .tm-modal .modal-content .close:focus {
         color: #fff;
-        outline: none; }
+        opacity: 1; }
     .tm-modal .modal-content .btn {
       font-weight: 600;
       text-transform: none; }
   .tm-modal .modal-header {
     background-color: #000;
     min-height: 50px;
+    border: none;
     border-radius: 0; }
   .tm-modal .modal-body {
     padding: 0;
-    font-size: 14px;
-    font-weight: 400;
-    color: #000; }
+    font-size: 12px; }
     .tm-modal .modal-body h3 {
       font-size: 24px;
       font-weight: 600;
       color: #495057; }
   .tm-modal .nav-tabs {
-    background-color: #ccc;
+    background-color: #e5e5e5;
+    border: none;
     font-size: 20px;
     font-weight: 700;
-    color: #000;
     text-transform: none; }
+    .tm-modal .nav-tabs .nav-item {
+      margin-bottom: 0; }
+    .tm-modal .nav-tabs .nav-link {
+      padding: 13px 15px;
+      color: #999;
+      border: none; }
+      .tm-modal .nav-tabs .nav-link:focus, .tm-modal .nav-tabs .nav-link:hover {
+        color: #000;
+        border: none; }
+    .tm-modal .nav-tabs .nav-item.show .nav-link,
+    .tm-modal .nav-tabs .nav-link.active {
+      color: #000;
+      border: none; }
+  .tm-modal .tab-pane {
+    max-height: 450px;
+    overflow-y: auto; }
+    .tm-modal .tab-pane a {
+      font-weight: 600;
+      color: #868e96; }
+      .tm-modal .tab-pane a:hover {
+        color: #999; }
+    .tm-modal .tab-pane .form-group label {
+      font-weight: 600; }
 
 .tm-btn-red {
   background-color: #e40000;
