@@ -1009,6 +1009,16 @@ a.ui-button:active,
   background: url(../images/showcase-bg.jpg) no-repeat 50%;
   background-size: cover;
 
+ /* &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }*/
+
   &__head {
     color: #fefefe;
     font-size: 55px;
@@ -1028,14 +1038,13 @@ a.ui-button:active,
   &-items {
     display: flex;
     align-items: center;
-    margin-bottom: 2px;
+
+    + .showcase-items {
+      border-top: 1px solid #ccc;
+    }
 
     label {
       margin-bottom: 0;
-    }
-
-    .link {
-      font-weight: 700;
     }
   }
 
@@ -1045,16 +1054,16 @@ a.ui-button:active,
     height: 48px;
 
     + .showcase-item {
-      margin-left: 2px;
+      border-left: 1px solid #ccc;
     }
 
-    .showcase-item {
+   /* .showcase-item {
       width: 100%;
     }
-
+*/
     .label {
       position: absolute;
-      top: 4px;
+      top: 5px;
       left: 10px;
       z-index: 10;
       color: #888;
@@ -1148,32 +1157,62 @@ a.ui-button:active,
     }
   }
 
+
   &-form {
     position: relative;
-    padding-right: 122px;
 
     button[type="submit"] {
       font-size: 16px;
       padding: 0 25px;
-      position: absolute;
-      right: 0;
-      top: 30px;
     }
   }
 
-  &-checks, &-check {
+  &-checks {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
   }
 
   &-check {
-    position: relative;
-    cursor: pointer;
+    padding: 0 20px;
 
-    + .showcase-check {
-      margin-left: 35px;
+    label {
+      position: relative;
+      cursor: pointer;
+      padding-left: 26px;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: background-color 0.2s ease-in-out;
+      }
     }
+
+    input {
+      display: none;
+
+      &:checked + label::before {
+        background-color: #00c5c5;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
   }
 
   &-home {
@@ -1202,32 +1241,50 @@ a.ui-button:active,
     }
   }
 
+  &-controls {
+    display: none;
+  }
+
   &-buttons {
     display: flex;
     align-items: center;
-    margin-bottom: 2px;
 
-    img {
+  /*  img {
       width: 50px;
-    }
+    }*/
   }
 
   .add-trip,
   .remove-trip {
     width: 226px;
-    padding: 0;
+    padding: 0 20px;
     font-size: 14px;
     line-height: 48px;
     text-align: center;
     cursor: pointer;
-    margin-right: 2px;
     border: none;
     background-color: rgba(255,255,255,.8);
-    transition: 300ms;
+    transition: background-color 300ms ease-in-out;
 
     &:hover {
       background-color: #fff;
     }
+  }
+
+  .remove-trip {
+    border-left: 1px solid #ccc;
+  }
+}
+
+.multi-trip-active {
+
+  .showcase-content {
+    display: block;
+  }
+
+  .showcase-controls {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -1312,7 +1369,6 @@ a.ui-button:active,
   }
 }
 
-
 // Showcase payment
 
 .showcase-payment {
@@ -1359,7 +1415,10 @@ a.ui-button:active,
       width: 157px;
     }
     &-quantity {
-      width: 155px;
+      font-size: 14px;
+    }
+
+    &-check label {
       font-size: 14px;
     }
 
@@ -1373,17 +1432,8 @@ a.ui-button:active,
       }
     }
 
-    &-form button[type="submit"] {
-      top: 24px;
-    }
-
     .add-trip, .remove-trip {
       width: 157px;
-    }
-  }
-  .check {
-    &-text {
-      font-size: 12px;
     }
   }
   .showcase-inner .showcase {
@@ -1392,30 +1442,14 @@ a.ui-button:active,
   .showcase-home {
     padding-top: 100px;
   }
-}
-@media (max-width: 1100px) {
-  .showcase {
-    &-item {
-      width: 146px;
-    }
-    &-quantity {
-      width: 144px;
-    }
 
-    .add-trip, .remove-trip {
-      width: 146px;
-    }
-  }
 }
-@media (max-width: 767px) {
+
+@media (max-width: 991px) {
   .showcase {
     height: auto;
-    padding-top: 34px;
-    background: #2e2e2e;
+    padding-top: 35px;
 
-    &-wrap {
-      background: #2e2e2e;
-    }
     &__head {
       font-size: 18px;
       line-height: 1.2;
@@ -1428,29 +1462,34 @@ a.ui-button:active,
       padding: 0 12px;
       margin-bottom: 8px;
     }
+
     &-checks {
-      flex-wrap: wrap;
-      margin-bottom: 10px;
+      justify-content: space-around;
     }
     &-check {
-      width: 50%;
+      padding: 0 5px;
 
-      + .showcase-check {
-        margin-left: 0;
+      label {
+        padding-left: 0;
+        font-size: 12px;
+
+        &::before {
+          display: none;
+        }
       }
 
-      .radio {
-        display: none;
-      }
-
-      &.active .check-text {
-        color: #00c5c5;
+      &.active label {
+        color: #e40000;
       }
     }
+
+    &-content {
+      display: block;
+    }
+
     &-items {
       flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       .link {
         position: absolute;
         bottom: 42px;
@@ -1461,13 +1500,9 @@ a.ui-button:active,
     }
     &-item,
     &-quantity {
-      width: 49%;
-      margin-bottom: 2px;
-
-      + .showcase-item {
-        margin-left: 0;
-      }
+      width: 50%;
     }
+
     .select2-container--default {
       .select2-selection--single {
         .select2-selection__rendered {
@@ -1479,22 +1514,20 @@ a.ui-button:active,
       }
     }
 
-    &-form {
-      padding-right: 0;
-
-      button[type="submit"] {
-        position: static;
-      }
+    &-controls {
+      width: 100%;
+      margin-bottom: 10px;
     }
 
     &-buttons {
       flex-wrap: wrap;
     }
 
-    .add-trip, .remove-trip {
-      width: 49%;
+    .add-trip, .remove-trip, .link {
+      width: 50%;
     }
   }
+
   .showcase-inner .showcase {
     padding: 80px 0 104px;
     &__head {
@@ -1509,11 +1542,7 @@ a.ui-button:active,
     }
   }
 
-  .check-text {
-    padding-left: 0;
-  }
-
-  .multi-trip-active {
+  /*.multi-trip-active {
 
     .showcase {
 
@@ -1534,7 +1563,7 @@ a.ui-button:active,
       width: 80%;
       margin-bottom: 2px;
     }
-  }
+  }*/
 }
 
 // Footer
@@ -4599,13 +4628,6 @@ a.ui-button:active,
   line-height: 46px !important;
 }
 
-.showcase-item input {
-  height: 100%;
-  line-height: 46px !important;
-  border-radius: 0 !important;
-  border: none;
-}
-
 .vue-treeselect--single .vue-treeselect__option--selected {
   font-weight: normal !important;
   background: #929292 !important;
@@ -4729,8 +4751,6 @@ a.ui-button:active,
   .time > div {margin-bottom: 0px;  margin-top: 0px;}
 }
 
-
-.showcase-checks {margin-bottom: 20px;}
 
 .results-wrap .text iframe {display: block; margin: 10px auto 0 auto;}
 
@@ -5469,9 +5489,6 @@ a.ui-button:active,
   .ticket-menu-search i,
   .ticket-menu-filter i {
     margin-left: 7px;
-  }
-  .showcase-wrap {
-    display: none;
   }
   .results .head {
     display: none;
