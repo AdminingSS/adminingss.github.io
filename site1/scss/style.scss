@@ -1184,6 +1184,8 @@ a.ui-button:active,
       font-size: 18px;
       font-weight: 800;
       color: #fff;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease-in-out;
 
       &::before {
         content: '';
@@ -1479,7 +1481,7 @@ a.ui-button:active,
       }
 
       &.active label {
-        color: #e40000;
+        border-color: #fff;
       }
     }
 

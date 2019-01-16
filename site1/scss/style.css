@@ -840,7 +840,9 @@ a.ui-button:active,
       padding-left: 26px;
       font-size: 18px;
       font-weight: 800;
-      color: #fff; }
+      color: #fff;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease-in-out; }
       .showcase-check label::before {
         content: '';
         display: block;
@@ -1035,7 +1037,7 @@ a.ui-button:active,
         .showcase-check label::before {
           display: none; }
       .showcase-check.active label {
-        color: #e40000; }
+        border-color: #fff; }
     .showcase-content {
       display: block; }
     .showcase-items {
