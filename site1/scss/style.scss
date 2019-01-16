@@ -1568,6 +1568,7 @@ a.ui-button:active,
       justify-content: center;
       width: 48px;
       height: 48px;
+      padding: 10px;
       font-size: 20px;
       color: $graybrown;
       font-weight: 700;
@@ -1607,6 +1608,7 @@ a.ui-button:active,
   bottom: 0;
   left: 100%;
   width: 100%;
+  font-size: 26px;
   background-color: #444;
   transition: left .35s ease;
 
@@ -1621,22 +1623,55 @@ a.ui-button:active,
   &.show {
     left: 0;
   }
+
+  h2 {
+    font-size: 42px;
+    margin: 0;
+    text-transform: none;
+    color: #fff;
+  }
+
+  .tm-flags {
+    font-size: 16px;
+  }
 }
 
 .tm-overflow-hidden {
   overflow: hidden;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1199px) {
 
 }
-@media (max-width: 1100px) {
 
+@media (max-width: 991px) {
+
+  .tm-footer-popup  {
+    font-size: 16px;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
 }
+
 @media (max-width: 767px) {
 
 }
-@media (min-width: 768px) {
+
+@media (max-width: 575px) {
+
+  .footer {
+    padding: 40px 0 20px;
+
+    .icon-nav {
+
+      li + li {
+        margin-top: 0;
+        margin-left: 15px;
+      }
+    }
+  }
 
 }
 
@@ -4529,22 +4564,6 @@ a.ui-button:active,
   }
 }
 
-
-//MY
-.tm-footer-popup {
-  font-size: 26px;
-
-  h2 {
-    font-size: 42px;
-    margin: 0;
-    text-transform: none;
-    color: #fff;
-  }
-
-  .tm-flags {
-    font-size: 16px;
-  }
-}
 
 
 

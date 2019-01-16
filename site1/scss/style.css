@@ -1079,6 +1079,7 @@ a.ui-button:active,
     justify-content: center;
     width: 48px;
     height: 48px;
+    padding: 10px;
     font-size: 20px;
     color: #444;
     font-weight: 700;
@@ -1110,6 +1111,7 @@ a.ui-button:active,
   bottom: 0;
   left: 100%;
   width: 100%;
+  font-size: 26px;
   background-color: #444;
   transition: left .35s ease; }
   .tm-footer-popup.collapsing {
@@ -1120,10 +1122,28 @@ a.ui-button:active,
     transition: left .35s ease; }
   .tm-footer-popup.show {
     left: 0; }
+  .tm-footer-popup h2 {
+    font-size: 42px;
+    margin: 0;
+    text-transform: none;
+    color: #fff; }
+  .tm-footer-popup .tm-flags {
+    font-size: 16px; }
 
 .tm-overflow-hidden {
   overflow: hidden; }
 
+@media (max-width: 991px) {
+  .tm-footer-popup {
+    font-size: 16px; }
+    .tm-footer-popup h2 {
+      font-size: 30px; } }
+@media (max-width: 575px) {
+  .footer {
+    padding: 40px 0 20px; }
+    .footer .icon-nav li + li {
+      margin-top: 0;
+      margin-left: 15px; } }
 .label {
   display: flex;
   align-items: center; }
@@ -3165,16 +3185,6 @@ a.ui-button:active,
     color: #ffae00; }
     .cookie a:not(.btn):hover {
       color: #999; }
-
-.tm-footer-popup {
-  font-size: 26px; }
-  .tm-footer-popup h2 {
-    font-size: 42px;
-    margin: 0;
-    text-transform: none;
-    color: #fff; }
-  .tm-footer-popup .tm-flags {
-    font-size: 16px; }
 
 /* New styles */
 .vue-treeselect {
