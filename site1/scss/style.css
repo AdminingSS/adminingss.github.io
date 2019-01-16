@@ -13127,8 +13127,15 @@ article .block-title {
   .tm-modal .modal-content {
     border: 1px solid gray;
     border-radius: 0; }
+    .tm-modal .modal-content .close {
+      color: #bbb;
+      opacity: 1; }
+      .tm-modal .modal-content .close:hover, .tm-modal .modal-content .close:focus {
+        color: #fff;
+        outline: none; }
     .tm-modal .modal-content .btn {
-      text-transform: uppercase; }
+      font-weight: 600;
+      text-transform: none; }
   .tm-modal .modal-header {
     background-color: #000;
     min-height: 50px;
@@ -13136,19 +13143,32 @@ article .block-title {
   .tm-modal .modal-body {
     padding: 0;
     font-size: 16px;
+    font-weight: 400;
     color: #000; }
     .tm-modal .modal-body h3 {
-      font-size: 24px; }
+      font-size: 24px;
+      font-weight: 600;
+      color: #495057; }
   .tm-modal .nav-tabs {
     background-color: #ccc;
     font-size: 20px;
+    font-weight: 700;
     color: #000;
-    text-transform: uppercase; }
+    text-transform: none; }
 
 .tm-btn-red {
   background-color: #e40000;
   border-color: #e40000;
   color: #fff; }
+  .tm-btn-red:hover, .tm-btn-red:focus {
+    background-color: #b10000;
+    border-color: #b10000; }
+
+.tm-link-red {
+  color: #e40000;
+  font-weight: 500; }
+  .tm-link-red:hover, .tm-link-red:focus {
+    color: #ff1818; }
 
 .tm-password {
   position: relative; }
