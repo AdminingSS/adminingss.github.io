@@ -13166,26 +13166,28 @@ article .block-title {
 .modal-open .cookie {
   margin-right: 17px; }
 
-.tm-modal .modal-content {
-  border: 1px solid gray;
-  border-radius: 0; }
-  .tm-modal .modal-content .btn {
+.tm-modal {
+  max-width: 700px; }
+  .tm-modal .modal-content {
+    border: 1px solid gray;
+    border-radius: 0; }
+    .tm-modal .modal-content .btn {
+      text-transform: uppercase; }
+  .tm-modal .modal-header {
+    background-color: #000;
+    min-height: 50px;
+    border-radius: 0; }
+  .tm-modal .modal-body {
+    padding: 0;
+    font-size: 16px;
+    color: #000; }
+    .tm-modal .modal-body h3 {
+      font-size: 24px; }
+  .tm-modal .nav-tabs {
+    background-color: #ccc;
+    font-size: 20px;
+    color: #000;
     text-transform: uppercase; }
-.tm-modal .modal-header {
-  background-color: #000;
-  min-height: 50px;
-  border-radius: 0; }
-.tm-modal .modal-body {
-  padding: 0;
-  font-size: 16px;
-  color: #000; }
-  .tm-modal .modal-body h3 {
-    font-size: 24px; }
-.tm-modal .nav-tabs {
-  background-color: #ccc;
-  font-size: 20px;
-  color: #000;
-  text-transform: uppercase; }
 
 .tm-btn-red {
   background-color: #e40000;
