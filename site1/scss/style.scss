@@ -1635,6 +1635,11 @@ a.ui-button:active,
   .tm-flags {
     font-size: 16px;
   }
+
+  .flag-icon {
+    width: 40px;
+    line-height: inherit;
+  }
 }
 
 .tm-overflow-hidden {
@@ -1671,6 +1676,14 @@ a.ui-button:active,
         margin-top: 0;
         margin-left: 15px;
       }
+    }
+  }
+
+  .tm-footer-popup {
+    font-size: 14px;
+
+    .tm-flags {
+      font-size: 14px;
     }
   }
 
