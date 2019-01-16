@@ -13206,4 +13206,9 @@ article .block-title {
   cursor: pointer;
   color: #909090; }
 
+@media (max-width: 767px) {
+  .tm-modal .tab-pane {
+    max-height: 100%;
+    overflow-y: visible; } }
+
 /*# sourceMappingURL=style.css.map */
