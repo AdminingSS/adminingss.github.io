@@ -16205,8 +16205,19 @@ article .block-title {
     border: 1px solid gray;
     border-radius: 0;
 
+    .close {
+      color: #bbb;
+      opacity: 1;
+
+      &:hover, &:focus {
+        color: #fff;
+        outline: none;
+      }
+    }
+
     .btn {
-      text-transform: uppercase;
+      font-weight: 600;
+      text-transform: none;
     }
   }
 
@@ -16219,19 +16230,22 @@ article .block-title {
   .modal-body {
     padding: 0;
     font-size: 16px;
+    font-weight: 400;
     color: #000;
 
     h3 {
       font-size: 24px;
+      font-weight: 600;
+      color: #495057;
     }
   }
 
   .nav-tabs {
     background-color: #ccc;
     font-size: 20px;
-    //font-weight: 600;
+    font-weight: 700;
     color: #000;
-    text-transform: uppercase;
+    text-transform: none;
   }
 
 }
@@ -16240,6 +16254,20 @@ article .block-title {
   background-color: #e40000;
   border-color: #e40000;
   color: #fff;
+
+  &:hover, &:focus {
+    background-color: darken(#e40000, 10%);
+    border-color: darken(#e40000, 10%);
+  }
+}
+
+.tm-link-red {
+  color: #e40000;
+  font-weight: 500;
+
+  &:hover, &:focus {
+    color: lighten(#e40000, 10%)
+  }
 }
 
 .tm-password {
