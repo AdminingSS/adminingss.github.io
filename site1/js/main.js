@@ -183,7 +183,6 @@ $(document).ready(function () {
             });
 
         });
-        console.log($destinationsSlider.length);
 
         $destinationsSlider.slick({
             infinite: true,
