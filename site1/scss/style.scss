@@ -1282,10 +1282,6 @@ a.ui-button:active,
   .remove-trip {
     border-left: 1px solid #ccc;
   }
-
-  .bootstrap-datetimepicker-widget li.picker-switch {
-    display: none;
-  }
 }
 
 .multi-trip-active {
@@ -4832,22 +4828,6 @@ a.ui-button:active,
 .selected-tag,
 .selected {
   max-width: 100% !important;
-}
-
-.dropdown-menu {
-  width: auto !important;
-  max-width: 500px !important;
-  min-width: 100% !important;
-}
-
-.dropdown-menu p {
-  font-size: 12px;
-}
-
-@media (max-width: 768px) {
-  .dropdown-menu {
-    max-width: 100% !important;
-  }
 }
 
 .options_list {
