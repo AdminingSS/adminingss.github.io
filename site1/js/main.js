@@ -297,11 +297,19 @@ $(document).ready(function () {
     $('.content-gallery-nav .numbers-total').text(countContent);
 
     // Select 2
+    (function () {
+        var $showcaseItem = $('.showcase-item select');
+        var $orderSelect = $('.order-select');
 
-//  $('.showcase-item select').select2({dropdownAutoWidth : true,
-//    width: '100%'});
+        $showcaseItem.select2({
+            dropdownAutoWidth: true,
+            width: '100%'
+        });
 
-    $('.order-select').select2({width: '100%'});
+        $orderSelect.select2({
+            width: '100%'
+        });
+    })();
 
 
     // Seat
@@ -408,12 +416,12 @@ $(document).ready(function () {
     //     // durationPos();
     // });
 
-   /* $('.results .nav-link').click(function () {
-        setTimeout(function () {
-            durationPos();
-            // showMoreFilters();
-        }, 10);
-    });*/
+    /* $('.results .nav-link').click(function () {
+         setTimeout(function () {
+             durationPos();
+             // showMoreFilters();
+         }, 10);
+     });*/
 
     $('.train-type').click(function () {
         $(this).parent().find('.train-type').removeClass('active');
@@ -507,10 +515,10 @@ $(document).ready(function () {
             $topSlider.slick('setPosition');
             $mainSlider.slick('setPosition');
 
-            $topSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            $topSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
                 $mainSlider.find('.tm-slide-highlight').removeClass('tm-slide-highlight');
                 const destSlide = nextSlide + 1;
-                $mainSlider.find('.slick-slide:nth-child('+ destSlide +')').addClass('tm-slide-highlight');
+                $mainSlider.find('.slick-slide:nth-child(' + destSlide + ')').addClass('tm-slide-highlight');
             });
         });
     })();
