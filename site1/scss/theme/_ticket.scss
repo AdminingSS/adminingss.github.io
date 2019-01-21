@@ -622,6 +622,24 @@
   }
 }
 
+@media (max-width: 575px) {
+
+  .ticket-item .time {
+    font-size: 20px;
+  }
+
+  .ticket-item .ticket-price .amount {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .ticket-item .ticket-total {
+    margin-bottom: 5px;
+  }
+}
+
+
+
 //FARSH
 
 

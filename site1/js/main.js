@@ -1,19 +1,19 @@
-// function durationPos() {
-//     if ($(window).width() < 540) {
-//         var left,
-//             width;
-//         $('.ticket-duration').each(function () {
-//             left = $(this).prev().find('.time').outerWidth();
-//             width = $(this).next().find('.time').position().left;
-//             $(this).css({
-//                 "left": left,
-//                 "width": width - left - 10
-//             });
-//         });
-//     } else {
-//         $('.ticket-duration').removeAttr('style');
-//     }
-// }
+function durationPos() {
+    if ($(window).width() < 540) {
+        var left,
+            width;
+        $('.ticket-duration').each(function () {
+            left = $(this).prev().find('.time').outerWidth();
+            width = $(this).next().find('.time').position().left;
+            $(this).css({
+                "left": left,
+                "width": width - left - 10
+            });
+        });
+    } else {
+        $('.ticket-duration').removeAttr('style');
+    }
+}
 
 $(document).ready(function () {
 
@@ -495,10 +495,9 @@ $(document).ready(function () {
 
 
         $trainTypesModal.each(function() {
-            var id = $(this).prop('id');
-
-            var $topSlider = $('#' + id + ' .tm-slider__train-types-top');
-            var $mainSlider = $('#' + id + ' .tm-slider__train-types-main');
+            var $trainType = $(this);
+            var $topSlider = $trainType.find('.tm-slider__train-types-top')
+            var $mainSlider = $trainType.find('.tm-slider__train-types-main');
 
             $topSlider.slick({
                 slidesToShow: 1,
@@ -511,7 +510,7 @@ $(document).ready(function () {
             $mainSlider.slick({
                 slidesToShow: 6,
                 slidesToScroll: 1,
-                asNavFor: '#' + id + ' .tm-slider__train-types-top',
+                asNavFor: $topSlider,
                 focusOnSelect: true,
                 infinite: false
             });
@@ -523,7 +522,7 @@ $(document).ready(function () {
                 $mainSlider.find('.slick-slide:nth-child('+ destSlide +')').addClass('tm-slide-highlight');
             });
 
-            $(this).on('shown.bs.modal', function () {
+            $trainType.on('shown.bs.modal', function () {
 
                 $topSlider.slick('setPosition');
                 $mainSlider.slick('setPosition');
