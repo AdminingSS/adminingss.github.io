@@ -1851,6 +1851,15 @@ a.ui-button:active,
   padding-left: 10px;
   border-bottom: 1px solid #e1e1e1; }
 
+.ticket-menu .nav-item {
+  padding: 5px 3px; }
+.ticket-menu .nav-link {
+  border: 1px solid #eee;
+  font-size: 14px; }
+  .ticket-menu .nav-link.active, .ticket-menu .nav-link:active, .ticket-menu .nav-link:hover {
+    color: #090909;
+    border: 1px solid #a2a2a2; }
+
 .ticket-price {
   position: relative;
   padding-top: 10px;

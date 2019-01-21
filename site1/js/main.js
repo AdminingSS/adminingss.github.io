@@ -491,36 +491,45 @@ $(document).ready(function () {
     //Train types slider
     (function () {
 
-        $topSlider = $('.tm-slider__train-types-top');
-        $mainSlider = $('.tm-slider__train-types-main');
+        var $trainTypesModal = $('.tm-train-types-modal');
 
-        $topSlider.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            fade: true,
-            infinite: false
-        });
 
-        $mainSlider.slick({
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            asNavFor: '.tm-slider__train-types-top',
-            focusOnSelect: true,
-            infinite: false
-        });
+        $trainTypesModal.each(function() {
+            var id = $(this).prop('id');
 
-        $('#trainTypesModal').on('shown.bs.modal', function () {
+            var $topSlider = $('#' + id + ' .tm-slider__train-types-top');
+            var $mainSlider = $('#' + id + ' .tm-slider__train-types-main');
 
-            $topSlider.slick('setPosition');
-            $mainSlider.slick('setPosition');
+            $topSlider.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                fade: true,
+                infinite: false
+            });
 
-            $topSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            $mainSlider.slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                asNavFor: '#' + id + ' .tm-slider__train-types-top',
+                focusOnSelect: true,
+                infinite: false
+            });
+
+            $topSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                var destSlide = nextSlide + 1;
+
                 $mainSlider.find('.tm-slide-highlight').removeClass('tm-slide-highlight');
-                const destSlide = nextSlide + 1;
-                $mainSlider.find('.slick-slide:nth-child(' + destSlide + ')').addClass('tm-slide-highlight');
+                $mainSlider.find('.slick-slide:nth-child('+ destSlide +')').addClass('tm-slide-highlight');
+            });
+
+            $(this).on('shown.bs.modal', function () {
+
+                $topSlider.slick('setPosition');
+                $mainSlider.slick('setPosition');
             });
         });
+
     })();
 
 });
