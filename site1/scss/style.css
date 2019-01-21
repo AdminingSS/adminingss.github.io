@@ -702,6 +702,7 @@ a.ui-button:active,
 
 .showcase {
   position: relative;
+  padding: 20px 0;
   background: url(../images/showcase-bg.jpg) no-repeat 50%;
   background-size: cover;
   /* &::before {
@@ -861,7 +862,8 @@ a.ui-button:active,
     align-items: center; }
   .showcase-home {
     height: 624px;
-    padding-top: 230px; }
+    padding-top: 230px;
+    padding-bottom: 60px; }
   .showcase-inner {
     padding-top: 78px; }
   .showcase-date {
@@ -3769,6 +3771,7 @@ a.ui-button:active,
   .ticket-filter {
     display: none;
     position: fixed;
+    z-index: 1050;
     top: 0;
     right: 0;
     bottom: 0;
