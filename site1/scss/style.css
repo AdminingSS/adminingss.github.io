@@ -229,8 +229,6 @@ h2, .head {
 .select2-container--default .select2-selection--single {
   border-radius: 0;
   border: none;
-  border-right: 1px solid #e4e4e4;
-  border-left: 1px solid #e4e4e4;
   text-align: left;
   font: 300 18px 'Montserrat'; }
   .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -3430,7 +3428,7 @@ a.ui-button:active,
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   padding: 20px 10px 10px;
-  line-height: normal;
+  line-height: 17px;
   font-size: 16px; }
 
 .sub-nav-wrap {
