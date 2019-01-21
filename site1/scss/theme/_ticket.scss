@@ -1,0 +1,661 @@
+.checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+
+  input {
+    display: none;
+
+    &:checked + span:before {
+      opacity: 1;
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e40000;
+    border-radius: 3px;
+
+    &::before {
+      content: "\f00c";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 12px;
+      line-height: normal;
+      opacity: 0;
+      color: #e40000;
+      transition: opacity 0.2s ease-in-out;
+    }
+  }
+
+}
+
+.sub-nav-wrap {
+  display: none;
+  background: #eee;
+}
+
+.sub-menu {
+  justify-content: flex-end;
+
+  a {
+    color: #999;
+  }
+}
+
+.row-divider {
+
+  > [class*='col'] + [class*='col'] {
+    border-left: solid 1px #eee;
+  }
+}
+
+.tm-modal-search {
+
+  .modal-header {
+    display: block;
+  }
+}
+
+.tm-button-open {
+  position: relative;
+  padding-right: 30px;
+
+  &::before {
+    content: "\f106";
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  &.collapsed::before {
+    content: "\f107";
+  }
+}
+
+//Ticket menu
+.ticket-menu {
+
+  .nav-item {
+    padding: 5px 0;
+    margin-right: 5px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    border: 1px solid #eee;
+    font-size: 14px;
+
+    &.filled {
+      padding-left: 30px;
+      background-color: #eee;
+
+      &::before {
+        content: "\f00c";
+        position: absolute;
+        top: 9px;
+        left: 10px;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+    }
+
+    &.active, &:active, &:hover {
+      color: darken(#555, 30%);
+      border: 1px solid darken(#eee, 30%);
+    }
+  }
+}
+
+/* Ticket result */
+
+.ticket {
+
+  &-result {
+    text-align: left;
+    border: solid 1px #eee;
+  }
+
+  &-header {
+    padding: 20px 0;
+    border-bottom: solid 1px #eee;
+  }
+
+  &-direction-text {
+    position: relative;
+    display: block;
+    padding-right: 30px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 700;
+
+    &::before {
+      content: "\f303";
+      position: absolute;
+      top: 4px;
+      right: 0;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    span {
+      border-bottom: 1px dashed;
+    }
+  }
+
+  &-sort {
+    font-size: 14px;
+    background: #eee;
+
+    &-item {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      padding: 5px 20px 5px 0;
+      line-height: 20px;
+      font-weight: 700;
+
+      &:hover {
+        color: #c70000;
+      }
+
+      &.desc,
+      &.asc {
+        color: #c70000;
+        font-weight: 800;
+
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          display: inline-block;
+          line-height: inherit;
+          position: absolute;
+          right: 0;
+          top: 20%;
+          font-size: 14px;
+        }
+      }
+
+      &.asc::after {
+        content: "\f077";
+      }
+
+      &.desc::after {
+        content: "\f078";
+      }
+    }
+  }
+
+  &-item {
+    padding: 20px 0;
+
+    + .ticket-item {
+      border-top: solid 1px #eee;
+    }
+
+    .ticket-to {
+      text-align: right;
+    }
+
+    .time {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .arrive-date, .station, .ticket-total {
+      font-size: 12px;
+    }
+
+    .city {
+      font-weight: 700;
+    }
+
+    .station {
+      font-style: italic;
+    }
+
+    .ticket-duration {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .duration-bar {
+      position: relative;
+      height: 2px;
+      margin-left: 10%;
+      width: 80%;
+      border-top: 1px solid #777;
+      border-bottom: 1px solid #777;
+    }
+
+    .duration-bar:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: -10px;
+      bottom: -5px;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border: 1px solid #777;
+      border-radius: 50%;
+    }
+
+    .duration-bar:after {
+      position: absolute;
+      content: '';
+      display: block;
+      right: -10px;
+      bottom: -5px;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border: 1px solid #777;
+      border-radius: 50%;
+    }
+
+    .ticket-total {
+      text-align: center;
+    }
+
+    .ticket-price {
+      text-align: center;
+
+      .amount {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 10px;
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .ticket-info {
+      font-size: 14px;
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+  }
+
+  &-route a {
+    font-weight: 500;
+    color: #c70000;
+
+    &:hover {
+      color: darken(#e40000, 10%);
+    }
+  }
+
+  &-travel {
+
+    .time {
+      font-size: 30px;
+    }
+
+    .station {
+      font-size: 12px;
+    }
+  }
+
+  &-extras {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding: 5px 0;
+
+    li {
+      position: relative;
+      width: 30px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .count_text {
+      text-align: center;
+      min-width: 7px;
+      background: rgb(228, 0, 0);
+      font-weight: bold;
+      color: white;
+      font-size: 8px;
+      padding: 1px;
+      position: absolute;
+      right: 3px;
+      top: 0;
+    }
+  }
+
+
+}
+
+.tm-icon-train-types {
+  font-weight: 400;
+  font-size: 25px;
+  color: rgb(255,0,0);
+}
+
+/* Slider Train Types */
+
+.tm-slider__train-types-top {
+
+  .slick-prev, .slick-next {
+    z-index: 1;
+
+    &.slick-disabled:before {
+        opacity: .3;
+      }
+    }
+
+  .slick-prev {
+    left: 20px;
+  }
+
+  .slick-next {
+    right: 20px;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    opacity: .7;
+    color: white;
+  }
+
+  .slick-prev::before {
+    content: "\f060";
+  }
+
+  .slick-next::before {
+    content: "\f061";
+  }
+
+  .slick-slide {
+    padding: 10px;
+  }
+}
+
+.tm-slider__train-types-main .slick-slide {
+  padding: 5px;
+  border: 3px solid transparent;
+  //height: 100%;
+
+  &.tm-slide-highlight {
+    transition: none;
+    border: 3px solid blue;
+  }
+}
+
+.tm-slider__train-types-desc {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+
+
+/* Ticket filter */
+
+.ticket-filter {
+
+  &-close {
+    display: none;
+  }
+
+  &-sliders {
+    padding-bottom: 20px;
+  }
+
+  &-slider {
+    margin-bottom: 30px;
+  }
+
+  .ui-slider {
+    position: relative;
+    height: 7px;
+    margin: 0 9px;
+    background: #ebebeb;
+
+    .ui-slider-handle {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 5px solid #d81818;
+      background: #fff;
+      margin: -6px 0 0 -9px;
+      cursor: pointer;
+    }
+
+    .ui-slider-range {
+      position: absolute;
+      height: 100%;
+      background: #555;
+    }
+
+    .min, .max {
+      position: absolute;
+      top: 15px;
+      z-index: 1000;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .min {
+      left: -5px;
+    }
+    .max {
+      right: -5px;
+    }
+  }
+
+  &-param {
+    margin-bottom: 10px;
+
+    h4 {
+      text-align: left;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      text-align: left;
+    }
+  }
+
+  &-apply {
+    margin-top: 20px;
+    display: none;
+  }
+}
+
+.train {
+
+  &-types {
+    padding-top: 20px;
+  }
+
+  &-type {
+    padding: 15px 0;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    &.active {
+      border: 2px solid #d81818;
+
+      .train-radio::before {
+        opacity: 1;
+      }
+    }
+
+    &-price {
+      font-weight: 600;
+      text-align: right;
+    }
+
+    &-available {
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-radio {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    transition: 300ms;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      right: 4px;
+      bottom: 4px;
+      background: #d81818;
+      border-radius: 50%;
+      transition: 300ms;
+      opacity: 0;
+    }
+  }
+
+  &-order {
+    padding-top: 20px;
+    text-align: right;
+
+    .seats-total-price .price {
+      font-weight: 600;
+    }
+  }
+}
+
+.currency {
+  font-style: italic;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+
+  .sub-nav-wrap {
+    display: block;
+  }
+
+  .ticket-filter {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    padding: 50px 20px 20px;
+    background-color: #fff;
+
+    &-close {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    &-apply {
+      display: block;
+    }
+  }
+
+  .ticket-item {
+    .ticket-total {
+      text-align: left;
+
+      br{
+        display: none;
+      }
+    }
+
+    .ticket-price .amount {
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .ticket-sort {
+    font-size: 12px;
+  }
+}
+
+//FARSH
+
+
+.results .nav-tabs {
+  border-bottom: 0;
+}
+
+.results .nav-link {
+  border: 1px solid #dee2e6 !important;
+  border-radius: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.results .nav-link.active {
+  border: 1px solid #555 !important;
+}
+
+.results .nav-item.active .nav-link {
+  border: 1px solid #4baf4c !important;
+  position: relative;
+  padding-right: 30px;
+  color: #4baf4c;
+}
+
+.results .nav-item.active .nav-link:before {
+  content: "\f00c";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #4baf4c;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  font-size: 14px;
+  margin-top: -6px;
+}

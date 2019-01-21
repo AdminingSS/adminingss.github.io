@@ -1,19 +1,19 @@
-function durationPos() {
-    if ($(window).width() < 540) {
-        var left,
-            width;
-        $('.ticket-duration').each(function () {
-            left = $(this).prev().find('.time').outerWidth();
-            width = $(this).next().find('.time').position().left;
-            $(this).css({
-                "left": left,
-                "width": width - left - 10
-            });
-        });
-    } else {
-        $('.ticket-duration').removeAttr('style');
-    }
-}
+// function durationPos() {
+//     if ($(window).width() < 540) {
+//         var left,
+//             width;
+//         $('.ticket-duration').each(function () {
+//             left = $(this).prev().find('.time').outerWidth();
+//             width = $(this).next().find('.time').position().left;
+//             $(this).css({
+//                 "left": left,
+//                 "width": width - left - 10
+//             });
+//         });
+//     } else {
+//         $('.ticket-duration').removeAttr('style');
+//     }
+// }
 
 $(document).ready(function () {
 
@@ -373,47 +373,47 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
-    $('.ticket-menu-search').click(function () {
-        $('.showcase-wrap').slideToggle();
-    });
+    // $('.ticket-menu-search').click(function () {
+    //     $('.showcase-wrap').slideToggle();
+    // });
 
-    $('.ticket-menu-filter').click(function () {
-        $('.ticket-filter-modal').fadeIn();
-        showMoreFilters();
-    });
+    // $('.ticket-menu-filter').click(function () {
+    //     $('.ticket-filter-modal').fadeIn();
+    //     showMoreFilters();
+    // });
 
-    $('.filter-modal-close').click(function () {
-        $('.ticket-filter-modal').fadeOut();
-    });
+    // $('.filter-modal-close').click(function () {
+    //     $('.ticket-filter-modal').fadeOut();
+    // });
 
-    $('.ticket-filter-apply button').click(function () {
-        $('.ticket-filter-modal').fadeOut();
-    });
+    // $('.ticket-filter-apply button').click(function () {
+    //     $('.ticket-filter-modal').fadeOut();
+    // });
 
-    function showMoreFilters() {
-        $('.ticket-filter-param ul').each(function () {
-            if ($(this).outerHeight() > 112) {
-                $(this).addClass('more');
-                $(this).next().show();
-            }
-        });
-    }
+    // function showMoreFilters() {
+    //     $('.ticket-filter-param ul').each(function () {
+    //         if ($(this).outerHeight() > 112) {
+    //             $(this).addClass('more');
+    //             $(this).next().show();
+    //         }
+    //     });
+    // }
 
-    setTimeout(function () {
-        durationPos();
-        showMoreFilters();
-    }, 2100);
+    // setTimeout(function () {
+    //     // durationPos();
+    //     // showMoreFilters();
+    // }, 2100);
 
-    $(window).resize(function () {
-        durationPos();
-    });
+    // $(window).resize(function () {
+    //     // durationPos();
+    // });
 
-    $('.results .nav-link').click(function () {
+   /* $('.results .nav-link').click(function () {
         setTimeout(function () {
             durationPos();
-            showMoreFilters();
+            // showMoreFilters();
         }, 10);
-    });
+    });*/
 
     $('.train-type').click(function () {
         $(this).parent().find('.train-type').removeClass('active');
@@ -478,6 +478,41 @@ $(document).ready(function () {
             $cookiePanel.fadeOut(100);
         })
 
+    })();
+
+    //Train types slider
+    (function () {
+
+        $topSlider = $('.tm-slider__train-types-top');
+        $mainSlider = $('.tm-slider__train-types-main');
+
+        $topSlider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            infinite: false
+        });
+
+        $mainSlider.slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            asNavFor: '.tm-slider__train-types-top',
+            focusOnSelect: true,
+            infinite: false
+        });
+
+        $('#trainTypesModal').on('shown.bs.modal', function () {
+
+            $topSlider.slick('setPosition');
+            $mainSlider.slick('setPosition');
+
+            $topSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                $mainSlider.find('.tm-slide-highlight').removeClass('tm-slide-highlight');
+                const destSlide = nextSlide + 1;
+                $mainSlider.find('.slick-slide:nth-child('+ destSlide +')').addClass('tm-slide-highlight');
+            });
+        });
     })();
 
 });
