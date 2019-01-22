@@ -3424,6 +3424,9 @@ a.ui-button:active,
       color: #e40000;
       transition: opacity 0.2s ease-in-out; }
 
+.modal-dialog {
+  text-align: left; }
+
 .sub-nav-wrap {
   display: none;
   background: #eee; }
