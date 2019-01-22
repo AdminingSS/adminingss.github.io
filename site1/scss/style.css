@@ -3790,8 +3790,12 @@ a.ui-button:active,
   font-size: 12px;
   font-weight: 500;
   margin-bottom: 0; }
-  .rout-table th, .rout-table td {
-    white-space: nowrap; }
+  .rout-table th:first-of-type, .rout-table td:first-of-type {
+    width: 50%;
+    max-width: 450px; }
+
+.tm-route-modal .modal-dialog {
+  max-width: 900px; }
 
 @media (max-width: 991px) {
   .sub-nav-wrap {

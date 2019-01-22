@@ -623,7 +623,18 @@
   margin-bottom: 0;
 
   th, td {
-    white-space: nowrap;
+
+    &:first-of-type {
+      width: 50%;
+      max-width: 450px;
+    }
+  }
+}
+
+.tm-route-modal {
+
+  .modal-dialog {
+    max-width: 900px;
   }
 }
 
