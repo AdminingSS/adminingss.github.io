@@ -289,6 +289,10 @@
 
   &-collapse-wrap {
     display: block;
+
+    &:not(.show) {
+      display: block;
+    }
   }
 }
 
@@ -558,6 +562,10 @@
 
     &-collapse-wrap  {
       display: none;
+
+      &:not(.show) {
+        display: none;
+      }
 
       &.collapsing {
         display: block;

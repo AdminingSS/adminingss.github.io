@@ -901,6 +901,8 @@ a.ui-button:active,
     display: none; }
   .showcase-collapse-wrap {
     display: block; }
+    .showcase-collapse-wrap:not(.show) {
+      display: block; }
 
 .multi-trip-active .showcase-content {
   display: block; }
@@ -1063,6 +1065,8 @@ a.ui-button:active,
     width: 50%; }
   .showcase-collapse-wrap {
     display: none; }
+    .showcase-collapse-wrap:not(.show) {
+      display: none; }
     .showcase-collapse-wrap.collapsing {
       display: block; } }
 @media (max-width: 767px) {
