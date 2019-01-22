@@ -310,36 +310,22 @@ h2, .head {
 
 .select2 {
   &-container {
-    .select2 {
-      &-selection {
-        &--single {
-          height: 100%;
-        }
-      }
-    }
     &--default {
       .select2-selection--single {
         border-radius: 0;
         border: none;
         text-align: left;
-        font: 300 18px 'Montserrat';
 
         .select2-selection__rendered {
-          line-height: 48px;
           color: $gray;
           padding-right: 32px;
           padding-left: 10px;
         }
-        .select2-selection__arrow {
-          height: 100%;
-        }
+
         .select2-selection__arrow {
           background: url(../images/arrowDownSelect.png) no-repeat 50%;
-          width: 14px;
-          height: 9px;
-          height: 100%;
           transition: 300ms;
-          margin-right: 16px;
+          margin-right: 5px;
           b {
             display: none;
           }
@@ -364,7 +350,7 @@ h2, .head {
 }
 .select2-dropdown {
   border-radius: 0;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #ddd;
 }
 
 // Datepicker
@@ -4065,6 +4051,7 @@ a.ui-button:active,
 }
 
 .schema-info {
+  text-align: left;
   position: absolute;
   width: auto;
   height: auto;

@@ -311,6 +311,15 @@ $(document).ready(function () {
         });
     })();
 
+    (function () {
+        var $ticketNotfound = $('.ticket-notfound select');
+
+        $ticketNotfound.select2({
+            dropdownAutoWidth: true,
+            width: '100%'
+        });
+    })();
+
 
     // Seat
 
@@ -398,30 +407,30 @@ $(document).ready(function () {
     //     $('.ticket-filter-modal').fadeOut();
     // });
 
-    // function showMoreFilters() {
-    //     $('.ticket-filter-param ul').each(function () {
-    //         if ($(this).outerHeight() > 112) {
-    //             $(this).addClass('more');
-    //             $(this).next().show();
-    //         }
-    //     });
-    // }
+    function showMoreFilters() {
+        $('.ticket-filter-param ul').each(function () {
+            if ($(this).outerHeight() > 112) {
+                $(this).addClass('more');
+                $(this).next().show();
+            }
+        });
+    }
 
-    // setTimeout(function () {
-    //     // durationPos();
-    //     // showMoreFilters();
-    // }, 2100);
+    setTimeout(function () {
+        durationPos();
+        showMoreFilters();
+    }, 2100);
 
-    // $(window).resize(function () {
-    //     // durationPos();
-    // });
+    $(window).resize(function () {
+        // durationPos();
+    });
 
-    /* $('.results .nav-link').click(function () {
+     $('.results .nav-link').click(function () {
          setTimeout(function () {
              durationPos();
              // showMoreFilters();
          }, 10);
-     });*/
+     });
 
     $('.train-type').click(function () {
         $(this).parent().find('.train-type').removeClass('active');
@@ -489,7 +498,7 @@ $(document).ready(function () {
     })();
 
     //Train types slider
-    (function () {
+    /*(function () {
 
         var $trainTypesModal = $('.tm-train-types-modal');
 
@@ -529,7 +538,7 @@ $(document).ready(function () {
             });
         });
 
-    })();
+    })();*/
 
 });
 
