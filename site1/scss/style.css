@@ -3725,6 +3725,7 @@ a.ui-button:active,
   margin-top: 20px;
   display: none; }
 .ticket-filter-more {
+  display: none;
   font-weight: 700;
   cursor: pointer; }
   .ticket-filter-more:hover {

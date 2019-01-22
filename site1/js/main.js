@@ -409,10 +409,15 @@ $(document).ready(function () {
 
     function showMoreFilters() {
         $('.ticket-filter-param ul').each(function () {
-            if ($(this).outerHeight() > 112) {
-                $(this).addClass('more');
-                $(this).next().show();
-            }
+            var $ul = $(this);
+            var height = $ul.outerHeight();
+            var maxHeight = 112;
+
+            if (height < maxHeight) return;
+
+            $ul.addClass('more')
+                .next()
+                .show();
         });
     }
 
@@ -422,15 +427,15 @@ $(document).ready(function () {
     }, 2100);
 
     $(window).resize(function () {
-        // durationPos();
+        durationPos();
     });
 
-     $('.results .nav-link').click(function () {
-         setTimeout(function () {
-             durationPos();
-             // showMoreFilters();
-         }, 10);
-     });
+    $('.results .nav-link').click(function () {
+        setTimeout(function () {
+            durationPos();
+            showMoreFilters();
+        }, 10);
+    });
 
     $('.train-type').click(function () {
         $(this).parent().find('.train-type').removeClass('active');
