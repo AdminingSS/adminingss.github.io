@@ -44,7 +44,7 @@ a img {
   .link:focus {
     outline: none; }
 
-h2, .head {
+h1, h2, .head {
   color: #555;
   line-height: 1;
   font-size: 30px;
@@ -691,6 +691,9 @@ a.ui-button:active,
     color: #555;
     text-transform: none; }
 
+@media (max-width: 575px) {
+  .section {
+    padding: 30px 0; } }
 .showcase {
   position: relative;
   padding: 20px 0;
@@ -3436,7 +3439,7 @@ a.ui-button:active,
   background: #eee; }
 
 .sub-menu {
-  justify-content: flex-end; }
+  justify-content: space-between; }
   .sub-menu a {
     color: #999; }
 
