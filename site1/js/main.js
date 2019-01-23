@@ -399,9 +399,16 @@ $(document).ready(function () {
         $showFilterInModal.each(function () {
             var $toggler = $(this);
             var $target = $($toggler.attr('href'));
+            var $body = $('body');
+            var stopSrcollClassname = 'modal-open';
+
 
             $target.on('shown.bs.collapse', function () {
                 showMoreFilters($target);
+                $body.addClass(stopSrcollClassname);
+                $target.one('hide.bs.collapse', function () {
+                    $body.removeClass(stopSrcollClassname);
+                });
             });
         });
 
