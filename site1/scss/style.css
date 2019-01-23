@@ -802,15 +802,13 @@ a.ui-button:active,
         padding: 10px 15px; }
     .showcase-quantity select {
       padding: 20px 10px 10px;
-      height: 48px;
       font-size: 14px;
       width: 100%;
       line-height: normal;
       background: none;
-      border: none;
+      border: 1px solid #eee;
       -moz-appearance: none;
-      -webkit-appearance: none;
-      appearance: none; }
+      -webkit-appearance: none; }
     .showcase-quantity .select2-container--default .select2-selection--single .select2-selection__rendered {
       padding-top: 10px;
       line-height: 17px;
@@ -906,6 +904,9 @@ a.ui-button:active,
     display: block; }
     .showcase-collapse-wrap:not(.show) {
       display: block; }
+  .showcase .showcase-quantity select {
+    height: 48px;
+    border: none; }
 
 .multi-trip-active .showcase-content {
   display: block; }
@@ -1050,8 +1051,6 @@ a.ui-button:active,
       left: 50%;
       transform: translateX(-50%);
       padding: 0 20px; }
-  .showcase-item, .showcase-quantity {
-    width: 50%; }
   .showcase-home {
     height: auto;
     padding-top: 35px; }
@@ -1071,10 +1070,15 @@ a.ui-button:active,
     .showcase-collapse-wrap:not(.show) {
       display: none; }
     .showcase-collapse-wrap.collapsing {
-      display: block; } }
+      display: block; }
+  .showcase .showcase-item,
+  .showcase .showcase-quantity {
+    width: 50%; } }
 @media (max-width: 767px) {
-  .showcase-date .dropdown-menu {
-    max-width: 290px !important; }
+  .showcase-date {
+    width: 100%; }
+    .showcase-date .dropdown-menu {
+      max-width: 290px !important; }
 
   .search-history-item .direction {
     width: 100%; }
@@ -3442,6 +3446,20 @@ a.ui-button:active,
   justify-content: space-between; }
   .sub-menu a {
     color: #999; }
+  .sub-menu .tm-search-link {
+    position: relative;
+    padding-left: 35px; }
+    .sub-menu .tm-search-link::before {
+      content: "\f077";
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 19px; }
+    .sub-menu .tm-search-link.collapsed::before {
+      content: "\f078"; }
 
 .row-divider > [class*='col'] + [class*='col'] {
   border-left: solid 1px #eee; }

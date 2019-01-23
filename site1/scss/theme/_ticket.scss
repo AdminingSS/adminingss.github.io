@@ -56,6 +56,26 @@
   a {
     color: #999;
   }
+
+  .tm-search-link {
+    position: relative;
+    padding-left: 35px;
+
+    &::before {
+      content: "\f077";
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 19px;
+    }
+
+    &.collapsed::before {
+      content: "\f078";
+    }
+  }
 }
 
 .row-divider {

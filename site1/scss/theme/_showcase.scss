@@ -140,15 +140,13 @@
 
     select {
       padding: 20px 10px 10px;
-      height: 48px;
       font-size: 14px;
       width: 100%;
       line-height: normal;
       background: none;
-      border: none;
+      border: 1px solid #eee;
       -moz-appearance: none;
       -webkit-appearance: none;
-      appearance: none;
     }
 
     .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -294,7 +292,17 @@
       display: block;
     }
   }
+
+  .showcase-quantity {
+
+    select {
+      height: 48px;
+      border: none;
+    }
+  }
 }
+
+
 
 .multi-trip-active {
 
@@ -526,10 +534,6 @@
         padding: 0 20px;
       }
     }
-    &-item,
-    &-quantity {
-      width: 50%;
-    }
 
     &-home {
       height: auto;
@@ -571,12 +575,18 @@
         display: block;
       }
     }
+
+    .showcase-item,
+    .showcase-quantity {
+      width: 50%;
+    }
   }
 }
 
 @media (max-width: 767px) {
 
   .showcase-date {
+    width: 100%;
 
     .dropdown-menu {
       max-width: 290px !important;

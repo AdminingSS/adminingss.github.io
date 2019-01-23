@@ -282,13 +282,7 @@ $(document).ready(function () {
     // Select 2
     (function () {
         (function () {
-            var $showcaseItem = $('.showcase-item select');
             var $orderSelect = $('.order-select');
-
-            $showcaseItem.select2({
-                dropdownAutoWidth: true,
-                width: '100%'
-            });
 
             $orderSelect.select2({
                 width: '100%'
