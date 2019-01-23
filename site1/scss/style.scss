@@ -3037,41 +3037,41 @@ a.ui-button:active,
 
 // Direction
 
-.direction {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 70px;
-  &-item {
-    width: 310px;
-    .title {
-      margin-bottom: 0;
-    }
-    &.to {
-      text-align: right;
-    }
-    span {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 800;
-      color: $red;
-    }
-    &__descr {
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-    &__info {
-      text-transform: uppercase;
-    }
-  }
-  &-arrow {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+//.direction {
+//  position: relative;
+//  display: flex;
+//  align-items: flex-start;
+//  justify-content: space-between;
+//  margin-bottom: 70px;
+//  &-item {
+//    width: 310px;
+//    .title {
+//      margin-bottom: 0;
+//    }
+//    &.to {
+//      text-align: right;
+//    }
+//    span {
+//      display: block;
+//      margin-bottom: 6px;
+//      font-weight: 800;
+//      color: $red;
+//    }
+//    &__descr {
+//      font-weight: 800;
+//      margin-bottom: 4px;
+//    }
+//    &__info {
+//      text-transform: uppercase;
+//    }
+//  }
+//  &-arrow {
+//    position: absolute;
+//    top: 0;
+//    left: 50%;
+//    transform: translateX(-50%);
+//  }
+//}
 
 @media (max-width: 1240px) {
   .order {
@@ -3131,19 +3131,19 @@ a.ui-button:active,
       }
     }
   }
-  .direction {
-    flex-direction: column;
-    margin-bottom: 42px;
-    &-arrow {
-      position: static;
-      transform: translateX(0) rotate(90deg);
-      padding: 14px 0;
-    }
-    &-item {
-      width: 100%;
-      text-align: left !important;
-    }
-  }
+  //.direction {
+  //  flex-direction: column;
+  //  margin-bottom: 42px;
+  //  &-arrow {
+  //    position: static;
+  //    transform: translateX(0) rotate(90deg);
+  //    padding: 14px 0;
+  //  }
+  //  &-item {
+  //    width: 100%;
+  //    text-align: left !important;
+  //  }
+  //}
 }
 @media (max-width: 340px) {
   .order-bottom .link {

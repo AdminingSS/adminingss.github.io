@@ -223,11 +223,13 @@
         <div class="container">
             <ul class="sub-menu nav">
                 <li class="nav-item">
-                    <a class="tm-search-link nav-link collapsed" href="#showcaseCollapseWrap" data-toggle="collapse" role="button">Search <i
+                    <a class="tm-search-link nav-link collapsed" href="#showcaseCollapseWrap" data-toggle="collapse"
+                       role="button">Search <i
                             class="fas fa-search"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js__show-more-modal filter-active" href="#ticketFilter" data-toggle="collapse" role="button">Filters <i
+                    <a class="nav-link js__show-more-modal filter-active" href="#ticketFilter" data-toggle="collapse"
+                       role="button">Filters <i
                             class="fas fa-sliders-h"></i></a>
                 </li>
             </ul>
@@ -337,25 +339,26 @@
                                 </div>
                                 <div class="search-history-show">Search history <i class="fas fa-sort-down"></i></div>
                             </div>
-                            <div class="search-history-body"><h3>Your recent search history</h3>
-                                <div class="search-history-items">
+                            <div class="search-history-body">
+                                <div class="search-history-items container-fluid">
+                                    <h3>Your recent search history</h3>
                                     <div onclick="document.location='http://rustrains.com/rzd?trip=0&amp;from=2000000&amp;to=2004000&amp;date_from=18.01.2019&amp;amount=1'"
-                                         class="search-history-item">
-                                        <div class="direction">Moscow - Saint-Petersburg</div>
-                                        <div class="date">18.01.2019</div>
-                                        <div class="number">1 passenger</div>
+                                         class="search-history-item row">
+                                        <div class="direction col-sm-6">Moscow - Saint-Petersburg</div>
+                                        <div class="date col-auto">18.01.2019</div>
+                                        <div class="number col-auto ml-auto">1 passenger</div>
                                     </div>
                                     <div onclick="document.location='http://rustrains.com/rzd?trip=0&amp;from=2000000&amp;to=2004000&amp;date_from=12.01.2019&amp;amount=2'"
-                                         class="search-history-item">
-                                        <div class="direction">Moscow - Saint-Petersburg</div>
-                                        <div class="date">12.01.2019</div>
-                                        <div class="number">2 passengers</div>
+                                         class="search-history-item row">
+                                        <div class="direction col-sm-6">Moscow - Saint-Petersburg</div>
+                                        <div class="date col-auto">12.01.2019</div>
+                                        <div class="number col-auto ml-auto">2 passengers</div>
                                     </div>
                                     <div onclick="document.location='http://rustrains.com/destination-moscow-st-petersburg-railway'"
-                                         class="search-history-item">
-                                        <div class="direction">Moscow - Saint-Petersburg</div>
-                                        <div class="date">11.01.2019</div>
-                                        <div class="number">1 passenger</div>
+                                         class="search-history-item row">
+                                        <div class="direction col-sm-6">Moscow - Saint-Petersburg</div>
+                                        <div class="date col-auto">11.01.2019</div>
+                                        <div class="number col-auto ml-auto">1 passenger</div>
                                     </div>
                                 </div>
                             </div>
@@ -446,36 +449,31 @@
                         <div class="ticket-sort">
                             <div class="container-fluid">
                                 <div class="row align-items-center justify-content-between">
-                                    <div class="col-sm-9 col-lg-8">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="ticket-sort-item asc" data-sort="date"
-                                                     data-sort_direction="desc">
-                                                    Departure
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="ticket-sort-item desc" data-sort="travel_time"
-                                                     data-sort_direction="asc">
-                                                    Travel time
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="ticket-sort-item" data-sort="arrival"
-                                                     data-sort_direction="asc">
-                                                    Arrival
-                                                </div>
-                                            </div>
 
+                                    <div class="col-6 col-md-3">
+                                        <div class="ticket-sort-item asc" data-sort="date"
+                                             data-sort_direction="desc">
+                                            Departure
                                         </div>
-
                                     </div>
-
-                                    <div class="col-sm-3 col-lg-auto">
+                                    <div class="col-6 col-md-3">
+                                        <div class="ticket-sort-item desc" data-sort="travel_time"
+                                             data-sort_direction="asc">
+                                            Travel time
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 col-lg-auto">
+                                        <div class="ticket-sort-item" data-sort="arrival"
+                                             data-sort_direction="asc">
+                                            Arrival
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 col-lg-auto ml-auto">
                                         <div class="ticket-sort-item" data-sort="price" data-sort_direction="asc">
                                             Price from
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -566,17 +564,20 @@
                                             <div class="col-sm">
                                                 <ul class="ticket-extras">
                                                     <li>
-                                                        <img src="http://rustrains.com/site1/images/ticket-icon1.png" alt=""
+                                                        <img src="http://rustrains.com/site1/images/ticket-icon1.png"
+                                                             alt=""
                                                              class="toolt" data-text="wi-fi">
                                                     </li>
                                                     <li>
-                                                        <img src="http://rustrains.com/site1/images/ticket-icon2.png" alt=""
+                                                        <img src="http://rustrains.com/site1/images/ticket-icon2.png"
+                                                             alt=""
                                                              class="toolt"
                                                              data-text="36 kg handbag + 200 kg luggage (3 bags, 75 kg max. each)"/>
                                                         <span class="count_text">8</span>
                                                     </li>
                                                     <li>
-                                                        <img src="http://rustrains.com/site1/images/ticket-icon1.png" alt=""
+                                                        <img src="http://rustrains.com/site1/images/ticket-icon1.png"
+                                                             alt=""
                                                              class="toolt"
                                                              data-text="Transportation in a specialised luggage compartment - no more than three pieces of luggage for each electronic ticket. One piece of luggage should not weigh more than 75 kg. The total weight of the three pieces of luggage should not exceed 200 kg."/>
                                                         <span class="count_text">1</span>
@@ -629,32 +630,33 @@
                                                  class="train-type">
                                                 <div class="container-fluid">
                                                     <div class="row align-items-center">
-                                                        <div class="col-auto">
+                                                        <div class="d-none d-md-block col-auto">
                                                             <div class="train-radio"></div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-7 col-md">
                                                             <div class="train-type-text">Sitting (Economy+ class)</div>
                                                         </div>
 
-                                                        <div class="col-auto">
+                                                        <div class="col-auto order-1 order-md-0">
                                                             <a href="#trainTypesModal" role="button"
                                                                data-toggle="modal">
                                                                 <i class="tm-icon-train-types fa fa-image"></i>
                                                             </a>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-5 col-md-4">
                                                             <div class="train-type-available">available seats:
                                                                 <span>11</span>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-auto col-md-auto ml-auto ml-md-0 order-1 order-md-0">
                                                             <div class="train-type-price">2959
                                                                 <span class="currency">RUB</span>
                                                             </div>
                                                         </div>
+
                                                     </div>
 
                                                 </div>
@@ -666,17 +668,17 @@
                                                  class="train-type active">
                                                 <div class="container-fluid">
                                                     <div class="row align-items-center">
-                                                        <div class="col-auto">
+                                                        <div class="d-none d-md-block col-auto">
                                                             <div class="train-radio"></div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-7 col-md">
                                                             <div class="train-type-text">Sitting (Economy class
                                                                 (Disabled Person))
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-auto">
+                                                        <div class="col-auto order-1 order-md-0">
                                                             <a href="#trainTypesModal" role="button"
                                                                data-toggle="modal">
                                                                 <!--<img src="site1/images/train-types-slider-icon.svg"-->
@@ -685,13 +687,13 @@
                                                             </a>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-5 col-md-4">
                                                             <div class="train-type-available">available seats:
                                                                 <span>2</span>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-auto col-md-auto ml-auto ml-md-0 order-1 order-md-0">
                                                             <div class="train-type-price">3202
                                                                 <span class="currency">RUB</span>
                                                             </div>
@@ -706,28 +708,28 @@
                                                  class="train-type">
                                                 <div class="container-fluid">
                                                     <div class="row align-items-center">
-                                                        <div class="col-auto">
+                                                        <div class="d-none d-md-block col-auto">
                                                             <div class="train-radio"></div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-7 col-md">
                                                             <div class="train-type-text">Sitting (Economy+ class)</div>
                                                         </div>
 
-                                                        <div class="col-auto">
+                                                        <div class="col-auto order-1 order-md-0">
                                                             <a href="#trainTypesModal" role="button"
                                                                data-toggle="modal">
                                                                 <i class="tm-icon-train-types fa fa-image"></i>
                                                             </a>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-5 col-md-4">
                                                             <div class="train-type-available">available seats:
                                                                 <span>11</span>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-auto col-md-auto ml-auto ml-md-0 order-1 order-md-0">
                                                             <div class="train-type-price">2959
                                                                 <span class="currency">RUB</span>
                                                             </div>
@@ -743,28 +745,28 @@
                                                  class="train-type">
                                                 <div class="container-fluid">
                                                     <div class="row align-items-center">
-                                                        <div class="col-auto">
+                                                        <div class="d-none d-md-block col-auto">
                                                             <div class="train-radio"></div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-7 col-md">
                                                             <div class="train-type-text">Sitting (Economy+ class)</div>
                                                         </div>
 
-                                                        <div class="col-auto">
+                                                        <div class="col-auto order-1 order-md-0">
                                                             <a href="#trainTypesModal" role="button"
                                                                data-toggle="modal">
                                                                 <i class="tm-icon-train-types fa fa-image"></i>
                                                             </a>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-5 col-md-4">
                                                             <div class="train-type-available">available seats:
                                                                 <span>11</span>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-auto col-md-auto ml-auto ml-md-0 order-1 order-md-0">
                                                             <div class="train-type-price">2959
                                                                 <span class="currency">RUB</span>
                                                             </div>
@@ -780,28 +782,28 @@
                                                  class="train-type">
                                                 <div class="container-fluid">
                                                     <div class="row align-items-center">
-                                                        <div class="col-auto">
+                                                        <div class="d-none d-md-block col-auto">
                                                             <div class="train-radio"></div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-7 col-md">
                                                             <div class="train-type-text">Sitting (Economy+ class)</div>
                                                         </div>
 
-                                                        <div class="col-auto">
+                                                        <div class="col-auto order-1 order-md-0">
                                                             <a href="#trainTypesModal" role="button"
                                                                data-toggle="modal">
                                                                 <i class="tm-icon-train-types fa fa-image"></i>
                                                             </a>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-sm-5 col-md-4">
                                                             <div class="train-type-available">available seats:
                                                                 <span>11</span>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col">
+                                                        <div class="col-auto col-md-auto ml-auto ml-md-0 order-1 order-md-0">
                                                             <div class="train-type-price">2959
                                                                 <span class="currency">RUB</span>
                                                             </div>
@@ -816,14 +818,14 @@
                                         <div class="train-order">
                                             <div class="container-fluid">
                                                 <div class="row align-items-center">
-                                                    <div class="col">
+                                                    <div class="col-sm">
                                                         <div class="seats-total-price">
                                                             Total: <span class="all price">3825</span>
                                                             <span class="currency">RUB</span>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col">
+                                                    <div class="col-sm">
                                                         <button type="button" class="btn tm-btn-red"
                                                                 onclick="if(check_selected_seats(0)) {$('#do_order').find('[name=direction]').val(0);$('#do_order').submit();}">
                                                             Order
@@ -1107,7 +1109,8 @@
                         </div>
 
                         <div class="ticket-filter-apply">
-                            <button class="btn tm-btn-red" data-target="#ticketFilter" data-toggle="collapse">Apply</button>
+                            <button class="btn tm-btn-red" data-target="#ticketFilter" data-toggle="collapse">Apply
+                            </button>
                         </div>
                     </div>
 
@@ -1438,7 +1441,8 @@
                         Moscow
                     </div>
                     <div class="col-auto">
-                        <button type="button" class="btn btn-outline-secondary"><i class="fas fa-exchange-alt"></i></button>
+                        <button type="button" class="btn btn-outline-secondary"><i class="fas fa-exchange-alt"></i>
+                        </button>
                     </div>
                     <div class="col">
                         Saint-Petersburg
@@ -1520,7 +1524,8 @@
     </div>
 </div>
 
-<div class="tm-train-types-modal modal fade" id="trainTypesModal" tabindex="-1" role="dialog" aria-labelledby="trainTypesModalLabel"
+<div class="tm-train-types-modal modal fade" id="trainTypesModal" tabindex="-1" role="dialog"
+     aria-labelledby="trainTypesModalLabel"
      aria-hidden="true">
     <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -1568,7 +1573,8 @@
     </div>
 </div>
 
-<div class="tm-route-modal modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="routeModalLabel" aria-hidden="true">
+<div class="tm-route-modal modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="routeModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

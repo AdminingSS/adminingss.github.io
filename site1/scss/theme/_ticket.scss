@@ -316,6 +316,10 @@
 
     .ticket-total {
       text-align: center;
+
+      span {
+        text-transform: uppercase;
+      }
     }
 
     .ticket-price {
@@ -328,6 +332,7 @@
 
         span {
           font-size: 12px;
+          text-transform: uppercase;
         }
       }
     }
@@ -666,6 +671,7 @@
     &:first-of-type {
       width: 50%;
       max-width: 450px;
+      min-width: 180px;
     }
   }
 }
@@ -727,6 +733,10 @@
   .ticket-sort {
     font-size: 12px;
   }
+
+  .train-type-price {
+    text-align: left;
+  }
 }
 
 @media (max-width: 575px) {
@@ -749,6 +759,23 @@
     h6 {
       margin-bottom: 10px;
     }
+  }
+
+  .train-order {
+    text-align: center;
+  }
+}
+
+//BS flaw fixes
+@media (min-width: 768px) {
+  .order-md-0 {
+    order: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .order-sm-0 {
+    order: 0;
   }
 }
 

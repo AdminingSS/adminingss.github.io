@@ -361,7 +361,7 @@
     right: 0;
     background: #fff;
     box-shadow: 0 0 4px 0 rgba(0,0,0,.3);
-    padding: 20px;
+    padding: 20px 0;
     color: #555555;
     z-index: 9999;
     display: none;
@@ -373,9 +373,9 @@
   }
 
   &-item {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    //display: flex;
+    //justify-content: space-between;
+    //flex-wrap: wrap;
     font-size: 16px;
     margin-bottom: 20px;
     cursor: pointer;
@@ -388,19 +388,19 @@
       margin-bottom: 0;
     }
 
-    .direction {
-      width: 50%;
-      margin-bottom: 10px;
-    }
-
-    .date {
-      width: 25%;
-      padding: 0 20px;
-    }
-
-    .number {
-      width: 25%;
-    }
+    //.direction {
+    //  //width: 50%;
+    //  //margin-bottom: 0;
+    //}
+    //
+    //.date {
+    //  //width: 25%;
+    //  //padding: 0 20px;
+    //}
+    //
+    //.number {
+    //  //width: 25%;
+    //}
   }
 }
 
@@ -596,13 +596,13 @@
   .search-history-item {
 
     .direction {
-      width: 100%;
+      //width: 100%;
     }
 
     .date, .number {
-      width: auto;
-      max-width: 48%;
-      padding: 0;
+      //width: auto;
+      //max-width: 48%;
+      //padding: 0;
     }
   }
 }
