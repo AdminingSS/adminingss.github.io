@@ -412,6 +412,7 @@ $(document).ready(function () {
             var $ul = $(this);
             var height = $ul.outerHeight();
             var maxHeight = 112;
+            var $next = $ul.next();
 
             if (height < maxHeight) return;
 
