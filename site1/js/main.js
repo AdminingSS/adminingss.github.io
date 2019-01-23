@@ -1,20 +1,3 @@
-function durationPos() {
-    if ($(window).width() < 540) {
-        var left,
-            width;
-        $('.ticket-duration').each(function () {
-            left = $(this).prev().find('.time').outerWidth();
-            width = $(this).next().find('.time').position().left;
-            $(this).css({
-                "left": left,
-                "width": width - left - 10
-            });
-        });
-    } else {
-        $('.ticket-duration').removeAttr('style');
-    }
-}
-
 $(document).ready(function () {
 
     // Burger
@@ -298,26 +281,28 @@ $(document).ready(function () {
 
     // Select 2
     (function () {
-        var $showcaseItem = $('.showcase-item select');
-        var $orderSelect = $('.order-select');
+        (function () {
+            var $showcaseItem = $('.showcase-item select');
+            var $orderSelect = $('.order-select');
 
-        $showcaseItem.select2({
-            dropdownAutoWidth: true,
-            width: '100%'
-        });
+            $showcaseItem.select2({
+                dropdownAutoWidth: true,
+                width: '100%'
+            });
 
-        $orderSelect.select2({
-            width: '100%'
-        });
-    })();
+            $orderSelect.select2({
+                width: '100%'
+            });
+        })();
 
-    (function () {
-        var $ticketNotfound = $('.ticket-notfound select');
+        (function () {
+            var $ticketNotfound = $('.ticket-notfound select');
 
-        $ticketNotfound.select2({
-            dropdownAutoWidth: true,
-            width: '100%'
-        });
+            $ticketNotfound.select2({
+                dropdownAutoWidth: true,
+                width: '100%'
+            });
+        })();
     })();
 
 
@@ -407,36 +392,71 @@ $(document).ready(function () {
     //     $('.ticket-filter-modal').fadeOut();
     // });
 
-    function showMoreFilters() {
-        $('.ticket-filter-param ul').each(function () {
-            var $ul = $(this);
-            var height = $ul.outerHeight();
-            var maxHeight = 112;
-            var $next = $ul.next();
+    // show more filter
+    (function () {
+        var $showFilterInModal = $('.js__show-more-modal');
 
-            if (height < maxHeight) return;
+        $showFilterInModal.each(function () {
+            var $toggler = $(this);
+            var $target = $($toggler.attr('href'));
 
-            $ul.addClass('more')
-                .next()
-                .show();
+            $target.on('shown.bs.collapse', function () {
+                showMoreFilters($target);
+            });
         });
-    }
 
-    setTimeout(function () {
-        durationPos();
-        showMoreFilters();
-    }, 2100);
+        function durationPos() {
+            if ($(window).width() < 540) {
+                var left,
+                    width;
+                $('.ticket-duration').each(function () {
+                    // left = $(this).prev().find('.time').outerWidth();
+                    // width = $(this).next().find('.time').position().left;
+                    // $(this).css({
+                    //     "left": left,
+                    //     "width": width - left - 10
+                    // });
+                });
+            } else {
+                $('.ticket-duration').removeAttr('style');
+            }
+        }
 
-    $(window).resize(function () {
-        durationPos();
-    });
+        function showMoreFilters($parent) {
+            var filterSelector = '.ticket-filter-param ul';
+            var $filters = $parent && $parent.length ?
+                $parent.find(filterSelector) :
+                $(filterSelector);
 
-    $('.results .nav-link').click(function () {
+            $filters.each(function () {
+                var $filter = $(this);
+                var $showMoreBtn = $filter.parent().find('> .ticket-filter-more');
+                var height = $filter.outerHeight();
+                var maxHeight = 112;
+
+                if (height < maxHeight) return;
+
+                $filter.addClass('more');
+                $showMoreBtn.show();
+            });
+        }
+
         setTimeout(function () {
             durationPos();
             showMoreFilters();
-        }, 10);
-    });
+        }, 2100);
+
+        $(window).resize(function () {
+            durationPos();
+        });
+
+        $('.results .nav-link').click(function () {
+            setTimeout(function () {
+                durationPos();
+                showMoreFilters();
+            }, 10);
+        });
+    })();
 
     $('.train-type').click(function () {
         $(this).parent().find('.train-type').removeClass('active');
