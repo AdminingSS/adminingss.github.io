@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RUStrains</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="4iffRkuOQ8hhT2tj8XptOE5mHIKL5SzJ1z1Rcrtx">
+
+    <link rel="stylesheet" href="site1/css/slick.css">
+    <link rel="stylesheet" href="site1/css/slick-theme.css">
+    <link rel="stylesheet" href="site1/css/fonts.css">
+    <link rel="stylesheet" href="site1/css/fontawesome-all.css">
+    <link rel="stylesheet" href="site1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site1/css/swiper.min.css">
+    <link rel="stylesheet" href="site1/css/select2.min.css">
+    <link rel="stylesheet" href="site1/scss/style.css">
+
+</head>
+
+<body>
+<div>
+
+    <!--Header-->
+    <header class="header navbar navbar-expand-xl navbar-light bg-light">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="site1/images/logo.png" alt="">
+            </a>
+
+            <!-- Lang menu -->
+            <ul class="menu-lang navbar-nav text-uppercase order-xl-1">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span
+                            class="flag-icon flag-icon-gb"></span> en</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com"><span
+                                class="flag-icon flag-icon-gb"></span> en</a>
+                        <a class="dropdown-item" href="http://de.rustrains.com"><span
+                                class="flag-icon flag-icon-de"></span> de</a>
+                        <a class="dropdown-item" href="http://pl.rustrains.com"><span
+                                class="flag-icon flag-icon-pl"></span> pl</a>
+                        <a class="dropdown-item" href="http://cn.rustrains.com"><span
+                                class="flag-icon flag-icon-cn"></span> zh</a>
+                        <a class="dropdown-item" href="http://jp.rustrains.com"><span
+                                class="flag-icon flag-icon-jp"></span> ja</a>
+                        <a class="dropdown-item" href="http://tr.rustrains.com"><span
+                                class="flag-icon flag-icon-tr"></span> tr</a>
+                        <a class="dropdown-item" href="http://ko.rustrains.com"><span
+                                class="flag-icon flag-icon-kr"></span> ko</a>
+                        <a class="dropdown-item" href="http://fi.rustrains.com"><span
+                                class="flag-icon flag-icon-fi"></span> fi</a>
+                        <a class="dropdown-item" href="http://se.rustrains.com"><span
+                                class="flag-icon flag-icon-se"></span> se</a>
+                        <a class="dropdown-item" href="http://es.rustrains.com"><span
+                                class="flag-icon flag-icon-es"></span> es</a>
+                        <a class="dropdown-item" href="http://pt.rustrains.com"><span
+                                class="flag-icon flag-icon-pt"></span> pt</a>
+                        <a class="dropdown-item" href="http://it.rustrains.com"><span
+                                class="flag-icon flag-icon-it"></span> it</a>
+                        <a class="dropdown-item" href="http://fr.rustrains.com"><span
+                                class="flag-icon flag-icon-fr"></span> fr</a>
+                        <a class="dropdown-item" href="http://ru.rustrains.com"><span
+                                class="flag-icon flag-icon-ru"></span> ru</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
+                    aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
+                <!-- My cabinet (for logged in) with dropdown -->
+                <!--<div class="menu-user dropdown mr-xl-3">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign In
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com/login">Login</a>
+                        <a class="dropdown-item" href="http://rustrains.com/register">Register</a>
+                    </div>
+                </div>-->
+
+                <!-- Log-in with modal -->
+                <div class="menu-user mr-xl-3">
+                    <a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#authModal">
+                        Sign In
+                    </a>
+                </div>
+
+                <!-- Menu -->
+                <ul class="menu-main navbar-nav mr-xl-2">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Popular Trains</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Routes and Planning</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Customer Support</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--Results-->
+    <div class="section">
+        <div class="container">
+
+            <a name="top"></a>
+
+            <div id="preload" style="text-align: center; display: none;"><img src="/icons/train.gif"></div>
+
+            <div class="row">
+                <div class="col-lg-4 col-xl-3 order-lg-1">
+
+                    <!--Order sidebar-->
+                    <div class="order-sidebar mb-5">
+                        <div class="order-cheque mb-4">
+                            <div class="order-cheque-header">Trip summary</div>
+                            <div class="order-cheque-item">
+                                <div class="order-cheque-title">1 leg</div>
+                                <div class="order-cheque-info">
+                                    6 tickets - 2-сl. sleeping compt.
+                                </div>
+                                <div class="order-cheque-price">
+                                    <div class="price">
+                                        3305 <span class="currency">RUB</span> x 6 = 19830
+                                        <span class="currency">RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-cheque-taxex">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <div class="description">Tickets</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="price">19830 <span class="currency">RUB</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-cheque-taxex">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <div class="description">Extras</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="price">0 <span class="currency">RUB</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-cheque-footer">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <div class="description">Grand total</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="price">19830 <span class="currency">RUB</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-bottom">
+                            <div class="payment">
+                                <ul class="nav align-items-center justify-content-center mb-2">
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay1.png" alt=""></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay2.png" alt=""></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay3.png" alt=""></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay4.png" alt=""></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay5.png" alt=""></a></li>
+                                </ul>
+                                <p>secure payment options + SSL encryption</p></div>
+                        </div>
+                    </div>
+
+                    <div class="recommendation mb-5">
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <img src="site1/images/icon-train.png" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h4>Great Choice!</h4>
+                                <p>You have selected one of the best trains for this route. Book now!</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <img src="site1/images/icon-seat.png" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h4>Guaranteed Seat Reservation</h4>
+                                <p>We will issue e-tickets with guaranteed seat reservation. The best seats possible.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <img src="site1/images/icon-service-24h.png" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h4>Real Customer Service</h4>
+                                <p>Need help with your order? Our customer support is always there for you via phone, email or chat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8 col-xl-9">
+
+                    <!--Order trips-->
+                    <div class="order-trips">
+                        <form method="post" onsubmit="return check_form($(this));" class="order-items"
+                              action="https://rustrains.com/order/doorder/20190123-12-070924">
+                            <input type="hidden" name="_token" value="BsjmdY8D17k775vbjFkV7cMgAI8oC3qAWIzaBbyz">
+                            <div class="order-trip-item mb-4">
+                                <div class="order-trip-header">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="order-direction">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="order-from">
+                                                                <div class="city">Moscow</div>
+                                                                <div class="station">Leningradskiy Railway station</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="order-to">
+                                                                <div class="city">Saint-Petersburg</div>
+                                                                <div class="station">Ladozhskiy Railway station</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 d-flex justify-content-sm-center justify-content-md-end align-items-center">
+                                                <div class="order-trip-description"><span>016А</span> Арктика</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-info">
+                                    <div class="order-info-items">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="order-info-item">
+                                                        <div class="label">Departure / Arrival date</div>
+                                                        <div class="info">Jan 30, 2019 / Jan 30, 2019</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <div class="order-info-item">
+                                                        <div class="label">Departure time</div>
+                                                        <div class="info">00:41 <span>Local time</span></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-auto ml-md-auto">
+                                                    <div class="order-info-item">
+                                                        <div class="label">Arrival time</div>
+                                                        <div class="info">09:13 <span>Local time</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-trip-header">
+                                    <div class="container-fluid">
+                                        <h4 class="mb-0">Passenger details</h4>
+                                    </div>
+                                </div>
+
+                                <div id="order-passengers-accordion" class="order-passengers" v-if="!details">
+
+                                    <!--Order passenger-->
+                                    <div class="order-passenger">
+                                        <div class="order-passenger-top" data-toggle="collapse" data-target="#passengerCollapse1">
+                                            <div class="container-fluid">
+                                                <h6 class="mb-0">Passenger #1</h6>
+                                            </div>
+                                        </div>
+
+                                        <div id="passengerCollapse1" class="collapse show" data-parent="#order-passengers-accordion">
+                                            <div class="order-passenger-info">
+                                                <div class="container-fluid">
+                                                    <div class="order-passenger-inputs mb-4">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>First name</span>
+                                                                    <input class="form-control" name="seat[0][first_name]" v-model="first_name"
+                                                                           maxlength="255" required="" type="text" placeholder="John">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Middle name (optional)</span>
+                                                                    <input class="form-control" name="seat[0][middle_name]" v-model="middle_name"
+                                                                           maxlength="255" type="text" placeholder="J.">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Last name</span>
+                                                                    <input class="form-control" name="seat[0][last_name]" v-model="last_name" maxlength="255"
+                                                                           required="" type="text" placeholder="Smith">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Passport number</span>
+                                                                    <input class="form-control" name="seat[0][passport]" maxlength="255" required=""
+                                                                           type="text" value="" placeholder="12345">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Citizenship</span>
+                                                                    <!--<treeselect
+                                                                            name="seat[0][citizenship]"
+                                                                            :multiple="false"
+                                                                            required
+                                                                            class="order-select1"
+                                                                            :options="countries"
+                                                                            placeholder="Citizenship"
+
+                                                                    />-->
+
+                                                                    <div class="order-select1 vue-treeselect vue-treeselect--single vue-treeselect--searchable vue-treeselect--open-below">
+                                                                        <!---->
+                                                                        <div class="vue-treeselect__control">
+                                                                            <div class="vue-treeselect__value-container">
+                                                                                <div class="vue-treeselect__placeholder vue-treeselect-helper-zoom-effect-off">
+                                                                                    Citizenship
+                                                                                </div>
+                                                                                <div class="vue-treeselect__input-container"><input
+                                                                                        type="text" autocomplete="off" tabindex="0"
+                                                                                        required="required"
+                                                                                        class="vue-treeselect__input"></div>
+                                                                            </div>
+                                                                            <!---->
+                                                                            <div class="vue-treeselect__control-arrow-container">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     viewBox="0 0 292.362 292.362"
+                                                                                     class="vue-treeselect__control-arrow">
+                                                                                    <path d="M286.935 69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952 0-9.233 1.807-12.85 5.424C1.807 72.998 0 77.279 0 82.228c0 4.948 1.807 9.229 5.424 12.847l127.907 127.907c3.621 3.617 7.902 5.428 12.85 5.428s9.233-1.811 12.847-5.428L286.935 95.074c3.613-3.617 5.427-7.898 5.427-12.847 0-4.948-1.814-9.229-5.427-12.85z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!---->
+                                                                    </div>
+
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Gender</span>
+                                                                    <select required="" class="order-select select2-hidden-accessible"
+                                                                            autocomplete="off" name="seat[0][sex]" tabindex="-1"
+                                                                            aria-hidden="true">
+                                                                        <option value="">----</option>
+                                                                        <option value="male">MALE</option>
+                                                                        <option value="female">FEMALE</option>
+                                                                    </select>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-8 col-xl-6">
+                                                                <label class="order-input date-of-birth">
+                                                                    <span>Date of birth</span>
+                                                                    <input type="hidden" required="" name="seat[0][birthday]"
+                                                                           v-model="date[0]" autocomplete="off">
+                                                                    <!--<select-datepicker :format="'DD.MM.YYYYY'" start="01.01.1920"
+                                                                                       :index="0" :default="''" end="23.01.2019"
+                                                                                       @date-change="showDate"></select-datepicker>-->
+
+                                                                    <div class="date-picker form-inline">
+                                                                        <div class="form-group">
+                                                                            <select class="form-control year">
+                                                                                <option value="">Year</option>
+                                                                                <option value="1920">1920</option>
+                                                                                <option value="1921">1921</option>
+                                                                                <option value="1922">1922</option>
+                                                                                <option value="1923">1923</option>
+                                                                                <option value="1924">1924</option>
+                                                                                <option value="1925">1925</option>
+                                                                                <option value="1926">1926</option>
+                                                                                <option value="1927">1927</option>
+                                                                                <option value="1928">1928</option>
+                                                                                <option value="1929">1929</option>
+                                                                                <option value="1930">1930</option>
+                                                                                <option value="1931">1931</option>
+                                                                                <option value="1932">1932</option>
+                                                                                <option value="1933">1933</option>
+                                                                                <option value="1934">1934</option>
+                                                                                <option value="1935">1935</option>
+                                                                                <option value="1936">1936</option>
+                                                                                <option value="1937">1937</option>
+                                                                                <option value="1938">1938</option>
+                                                                                <option value="1939">1939</option>
+                                                                                <option value="1940">1940</option>
+                                                                                <option value="1941">1941</option>
+                                                                                <option value="1942">1942</option>
+                                                                                <option value="1943">1943</option>
+                                                                                <option value="1944">1944</option>
+                                                                                <option value="1945">1945</option>
+                                                                                <option value="1946">1946</option>
+                                                                                <option value="1947">1947</option>
+                                                                                <option value="1948">1948</option>
+                                                                                <option value="1949">1949</option>
+                                                                                <option value="1950">1950</option>
+                                                                                <option value="1951">1951</option>
+                                                                                <option value="1952">1952</option>
+                                                                                <option value="1953">1953</option>
+                                                                                <option value="1954">1954</option>
+                                                                                <option value="1955">1955</option>
+                                                                                <option value="1956">1956</option>
+                                                                                <option value="1957">1957</option>
+                                                                                <option value="1958">1958</option>
+                                                                                <option value="1959">1959</option>
+                                                                                <option value="1960">1960</option>
+                                                                                <option value="1961">1961</option>
+                                                                                <option value="1962">1962</option>
+                                                                                <option value="1963">1963</option>
+                                                                                <option value="1964">1964</option>
+                                                                                <option value="1965">1965</option>
+                                                                                <option value="1966">1966</option>
+                                                                                <option value="1967">1967</option>
+                                                                                <option value="1968">1968</option>
+                                                                                <option value="1969">1969</option>
+                                                                                <option value="1970">1970</option>
+                                                                                <option value="1971">1971</option>
+                                                                                <option value="1972">1972</option>
+                                                                                <option value="1973">1973</option>
+                                                                                <option value="1974">1974</option>
+                                                                                <option value="1975">1975</option>
+                                                                                <option value="1976">1976</option>
+                                                                                <option value="1977">1977</option>
+                                                                                <option value="1978">1978</option>
+                                                                                <option value="1979">1979</option>
+                                                                                <option value="1980">1980</option>
+                                                                                <option value="1981">1981</option>
+                                                                                <option value="1982">1982</option>
+                                                                                <option value="1983">1983</option>
+                                                                                <option value="1984">1984</option>
+                                                                                <option value="1985">1985</option>
+                                                                                <option value="1986">1986</option>
+                                                                                <option value="1987">1987</option>
+                                                                                <option value="1988">1988</option>
+                                                                                <option value="1989">1989</option>
+                                                                                <option value="1990">1990</option>
+                                                                                <option value="1991">1991</option>
+                                                                                <option value="1992">1992</option>
+                                                                                <option value="1993">1993</option>
+                                                                                <option value="1994">1994</option>
+                                                                                <option value="1995">1995</option>
+                                                                                <option value="1996">1996</option>
+                                                                                <option value="1997">1997</option>
+                                                                                <option value="1998">1998</option>
+                                                                                <option value="1999">1999</option>
+                                                                                <option value="2000">2000</option>
+                                                                                <option value="2001">2001</option>
+                                                                                <option value="2002">2002</option>
+                                                                                <option value="2003">2003</option>
+                                                                                <option value="2004">2004</option>
+                                                                                <option value="2005">2005</option>
+                                                                                <option value="2006">2006</option>
+                                                                                <option value="2007">2007</option>
+                                                                                <option value="2008">2008</option>
+                                                                                <option value="2009">2009</option>
+                                                                                <option value="2010">2010</option>
+                                                                                <option value="2011">2011</option>
+                                                                                <option value="2012">2012</option>
+                                                                                <option value="2013">2013</option>
+                                                                                <option value="2014">2014</option>
+                                                                                <option value="2015">2015</option>
+                                                                                <option value="2016">2016</option>
+                                                                                <option value="2017">2017</option>
+                                                                                <option value="2018">2018</option>
+                                                                                <option value="2019">2019</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <select class="form-control mouth">
+                                                                                <option value="">Month</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <select class="form-control day">
+                                                                                <option value="">Day</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <button class="btn tm-btn-red" type="button"
+                                                                @click="savePassenger(0)">Save
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--One more Order passenger for example-->
+                                    <div class="order-passenger">
+                                        <div class="order-passenger-top" data-toggle="collapse" data-target="#passengerCollapse2">
+                                            <div class="container-fluid">
+                                                <h6 class="mb-0">Passenger #2</h6>
+                                            </div>
+                                        </div>
+
+                                        <div id="passengerCollapse2" class="collapse" data-parent="#order-passengers-accordion">
+                                            <div class="order-passenger-info">
+                                                <div class="container-fluid">
+                                                    <div class="order-passenger-inputs mb-4">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>First name</span>
+                                                                    <input class="form-control" name="seat[0][first_name]" v-model="first_name"
+                                                                           maxlength="255" required="" type="text" placeholder="John">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Middle name (optional)</span>
+                                                                    <input class="form-control" name="seat[0][middle_name]" v-model="middle_name"
+                                                                           maxlength="255" type="text" placeholder="J.">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Last name</span>
+                                                                    <input class="form-control" name="seat[0][last_name]" v-model="last_name" maxlength="255"
+                                                                           required="" type="text" placeholder="Smith">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Passport number</span>
+                                                                    <input class="form-control" name="seat[0][passport]" maxlength="255" required=""
+                                                                           type="text" value="" placeholder="12345">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Citizenship</span>
+                                                                    <!--<treeselect
+                                                                            name="seat[0][citizenship]"
+                                                                            :multiple="false"
+                                                                            required
+                                                                            class="order-select1"
+                                                                            :options="countries"
+                                                                            placeholder="Citizenship"
+
+                                                                    />-->
+
+                                                                    <div class="order-select1 vue-treeselect vue-treeselect--single vue-treeselect--searchable vue-treeselect--open-below">
+                                                                        <!---->
+                                                                        <div class="vue-treeselect__control">
+                                                                            <div class="vue-treeselect__value-container">
+                                                                                <div class="vue-treeselect__placeholder vue-treeselect-helper-zoom-effect-off">
+                                                                                    Citizenship
+                                                                                </div>
+                                                                                <div class="vue-treeselect__input-container"><input
+                                                                                        type="text" autocomplete="off" tabindex="0"
+                                                                                        required="required"
+                                                                                        class="vue-treeselect__input"></div>
+                                                                            </div>
+                                                                            <!---->
+                                                                            <div class="vue-treeselect__control-arrow-container">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     viewBox="0 0 292.362 292.362"
+                                                                                     class="vue-treeselect__control-arrow">
+                                                                                    <path d="M286.935 69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952 0-9.233 1.807-12.85 5.424C1.807 72.998 0 77.279 0 82.228c0 4.948 1.807 9.229 5.424 12.847l127.907 127.907c3.621 3.617 7.902 5.428 12.85 5.428s9.233-1.811 12.847-5.428L286.935 95.074c3.613-3.617 5.427-7.898 5.427-12.847 0-4.948-1.814-9.229-5.427-12.85z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!---->
+                                                                    </div>
+
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-6 col-lg-4 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Gender</span>
+                                                                    <select required="" class="order-select select2-hidden-accessible"
+                                                                            autocomplete="off" name="seat[0][sex]" tabindex="-1"
+                                                                            aria-hidden="true">
+                                                                        <option value="">----</option>
+                                                                        <option value="male">MALE</option>
+                                                                        <option value="female">FEMALE</option>
+                                                                    </select>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-8 col-xl-6">
+                                                                <label class="order-input date-of-birth">
+                                                                    <span>Date of birth</span>
+                                                                    <input type="hidden" required="" name="seat[0][birthday]"
+                                                                           v-model="date[0]" autocomplete="off">
+                                                                    <!--<select-datepicker :format="'DD.MM.YYYYY'" start="01.01.1920"
+                                                                                       :index="0" :default="''" end="23.01.2019"
+                                                                                       @date-change="showDate"></select-datepicker>-->
+
+                                                                    <div class="date-picker form-inline">
+                                                                        <div class="form-group">
+                                                                            <select class="form-control year">
+                                                                                <option value="">Year</option>
+                                                                                <option value="1920">1920</option>
+                                                                                <option value="1921">1921</option>
+                                                                                <option value="1922">1922</option>
+                                                                                <option value="1923">1923</option>
+                                                                                <option value="1924">1924</option>
+                                                                                <option value="1925">1925</option>
+                                                                                <option value="1926">1926</option>
+                                                                                <option value="1927">1927</option>
+                                                                                <option value="1928">1928</option>
+                                                                                <option value="1929">1929</option>
+                                                                                <option value="1930">1930</option>
+                                                                                <option value="1931">1931</option>
+                                                                                <option value="1932">1932</option>
+                                                                                <option value="1933">1933</option>
+                                                                                <option value="1934">1934</option>
+                                                                                <option value="1935">1935</option>
+                                                                                <option value="1936">1936</option>
+                                                                                <option value="1937">1937</option>
+                                                                                <option value="1938">1938</option>
+                                                                                <option value="1939">1939</option>
+                                                                                <option value="1940">1940</option>
+                                                                                <option value="1941">1941</option>
+                                                                                <option value="1942">1942</option>
+                                                                                <option value="1943">1943</option>
+                                                                                <option value="1944">1944</option>
+                                                                                <option value="1945">1945</option>
+                                                                                <option value="1946">1946</option>
+                                                                                <option value="1947">1947</option>
+                                                                                <option value="1948">1948</option>
+                                                                                <option value="1949">1949</option>
+                                                                                <option value="1950">1950</option>
+                                                                                <option value="1951">1951</option>
+                                                                                <option value="1952">1952</option>
+                                                                                <option value="1953">1953</option>
+                                                                                <option value="1954">1954</option>
+                                                                                <option value="1955">1955</option>
+                                                                                <option value="1956">1956</option>
+                                                                                <option value="1957">1957</option>
+                                                                                <option value="1958">1958</option>
+                                                                                <option value="1959">1959</option>
+                                                                                <option value="1960">1960</option>
+                                                                                <option value="1961">1961</option>
+                                                                                <option value="1962">1962</option>
+                                                                                <option value="1963">1963</option>
+                                                                                <option value="1964">1964</option>
+                                                                                <option value="1965">1965</option>
+                                                                                <option value="1966">1966</option>
+                                                                                <option value="1967">1967</option>
+                                                                                <option value="1968">1968</option>
+                                                                                <option value="1969">1969</option>
+                                                                                <option value="1970">1970</option>
+                                                                                <option value="1971">1971</option>
+                                                                                <option value="1972">1972</option>
+                                                                                <option value="1973">1973</option>
+                                                                                <option value="1974">1974</option>
+                                                                                <option value="1975">1975</option>
+                                                                                <option value="1976">1976</option>
+                                                                                <option value="1977">1977</option>
+                                                                                <option value="1978">1978</option>
+                                                                                <option value="1979">1979</option>
+                                                                                <option value="1980">1980</option>
+                                                                                <option value="1981">1981</option>
+                                                                                <option value="1982">1982</option>
+                                                                                <option value="1983">1983</option>
+                                                                                <option value="1984">1984</option>
+                                                                                <option value="1985">1985</option>
+                                                                                <option value="1986">1986</option>
+                                                                                <option value="1987">1987</option>
+                                                                                <option value="1988">1988</option>
+                                                                                <option value="1989">1989</option>
+                                                                                <option value="1990">1990</option>
+                                                                                <option value="1991">1991</option>
+                                                                                <option value="1992">1992</option>
+                                                                                <option value="1993">1993</option>
+                                                                                <option value="1994">1994</option>
+                                                                                <option value="1995">1995</option>
+                                                                                <option value="1996">1996</option>
+                                                                                <option value="1997">1997</option>
+                                                                                <option value="1998">1998</option>
+                                                                                <option value="1999">1999</option>
+                                                                                <option value="2000">2000</option>
+                                                                                <option value="2001">2001</option>
+                                                                                <option value="2002">2002</option>
+                                                                                <option value="2003">2003</option>
+                                                                                <option value="2004">2004</option>
+                                                                                <option value="2005">2005</option>
+                                                                                <option value="2006">2006</option>
+                                                                                <option value="2007">2007</option>
+                                                                                <option value="2008">2008</option>
+                                                                                <option value="2009">2009</option>
+                                                                                <option value="2010">2010</option>
+                                                                                <option value="2011">2011</option>
+                                                                                <option value="2012">2012</option>
+                                                                                <option value="2013">2013</option>
+                                                                                <option value="2014">2014</option>
+                                                                                <option value="2015">2015</option>
+                                                                                <option value="2016">2016</option>
+                                                                                <option value="2017">2017</option>
+                                                                                <option value="2018">2018</option>
+                                                                                <option value="2019">2019</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <select class="form-control mouth">
+                                                                                <option value="">Month</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <select class="form-control day">
+                                                                                <option value="">Day</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <button class="btn tm-btn-red" type="button"
+                                                                @click="savePassenger(1)">Save
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-trip-header">
+                                    <div class="container-fluid">
+                                        <h4 class="mb-0">Extra services</h4>
+                                    </div>
+                                </div>
+
+                                <div class="order-services">
+                                    <div class="container-fluid">
+                                        <div class="order-services-item">
+                                            <label class="checkbox">
+                                                <input type="checkbox" v-model="extras" :value="1" name="extra_data[1]">
+                                                <span></span>
+
+                                                balalaika
+                                                <b>17 RUB</b>
+                                            </label>
+                                        </div>
+                                        <div class="order-services-item">
+                                            <label class="checkbox">
+                                                <input type="checkbox" v-model="extras" :value="2" name="extra_data[2]">
+                                                <span></span>
+
+                                                zaaa
+                                                <b>12 RUB</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="order-trip-item mb-4">
+                                <div class="order-trip-header">
+                                    <div class="container-fluid">
+                                        <h4 class="mb-0">Contact details</h4>
+                                    </div>
+                                </div>
+
+                                <div class="order-details">
+                                    <div class="container-fluid">
+                                        <div class="order-inputs">
+                                            <div class="row">
+                                                <div class="col-sm-6 mb-4">
+                                                    <label class="order-input">
+                                                        <span>Your email</span>
+                                                        <input class="form-control" type="email" required="" name="email" value=""
+                                                               placeholder="email@gmail.com">
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-6 mb-4">
+                                                    <label class="order-input">
+                                                        <span>Repeat your email</span>
+                                                        <input class="form-control" type="email" autocomplete="off" required="" name="email_confirmation"
+                                                               value="" placeholder="email@gmail.com">
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-6 mb-4">
+                                                    <label class="order-input">
+                                                        <span>Your phone</span>
+                                                        <!--<the-mask :mask="['+####-###-##-##']" required="" name="phone" value=""
+                                                                  placeholder="+1 555 1234567">
+                                                        </the-mask>-->
+
+                                                        <input class="form-control" type="text" required="required" name="phone" placeholder="+1 555 1234567">
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-6 mb-4">
+                                                    <label class="order-input">
+                                                        <span>Contact name</span>
+                                                        <input class="form-control" type="text" v-model="contact_name" @change="modify = false;fullname();"
+                                                               required="" name="contact_name" placeholder="John">
+                                                    </label>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="order-input">
+                                                        <span>Additionally</span>
+                                                        <textarea class="form-control" name="add_info"
+                                                                  placeholder="Any additional information you think we should know"></textarea>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-right">
+                                <button type="submit" class="btn tm-btn-red">Proceed to payment</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer section text-left">
+        <div class="container">
+            <div class="tm-overflow-hidden position-relative">
+                <div class="row">
+                    <div class="col-sm-auto order-sm-1">
+
+                        <ul class="icon-nav nav justify-content-end flex-sm-column mb-4">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footerContact" data-toggle="collapse" role="button">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footerLang" data-toggle="collapse" role="button">en</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-end">
+                    <div class="col-md">
+                        <h4>Payment options</h4>
+                        <ul class="nav mb-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay2.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay3.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay4.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay5.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="mb-3">Use of this Web site constitutes acceptance of our
+                            <a href="#">Terms and Conditions</a> and
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-auto">
+                        <div class="mb-3">
+                            <a href="/"><img src="site1/images/logoWhiteMain.png" alt=""></a>
+                        </div>
+                        <div class="footer-copyright mb-3">© 2018 - 2019 <b>RUStrains</b></div>
+                    </div>
+
+                </div>
+
+                <!--footer popup contact-->
+                <div id="footerContact" class="tm-footer-popup collapse">
+                    <div class="row">
+                        <div class="col-sm-auto d-flex flex-sm-column justify-content-center order-sm-1">
+                            <div>
+                                <a class="p-3" href="#footerContact" data-toggle="collapse"><i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-5 d-flex flex-md-column align-items-center text-center">
+                                    <div class="py-3">
+                                        <div class="tm-footer-icon"><i class="fas fa-phone"></i></div>
+                                    </div>
+                                    <div class="px-3 px-md-0">
+                                        <h2 class="py-2">Call to us</h2>
+                                        <div class="py-2">Get travel advice from our experts</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md d-flex flex-column">
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+34-932-20-4999</div>
+                                        <div class="col">EU countries</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+7-812-648-24-57</div>
+                                        <div class="col">Russia</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+44-20-3868-1704</div>
+                                        <div class="col">United Kingdom</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+1-954-639-4643</div>
+                                        <div class="col">US and Canada</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--footer popup lang-->
+                <div id="footerLang" class="tm-footer-popup collapse">
+                    <div class="row">
+                        <div class="col-sm-auto d-flex flex-sm-column justify-content-center order-sm-1">
+                            <div>
+                                <a class="p-3" href="#footerLang" data-toggle="collapse"><i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-5 d-flex flex-md-column align-items-center text-center">
+                                    <div class="py-3">
+                                        <div class="tm-footer-icon">en</div>
+                                    </div>
+                                    <div class="px-3 px-md-0">
+                                        <h2 class="py-2">Language</h2>
+                                        <div class="py-2">Select your language preferences</div>
+                                    </div>
+                                </div>
+
+                                <div class="tm-flags col-md">
+                                    <div class="row">
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">English</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Portuguese</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Russian</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Japanese</div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Deutsch</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Italian</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Polish</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Turkish</div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Español</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">French</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Chinese</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Korean</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<h5 class="modal-title" id="authModalLabel"></h5>-->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                        <img src="https://via.placeholder.com/700x800" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="tab-pane">
+                            <div class="p-4">
+                                <h3 class="mb-4 text-center">Welcome back!</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="signinInputEmail">Email address</label>
+                                        <input type="email" class="form-control" id="signinInputEmail"
+                                               placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signinInputPassword">Password</label>
+                                        <div class="tm-password">
+                                            <input type="password" class="form-control" id="signinInputPassword"
+                                                   placeholder="Password">
+                                            <div class="tm-password-eye"><i class="fas fa-eye"></i></div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="tm-btn-red btn w-100 mb-5">Log in</button>
+                                    <div class="text-center">
+                                        <div class="mb-3">
+                                            <a href="http://rustrains.com/register" target="_blank">Sign up (opens in
+                                                new tab)</a>
+                                        </div>
+                                        <div>
+                                            <a href="http://rustrains.com/password/reset" target="_blank">
+                                                Forgot Your Password? (opens in new tab)
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<div id="common_preloader" style="display:none">
+    <img src="icons/train.gif"/>
+</div>
+
+<div id="cookie" class="cookie">This website uses cookies and other data to provide a better service.
+    See <a href="#">Privacy policy</a> for more information. <br>
+    If you agree, continue to use our site. <a href="#" class="cookie-accept btn btn-light">I Agree</a>
+</div>
+
+<!-- Scripts -->
+<!--<script src="js/lang.js"></script>
+<script src="http://rustrains.com/js/app_public.js"></script>-->
+<script src="site1/js/jquery-3.2.1.min.js"></script>
+<script src="site1/js/slick.min.js"></script>
+<script src="site1/js/popper.js"></script>
+<script src="site1/js/bootstrap.min.js"></script>
+<script src="site1/js/swiper.min.js"></script>
+<script src="site1/js/select2.min.js"></script>
+<script src="site1/js/fotorama.js"></script>
+<script src="site1/js/jquery.ui.touch-punch.min.js"></script>
+<script src="site1/js/js.cookie.js"></script>
+<script src="site1/js/main.js"></script>
+
+</body>
+</html>

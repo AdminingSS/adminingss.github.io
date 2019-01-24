@@ -290,6 +290,14 @@ $(document).ready(function () {
         })();
 
         (function () {
+            var $datePickerSelect = $('.date-picker select');
+
+            $datePickerSelect.select2({
+                width: '100%'
+            });
+        })();
+
+        (function () {
             var $ticketNotfound = $('.ticket-notfound select');
 
             $ticketNotfound.select2({
@@ -485,12 +493,12 @@ $(document).ready(function () {
         $(this).hide();
     });
 
-    $('.order-passenger').click(function () {
+   /* $('.order-passenger').click(function () {
         if (!$(this).hasClass('active')) {
             $('.order-passenger').removeClass('active');
             $(this).addClass('active');
         }
-    });
+    });*/
 
     $('.search-history-show').click(function () {
         $('.search-history-container').addClass('invisible');
