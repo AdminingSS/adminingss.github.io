@@ -951,7 +951,7 @@ a.ui-button:active,
     right: 0;
     background: #fff;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
-    padding: 20px;
+    padding: 20px 0;
     color: #555555;
     z-index: 9999;
     display: none; }
@@ -959,9 +959,6 @@ a.ui-button:active,
       font-weight: bold;
       margin-bottom: 20px; }
   .search-history-item {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     font-size: 16px;
     margin-bottom: 20px;
     cursor: pointer; }
@@ -969,14 +966,6 @@ a.ui-button:active,
       color: #d81818; }
     .search-history-item:last-child {
       margin-bottom: 0; }
-    .search-history-item .direction {
-      width: 50%;
-      margin-bottom: 10px; }
-    .search-history-item .date {
-      width: 25%;
-      padding: 0 20px; }
-    .search-history-item .number {
-      width: 25%; }
 
 .showcase-payment {
   position: absolute;
@@ -1084,14 +1073,7 @@ a.ui-button:active,
   .showcase-date {
     /*max-width: 100%;*/ }
     .showcase-date .dropdown-menu {
-      max-width: 290px !important; }
-
-  .search-history-item .direction {
-    width: 100%; }
-  .search-history-item .date, .search-history-item .number {
-    width: auto;
-    max-width: 48%;
-    padding: 0; } }
+      max-width: 290px !important; } }
 .footer {
   padding-bottom: 20px;
   font-size: 14px;
@@ -3022,34 +3004,6 @@ a.ui-button:active,
         .order-check label .check-text b {
           font-weight: 800; }
 
-.direction {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 70px; }
-  .direction-item {
-    width: 310px; }
-    .direction-item .title {
-      margin-bottom: 0; }
-    .direction-item.to {
-      text-align: right; }
-    .direction-item span {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 800;
-      color: #e40000; }
-    .direction-item__descr {
-      font-weight: 800;
-      margin-bottom: 4px; }
-    .direction-item__info {
-      text-transform: uppercase; }
-  .direction-arrow {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); }
-
 @media (max-width: 1240px) {
   .order {
     padding: 18px 0 24px; }
@@ -3084,18 +3038,7 @@ a.ui-button:active,
         font-size: 20px;
         margin-bottom: 6px; }
       .order-item__text {
-        margin-bottom: 12px; }
-
-  .direction {
-    flex-direction: column;
-    margin-bottom: 42px; }
-    .direction-arrow {
-      position: static;
-      transform: translateX(0) rotate(90deg);
-      padding: 14px 0; }
-    .direction-item {
-      width: 100%;
-      text-align: left !important; } }
+        margin-bottom: 12px; } }
 @media (max-width: 340px) {
   .order-bottom .link {
     width: 100%;
@@ -4021,6 +3964,8 @@ a.ui-button:active,
     border-radius: 50%; }
   .ticket-item .ticket-total {
     text-align: center; }
+    .ticket-item .ticket-total span {
+      text-transform: uppercase; }
   .ticket-item .ticket-price {
     text-align: center; }
     .ticket-item .ticket-price .amount {
@@ -4028,7 +3973,8 @@ a.ui-button:active,
       text-align: center;
       margin-bottom: 10px; }
       .ticket-item .ticket-price .amount span {
-        font-size: 12px; }
+        font-size: 12px;
+        text-transform: uppercase; }
   .ticket-item .ticket-info {
     font-size: 14px; }
     .ticket-item .ticket-info span {
@@ -4235,7 +4181,8 @@ a.ui-button:active,
   margin-bottom: 0; }
   .rout-table th:first-of-type, .rout-table td:first-of-type {
     width: 50%;
-    max-width: 450px; }
+    max-width: 450px;
+    min-width: 180px; }
 
 .tm-route-modal .modal-dialog {
   max-width: 900px; }
@@ -4271,7 +4218,10 @@ a.ui-button:active,
     text-align: right; } }
 @media (max-width: 767px) {
   .ticket-sort {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .train-type-price {
+    text-align: left; } }
 @media (max-width: 575px) {
   .ticket-item .time {
     font-size: 20px; }
@@ -4284,7 +4234,16 @@ a.ui-button:active,
     margin-bottom: 5px; }
 
   .ticket-notfound h6 {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+
+  .train-order {
+    text-align: center; } }
+@media (min-width: 768px) {
+  .order-md-0 {
+    order: 0; } }
+@media (min-width: 576px) {
+  .order-sm-0 {
+    order: 0; } }
 .results .nav-tabs {
   border-bottom: 0; }
 
