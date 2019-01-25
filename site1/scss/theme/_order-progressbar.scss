@@ -1,0 +1,108 @@
+.order-progressbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 6px;
+    background-color: #555;
+  }
+
+  &-percent, &-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-percent {
+    display: none;
+    top: 0;
+  }
+  &-title {
+    top: 45px;
+    white-space: nowrap;
+  }
+
+  &-item {
+    position: relative;
+    padding: 20px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #999;
+    text-align: center;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 5px solid #999;
+      background-color: #fff;
+    }
+
+    &:first-of-type {
+
+      .order-progressbar-percent, .order-progressbar-title {
+        left: 0;
+        transform: none;
+      }
+    }
+
+    &:last-of-type {
+
+      .order-progressbar-percent, .order-progressbar-title {
+        left: auto;
+        right: 0;
+        transform: none;
+      }
+    }
+
+    &.active {
+      color: #000;
+
+      &::before {
+        border-color: #e40000;
+      }
+
+      .order-progressbar-percent {
+        display: block;
+      }
+    }
+
+    &.passed {
+      color: #000;
+
+      &::before {
+        background-color: #e40000;
+        border-color: #e40000;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+
+  .order-progressbar {
+
+    &-title {
+      display: none;
+    }
+
+    &-item {
+
+      &.active {
+
+        .order-progressbar-title {
+          display: block;
+        }
+      }
+    }
+  }
+}

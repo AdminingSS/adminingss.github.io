@@ -989,6 +989,10 @@ a.ui-button:active,
   }
 }
 
+.section-small-top {
+  padding-top: 30px;
+}
+
 @media (max-width: 1240px) {
 
 }
@@ -2965,6 +2969,8 @@ a.ui-button:active,
 }
 
 @import "theme/order";
+
+@import "theme/order-progressbar";
 
 // Order
 
