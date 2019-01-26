@@ -98,7 +98,37 @@
 // Order passenger
 
 .order-passenger-top {
+  position: relative;
   cursor: pointer;
+  padding-right: 20px;
+
+  h6 {
+    display: inline-block;
+    border-bottom: 1px dashed transparent;
+  }
+
+  &::before {
+    content: "\f106";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #999;
+
+  }
+
+  &.collapsed {
+
+    h6 {
+      border-bottom-color: inherit;
+    }
+
+    &::before {
+      content: "\f107";
+    }
+  }
 }
 
 // Order input
@@ -217,6 +247,16 @@
 
     .nav-link {
       padding: 0 4px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+
+  .order-info-item {
+
+    .label {
+      font-size: 14px;
     }
   }
 }

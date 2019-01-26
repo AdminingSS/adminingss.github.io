@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic");
 button,
 input[type="submit"] {
   appearance: none;
@@ -11,7 +12,7 @@ button:focus {
 
 body {
   position: relative;
-  font: 300 16px 'Montserrat', sans-serif;
+  font: 400 16px 'Montserrat', sans-serif;
   color: #555; }
 
 a {
@@ -2538,7 +2539,25 @@ a.ui-button:active,
     font-weight: normal; }
 
 .order-passenger-top {
-  cursor: pointer; }
+  position: relative;
+  cursor: pointer;
+  padding-right: 20px; }
+  .order-passenger-top h6 {
+    display: inline-block;
+    border-bottom: 1px dashed transparent; }
+  .order-passenger-top::before {
+    content: "\f106";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #999; }
+  .order-passenger-top.collapsed h6 {
+    border-bottom-color: inherit; }
+  .order-passenger-top.collapsed::before {
+    content: "\f107"; }
 
 .order-input {
   display: block;
@@ -2617,6 +2636,9 @@ a.ui-button:active,
   .order-bottom .payment .nav-link {
     padding: 0 4px; }
 
+@media (max-width: 1199px) {
+  .order-info-item .label {
+    font-size: 14px; } }
 @media (max-width: 767px) {
   .order-trip-header .order-from, .order-trip-header .order-to {
     margin-bottom: 10px; } }
@@ -3029,12 +3051,19 @@ a.ui-button:active,
     display: none; }
   .order-progressbar-item.active .order-progressbar-title {
     display: block; } }
+.order-review-title {
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 700; }
+.order-review-text {
+  font-size: 14px; }
+.order-review-passengers .order-passenger-info {
+  padding-bottom: 0; }
+
 .order {
   padding: 26px 0 40px; }
   .order-wrap {
     background-color: #e1e1e1; }
-  .order-items {
-    margin-bottom: 22px; }
   .order-item {
     margin-bottom: 22px; }
     .order-item:last-child {

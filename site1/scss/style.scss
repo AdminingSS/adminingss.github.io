@@ -4,6 +4,8 @@ $blue: #00c5c5;
 $gray: #555;
 $graybrown: #444;
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic');
+
 button,
 input[type="submit"] {
   appearance: none;
@@ -20,7 +22,7 @@ button:focus {
 
 body {
   position: relative;
-  font: 300 16px 'Montserrat', sans-serif;
+  font: 400 16px 'Montserrat', sans-serif;
   color: $gray;
 }
 
@@ -2972,6 +2974,8 @@ a.ui-button:active,
 
 @import "theme/order-progressbar";
 
+@import "theme/order-review";
+
 // Order
 
 .order {
@@ -2979,9 +2983,7 @@ a.ui-button:active,
   &-wrap {
     background-color: #e1e1e1;
   }
-  &-items {
-    margin-bottom: 22px;
-  }
+
   &-item {
     margin-bottom: 22px;
     &:last-child {
