@@ -13,7 +13,7 @@
     }
   }
 
-  span {
+  > span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +33,46 @@
       line-height: normal;
       opacity: 0;
       color: #e40000;
+      transition: opacity 0.2s ease-in-out;
+    }
+  }
+
+}
+
+.radio {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+
+  input {
+    display: none;
+
+    &:checked + span:before {
+      opacity: 1;
+    }
+  }
+
+  > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e40000;
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: #e40000;
+      border-radius: 50%;
+      opacity: 0;
       transition: opacity 0.2s ease-in-out;
     }
   }

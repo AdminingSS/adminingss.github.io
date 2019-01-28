@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RUStrains</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="4iffRkuOQ8hhT2tj8XptOE5mHIKL5SzJ1z1Rcrtx">
+
+    <link rel="stylesheet" href="site1/css/slick.css">
+    <link rel="stylesheet" href="site1/css/slick-theme.css">
+    <link rel="stylesheet" href="site1/css/fontawesome-all.css">
+    <link rel="stylesheet" href="site1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site1/css/swiper.min.css">
+    <link rel="stylesheet" href="site1/css/select2.min.css">
+    <link rel="stylesheet" href="site1/scss/style.css">
+
+</head>
+
+<body>
+<div>
+
+    <!--Header-->
+    <header class="header navbar navbar-expand-xl navbar-light bg-light">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="site1/images/logo.png" alt="">
+            </a>
+
+            <!-- Lang menu -->
+            <ul class="menu-lang navbar-nav text-uppercase order-xl-1">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span
+                            class="flag-icon flag-icon-gb"></span> en</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com"><span
+                                class="flag-icon flag-icon-gb"></span> en</a>
+                        <a class="dropdown-item" href="http://de.rustrains.com"><span
+                                class="flag-icon flag-icon-de"></span> de</a>
+                        <a class="dropdown-item" href="http://pl.rustrains.com"><span
+                                class="flag-icon flag-icon-pl"></span> pl</a>
+                        <a class="dropdown-item" href="http://cn.rustrains.com"><span
+                                class="flag-icon flag-icon-cn"></span> zh</a>
+                        <a class="dropdown-item" href="http://jp.rustrains.com"><span
+                                class="flag-icon flag-icon-jp"></span> ja</a>
+                        <a class="dropdown-item" href="http://tr.rustrains.com"><span
+                                class="flag-icon flag-icon-tr"></span> tr</a>
+                        <a class="dropdown-item" href="http://ko.rustrains.com"><span
+                                class="flag-icon flag-icon-kr"></span> ko</a>
+                        <a class="dropdown-item" href="http://fi.rustrains.com"><span
+                                class="flag-icon flag-icon-fi"></span> fi</a>
+                        <a class="dropdown-item" href="http://se.rustrains.com"><span
+                                class="flag-icon flag-icon-se"></span> se</a>
+                        <a class="dropdown-item" href="http://es.rustrains.com"><span
+                                class="flag-icon flag-icon-es"></span> es</a>
+                        <a class="dropdown-item" href="http://pt.rustrains.com"><span
+                                class="flag-icon flag-icon-pt"></span> pt</a>
+                        <a class="dropdown-item" href="http://it.rustrains.com"><span
+                                class="flag-icon flag-icon-it"></span> it</a>
+                        <a class="dropdown-item" href="http://fr.rustrains.com"><span
+                                class="flag-icon flag-icon-fr"></span> fr</a>
+                        <a class="dropdown-item" href="http://ru.rustrains.com"><span
+                                class="flag-icon flag-icon-ru"></span> ru</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
+                    aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
+                <!-- My cabinet (for logged in) with dropdown -->
+                <!--<div class="menu-user dropdown mr-xl-3">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign In
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com/login">Login</a>
+                        <a class="dropdown-item" href="http://rustrains.com/register">Register</a>
+                    </div>
+                </div>-->
+
+                <!-- Log-in with modal -->
+                <div class="menu-user mr-xl-3">
+                    <a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#authModal">
+                        Sign In
+                    </a>
+                </div>
+
+                <!-- Menu -->
+                <ul class="menu-main navbar-nav mr-xl-2">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Popular Trains</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Routes and Planning</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Customer Support</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--Content-->
+    <div class="section section-small-top">
+        <div class="container">
+
+            <!--Progressbar-->
+            <div class="order-progressbar mb-4">
+                <div class="order-progressbar-item passed">
+                    <div class="order-progressbar-title">Search trains</div>
+                </div>
+                <div class="order-progressbar-item passed">
+                    <div class="order-progressbar-title">Select seats</div>
+                </div>
+                <div class="order-progressbar-item passed">
+                    <div class="order-progressbar-percent">40%</div>
+                    <div class="order-progressbar-title">Personal information</div>
+                </div>
+                <div class="order-progressbar-item passed">
+                    <div class="order-progressbar-percent">50%</div>
+                    <div class="order-progressbar-title">Review order</div>
+                </div>
+                <div class="order-progressbar-item active">
+                    <div class="order-progressbar-percent">75%</div>
+                    <div class="order-progressbar-title">Select payment method</div>
+                </div>
+                <div class="order-progressbar-item">
+                    <div class="order-progressbar-percent">80%</div>
+                    <div class="order-progressbar-title">Payment</div>
+                </div>
+                <div class="order-progressbar-item">
+                    <div class="order-progressbar-percent">95%</div>
+                    <div class="order-progressbar-title">Confirmation</div>
+                </div>
+                <div class="order-progressbar-item">
+                    <div class="order-progressbar-title">Tickets receipt</div>
+                </div>
+            </div>
+
+            <a name="top"></a>
+
+            <div id="preload" style="text-align: center; display: none;"><img src="/icons/train.gif"></div>
+
+            <div class="row">
+                <div class="col-lg-4 col-xl-3 order-lg-1">
+
+                    <!--Order sidebar-->
+                    <div class="order-sidebar mb-5">
+                        <div class="order-cheque mb-4">
+                            <div class="order-cheque-header">Trip summary</div>
+                            <div class="order-cheque-item">
+                                <div class="order-cheque-title">1 leg</div>
+                                <div class="order-cheque-info">
+                                    6 tickets - 2-сl. sleeping compt.
+                                </div>
+                                <div class="order-cheque-price">
+                                    <div class="price">
+                                        3305 <span class="currency">RUB</span> x 6 = 19830
+                                        <span class="currency">RUB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-cheque-taxex">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <div class="description">Tickets</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="price">19830 <span class="currency">RUB</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-cheque-taxex">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <div class="description">Extras</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="price">0 <span class="currency">RUB</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-cheque-footer">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <div class="description">Grand total</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="price">19830 <span class="currency">RUB</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-bottom">
+                            <div class="payment">
+                                <ul class="nav align-items-center justify-content-center mb-2">
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay1.png" alt=""></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay2.png" alt=""></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay3.png" alt=""></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay4.png" alt=""></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay5.png" alt=""></a></li>
+                                </ul>
+                                <p>secure payment options + SSL encryption</p></div>
+                        </div>
+                    </div>
+
+                    <div class="recommendation mb-5">
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <img src="site1/images/icon-train.png" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h4>Great Choice!</h4>
+                                <p>You have selected one of the best trains for this route. Book now!</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <img src="site1/images/icon-seat.png" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h4>Guaranteed Seat Reservation</h4>
+                                <p>We will issue e-tickets with guaranteed seat reservation. The best seats possible.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <img src="site1/images/icon-service-24h.png" alt="">
+                            </div>
+                            <div class="col-9">
+                                <h4>Real Customer Service</h4>
+                                <p>Need help with your order? Our customer support is always there for you via phone, email or chat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8 col-xl-9">
+
+                    <!--Order trips review--->
+                    <div class="order-trips">
+                        <div class="order-items">
+
+                            <div class="order-trip-item mb-4">
+                                <div class="order-trip-header">
+                                    <div class="container-fluid">
+                                        <h4 class="mb-0">Select a payment method:</h4>
+                                    </div>
+                                </div>
+
+                                <div class="order-payments">
+                                    <div class="container-fluid">
+                                        <div class="order-payment">
+                                            <label class="radio">
+                                                <input type="radio" class="form-check-inline" autocomplete="off" name="pay" value="card" />
+                                                <span></span>
+                                                Card
+                                                <img src="site1/images/pay2.png" alt="">
+                                                <img src="site1/images/pay3.png" alt="">
+                                            </label>
+
+                                            <div id="card" class="order-payment-card" >
+                                                <div class="card-js" id="my-card"  data-capture-name="true">
+                                                    <input class="card-number my-custom-class" autocomplete="off" name="card-number">
+                                                    <input class="name" id="the-card-name-id" autocomplete="off" name="card-holders-name" placeholder="First Name on card" style="width:50%">
+                                                    <input class="name" id="the-card-name-id1" autocomplete="off" name="card-holders-name1" placeholder="Last Name on card" style="width:50%">
+                                                    <input class="expiry-month" autocomplete="off" name="expiry-month">
+                                                    <input class="expiry-year" autocomplete="off" name="expiry-year">
+                                                    <input class="cvc" autocomplete="off" name="cvc">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="order-payment">
+                                            <label class="radio">
+                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="paypal" />
+                                                <span></span>
+                                                PayPal
+                                                <img src="site1/images/pay_2.png" alt="">
+                                            </label>
+                                        </div>
+
+                                        <div class="order-payment">
+                                            <label class="radio">
+                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="alipay" />
+                                                <span></span>
+                                                Alipay
+                                                <img src="site1/images/pay_3.png" alt="">
+                                            </label>
+                                        </div>
+
+                                        <div class="order-payment">
+                                            <label class="radio">
+                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="wechat" />
+                                                <span></span>
+                                                WeChat
+                                                <img src="site1/images/pay_4.png" alt="">
+                                            </label>
+                                        </div>
+
+                                        <div class="order-payment">
+                                            <label class="radio">
+                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="giropay" />
+                                                <span></span>
+                                                Giropay
+                                                <img src="site1/images/pay_5.png" alt="">
+                                            </label>
+                                        </div>
+
+                                        <div class="order-payment">
+                                            <label class="radio">
+                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="ideal" />
+                                                <span></span>
+                                                iDEAL
+                                                <img src="site1/images/pay_6.png" alt="">
+                                            </label>
+                                        </div>
+
+                                        <div class="order-payment">
+                                            <label class="radio">
+                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="eps" />
+                                                <span></span>
+                                                EPS
+                                                <img src="site1/images/pay_7.png" alt="">
+                                            </label>
+                                        </div>
+
+                                        <div class="order-payment">
+                                            <label class="radio">
+                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="onlinebanktransferbrazil" />
+                                                <span></span>
+                                                Online Bank Transfer Brazil
+                                                <img src="site1/images/pay_8.png" alt="">
+                                            </label>
+                                        </div>
+
+                                        <div id="errors" style="color:red"></div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="text-right">
+                                <button type="button" id="do_pay" class="btn tm-btn-red">Pay <i class="fa fa-angle-double-right"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer section text-left">
+        <div class="container">
+            <div class="tm-overflow-hidden position-relative">
+                <div class="row">
+                    <div class="col-sm-auto order-sm-1">
+
+                        <ul class="icon-nav nav justify-content-end flex-sm-column mb-4">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footerContact" data-toggle="collapse" role="button">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footerLang" data-toggle="collapse" role="button">en</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-end">
+                    <div class="col-md">
+                        <h4>Payment options</h4>
+                        <ul class="nav mb-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay2.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay3.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay4.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay5.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="mb-3">Use of this Web site constitutes acceptance of our
+                            <a href="#">Terms and Conditions</a> and
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-auto">
+                        <div class="mb-3">
+                            <a href="/"><img src="site1/images/logoWhiteMain.png" alt=""></a>
+                        </div>
+                        <div class="footer-copyright mb-3">© 2018 - 2019 <b>RUStrains</b></div>
+                    </div>
+
+                </div>
+
+                <!--footer popup contact-->
+                <div id="footerContact" class="tm-footer-popup collapse">
+                    <div class="row">
+                        <div class="col-sm-auto d-flex flex-sm-column justify-content-center order-sm-1">
+                            <div>
+                                <a class="p-3" href="#footerContact" data-toggle="collapse"><i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-5 d-flex flex-md-column align-items-center text-center">
+                                    <div class="py-3">
+                                        <div class="tm-footer-icon"><i class="fas fa-phone"></i></div>
+                                    </div>
+                                    <div class="px-3 px-md-0">
+                                        <h2 class="py-2">Call to us</h2>
+                                        <div class="py-2">Get travel advice from our experts</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md d-flex flex-column">
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+34-932-20-4999</div>
+                                        <div class="col">EU countries</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+7-812-648-24-57</div>
+                                        <div class="col">Russia</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+44-20-3868-1704</div>
+                                        <div class="col">United Kingdom</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+1-954-639-4643</div>
+                                        <div class="col">US and Canada</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--footer popup lang-->
+                <div id="footerLang" class="tm-footer-popup collapse">
+                    <div class="row">
+                        <div class="col-sm-auto d-flex flex-sm-column justify-content-center order-sm-1">
+                            <div>
+                                <a class="p-3" href="#footerLang" data-toggle="collapse"><i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-5 d-flex flex-md-column align-items-center text-center">
+                                    <div class="py-3">
+                                        <div class="tm-footer-icon">en</div>
+                                    </div>
+                                    <div class="px-3 px-md-0">
+                                        <h2 class="py-2">Language</h2>
+                                        <div class="py-2">Select your language preferences</div>
+                                    </div>
+                                </div>
+
+                                <div class="tm-flags col-md">
+                                    <div class="row">
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">English</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Portuguese</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Russian</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Japanese</div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Deutsch</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Italian</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Polish</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Turkish</div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Español</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">French</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Chinese</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Korean</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<h5 class="modal-title" id="authModalLabel"></h5>-->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                        <img src="https://via.placeholder.com/700x800" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="tab-pane">
+                            <div class="p-4">
+                                <h3 class="mb-4 text-center">Welcome back!</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="signinInputEmail">Email address</label>
+                                        <input type="email" class="form-control" id="signinInputEmail"
+                                               placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signinInputPassword">Password</label>
+                                        <div class="tm-password">
+                                            <input type="password" class="form-control" id="signinInputPassword"
+                                                   placeholder="Password">
+                                            <div class="tm-password-eye"><i class="fas fa-eye"></i></div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="tm-btn-red btn w-100 mb-5">Log in</button>
+                                    <div class="text-center">
+                                        <div class="mb-3">
+                                            <a href="http://rustrains.com/register" target="_blank">Sign up (opens in
+                                                new tab)</a>
+                                        </div>
+                                        <div>
+                                            <a href="http://rustrains.com/password/reset" target="_blank">
+                                                Forgot Your Password? (opens in new tab)
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<div id="common_preloader" style="display:none">
+    <img src="icons/train.gif"/>
+</div>
+
+<div id="cookie" class="cookie">This website uses cookies and other data to provide a better service.
+    See <a href="#">Privacy policy</a> for more information. <br>
+    If you agree, continue to use our site. <a href="#" class="cookie-accept btn btn-light">I Agree</a>
+</div>
+
+<!-- Scripts -->
+<!--<script src="js/lang.js"></script>
+<script src="http://rustrains.com/js/app_public.js"></script>-->
+<script src="site1/js/jquery-3.2.1.min.js"></script>
+<script src="site1/js/slick.min.js"></script>
+<script src="site1/js/popper.js"></script>
+<script src="site1/js/bootstrap.min.js"></script>
+<script src="site1/js/swiper.min.js"></script>
+<script src="site1/js/select2.min.js"></script>
+<script src="site1/js/fotorama.js"></script>
+<script src="site1/js/jquery.ui.touch-punch.min.js"></script>
+<script src="site1/js/js.cookie.js"></script>
+<script src="site1/js/main.js"></script>
+
+// imitation of work on the site rustrains.com/order/pay...
+<script>
+    $(document).ready(function(){
+        $('[name="pay"]').change(function(){
+            if($(this).val() == 'card') {
+                $('#card').show();
+            }
+            else {
+                $('#card').hide();
+            }
+        });
+
+        var errors = [];
+
+        function output_errors()
+        {
+            if(errors.length > 0) {
+                for(i=0;i<errors.length;i++){
+                    $('#errors').append('<p>'+errors[i]+'</p>');
+                }
+                errors = [];
+            }
+        }
+
+        $('#do_pay').click(function()
+        {
+            $(this).attr('disabled', true);
+            errors = [];
+            $('#errors').html('');
+
+            if($('[name="pay"]:checked').val() == undefined) {
+                errors.push('Select pay method');
+            }
+            var type = $('[name="pay"]:checked').val();
+            var load = false;
+            var data = {};
+            if(type == 'card') {
+                var myCard = $('#my-card');
+                if (!$('[name="card-number"]').val()) {
+                    errors.push('Please input Card number');
+                }
+                if (!$('[name="card-holders-name"]').val()) {
+                    errors.push('Please input First Name on card');
+                }
+                if (!$('[name="card-holders-name1"]').val()) {
+                    errors.push('Please input Last Name on card');
+                }
+                if (!$('[name="expiry-month"]').val()) {
+                    errors.push('Please input expiry month');
+                }
+                if (!$('[name="expiry-year"]').val()) {
+                    errors.push('Please input expiry year');
+                }
+                if (!$('[name="cvc"]').val()) {
+                    errors.push('Please input CVC');
+                }
+                if ($('[name="expiry-year"]').val() && $('[name="expiry-month"]').val() && !CardJs.isExpiryValid($('[name="expiry-month"]').val(), $('[name="expiry-year"]').val())) {
+                    errors.push('Please input valid expiry date');
+                }
+
+
+                if(errors.length == 0) {
+                    load = true;
+                    data = {
+                        pay: 'card',
+                        type: myCard.CardJs('cardType'),
+                        number: $('[name="card-number"]').val(),
+                        first_name: $('[name="card-holders-name"]').val(),
+                        last_name: $('[name="card-holders-name1"]').val(),
+                        month:$('[name="expiry-month"]').val(),
+                        year:$('[name="expiry-year"]').val(),
+                        cvc:$('[name="cvc"]').val()
+                    };
+                }
+            }
+            else if(type == 'paypal'){
+                data = {
+                    pay: 'paypal'
+                };
+                load = true;
+
+
+            }
+            else $(this).attr('disabled', false);
+
+            if(load) {
+                axios.post('https://rustrains.com/order/pay-process/20190128-18-060504', data)
+                    .then(response => {
+                        if(response.data.success) document.location=response.data.url;
+                    })
+                    .catch(error => {
+                        if (error.response && error.response.data && error.response.data.errors) {
+                            var ar = error.response.data.errors;
+                            for(element in ar) {
+                                errors.push(ar[element][0]);
+                            }
+                            output_errors();
+                        }
+                        $(this).attr('disabled', false);
+                    });
+            }
+            output_errors();
+
+        });
+    });
+</script>
+
+</body>
+</html>
