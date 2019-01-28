@@ -248,6 +248,29 @@
   }
 }
 
+.btn-more-payments {
+  color: #e40000;
+
+  &:hover {
+    color: darken(#e40000, 10%);
+  }
+
+  .show-more {
+    display: none;
+  }
+
+  &.collapsed {
+
+    .hide-more {
+      display: none;
+    }
+
+    .show-more {
+      display: block;
+    }
+  }
+}
+
 @media (max-width: 1199px) {
 
   .order-info-item {

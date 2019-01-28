@@ -2641,6 +2641,17 @@ a.ui-button:active,
   .order-payment-card {
     display: none; }
 
+.btn-more-payments {
+  color: #e40000; }
+  .btn-more-payments:hover {
+    color: #b10000; }
+  .btn-more-payments .show-more {
+    display: none; }
+  .btn-more-payments.collapsed .hide-more {
+    display: none; }
+  .btn-more-payments.collapsed .show-more {
+    display: block; }
+
 @media (max-width: 1199px) {
   .order-info-item .label {
     font-size: 14px; } }
