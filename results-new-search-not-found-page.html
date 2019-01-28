@@ -333,25 +333,52 @@
                                 </div>
                                 <div class="search-history-show">Search history <i class="fas fa-sort-down"></i></div>
                             </div>
-                            <div class="search-history-body"><h3>Your recent search history</h3>
-                                <div class="search-history-items">
-                                    <div onclick="document.location='http://rustrains.com/rzd?trip=0&amp;from=2000000&amp;to=2004000&amp;date_from=18.01.2019&amp;amount=1'"
-                                         class="search-history-item">
-                                        <div class="direction">Moscow - Saint-Petersburg</div>
-                                        <div class="date">18.01.2019</div>
-                                        <div class="number">1 passenger</div>
-                                    </div>
-                                    <div onclick="document.location='http://rustrains.com/rzd?trip=0&amp;from=2000000&amp;to=2004000&amp;date_from=12.01.2019&amp;amount=2'"
-                                         class="search-history-item">
-                                        <div class="direction">Moscow - Saint-Petersburg</div>
-                                        <div class="date">12.01.2019</div>
-                                        <div class="number">2 passengers</div>
-                                    </div>
-                                    <div onclick="document.location='http://rustrains.com/destination-moscow-st-petersburg-railway'"
-                                         class="search-history-item">
-                                        <div class="direction">Moscow - Saint-Petersburg</div>
-                                        <div class="date">11.01.2019</div>
-                                        <div class="number">1 passenger</div>
+                            <div class="search-history-body">
+                                <div class="container-fluid">
+                                    <div class="search-history-items">
+                                        <h3>Your recent search history</h3>
+                                        <div onclick="document.location='http://rustrains.com/rzd?trip=0&amp;from=2000000&amp;to=2004000&amp;date_from=18.01.2019&amp;amount=1'"
+                                             class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow - Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">18.01.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div onclick="document.location='http://rustrains.com/rzd?trip=0&amp;from=2000000&amp;to=2004000&amp;date_from=12.01.2019&amp;amount=2'"
+                                             class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow - Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">12.01.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">2 passengers</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div onclick="document.location='http://rustrains.com/destination-moscow-st-petersburg-railway'"
+                                             class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow - Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">11.01.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -394,11 +421,19 @@
                     <div id="near">
                         <div class="ticket-notfound near-block">
 
-                            <div class="ticket-notfound-message mb-3">
-                                No train was found for your request, but we can search for the train for the nearest dates.
+                            <div class="ticket-notfound-message text-center d-flex align-items-center mb-3">
+                                <div class="text-danger mr-3">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div>Either something went wrong or there are no trains available.
+                                    You can search again and also check nearby dates.
+                                </div>
+                            </div>
+                            <div class="text-center mb-5">
+                                <button type="button" class="tm-btn-red btn btn-lg">Search again</button>
                             </div>
 
-                            <div class="row align-items-center justify-content-between mb-5">
+                            <div class="row align-items-center justify-content-center mb-5">
                                 <div class="col-lg-auto mb-4 mb-lg-0">
                                     <div class="row align-items-center">
                                         <div class="col-sm-auto">
@@ -429,9 +464,6 @@
                                             <div><strong>13.02.19</strong></div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-auto ml-lg-auto">
-                                    <button type="button" class="tm-btn-red btn">Search</button>
                                 </div>
                             </div>
 

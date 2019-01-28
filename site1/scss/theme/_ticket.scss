@@ -644,10 +644,11 @@
 //Ticket not found part
 
 .ticket-notfound {
-  text-align: left;
   padding: 20px 0;
 
   &-message {
+    font-size: 18px;
+    font-weight: 600;
     padding: 20px 0;
   }
 
@@ -657,6 +658,17 @@
 
   .select2-container--default .select2-selection--single {
     border: 1px solid #ddd;
+  }
+
+  .btn-lg {
+    padding: 10px 20px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .text-danger {
+    font-size: 26px;
   }
 
 }

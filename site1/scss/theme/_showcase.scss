@@ -1,7 +1,7 @@
 .showcase {
   position: relative;
   padding: 20px 0;
-  background: url(../images/showcase-bg.jpg) no-repeat 50%;
+  background: url(../images/showcase-bg.jpg) no-repeat 50% 25%;
   background-size: cover;
 
   /* &::before {
@@ -160,6 +160,11 @@
 
   &-form {
     position: relative;
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
 
     button[type="submit"] {
       font-size: 16px;

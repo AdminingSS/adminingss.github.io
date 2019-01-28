@@ -707,7 +707,7 @@ a.ui-button:active,
 .showcase {
   position: relative;
   padding: 20px 0;
-  background: url(../images/showcase-bg.jpg) no-repeat 50%;
+  background: url(../images/showcase-bg.jpg) no-repeat 50% 25%;
   background-size: cover;
   /* &::before {
      content: '';
@@ -824,7 +824,12 @@ a.ui-button:active,
       line-height: 17px;
       font-size: 16px; }
   .showcase-form {
-    position: relative; }
+    position: relative;
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6); }
     .showcase-form button[type="submit"] {
       font-size: 16px;
       padding: 0 25px; }
@@ -1724,33 +1729,29 @@ a.ui-button:active,
   display: flex; }
 .ticket-items {
   margin-bottom: 22px; }
-.ticket-item {
-  margin-bottom: 24px; }
-  .ticket-item:last-child {
-    margin-bottom: 0; }
-  .ticket-item__route {
-    line-height: 1;
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 4px; }
-  .ticket-item__name {
-    font-size: 20px;
-    font-weight: 800;
-    margin-bottom: 2px;
-    display: flex;
-    align-items: flex-end; }
-    .ticket-item__name .more {
-      display: none;
-      font-weight: 300;
-      margin-left: 14px;
-      font-size: 12px;
-      line-height: 1.1;
-      border-bottom: 1px dotted #000; }
-      .ticket-item__name .more:hover {
-        border-bottom: 1px dotted transparent; }
-  .ticket-item__descr {
-    font-size: 14px;
-    margin-bottom: 16px; }
+.ticket-item__route {
+  line-height: 1;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px; }
+.ticket-item__name {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: flex-end; }
+  .ticket-item__name .more {
+    display: none;
+    font-weight: 300;
+    margin-left: 14px;
+    font-size: 12px;
+    line-height: 1.1;
+    border-bottom: 1px dotted #000; }
+    .ticket-item__name .more:hover {
+      border-bottom: 1px dotted transparent; }
+.ticket-item__descr {
+  font-size: 14px;
+  margin-bottom: 16px; }
 .ticket-data {
   display: flex;
   align-items: center;
@@ -4261,14 +4262,22 @@ a.ui-button:active,
   font-weight: 600; }
 
 .ticket-notfound {
-  text-align: left;
   padding: 20px 0; }
   .ticket-notfound-message {
+    font-size: 18px;
+    font-weight: 600;
     padding: 20px 0; }
   .ticket-notfound h6 {
     margin: 0; }
   .ticket-notfound .select2-container--default .select2-selection--single {
     border: 1px solid #ddd; }
+  .ticket-notfound .btn-lg {
+    padding: 10px 20px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .ticket-notfound .text-danger {
+    font-size: 26px; }
 
 .rout-table {
   font-size: 12px;
