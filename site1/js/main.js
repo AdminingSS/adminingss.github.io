@@ -289,10 +289,11 @@ $(document).ready(function () {
             });
         })();
 
+        $(".date-of-birth-input").dateDropdowns();
         (function () {
-            var $datePickerSelect = $('.date-picker select');
+            var $orderSelect1 = $('.date-dropdowns select');
 
-            $datePickerSelect.select2({
+            $orderSelect1.select2({
                 width: '100%'
             });
         })();
