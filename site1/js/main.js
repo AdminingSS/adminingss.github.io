@@ -289,7 +289,7 @@ $(document).ready(function () {
             });
         })();
 
-        $(".date-of-birth-input").dateDropdowns();
+        $(".date-of-birth-input").dateDropdowns({submitFormat: "dd.mm.yyyy"});
         (function () {
             var $orderSelect1 = $('.date-dropdowns select');
 
