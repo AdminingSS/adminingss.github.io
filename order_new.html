@@ -428,6 +428,32 @@
                                     </div>
                                 </div>
 
+                                <div class="order-passengers" v-if="details">
+                                    <div class="order-passenger">
+                                        <div class="order-passenger-info">
+                                            <div class="container-fluid">
+                                                <div>
+                                                    <label class="checkbox mb-0">
+                                                        <input type="checkbox" class="form-check-inline" v-model="details" />
+                                                        <span></span>
+                                                        I will provide passenger details later
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-passengers" v-if="details">
+                                    <div class="order-passenger">
+                                        <div class="order-passenger-info">
+                                            <div class="container-fluid">
+                                                <div>If it is less than 89 days prior to your departure we will ask you to fill out the travel card within the following 48 hours. Ticket availability and price are subject to change.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div id="order-passengers-accordion" class="order-passengers" v-if="!details">
 
                                     <!--Order passenger-->
