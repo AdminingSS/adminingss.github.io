@@ -289,7 +289,13 @@ $(document).ready(function () {
             });
         })();
 
-        $(".date-of-birth-input").dateDropdowns({submitFormat: "dd.mm.yyyy"});
+       $(".date-of-birth-input").dateDropdowns( {
+            submitFormat: "dd.mm.yyyy",
+            displayFormat: "dd.mm.yyyy",
+            defaultDateFormat: 'unix',
+            required: true,
+            maxAge: 120
+        });
         (function () {
             var $orderSelect1 = $('.date-dropdowns select');
 
