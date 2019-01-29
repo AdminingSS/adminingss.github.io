@@ -290,7 +290,7 @@ $(document).ready(function () {
         })();
 
        $(".date-of-birth-input").dateDropdowns( {
-            submitFormat: "dd.mm.yyyy",
+            submitFormat: "unix",
             displayFormat: "dd.mm.yyyy",
             defaultDateFormat: 'unix',
             required: true,
