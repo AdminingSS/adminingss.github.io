@@ -289,13 +289,6 @@ $(document).ready(function () {
             });
         })();
 
-       $(".date-of-birth-input").dateDropdowns( {
-            submitFormat: "unix",
-            displayFormat: "dd.mm.yyyy",
-            defaultDateFormat: 'unix',
-            required: true,
-            maxAge: 120
-        });
         (function () {
             var $orderSelect1 = $('.date-dropdowns select');
 
@@ -312,6 +305,20 @@ $(document).ready(function () {
                 width: '100%'
             });
         })();
+    })();
+
+
+    // dropdown
+    (function () {
+        var $dateOfBirth = $(".date-of-birth-input");
+
+        $dateOfBirth.dateDropdowns( {
+            submitFormat: "unix",
+            displayFormat: "dd.mm.yyyy",
+            defaultDateFormat: 'unix',
+            required: true,
+            maxAge: 120
+        });
     })();
 
 
