@@ -300,7 +300,7 @@ $(document).ready(function () {
             var $orderSelect1 = $('.date-dropdowns select');
 
             $orderSelect1.select2({
-                width: '100%'
+
             });
         })();
 

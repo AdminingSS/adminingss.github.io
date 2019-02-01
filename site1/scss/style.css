@@ -726,7 +726,7 @@ a.ui-button:active,
 .showcase {
   position: relative;
   padding: 20px 0;
-  background: url(../images/showcase-bg.jpg) no-repeat 50% 25%;
+  background: url(../images/showcase-bg.jpg) no-repeat 50% 20%;
   background-size: cover;
   /* &::before {
      content: '';
@@ -2611,6 +2611,11 @@ a.ui-button:active,
       display: none; }
   .order-input .vue-treeselect--open .vue-treeselect__control-arrow-container {
     transform: rotate(180deg); }
+  .order-input .date-dropdowns {
+    display: flex;
+    justify-content: space-between; }
+    .order-input .date-dropdowns select, .order-input .date-dropdowns .select2-container {
+      width: 30% !important; }
 
 .order-services {
   padding: 20px 0; }
@@ -4012,14 +4017,14 @@ a.ui-button:active,
     height: 2px;
     margin-left: 10%;
     width: 80%;
-    border-top: 1px solid #777;
-    border-bottom: 1px solid #777; }
+    height: 2px;
+    background-color: #777; }
   .ticket-item .duration-bar:before {
     position: absolute;
     content: '';
     display: block;
     left: -10px;
-    bottom: -5px;
+    bottom: -4px;
     width: 10px;
     height: 10px;
     background: #fff;
@@ -4030,7 +4035,7 @@ a.ui-button:active,
     content: '';
     display: block;
     right: -10px;
-    bottom: -5px;
+    bottom: -4px;
     width: 10px;
     height: 10px;
     background: #fff;
@@ -4183,6 +4188,8 @@ a.ui-button:active,
         right: 0;
         bottom: 0;
         height: 40px; }
+  .ticket-filter-param .chal {
+    margin-bottom: 10px; }
 .ticket-filter-apply {
   margin-top: 20px;
   display: none; }
@@ -12610,7 +12617,7 @@ article .block-title {
       font-weight: 600;
       color: #495057; }
   .tm-modal .tab-pane {
-    max-height: 400px;
+    max-height: 500px;
     overflow-y: auto; }
     .tm-modal .tab-pane a {
       font-weight: 600;

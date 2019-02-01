@@ -189,6 +189,15 @@
   .vue-treeselect--open .vue-treeselect__control-arrow-container {
     transform: rotate(180deg);
   }
+
+  .date-dropdowns {
+    display: flex;
+    justify-content: space-between;
+
+    select, .select2-container {
+      width: 30% !important;
+    }
+  }
 }
 
 // Order services

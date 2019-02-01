@@ -324,8 +324,8 @@
       height: 2px;
       margin-left: 10%;
       width: 80%;
-      border-top: 1px solid #777;
-      border-bottom: 1px solid #777;
+      height: 2px;
+      background-color: #777;
     }
 
     .duration-bar:before {
@@ -333,7 +333,7 @@
       content: '';
       display: block;
       left: -10px;
-      bottom: -5px;
+      bottom: -4px;
       width: 10px;
       height: 10px;
       background: #fff;
@@ -346,7 +346,7 @@
       content: '';
       display: block;
       right: -10px;
-      bottom: -5px;
+      bottom: -4px;
       width: 10px;
       height: 10px;
       background: #fff;
@@ -590,6 +590,10 @@
           height: 40px;
         }
       }
+    }
+
+    .chal {
+      margin-bottom: 10px;
     }
   }
 
