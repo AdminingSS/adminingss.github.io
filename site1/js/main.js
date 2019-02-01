@@ -289,13 +289,7 @@ $(document).ready(function () {
             });
         })();
 
-        (function () {
-            var $orderSelect1 = $('.date-dropdowns select');
-
-            $orderSelect1.select2({
-
-            });
-        })();
+      
 
         (function () {
             var $ticketNotfound = $('.ticket-notfound select');
@@ -321,6 +315,11 @@ $(document).ready(function () {
             required: true,
             maxAge: 120
         });
+            var $orderSelect1 = $('.date-of-birth select');
+
+            $orderSelect1.select2({
+
+            });
     })();
 
 
