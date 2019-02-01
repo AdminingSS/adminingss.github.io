@@ -310,6 +310,8 @@ $(document).ready(function () {
 
     // dropdown
     (function () {
+        if (!$.fn.dateDropdowns) return;
+
         var $dateOfBirth = $(".date-of-birth-input");
 
         $dateOfBirth.dateDropdowns( {
@@ -507,12 +509,12 @@ $(document).ready(function () {
         $(this).hide();
     });
 
-   /* $('.order-passenger').click(function () {
-        if (!$(this).hasClass('active')) {
-            $('.order-passenger').removeClass('active');
-            $(this).addClass('active');
-        }
-    });*/
+    /* $('.order-passenger').click(function () {
+         if (!$(this).hasClass('active')) {
+             $('.order-passenger').removeClass('active');
+             $(this).addClass('active');
+         }
+     });*/
 
     $('.search-history-show').click(function () {
         $('.search-history-container').addClass('invisible');
