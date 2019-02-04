@@ -304,22 +304,15 @@ $(document).ready(function () {
 
     // dropdown
     (function () {
-        if (!$.fn.dateDropdowns) return;
 
-        var $dateOfBirth = $(".date-of-birth-input");
 
-        $dateOfBirth.dateDropdowns( {
-            submitFormat: "unix",
-            displayFormat: "dd.mm.yyyy",
-            defaultDateFormat: 'unix',
-            required: true,
-            maxAge: 120
+        var $dateOfBirth = $(".date-of-birth-input").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd.mm.yy"
         });
-            var $orderSelect1 = $('.date-of-birth select');
 
-            $orderSelect1.select2({
 
-            });
     })();
 
 
