@@ -304,7 +304,7 @@ $(document).ready(function () {
 
     // dropdown
     (function () {
-
+if (!$.fn.datepicker) return;
 
         var $dateOfBirth = $(".date-of-birth-input").datepicker({
             changeMonth: true,
