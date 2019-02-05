@@ -670,11 +670,18 @@
   }
 
   &-order {
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: right;
 
     .seats-total-price .price {
       font-weight: 600;
+    }
+
+    .seats-btn {
+
+      button {
+        margin: 10px 0;
+      }
     }
   }
 }
@@ -683,6 +690,7 @@
   font-style: italic;
   font-weight: 600;
 }
+
 
 
 //Ticket not found part
@@ -792,6 +800,10 @@
 
   .train-type-price {
     text-align: left;
+  }
+
+  .train-order .seats-btn {
+    text-align: center;
   }
 }
 

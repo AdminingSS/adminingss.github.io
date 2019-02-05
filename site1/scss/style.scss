@@ -4,9 +4,6 @@ $blue: #00c5c5;
 $gray: #555;
 $graybrown: #444;
 
-/*
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic');
-*/
 
 button,
 input[type="submit"] {
@@ -29,7 +26,7 @@ body {
 }
 
 a {
-  display: inline-block;
+ /* display: inline-block;*/
   transition: 200ms;
   color: $gray;
 
@@ -4230,10 +4227,6 @@ a.ui-button:active,
   font-size: 14px;
 }
 
-.seats-btn {
-  flex-grow: 10;
-  text-align: right;
-}
 
 .seats-btn .link {
   text-transform: none;
@@ -4265,13 +4258,9 @@ a.ui-button:active,
     text-align: center;
     padding-right: 0;
   }
-  .seats-btn {
-    text-align: center;
-  }
 
-  .seats-btn .link {
-    margin: 5px;
-  }
+
+
   .train-nav {
     padding-right: 0;
     justify-content: space-between;

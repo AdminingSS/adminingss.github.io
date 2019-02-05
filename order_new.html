@@ -373,7 +373,39 @@
                                             <div class="order-passenger-info">
                                                 <div class="container-fluid">
                                                     <div class="order-passenger-inputs mb-4">
-                                                        <div class="row">
+                                                        <div class="row align-items-end">
+                                                            <div class="col-sm-8 col-lg-8 mb-4">
+                                                                <label class="order-input">
+                                                                    <span>Select a passenger</span>
+                                                                    <input type="hidden" id="u_0" @input="setData" />
+                                                                    <select onchange="setPassenger($(this).val(), 0)" id="sp_0" class="order-select select2-hidden-accessible" autocomplete="off">
+                                                                        <option value="">----</option>
+                                                                        <option value="0">
+                                                                            пппппппппп ппппппппппп ппппппппп 14.12.1965 Andorra 453453535
+                                                                        </option>
+                                                                        <option value="1">
+                                                                            ffffffff fffffffffff ccccc 01.01.1974 United Arab Emirates 4555555554
+                                                                        </option>
+                                                                        <option value="2">
+                                                                            ddddddddddd ffffffffffs fsedssdfs 08.09.1963 United Arab Emirates 4545345353
+                                                                        </option>
+                                                                        <option value="3">
+                                                                            gup gop smip 12.10.1963 Nepal 123456
+                                                                        </option>
+                                                                        <option value="4">
+                                                                            ret rwt rui 06.08.1994 Argentina 4567890
+                                                                        </option>
+                                                                        <option value="5">
+                                                                            шшш шшш шшш 02.03.1994 Angola шшш
+                                                                        </option>
+                                                                    </select>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="col-sm-4 col-lg-4 mb-4">
+                                                                <button type="button" class="btn tm-btn-red">Clear</button>
+                                                            </div>
+
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>First name</span>

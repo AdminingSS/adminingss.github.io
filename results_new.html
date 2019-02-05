@@ -844,18 +844,26 @@
                                         <div class="train-order">
                                             <div class="container-fluid">
                                                 <div class="row align-items-center">
-                                                    <div class="col-sm">
+                                                    <div class="col-md">
                                                         <div class="seats-total-price">
                                                             Total: <span class="all price">3825</span>
                                                             <span class="currency">RUB</span>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-sm">
-                                                        <button type="button" class="btn tm-btn-red"
-                                                                onclick="if(check_selected_seats(0)) {$('#do_order').find('[name=direction]').val(0);$('#do_order').submit();}">
-                                                            Order
-                                                        </button>
+                                                    <div class="col-md">
+
+
+                                                        <div class="seats-btn">
+                                                            <button type="button" class="btn btn-secondary" onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(-1);$('#do_order').submit();}"><i class="fa fa-angle-double-left"></i>Previous trip</button>
+                                                            <button type="button" class="btn tm-btn-red" onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(1);$('#do_order').submit();}">Next trip<i class="fa fa-angle-double-right"></i></button>
+
+                                                            <!--<button type="button" class="btn tm-btn-red"
+                                                                    onclick="if(check_selected_seats(0)) {$('#do_order').find('[name=direction]').val(0);$('#do_order').submit();}">
+                                                                Order
+                                                            </button>-->
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
