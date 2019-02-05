@@ -309,7 +309,11 @@ $(document).ready(function () {
         var $dateOfBirth = $(".date-of-birth-input").datepicker({
             changeMonth: true,
             changeYear: true,
-            dateFormat: "dd.mm.yy"
+            dateFormat: "dd.mm.yy",
+            firstDay: 1,
+            maxDate: "+0d",
+            minDate: new Date(1920, 0, 1),
+            yearRange: "1920:c"
         });
 
 

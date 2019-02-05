@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic");
+/*
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic');
+*/
 button,
 input[type="submit"] {
   appearance: none;
@@ -4494,10 +4496,7 @@ a.ui-button:active,
   font: 300 14px 'Montserrat'; }
 
 .text-field {
-  width: 100%;
-  max-width: 320px;
-  position: relative;
-  margin-bottom: 10px; }
+  position: relative; }
 
 .text-field,
 .field {
@@ -12672,5 +12671,56 @@ article .block-title {
   .tm-modal .tab-pane {
     max-height: 100%;
     overflow-y: visible; } }
+.sort {
+  font-size: 14px; }
+  .sort-item {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-right: 20px;
+    line-height: 20px; }
+    .sort-item:hover {
+      color: #c70000; }
+    .sort-item.desc, .sort-item.asc {
+      color: #c70000; }
+      .sort-item.desc::after, .sort-item.asc::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        display: inline-block;
+        line-height: normal;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px; }
+    .sort-item.asc::after {
+      content: "\f077"; }
+    .sort-item.desc::after {
+      content: "\f078"; }
+
+.personal-area h2 {
+  text-align: left;
+  margin-bottom: 0; }
+.personal-area-menu {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #eee; }
+  .personal-area-menu .nav-link.active, .personal-area-menu .nav-link:hover {
+    color: #fff;
+    background-color: #e40000; }
+.personal-area-info .number {
+  font-weight: 600; }
+.personal-area-info .status-canceled {
+  color: #e40000; }
+.personal-area-info .status-clearing {
+  color: #ff9900; }
+.personal-area-table thead th {
+  background-color: #eee;
+  border-color: #eee; }
+.personal-area-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.03); }
+.personal-area .currency {
+  font-style: normal;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */

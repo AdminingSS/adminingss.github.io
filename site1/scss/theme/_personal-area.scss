@@ -1,0 +1,94 @@
+.sort {
+  font-size: 14px;
+
+  &-item {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-right: 20px;
+    line-height: 20px;
+
+    &:hover {
+      color: #c70000;
+    }
+
+    &.desc,
+    &.asc {
+      color: #c70000;
+
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        display: inline-block;
+        line-height: normal;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+      }
+    }
+
+    &.asc::after {
+      content: "\f077";
+    }
+
+    &.desc::after {
+      content: "\f078";
+    }
+  }
+}
+
+.personal-area {
+
+  h2 {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  &-menu {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #eee;
+
+    .nav-link {
+
+      &.active, &:hover {
+        color: #fff;
+        background-color: #e40000;
+      }
+    }
+  }
+
+  &-info {
+
+    .number {
+      font-weight: 600;
+    }
+
+    .status-canceled {
+      color: #e40000;
+    }
+    .status-clearing {
+      color: #ff9900;
+    }
+  }
+
+  &-table {
+
+    thead th {
+      background-color: #eee;
+      border-color: #eee;
+    }
+
+    tbody tr:hover {
+      background-color: rgba(0,0,0,.03);
+    }
+  }
+
+  .currency {
+    font-style: normal;
+    text-transform: uppercase;
+  }
+
+}
