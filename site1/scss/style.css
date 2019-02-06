@@ -4219,7 +4219,6 @@ a.ui-button:active,
     display: block; }
 
   .ticket-filter {
-    display: none;
     position: fixed;
     z-index: 1050;
     top: 0;
@@ -4229,6 +4228,8 @@ a.ui-button:active,
     overflow-y: auto;
     padding: 50px 20px 20px;
     background-color: #fff; }
+    .ticket-filter:not(.show) {
+      display: none; }
     .ticket-filter-close {
       display: block;
       position: absolute;
