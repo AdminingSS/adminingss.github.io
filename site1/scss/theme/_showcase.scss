@@ -4,16 +4,6 @@
   background: url(../images/showcase-bg.jpg) no-repeat 50% 20%;
   background-size: cover;
 
-  /* &::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     background-color: rgba(0, 0, 0, 0.1);
-   }*/
-
   &__head {
     color: #fefefe;
     font-size: 55px;
@@ -291,7 +281,6 @@
   }
 
   &-collapse-wrap {
-    display: block;
 
     &:not(.show) {
       display: block;
@@ -306,8 +295,6 @@
     }
   }
 }
-
-
 
 .multi-trip-active {
 
@@ -564,7 +551,7 @@
     }
 
     &-collapse-wrap  {
-      display: none;
+
 
       &:not(.show) {
         display: none;

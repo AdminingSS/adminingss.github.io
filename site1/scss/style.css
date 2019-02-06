@@ -726,16 +726,7 @@ a.ui-button:active,
   position: relative;
   padding: 20px 0;
   background: url(../images/showcase-bg.jpg) no-repeat 50% 20%;
-  background-size: cover;
-  /* &::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     background-color: rgba(0, 0, 0, 0.1);
-   }*/ }
+  background-size: cover; }
   .showcase__head {
     color: #fefefe;
     font-size: 55px;
@@ -933,10 +924,8 @@ a.ui-button:active,
     border-left: 1px solid #ccc; }
   .showcase .bootstrap-datetimepicker-widget li.picker-switch {
     display: none; }
-  .showcase-collapse-wrap {
+  .showcase-collapse-wrap:not(.show) {
     display: block; }
-    .showcase-collapse-wrap:not(.show) {
-      display: block; }
   .showcase .showcase-quantity select {
     height: 48px;
     border: none; }
@@ -1091,12 +1080,10 @@ a.ui-button:active,
     flex-wrap: wrap; }
   .showcase .add-trip, .showcase .remove-trip, .showcase .link {
     width: 50%; }
-  .showcase-collapse-wrap {
+  .showcase-collapse-wrap:not(.show) {
     display: none; }
-    .showcase-collapse-wrap:not(.show) {
-      display: none; }
-    .showcase-collapse-wrap.collapsing {
-      display: block; }
+  .showcase-collapse-wrap.collapsing {
+    display: block; }
   .showcase .showcase-item,
   .showcase .showcase-quantity {
     width: 50%; } }
