@@ -1,0 +1,47 @@
+
+
+// Styles for inner pages
+
+.content-page {
+  line-height: 1.5;
+
+  a:not(.btn) {
+    color: #e40000;
+
+    &:hover, &:focus {
+      color: darken(#e40000, 10%);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+
+    a:not(.btn) {
+      color: #555;
+
+      &:hover, &:focus {
+        color: #999;
+      }
+    }
+  }
+
+  .card {
+    height: 100%;
+  }
+
+}
+
+.image-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+
+  img {
+    width: 100%;
+    transition: all 0.3s linear;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+
+}

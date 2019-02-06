@@ -2686,7 +2686,7 @@ a.ui-button:active,
 
 // Content page
 
-.content-page {
+/*.content-page {
   padding-top: 58px;
   > h2 {
     font-size: 30px;
@@ -2747,7 +2747,7 @@ a.ui-button:active,
       padding: 0 24px;
     }
   }
-}
+}*/
 
 // Content gallery
 
@@ -4277,15 +4277,6 @@ a.ui-button:active,
 }
 
 /* Login, register */
-
-.card {
-  margin: 50px 0;
-}
-
-.card .link {
-  font: 800 17px/41px 'Montserrat';
-  border-radius: 5px;
-}
 
 .auth {
   width: 320px;
@@ -13870,5 +13861,7 @@ article .block-title {
     overflow-y: visible;
   }
 }
+
+@import "theme/base";
 
 @import "theme/personal-area";

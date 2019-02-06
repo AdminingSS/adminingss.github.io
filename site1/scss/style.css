@@ -2290,55 +2290,68 @@ a.ui-button:active,
 
   .destinations-item {
     margin-bottom: 24px !important; } }
-.content-page {
-  padding-top: 58px; }
-  .content-page > h2 {
+/*.content-page {
+  padding-top: 58px;
+  > h2 {
     font-size: 30px;
     line-height: 1;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 4px; }
-  .content-page h3 {
+    margin-bottom: 4px;
+  }
+  h3 {
     font-size: 24px;
     line-height: 1;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 6px; }
-  .content-page h4 {
+    margin-bottom: 6px;
+  }
+  h4 {
     font-size: 20px;
     line-height: 1;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 22px; }
-  .content-page h5 {
+    margin-bottom: 22px;
+  }
+  h5 {
     font-size: 17px;
     line-height: 1;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 6px; }
-  .content-page h6 {
+    margin-bottom: 6px;
+  }
+  h6 {
     font-size: 17px;
     line-height: 1;
     font-weight: 300;
     text-transform: uppercase;
-    margin-bottom: 6px; }
-  .content-page a:hover {
-    color: #fff;
-    transform: scale(1.1); }
-  .content-page p {
+    margin-bottom: 6px;
+  }
+  a {
+    &:hover {
+      color: #fff;
+      transform: scale(1.1);
+    }
+  }
+  p {
     line-height: 1.2;
-    margin-bottom: 18px; }
-  .content-page-items {
+    margin-bottom: 18px;
+  }
+  &-items {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px; }
-  .content-page-item {
-    width: 49.2%; }
-    .content-page-item p {
-      margin-bottom: 24px; }
-    .content-page-item .link {
-      padding: 0 24px; }
-
+    margin-bottom: 10px;
+  }
+  &-item {
+    width: 49.2%;
+    p {
+      margin-bottom: 24px;
+    }
+    .link {
+      padding: 0 24px;
+    }
+  }
+}*/
 .content-gallery {
   position: relative;
   padding-bottom: 90px; }
@@ -4413,13 +4426,6 @@ a.ui-button:active,
   .train-type {
     padding: 10px; } }
 /* Login, register */
-.card {
-  margin: 50px 0; }
-
-.card .link {
-  font: 800 17px/41px 'Montserrat';
-  border-radius: 5px; }
-
 .auth {
   width: 320px;
   margin: 50px auto;
@@ -12601,6 +12607,29 @@ article .block-title {
   .tm-modal .tab-pane {
     max-height: 100%;
     overflow-y: visible; } }
+.content-page {
+  line-height: 1.5; }
+  .content-page a:not(.btn) {
+    color: #e40000; }
+    .content-page a:not(.btn):hover, .content-page a:not(.btn):focus {
+      color: #b10000; }
+  .content-page h1 a:not(.btn), .content-page h2 a:not(.btn), .content-page h3 a:not(.btn), .content-page h4 a:not(.btn), .content-page h5 a:not(.btn), .content-page h6 a:not(.btn) {
+    color: #555; }
+    .content-page h1 a:not(.btn):hover, .content-page h1 a:not(.btn):focus, .content-page h2 a:not(.btn):hover, .content-page h2 a:not(.btn):focus, .content-page h3 a:not(.btn):hover, .content-page h3 a:not(.btn):focus, .content-page h4 a:not(.btn):hover, .content-page h4 a:not(.btn):focus, .content-page h5 a:not(.btn):hover, .content-page h5 a:not(.btn):focus, .content-page h6 a:not(.btn):hover, .content-page h6 a:not(.btn):focus {
+      color: #999; }
+  .content-page .card {
+    height: 100%; }
+
+.image-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none; }
+  .image-link img {
+    width: 100%;
+    transition: all 0.3s linear; }
+  .image-link:hover img {
+    transform: scale(1.1); }
+
 .alert > :last-child {
   margin-bottom: 0; }
 
