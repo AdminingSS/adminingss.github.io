@@ -12600,6 +12600,12 @@ article .block-title {
   .tm-modal .tab-pane {
     max-height: 100%;
     overflow-y: visible; } }
+.alert > :last-child {
+  margin-bottom: 0; }
+
+.alert-nav .nav-link {
+  padding: 10px 0; }
+
 .sort {
   font-size: 14px; }
   .sort-item {
