@@ -1,0 +1,121 @@
+.content-page {
+  line-height: 1.5;
+
+  a:not(.btn) {
+    color: #e40000;
+
+    &:hover, &:focus {
+      color: darken(#e40000, 10%);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+
+    a:not(.btn) {
+      color: #555;
+
+      &:hover, &:focus {
+        color: #999;
+      }
+    }
+  }
+
+}
+
+.tm-destinations {
+  &-distance {
+    position: relative;
+    border-bottom: 3px solid #777;
+    padding: 5px 0;
+    text-align: center;
+
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      bottom: -10px;
+      content: url("../images/pin.svg");
+      width: auto;
+    }
+
+    &:before {
+      left: -10px;
+    }
+
+    &:after {
+      right: -10px;
+    }
+  }
+
+  &-station {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &-departure{
+
+    h5, h6 {
+      text-transform: none;
+      font-size: 18px;
+    }
+
+    h5 {
+      margin-bottom: 20px;
+    }
+
+    h6 {
+      font-weight: 500;
+    }
+
+    &-station {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+
+      &:before {
+        position: absolute;
+        display: block;
+        top: -5px;
+        left: 0;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: '\f3c5';
+      }
+    }
+  }
+
+  &-trains {
+
+
+
+  }
+}
+
+.tm-italic {
+  font-style: italic;
+}
+
+.tm-table {
+  border: 1px solid #eee;
+
+  .tm-th {
+    background-color: #eee;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  >.row {
+
+    >div {
+      border: 1px solid #eee;
+      padding: 5px;
+
+      &:not(:first-child) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+}
