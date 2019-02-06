@@ -2537,6 +2537,10 @@ a.ui-button:active,
       color: #999; }
   .order-trip-header .order-to {
     text-align: right; }
+  .order-trip-header .row-divider > [class*='col'] + [class*='col'] {
+    border-color: #ddd; }
+  .order-trip-header .amount {
+    font-weight: 700; }
 .order-trip-description span {
   font-weight: 600; }
 
@@ -2813,27 +2817,6 @@ a.ui-button:active,
   -ms-align-items: center;
   align-items: center;
   justify-content: center; }
-
-.order-header-info {
-  padding: 0 20px;
-  border-left: 1px solid #dedede;
-  min-width: 40%; }
-
-.order-header-info .amount {
-  font-weight: bold;
-  margin-bottom: 10px; }
-
-.order-travelers {
-  overflow-y: auto; }
-
-.order-prefence {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.order-prefence .seat-preference {
-  font-weight: bold;
-  color: grey; }
 
 .order-total-item {
   padding: 30px 0;
@@ -12674,5 +12657,7 @@ article .block-title {
 .personal-area .currency {
   font-style: normal;
   text-transform: uppercase; }
+.personal-area .order-info-item .info {
+  margin-bottom: 8px; }
 
 /*# sourceMappingURL=style.css.map */
