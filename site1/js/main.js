@@ -1,3 +1,23 @@
+//helper
+function initer(fn, n) {
+    var count = n || 5;
+    var result = false;
+    var timer = 1000;
+
+    function run(firstTime) {
+        setTimeout(function () {
+            result = fn();
+            count--;
+
+            if (result || count === 0) return;
+
+            run();
+        }, firstTime ? 0 :timer);
+    }
+
+    run(true);
+}
+
 $(document).ready(function () {
 
     // Burger
@@ -291,15 +311,18 @@ $(document).ready(function () {
 
       
 
-        (function () {
+        initer(function () {
             var $ticketNotfound = $('.ticket-notfound select');
 
             $ticketNotfound.select2({
                 dropdownAutoWidth: true,
                 width: '100%'
             });
-        })();
+
+            if ($ticketNotfound.length) return true;
+        });
     })();
+
 
 
     // dropdown
