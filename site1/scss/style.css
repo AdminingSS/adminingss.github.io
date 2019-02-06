@@ -80,7 +80,10 @@ h1, h2, .head {
 
   .head {
     line-height: 1.2;
-    padding: 0 10px; } }
+    padding: 0 10px; }
+
+  h1, h2, .head {
+    font-size: 20px; } }
 .form-control {
   border-radius: 0; }
 
@@ -2570,7 +2573,8 @@ a.ui-button:active,
   cursor: pointer;
   padding-right: 20px; }
   .order-passenger-top h6 {
-    display: inline-block;
+    display: inline;
+    line-height: 1.5;
     border-bottom: 1px dashed transparent; }
   .order-passenger-top::after {
     content: "\f106";
