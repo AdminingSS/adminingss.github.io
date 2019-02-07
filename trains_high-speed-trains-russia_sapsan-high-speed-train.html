@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RUStrains</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="4iffRkuOQ8hhT2tj8XptOE5mHIKL5SzJ1z1Rcrtx">
+
+    <link rel="stylesheet" href="site1/css/slick.css">
+    <link rel="stylesheet" href="site1/css/slick-theme.css">
+    <link rel="stylesheet" href="site1/css/fonts.css">
+    <link rel="stylesheet" href="site1/css/fontawesome-all.css">
+    <link rel="stylesheet" href="site1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site1/css/swiper.min.css">
+    <link rel="stylesheet" href="site1/css/select2.min.css">
+    <link rel="stylesheet" href="site1/scss/style.css">
+
+</head>
+
+<body>
+<div>
+
+    <!--Header-->
+    <header class="header navbar navbar-expand-xl navbar-light bg-light">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="site1/images/logo.png" alt="">
+            </a>
+
+            <!-- Lang menu -->
+            <ul class="menu-lang navbar-nav text-uppercase order-xl-1">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span
+                            class="flag-icon flag-icon-gb"></span> en</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com"><span
+                                class="flag-icon flag-icon-gb"></span> en</a>
+                        <a class="dropdown-item" href="http://de.rustrains.com"><span
+                                class="flag-icon flag-icon-de"></span> de</a>
+                        <a class="dropdown-item" href="http://pl.rustrains.com"><span
+                                class="flag-icon flag-icon-pl"></span> pl</a>
+                        <a class="dropdown-item" href="http://cn.rustrains.com"><span
+                                class="flag-icon flag-icon-cn"></span> zh</a>
+                        <a class="dropdown-item" href="http://jp.rustrains.com"><span
+                                class="flag-icon flag-icon-jp"></span> ja</a>
+                        <a class="dropdown-item" href="http://tr.rustrains.com"><span
+                                class="flag-icon flag-icon-tr"></span> tr</a>
+                        <a class="dropdown-item" href="http://ko.rustrains.com"><span
+                                class="flag-icon flag-icon-kr"></span> ko</a>
+                        <a class="dropdown-item" href="http://fi.rustrains.com"><span
+                                class="flag-icon flag-icon-fi"></span> fi</a>
+                        <a class="dropdown-item" href="http://se.rustrains.com"><span
+                                class="flag-icon flag-icon-se"></span> se</a>
+                        <a class="dropdown-item" href="http://es.rustrains.com"><span
+                                class="flag-icon flag-icon-es"></span> es</a>
+                        <a class="dropdown-item" href="http://pt.rustrains.com"><span
+                                class="flag-icon flag-icon-pt"></span> pt</a>
+                        <a class="dropdown-item" href="http://it.rustrains.com"><span
+                                class="flag-icon flag-icon-it"></span> it</a>
+                        <a class="dropdown-item" href="http://fr.rustrains.com"><span
+                                class="flag-icon flag-icon-fr"></span> fr</a>
+                        <a class="dropdown-item" href="http://ru.rustrains.com"><span
+                                class="flag-icon flag-icon-ru"></span> ru</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
+                        <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
+                    aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
+                <!-- My cabinet (for logged in) with dropdown -->
+                <!--<div class="menu-user dropdown mr-xl-3">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign In
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://rustrains.com/login">Login</a>
+                        <a class="dropdown-item" href="http://rustrains.com/register">Register</a>
+                    </div>
+                </div>-->
+
+                <!-- Log-in with modal -->
+                <div class="menu-user mr-xl-3">
+                    <a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#authModal">
+                        Sign In
+                    </a>
+                </div>
+
+                <!-- Menu -->
+                <ul class="menu-main navbar-nav mr-xl-2">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Popular Trains</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Routes and Planning</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Customer Support</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--Sub menu (mobile switcher)-->
+    <div class="sub-nav-wrap">
+        <div class="container">
+            <ul class="sub-menu nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#showcaseCollapseWrap" data-toggle="collapse" role="button">Search <i
+                            class="fas fa-search"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Showcase wrap (need for page with mobile switcher)-->
+    <div id="showcaseCollapseWrap" class="showcase-collapse-wrap collapse">
+        <!-- Showcase -->
+        <div class="showcase section" id="app">
+            <div class="container d-flex justify-content-center">
+
+                <form method="GET" action="http://rustrains.com/rzd" accept-charset="UTF-8"
+                      onsubmit="$('#common_preloader').show();" class="showcase-form">
+                    <div class="one-trip-active">
+                        <div class="showcase-checks">
+                            <div class="showcase-check active"><input id="radioOneTrip" type="radio" value="0"
+                                                                      name="trip"> <label for="radioOneTrip">One-Way
+                                Trip</label></div>
+                            <div class="showcase-check"><input id="radioReturnTrip" type="radio" value="1" name="trip">
+                                <label for="radioReturnTrip">Return Trip</label></div>
+                            <div class="showcase-check"><input id="radioMultiTrip" type="radio" value="2" name="trip">
+                                <label for="radioMultiTrip">Multi-Leg Trip</label></div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-items">
+                                <div class="showcase-item">
+                                    <div class="label">departure city</div>
+                                    <input type="hidden" name="from" required="required">
+                                    <div data-v-0a1d7fe4="" class="container">
+                                        <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                       placeholder="From where?" required="required"
+                                                                       autocomplete="off" class="menu__link--toggle">
+                                            <!----></div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary change-item"><i
+                                            class="fas fa-exchange-alt"></i></button>
+                                </div>
+                                <div class="showcase-item">
+                                    <div class="label">arrival city</div>
+                                    <input type="hidden" name="to" required="required">
+                                    <div data-v-0a1d7fe4="" class="container">
+                                        <div data-v-0a1d7fe4=""><input data-v-0a1d7fe4="" type="text"
+                                                                       placeholder="To where?" required="required"
+                                                                       autocomplete="off" class="menu__link--toggle">
+                                            <!----></div>
+                                    </div>
+                                </div>
+                                <label class="showcase-item  showcase-date">
+                                    <div class="label">date</div>
+                                    <input type="text" class="form-control" required="required" name="date_from"
+                                           readonly="readonly" autocomplete="off" placeholder="" value=""></label>
+                                <!----></div> <!---->
+                            <div class="showcase-buttons">
+                                <div class="showcase-item showcase-quantity ticket-toggle">
+                                    <div class="label">Passengers</div>
+                                    <select name="amount" autocomplete="off">
+                                        <option value="1">1 passenger</option>
+                                        <option value="2">2 passengers</option>
+                                        <option value="3">3 passengers</option>
+                                        <option value="4">4 passengers</option>
+                                        <option value="5">5 passengers</option>
+                                        <option value="6">6 passengers</option>
+                                        <option value="7">7 passengers</option>
+                                        <option value="8">8 passengers</option>
+                                        <option value="9">9 passengers</option>
+                                        <option value="10">10 passengers</option>
+                                        <option value="11">11 passengers</option>
+                                        <option value="12">12 passengers</option>
+                                        <option value="13">13 passengers</option>
+                                        <option value="14">14 passengers</option>
+                                        <option value="15">15 passengers</option>
+                                        <option value="16">16 passengers</option>
+                                        <option value="17">17 passengers</option>
+                                        <option value="18">18 passengers</option>
+                                        <option value="19">19 passengers</option>
+                                        <option value="20">20 passengers</option>
+                                        <option value="21">21 passengers</option>
+                                        <option value="22">22 passengers</option>
+                                        <option value="23">23 passengers</option>
+                                        <option value="24">24 passengers</option>
+                                        <option value="25">25 passengers</option>
+                                        <option value="26">26 passengers</option>
+                                        <option value="27">27 passengers</option>
+                                        <option value="28">28 passengers</option>
+                                        <option value="29">29 passengers</option>
+                                        <option value="30">30 passengers</option>
+                                        <option value="31">31 passengers</option>
+                                        <option value="32">32 passengers</option>
+                                        <option value="33">33 passengers</option>
+                                        <option value="34">34 passengers</option>
+                                        <option value="35">35 passengers</option>
+                                        <option value="36">36 passengers</option>
+                                        <option value="37">37 passengers</option>
+                                        <option value="38">38 passengers</option>
+                                        <option value="39">39 passengers</option>
+                                        <option value="40">40 passengers</option>
+                                    </select></div> <!----> <!---->
+                                <button type="submit" class="link">Search</button>
+                            </div>
+                        </div>
+                        <div class="search-history">
+                            <div class="search-history-container">
+                                <div class="search-history-header">
+                                    <div class="search-history-title">Moscow - Saint-Petersburg</div>
+                                    <div class="search-history-date">18.01.2019</div>
+                                </div>
+                                <div class="search-history-show">Search history <i class="fas fa-sort-down"></i></div>
+                            </div>
+                            <div class="search-history-body">
+                                <div class="container-fluid">
+                                    <div class="search-history-items">
+                                        <h3>Your recent search history</h3>
+                                        <div onclick="document.location='http://rustrains.com/rzd?trip=0&amp;from=2000000&amp;to=2004000&amp;date_from=18.01.2019&amp;amount=1'"
+                                             class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow - Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">18.01.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div onclick="document.location='http://rustrains.com/rzd?trip=0&amp;from=2000000&amp;to=2004000&amp;date_from=12.01.2019&amp;amount=2'"
+                                             class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow - Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">12.01.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">2 passengers</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div onclick="document.location='http://rustrains.com/destination-moscow-st-petersburg-railway'"
+                                             class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow - Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">11.01.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Popular Trains-->
+    <div class="content-page section">
+        <div class="container">
+            <h1 class="mb-2 mb-sm-4">Sapsan Train</h1>
+
+            <p class="mb-4">In December 2009, Russian Railways brought into service the Sapsan (Russian for
+                <em>Peregrine Falcon</em>). Named after the mythical bird, this high-speed Russian train achieves a
+                maximum speed of 250 kilometers per hour (155 miles per hour). Today this is arguably the most convenient
+                way to commute between St. Petersburg, Moscow, and Vladimir. The convenience of the Sapsan train service
+                already rivals traveling by air. The short flight time of one hour between the Pulkovo Airport outside
+                St. Petersburg and any of the seven airports that service Moscow (Sheremetyevo, Domodedovo, Vnukovo,
+                Myachkovo, Ostafyevo, Bykovo, and Ramenskoye) certainly lures travelers at first. And although rail service
+                currently takes four hours, it is quite common that passengers spend three or more hours in traffic
+                getting to and from the city-centers to the airports. With the Sapsan, passengers in St. Petersburg only
+                need to catch the train at the centrally located Moskovsky Station in the morning, and by noon, they are
+                at Leningradskaya Station in the heart of Moscow.
+            </p>
+
+            <div class="mb-5">
+                <iframe width="100%" height="280" src="https://www.youtube.com/embed/nZSfaAqtp-Y?start=178" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <p class="lightgrey small"><em>Go inside the high-speed train and learn how each type of class differs.</em></p>
+            </div>
+            
+            <h2 class="mb-3 mb-sm-4">Meet Sapsan - the most convenient way to travel between Moscow & St. Petersburg</h2>
+
+            <p class="mb-1">This is a far cry from the journey from
+                <a href="/route/moscow-st-petersburg-railway">Moscow to St. Petersburg</a> that travelers had to endure
+                before first Sapsan train tickets went on sale. The ride on board this modern high-speed train is as
+                smooth as any modern train or urban commuter rail experience seen anywhere in the world. Besides speed,
+                the Sapsan train caters to the requirements of the modern luxury and business traveler. Whereas
+                comfortable seats are reserved for business and first class on an airplane, the Sapsan’s first and
+                second class seats both provide passengers with the same experience. The first class seats, however,
+                have additional leg space and WiFi access, service that has increased in demand (and expectation). Of
+                course, service is far removed from any of the Soviet-era gruffness, with attendants providing a modern
+                level of friendliness and courtesy, defining anew the meaning of Russian luxury travel. The cabins are
+                kept impeccably clean, with all accommodations well-maintained. And unlike any airline flight, passenger
+                luggage can be accessed from storage by the attendants, should a passenger need anything from their
+                suitcase. Eventually, if the Russian Railway Ministry has its way, the Sapsan RUS EVS will be employed
+                along an extensive system of new high-speed rail lines that will extend across Eurasia, removing
+                bottlenecks at the nation’s airports, improving travel efficiency for businessmen going between cities,
+                and providing more luxury travel options for those who want to see this great country for themselves.
+                Don't hesitate to choose Sapsan for your trip!
+            </p>
+
+            <div class="mb-5">
+                <a href="https://www.sapsantrains.com" class="small font-italic" target="_blank">Read more about Sapsan trains here.</a>
+            </div>
+
+            <h2 class="mb-4">Travel Classes Onboard SAPSAN Train</h2>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <!--Coach class-->
+                    <div class="coach-class">
+                        <h3 class="mb-3">Premium Class</h3>
+
+                        <div class="coach-slider mb-3">
+                            <div>
+                                <img src="site1/images/sapsan-premium-cl_0.jpg">
+                            </div>
+                            <div>
+                                <img src="site1/images/sapsan-premium-cl2_0.jpg">
+                            </div>
+                            <div>
+                                <img src="site1/images/sapsan-premium-cl1_0.jpg">
+                            </div>
+                        </div>
+
+                        <p>Premium class has the most comfortable leather seats on the
+                            train, electric sockets and free wifi. It features the best service and gives you free access to
+                            Business lounges at the train stations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <!--Coach class-->
+                    <div class="coach-class">
+                        <h3 class="mb-3">Business Class</h3>
+
+                        <div class="coach-slider mb-3">
+                            <div>
+                                <img src="site1/images/sapsan-business-cl1_0.jpg">
+                            </div>
+                        </div>
+
+                        <p>Business class car features larger and more comfortable leather seats, free wifi and electric
+                            sockets (on Sapsan trains). And, of course, a more attentive service. With business class
+                            tickets you also have free access to Business lounges at the train stations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <!--Coach class-->
+                    <div class="coach-class">
+                        <h3 class="mb-3">Economy Class</h3>
+
+                        <div class="coach-slider mb-3">
+                            <div>
+                                <img src="site1/images/sapsan-economy-cl_0.jpg">
+                            </div>
+                            <div>
+                                <img src="site1/images/sapsan-economy-cl1_0.jpg">
+                            </div>
+                        </div>
+
+                        <p>Economy class seats are available in two arrangements - 2 seats in each row or 4 seats around
+                            one table. You can specify your preference at checkout.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <!--Coach class-->
+                    <div class="coach-class">
+                        <h3 class="mb-3">Restaurant Car</h3>
+
+                        <div class="coach-slider mb-3">
+                            <div>
+                                <img src="site1/images/sapsan-restaurant-cl_0.jpg">
+                            </div>
+                            <div>
+                                <img src="site1/images/sapsan-restaurant-cl1_0.jpg">
+                            </div>
+                        </div>
+
+                        <p>Regular economy class seats in the bistro train car. Standard arrangement of 4 seats
+                            around a table.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <!--Coach class-->
+                    <div class="coach-class">
+                        <h3 class="mb-3">Conference Cabin</h3>
+
+                        <div class="coach-slider mb-3">
+                            <div>
+                                <img src="site1/images/sapsan-conference-cab_0.jpg">
+                            </div>
+                            <div>
+                                <img src="site1/images/sapsan-conference-cab1_0.jpg">
+                            </div>
+                            <div>
+                                <img src="site1/images/sapsan-conference-cab2_0.jpg">
+                            </div>
+                        </div>
+
+                        <p>It is a separate unit with a lockable door perfect for 4 travelers either business or leisure
+                            travels. Presentation equipment for business meetings is available. It features 4 leather
+                            seats + a tiny sofa. Cabin is supplied with a personal dinner table, footrests, tap lights,
+                            multifunctional display, entertainment system, 220 VC outlets, audio and video outputs,
+                            outlets for charging mobile devices and free Wi-Fi. Seats can be automatically adjusted
+                            providing even more comfort with enlarged armrests.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <!--Coach class-->
+                    <div class="coach-class">
+                        <h3 class="mb-3">Economy Class with Meal</h3>
+
+                        <div class="coach-slider mb-3">
+                            <div>
+                                <img src="site1/images/sapsan-economy-cl-plus_0.jpg">
+                            </div>
+                            <div>
+                                <img src="site1/images/sapsan-economy-c_0.jpg">
+                            </div>
+                        </div>
+
+                        <p>Regular economy seats. No wifi access. Ticket price includes cold snacks, newspapers
+                            and magazines.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+           <div class="mb-5">
+               <table class="tm-table-responsive coach-table table table-hover">
+                   <thead>
+                   <tr>
+                       <th>Route</th>
+                       <th>Distance</th>
+                       <th>Time</th>
+                       <th>Departures</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <tr>
+                       <td>St. Petersburg - Moscow</td>
+                       <td>635 kilometers</td>
+                       <td>3 hrs 43 min</td>
+                       <td>22 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>Moscow - St. Petersburg</td>
+                       <td>635 kilometers</td>
+                       <td>3 hrs 34 min</td>
+                       <td>19 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>Moscow - Bologoye</td>
+                       <td>321 kilometers</td>
+                       <td>1 hrs 56 min</td>
+                       <td>4 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>Bologoye - St. Petersburg</td>
+                       <td>314 kilometers</td>
+                       <td>1 hrs 53 min</td>
+                       <td>4 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>Moscow - Tver</td>
+                       <td>163 kilometers</td>
+                       <td>1 hrs 3 min</td>
+                       <td>3 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>Bologoye - Moscow</td>
+                       <td>321 kilometers</td>
+                       <td>1 hrs 57 min</td>
+                       <td>3 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>Tver - Moscow</td>
+                       <td>163 kilometers</td>
+                       <td>1 hrs 7 min</td>
+                       <td>3 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>Chudovo - Moscow</td>
+                       <td>516 kilometers</td>
+                       <td>3 hrs 9 min</td>
+                       <td>3 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>St. Petersburg - Bologoye</td>
+                       <td>314 kilometers</td>
+                       <td>1 hrs 51 min</td>
+                       <td>2 trains per route</td>
+                   </tr>
+                   <tr>
+                       <td>St. Petersburg - Okulovka</td>
+                       <td>243 kilometers</td>
+                       <td>1 hrs 23 min</td>
+                       <td>2 trains per route</td>
+                   </tr>
+                   </tbody>
+               </table>
+           </div>
+
+            <div class="text-center">
+                <a href="/high-speed-trains-russia" class="btn btn-secondary mb-2 mr-2" title="Back"><i class="fas fa-chevron-left"></i> Back</a>
+                <a href="/high-speed-trains-russia/allegro-high-speed-train" class="btn tm-btn-red mb-2" title="Next">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer section text-left">
+        <div class="container">
+            <div class="tm-overflow-hidden position-relative">
+                <div class="row">
+                    <div class="col-sm-auto order-sm-1">
+
+                        <ul class="icon-nav nav justify-content-end flex-sm-column mb-4">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footerContact" data-toggle="collapse" role="button">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footerLang" data-toggle="collapse" role="button">en</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <h4>Heading</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including
+                                    versions of Lorem Ipsum
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-end">
+                    <div class="col-md">
+                        <h4>Payment options</h4>
+                        <ul class="nav mb-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay2.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay3.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay4.png" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="site1/images/pay5.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="mb-3">Use of this Web site constitutes acceptance of our
+                            <a href="#">Terms and Conditions</a> and
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-auto">
+                        <div class="mb-3">
+                            <a href="/"><img src="site1/images/logoWhiteMain.png" alt=""></a>
+                        </div>
+                        <div class="footer-copyright mb-3">© 2018 - 2019 <b>RUStrains</b></div>
+                    </div>
+
+                </div>
+
+                <!--footer popup contact-->
+                <div id="footerContact" class="tm-footer-popup collapse">
+                    <div class="row">
+                        <div class="col-sm-auto d-flex flex-sm-column justify-content-center order-sm-1">
+                            <div>
+                                <a class="p-3" href="#footerContact" data-toggle="collapse"><i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-5 d-flex flex-md-column align-items-center text-center">
+                                    <div class="py-3">
+                                        <div class="tm-footer-icon"><i class="fas fa-phone"></i></div>
+                                    </div>
+                                    <div class="px-3 px-md-0">
+                                        <h2 class="py-2">Call to us</h2>
+                                        <div class="py-2">Get travel advice from our experts</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md d-flex flex-column">
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+34-932-20-4999</div>
+                                        <div class="col">EU countries</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+7-812-648-24-57</div>
+                                        <div class="col">Russia</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+44-20-3868-1704</div>
+                                        <div class="col">United Kingdom</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+1-954-639-4643</div>
+                                        <div class="col">US and Canada</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--footer popup lang-->
+                <div id="footerLang" class="tm-footer-popup collapse">
+                    <div class="row">
+                        <div class="col-sm-auto d-flex flex-sm-column justify-content-center order-sm-1">
+                            <div>
+                                <a class="p-3" href="#footerLang" data-toggle="collapse"><i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-5 d-flex flex-md-column align-items-center text-center">
+                                    <div class="py-3">
+                                        <div class="tm-footer-icon">en</div>
+                                    </div>
+                                    <div class="px-3 px-md-0">
+                                        <h2 class="py-2">Language</h2>
+                                        <div class="py-2">Select your language preferences</div>
+                                    </div>
+                                </div>
+
+                                <div class="tm-flags col-md">
+                                    <div class="row">
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">English</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Portuguese</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Russian</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Japanese</div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Deutsch</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Italian</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Polish</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Turkish</div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Español</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">French</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Chinese</div>
+                                            </a>
+                                            <a class="py-2 d-flex align-items-center" href="#">
+                                                <img src="https://via.placeholder.com/60x40" alt="">
+                                                <div class="pl-2">Korean</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<h5 class="modal-title" id="authModalLabel"></h5>-->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                        <img src="https://via.placeholder.com/700x800" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="tab-pane">
+                            <div class="p-4">
+                                <h3 class="mb-4 text-center">Welcome back!</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="signinInputEmail">Email address</label>
+                                        <input type="email" class="form-control" id="signinInputEmail"
+                                               placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signinInputPassword">Password</label>
+                                        <div class="tm-password">
+                                            <input type="password" class="form-control" id="signinInputPassword"
+                                                   placeholder="Password">
+                                            <div class="tm-password-eye"><i class="fas fa-eye"></i></div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="tm-btn-red btn w-100 mb-5">Log in</button>
+                                    <div class="text-center">
+                                        <div class="mb-3">
+                                            <a href="http://rustrains.com/register" target="_blank">Sign up (opens in
+                                                new tab)</a>
+                                        </div>
+                                        <div>
+                                            <a href="http://rustrains.com/password/reset" target="_blank">
+                                                Forgot Your Password? (opens in new tab)
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<div id="common_preloader" style="display:none">
+    <img src="icons/train.gif"/>
+</div>
+
+<div id="cookie" class="cookie">This website uses cookies and other data to provide a better service.
+    See <a href="#">Privacy policy</a> for more information. <br>
+    If you agree, continue to use our site. <a href="#" class="cookie-accept btn btn-light">I Agree</a>
+</div>
+
+<!-- Scripts -->
+<!--<script src="js/lang.js"></script>
+<script src="http://rustrains.com/js/app_public.js"></script>-->
+<script src="site1/js/jquery-3.2.1.min.js"></script>
+<script src="site1/js/slick.min.js"></script>
+<script src="site1/js/popper.js"></script>
+<script src="site1/js/bootstrap.min.js"></script>
+<script src="site1/js/swiper.min.js"></script>
+<script src="site1/js/select2.min.js"></script>
+<script src="site1/js/fotorama.js"></script>
+<script src="site1/js/jquery.ui.touch-punch.min.js"></script>
+<script src="site1/js/js.cookie.js"></script>
+<script src="site1/js/main.js"></script>
+
+</body>
+</html>

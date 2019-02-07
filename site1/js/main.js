@@ -210,6 +210,15 @@ $(document).ready(function () {
         });
     })();
 
+    //Coach slider
+    (function () {
+        var $coachSlider = $('.coach-slider');
+
+        $coachSlider.slick({
+            infinite: true
+        });
+    })();
+
 
     // Product
 

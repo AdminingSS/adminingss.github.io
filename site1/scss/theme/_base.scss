@@ -45,3 +45,82 @@
   }
 
 }
+
+
+// Slick slider restyling
+
+.slick-slide {
+
+  img {
+    width: 100%;
+  }
+}
+
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  &::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 20px;
+    opacity: .75;
+    color: #555;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.slick-prev {
+  left: 0;
+
+  &::before {
+    content: "\f053";
+  }
+}
+
+.slick-next {
+  right: 0;
+
+  &::before {
+    content: "\f054";
+  }
+}
+
+@media (max-width: 767px) {
+
+  .tm-table-responsive {
+    display: block;
+
+    tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr + tr {
+      margin-top: 10px;
+    }
+  }
+}
