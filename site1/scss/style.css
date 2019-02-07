@@ -974,7 +974,7 @@ a.ui-button:active,
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
     padding: 20px 0;
     color: #555555;
-    z-index: 9999;
+    z-index: 1000;
     display: none; }
     .search-history-body h3 {
       font-weight: bold;
@@ -2620,12 +2620,6 @@ a.ui-button:active,
     width: 100%; }
   .order-input textarea {
     min-height: 110px; }
-  .order-input ul[data-v-dda77e96] .dropdown-item {
-    display: flex;
-    align-items: baseline;
-    white-space: normal; }
-    .order-input ul[data-v-dda77e96] .dropdown-item [data-v-dda77e96] {
-      flex: 1; }
   .order-input .select2-container--default .select2-selection--single {
     border: 1px solid #ced4da; }
   .order-input .vue-treeselect__control {
@@ -2648,6 +2642,13 @@ a.ui-button:active,
     justify-content: space-between; }
     .order-input .date-dropdowns select, .order-input .date-dropdowns .select2-container {
       width: 30% !important; }
+
+.vue-tel-input .dropdown-item {
+  display: flex;
+  align-items: baseline;
+  white-space: normal; }
+  .vue-tel-input .dropdown-item [data-v-dda77e96] {
+    flex: 1; }
 
 .order-services {
   padding: 20px 0; }
@@ -3810,19 +3811,6 @@ a.ui-button:active,
       line-height: 19px; }
     .sub-menu .tm-search-link.collapsed::before {
       content: "\f078"; }
-  .sub-menu .filter-active {
-    position: relative;
-    padding-left: 35px; }
-    .sub-menu .filter-active::before {
-      content: "\f111";
-      position: absolute;
-      top: 8px;
-      left: 16px;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 10px;
-      line-height: 19px;
-      color: #c70000; }
 
 .row-divider > [class*='col'] + [class*='col'] {
   border-left: solid 1px #eee; }
@@ -3872,6 +3860,8 @@ a.ui-button:active,
   border: solid 1px #eee; }
 .ticket-header {
   padding: 20px 0;
+  margin-bottom: 30px;
+  background-color: #eee;
   border-bottom: solid 1px #eee; }
 .ticket-direction-text {
   position: relative;
@@ -4172,6 +4162,32 @@ a.ui-button:active,
   font-style: italic;
   font-weight: 600; }
 
+.btn-filter {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1030;
+  background-color: #fff;
+  border-color: #e40000;
+  color: #e40000; }
+  .btn-filter:hover, .btn-filter:focus {
+    border-color: #b10000;
+    color: #b10000; }
+  .btn-filter.filter-active {
+    padding-left: 35px; }
+    .btn-filter.filter-active::before {
+      content: "\f111";
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 10px;
+      line-height: 19px;
+      color: #c70000; }
+
 .ticket-notfound {
   padding: 20px 0; }
   .ticket-notfound-message {
@@ -4203,7 +4219,7 @@ a.ui-button:active,
   max-width: 900px; }
 
 @media (max-width: 991px) {
-  .sub-nav-wrap {
+  .sub-nav-wrap, .btn-filter {
     display: block; }
 
   .ticket-filter {
