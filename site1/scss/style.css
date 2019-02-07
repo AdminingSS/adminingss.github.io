@@ -12199,7 +12199,8 @@ article .block-title {
   text-transform: none;
   font-size: 18px; }
 .tm-destinations-departure h5 {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-weight: 700; }
 .tm-destinations-departure h6 {
   font-weight: 500; }
 .tm-destinations-departure-station {
@@ -12214,20 +12215,13 @@ article .block-title {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f3c5'; }
+.tm-destinations-trains h5 {
+  margin-bottom: 20px;
+  font-weight: 700; }
+.tm-destinations-trains .card-header a {
+  font-weight: 600; }
 
 .tm-italic {
   font-style: italic; }
-
-.tm-table {
-  border: 1px solid #eee; }
-  .tm-table .tm-th {
-    background-color: #eee;
-    font-weight: 600;
-    font-size: 15px; }
-  .tm-table > .row > div {
-    border: 1px solid #eee;
-    padding: 5px; }
-    .tm-table > .row > div:not(:first-child) {
-      text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

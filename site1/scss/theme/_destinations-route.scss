@@ -36,6 +36,7 @@
 
     h5 {
       margin-bottom: 20px;
+      font-weight: 700;
     }
 
     h6 {
@@ -61,37 +62,18 @@
 
   &-trains {
 
+    h5 {
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
 
+    .card-header a {
+      font-weight: 600;
+    }
 
   }
 }
 
 .tm-italic {
   font-style: italic;
-}
-
-.tm-table {
-  border: 1px solid #eee;
-
-  .tm-th {
-    background-color: #eee;
-    font-weight: 600;
-    font-size: 15px;
-  }
-
-  >.row {
-
-    >div {
-      border: 1px solid #eee;
-      padding: 5px;
-
-      &:not(:first-child) {
-        text-align: center;
-      }
-    }
-  }
-}
-
-@media (max-width: 767px) {
-
 }
