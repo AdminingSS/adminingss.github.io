@@ -1,27 +1,3 @@
-.content-page {
-  line-height: 1.5;
-
-  a:not(.btn) {
-    color: #e40000;
-
-    &:hover, &:focus {
-      color: darken(#e40000, 10%);
-    }
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-
-    a:not(.btn) {
-      color: #555;
-
-      &:hover, &:focus {
-        color: #999;
-      }
-    }
-  }
-
-}
-
 .tm-destinations {
   &-distance {
     position: relative;
