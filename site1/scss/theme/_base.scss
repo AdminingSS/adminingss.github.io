@@ -106,8 +106,25 @@
   }
 }
 
-@media (max-width: 767px) {
+// Pagination
 
+.page-link {
+  color: #e40000;
+
+  &:hover {
+    color: #e40000;
+  }
+}
+
+.page-item.active .page-link {
+  background-color: #e40000;
+  border-color: #e40000;
+}
+
+
+// Table responsive
+
+@media (max-width: 767px) {
   .tm-table-responsive {
     display: block;
 
