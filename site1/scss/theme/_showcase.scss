@@ -4,6 +4,11 @@
   background: url(../images/showcase-bg.jpg) no-repeat 50% 20%;
   background-size: cover;
 
+  &-title {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+
   &__head {
     color: #fefefe;
     font-size: 55px;
@@ -147,14 +152,16 @@
     }
   }
 
-
-  &-form {
+  &-panel {
     position: relative;
     padding: 10px;
     margin-left: -10px;
     margin-right: -10px;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  &-form {
 
     button[type="submit"] {
       font-size: 16px;
@@ -216,7 +223,7 @@
 
   &-home {
     height: 624px;
-    padding-top: 230px;
+    padding-top: 170px;
     padding-bottom: 60px;
   }
 
@@ -448,7 +455,7 @@
 
     &-home {
       height: 396px;
-      padding-top: 100px;
+      padding-top: 40px;
     }
 
     .select2-container--default {

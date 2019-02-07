@@ -729,6 +729,9 @@ a.ui-button:active,
   padding: 20px 0;
   background: url(../images/showcase-bg.jpg) no-repeat 50% 20%;
   background-size: cover; }
+  .showcase-title {
+    color: #fff;
+    margin-bottom: 30px; }
   .showcase__head {
     color: #fefefe;
     font-size: 55px;
@@ -834,16 +837,16 @@ a.ui-button:active,
       padding-top: 10px;
       line-height: 17px;
       font-size: 16px; }
-  .showcase-form {
+  .showcase-panel {
     position: relative;
     padding: 10px;
     margin-left: -10px;
     margin-right: -10px;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6); }
-    .showcase-form button[type="submit"] {
-      font-size: 16px;
-      padding: 0 25px; }
+  .showcase-form button[type="submit"] {
+    font-size: 16px;
+    padding: 0 25px; }
   .showcase-checks {
     display: flex;
     align-items: center;
@@ -884,7 +887,7 @@ a.ui-button:active,
     align-items: center; }
   .showcase-home {
     height: 624px;
-    padding-top: 230px;
+    padding-top: 170px;
     padding-bottom: 60px; }
   .showcase-inner {
     padding-top: 78px; }
@@ -1028,7 +1031,7 @@ a.ui-button:active,
     transform: translateX(0); }
   .showcase-home {
     height: 396px;
-    padding-top: 100px; }
+    padding-top: 40px; }
   .showcase .select2-container--default .select2-selection--single {
     font-size: 14px; }
   .showcase .add-trip, .showcase .remove-trip {

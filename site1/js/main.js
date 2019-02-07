@@ -20,32 +20,32 @@ function initer(fn, n) {
 
 $(document).ready(function () {
 
-    // Burger
-
-    $('.burger-wrap').click(function () {
-        $(this).next().addClass('active');
-        return false;
-    });
-
-    // Mobile close
-
-    $('.menu-close').click(function () {
-        $('.menu-body').removeClass('active');
-    });
-
-    // Mobile nav
-
-    $('.mobile-nav-list > a').click(function (e) {
-        e.preventDefault();
-        $(this).next().slideToggle();
-        $('.mobile-nav-list > a').removeClass('active');
-        $(this).addClass('active');
-    });
-
-    $('.mobile-sub-list > a').click(function (e) {
-        e.preventDefault();
-        $(this).next().slideToggle();
-    });
+    // // Burger
+    //
+    // $('.burger-wrap').click(function () {
+    //     $(this).next().addClass('active');
+    //     return false;
+    // });
+    //
+    // // Mobile close
+    //
+    // $('.menu-close').click(function () {
+    //     $('.menu-body').removeClass('active');
+    // });
+    //
+    // // Mobile nav
+    //
+    // $('.mobile-nav-list > a').click(function (e) {
+    //     e.preventDefault();
+    //     $(this).next().slideToggle();
+    //     $('.mobile-nav-list > a').removeClass('active');
+    //     $(this).addClass('active');
+    // });
+    //
+    // $('.mobile-sub-list > a').click(function (e) {
+    //     e.preventDefault();
+    //     $(this).next().slideToggle();
+    // });
 
     // Top line dropdown
 
@@ -86,22 +86,22 @@ $(document).ready(function () {
 
     // Footer list
 
-    $('.footer-head').click(function () {
-        if ($(window).width() < 767) {
-            var parent = $(this).parent();
-            var content = $(this).next();
-
-            if (!(parent.hasClass('active'))) {
-                $('.footer-elem').removeClass('active');
-                parent.addClass('active');
-                $('.footer-content').slideUp();
-                content.slideDown();
-            } else {
-                parent.removeClass('active');
-                content.slideUp();
-            }
-        }
-    });
+    // $('.footer-head').click(function () {
+    //     if ($(window).width() < 767) {
+    //         var parent = $(this).parent();
+    //         var content = $(this).next();
+    //
+    //         if (!(parent.hasClass('active'))) {
+    //             $('.footer-elem').removeClass('active');
+    //             parent.addClass('active');
+    //             $('.footer-content').slideUp();
+    //             content.slideDown();
+    //         } else {
+    //             parent.removeClass('active');
+    //             content.slideUp();
+    //         }
+    //     }
+    // });
 
     // Tickets
 
@@ -331,8 +331,6 @@ $(document).ready(function () {
             if ($ticketNotfound.length) return true;
         });
     })();
-
-
 
     // dropdown
     (function () {
