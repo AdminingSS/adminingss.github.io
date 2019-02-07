@@ -1,4 +1,19 @@
 
+//
+
+.tm-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  &__content,
+  &__footer {
+    position: relative;
+    width: 100%;
+  }
+}
 
 // Styles for inner pages
 

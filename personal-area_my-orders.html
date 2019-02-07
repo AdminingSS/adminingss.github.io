@@ -21,268 +21,275 @@
 </head>
 
 <body>
-<div>
+<!--Для всех страниц дает классы tm-page, tm-page__content tm-page__footer - прибиваем футер всегда книзу страницы-->
+<div class="tm-page">
 
-    <!--Header-->
-    <header class="header navbar navbar-expand-xl navbar-light bg-light">
-        <div class="container">
+    <!--В класс tm-page__content заворачиваем весь контент кроме футера-->
+    <div class="tm-page__content">
 
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="site1/images/logo.png" alt="">
-            </a>
+        <!--Header-->
+        <header class="header navbar navbar-expand-xl navbar-light bg-light">
+            <div class="container">
 
-            <!-- Lang menu -->
-            <ul class="menu-lang navbar-nav text-uppercase order-xl-1">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span
-                            class="flag-icon flag-icon-gb"></span> en</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://rustrains.com"><span
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="site1/images/logo.png" alt="">
+                </a>
+
+                <!-- Lang menu -->
+                <ul class="menu-lang navbar-nav text-uppercase order-xl-1">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span
                                 class="flag-icon flag-icon-gb"></span> en</a>
-                        <a class="dropdown-item" href="http://de.rustrains.com"><span
-                                class="flag-icon flag-icon-de"></span> de</a>
-                        <a class="dropdown-item" href="http://pl.rustrains.com"><span
-                                class="flag-icon flag-icon-pl"></span> pl</a>
-                        <a class="dropdown-item" href="http://cn.rustrains.com"><span
-                                class="flag-icon flag-icon-cn"></span> zh</a>
-                        <a class="dropdown-item" href="http://jp.rustrains.com"><span
-                                class="flag-icon flag-icon-jp"></span> ja</a>
-                        <a class="dropdown-item" href="http://tr.rustrains.com"><span
-                                class="flag-icon flag-icon-tr"></span> tr</a>
-                        <a class="dropdown-item" href="http://ko.rustrains.com"><span
-                                class="flag-icon flag-icon-kr"></span> ko</a>
-                        <a class="dropdown-item" href="http://fi.rustrains.com"><span
-                                class="flag-icon flag-icon-fi"></span> fi</a>
-                        <a class="dropdown-item" href="http://se.rustrains.com"><span
-                                class="flag-icon flag-icon-se"></span> se</a>
-                        <a class="dropdown-item" href="http://es.rustrains.com"><span
-                                class="flag-icon flag-icon-es"></span> es</a>
-                        <a class="dropdown-item" href="http://pt.rustrains.com"><span
-                                class="flag-icon flag-icon-pt"></span> pt</a>
-                        <a class="dropdown-item" href="http://it.rustrains.com"><span
-                                class="flag-icon flag-icon-it"></span> it</a>
-                        <a class="dropdown-item" href="http://fr.rustrains.com"><span
-                                class="flag-icon flag-icon-fr"></span> fr</a>
-                        <a class="dropdown-item" href="http://ru.rustrains.com"><span
-                                class="flag-icon flag-icon-ru"></span> ru</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
-                        <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
-                        <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
-                    aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
-                <!-- My cabinet (for logged in) with dropdown -->
-                <!--<div class="menu-user dropdown mr-xl-3">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sign In
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://rustrains.com/login">Login</a>
-                        <a class="dropdown-item" href="http://rustrains.com/register">Register</a>
-                    </div>
-                </div>-->
-
-                <!-- Log-in with modal -->
-                <div class="menu-user mr-xl-3">
-                    <a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#authModal">
-                        Sign In
-                    </a>
-                </div>
-
-                <!-- Menu -->
-                <ul class="menu-main navbar-nav mr-xl-2">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">Popular Trains</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="http://rustrains.com"><span
+                                    class="flag-icon flag-icon-gb"></span> en</a>
+                            <a class="dropdown-item" href="http://de.rustrains.com"><span
+                                    class="flag-icon flag-icon-de"></span> de</a>
+                            <a class="dropdown-item" href="http://pl.rustrains.com"><span
+                                    class="flag-icon flag-icon-pl"></span> pl</a>
+                            <a class="dropdown-item" href="http://cn.rustrains.com"><span
+                                    class="flag-icon flag-icon-cn"></span> zh</a>
+                            <a class="dropdown-item" href="http://jp.rustrains.com"><span
+                                    class="flag-icon flag-icon-jp"></span> ja</a>
+                            <a class="dropdown-item" href="http://tr.rustrains.com"><span
+                                    class="flag-icon flag-icon-tr"></span> tr</a>
+                            <a class="dropdown-item" href="http://ko.rustrains.com"><span
+                                    class="flag-icon flag-icon-kr"></span> ko</a>
+                            <a class="dropdown-item" href="http://fi.rustrains.com"><span
+                                    class="flag-icon flag-icon-fi"></span> fi</a>
+                            <a class="dropdown-item" href="http://se.rustrains.com"><span
+                                    class="flag-icon flag-icon-se"></span> se</a>
+                            <a class="dropdown-item" href="http://es.rustrains.com"><span
+                                    class="flag-icon flag-icon-es"></span> es</a>
+                            <a class="dropdown-item" href="http://pt.rustrains.com"><span
+                                    class="flag-icon flag-icon-pt"></span> pt</a>
+                            <a class="dropdown-item" href="http://it.rustrains.com"><span
+                                    class="flag-icon flag-icon-it"></span> it</a>
+                            <a class="dropdown-item" href="http://fr.rustrains.com"><span
+                                    class="flag-icon flag-icon-fr"></span> fr</a>
+                            <a class="dropdown-item" href="http://ru.rustrains.com"><span
+                                    class="flag-icon flag-icon-ru"></span> ru</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">Routes and Planning</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">Customer Support</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About Us</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
+                            <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
+                            <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
+                        </div>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </header>
 
-    <!--Content-->
-    <div class="personal-area section">
-        <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
+                        aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <h1 class="mb-5">My orders</h1>
+                <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
+                    <!-- My cabinet (for logged in) with dropdown -->
+                    <!--<div class="menu-user dropdown mr-xl-3">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sign In
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="http://rustrains.com/login">Login</a>
+                            <a class="dropdown-item" href="http://rustrains.com/register">Register</a>
+                        </div>
+                    </div>-->
 
-            <!--PA nav-->
-            <ul class="personal-area-menu nav mb-5">
-                <li class="nav-item">
-                    <a class="nav-link active" href="personal-area_my-orders.html">My orders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="personal-area_profile.html">Profile</a>
-                </li>
-            </ul>
+                    <!-- Log-in with modal -->
+                    <div class="menu-user mr-xl-3">
+                        <a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#authModal">
+                            Sign In
+                        </a>
+                    </div>
 
-            <div class="personal-area-item">
-                <div class="personal-area-info">
-                    <table class="personal-area-table table table-hover">
-                        <thead>
-                        <tr class="sort">
-                            <th scope="col">
-                                <div class="sort-item desc">Order number</div>
-                            </th>
-                            <th scope="col">
-                                <div class="sort-item asc">Grand total</div>
-                            </th>
-                            <th scope="col">
-                                <div class="sort-item">Status</div>
-                            </th>
-                        </tr>
-                        </thead>
+                    <!-- Menu -->
+                    <ul class="menu-main navbar-nav mr-xl-2">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">Popular Trains</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
 
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div class="number">Order #20190128-18-060504 from 28.01.2019 06:06</div>
-                            </td>
-                            <td>
-                                <div class="price">903 <span class="currency">rub</span></div>
-                            </td>
-                            <td>
-                                <div class="status status-canceled">Canceled</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="number">Order #20190125-16-165626 from 25.01.2019 16:58</div>
-                            </td>
-                            <td>
-                                <div class="price">903 <span class="currency">rub</span></div>
-                            </td>
-                            <td>
-                                <div class="status status-canceled">Canceled</div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">Routes and Planning</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">Customer Support</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About Us</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </header>
 
+        <!--Content-->
+        <div class="personal-area section">
+            <div class="container">
+
+                <h1 class="mb-5">My orders</h1>
+
+                <!--PA nav-->
+                <ul class="personal-area-menu nav mb-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="personal-area_my-orders.html">My orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="personal-area_profile.html">Profile</a>
+                    </li>
+                </ul>
+
+                <div class="personal-area-item">
+                    <div class="personal-area-info">
+                        <table class="personal-area-table table table-hover">
+                            <thead>
+                            <tr class="sort">
+                                <th scope="col">
+                                    <div class="sort-item desc">Order number</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="sort-item asc">Grand total</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="sort-item">Status</div>
+                                </th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="number">Order #20190128-18-060504 from 28.01.2019 06:06</div>
+                                </td>
+                                <td>
+                                    <div class="price">903 <span class="currency">rub</span></div>
+                                </td>
+                                <td>
+                                    <div class="status status-canceled">Canceled</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="number">Order #20190125-16-165626 from 25.01.2019 16:58</div>
+                                </td>
+                                <td>
+                                    <div class="price">903 <span class="currency">rub</span></div>
+                                </td>
+                                <td>
+                                    <div class="status status-canceled">Canceled</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
     </div>
 
+    <!--Обязательный класс на футер tm-page__footer-->
     <!-- Footer -->
-    <div class="footer section text-left">
+    <div class="tm-page__footer footer section text-left">
         <div class="container">
             <div class="tm-overflow-hidden position-relative">
                 <div class="row">
