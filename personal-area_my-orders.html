@@ -239,42 +239,60 @@
 
                 <div class="personal-area-item">
                     <div class="personal-area-info">
-                        <table class="personal-area-table table table-hover">
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </div>
+
+                        <table class="personal-area-table tm-table-responsive table table-hover">
                             <thead>
-                            <tr class="sort">
+                            <tr>
                                 <th scope="col">
-                                    <div class="sort-item desc">Order number</div>
+                                    Order number
                                 </th>
                                 <th scope="col">
-                                    <div class="sort-item asc">Grand total</div>
+                                    Departure date
                                 </th>
                                 <th scope="col">
-                                    <div class="sort-item">Status</div>
+                                    Passenger name
+                                </th>
+                                <th scope="col">
+                                    Grand total
+                                </th>
+                                <th scope="col">
+                                    Order status
                                 </th>
                             </tr>
                             </thead>
-
                             <tbody>
                             <tr>
                                 <td>
-                                    <div class="number">Order #20190128-18-060504 from 28.01.2019 06:06</div>
+                                    <div class="number"><a href="/order-20190208-50-203704">
+                                        20190208-50-203704
+                                    </a></div>
                                 </td>
                                 <td>
-                                    <div class="price">903 <span class="currency">rub</span></div>
+                                    27.02.2019
                                 </td>
                                 <td>
-                                    <div class="status status-canceled">Canceled</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="number">Order #20190125-16-165626 from 25.01.2019 16:58</div>
-                                </td>
-                                <td>
-                                    <div class="price">903 <span class="currency">rub</span></div>
+                                    <p>Some passanger name</p>
+                                    <p>Some another passanger name</p>
+                                    <p>Some passanger</p>
+                                    <div>
+                                        <a href="#" class="tm-btn-link">show more</a>
+                                    </div>
                                 </td>
                                 <td>
-                                    <div class="status status-canceled">Canceled</div>
+                                    <div class="price">1387 <span class="currency">rub</span></div>
+                                </td>
+                                <td>
+                                    <div class="status">New</div>
                                 </td>
                             </tr>
                             </tbody>

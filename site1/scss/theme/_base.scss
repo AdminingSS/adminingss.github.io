@@ -15,6 +15,14 @@
   }
 }
 
+.tm-btn-link {
+  color: #e40000;
+
+  &:hover, &:focus {
+    color: darken(#e40000, 10%);
+  }
+}
+
 // Styles for inner pages
 
 .content-page {

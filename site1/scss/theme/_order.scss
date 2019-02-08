@@ -312,6 +312,22 @@
   }
 }
 
+.order-accept {
+  padding: 20px 0;
+
+  label {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: #e40000;
+
+    &:hover, &:focus {
+      color: darken(#e40000, 10%);
+    }
+  }
+}
+
 @media (max-width: 1199px) {
 
   .order-info-item {

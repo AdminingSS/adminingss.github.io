@@ -2710,6 +2710,15 @@ a.ui-button:active,
   .btn-more-payments.collapsed .show-more {
     display: block; }
 
+.order-accept {
+  padding: 20px 0; }
+  .order-accept label {
+    margin-bottom: 0; }
+  .order-accept a {
+    color: #e40000; }
+    .order-accept a:hover, .order-accept a:focus {
+      color: #b10000; }
+
 @media (max-width: 1199px) {
   .order-info-item .label {
     font-size: 14px; } }
@@ -12030,6 +12039,11 @@ article .block-title {
     position: relative;
     width: 100%; }
 
+.tm-btn-link {
+  color: #e40000; }
+  .tm-btn-link:hover, .tm-btn-link:focus {
+    color: #b10000; }
+
 .content-page {
   line-height: 1.5; }
   .content-page a:not(.btn) {
@@ -12156,6 +12170,7 @@ article .block-title {
   text-align: left;
   margin-bottom: 0; }
 .personal-area-menu {
+  /*justify-content: center;*/
   font-size: 18px;
   font-weight: 600;
   background-color: #eee; }
