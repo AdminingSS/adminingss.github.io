@@ -12217,10 +12217,10 @@ article .block-title {
     line-height: 1;
     font-family: "Font Awesome 5 Free";
     font-weight: 900; }
-.destination-icon {
+.destination-fact {
   position: relative;
-  padding-left: 30px; }
-  .destination-icon::before {
+  padding-left: 35px; }
+  .destination-fact::before {
     position: absolute;
     display: block;
     top: 50%;
@@ -12250,5 +12250,14 @@ article .block-title {
 
 .icon-departure-latest::before {
   content: url("../images/latest-departure.png"); }
+
+@media (max-width: 991px) {
+  .destination-fact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; } }
 
 /*# sourceMappingURL=style.css.map */

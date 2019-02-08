@@ -44,9 +44,9 @@
     }
   }
 
-  &-icon {
+  &-fact {
     position: relative;
-    padding-left: 30px;
+    padding-left: 35px;
 
     &::before {
       position: absolute;
@@ -96,4 +96,16 @@
 
 .icon-departure-latest::before {
   content: url("../images/latest-departure.png");
+}
+
+@media (max-width: 991px) {
+
+  .destination-fact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
