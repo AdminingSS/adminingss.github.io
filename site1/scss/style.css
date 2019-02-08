@@ -12205,9 +12205,16 @@ article .block-title {
 .destination-name {
   font-size: 20px;
   font-weight: 500; }
+.destination-trains h5 {
+  margin-bottom: 20px;
+  font-weight: 700; }
+.destination-trains .card-header a {
+  font-weight: 600; }
+
 .destination-station {
   position: relative;
-  padding-left: 20px; }
+  padding-left: 20px;
+  margin-bottom: 15px; }
   .destination-station:before {
     content: '\f3c5';
     display: block;
@@ -12217,9 +12224,64 @@ article .block-title {
     line-height: 1;
     font-family: "Font Awesome 5 Free";
     font-weight: 900; }
+  .destination-station__text {
+    font-style: italic; }
+
+.destination-trains {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+  .destination-trains__item {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 20px; }
+  .destination-trains .card-title {
+    font-weight: 600; }
+
+@media (min-width: 768px) {
+  .destination-trains__item {
+    width: 50%; } }
+@media (min-width: 992px) {
+  .destination-trains__item {
+    width: calc(100% * 1 / 3.001); } }
+@media (min-width: 1200px) {
+  .destination-trains__item {
+    width: 25%; } }
+.destination-description {
+  display: flex;
+  justify-content: space-between; }
+  .destination-description__title {
+    font-weight: 500;
+    margin-right: 10px; }
+  .destination-description__currency {
+    font-weight: 700; }
+
+.destination-facts-title {
+  margin-bottom: 30px; }
+
+.destination-facts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+  .destination-facts__item {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px; }
+
+@media (min-width: 992px) {
+  .destination-facts__item {
+    width: calc(100% * 1 / 3.001); } }
 .destination-fact {
   position: relative;
-  padding-left: 35px; }
+  padding-left: 35px;
+  margin-bottom: 15px; }
   .destination-fact::before {
     position: absolute;
     display: block;
@@ -12227,29 +12289,23 @@ article .block-title {
     left: 0;
     transform: translateY(-50%);
     line-height: 1; }
-.destination-trains h5 {
-  margin-bottom: 20px;
-  font-weight: 700; }
-.destination-trains .card-header a {
-  font-weight: 600; }
-
-.icon-price::before {
-  content: url("../images/lowest-price.svg"); }
-
-.icon-departures::before {
-  content: url("../images/departures.svg"); }
-
-.icon-time-fast::before {
-  content: url("../images/fastest-trip.svg"); }
-
-.icon-time-slow::before {
-  content: url("../images/longest-trip.svg"); }
-
-.icon-departure-earliest::before {
-  content: url("../images/earliest-departure.png"); }
-
-.icon-departure-latest::before {
-  content: url("../images/latest-departure.png"); }
+  .destination-fact__title {
+    font-weight: 600;
+    margin-right: 10px; }
+  .destination-fact__currency {
+    font-weight: 700; }
+  .destination-fact_price::before {
+    content: url("../images/lowest-price.svg"); }
+  .destination-fact_departures::before {
+    content: url("../images/departures.svg"); }
+  .destination-fact_fast::before {
+    content: url("../images/fastest-trip.svg"); }
+  .destination-fact_slow::before {
+    content: url("../images/longest-trip.svg"); }
+  .destination-fact_earliest::before {
+    content: url("../images/earliest-departure.png"); }
+  .destination-fact_latest::before {
+    content: url("../images/latest-departure.png"); }
 
 @media (max-width: 991px) {
   .destination-fact {
