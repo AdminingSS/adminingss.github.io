@@ -1,4 +1,4 @@
-.tm-destinations {
+.destination {
 
   &-distance {
     position: relative;
@@ -23,44 +23,43 @@
     }
   }
 
-  &-station {
+  &-name {
     font-size: 20px;
     font-weight: 500;
   }
 
-  &-departure{
+  &-station {
+    position: relative;
+    padding-left: 20px;
 
-    h5, h6 {
-      text-transform: none;
-      font-size: 18px;
-    }
-
-    h5 {
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    h6 {
-      font-weight: 500;
-    }
-
-    &-station {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 10px;
-
-      &:before {
-        position: absolute;
-        display: block;
-        top: -5px;
-        left: 0;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: '\f3c5';
-      }
+    &:before {
+      content: '\f3c5';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 1;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
     }
   }
 
+  &-icon {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      line-height: 1;
+    }
+  }
+
+
+  //no using
   &-trains {
 
     h5 {
@@ -75,6 +74,26 @@
   }
 }
 
-.tm-italic {
-  font-style: italic;
+.icon-price::before {
+  content: url("../images/lowest-price.svg");
+}
+
+.icon-departures::before {
+  content: url("../images/departures.svg");
+}
+
+.icon-time-fast::before {
+  content: url("../images/fastest-trip.svg");
+}
+
+.icon-time-slow::before {
+  content: url("../images/longest-trip.svg");
+}
+
+.icon-departure-earliest::before {
+  content: url("../images/earliest-departure.png");
+}
+
+.icon-departure-latest::before {
+  content: url("../images/latest-departure.png");
 }

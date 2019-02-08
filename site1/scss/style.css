@@ -12187,51 +12187,68 @@ article .block-title {
 .coach-table td:first-child {
   font-weight: 600; }
 
-.tm-destinations-distance {
+.destination-distance {
   position: relative;
   border-bottom: 3px solid #777;
   padding: 5px 0;
   text-align: center; }
-  .tm-destinations-distance:before, .tm-destinations-distance:after {
+  .destination-distance:before, .destination-distance:after {
     position: absolute;
     display: block;
     bottom: -10px;
     content: url("../images/pin.svg");
     width: auto; }
-  .tm-destinations-distance:before {
+  .destination-distance:before {
     left: -10px; }
-  .tm-destinations-distance:after {
+  .destination-distance:after {
     right: -10px; }
-.tm-destinations-station {
+.destination-name {
   font-size: 20px;
   font-weight: 500; }
-.tm-destinations-departure h5, .tm-destinations-departure h6 {
-  text-transform: none;
-  font-size: 18px; }
-.tm-destinations-departure h5 {
-  margin-bottom: 20px;
-  font-weight: 700; }
-.tm-destinations-departure h6 {
-  font-weight: 500; }
-.tm-destinations-departure-station {
+.destination-station {
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 10px; }
-  .tm-destinations-departure-station:before {
+  padding-left: 20px; }
+  .destination-station:before {
+    content: '\f3c5';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; }
+.destination-icon {
+  position: relative;
+  padding-left: 30px; }
+  .destination-icon::before {
     position: absolute;
     display: block;
-    top: -5px;
+    top: 50%;
     left: 0;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\f3c5'; }
-.tm-destinations-trains h5 {
+    transform: translateY(-50%);
+    line-height: 1; }
+.destination-trains h5 {
   margin-bottom: 20px;
   font-weight: 700; }
-.tm-destinations-trains .card-header a {
+.destination-trains .card-header a {
   font-weight: 600; }
 
-.tm-italic {
-  font-style: italic; }
+.icon-price::before {
+  content: url("../images/lowest-price.svg"); }
+
+.icon-departures::before {
+  content: url("../images/departures.svg"); }
+
+.icon-time-fast::before {
+  content: url("../images/fastest-trip.svg"); }
+
+.icon-time-slow::before {
+  content: url("../images/longest-trip.svg"); }
+
+.icon-departure-earliest::before {
+  content: url("../images/earliest-departure.png"); }
+
+.icon-departure-latest::before {
+  content: url("../images/latest-departure.png"); }
 
 /*# sourceMappingURL=style.css.map */
