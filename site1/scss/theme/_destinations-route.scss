@@ -118,13 +118,12 @@
 
 .destination-description {
   display: flex;
-  justify-content: space-between;
 
   // elements
 
   &__title {
     font-weight: 500;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   &__currency {

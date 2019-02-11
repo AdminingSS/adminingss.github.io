@@ -508,6 +508,8 @@ a.ui-button:active,
 @media (max-width: 1240px) {
   .mobile-menu {
     display: block; } }
+.header > .container {
+  position: relative; }
 .header .btn {
   line-height: 24px;
   font-size: 14px; }
@@ -541,6 +543,14 @@ a.ui-button:active,
     display: flex;
     visibility: visible;
     opacity: 1; }
+  .menu-main .dropdown.tm-dropdown-full {
+    position: static; }
+    .menu-main .dropdown.tm-dropdown-full .dropdown-menu {
+      top: calc(100% - 7px);
+      width: 100%;
+      max-width: 100%; }
+      .menu-main .dropdown.tm-dropdown-full .dropdown-menu > .dropdown-item {
+        max-width: 20%; }
   .menu-main .dropdown-menu {
     margin: 0;
     font-size: 12px;
@@ -549,11 +559,15 @@ a.ui-button:active,
     opacity: 0;
     transition: all 0.2s ease-in-out; }
   .menu-main .dropdown-header {
+    padding: 10px;
     font-size: 14px;
     color: #555; }
     .menu-main .dropdown-header:hover {
       color: #000; }
   .menu-main .dropdown-item {
+    padding: 5px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: #555; }
     .menu-main .dropdown-item:focus, .menu-main .dropdown-item:hover {
       color: #000;
@@ -4142,6 +4156,14 @@ a.ui-button:active,
   cursor: pointer; }
   .ticket-filter-more:hover {
     color: #e40000; }
+.ticket-filter-clear {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #6c757d; }
+  .ticket-filter-clear:hover, .ticket-filter-clear:focus {
+    color: #494f54; }
 
 .train-types {
   padding-top: 20px; }
@@ -12267,11 +12289,10 @@ article .block-title {
   .destination-trains__item {
     width: 25%; } }
 .destination-description {
-  display: flex;
-  justify-content: space-between; }
+  display: flex; }
   .destination-description__title {
     font-weight: 500;
-    margin-right: 10px; }
+    margin-right: 20px; }
   .destination-description__currency {
     font-weight: 700; }
 

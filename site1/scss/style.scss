@@ -664,6 +664,10 @@ a.ui-button:active,
 
 .header {
 
+  > .container {
+    position: relative;
+  }
+
   .btn {
     line-height: 24px;
     font-size: 14px;
@@ -718,9 +722,20 @@ a.ui-button:active,
       visibility: visible;
       opacity: 1;
     }
-  }
 
-  .dropdown {
+    &.tm-dropdown-full {
+      position: static;
+
+      .dropdown-menu {
+        top: calc(100% - 7px);
+        width: 100%;
+        max-width: 100%;
+
+        > .dropdown-item {
+          max-width: 20%;
+        }
+      }
+    }
 
     &-menu {
       margin: 0;
@@ -732,6 +747,7 @@ a.ui-button:active,
     }
 
     &-header {
+      padding: 10px;
       font-size: 14px;
       color: #555;
 
@@ -741,6 +757,9 @@ a.ui-button:active,
     }
 
     &-item {
+      padding: 5px 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       color: #555;
 
       &:focus, &:hover {
