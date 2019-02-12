@@ -79,6 +79,22 @@
 
 }
 
+.btn-scroll-to-selected {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 700;
+
+  &.tm-active {
+    display: flex;
+  }
+}
+
 
 .modal-dialog {
   text-align: left;

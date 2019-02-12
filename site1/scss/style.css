@@ -3829,6 +3829,19 @@ a.ui-button:active,
       opacity: 0;
       transition: opacity 0.2s ease-in-out; }
 
+.btn-scroll-to-selected {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 700; }
+  .btn-scroll-to-selected.tm-active {
+    display: flex; }
+
 .modal-dialog {
   text-align: left; }
 
@@ -12286,8 +12299,9 @@ article .block-title {
   .destination-trains__item {
     width: calc(100% * 1 / 3.001); } }
 @media (min-width: 1200px) {
-  .destination-trains__item {
-    width: 25%; } }
+  /* .destination-trains__item {
+     width: 25%;
+   }*/ }
 .destination-description {
   display: flex; }
   .destination-description__title {
