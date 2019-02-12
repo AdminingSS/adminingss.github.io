@@ -390,10 +390,6 @@ $(document).ready(function () {
     });
 
 
-    $(document).mousemove(function (e) {
-        $('.schema-info').css('left', e.pageX + 20);
-        $('.schema-info').css('top', e.pageY + 20);
-    });
 
     $('.my-select').click(function (e) {
         $('.my-select-options').removeClass('active');
