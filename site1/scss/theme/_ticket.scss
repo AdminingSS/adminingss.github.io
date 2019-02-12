@@ -89,6 +89,15 @@
   transform: translateY(-50%);
   font-size: 12px;
   font-weight: 700;
+  color: #6c757d;
+  border-color: #6c757d;
+  opacity: 0.5;
+
+  &:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
 
   &.tm-active {
     display: flex;

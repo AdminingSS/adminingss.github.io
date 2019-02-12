@@ -3838,7 +3838,14 @@ a.ui-button:active,
   left: 10px;
   transform: translateY(-50%);
   font-size: 12px;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #6c757d;
+  border-color: #6c757d;
+  opacity: 0.5; }
+  .btn-scroll-to-selected:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d; }
   .btn-scroll-to-selected.tm-active {
     display: flex; }
 
