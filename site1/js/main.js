@@ -20,43 +20,6 @@ function initer(fn, n) {
 
 $(document).ready(function () {
 
-    //clear sliders min-max button
-    (function () {
-        return;
-        var $clearBtn = $('.clear_f');
-        var $sliderPrice = $(".slider_price");
-        var $sliderDeparture = $(" .slider_departure");
-        var $sliderArrival = $(".slider_arrival");
-        var $sliderDuration = $(".slider_duration");
-        var $searchClass = $('.search_class');
-        var $menu = $('#fmenu');
-
-        var sliderPriceOptions = getDefaultOptions($sliderPrice);
-        var sliderDepartureOptions = getDefaultOptions($sliderDeparture);
-        var $sliderArrivalOptions = getDefaultOptions($sliderArrival);
-        var $sliderDurationOptions = getDefaultOptions($sliderDuration);
-
-
-        $clearBtn.on('click', resetSliders);
-
-        function resetSliders (e) {
-            $sliderPrice.slider("option", "values", sliderPriceOptions);
-            $sliderDeparture.slider("option", "values", sliderDepartureOptions);
-            $sliderArrival.slider("option", "values", $sliderArrivalOptions);
-            $sliderDuration.slider("option", "values", $sliderDurationOptions);
-            $searchClass.prop('checked', true);
-            $menu.removeClass('filter-active');
-            e.preventDefault();
-        }
-
-        function getDefaultOptions($slider) {
-            return [
-                parseInt($slider.attr('data-min')),
-                parseInt($slider.attr('data-max'))
-            ];
-        }
-    })();
-
     // // Burger
     //
     // $('.burger-wrap').click(function () {
