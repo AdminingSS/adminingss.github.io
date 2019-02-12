@@ -12151,6 +12151,9 @@ article .block-title {
   .slick-next::before {
     content: "\f054"; }
 
+.pagination {
+  justify-content: center; }
+
 .page-link {
   color: #e40000; }
   .page-link:hover {
@@ -12372,5 +12375,9 @@ article .block-title {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto; } }
+.faq-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
