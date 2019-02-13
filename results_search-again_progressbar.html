@@ -24,7 +24,7 @@
 <body>
 <div>
 
-    <!--Header-->
+    <!-- Header -->
     <header class="header navbar navbar-expand-xl navbar-light bg-light">
         <div class="container">
 
@@ -105,54 +105,79 @@
 
                 <!-- Menu -->
                 <ul class="menu-main navbar-nav mr-xl-2">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown tm-dropdown-full">
                         <a class="nav-link" href="#">Popular Trains</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
+                                <a class="dropdown-header" href="/moscow-routes">Moscow routes</a>
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="/destination-moscow-st-petersburg-railway">Moscow
+                                            - St. Petersburg</a>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="/destination-moscow-novgorod-railway">Moscow -
+                                            Nizhny Novgorod</a>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="/destination-moscow-sochi-railway">Moscow -
+                                            Sochi</a>
                                     </li>
+
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="/destination-moscow-vladimir-railway">Moscow -
+                                            Vladimir</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="/destination-moscow-kazan-railway">Moscow -
+                                            Kazan</a>
+                                    </li>
+
                                 </ul>
                             </li>
+
                             <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
+                                <a class="dropdown-header" href="/st.petersburg-routes">St.Petersburg routes</a>
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="/destination-train-stpetersburg-moscow">St.Petersburg
+                                            - Moscow</a>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="/destination-st-petersburg-petrozavodsk-railway">St.Petersburg
+                                            - Petrozavodsk</a>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="/destination-st-petersburg-novgorod-railway">St.Petersburg
+                                            - Nizhny Novgorod</a>
                                     </li>
+
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" href="/destination-st-petersburg-sochi-railway">St.Petersburg
+                                            - Sochi</a>
+                                    </li>
+
                                 </ul>
                             </li>
+
                             <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
+                                <a class="dropdown-header" href="/destination-trans-siberian-railway">Transsiberian
+                                    routes</a>
                             </li>
+
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="/international-routes">International routes</a>
+                            </li>
+
+                            <li class="dropdown-item">
+                                <a class="dropdown-header" href="/other-routes">Other routes</a>
+                            </li>
+
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -394,87 +419,18 @@
     <!--Results-->
     <div class="section">
         <div class="container">
-            <h2 class="mb-4">Search results</h2>
+            <h2 class="mb-4">Searching</h2>
 
             <a name="top"></a>
 
-            <ul class="ticket-menu nav">
-                <li class="nav-item">
-                    <a class="toolt nav-link active" id="tab0"
-                       href="https://rustrains.com/rzd?trip=2&from_multi%5B0%5D=2000000&from_multi%5B1%5D=3300100&to_multi%5B0%5D=3300100&to_multi%5B1%5D=2000000&date_from_multi%5B0%5D=13.02.2019&date_from_multi%5B1%5D=20.02.2019&amount_multi=1&current=0">
-                        Moscow - Beijing, 13 Feb 2019
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="toolt nav-link" id="tab1"
-                       href="https://rustrains.com/rzd?trip=2&from_multi%5B0%5D=2000000&from_multi%5B1%5D=3300100&to_multi%5B0%5D=3300100&to_multi%5B1%5D=2000000&date_from_multi%5B0%5D=13.02.2019&date_from_multi%5B1%5D=20.02.2019&amount_multi=1&current=1">
-                        Beijing - Moscow, 20 Feb 2019
-                    </a>
-                </li>
-            </ul>
-
-            <div id="preload" style="text-align: center; display: none;"><img src="/icons/train.gif"></div>
-
             <div class="ticket-notfound">
 
-                <div class="ticket-notfound-message text-center d-flex align-items-center mb-3">
-                    <div class="text-danger mr-3">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div>Either something went wrong or there are no trains available.
-                        You can search again and also check nearby dates.
+                <div class="progress">
+                    <div role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"
+                         class="progress-bar progress-bar-striped progress-bar-animated"
+                         style="width: 50%;">
                     </div>
                 </div>
-                <div class="text-center mb-5">
-                    <button type="button" class="tm-btn-red btn btn-lg">Search again</button>
-                </div>
-
-                <div class="row align-items-center justify-content-center mb-5">
-                    <div class="col-lg-auto mb-4 mb-lg-0">
-                        <div class="row align-items-center">
-                            <div class="col-sm-auto">
-                                <h6>Date range to search:</h6>
-                            </div>
-                            <div class="col-auto">
-                                <select>
-                                    <option value="3">+/- 3 days</option>
-                                    <option value="5">+/- 5 days</option>
-                                    <option value="7">+/- 7 days</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-auto mb-4 mb-lg-0">
-                        <div class="row align-items-center">
-                            <div class="col-sm-auto">
-                                <h6>Search for trains:</h6>
-                            </div>
-                            <div class="col-auto">
-                                <select>
-                                    <option value="both">before and after</option>
-                                    <option value="before">only before</option>
-                                    <option value="after">only after</option>
-                                </select>
-                            </div>
-                            <div class="col-auto">
-                                <div><strong>13.02.19</strong></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h6>Found dates:</h6>
-                <div class="my-3">
-                    <a href="https://rustrains.com/rzd?trip=2&amp;from_multi[]=2000000&amp;to_multi[]=3300100&amp;date_from_multi[]=12.02.2019&amp;from_multi[]=3300100&amp;to_multi[]=2000000&amp;date_from_multi[]=20.02.2019&amp;amount_multi=1"
-                       class="btn btn-outline-secondary mb-2 mr-2">12.02.2019</a>
-                    <a href="https://rustrains.com/rzd?trip=2&amp;from_multi[]=2000000&amp;to_multi[]=3300100&amp;date_from_multi[]=16.02.2019&amp;from_multi[]=3300100&amp;to_multi[]=2000000&amp;date_from_multi[]=20.02.2019&amp;amount_multi=1"
-                       class="btn btn-outline-secondary mb-2 mr-2">16.02.2019</a>
-                    <a href="https://rustrains.com/rzd?trip=2&amp;from_multi[]=2000000&amp;to_multi[]=3300100&amp;date_from_multi[]=09.02.2019&amp;from_multi[]=3300100&amp;to_multi[]=2000000&amp;date_from_multi[]=20.02.2019&amp;amount_multi=1"
-                       class="btn btn-outline-secondary mb-2 mr-2">09.02.2019</a>
-                    <a href="https://rustrains.com/rzd?trip=2&amp;from_multi[]=2000000&amp;to_multi[]=3300100&amp;date_from_multi[]=19.02.2019&amp;from_multi[]=3300100&amp;to_multi[]=2000000&amp;date_from_multi[]=20.02.2019&amp;amount_multi=1"
-                       class="btn btn-outline-secondary mb-2 mr-2">19.02.2019</a>
-                </div>
-
 
             </div>
 
@@ -779,176 +735,6 @@
             <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
             <!--<button type="button" class="btn btn-primary">Save changes</button>-->
             <!--</div>-->
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
-     aria-hidden="true">
-    <div class="tm-modal-search modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="searchModalLabel">Modify your search</h5>
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h6>Edit destinations</h6>
-                <div class="row align-items-center mb-3">
-                    <div class="col">
-                        Moscow
-                    </div>
-                    <div class="col-auto">
-                        <button type="button" class="btn btn-outline-secondary"><i class="fas fa-exchange-alt"></i>
-                        </button>
-                    </div>
-                    <div class="col">
-                        Saint-Petersburg
-                    </div>
-                </div>
-
-                <h6>Edit dates</h6>
-                <div class="row align-items-center mb-3">
-                    <div class="col">
-                        <label class="showcase-item  showcase-date">
-                            <div class="label">date</div>
-                            <input type="text" class="form-control" required="required" readonly="readonly"
-                                   autocomplete="off" placeholder="" value="">
-                        </label>
-                    </div>
-
-                    <div class="col">
-                        <label class="showcase-item  showcase-date">
-                            <div class="label">return date</div>
-                            <input type="text" class="form-control" required="required" readonly="readonly"
-                                   autocomplete="off" placeholder="" value="">
-                        </label>
-                    </div>
-
-                </div>
-
-                <h6>Edit passengers</h6>
-                <div class="showcase-item showcase-quantity ticket-toggle">
-                    <div class="label">Passengers</div>
-                    <select autocomplete="off">
-                        <option value="1">1 passenger</option>
-                        <option value="2">2 passengers</option>
-                        <option value="3">3 passengers</option>
-                        <option value="4">4 passengers</option>
-                        <option value="5">5 passengers</option>
-                        <option value="6">6 passengers</option>
-                        <option value="7">7 passengers</option>
-                        <option value="8">8 passengers</option>
-                        <option value="9">9 passengers</option>
-                        <option value="10">10 passengers</option>
-                        <option value="11">11 passengers</option>
-                        <option value="12">12 passengers</option>
-                        <option value="13">13 passengers</option>
-                        <option value="14">14 passengers</option>
-                        <option value="15">15 passengers</option>
-                        <option value="16">16 passengers</option>
-                        <option value="17">17 passengers</option>
-                        <option value="18">18 passengers</option>
-                        <option value="19">19 passengers</option>
-                        <option value="20">20 passengers</option>
-                        <option value="21">21 passengers</option>
-                        <option value="22">22 passengers</option>
-                        <option value="23">23 passengers</option>
-                        <option value="24">24 passengers</option>
-                        <option value="25">25 passengers</option>
-                        <option value="26">26 passengers</option>
-                        <option value="27">27 passengers</option>
-                        <option value="28">28 passengers</option>
-                        <option value="29">29 passengers</option>
-                        <option value="30">30 passengers</option>
-                        <option value="31">31 passengers</option>
-                        <option value="32">32 passengers</option>
-                        <option value="33">33 passengers</option>
-                        <option value="34">34 passengers</option>
-                        <option value="35">35 passengers</option>
-                        <option value="36">36 passengers</option>
-                        <option value="37">37 passengers</option>
-                        <option value="38">38 passengers</option>
-                        <option value="39">39 passengers</option>
-                        <option value="40">40 passengers</option>
-                    </select></div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn tm-btn-red">Apply</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="tm-train-types-modal modal fade" id="trainTypesModal" tabindex="-1" role="dialog"
-     aria-labelledby="trainTypesModalLabel"
-     aria-hidden="true">
-    <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <!--<h5 class="modal-title" id="trainTypesModalLabel"></h5>-->
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body p-2">
-                <div class="row no-gutters">
-                    <div class="col">
-                        <div class="tm-slider__train-types-top">
-                            <div>
-                                <img src="site1/images/train-station.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="site1/images/bullet-train.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <div class="tm-slider__train-types-main">
-                            <div class="tm-slide-highlight">
-                                <img src="site1/images/train-station.jpg" alt="">
-                            </div>
-                            <div>
-                                <img src="site1/images/bullet-train.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <div class="tm-slider__train-types-desc">
-                            Подмножество монотонно. Комплексное число монотонно. Подмножество изменяет аксиоматичный
-                            Наибольший Общий Делитель (НОД).
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="routeModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="routeModalLabel">Error</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Unable to load train route.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
         </div>
     </div>
 </div>

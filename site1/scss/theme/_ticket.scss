@@ -516,7 +516,6 @@
 }
 
 
-
 /* Ticket filter */
 
 .ticket-filter {
@@ -584,7 +583,22 @@
       list-style: none;
       text-align: left;
 
-      &.more {
+      > li {
+        display: none;
+
+        &:first-child, &:nth-child(2), &:nth-child(3) {
+          display: block;
+        }
+      }
+
+      &.tm-active {
+
+        > li {
+          display: block;
+        }
+      }
+
+      /*&.more {
         position: relative;
         max-height: 112px;
         overflow: hidden;
@@ -599,7 +613,7 @@
           bottom: 0;
           height: 40px;
         }
-      }
+      }*/
     }
 
     .chal {
@@ -619,6 +633,21 @@
 
     &:hover {
       color: #e40000;
+    }
+
+    .hide-more {
+      display: none;
+    }
+
+    &.tm-active {
+
+      .show-more {
+        display: none;
+      }
+
+      .hide-more {
+        display: block;
+      }
     }
   }
 

@@ -2884,62 +2884,39 @@ a.ui-button:active,
 .order-total-item {
   padding: 30px 0;
   border-top: 1px solid #ededed; }
-
 .order-total-head {
   font-weight: bold;
   margin-bottom: 20px; }
-
-.order-status {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.order-status .state.green {
-  color: darkgreen; }
-
-.order-status .state.red {
-  color: red; }
-
 .order-total-paid {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
   margin-bottom: 20px; }
-
-.order-total-paid .price {
-  flex-shrink: 0; }
-
-.order-total-paid .price .currency {
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: normal; }
-
+  .order-total-paid .currency {
+    font-size: 10px;
+    font-weight: normal; }
 .order-total-description {
   font-size: 14px; }
-
 .order-total-buttons {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto; }
+  .order-total-buttons button {
+    font-size: 14px;
+    width: 48%;
+    margin-bottom: 10px; }
+  .order-total-buttons .paybutton, .order-total-buttons .btn-pay {
+    width: 100%;
+    margin-bottom: 10px; }
 
-.order-total-buttons > button {
-  font-size: 14px;
-  text-transform: none;
-  width: 115px;
-  text-align: center;
-  margin: 0 3px; }
-
-.order-total-buttons .paybutton {
-  width: 236px;
-  margin-bottom: 5px;
-  text-align: center; }
-
-.order-total-buttons .paybutton:hover {
-  color: #ffffff; }
-
-.order-total-buttons button:first-child {
-  margin-right: 10px; }
+.order-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
 
 .order-progressbar {
   display: flex;
@@ -4151,20 +4128,29 @@ a.ui-button:active,
   .ticket-filter-param ul {
     padding-left: 0;
     list-style: none;
-    text-align: left; }
-    .ticket-filter-param ul.more {
-      position: relative;
-      max-height: 112px;
-      overflow: hidden; }
-      .ticket-filter-param ul.more::after {
-        content: '';
-        background-image: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 40px; }
+    text-align: left;
+      /*&.more {
+        position: relative;
+        max-height: 112px;
+        overflow: hidden;
+
+        &::after {
+          content: '';
+          background-image: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 40px;
+        }
+      }*/ }
+    .ticket-filter-param ul > li {
+      display: none; }
+      .ticket-filter-param ul > li:first-child, .ticket-filter-param ul > li:nth-child(2), .ticket-filter-param ul > li:nth-child(3) {
+        display: block; }
+    .ticket-filter-param ul.tm-active > li {
+      display: block; }
   .ticket-filter-param .chal {
     margin-bottom: 10px; }
 .ticket-filter-apply {
@@ -4176,6 +4162,12 @@ a.ui-button:active,
   cursor: pointer; }
   .ticket-filter-more:hover {
     color: #e40000; }
+  .ticket-filter-more .hide-more {
+    display: none; }
+  .ticket-filter-more.tm-active .show-more {
+    display: none; }
+  .ticket-filter-more.tm-active .hide-more {
+    display: block; }
 .ticket-filter-clear {
   display: block;
   position: absolute;
@@ -6700,10 +6692,10 @@ article .block-title {
   color: #a3a3a3; }
 
 .red {
-  color: #ca0d03; }
+  color: #e40000; }
 
 .green {
-  color: #319069; }
+  color: #28a745; }
 
 .black {
   color: #000000; }
@@ -12086,6 +12078,9 @@ article .block-title {
   .tm-btn-link:hover, .tm-btn-link:focus {
     color: #b10000; }
 
+.progress-bar {
+  background-color: #e40000; }
+
 .content-page {
   line-height: 1.5; }
   .content-page a:not(.btn) {
@@ -12378,6 +12373,7 @@ article .block-title {
 .faq-controls {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=style.css.map */

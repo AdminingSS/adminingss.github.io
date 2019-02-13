@@ -531,78 +531,60 @@
 
 
 
+// Order total
 
+.order-total {
 
-.order-total-item {
-  padding: 30px 0;
-  border-top: 1px solid #ededed;
-}
+  &-item {
+    padding: 30px 0;
+    border-top: 1px solid #ededed;
+  }
 
-.order-total-head {
-  font-weight: bold;
-  margin-bottom: 20px;
+  &-head {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &-paid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    .currency {
+      font-size: 10px;
+      font-weight: normal;
+    }
+  }
+
+  &-description {
+    font-size: 14px;
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+
+    button {
+      font-size: 14px;
+      width: 48%;
+      margin-bottom: 10px;
+    }
+
+    .paybutton, .btn-pay {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .order-status {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.order-status .state.green {
-  color: darkgreen;
-}
-
-.order-status .state.red {
-  color: red;
-}
-
-.order-total-paid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.order-total-paid .price {
-  flex-shrink: 0;
-}
-
-.order-total-paid .price .currency {
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: normal;
-}
-
-.order-total-description {
-  font-size: 14px;
-}
-
-.order-total-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.order-total-buttons > button {
-  font-size: 14px;
-  text-transform: none;
-  width: 115px;
-  text-align: center;
-  margin: 0 3px;
-}
-
-.order-total-buttons .paybutton {
-  width: 236px;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-.order-total-buttons .paybutton:hover {
-  color: #ffffff;
-}
-
-.order-total-buttons button:first-child {
-  margin-right: 10px;
 }

@@ -1,6 +1,6 @@
 //helper
 function initer(fn, n) {
-    var count = n || 5;
+    var count = n || 10;
     var result = false;
     var timer = 1000;
 
@@ -432,8 +432,10 @@ $(document).ready(function () {
     // });
 
     // show more filter
-    (function () {
+    initer(function () {
         var $showFilterInModal = $('.js__show-more-modal');
+
+        if (!$showFilterInModal.length) return false;
 
         $showFilterInModal.each(function () {
             var $toggler = $(this);
@@ -453,6 +455,7 @@ $(document).ready(function () {
 
         function durationPos() {
             if ($(window).width() < 540) {
+
                 var left,
                     width;
                 $('.ticket-duration').each(function () {
@@ -477,13 +480,18 @@ $(document).ready(function () {
             $filters.each(function () {
                 var $filter = $(this);
                 var $showMoreBtn = $filter.parent().find('> .ticket-filter-more');
-                var height = $filter.outerHeight();
-                var maxHeight = 112;
+                var $filterItems = $filter.children();
 
-                if (height < maxHeight) return;
+                if ($filterItems.length < 4) return;
 
-                $filter.addClass('more');
                 $showMoreBtn.show();
+
+                $showMoreBtn.on('click', function () {
+                    var activeClassName = 'tm-active';
+
+                    $showMoreBtn.toggleClass(activeClassName);
+                    $filter.toggleClass(activeClassName);
+                });
             });
         }
 
@@ -492,16 +500,18 @@ $(document).ready(function () {
             showMoreFilters();
         }, 2100);
 
-        $(window).resize(function () {
+        $(window).on('resize', function () {
             durationPos();
         });
 
-        $('.results .nav-link').click(function () {
+        $('.results .nav-link').on('click', function () {
             setTimeout(function () {
                 durationPos();
                 showMoreFilters();
             }, 10);
         });
+
+        return true;
     })();
 
     $('.train-type').click(function () {
@@ -523,11 +533,6 @@ $(document).ready(function () {
         } else {
             $(this).removeClass('complete');
         }
-    });
-
-    $('.ticket-filter-more').click(function () {
-        $(this).prev().removeClass('more');
-        $(this).hide();
     });
 
     /* $('.order-passenger').click(function () {
