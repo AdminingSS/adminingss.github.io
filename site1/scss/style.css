@@ -3812,7 +3812,7 @@ a.ui-button:active,
   align-items: center;
   position: fixed;
   top: 50%;
-  left: 10px;
+  right: 10px;
   transform: translateY(-50%);
   font-size: 12px;
   font-weight: 700;
@@ -3968,8 +3968,8 @@ a.ui-button:active,
     text-align: center; }
   .ticket-item .duration-bar {
     position: relative;
-    height: 2px;
     margin-left: 10%;
+    margin-top: 5px;
     width: 80%;
     height: 2px;
     background-color: #777; }
@@ -4129,6 +4129,7 @@ a.ui-button:active,
     padding-left: 0;
     list-style: none;
     text-align: left;
+    overflow: hidden;
       /*&.more {
         position: relative;
         max-height: 112px;
@@ -12078,9 +12079,9 @@ article .block-title {
   .tm-btn-link:hover, .tm-btn-link:focus {
     color: #b10000; }
 
-.progress-bar {
-  background-color: #e40000; }
-
+/*.progress-bar {
+  background-color: #e40000;
+}*/
 .content-page {
   line-height: 1.5; }
   .content-page a:not(.btn) {
@@ -12370,7 +12371,7 @@ article .block-title {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto; } }
-.faq-controls {
+.page-controls, .faq-controls {
   display: flex;
   justify-content: center;
   align-items: center;

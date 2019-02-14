@@ -7,8 +7,8 @@
             @if($articles)
                 <div id="faq-accordion" class="accordion mb-5">
                 @foreach($articles as $k=>$article)
+                    @component('components::admin', ['links' => $article->admin()]) @endcomponent
                     <div class="card">
-                        @component('components::admin', ['links' => $article->admin()]) @endcomponent
                         <div class="card-header @if($k != 0) collapsed @endif" data-toggle="collapse" data-target="#faqCollapse-{{$k}}">
                             <h3 class="mb-0">{!! $article->name !!}</h3>
                         </div>
@@ -22,8 +22,8 @@
                         </div>
                     </div>
                 @endforeach
-                    <div class="pagination-wrapper"> {{$articles->links()}} </div>
                 </div>
+                <div class="pagination-wrapper"> {{$articles->links()}} </div>
                 @endif
         </div></div>
 @endsection

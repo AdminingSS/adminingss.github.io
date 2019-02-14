@@ -317,18 +317,6 @@ $(document).ready(function () {
                 width: '100%'
             });
         })();
-
-
-        initer(function () {
-            var $ticketNotfound = $('.ticket-notfound select');
-
-            $ticketNotfound.select2({
-                dropdownAutoWidth: true,
-                width: '100%'
-            });
-
-            if ($ticketNotfound.length) return true;
-        });
     })();
 
     // dropdown
@@ -479,40 +467,55 @@ $(document).ready(function () {
 
             $filters.each(function () {
                 var $filter = $(this);
+                var activeClassName = 'tm-active';
                 var $showMoreBtn = $filter.parent().find('> .ticket-filter-more');
                 var $filterItems = $filter.children();
 
                 if ($filterItems.length < 4) return;
 
+                $filter.removeClass(activeClassName);
+                $filter.css({
+                    height: 'auto',
+                });
+                var filterStartHeight = $filter.height() + 'px';
+                $filter.addClass(activeClassName);
+                var filterEndHeight = $filter.height() + 'px';
+                $filter.css({
+                    height: filterStartHeight,
+                });
                 $showMoreBtn.show();
 
+                $showMoreBtn.off('click');
                 $showMoreBtn.on('click', function () {
-                    var activeClassName = 'tm-active';
-
                     $showMoreBtn.toggleClass(activeClassName);
-                    $filter.toggleClass(activeClassName);
+                    $filter.animate({
+                            height: $showMoreBtn.hasClass(activeClassName) ? filterEndHeight : filterStartHeight
+                        }, 500);
                 });
             });
         }
 
-        setTimeout(function () {
+        /*setTimeout(function () {
             durationPos();
             showMoreFilters();
-        }, 2100);
+        }, 2100);*/
+
+        durationPos();
+        showMoreFilters();
 
         $(window).on('resize', function () {
             durationPos();
         });
 
-        $('.results .nav-link').on('click', function () {
+       /* $('.results .nav-link').on('click', function () {
             setTimeout(function () {
                 durationPos();
-                showMoreFilters();
+               /!* showMoreFilters();*!/
             }, 10);
-        });
+        });*/
 
         return true;
-    })();
+    });
 
     $('.train-type').click(function () {
         $(this).parent().find('.train-type').removeClass('active');
