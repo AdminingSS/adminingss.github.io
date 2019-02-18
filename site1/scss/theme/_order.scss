@@ -150,10 +150,23 @@
   }
 }
 
+.order-passenger-info {
+
+  .btn-clear {
+    padding: 0;
+    border-bottom: 1px dashed;
+
+    &:hover {
+      color: #999;
+    }
+  }
+}
+
 // Order input
 
 .order-input {
   display: block;
+  position: relative;
   margin: 0;
 
   > span:not(.select2) {
@@ -165,10 +178,30 @@
 
   input {
     width: 100%;
+    padding-right: 20px;
   }
 
   textarea {
     min-height: 110px;
+  }
+
+  .close {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    line-height: 38px;
+    font-weight: normal;
+    color: #ccc;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #e40000;
+    }
+
+    &:not(:disabled):not(.disabled):focus, &:not(:disabled):not(.disabled):hover {
+      opacity: 1;
+    }
   }
 
   .select2-container--default .select2-selection--single {
@@ -184,10 +217,6 @@
     font-size: 16px;
     color: #555;
   }
-
-/*  .order-input .vue-treeselect__x-container {
-    display: none !important;
-  }*/
 
   .vue-treeselect__input-container {
 

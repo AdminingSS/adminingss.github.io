@@ -404,7 +404,7 @@
                                                             </div>
 
                                                             <div class="col-sm-4 col-lg-4 mb-4">
-                                                                <button type="button" class="btn tm-btn-red">Clear</button>
+                                                                <button type="button" class="btn btn-clear">Clear passenger</button>
                                                             </div>
 
                                                             <div class="col-sm-6 col-lg-4 mb-4">
@@ -412,6 +412,9 @@
                                                                     <span>First name</span>
                                                                     <input class="form-control" name="seat[0][first_name]" v-model="first_name"
                                                                            maxlength="255" required="" type="text" placeholder="John">
+                                                                    <button type="button" class="close" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
                                                                 </label>
                                                             </div>
                                                             <div class="col-sm-6 col-lg-4 mb-4">
@@ -419,6 +422,9 @@
                                                                     <span>Middle name (optional)</span>
                                                                     <input class="form-control" name="seat[0][middle_name]" v-model="middle_name"
                                                                            maxlength="255" type="text" placeholder="J.">
+                                                                    <button type="button" class="close" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
                                                                 </label>
                                                             </div>
                                                             <div class="col-sm-6 col-lg-4 mb-4">
@@ -426,6 +432,9 @@
                                                                     <span>Last name</span>
                                                                     <input class="form-control" name="seat[0][last_name]" v-model="last_name" maxlength="255"
                                                                            required="" type="text" placeholder="Smith">
+                                                                    <button type="button" class="close" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
                                                                 </label>
                                                             </div>
                                                             <div class="col-sm-6 col-lg-4 mb-4">
@@ -433,6 +442,9 @@
                                                                     <span>Passport number</span>
                                                                     <input class="form-control" name="seat[0][passport]" maxlength="255" required=""
                                                                            type="text" value="" placeholder="12345">
+                                                                    <button type="button" class="close" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
                                                                 </label>
                                                             </div>
                                                             <div class="col-sm-6 col-lg-4 mb-4">
@@ -492,8 +504,9 @@
                                                                     <input type="text" class="date-of-birth-input" required="" name="seat[0][birthday]"
                                                                            v-model="date[0]" autocomplete="off">
 
-
-
+                                                                    <button type="button" class="close" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
                                                                 </label>
                                                             </div>
                                                         </div>

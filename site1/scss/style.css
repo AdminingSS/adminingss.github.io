@@ -2617,21 +2617,39 @@ a.ui-button:active,
       font-weight: 900;
       color: #218838; }
 
+.order-passenger-info .btn-clear {
+  padding: 0;
+  border-bottom: 1px dashed; }
+  .order-passenger-info .btn-clear:hover {
+    color: #999; }
+
 .order-input {
   display: block;
-  margin: 0;
-  /*  .order-input .vue-treeselect__x-container {
-      display: none !important;
-    }*/ }
+  position: relative;
+  margin: 0; }
   .order-input > span:not(.select2) {
     display: block;
     margin-bottom: 5px;
     font-size: 12px;
     font-weight: 600; }
   .order-input input {
-    width: 100%; }
+    width: 100%;
+    padding-right: 20px; }
   .order-input textarea {
     min-height: 110px; }
+  .order-input .close {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    line-height: 38px;
+    font-weight: normal;
+    color: #ccc;
+    opacity: 1;
+    transition: all 0.2s ease-in-out; }
+    .order-input .close:hover {
+      color: #e40000; }
+    .order-input .close:not(:disabled):not(.disabled):focus, .order-input .close:not(:disabled):not(.disabled):hover {
+      opacity: 1; }
   .order-input .select2-container--default .select2-selection--single {
     border: 1px solid #ced4da; }
   .order-input .vue-treeselect__control {
