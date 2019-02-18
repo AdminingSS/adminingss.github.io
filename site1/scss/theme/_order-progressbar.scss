@@ -37,6 +37,25 @@
     color: #999;
     text-align: center;
 
+    a {
+      color: #999;
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
+    }
+
+    a.link-sphere {
+      position: absolute;
+      display: none;
+      min-width: 18px;
+      min-height: 18px;
+      top: 20px;
+      left: 0;
+      border-radius: 50%;
+      border: 5px solid #999;
+      background-color: #fff;
+    }
+
     &::before {
       content: '';
       display: block;
@@ -67,6 +86,14 @@
     &.active {
       color: #000;
 
+      a {
+        color: #000;
+      }
+
+      a.link-sphere {
+        //border-color: #e40000;
+      }
+
       &::before {
         border-color: #e40000;
       }
@@ -79,10 +106,22 @@
     &.passed {
       color: #000;
 
-      &::before {
+      a {
+        color: #000;
+        pointer-events: all;
+        cursor: pointer;
+      }
+
+      a.link-sphere {
+        display: block;
         background-color: #e40000;
         border-color: #e40000;
       }
+
+      //&::before {
+      //  background-color: #e40000;
+      //  border-color: #e40000;
+      //}
     }
   }
 }

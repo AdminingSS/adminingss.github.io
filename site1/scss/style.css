@@ -2927,6 +2927,21 @@ a.ui-button:active,
     font-weight: 700;
     color: #999;
     text-align: center; }
+    .order-progressbar-item a {
+      color: #999;
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none; }
+    .order-progressbar-item a.link-sphere {
+      position: absolute;
+      display: none;
+      min-width: 18px;
+      min-height: 18px;
+      top: 20px;
+      left: 0;
+      border-radius: 50%;
+      border: 5px solid #999;
+      background-color: #fff; }
     .order-progressbar-item::before {
       content: '';
       display: block;
@@ -2944,13 +2959,20 @@ a.ui-button:active,
       transform: none; }
     .order-progressbar-item.active {
       color: #000; }
+      .order-progressbar-item.active a {
+        color: #000; }
       .order-progressbar-item.active::before {
         border-color: #e40000; }
       .order-progressbar-item.active .order-progressbar-percent {
         display: block; }
     .order-progressbar-item.passed {
       color: #000; }
-      .order-progressbar-item.passed::before {
+      .order-progressbar-item.passed a {
+        color: #000;
+        pointer-events: all;
+        cursor: pointer; }
+      .order-progressbar-item.passed a.link-sphere {
+        display: block;
         background-color: #e40000;
         border-color: #e40000; }
 
