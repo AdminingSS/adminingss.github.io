@@ -495,13 +495,10 @@ $(document).ready(function () {
             });
         }
 
-        /*setTimeout(function () {
+        setTimeout(function () {
             durationPos();
             showMoreFilters();
-        }, 2100);*/
-
-        durationPos();
-        showMoreFilters();
+        }, 2100);
 
         $(window).on('resize', function () {
             durationPos();
