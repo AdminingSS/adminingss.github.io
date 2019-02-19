@@ -426,6 +426,43 @@
   }
 }
 
+// Options list
+
+.options_list {
+  background: #fff;
+  width: 500px;
+  position: relative;
+  z-index: 999;
+
+  > p {
+    padding: 3px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+
+    li {
+      cursor: pointer;
+      padding: 3px 15px;
+      font-size: 12px;
+
+      &:hover {
+        background: #2881ff;
+        color: #fff;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 1199px) {
   .showcase {
 
@@ -596,5 +633,9 @@
       //max-width: 48%;
       //padding: 0;
     }
+  }
+
+  .options_list {
+    width: 100%;
   }
 }

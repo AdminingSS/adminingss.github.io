@@ -976,6 +976,30 @@ h1, h2, .head {
     font-weight: 800;
     margin-bottom: 0; }
 
+.options_list {
+  background: #fff;
+  width: 500px;
+  position: relative;
+  z-index: 999; }
+  .options_list > p {
+    padding: 3px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500; }
+  .options_list .list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left; }
+    .options_list .list li {
+      cursor: pointer;
+      padding: 3px 15px;
+      font-size: 12px; }
+      .options_list .list li:hover {
+        background: #2881ff;
+        color: #fff; }
+      .options_list .list li p {
+        margin-bottom: 0; }
+
 @media (max-width: 1199px) {
   .showcase__head {
     font-size: 40px;
@@ -1058,7 +1082,10 @@ h1, h2, .head {
   .showcase-date {
     /*max-width: 100%;*/ }
     .showcase-date .dropdown-menu {
-      max-width: 290px !important; } }
+      max-width: 290px !important; }
+
+  .options_list {
+    width: 100%; } }
 .footer {
   padding-bottom: 20px;
   font-size: 14px;
@@ -3692,32 +3719,6 @@ h1, h2, .head {
 .selected {
   max-width: 100% !important; }
 
-.options_list {
-  background: #fff;
-  width: 500px;
-  position: relative;
-  z-index: 999; }
-
-.options_list .list {
-  list-style-type: none;
-  padding-left: 0;
-  text-align: left; }
-
-.options_list .list li {
-  cursor: pointer;
-  padding: 3px 15px;
-  font-size: 12px; }
-
-.options_list .list li p {
-  margin-bottom: 0; }
-
-.options_list .list li:hover {
-  background: #2881ff;
-  color: #fff; }
-
-@media (max-width: 768px) {
-  .options_list {
-    width: 100%; } }
 .checkbox {
   position: relative;
   padding-left: 30px;

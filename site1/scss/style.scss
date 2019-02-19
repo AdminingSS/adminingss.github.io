@@ -4010,40 +4010,6 @@ h1, h2, .head {
   max-width: 100% !important;
 }
 
-.options_list {
-  background: #fff;
-  width: 500px;
-  position: relative;
-  z-index: 999;
-}
-
-.options_list .list {
-  list-style-type: none;
-  padding-left: 0;
-  text-align: left;
-}
-
-.options_list .list li {
-  cursor: pointer;
-  padding: 3px 15px;
-  font-size: 12px;
-}
-
-.options_list .list li p {
-  margin-bottom: 0;
-}
-
-.options_list .list li:hover {
-  background: #2881ff;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .options_list {
-    width: 100%;
-  }
-}
-
 @import "theme/ticket";
 
 /* Ticket modal */
