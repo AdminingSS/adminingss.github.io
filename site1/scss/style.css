@@ -2626,7 +2626,8 @@ h1, h2, .head {
     font-weight: 600; }
   .order-input input {
     width: 100%;
-    padding-right: 20px; }
+    padding-right: 20px;
+    box-sizing: border-box; }
   .order-input textarea {
     min-height: 110px; }
   .order-input .close {
