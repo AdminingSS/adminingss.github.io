@@ -261,6 +261,17 @@
   }
 }
 
+.order-choose {
+
+  .close {
+    right: 30px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding-right: 45px;
+  }
+}
+
 // Order services
 
 .order-services {

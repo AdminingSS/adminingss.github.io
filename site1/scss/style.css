@@ -2680,6 +2680,11 @@ a.ui-button:active,
   .vue-tel-input .dropdown-item [data-v-dda77e96] {
     flex: 1; }
 
+.order-choose .close {
+  right: 30px; }
+.order-choose .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-right: 45px; }
+
 .order-services {
   padding: 20px 0; }
   .order-services-item b {

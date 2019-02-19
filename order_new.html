@@ -376,7 +376,7 @@
                                                     <div class="order-passenger-inputs mb-4">
                                                         <div class="row align-items-end">
                                                             <div class="col-sm-8 col-lg-8 mb-4">
-                                                                <label class="order-input">
+                                                                <label class="order-input order-choose">
                                                                     <span>Select a passenger</span>
                                                                     <input type="hidden" id="u_0" @input="setData" />
                                                                     <select onchange="setPassenger($(this).val(), 0)" id="sp_0" class="order-select select2-hidden-accessible" autocomplete="off">
@@ -400,6 +400,9 @@
                                                                             шшш шшш шшш 02.03.1994 Angola шшш
                                                                         </option>
                                                                     </select>
+                                                                    <button type="button" class="close" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
                                                                 </label>
                                                             </div>
 
@@ -487,7 +490,7 @@
                                                                 </label>
                                                             </div>
                                                             <div class="col-sm-6 col-lg-4 mb-4">
-                                                                <label class="order-input">
+                                                                <label class="order-input order-choose">
                                                                     <span>Gender</span>
                                                                     <select required="" class="order-select select2-hidden-accessible"
                                                                             autocomplete="off" name="seat[0][sex]" tabindex="-1"
@@ -496,6 +499,9 @@
                                                                         <option value="male">MALE</option>
                                                                         <option value="female">FEMALE</option>
                                                                     </select>
+                                                                    <button type="button" class="close" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
                                                                 </label>
                                                             </div>
                                                             <div class="col-md-6 col-lg-8 col-xl-6">
