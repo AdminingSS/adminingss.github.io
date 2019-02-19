@@ -114,7 +114,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <a href="/destination-{{$destination->slug}}" class="btn tm-btn-red">RRead more</a>
+                                    <a href="/destination-{{$destination->slug}}" class="btn tm-btn-red">Read more</a>
                                 </div>
                             </div>
                         </div>

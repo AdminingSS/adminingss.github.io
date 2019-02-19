@@ -1,0 +1,21 @@
+.page-error {
+
+  &__title {
+    font-size: 144px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  &__text {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &__divider {
+    width: 70px;
+    height: 5px;
+    margin: 25px auto;
+    background-color: #e40000;
+  }
+}
+
