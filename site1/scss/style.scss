@@ -112,12 +112,6 @@ h1, h2, .head {
 }
 
 
-//new bootstrap restyling
-
-.form-control {
-  border-radius: 0;
-}
-
 // Burger
 
 .burger {
@@ -372,57 +366,6 @@ h1, h2, .head {
   border: 1px solid #ddd;
 }
 
-// Datepicker
-
-.ui-datepicker .ui-datepicker-prev span,
-.ui-datepicker .ui-datepicker-next span {
-  display: none;
-}
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
-  border: none !important;
-  width: 9px;
-  height: 16px;
-  background: url(../images/left.png) no-repeat 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 16px;
-  cursor: pointer;
-}
-.ui-datepicker .ui-datepicker-next {
-  background-image: url(../images/right.png);
-  left: auto;
-  right: 16px;
-}
-.ui-state-highlight, 
-.ui-widget-content .ui-state-highlight,
-.ui-widget-header .ui-state-highlight {
-  color: #fff;
-  background-color: $gray;
-  border: 1px solid $gray;
-}
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus,
-.ui-button:hover,
-.ui-button:focus {
-  color: #fff;
-  background-color: $gray;
-  border: 1px solid $gray;
-}
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {
-  color: #fff;
-  background-color: #878787;
-  border: 1px solid #878787;
-}
 
 // Swiper navigation
 
@@ -6048,3 +5991,4 @@ article .block-title {
 @import "theme/coach-class";
 @import "theme/destinations-route";
 @import "theme/faq";
+@import "theme/datepicker-restyling";

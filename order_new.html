@@ -504,15 +504,14 @@
                                                                     </button>
                                                                 </label>
                                                             </div>
-                                                            <div class="col-md-6 col-lg-8 col-xl-6">
-                                                                <label class="order-input date-of-birth">
-                                                                    <span>Date of birth</span>
-                                                                    <input type="text" class="date-of-birth-input" required="" name="seat[0][birthday]"
-                                                                           v-model="date[0]" autocomplete="off">
-
-                                                                    <button type="button" class="close" aria-label="Close">
-                                                                        <span aria-hidden="true">&times;</span>
-                                                                    </button>
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <label class="order-input date-of-birth"><span>Date of birth</span>
+                                                                    <input type="text" required="required"
+                                                                           name="seat[0][birthday]" autocomplete="off"
+                                                                           readonly="readonly" placeholder="31.12.1970"
+                                                                           value="17.06.1987"
+                                                                           class="date-of-birth-input form-control hasDatepicker"
+                                                                           id="dp1550553719002">
                                                                 </label>
                                                             </div>
                                                         </div>
