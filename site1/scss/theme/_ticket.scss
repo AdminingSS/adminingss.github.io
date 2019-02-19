@@ -686,9 +686,16 @@
       }
     }
 
+    &-text {
+      font-weight: 600;
+    }
+
     &-price {
+      position: relative;
+      padding-right: 25px;
       font-weight: 600;
       text-align: right;
+      white-space: nowrap;
     }
 
     &-available {
@@ -829,6 +836,14 @@
   .modal-dialog {
     max-width: 900px;
   }
+}
+
+.btn-answer {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  padding: 0;
+
 }
 
 @media (max-width: 991px) {

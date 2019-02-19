@@ -4213,9 +4213,14 @@ a.ui-button:active,
     border: 2px solid #d81818; }
     .train-type.active .train-radio::before {
       opacity: 1; }
+  .train-type-text {
+    font-weight: 600; }
   .train-type-price {
+    position: relative;
+    padding-right: 25px;
     font-weight: 600;
-    text-align: right; }
+    text-align: right;
+    white-space: nowrap; }
   .train-type-available span {
     font-weight: 600; }
 .train-radio {
@@ -4304,6 +4309,12 @@ a.ui-button:active,
 
 .tm-route-modal .modal-dialog {
   max-width: 900px; }
+
+.btn-answer {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  padding: 0; }
 
 @media (max-width: 991px) {
   .sub-nav-wrap, .btn-filter {
@@ -4473,9 +4484,6 @@ a.ui-button:active,
   .train-infos {
     display: none; }
 
-  .train-types {
-    width: 100%; }
-
   .train-header-info {
     display: none; } }
 @media (max-width: 767px) {
@@ -4496,13 +4504,7 @@ a.ui-button:active,
     justify-content: space-between; }
 
   .train-nav-item {
-    margin: 0; }
-
-  .train-types {
-    padding: 10px; }
-
-  .train-type {
-    padding: 10px; } }
+    margin: 0; } }
 /* Login, register */
 .auth {
   width: 320px;
