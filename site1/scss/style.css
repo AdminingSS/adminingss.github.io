@@ -4251,14 +4251,16 @@ h1, h2, .head {
 
 .ticket-notfound {
   padding: 20px 0; }
+  .ticket-notfound select {
+    padding: 6px 10px;
+    color: #555;
+    border: 1px solid #ddd; }
   .ticket-notfound-message {
     font-size: 18px;
     font-weight: 600;
     padding: 20px 0; }
   .ticket-notfound h6 {
     margin: 0; }
-  .ticket-notfound .select2-container--default .select2-selection--single {
-    border: 1px solid #ddd; }
   .ticket-notfound .btn-lg {
     padding: 10px 20px;
     font-size: 26px;
@@ -5552,6 +5554,7 @@ html .ui-button.ui-state-disabled:hover {
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
+  color: #fff;
   background-color: #999;
   border-color: #999; }
 
@@ -5567,5 +5570,12 @@ a.ui-button:active,
   height: 5px;
   margin: 25px auto;
   background-color: #e40000; }
+
+@media (max-width: 575px) {
+  .page-error__title {
+    font-size: 120px; }
+
+  .page-error__text {
+    font-size: 24px; } }
 
 /*# sourceMappingURL=style.css.map */

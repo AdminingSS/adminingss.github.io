@@ -789,6 +789,12 @@
 .ticket-notfound {
   padding: 20px 0;
 
+  select {
+    padding: 6px 10px;
+    color: #555;
+    border: 1px solid #ddd;
+  }
+
   &-message {
     font-size: 18px;
     font-weight: 600;
@@ -797,10 +803,6 @@
 
   h6 {
     margin: 0;
-  }
-
-  .select2-container--default .select2-selection--single {
-    border: 1px solid #ddd;
   }
 
   .btn-lg {
