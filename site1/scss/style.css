@@ -2620,6 +2620,8 @@ h1, h2, .head {
     justify-content: space-between; }
     .order-input .date-dropdowns select, .order-input .date-dropdowns .select2-container {
       width: 30% !important; }
+  .order-input .intl-tel-input {
+    width: 100%; }
 
 .vue-tel-input .dropdown-item {
   display: flex;
