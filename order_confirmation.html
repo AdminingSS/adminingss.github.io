@@ -220,7 +220,7 @@
     <!--Content-->
     <div class="section section-small-top">
         <div class="container">
-            <h1 class="mb-2 mb-sm-4">Select payment method</h1>
+            <h1 class="mb-2 mb-sm-4">Order confirmation</h1>
 
             <!--Progressbar-->
             <div class="order-progressbar mb-4">
@@ -242,17 +242,16 @@
                     <div class="order-progressbar-percent">50%</div>
                     <div class="order-progressbar-title"><a href="#">Review order</a></div>
                 </div>
-                <div class="order-progressbar-item active">
+                <div class="order-progressbar-item passed">
                     <a class="link-sphere" href="#"></a>
                     <div class="order-progressbar-percent">75%</div>
                     <div class="order-progressbar-title"><a href="#">Select payment method</a></div>
                 </div>
-                <div class="order-progressbar-item">
-                    <a class="link-sphere" href="#"></a>
+                <div class="order-progressbar-item passed">
                     <div class="order-progressbar-percent">80%</div>
-                    <div class="order-progressbar-title"><a href="#">Payment</a></div>
+                    <div class="order-progressbar-title">Payment</div>
                 </div>
-                <div class="order-progressbar-item">
+                <div class="order-progressbar-item active">
                     <a class="link-sphere" href="#"></a>
                     <div class="order-progressbar-percent">95%</div>
                     <div class="order-progressbar-title"><a href="#">Confirmation</a></div>
@@ -268,97 +267,60 @@
             <div id="preload" style="text-align: center; display: none;"><img src="/icons/train.gif"></div>
 
             <div class="row">
-                <div class="col-lg-4 col-xl-3 order-lg-1 d-none d-lg-block">
+                <div class="col-lg-4 col-xl-3 order-lg-1">
 
-                    <!--Order sidebar-->
-                    <div class="order-sidebar mb-5">
-                        <div class="order-cheque mb-4">
-                            <div class="order-cheque-header">Trip summary</div>
-                            <div class="order-cheque-item">
-                                <div class="order-cheque-title">1 leg</div>
-                                <div class="order-cheque-info">
-                                    6 tickets - 2-сl. sleeping compt.
-                                </div>
-                                <div class="order-cheque-price">
-                                    <div class="price">
-                                        3305 <span class="currency">RUB</span> x 6 = 19830
-                                        <span class="currency">RUB</span>
+                    <!--Sidebar-->
+                    <div class="sidebar">
+
+                        <!--Order sidebar-->
+                        <div class="order-sidebar mb-5">
+                            <div class="order-cheque mb-4">
+                                <div class="order-cheque-header">Trip summary</div>
+                                <div class="order-cheque-item">
+                                    <div class="order-cheque-title">1 leg</div>
+                                    <div class="order-cheque-info">
+                                        6 tickets - 2-сl. sleeping compt.
+                                    </div>
+                                    <div class="order-cheque-price">
+                                        <div class="price">
+                                            3305 <span class="currency">RUB</span> x 6 = 19830
+                                            <span class="currency">RUB</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="order-cheque-taxex">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-auto">
-                                        <div class="description">Tickets</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="price">19830 <span class="currency">RUB</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order-cheque-taxex">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-auto">
-                                        <div class="description">Extras</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="price">0 <span class="currency">RUB</span></div>
+                                <div class="order-cheque-taxex">
+                                    <div class="row align-items-center justify-content-between">
+                                        <div class="col-auto">
+                                            <div class="description">Tickets</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="price">19830 <span class="currency">RUB</span></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="order-cheque-footer">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-auto">
-                                        <div class="description">Grand total</div>
+                                <div class="order-cheque-taxex">
+                                    <div class="row align-items-center justify-content-between">
+                                        <div class="col-auto">
+                                            <div class="description">Extras</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="price">0 <span class="currency">RUB</span></div>
+                                        </div>
                                     </div>
-                                    <div class="col-auto">
-                                        <div class="price">19830 <span class="currency">RUB</span></div>
+                                </div>
+                                <div class="order-cheque-footer">
+                                    <div class="row align-items-center justify-content-between">
+                                        <div class="col-auto">
+                                            <div class="description">Grand total</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="price">19830 <span class="currency">RUB</span></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="order-bottom">
-                            <div class="payment">
-                                <ul class="nav align-items-center justify-content-center mb-2">
-                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay1.png" alt=""></a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay2.png" alt=""></a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay3.png" alt=""></a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay4.png" alt=""></a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay5.png" alt=""></a></li>
-                                </ul>
-                                <p>secure payment options + SSL encryption</p></div>
-                        </div>
-                    </div>
-
-                    <div class="recommendation mb-5">
-                        <div class="row align-items-center mb-4">
-                            <div class="col-3">
-                                <img src="site1/images/icon-train.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                <h4>Great Choice!</h4>
-                                <p>You have selected one of the best trains for this route. Book now!</p>
-                            </div>
-                        </div>
-                        <div class="row align-items-center mb-4">
-                            <div class="col-3">
-                                <img src="site1/images/icon-seat.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                <h4>Guaranteed Seat Reservation</h4>
-                                <p>We will issue e-tickets with guaranteed seat reservation. The best seats possible.</p>
-                            </div>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-3">
-                                <img src="site1/images/icon-service-24h.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                <h4>Real Customer Service</h4>
-                                <p>Need help with your order? Our customer support is always there for you via phone, email or chat.</p>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
@@ -433,50 +395,84 @@
                                     </div>
                                 </div>
 
-                                <div class="order-info d-lg-none">
+                                <div class="order-trip-header">
                                     <div class="container-fluid">
-                                        <div class="order-cheque">
-                                            <div class="order-cheque-header">Trip summary</div>
-                                            <div class="order-cheque-item">
-                                                <div class="order-cheque-title">1 leg</div>
-                                                <div class="order-cheque-info">
-                                                    6 tickets - 2-сl. sleeping compt.
-                                                </div>
-                                                <div class="order-cheque-price">
-                                                    <div class="price">
-                                                        3305 <span class="currency">RUB</span> x 6 = 19830
-                                                        <span class="currency">RUB</span>
+                                        <h4 class="mb-0">Passenger details</h4>
+                                    </div>
+                                </div>
+
+                                <div id="order-review-passengers-accordion" class="order-review-passengers">
+
+                                    <!--Order passenger-->
+                                    <div class="order-passenger">
+                                        <div class="order-passenger-top" data-toggle="collapse" data-target="#passengerCollapse1">
+                                            <div class="container-fluid">
+                                                <h6 class="mb-0">
+                                                    <span>#1 John J. Smith</span>
+                                                </h6>
+                                            </div>
+                                        </div>
+
+                                        <div id="passengerCollapse1" class="collapse show">
+                                            <div class="order-passenger-info">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-6 col-md-3 mb-4">
+                                                            <div class="order-review-title">Date of birth</div>
+                                                            <div class="order-review-text">09.08.1976</div>
+                                                        </div>
+                                                        <div class="col-6 col-md-3 mb-4">
+                                                            <div class="order-review-title">Passport number</div>
+                                                            <div class="order-review-text">3968552250</div>
+                                                        </div>
+                                                        <div class="col-6 col-md-3 mb-4">
+                                                            <div class="order-review-title">Citizenship</div>
+                                                            <div class="order-review-text">United Arab Emirates</div>
+                                                        </div>
+                                                        <div class="col-6 col-md-3 mb-4">
+                                                            <div class="order-review-title">Gender</div>
+                                                            <div class="order-review-text">Male</div>
+                                                        </div>
                                                     </div>
+
+
                                                 </div>
                                             </div>
-                                            <div class="order-cheque-taxex">
-                                                <div class="row align-items-center justify-content-between">
-                                                    <div class="col-auto">
-                                                        <div class="description">Tickets</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <div class="price">19830 <span class="currency">RUB</span></div>
-                                                    </div>
-                                                </div>
+                                        </div>
+                                    </div>
+
+                                    <!--One more Order passenger for example-->
+                                    <div class="order-passenger">
+                                        <div class="order-passenger-top" data-toggle="collapse" data-target="#passengerCollapse2">
+                                            <div class="container-fluid">
+                                                <h6 class="mb-0">
+                                                    <span>#2 Margaret Smith</span>
+                                                </h6>
                                             </div>
-                                            <div class="order-cheque-taxex">
-                                                <div class="row align-items-center justify-content-between">
-                                                    <div class="col-auto">
-                                                        <div class="description">Extras</div>
+                                        </div>
+
+                                        <div id="passengerCollapse2" class="collapse show">
+                                            <div class="order-passenger-info">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-6 col-md-3 mb-4">
+                                                            <div class="order-review-title">Date of birth</div>
+                                                            <div class="order-review-text">25.12.1979</div>
+                                                        </div>
+                                                        <div class="col-6 col-md-3 mb-4">
+                                                            <div class="order-review-title">Passport number</div>
+                                                            <div class="order-review-text">3968238250</div>
+                                                        </div>
+                                                        <div class="col-6 col-md-3 mb-4">
+                                                            <div class="order-review-title">Citizenship</div>
+                                                            <div class="order-review-text">United Arab Emirates</div>
+                                                        </div>
+                                                        <div class="col-6 col-md-3 mb-4">
+                                                            <div class="order-review-title">Gender</div>
+                                                            <div class="order-review-text">Female</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-auto">
-                                                        <div class="price">0 <span class="currency">RUB</span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="order-cheque-footer">
-                                                <div class="row align-items-center justify-content-between">
-                                                    <div class="col-auto">
-                                                        <div class="description">Grand total</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <div class="price">19830 <span class="currency">RUB</span></div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -485,175 +481,67 @@
 
                                 <div class="order-trip-header">
                                     <div class="container-fluid">
-                                        <h4 class="mb-0">Select a payment method:</h4>
+                                        <h4 class="mb-0">Extra services</h4>
                                     </div>
                                 </div>
 
-                                <div class="order-payments">
+                                <div class="order-services">
                                     <div class="container-fluid">
-                                        <div class="order-payment">
-                                            <label class="radio">
-                                                <input type="radio" class="form-check-inline" autocomplete="off" name="pay" value="card" />
-                                                <span></span>
-                                                Card
-                                                <img src="site1/images/pay2.png" alt="">
-                                                <img src="site1/images/pay3.png" alt="">
-                                            </label>
-
-                                            <div id="card" class="order-payment-card" >
-                                                <div class="card-js" id="my-card"  data-capture-name="true">
-                                                    <input class="card-number my-custom-class" autocomplete="off" name="card-number">
-                                                    <input class="name" id="the-card-name-id" autocomplete="off" name="card-holders-name" placeholder="First Name on card" style="width:50%">
-                                                    <input class="name" id="the-card-name-id1" autocomplete="off" name="card-holders-name1" placeholder="Last Name on card" style="width:50%">
-                                                    <input class="expiry-month" autocomplete="off" name="expiry-month">
-                                                    <input class="expiry-year" autocomplete="off" name="expiry-year">
-                                                    <input class="cvc" autocomplete="off" name="cvc">
-                                                </div>
-                                            </div>
+                                        <div class="order-services-item mb-2">
+                                            <div class="order-review-text">balalaika <b>17 RUB</b></div>
                                         </div>
-
-                                        <div class="order-payment">
-                                            <label class="radio">
-                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="paypal" />
-                                                <span></span>
-                                                PayPal
-                                                <img src="site1/images/pay_2.png" alt="">
-                                            </label>
-                                        </div>
-
-                                        <div class="order-payment">
-                                            <label class="radio">
-                                                <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="alipay" />
-                                                <span></span>
-                                                Alipay
-                                                <img src="site1/images/pay_3.png" alt="">
-                                            </label>
-                                        </div>
-
-                                        <div id="more-payment-options" class="collapse">
-                                            <div class="order-payment">
-                                                <label class="radio">
-                                                    <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="wechat" />
-                                                    <span></span>
-                                                    WeChat
-                                                    <img src="site1/images/pay_4.png" alt="">
-                                                </label>
-                                            </div>
-
-                                            <div class="order-payment">
-                                                <label class="radio">
-                                                    <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="giropay" />
-                                                    <span></span>
-                                                    Giropay
-                                                    <img src="site1/images/pay_5.png" alt="">
-                                                </label>
-                                            </div>
-
-                                            <div class="order-payment">
-                                                <label class="radio">
-                                                    <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="ideal" />
-                                                    <span></span>
-                                                    iDEAL
-                                                    <img src="site1/images/pay_6.png" alt="">
-                                                </label>
-                                            </div>
-
-                                            <div class="order-payment">
-                                                <label class="radio">
-                                                    <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="eps" />
-                                                    <span></span>
-                                                    EPS
-                                                    <img src="site1/images/pay_7.png" alt="">
-                                                </label>
-                                            </div>
-
-                                            <div class="order-payment">
-                                                <label class="radio">
-                                                    <input type="radio" autocomplete="off" class="form-check-inline" name="pay" value="onlinebanktransferbrazil" />
-                                                    <span></span>
-                                                    Online Bank Transfer Brazil
-                                                    <img src="site1/images/pay_8.png" alt="">
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <a href="#more-payment-options" class="btn-more-payments collapsed" data-toggle="collapse">
-                                                <span class="show-more">more options</span>
-                                                <span class="hide-more">less options</span>
-                                            </a>
-                                        </div>
-
-                                        <div id="errors" style="color:red"></div>
-
-                                    </div>
-                                </div>
-
-                                <div class="order-info d-lg-none">
-                                    <div class="container-fluid">
-                                        <div class="recommendation">
-                                            <div class="row align-items-center mb-4">
-                                                <div class="col-3">
-                                                    <img src="site1/images/icon-train.png" alt="">
-                                                </div>
-                                                <div class="col-9">
-                                                    <h4>Great Choice!</h4>
-                                                    <p>You have selected one of the best trains for this route. Book now!</p>
-                                                </div>
-                                            </div>
-                                            <div class="row align-items-center mb-4">
-                                                <div class="col-3">
-                                                    <img src="site1/images/icon-seat.png" alt="">
-                                                </div>
-                                                <div class="col-9">
-                                                    <h4>Guaranteed Seat Reservation</h4>
-                                                    <p>We will issue e-tickets with guaranteed seat reservation. The best seats possible.</p>
-                                                </div>
-                                            </div>
-                                            <div class="row align-items-center">
-                                                <div class="col-3">
-                                                    <img src="site1/images/icon-service-24h.png" alt="">
-                                                </div>
-                                                <div class="col-9">
-                                                    <h4>Real Customer Service</h4>
-                                                    <p>Need help with your order? Our customer support is always there for you via phone, email or chat.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="order-trip-header">
-                                    <div class="container-fluid">
-                                        <h4 class="mb-0">Accept terms &#38; conditions</h4>
-                                    </div>
-                                </div>
-
-                                <div class="order-accept">
-                                    <div class="container-fluid">
-                                        <div class="order-accept-item">
-                                            <label class="checkbox">
-                                                <input type="checkbox" v-model="extras" :value="1" name="extra_data[1]">
-                                                <span></span>
-
-                                                I have read and accept <a href="#">Terms and Conditions</a> and
-                                                <a href="#">Privacy Policy</a>
-                                            </label>
+                                        <div class="order-services-item">
+                                            <div class="order-review-text">zaaa  <b>12 RUB</b></div>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
 
+                            <div class="order-trip-item mb-4">
+                                <div class="order-trip-header">
+                                    <div class="container-fluid">
+                                        <h4 class="mb-0">Contact details</h4>
+                                    </div>
+                                </div>
+
+                                <div class="order-details">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-sm-4 mb-4">
+                                                <div class="order-review-title">Email</div>
+                                                <div class="order-review-text">email@gmail.com</div>
+                                            </div>
+                                            <div class="col-sm-4 mb-4">
+                                                <div class="order-review-title">Phone</div>
+                                                <div class="order-review-text">+1 555 1234567</div>
+                                            </div>
+                                            <div class="col-sm-4 mb-4">
+                                                <div class="order-review-title">Contact name</div>
+                                                <div class="order-review-text">John Smith</div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="order-review-title">Additional information</div>
+                                                <div class="order-review-text">Lorem Ipsum is simply dummy text of the
+                                                    printing and typesetting industry. Lorem Ipsum has been the
+                                                    industry's standard dummy text ever since the 1500s, when
+                                                    an unknown printer took a galley of type and scrambled it to make
+                                                    a type specimen book.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="d-flex justify-content-between align-items-center">
-                                <a class="text-secondary" href="https://rustrains.com/order/20190208-50-203704"><i class="fas fa-angle-left"></i>
-                                    Back
-                                </a>
-                                <button type="button" id="do_pay" class="btn tm-btn-red">Continue <i class="fa fa-angle-double-right"></i></button>
+                                <a href="/" class="btn btn-secondary"><i class="fas fa-angle-left"></i>New order</a>
+                                <a href="https://rustrains.com/order-20190220-75-134645" class="btn tm-btn-red">Personal cabinet</a>
                             </div>
 
                         </div>
                     </div>
+
 
                 </div>
 
@@ -985,113 +873,6 @@
 <script src="site1/js/jquery.ui.touch-punch.min.js"></script>
 <script src="site1/js/js.cookie.js"></script>
 <script src="site1/js/main.js"></script>
-
-// imitation of work on the site rustrains.com/order/pay...
-<script>
-    $(document).ready(function(){
-        $('[name="pay"]').change(function(){
-            if($(this).val() == 'card') {
-                $('#card').show();
-            }
-            else {
-                $('#card').hide();
-            }
-        });
-
-        var errors = [];
-
-        function output_errors()
-        {
-            if(errors.length > 0) {
-                for(i=0;i<errors.length;i++){
-                    $('#errors').append('<p>'+errors[i]+'</p>');
-                }
-                errors = [];
-            }
-        }
-
-        $('#do_pay').click(function()
-        {
-            $(this).attr('disabled', true);
-            errors = [];
-            $('#errors').html('');
-
-            if($('[name="pay"]:checked').val() == undefined) {
-                errors.push('Select pay method');
-            }
-            var type = $('[name="pay"]:checked').val();
-            var load = false;
-            var data = {};
-            if(type == 'card') {
-                var myCard = $('#my-card');
-                if (!$('[name="card-number"]').val()) {
-                    errors.push('Please input Card number');
-                }
-                if (!$('[name="card-holders-name"]').val()) {
-                    errors.push('Please input First Name on card');
-                }
-                if (!$('[name="card-holders-name1"]').val()) {
-                    errors.push('Please input Last Name on card');
-                }
-                if (!$('[name="expiry-month"]').val()) {
-                    errors.push('Please input expiry month');
-                }
-                if (!$('[name="expiry-year"]').val()) {
-                    errors.push('Please input expiry year');
-                }
-                if (!$('[name="cvc"]').val()) {
-                    errors.push('Please input CVC');
-                }
-                if ($('[name="expiry-year"]').val() && $('[name="expiry-month"]').val() && !CardJs.isExpiryValid($('[name="expiry-month"]').val(), $('[name="expiry-year"]').val())) {
-                    errors.push('Please input valid expiry date');
-                }
-
-
-                if(errors.length == 0) {
-                    load = true;
-                    data = {
-                        pay: 'card',
-                        type: myCard.CardJs('cardType'),
-                        number: $('[name="card-number"]').val(),
-                        first_name: $('[name="card-holders-name"]').val(),
-                        last_name: $('[name="card-holders-name1"]').val(),
-                        month:$('[name="expiry-month"]').val(),
-                        year:$('[name="expiry-year"]').val(),
-                        cvc:$('[name="cvc"]').val()
-                    };
-                }
-            }
-            else if(type == 'paypal'){
-                data = {
-                    pay: 'paypal'
-                };
-                load = true;
-
-
-            }
-            else $(this).attr('disabled', false);
-
-            if(load) {
-                axios.post('https://rustrains.com/order/pay-process/20190128-18-060504', data)
-                    .then(response => {
-                        if(response.data.success) document.location=response.data.url;
-                    })
-                    .catch(error => {
-                        if (error.response && error.response.data && error.response.data.errors) {
-                            var ar = error.response.data.errors;
-                            for(element in ar) {
-                                errors.push(ar[element][0]);
-                            }
-                            output_errors();
-                        }
-                        $(this).attr('disabled', false);
-                    });
-            }
-            output_errors();
-
-        });
-    });
-</script>
 
 </body>
 </html>

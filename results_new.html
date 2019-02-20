@@ -929,7 +929,6 @@
 
                             </div>
 
-
                         </div>
 
                     </div>
@@ -939,238 +938,243 @@
 
                 <div class="col-lg-3">
 
-                    <!--Ticket filter-->
-                    <div id="ticketFilter" class="ticket-filter">
-                        <a class="ticket-filter-close" href="#ticketFilter" data-toggle="collapse">
-                            <i class="fas fa-times"></i>
-                        </a>
+                    <!--Sidebar-->
+                    <div class="sidebar">
 
-                        <h3 class="text-center">Filters</h3>
+                        <!--Ticket filter-->
+                        <div id="ticketFilter" class="ticket-filter">
+                            <a class="ticket-filter-close" href="#ticketFilter" data-toggle="collapse">
+                                <i class="fas fa-times"></i>
+                            </a>
 
-                        <div class="ticket-filter-sliders">
-                            <div class="ticket-filter-slider">
-                                <h4>Departure</h4>
-                                <div class="slider_departure ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                     data-min="0" data-max="24">
-                                    <span class="min">0</span>
-                                    <span class="max">19</span>
+                            <h3 class="text-center">Filters</h3>
 
-                                    <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                         style="left: 0%; width: 100%;"></div>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                          style="left: 0%;"></span>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                          style="left: 100%;"></span></div>
-                            </div>
-                            <div class="ticket-filter-slider">
-                                <h4>Arrival</h4>
-                                <div class="slider_arrival ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                     data-min="0" data-max="24">
-                                    <span class="min">0</span>
-                                    <span class="max">24</span>
+                            <div class="ticket-filter-sliders">
+                                <div class="ticket-filter-slider">
+                                    <h4>Departure</h4>
+                                    <div class="slider_departure ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                         data-min="0" data-max="24">
+                                        <span class="min">0</span>
+                                        <span class="max">19</span>
 
-                                    <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                         style="left: 0%; width: 100%;"></div>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                          style="left: 0%;"></span>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                          style="left: 100%;"></span></div>
-                            </div>
-                            <div class="ticket-filter-slider">
-                                <h4>Trip duration</h4>
-                                <div class="slider_duration ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                     data-min="210" data-max="588">
-                                    <span class="min">03h 30min</span>
-                                    <span class="max">09h 48min</span>
-
-                                    <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                         style="left: 0%; width: 100%;"></div>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                          style="left: 0%;"></span>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                          style="left: 100%;"></span></div>
-                            </div>
-                            <div class="ticket-filter-slider">
-                                <h4>Price</h4>
-                                <div class="slider_price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                     data-min="741" data-max="16732">
-                                    <span class="min">741</span>
-                                    <span class="max">16732</span>
-
-                                    <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                         style="left: 0%; width: 100%;"></div>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                          style="left: 0%;"></span>
-                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                          style="left: 100%;"></span></div>
-                            </div>
-                        </div>
-
-                        <div class="ticket-filter-params">
-                            <div class="ticket-filter-param">
-                                <h4>Car type</h4>
-
-                                <ul>
-                                    <li class="chal">
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" id="select_all">
-                                            <span></span>
-                                            Select All
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="1-sl. sleeping compt." class="search_class"/>
-                                            <span></span>
-
-                                            1-sl. sleeping compt.
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="2-sl. sleeping compt." class="search_class"/>
-                                            <span></span>
-
-                                            2-sl. sleeping compt.
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="2-сl. sleeping compt. (2-сl. sleeping compt. (Disabled Person))"
-                                                   class="search_class"/>
-                                            <span></span>
-
-                                            2-сl. sleeping compt. (2-сl. sleeping compt. (Disabled Person))
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="2-сl. sleeping compt. (комфорт)" class="search_class"/>
-                                            <span></span>
-
-                                            2-сl. sleeping compt. (комфорт)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="3-sl. open sleeping" class="search_class"/>
-                                            <span></span>
-
-                                            3-sl. open sleeping
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="De Luxe sleeping" class="search_class"/>
-                                            <span></span>
-
-                                            De Luxe sleeping
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (Bistro car)" class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (Bistro car)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (Business class)" class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (Business class)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (Conference compartment)" class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (Conference compartment)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (Economy class (Disabled Person))"
-                                                   class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (Economy class (Disabled Person))
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (Economy class)" class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (Economy class)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (Economy+ class)" class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (Economy+ class)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (First class)" class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (First class)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (Sitting )" class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (Sitting )
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="checkbox">
-                                            <input type="checkbox" autocomplete="off" checked="checked"
-                                                   value="Sitting (Standard)" class="search_class"/>
-                                            <span></span>
-
-                                            Sitting (Standard)
-                                        </label>
-                                    </li>
-                                </ul>
-
-                                <div class="ticket-filter-more">
-                                    <span class="show-more">Show more</span>
-                                    <span class="hide-more">Show less</span>
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                             style="left: 0%; width: 100%;"></div>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 0%;"></span>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 100%;"></span></div>
                                 </div>
+                                <div class="ticket-filter-slider">
+                                    <h4>Arrival</h4>
+                                    <div class="slider_arrival ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                         data-min="0" data-max="24">
+                                        <span class="min">0</span>
+                                        <span class="max">24</span>
 
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                             style="left: 0%; width: 100%;"></div>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 0%;"></span>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 100%;"></span></div>
+                                </div>
+                                <div class="ticket-filter-slider">
+                                    <h4>Trip duration</h4>
+                                    <div class="slider_duration ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                         data-min="210" data-max="588">
+                                        <span class="min">03h 30min</span>
+                                        <span class="max">09h 48min</span>
+
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                             style="left: 0%; width: 100%;"></div>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 0%;"></span>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 100%;"></span></div>
+                                </div>
+                                <div class="ticket-filter-slider">
+                                    <h4>Price</h4>
+                                    <div class="slider_price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                         data-min="741" data-max="16732">
+                                        <span class="min">741</span>
+                                        <span class="max">16732</span>
+
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                             style="left: 0%; width: 100%;"></div>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 0%;"></span>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 100%;"></span></div>
+                                </div>
+                            </div>
+
+                            <div class="ticket-filter-params">
+                                <div class="ticket-filter-param">
+                                    <h4>Car type</h4>
+
+                                    <ul>
+                                        <li class="chal">
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" id="select_all">
+                                                <span></span>
+                                                Select All
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="1-sl. sleeping compt." class="search_class"/>
+                                                <span></span>
+
+                                                1-sl. sleeping compt.
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="2-sl. sleeping compt." class="search_class"/>
+                                                <span></span>
+
+                                                2-sl. sleeping compt.
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="2-сl. sleeping compt. (2-сl. sleeping compt. (Disabled Person))"
+                                                       class="search_class"/>
+                                                <span></span>
+
+                                                2-сl. sleeping compt. (2-сl. sleeping compt. (Disabled Person))
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="2-сl. sleeping compt. (комфорт)" class="search_class"/>
+                                                <span></span>
+
+                                                2-сl. sleeping compt. (комфорт)
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="3-sl. open sleeping" class="search_class"/>
+                                                <span></span>
+
+                                                3-sl. open sleeping
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="De Luxe sleeping" class="search_class"/>
+                                                <span></span>
+
+                                                De Luxe sleeping
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (Bistro car)" class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (Bistro car)
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (Business class)" class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (Business class)
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (Conference compartment)" class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (Conference compartment)
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (Economy class (Disabled Person))"
+                                                       class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (Economy class (Disabled Person))
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (Economy class)" class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (Economy class)
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (Economy+ class)" class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (Economy+ class)
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (First class)" class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (First class)
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (Sitting )" class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (Sitting )
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox">
+                                                <input type="checkbox" autocomplete="off" checked="checked"
+                                                       value="Sitting (Standard)" class="search_class"/>
+                                                <span></span>
+
+                                                Sitting (Standard)
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                    <div class="ticket-filter-more">
+                                        <span class="show-more">Show more</span>
+                                        <span class="hide-more">Show less</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="ticket-filter-apply">
+                                <a href="#" class="clear_f ticket-filter-clear">Clear filters</a>
+                                <button class="btn tm-btn-red" data-target="#ticketFilter" data-toggle="collapse"
+                                        aria-expanded="true">Apply
+                                </button>
                             </div>
                         </div>
 
-                        <div class="ticket-filter-apply">
-                            <a href="#" class="clear_f ticket-filter-clear">Clear filters</a>
-                            <button class="btn tm-btn-red" data-target="#ticketFilter" data-toggle="collapse"
-                                    aria-expanded="true">Apply
-                            </button>
-                        </div>
                     </div>
 
                 </div>

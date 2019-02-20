@@ -118,10 +118,10 @@
         border-color: #e40000;
       }
 
-      //&::before {
-      //  background-color: #e40000;
-      //  border-color: #e40000;
-      //}
+      &::before {
+        background-color: #e40000;
+        border-color: #e40000;
+      }
     }
   }
 }
