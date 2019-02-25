@@ -3721,40 +3721,22 @@ h1, h2, .head {
   &-item {
     padding: 0 20px;
     display: none;
+    text-decoration: none;
+
+    &:hover {
+
+      img {
+        transform: scale(1.05);
+      }
+    }
   }
 
   &-link-wrap {
     position: relative;
     margin-bottom: 20px;
 
-    &:hover {
-      img {
-        transform: scale(1.05);
-      }
-
-      .btn {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
     img {
       transition: all 0.3s linear;
-    }
-
-    .link-image {
-      display: block;
-      text-decoration: none;
-    }
-
-    .btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transition: all 0.3s linear;
-      transform: translate3d(-50%, -50%, 0);
-      visibility: hidden;
-      opacity: 0;
     }
   }
 

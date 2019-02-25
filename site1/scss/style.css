@@ -3532,28 +3532,15 @@ h1, h2, .head {
 
 .articles-item {
   padding: 0 20px;
-  display: none; }
+  display: none;
+  text-decoration: none; }
+  .articles-item:hover img {
+    transform: scale(1.05); }
 .articles-link-wrap {
   position: relative;
   margin-bottom: 20px; }
-  .articles-link-wrap:hover img {
-    transform: scale(1.05); }
-  .articles-link-wrap:hover .btn {
-    visibility: visible;
-    opacity: 1; }
   .articles-link-wrap img {
     transition: all 0.3s linear; }
-  .articles-link-wrap .link-image {
-    display: block;
-    text-decoration: none; }
-  .articles-link-wrap .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transition: all 0.3s linear;
-    transform: translate3d(-50%, -50%, 0);
-    visibility: hidden;
-    opacity: 0; }
 .articles-slider {
   padding: 0 10px; }
   .articles-slider .slick-prev {
@@ -4993,6 +4980,9 @@ article .block-title {
 
 .form-control:disabled, .form-control[readonly] {
   background-color: #f5f5f5; }
+
+button:focus {
+  outline: none; }
 
 @media (min-width: 992px) {
   .column-count-1 {
