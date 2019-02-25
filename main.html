@@ -21,748 +21,839 @@
 </head>
 
 <body>
-<div>
 
-    <!-- Header -->
-    <header class="header navbar navbar-expand-xl navbar-light bg-light">
-        <div class="container">
+<div class="tm-page">
 
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="site1/images/logo.png" alt="">
-            </a>
+    <div class="tm-page__content">
 
-            <!-- Lang menu -->
-            <ul class="menu-lang navbar-nav text-uppercase order-xl-1">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span
-                            class="flag-icon flag-icon-gb"></span> en</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://rustrains.com"><span
+        <!-- Header -->
+        <header class="header navbar navbar-expand-xl navbar-light bg-light">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="site1/images/logo.png" alt="">
+                </a>
+
+                <!-- Lang menu -->
+                <ul class="menu-lang navbar-nav text-uppercase order-xl-1">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span
                                 class="flag-icon flag-icon-gb"></span> en</a>
-                        <a class="dropdown-item" href="http://de.rustrains.com"><span
-                                class="flag-icon flag-icon-de"></span> de</a>
-                        <a class="dropdown-item" href="http://pl.rustrains.com"><span
-                                class="flag-icon flag-icon-pl"></span> pl</a>
-                        <a class="dropdown-item" href="http://cn.rustrains.com"><span
-                                class="flag-icon flag-icon-cn"></span> zh</a>
-                        <a class="dropdown-item" href="http://jp.rustrains.com"><span
-                                class="flag-icon flag-icon-jp"></span> ja</a>
-                        <a class="dropdown-item" href="http://tr.rustrains.com"><span
-                                class="flag-icon flag-icon-tr"></span> tr</a>
-                        <a class="dropdown-item" href="http://ko.rustrains.com"><span
-                                class="flag-icon flag-icon-kr"></span> ko</a>
-                        <a class="dropdown-item" href="http://fi.rustrains.com"><span
-                                class="flag-icon flag-icon-fi"></span> fi</a>
-                        <a class="dropdown-item" href="http://se.rustrains.com"><span
-                                class="flag-icon flag-icon-se"></span> se</a>
-                        <a class="dropdown-item" href="http://es.rustrains.com"><span
-                                class="flag-icon flag-icon-es"></span> es</a>
-                        <a class="dropdown-item" href="http://pt.rustrains.com"><span
-                                class="flag-icon flag-icon-pt"></span> pt</a>
-                        <a class="dropdown-item" href="http://it.rustrains.com"><span
-                                class="flag-icon flag-icon-it"></span> it</a>
-                        <a class="dropdown-item" href="http://fr.rustrains.com"><span
-                                class="flag-icon flag-icon-fr"></span> fr</a>
-                        <a class="dropdown-item" href="http://ru.rustrains.com"><span
-                                class="flag-icon flag-icon-ru"></span> ru</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
-                        <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
-                        <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
-                    aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
-                <!-- My cabinet (for logged in) with dropdown -->
-                <!--<div class="menu-user dropdown mr-xl-3">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sign In
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://rustrains.com/login">Login</a>
-                        <a class="dropdown-item" href="http://rustrains.com/register">Register</a>
-                    </div>
-                </div>-->
-
-                <!-- Log-in with modal -->
-                <div class="menu-user mr-xl-3">
-                    <a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#authModal">
-                        Sign In
-                    </a>
-                </div>
-
-                <!-- Menu -->
-                <ul class="menu-main navbar-nav mr-xl-2">
-                    <li class="nav-item dropdown tm-dropdown-full">
-                        <a class="nav-link" href="#">Popular Trains</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="/moscow-routes">Moscow routes</a>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-moscow-st-petersburg-railway">Moscow
-                                            - St. Petersburg</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-moscow-novgorod-railway">Moscow -
-                                            Nizhny Novgorod</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-moscow-sochi-railway">Moscow -
-                                            Sochi</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-moscow-vladimir-railway">Moscow -
-                                            Vladimir</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-moscow-kazan-railway">Moscow -
-                                            Kazan</a>
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="/st.petersburg-routes">St.Petersburg routes</a>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-train-stpetersburg-moscow">St.Petersburg
-                                            - Moscow</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-st-petersburg-petrozavodsk-railway">St.Petersburg
-                                            - Petrozavodsk</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-st-petersburg-novgorod-railway">St.Petersburg
-                                            - Nizhny Novgorod</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="/destination-st-petersburg-sochi-railway">St.Petersburg
-                                            - Sochi</a>
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="/destination-trans-siberian-railway">Transsiberian
-                                    routes</a>
-                            </li>
-
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="/international-routes">International routes</a>
-                            </li>
-
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="/other-routes">Other routes</a>
-                            </li>
-
-                        </ul>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="http://rustrains.com"><span
+                                    class="flag-icon flag-icon-gb"></span> en</a>
+                            <a class="dropdown-item" href="http://de.rustrains.com"><span
+                                    class="flag-icon flag-icon-de"></span> de</a>
+                            <a class="dropdown-item" href="http://pl.rustrains.com"><span
+                                    class="flag-icon flag-icon-pl"></span> pl</a>
+                            <a class="dropdown-item" href="http://cn.rustrains.com"><span
+                                    class="flag-icon flag-icon-cn"></span> zh</a>
+                            <a class="dropdown-item" href="http://jp.rustrains.com"><span
+                                    class="flag-icon flag-icon-jp"></span> ja</a>
+                            <a class="dropdown-item" href="http://tr.rustrains.com"><span
+                                    class="flag-icon flag-icon-tr"></span> tr</a>
+                            <a class="dropdown-item" href="http://ko.rustrains.com"><span
+                                    class="flag-icon flag-icon-kr"></span> ko</a>
+                            <a class="dropdown-item" href="http://fi.rustrains.com"><span
+                                    class="flag-icon flag-icon-fi"></span> fi</a>
+                            <a class="dropdown-item" href="http://se.rustrains.com"><span
+                                    class="flag-icon flag-icon-se"></span> se</a>
+                            <a class="dropdown-item" href="http://es.rustrains.com"><span
+                                    class="flag-icon flag-icon-es"></span> es</a>
+                            <a class="dropdown-item" href="http://pt.rustrains.com"><span
+                                    class="flag-icon flag-icon-pt"></span> pt</a>
+                            <a class="dropdown-item" href="http://it.rustrains.com"><span
+                                    class="flag-icon flag-icon-it"></span> it</a>
+                            <a class="dropdown-item" href="http://fr.rustrains.com"><span
+                                    class="flag-icon flag-icon-fr"></span> fr</a>
+                            <a class="dropdown-item" href="http://ru.rustrains.com"><span
+                                    class="flag-icon flag-icon-ru"></span> ru</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">Routes and Planning</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">Customer Support</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a class="dropdown-header" href="#">Dropdown header</a>
-
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About Us</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">rub</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="http://rustrains.com/set-currency/rub">rub</a>
+                            <a class="dropdown-item" href="http://rustrains.com/set-currency/usd">usd</a>
+                            <a class="dropdown-item" href="http://rustrains.com/set-currency/eur">eur</a>
+                        </div>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </header>
 
-    <!-- Showcase -->
-    <div class="showcase showcase-home section" id="app">
-        <div class="container d-flex justify-content-center">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
+                        aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="showcase-panel">
-                <h1 class="showcase-title">Search Russian Train Tickets</h1>
+                <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
+                    <!-- My cabinet (for logged in) with dropdown -->
+                    <!--<div class="menu-user dropdown mr-xl-3">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sign In
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="http://rustrains.com/login">Login</a>
+                            <a class="dropdown-item" href="http://rustrains.com/register">Register</a>
+                        </div>
+                    </div>-->
 
-                <form method="GET" action="https://rustrains.com/rzd" accept-charset="UTF-8" id="rzd_search_from"
-                      class="showcase-form">
-                    <div class="showcase-checks">
-                        <div class="showcase-check active"><input id="radioOneTrip" type="radio" value="0" name="trip">
-                            <label for="radioOneTrip">One-Way Trip</label></div>
-                        <div class="showcase-check"><input id="radioReturnTrip" type="radio" value="1" name="trip">
-                            <label for="radioReturnTrip">Return Trip</label></div>
-                        <div class="showcase-check"><input id="radioMultiTrip" type="radio" value="2" name="trip">
-                            <label for="radioMultiTrip">Multi-Leg Trip</label></div>
+                    <!-- Log-in with modal -->
+                    <div class="menu-user mr-xl-3">
+                        <a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#authModal">
+                            Sign In
+                        </a>
                     </div>
-                    <div class="showcase-content">
-                        <div class="showcase-items">
-                            <div class="showcase-item showcase-item_departure">
-                                <div class="label">departure city</div>
-                                <input type="hidden" name="from" required="required">
-                                <div data-v-512a1393="" class="container">
-                                    <div data-v-512a1393=""><input data-v-512a1393="" type="text"
-                                                                   placeholder="From where?" required="required"
-                                                                   autocomplete="off" class="menu__link--toggle">
-                                        <!----></div>
+
+                    <!-- Menu -->
+                    <ul class="menu-main navbar-nav mr-xl-2">
+                        <li class="nav-item dropdown tm-dropdown-full">
+                            <a class="nav-link" href="#">Popular Trains</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="/moscow-routes">Moscow routes</a>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-moscow-st-petersburg-railway">Moscow
+                                                - St. Petersburg</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-moscow-novgorod-railway">Moscow -
+                                                Nizhny Novgorod</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-moscow-sochi-railway">Moscow -
+                                                Sochi</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-moscow-vladimir-railway">Moscow -
+                                                Vladimir</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-moscow-kazan-railway">Moscow -
+                                                Kazan</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="/st.petersburg-routes">St.Petersburg routes</a>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-train-stpetersburg-moscow">St.Petersburg
+                                                - Moscow</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-st-petersburg-petrozavodsk-railway">St.Petersburg
+                                                - Petrozavodsk</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-st-petersburg-novgorod-railway">St.Petersburg
+                                                - Nizhny Novgorod</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="/destination-st-petersburg-sochi-railway">St.Petersburg
+                                                - Sochi</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="/destination-trans-siberian-railway">Transsiberian
+                                        routes</a>
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="/international-routes">International routes</a>
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="/other-routes">Other routes</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">Routes and Planning</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">Customer Support</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="dropdown-header" href="#">Dropdown header</a>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Showcase -->
+        <div class="showcase showcase-home section" id="app">
+            <div class="container d-flex justify-content-center">
+
+                <div class="showcase-panel">
+                    <h1 class="showcase-title">Search Russian Train Tickets</h1>
+
+                    <form method="GET" action="https://rustrains.com/rzd" accept-charset="UTF-8" id="rzd_search_from"
+                          class="showcase-form">
+                        <div class="showcase-checks">
+                            <div class="showcase-check active"><input id="radioOneTrip" type="radio" value="0" name="trip">
+                                <label for="radioOneTrip">One-Way Trip</label></div>
+                            <div class="showcase-check"><input id="radioReturnTrip" type="radio" value="1" name="trip">
+                                <label for="radioReturnTrip">Return Trip</label></div>
+                            <div class="showcase-check"><input id="radioMultiTrip" type="radio" value="2" name="trip">
+                                <label for="radioMultiTrip">Multi-Leg Trip</label></div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-items">
+                                <div class="showcase-item showcase-item_departure">
+                                    <div class="label">departure city</div>
+                                    <input type="hidden" name="from" required="required">
+                                    <div data-v-512a1393="" class="container">
+                                        <div data-v-512a1393=""><input data-v-512a1393="" type="text"
+                                                                       placeholder="From where?" required="required"
+                                                                       autocomplete="off" class="menu__link--toggle">
+                                            <!----></div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary change-item"><i
+                                            class="fas fa-exchange-alt"></i></button>
+
+                                    <button type="button" class="close" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                                <button type="button" class="btn btn-primary change-item"><i
-                                        class="fas fa-exchange-alt"></i></button>
+                                <div class="showcase-item">
+                                    <div class="label">arrival city</div>
+                                    <input type="hidden" name="to" required="required">
+                                    <div data-v-512a1393="" class="container">
+                                        <div data-v-512a1393=""><input data-v-512a1393="" type="text"
+                                                                       placeholder="To where?" required="required"
+                                                                       autocomplete="off" class="menu__link--toggle">
+                                            <!----></div>
+                                    </div>
 
-                                <button type="button" class="close" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="showcase-item">
-                                <div class="label">arrival city</div>
-                                <input type="hidden" name="to" required="required">
-                                <div data-v-512a1393="" class="container">
-                                    <div data-v-512a1393=""><input data-v-512a1393="" type="text"
-                                                                   placeholder="To where?" required="required"
-                                                                   autocomplete="off" class="menu__link--toggle">
-                                        <!----></div>
+                                    <button type="button" class="close" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-
-                                <button type="button" class="close" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                                <label class="showcase-item  showcase-date">
+                                    <div class="label">date</div>
+                                    <input type="text" class="form-control" required="required" name="date_from"
+                                           readonly="readonly" autocomplete="off" placeholder="" value=""></label> <!---->
+                            </div> <!---->
+                            <div class="showcase-buttons">
+                                <div class="showcase-item showcase-quantity ticket-toggle">
+                                    <div class="label">Passengers</div>
+                                    <select name="amount" autocomplete="off">
+                                        <option value="1">1 passenger</option>
+                                        <option value="2">2 passengers</option>
+                                        <option value="3">3 passengers</option>
+                                        <option value="4">4 passengers</option>
+                                        <option value="5">5 passengers</option>
+                                        <option value="6">6 passengers</option>
+                                        <option value="7">7 passengers</option>
+                                        <option value="8">8 passengers</option>
+                                        <option value="9">9 passengers</option>
+                                        <option value="10">10 passengers</option>
+                                        <option value="11">11 passengers</option>
+                                        <option value="12">12 passengers</option>
+                                        <option value="13">13 passengers</option>
+                                        <option value="14">14 passengers</option>
+                                        <option value="15">15 passengers</option>
+                                        <option value="16">16 passengers</option>
+                                        <option value="17">17 passengers</option>
+                                        <option value="18">18 passengers</option>
+                                        <option value="19">19 passengers</option>
+                                        <option value="20">20 passengers</option>
+                                        <option value="21">21 passengers</option>
+                                        <option value="22">22 passengers</option>
+                                        <option value="23">23 passengers</option>
+                                        <option value="24">24 passengers</option>
+                                        <option value="25">25 passengers</option>
+                                        <option value="26">26 passengers</option>
+                                        <option value="27">27 passengers</option>
+                                        <option value="28">28 passengers</option>
+                                        <option value="29">29 passengers</option>
+                                        <option value="30">30 passengers</option>
+                                        <option value="31">31 passengers</option>
+                                        <option value="32">32 passengers</option>
+                                        <option value="33">33 passengers</option>
+                                        <option value="34">34 passengers</option>
+                                        <option value="35">35 passengers</option>
+                                        <option value="36">36 passengers</option>
+                                        <option value="37">37 passengers</option>
+                                        <option value="38">38 passengers</option>
+                                        <option value="39">39 passengers</option>
+                                        <option value="40">40 passengers</option>
+                                    </select></div> <!----> <!---->
+                                <button type="submit" class="link">Search</button>
                             </div>
-                            <label class="showcase-item  showcase-date">
-                                <div class="label">date</div>
-                                <input type="text" class="form-control" required="required" name="date_from"
-                                       readonly="readonly" autocomplete="off" placeholder="" value=""></label> <!---->
-                        </div> <!---->
-                        <div class="showcase-buttons">
-                            <div class="showcase-item showcase-quantity ticket-toggle">
-                                <div class="label">Passengers</div>
-                                <select name="amount" autocomplete="off">
-                                    <option value="1">1 passenger</option>
-                                    <option value="2">2 passengers</option>
-                                    <option value="3">3 passengers</option>
-                                    <option value="4">4 passengers</option>
-                                    <option value="5">5 passengers</option>
-                                    <option value="6">6 passengers</option>
-                                    <option value="7">7 passengers</option>
-                                    <option value="8">8 passengers</option>
-                                    <option value="9">9 passengers</option>
-                                    <option value="10">10 passengers</option>
-                                    <option value="11">11 passengers</option>
-                                    <option value="12">12 passengers</option>
-                                    <option value="13">13 passengers</option>
-                                    <option value="14">14 passengers</option>
-                                    <option value="15">15 passengers</option>
-                                    <option value="16">16 passengers</option>
-                                    <option value="17">17 passengers</option>
-                                    <option value="18">18 passengers</option>
-                                    <option value="19">19 passengers</option>
-                                    <option value="20">20 passengers</option>
-                                    <option value="21">21 passengers</option>
-                                    <option value="22">22 passengers</option>
-                                    <option value="23">23 passengers</option>
-                                    <option value="24">24 passengers</option>
-                                    <option value="25">25 passengers</option>
-                                    <option value="26">26 passengers</option>
-                                    <option value="27">27 passengers</option>
-                                    <option value="28">28 passengers</option>
-                                    <option value="29">29 passengers</option>
-                                    <option value="30">30 passengers</option>
-                                    <option value="31">31 passengers</option>
-                                    <option value="32">32 passengers</option>
-                                    <option value="33">33 passengers</option>
-                                    <option value="34">34 passengers</option>
-                                    <option value="35">35 passengers</option>
-                                    <option value="36">36 passengers</option>
-                                    <option value="37">37 passengers</option>
-                                    <option value="38">38 passengers</option>
-                                    <option value="39">39 passengers</option>
-                                    <option value="40">40 passengers</option>
-                                </select></div> <!----> <!---->
-                            <button type="submit" class="link">Search</button>
                         </div>
-                    </div>
-                    <div class="search-history">
-                        <div class="search-history-container">
-                            <div class="search-history-header">
-                                <div class="search-history-title">Moscow<span> - </span>Saint-Petersburg</div>
-                                <div class="search-history-date">27.02.2019</div>
+                        <div class="search-history">
+                            <div class="search-history-container">
+                                <div class="search-history-header">
+                                    <div class="search-history-title">Moscow<span> - </span>Saint-Petersburg</div>
+                                    <div class="search-history-date">27.02.2019</div>
+                                </div>
+                                <div class="search-history-show">Search history <i class="fas fa-sort-down"></i></div>
                             </div>
-                            <div class="search-history-show">Search history <i class="fas fa-sort-down"></i></div>
-                        </div>
-                        <div class="search-history-body">
-                            <div class="container-fluid">
-                                <div class="search-history-items"><h3>Your recent search history</h3>
-                                    <div class="search-history-item">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="direction">Moscow<span> - </span>Saint-Petersburg</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="date">27.02.2019</div>
-                                            </div>
-                                            <div class="col-auto ml-auto">
-                                                <div class="number">1 passenger</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="search-history-item">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="direction">Saint-Petersburg<span> - </span>Helsinki</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="date">17.02.2019</div>
-                                            </div>
-                                            <div class="col-auto ml-auto">
-                                                <div class="number">1 passenger</div>
+                            <div class="search-history-body">
+                                <div class="container-fluid">
+                                    <div class="search-history-items"><h3>Your recent search history</h3>
+                                        <div class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow<span> - </span>Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">27.02.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="search-history-item">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="direction">Moscow<span> - </span>Saint-Petersburg</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="date">16.02.2019</div>
-                                            </div>
-                                            <div class="col-auto ml-auto">
-                                                <div class="number">1 passenger</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="search-history-item">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="direction">Saint-Petersburg<span> - </span>Helsinki</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="date">16.02.2019</div>
-                                            </div>
-                                            <div class="col-auto ml-auto">
-                                                <div class="number">1 passenger</div>
+                                        <div class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Saint-Petersburg<span> - </span>Helsinki</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">17.02.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="search-history-item">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="direction">Moscow<span> - </span>Saint-Petersburg</div>
+                                        <div class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow<span> - </span>Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">16.02.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
                                             </div>
-                                            <div class="col-auto">
-                                                <div class="date">16.02.2019</div>
+                                        </div>
+                                        <div class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Saint-Petersburg<span> - </span>Helsinki</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">16.02.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
                                             </div>
-                                            <div class="col-auto ml-auto">
-                                                <div class="number">1 passenger</div>
+                                        </div>
+                                        <div class="search-history-item">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="direction">Moscow<span> - </span>Saint-Petersburg</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="date">16.02.2019</div>
+                                                </div>
+                                                <div class="col-auto ml-auto">
+                                                    <div class="number">1 passenger</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
 
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Destinations -->
-    <div class="section text-center">
-        <div class="container">
-            <h2 class="mb-2">Destinations</h2>
-            <div class="text">Know where to go by train and why</div>
-
-            <div class="articles-slider">
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/destination-trans-siberian-railway" class="link-image">
-                                <img src="site1/images/train-example.jpg" alt="">
-                            </a>
-                            <a href="/destination-trans-siberian-railway" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>Trans-Siberian Trains</h3>
-                            <p>We don't simply book your e-tickets, but provide you with all-round support before and
-                                during your trip. Real help from real people in your language</p>
-                        </div>
-                    </div>
                 </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/destination-moscow-st-petersburg-railway" class="link-image">
-                                <img src="site1/images/train-example.jpg" alt="">
-                            </a>
-                            <a href="/destination-moscow-st-petersburg-railway" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>Train From Moscow To St. Petersburg</h3>
-                            <p>We don't simply book your e-tickets, but provide you with all-round support before and
-                                during your trip. Real help from real people in your language</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/destination-st-petersburg-helsinki-railway" class="link-image">
-                                <img src="site1/images/train-example.jpg" alt="">
-                            </a>
-                            <a href="/destination-st-petersburg-helsinki-railway" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>Train From St. Petersburg To Helsinki</h3>
-                            <p>We don't simply book your e-tickets, but provide you with all-round support before and
-                                during your trip. Real help from real people in your language</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/destination-trans-siberian-railway" class="link-image">
-                                <img src="site1/images/train-example.jpg" alt="">
-                            </a>
-                            <a href="/destination-trans-siberian-railway" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>Trans-Siberian Trains</h3>
-                            <p>We don't simply book your e-tickets, but provide you with all-round support before and
-                                during your trip. Real help from real people in your language</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/destination-trans-siberian-railway" class="link-image">
-                                <img src="site1/images/train-example.jpg" alt="">
-                            </a>
-                            <a href="/destination-trans-siberian-railway" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>Trans-Siberian Trains</h3>
-                            <p>We don't simply book your e-tickets, but provide you with all-round support before and
-                                during your trip. Real help from real people in your language</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/destination-trans-siberian-railway" class="link-image">
-                                <img src="site1/images/train-example.jpg" alt="">
-                            </a>
-                            <a href="/destination-trans-siberian-railway" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>Trans-Siberian Trains</h3>
-                            <p>We don't simply book your e-tickets, but provide you with all-round support before and
-                                during your trip. Real help from real people in your language</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Russian trains-->
-    <div class="section section-grey text-center">
-        <div class="container">
-            <h2 class="mb-2">Russian trains</h2>
-            <div class="text">What trains can you take?</div>
-
-            <div class="articles-slider">
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/train-sapsanishche" class="link-image">
-                                <img src="site1/images/train-example-2.jpg" alt="">
-                            </a>
-                            <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>сапсанище</h3>
-                            <p>Moscow - Saint-Petersburg</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/train-sapsanishche" class="link-image">
-                                <img src="site1/images/train-example-2.jpg" alt="">
-                            </a>
-                            <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>сапсанище</h3>
-                            <p>Moscow - Saint-Petersburg</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/train-sapsanishche" class="link-image">
-                                <img src="site1/images/train-example-2.jpg" alt="">
-                            </a>
-                            <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>сапсанище</h3>
-                            <p>Moscow - Saint-Petersburg</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/train-sapsanishche" class="link-image">
-                                <img src="site1/images/train-example-2.jpg" alt="">
-                            </a>
-                            <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>сапсанище</h3>
-                            <p>Moscow - Saint-Petersburg</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/train-sapsanishche" class="link-image">
-                                <img src="site1/images/train-example-2.jpg" alt="">
-                            </a>
-                            <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>сапсанище</h3>
-                            <p>Moscow - Saint-Petersburg</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/train-sapsanishche" class="link-image">
-                                <img src="site1/images/train-example-2.jpg" alt="">
-                            </a>
-                            <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>сапсанище</h3>
-                            <p>Moscow - Saint-Petersburg</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/train-sapsanishche" class="link-image">
-                                <img src="site1/images/train-example-2.jpg" alt="">
-                            </a>
-                            <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>сапсанище</h3>
-                            <p>Moscow - Saint-Petersburg</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="articles-item">
-                        <div class="articles-link-wrap">
-                            <a href="/train-sapsanishche" class="link-image">
-                                <img src="site1/images/train-example-2.jpg" alt="">
-                            </a>
-                            <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
-                        </div>
-                        <div class="articles-content">
-                            <h3>сапсанище</h3>
-                            <p>Moscow - Saint-Petersburg</p>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
         </div>
-    </div>
 
-    <!--Our Advantages-->
-    <div class="section text-center">
-        <div class="container">
-            <h2>Our Advantages</h2>
+        <!-- Destinations -->
+        <div class="section text-center">
+            <div class="container">
+                <h2 class="mb-2">Destinations</h2>
+                <div class="text">Know where to go by train and why</div>
 
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <p>
-                        <img src="site1/images/train.png" alt="">
-                    </p>
-                    <h3>Only e-tickets</h3>
-                    <p>Book your e-tickets online and travel with a peace of mind</p>
+                <div class="articles-slider">
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/destination-trans-siberian-railway" class="link-image">
+                                    <img src="site1/images/train-example.jpg" alt="">
+                                </a>
+                                <a href="/destination-trans-siberian-railway" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>Trans-Siberian Trains</h3>
+                                <p>We don't simply book your e-tickets, but provide you with all-round support before and
+                                    during your trip. Real help from real people in your language</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/destination-moscow-st-petersburg-railway" class="link-image">
+                                    <img src="site1/images/train-example.jpg" alt="">
+                                </a>
+                                <a href="/destination-moscow-st-petersburg-railway" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>Train From Moscow To St. Petersburg</h3>
+                                <p>We don't simply book your e-tickets, but provide you with all-round support before and
+                                    during your trip. Real help from real people in your language</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/destination-st-petersburg-helsinki-railway" class="link-image">
+                                    <img src="site1/images/train-example.jpg" alt="">
+                                </a>
+                                <a href="/destination-st-petersburg-helsinki-railway" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>Train From St. Petersburg To Helsinki</h3>
+                                <p>We don't simply book your e-tickets, but provide you with all-round support before and
+                                    during your trip. Real help from real people in your language</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/destination-trans-siberian-railway" class="link-image">
+                                    <img src="site1/images/train-example.jpg" alt="">
+                                </a>
+                                <a href="/destination-trans-siberian-railway" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>Trans-Siberian Trains</h3>
+                                <p>We don't simply book your e-tickets, but provide you with all-round support before and
+                                    during your trip. Real help from real people in your language</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/destination-trans-siberian-railway" class="link-image">
+                                    <img src="site1/images/train-example.jpg" alt="">
+                                </a>
+                                <a href="/destination-trans-siberian-railway" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>Trans-Siberian Trains</h3>
+                                <p>We don't simply book your e-tickets, but provide you with all-round support before and
+                                    during your trip. Real help from real people in your language</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/destination-trans-siberian-railway" class="link-image">
+                                    <img src="site1/images/train-example.jpg" alt="">
+                                </a>
+                                <a href="/destination-trans-siberian-railway" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>Trans-Siberian Trains</h3>
+                                <p>We don't simply book your e-tickets, but provide you with all-round support before and
+                                    during your trip. Real help from real people in your language</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
-                    <p>
-                        <img src="site1/images/shield.png" alt="">
-                    </p>
-                    <h3>Convenient & secure</h3>
-                    <p>Book e-tickets with your preferred payment method</p>
+            </div>
+        </div>
+
+        <!--Russian trains-->
+        <div class="section section-grey text-center">
+            <div class="container">
+                <h2 class="mb-2">Russian trains</h2>
+                <div class="text">What trains can you take?</div>
+
+                <div class="articles-slider">
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/train-sapsanishche" class="link-image">
+                                    <img src="site1/images/train-example-2.jpg" alt="">
+                                </a>
+                                <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>сапсанище</h3>
+                                <p>Moscow - Saint-Petersburg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/train-sapsanishche" class="link-image">
+                                    <img src="site1/images/train-example-2.jpg" alt="">
+                                </a>
+                                <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>сапсанище</h3>
+                                <p>Moscow - Saint-Petersburg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/train-sapsanishche" class="link-image">
+                                    <img src="site1/images/train-example-2.jpg" alt="">
+                                </a>
+                                <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>сапсанище</h3>
+                                <p>Moscow - Saint-Petersburg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/train-sapsanishche" class="link-image">
+                                    <img src="site1/images/train-example-2.jpg" alt="">
+                                </a>
+                                <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>сапсанище</h3>
+                                <p>Moscow - Saint-Petersburg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/train-sapsanishche" class="link-image">
+                                    <img src="site1/images/train-example-2.jpg" alt="">
+                                </a>
+                                <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>сапсанище</h3>
+                                <p>Moscow - Saint-Petersburg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/train-sapsanishche" class="link-image">
+                                    <img src="site1/images/train-example-2.jpg" alt="">
+                                </a>
+                                <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>сапсанище</h3>
+                                <p>Moscow - Saint-Petersburg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/train-sapsanishche" class="link-image">
+                                    <img src="site1/images/train-example-2.jpg" alt="">
+                                </a>
+                                <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>сапсанище</h3>
+                                <p>Moscow - Saint-Petersburg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="articles-item">
+                            <div class="articles-link-wrap">
+                                <a href="/train-sapsanishche" class="link-image">
+                                    <img src="site1/images/train-example-2.jpg" alt="">
+                                </a>
+                                <a href="/train-sapsanishche" class="btn btn-light">Read more</a>
+                            </div>
+                            <div class="articles-content">
+                                <h3>сапсанище</h3>
+                                <p>Moscow - Saint-Petersburg</p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="col-sm-6 col-md-3">
-                    <p>
-                        <img src="site1/images/seat.png" alt="">
-                    </p>
-                    <h3>BEST trains & seats</h3>
-                    <p>Only quality trains with hand-picked seat assignment</p>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <p>
-                        <img src="site1/images/24x7.png" alt="">
-                    </p>
-                    <h3>Quality service</h3>
-                    <p>Call, email or chat with us to get quality assistance & trip advice</p>
+            </div>
+        </div>
+
+        <!--Text destinations links -->
+        <div class="section">
+            <div class="container">
+                <h2 class="text-center">Destinations list</h2>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Trains From Moscow To St. Petersburg</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Train From Moscow To Nizhny Novgorod</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Trains From Moscow To St. Petersburg</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Train From Moscow To Nizhny Novgorod</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Trains From Moscow To St. Petersburg</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Train From Moscow To Nizhny Novgorod</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Saint Petersburg - Tallinn Railway</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
-
         </div>
-    </div>
 
-    <div class="section section-grey text-center">
-        <div class="container">
-            <h2>Fast & Easy Online Booking</h2>
+        <!--Our Advantages-->
+        <div class="section section-grey text-center">
+            <div class="container">
+                <h2>Our Advantages</h2>
 
-            <p>Planning your trip to a new country can be a challenging task.
-                When it comes to rail connections, there are so many classes
-                and tariffs to select from that one needs to invest several
-                hours on research to pick the right train for the journey.
-                We've made it easy and intuitive for you to search, select,
-                and book Russian train tickets. And in case you have any
-                doubts regarding the best option to choose, contact our
-                support team via live chat.
-            </p>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <p>
+                            <img src="site1/images/train.png" alt="">
+                        </p>
+                        <h3>Only e-tickets</h3>
+                        <p>Book your e-tickets online and travel with a peace of mind</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <p>
+                            <img src="site1/images/shield.png" alt="">
+                        </p>
+                        <h3>Convenient & secure</h3>
+                        <p>Book e-tickets with your preferred payment method</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <p>
+                            <img src="site1/images/seat.png" alt="">
+                        </p>
+                        <h3>BEST trains & seats</h3>
+                        <p>Only quality trains with hand-picked seat assignment</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <p>
+                            <img src="site1/images/24x7.png" alt="">
+                        </p>
+                        <h3>Quality service</h3>
+                        <p>Call, email or chat with us to get quality assistance & trip advice</p>
+                    </div>
 
-        </div>
-    </div>
-
-    <div class="section text-center">
-        <div class="container">
-            <h2 class="mb-2">#1 Online Service for Booking Russian Train Tickets Online</h2>
-            <div class="text">Book Your Russian Railway Tickets with the Most Trusted Name</div>
-
-            <p>This website allows you to book Russian rail tickets on any trains in Russia,
-                Baltics and Eastern Europe. You can book the newest high-speed Sapsan trains,
-                classic luxury trains from St. Petersburg to Moscow and the traditional overnight
-                trains. The convenience and reliability of our train ticket service can be
-                attested by tens of thousands of customers from over 50 countries of the world.
-            </p>
-        </div>
-    </div>
-
-    <div class="section section-grey text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <p>
-                        <img src="site1/images/logo-example-1.png" alt="">
-                    </p>
-                    <h4>Among Top 10 Inc. 5000 travel companies</h4>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <p>
-                        <img src="site1/images/logo-example-2.png" alt="">
-                    </p>
-                    <h4>Russia's top travel company by WTA</h4>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <p>
-                        <img src="site1/images/logo-example-3.png" alt="">
-                    </p>
-                    <h4>European Tour Operators Association member</h4>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <p>
-                        <img src="site1/images/logo-example-4.png" alt="">
-                    </p>
-                    <h4>A-rated company by Better Business Bureau</h4>
                 </div>
 
             </div>
-
         </div>
+
+        <div class="section text-center">
+            <div class="container">
+                <h2>Fast & Easy Online Booking</h2>
+
+                <p>Planning your trip to a new country can be a challenging task.
+                    When it comes to rail connections, there are so many classes
+                    and tariffs to select from that one needs to invest several
+                    hours on research to pick the right train for the journey.
+                    We've made it easy and intuitive for you to search, select,
+                    and book Russian train tickets. And in case you have any
+                    doubts regarding the best option to choose, contact our
+                    support team via live chat.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="section section-grey text-center">
+            <div class="container">
+                <h2 class="mb-2">#1 Online Service for Booking Russian Train Tickets Online</h2>
+                <div class="text">Book Your Russian Railway Tickets with the Most Trusted Name</div>
+
+                <p>This website allows you to book Russian rail tickets on any trains in Russia,
+                    Baltics and Eastern Europe. You can book the newest high-speed Sapsan trains,
+                    classic luxury trains from St. Petersburg to Moscow and the traditional overnight
+                    trains. The convenience and reliability of our train ticket service can be
+                    attested by tens of thousands of customers from over 50 countries of the world.
+                </p>
+            </div>
+        </div>
+
+        <div class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <p>
+                            <img src="site1/images/logo-example-1.png" alt="">
+                        </p>
+                        <h4>Among Top 10 Inc. 5000 travel companies</h4>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <p>
+                            <img src="site1/images/logo-example-2.png" alt="">
+                        </p>
+                        <h4>Russia's top travel company by WTA</h4>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <p>
+                            <img src="site1/images/logo-example-3.png" alt="">
+                        </p>
+                        <h4>European Tour Operators Association member</h4>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <p>
+                            <img src="site1/images/logo-example-4.png" alt="">
+                        </p>
+                        <h4>A-rated company by Better Business Bureau</h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer -->
-    <div class="footer section">
+    <div class="tm-page__footer footer section text-left">
         <div class="container">
             <div class="tm-overflow-hidden position-relative">
                 <div class="row">
