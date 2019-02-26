@@ -5439,32 +5439,26 @@ a.ui-button:active,
   .ticket-filter-param h4 {
     text-align: left; }
   .ticket-filter-param ul {
+    position: relative;
     padding-left: 0;
     list-style: none;
     text-align: left;
-    overflow: hidden;
-      /*&.more {
-        position: relative;
-        max-height: 112px;
-        overflow: hidden;
-
-        &::after {
-          content: '';
-          background-image: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
-          display: block;
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          height: 40px;
-        }
-      }*/ }
+    overflow: hidden; }
     .ticket-filter-param ul > li {
       display: none; }
       .ticket-filter-param ul > li:first-child, .ticket-filter-param ul > li:nth-child(2), .ticket-filter-param ul > li:nth-child(3) {
         display: block; }
     .ticket-filter-param ul.tm-active > li {
       display: block; }
+    .ticket-filter-param ul.tm-close::after {
+      content: '';
+      background-image: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 40px; }
   .ticket-filter-param .chal {
     margin-bottom: 10px; }
 .ticket-filter-apply {

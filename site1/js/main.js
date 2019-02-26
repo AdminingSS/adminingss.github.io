@@ -468,6 +468,7 @@ $(document).ready(function () {
             $filters.each(function () {
                 var $filter = $(this);
                 var activeClassName = 'tm-active';
+                var closeClassName = 'tm-close';
                 var $showMoreBtn = $filter.parent().find('> .ticket-filter-more');
                 var $filterItems = $filter.children();
 
@@ -483,11 +484,13 @@ $(document).ready(function () {
                 $filter.css({
                     height: filterStartHeight,
                 });
+                $filter.addClass(closeClassName);
                 $showMoreBtn.show();
 
                 $showMoreBtn.off('click');
                 $showMoreBtn.on('click', function () {
                     $showMoreBtn.toggleClass(activeClassName);
+                    $filter.toggleClass(closeClassName);
                     $filter.animate({
                             height: $showMoreBtn.hasClass(activeClassName) ? filterEndHeight : filterStartHeight
                         }, 500);

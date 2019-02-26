@@ -59,6 +59,7 @@
     }
 
     ul {
+      position: relative;
       padding-left: 0;
       list-style: none;
       text-align: left;
@@ -79,10 +80,7 @@
         }
       }
 
-      /*&.more {
-        position: relative;
-        max-height: 112px;
-        overflow: hidden;
+      &.tm-close {
 
         &::after {
           content: '';
@@ -94,7 +92,7 @@
           bottom: 0;
           height: 40px;
         }
-      }*/
+      }
     }
 
     .chal {
