@@ -1,0 +1,19 @@
+.routes {
+
+  &-pagination {
+
+    .page-link {
+      text-transform: uppercase;
+      border: none;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      width: 33.333333%;
+    }
+  }
+}

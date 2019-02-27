@@ -5534,5 +5534,13 @@ a.ui-button:active,
       right: 20px; }
     .ticket-filter-apply {
       display: block; } }
+.routes-pagination .page-link {
+  text-transform: uppercase;
+  border: none; }
+.routes-list {
+  display: flex;
+  flex-wrap: wrap; }
+  .routes-list > li {
+    width: 33.333333%; }
 
 /*# sourceMappingURL=style.css.map */
