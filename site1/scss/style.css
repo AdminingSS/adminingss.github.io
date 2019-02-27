@@ -1036,7 +1036,7 @@ h1, h2, .head {
   .showcase-payment {
     position: static;
     transform: translateX(0); }
-  .showcase-home {
+  .showcase-home, .showcase-medium {
     height: 396px;
     padding-top: 40px; }
   .showcase .select2-container--default .select2-selection--single {
@@ -1078,7 +1078,7 @@ h1, h2, .head {
       left: 50%;
       transform: translateX(-50%);
       padding: 0 20px; }
-  .showcase-home {
+  .showcase-home, .showcase-medium {
     height: auto;
     padding-top: 35px; }
   .showcase .select2-container--default .select2-selection--single .select2-selection__rendered {

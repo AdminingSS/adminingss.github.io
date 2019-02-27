@@ -526,7 +526,7 @@
       transform: translateX(0);
     }
 
-    &-home {
+    &-home, &-medium {
       height: 396px;
       padding-top: 40px;
     }
@@ -601,7 +601,7 @@
       }
     }
 
-    &-home {
+    &-home, &-medium {
       height: auto;
       padding-top: 35px;
     }
