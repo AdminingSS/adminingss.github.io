@@ -868,6 +868,10 @@ h1, h2, .head {
     height: 624px;
     padding-top: 170px;
     padding-bottom: 60px; }
+  .showcase-medium {
+    height: 420px;
+    padding-top: 50px;
+    padding-bottom: 60px; }
   .showcase-inner {
     padding-top: 78px; }
   .showcase-date {
