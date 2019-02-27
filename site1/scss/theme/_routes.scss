@@ -1,6 +1,12 @@
 .routes {
 
+  &-search {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
   &-pagination {
+    flex-wrap: wrap;
 
     .page-link {
       text-transform: uppercase;
@@ -11,9 +17,27 @@
   &-list {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 
     > li {
       width: 33.333333%;
+      padding-right: 15px;
+      padding-left: 15px;
     }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .routes-list > li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .routes-list > li {
+    width: 100%;
   }
 }
