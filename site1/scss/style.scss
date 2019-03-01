@@ -930,6 +930,7 @@ h1, h2, .head {
 // Section
 
 .section {
+  position: relative;
   padding: 60px 0;
 
   &-grey {

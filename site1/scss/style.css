@@ -664,6 +664,7 @@ h1, h2, .head {
     padding-right: 10px; }
 
 .section {
+  position: relative;
   padding: 60px 0; }
   .section-grey {
     background-color: #e5e5e5; }
@@ -5495,7 +5496,7 @@ a.ui-button:active,
 
 .btn-filter {
   display: none;
-  position: fixed;
+  position: sticky;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -5521,7 +5522,7 @@ a.ui-button:active,
 
 @media (max-width: 991px) {
   .btn-filter {
-    display: block; }
+    display: inline-block; }
 
   .ticket-filter {
     position: fixed;
