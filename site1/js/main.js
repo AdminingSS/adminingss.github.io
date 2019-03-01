@@ -620,6 +620,28 @@ $(document).ready(function () {
 
     })();*/
 
+    //Scroll to top
+    (function () {
+        var $btn = $('.js-scroll-to-top');
+        var $htmlBody = $("html, body");
+
+        $btn.on('click', smoothScroll);
+
+        function smoothScroll(e) {
+            var $anchor = $(this);
+            var $target = $($anchor.attr('data-target'));
+            var translation = $anchor.attr('data-translation') || $($anchor.attr('data-translation-element')).outerHeight(true);
+
+            e.preventDefault();
+
+            $htmlBody.animate({
+                    scrollTop: $target.offset().top - (translation || 0)
+                },
+                500
+            );
+        }
+    })();
+
 });
 
 
