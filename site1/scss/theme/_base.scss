@@ -212,6 +212,10 @@ button:focus {
 .page-item.active .page-link {
   background-color: #e40000;
   border-color: #e40000;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 
