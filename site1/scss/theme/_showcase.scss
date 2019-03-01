@@ -1,8 +1,24 @@
 .showcase {
   position: relative;
   padding: 20px 0;
-  background: url(../images/showcase-bg.jpg) no-repeat 50% 20%;
+  background: url(/storage/photos/shares/rustrains-slider.jpg) no-repeat 50% 20%;
   background-size: cover;
+
+  &-home {
+    height: 624px;
+    padding-top: 170px;
+    padding-bottom: 60px;
+  }
+
+  &-medium {
+    height: 420px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  &-custom {
+    background-position: 50% 50%;
+  }
 
   &-title {
     color: #fff;
@@ -249,18 +265,6 @@
   &-content {
     display: flex;
     align-items: center;
-  }
-
-  &-home {
-    height: 624px;
-    padding-top: 170px;
-    padding-bottom: 60px;
-  }
-
-  &-medium {
-    height: 420px;
-    padding-top: 50px;
-    padding-bottom: 60px;
   }
 
   &-inner {

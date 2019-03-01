@@ -689,8 +689,18 @@ h1, h2, .head {
 .showcase {
   position: relative;
   padding: 20px 0;
-  background: url(../images/showcase-bg.jpg) no-repeat 50% 20%;
+  background: url(/storage/photos/shares/rustrains-slider.jpg) no-repeat 50% 20%;
   background-size: cover; }
+  .showcase-home {
+    height: 624px;
+    padding-top: 170px;
+    padding-bottom: 60px; }
+  .showcase-medium {
+    height: 420px;
+    padding-top: 50px;
+    padding-bottom: 60px; }
+  .showcase-custom {
+    background-position: 50% 50%; }
   .showcase-title {
     color: #fff;
     margin-bottom: 30px; }
@@ -864,14 +874,6 @@ h1, h2, .head {
   .showcase-content {
     display: flex;
     align-items: center; }
-  .showcase-home {
-    height: 624px;
-    padding-top: 170px;
-    padding-bottom: 60px; }
-  .showcase-medium {
-    height: 420px;
-    padding-top: 50px;
-    padding-bottom: 60px; }
   .showcase-inner {
     padding-top: 78px; }
   .showcase-date {
