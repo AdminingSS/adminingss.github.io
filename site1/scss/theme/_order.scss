@@ -194,7 +194,7 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      color: $rad;
+      color: $red;
     }
 
     &:not(:disabled):not(.disabled):focus, &:not(:disabled):not(.disabled):hover {
@@ -353,10 +353,10 @@
 }
 
 .btn-more-payments {
-  color: $rad;
+  color: $red;
 
   &:hover {
-    color: darken($rad, 10%);
+    color: darken($red, 10%);
   }
 
   .show-more {
@@ -383,10 +383,10 @@
   }
 
   a {
-    color: $rad;
+    color: $red;
 
     &:hover, &:focus {
-      color: darken($rad, 10%);
+      color: darken($red, 10%);
     }
   }
 }
