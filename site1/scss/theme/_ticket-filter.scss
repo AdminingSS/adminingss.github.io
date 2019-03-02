@@ -111,7 +111,7 @@
     cursor: pointer;
 
     &:hover {
-      color: #e40000;
+      color: $red;
     }
 
     .hide-more {
@@ -151,12 +151,12 @@
   transform: translateX(-50%);
   z-index: 1030;
   background-color: #fff;
-  border-color: #e40000;
-  color: #e40000;
+  border-color: $red;
+  color: $red;
 
   &:hover, &:focus {
-    border-color: darken(#e40000, 10%);
-    color: darken(#e40000, 10%);
+    border-color: darken($red, 10%);
+    color: darken($red, 10%);
   }
 
   &.filter-active {

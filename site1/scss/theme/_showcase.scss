@@ -118,7 +118,7 @@
       transition: all 0.2s ease-in-out;
 
       &:hover {
-        color: #e40000;
+        color: $red;
       }
 
       &:not(:disabled):not(.disabled):focus, &:not(:disabled):not(.disabled):hover {

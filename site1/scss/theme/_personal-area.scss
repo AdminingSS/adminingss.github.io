@@ -71,7 +71,7 @@
 
       &.active, &:hover {
         color: #fff;
-        background-color: #e40000;
+        background-color: $red;
       }
     }
   }
@@ -83,7 +83,7 @@
     }
 
     .status-canceled {
-      color: #e40000;
+      color: $red;
     }
     .status-clearing {
       color: #ff9900;

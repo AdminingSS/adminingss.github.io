@@ -91,11 +91,11 @@
       }
 
       a.link-sphere {
-        //border-color: #e40000;
+        //border-color: $red;
       }
 
       &::before {
-        border-color: #e40000;
+        border-color: $red;
       }
 
       .order-progressbar-percent {
@@ -114,13 +114,13 @@
 
       a.link-sphere {
         display: block;
-        background-color: #e40000;
-        border-color: #e40000;
+        background-color: $red;
+        border-color: $red;
       }
 
       &::before {
-        background-color: #e40000;
-        border-color: #e40000;
+        background-color: $red;
+        border-color: $red;
       }
     }
   }

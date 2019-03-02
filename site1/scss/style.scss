@@ -1,4 +1,4 @@
-$red: #e40000;
+$red: #ba2830;
 $orange: #e49100;
 $blue: #00c5c5;
 $gray: #555;
@@ -55,7 +55,7 @@ a img {
   cursor: pointer;
   transition: 300ms;
   &:hover {
-    background-color: darken(#e40000, 10%);
+    background-color: darken($red, 10%);
   }
   &:focus {
     outline: none;
@@ -884,7 +884,7 @@ h1, h2, .head {
       top: 0;
       left: 0;
       right: 0;
-      background-image: linear-gradient(to right, #e40000 0%, #e40000 10%, #e49100 50%, #00c5c5 90%, #00c5c5 100%);
+      background-image: linear-gradient(to right, $red 0%, $red 10%, #e49100 50%, #00c5c5 90%, #00c5c5 100%);
     }*/
   }
   &-item {
@@ -4198,7 +4198,7 @@ h1, h2, .head {
 
 //.static-content a {
 //  font-family: inherit;
-//  color: #e40000;
+//  color: $red;
 //}
 //
 //.static-content a:hover {
@@ -5515,7 +5515,7 @@ article .block-title {
 }
 
 .red {
-  color: #e40000;
+  color: $red;
 }
 
 .green {
@@ -5761,25 +5761,25 @@ article .block-title {
 }
 
 .tm-btn-red {
-  background-color: #e40000;
-  border-color: #e40000;
+  background-color: $red;
+  border-color: $red;
   color: #fff;
 
   &:hover, &:focus {
-    background-color: darken(#e40000, 10%);
-    border-color: darken(#e40000, 10%);
+    background-color: darken($red, 10%);
+    border-color: darken($red, 10%);
     color: #fff;
   }
 }
 
 .tm-btn-outline-red {
   background-color: transparent;
-  border-color: #e40000;
-  color: #e40000;
+  border-color: $red;
+  color: $red;
 
   &:hover {
-    background-color: darken(#e40000, 10%);
-    border-color: darken(#e40000, 10%);
+    background-color: darken($red, 10%);
+    border-color: darken($red, 10%);
     color: #fff;
   }
 
@@ -5789,11 +5789,11 @@ article .block-title {
 }
 
 .tm-link-red {
-  color: #e40000;
+  color: $red;
   font-weight: 500;
 
   &:hover, &:focus {
-    color: lighten(#e40000, 10%)
+    color: lighten($red, 10%)
   }
 }
 

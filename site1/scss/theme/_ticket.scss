@@ -22,7 +22,7 @@
     left: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid #e40000;
+    border: 2px solid $red;
     border-radius: 3px;
 
     &::before {
@@ -32,7 +32,7 @@
       font-size: 12px;
       line-height: normal;
       opacity: 0;
-      color: #e40000;
+      color: $red;
       transition: opacity 0.2s ease-in-out;
     }
   }
@@ -63,14 +63,14 @@
     left: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid #e40000;
+    border: 2px solid $red;
     border-radius: 50%;
 
     &::before {
       content: "";
       width: 8px;
       height: 8px;
-      background: #e40000;
+      background: $red;
       border-radius: 50%;
       opacity: 0;
       transition: opacity 0.2s ease-in-out;
@@ -403,7 +403,7 @@
     color: #c70000;
 
     &:hover {
-      color: darken(#e40000, 10%);
+      color: darken($red, 10%);
     }
   }
 
