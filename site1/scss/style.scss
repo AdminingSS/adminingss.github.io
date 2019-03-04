@@ -665,20 +665,6 @@ h1, h2, .head {
       opacity: 1;
     }
 
-    &.tm-dropdown-full {
-      position: static;
-
-      .dropdown-menu {
-        top: calc(100% - 7px);
-        width: 100%;
-        max-width: 100%;
-
-        > .dropdown-item {
-          max-width: 20%;
-        }
-      }
-    }
-
     &-menu {
       margin: 0;
       font-size: 12px;
@@ -749,12 +735,28 @@ h1, h2, .head {
 @media (min-width: 1200px) {
 
   .header {
-    //position: fixed;
     position: sticky;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030
+  }
+
+  .menu-main .dropdown {
+
+    &.tm-dropdown-full {
+      position: static;
+
+      .dropdown-menu {
+        top: calc(100% - 7px);
+        width: 100%;
+        max-width: 100%;
+
+        > .dropdown-item {
+          max-width: 20%;
+        }
+      }
+    }
   }
 }
 
@@ -795,8 +797,11 @@ h1, h2, .head {
       padding: 3px 0;
     }
 
-    .dropdown:hover .dropdown-menu {
-      display: block;
+    .dropdown {
+
+      &:hover .dropdown-menu {
+        display: block;
+      }
     }
   }
 
