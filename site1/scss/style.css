@@ -542,6 +542,9 @@ h1, h2, .head {
 
   .menu-main .dropdown.tm-dropdown-full {
     position: static; }
+    .menu-main .dropdown.tm-dropdown-full:hover {
+      padding-bottom: 20px;
+      margin-bottom: -20px; }
     .menu-main .dropdown.tm-dropdown-full .dropdown-menu {
       top: calc(100% - 7px);
       width: 100%;
