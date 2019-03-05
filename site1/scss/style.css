@@ -4011,6 +4011,8 @@ h1, h2, .head {
       .ticket-item .ticket-price .amount span {
         font-size: 12px;
         text-transform: uppercase; }
+      .ticket-item .ticket-price .amount .price_m {
+        font-size: inherit; }
   .ticket-item .ticket-info {
     font-size: 14px; }
     .ticket-item .ticket-info span {
