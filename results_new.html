@@ -422,267 +422,347 @@
 
             <div id="preload" style="text-align: center; display: none;"><img src="/icons/train.gif"></div>
 
-            <div class="row">
-                <div class="col-lg-9">
+            <div class="position-relative">
+                <div class="row">
+                    <div class="col-lg-9">
 
-                    <!--Ticket result-->
-                    <div class="ticket-result">
+                        <!--Ticket result-->
+                        <div class="ticket-result">
 
-                        <!--Ticket header-->
-                        <div class="ticket-header">
-                            <div class="container-fluid">
-                                <div class="row-divider row">
-                                    <div class="col-md-7 mb-2 mb-md-0">
-                                        <div>
-                                            <a href="#searchModal" class="ticket-direction-text" data-toggle="modal">
-                                                <span>Moscow - Saint-Petersburg</span>
-                                            </a>
-                                        </div>
-
-                                        <div>32 results</div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div>
-                                            <a href="#searchModal" class="ticket-direction-text" data-toggle="modal">
-                                                <span>18 Jan</span>
-                                            </a>
-                                        </div>
-
-                                        <div>Friday</div>
-                                    </div>
-
-                                    <div class="col">
-                                        <div>
-                                            <a href="#searchModal" class="ticket-direction-text" data-toggle="modal">
-                                                <span>1 x <i class="fas fa-male"></i></span>
-                                            </a>
-                                        </div>
-
-                                        <div>Travelers</div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Ticket sort-->
-                        <div class="ticket-sort">
-                            <div class="container-fluid">
-                                <div class="row align-items-center justify-content-between">
-
-                                    <div class="col-6 col-md-3">
-                                        <div class="ticket-sort-item asc" data-sort="date"
-                                             data-sort_direction="desc">
-                                            Departure
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3">
-                                        <div class="ticket-sort-item desc" data-sort="travel_time"
-                                             data-sort_direction="asc">
-                                            Travel time
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3 col-lg-auto">
-                                        <div class="ticket-sort-item" data-sort="arrival"
-                                             data-sort_direction="asc">
-                                            Arrival
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-3 col-lg-auto ml-auto">
-                                        <div class="ticket-sort-item" data-sort="price" data-sort_direction="asc">
-                                            Price from
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div id="ticket-accordion">
-
-                            <!--Ticket item-->
-                            <div class="ticket-item"
-                                 data-date="1547770800"
-                                 data-price="1490"
-                                 data-travel_time="839"
-                                 data-duration="519"
-                                 data-arrival="1547801940"
-                                 data-time0="0"
-                                 data-time1="9"
-                                 data-classes="[&quot;1-sl. sleeping compt.&quot;,&quot;2-sl. sleeping compt.&quot;]"
-                            >
+                            <!--Ticket header-->
+                            <div class="ticket-header">
                                 <div class="container-fluid">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-7 mb-3">
-                                            <div class="row mb-1">
-                                                <div class="col-8">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-6">
-                                                            <div class="ticket-from">
-                                                                <div class="time">00:20</div>
-                                                                <div class="arrive-date">18 Jan 2019 Fri</div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-6">
-                                                            <div class="ticket-duration">
-                                                                08h 39min
-                                                                <div class="duration-bar"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-4">
-                                                    <div class="ticket-to">
-                                                        <div class="time">08:59</div>
-                                                        <div class="arrive-date">18 Jan 2019 Fri</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="ticket-from">
-                                                        <div class="city">Moscow</div>
-                                                        <div class="station"> Leningradskiy Railway station
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-6">
-                                                    <div class="ticket-to">
-                                                        <div class="city">Saint-Petersburg</div>
-                                                        <div class="station"> Moskovskiy Railway station
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-sm">
-                                            <div class="ticket-total">
-                                                total for 1: 26097 <span>rub</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm">
-                                            <div class="ticket-price">
-                                                <div class="amount">26097 <span>rub</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ticket-info">
-                                        <span>020У</span> МЕГАПОЛИС
-                                    </div>
-
-                                    <div class="ticket-description mb-2">
-                                        <div class="row align-items-center">
-                                            <div class="col-sm">
-                                                <ul class="ticket-extras">
-                                                    <li>
-                                                        <img src="http://rustrains.com/site1/images/ticket-icon1.png"
-                                                             alt=""
-                                                             class="toolt" data-text="wi-fi">
-                                                    </li>
-                                                    <li>
-                                                        <img src="http://rustrains.com/site1/images/ticket-icon2.png"
-                                                             alt=""
-                                                             class="toolt"
-                                                             data-text="36 kg handbag + 200 kg luggage (3 bags, 75 kg max. each)"/>
-                                                        <span class="count_text">8</span>
-                                                    </li>
-                                                    <li>
-                                                        <img src="http://rustrains.com/site1/images/ticket-icon1.png"
-                                                             alt=""
-                                                             class="toolt"
-                                                             data-text="Transportation in a specialised luggage compartment - no more than three pieces of luggage for each electronic ticket. One piece of luggage should not weigh more than 75 kg. The total weight of the three pieces of luggage should not exceed 200 kg."/>
-                                                        <span class="count_text">1</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="ticket-data-item"><b>In stock: </b> 113 pcs.</div>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="ticket-data-item"><b>Seats: </b>
-                                                    <span class="count_classes">2 classes </span> available
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row justify-content-between align-items-end">
-                                        <div class="col">
-                                            <div class="ticket-route">
-                                                <a href="#" data-toggle="modal" data-target="#routeModal"
-                                                   data-number="020У"
-                                                   data-date_from="18.01.2019" data-time="00:20" data-code0="2000000"
-                                                   data-code1="2004000">
-                                                    Route
+                                    <div class="row-divider row">
+                                        <div class="col-md-7 mb-2 mb-md-0">
+                                            <div>
+                                                <a href="#searchModal" class="ticket-direction-text" data-toggle="modal">
+                                                    <span>Moscow - Saint-Petersburg</span>
                                                 </a>
                                             </div>
+
+                                            <div>32 results</div>
                                         </div>
 
-                                        <div class="col-auto">
-                                            <button type="button" class="tm-button-open btn tm-btn-red collapsed"
-                                                    data-toggle="collapse"
-                                                    data-target="#trainCollapse1"
-                                                    id="data0_0" data-tab="0"
-                                                    data-cars="{&quot;cars&quot;:[{&quot;typeCarLoc&quot;:&quot;1-\u0441l. sleeping compt.&quot;,&quot;freeSeats&quot;:28,&quot;price&quot;:&quot;4989&quot;,&quot;priceMax&quot;:null,&quot;typeCarNumCode&quot;:6,&quot;typeCarCharCode&quot;:&quot;\u041b\u044e\u043a\u0441&quot;,&quot;catLabelLoc&quot;:&quot;1-\u0441l. sleeping compt.&quot;,&quot;compoundCategory&quot;:false,&quot;serviceClasses&quot;:[&quot;1\u0411&quot;,&quot;1\u0423&quot;],&quot;typeLoc&quot;:&quot;1-\u0441l. sleeping compt.&quot;,&quot;type&quot;:&quot;1-\u0441l. sleeping compt.&quot;,&quot;tariff&quot;:4989,&quot;tariff_rub&quot;:4989},{&quot;typeCarLoc&quot;:&quot;2-\u0441l. sleeping compt.&quot;,&quot;freeSeats&quot;:85,&quot;price&quot;:&quot;1490&quot;,&quot;priceMax&quot;:&quot;1750&quot;,&quot;typeCarNumCode&quot;:4,&quot;typeCarCharCode&quot;:&quot;\u041a\u0443\u043f\u0435&quot;,&quot;catLabelLoc&quot;:&quot;2-\u0441l. sleeping compt.&quot;,&quot;compoundCategory&quot;:false,&quot;serviceClasses&quot;:[&quot;2\u0423&quot;,&quot;2\u042d&quot;],&quot;typeLoc&quot;:&quot;2-\u0441l. sleeping compt.&quot;,&quot;type&quot;:&quot;2-\u0441l. sleeping compt.&quot;,&quot;tariff&quot;:1490,&quot;tariff_rub&quot;:1490}],&quot;classes&quot;:{&quot;1-\u0441l. sleeping compt.&quot;:{&quot;id&quot;:8,&quot;name&quot;:&quot;1-sl. sleeping compt.&quot;,&quot;amount&quot;:28},&quot;2-\u0441l. sleeping compt.&quot;:{&quot;id&quot;:7,&quot;name&quot;:&quot;2-sl. sleeping compt.&quot;,&quot;amount&quot;:85}}}"
-                                                    data-load="false" data-key="0" data-number="020У"
-                                                    data-station0="Leningradskiy Railway station"
-                                                    data-station1="Moskovskiy Railway station" data-code0="2000000"
-                                                    data-code1="2004000" data-date_from="18.01.2019" data-time="00:20"
-                                                    data-date_to="18.01.2019" data-time_to="08:59" data-toggle="modal"
-                                                    data-target="#selectSeats">Select seats
-                                            </button>
+                                        <div class="col">
+                                            <div>
+                                                <a href="#searchModal" class="ticket-direction-text" data-toggle="modal">
+                                                    <span>18 Jan</span>
+                                                </a>
+                                            </div>
+
+                                            <div>Friday</div>
                                         </div>
+
+                                        <div class="col">
+                                            <div>
+                                                <a href="#searchModal" class="ticket-direction-text" data-toggle="modal">
+                                                    <span>1 x <i class="fas fa-male"></i></span>
+                                                </a>
+                                            </div>
+
+                                            <div>Travelers</div>
+                                        </div>
+
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div id="trainCollapse1" class="collapse" data-parent="#ticket-accordion">
-                                        <div class="train-types">
-                                            <div onclick="set_car(this, 46,2959, 2959,1,5)"
-                                                 data-type="Sitting (Economy+ class)"
-                                                 class="train-type">
-                                                <div class="container-fluid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
-                                                            <div class="d-flex">
-                                                                <div class="d-none d-xl-block mr-3">
-                                                                    <div class="train-radio"></div>
+                            <!--Ticket sort-->
+                            <div class="ticket-sort">
+                                <div class="container-fluid">
+                                    <div class="row align-items-center justify-content-between">
+
+                                        <div class="col-6 col-md-3">
+                                            <div class="ticket-sort-item asc" data-sort="date"
+                                                 data-sort_direction="desc">
+                                                Departure
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="ticket-sort-item desc" data-sort="travel_time"
+                                                 data-sort_direction="asc">
+                                                Travel time
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3 col-lg-auto">
+                                            <div class="ticket-sort-item" data-sort="arrival"
+                                                 data-sort_direction="asc">
+                                                Arrival
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3 col-lg-auto ml-auto">
+                                            <div class="ticket-sort-item" data-sort="price" data-sort_direction="asc">
+                                                Price from
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div id="ticket-accordion">
+
+                                <!--Ticket item-->
+                                <div class="ticket-item"
+                                     data-date="1547770800"
+                                     data-price="1490"
+                                     data-travel_time="839"
+                                     data-duration="519"
+                                     data-arrival="1547801940"
+                                     data-time0="0"
+                                     data-time1="9"
+                                     data-classes="[&quot;1-sl. sleeping compt.&quot;,&quot;2-sl. sleeping compt.&quot;]"
+                                >
+                                    <div class="container-fluid">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-7 mb-3">
+                                                <div class="row mb-1">
+                                                    <div class="col-8">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-6">
+                                                                <div class="ticket-from">
+                                                                    <div class="time">00:20</div>
+                                                                    <div class="arrive-date">18 Jan 2019 Fri</div>
                                                                 </div>
-                                                                <div class="train-type-text">Sitting (Economy+ class)</div>
+                                                            </div>
+
+                                                            <div class="col-6">
+                                                                <div class="ticket-duration">
+                                                                    08h 39min
+                                                                    <div class="duration-bar"></div>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                    </div>
 
-                                                        <div class="col-auto order-1 order-xl-0">
-                                                            <a href="#trainTypesModal" role="button"
-                                                               data-toggle="modal">
-                                                                <i class="tm-icon-train-types fa fa-image"></i>
-                                                            </a>
+                                                    <div class="col-4">
+                                                        <div class="ticket-to">
+                                                            <div class="time">08:59</div>
+                                                            <div class="arrive-date">18 Jan 2019 Fri</div>
                                                         </div>
-
-                                                        <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
-                                                            <div class="train-type-available">available seats:
-                                                                <span>9699</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="ticket-from">
+                                                            <div class="city">Moscow</div>
+                                                            <div class="station"> Leningradskiy Railway station
                                                             </div>
                                                         </div>
+                                                    </div>
 
-                                                        <div class="col-auto ml-auto order-2 order-xl-0">
-                                                            <div class="train-type-price">2959966
-                                                                <span class="currency">RUB</span>
+                                                    <div class="col-6">
+                                                        <div class="ticket-to">
+                                                            <div class="city">Saint-Petersburg</div>
+                                                            <div class="station"> Moskovskiy Railway station
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                                                <a data-toggle="tooltip" data-placement="top"
+                                            </div>
+
+                                            <div class="col-sm">
+                                                <div class="ticket-total">
+                                                    total for 1: 26097 <span>rub</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm">
+                                                <div class="ticket-price">
+                                                    <div class="amount">26097 <span>rub</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ticket-info">
+                                            <span>020У</span> МЕГАПОЛИС
+                                        </div>
+
+                                        <div class="ticket-description mb-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-sm">
+                                                    <ul class="ticket-extras">
+                                                        <li>
+                                                            <img src="http://rustrains.com/site1/images/ticket-icon1.png"
+                                                                 alt=""
+                                                                 class="toolt" data-text="wi-fi">
+                                                        </li>
+                                                        <li>
+                                                            <img src="http://rustrains.com/site1/images/ticket-icon2.png"
+                                                                 alt=""
+                                                                 class="toolt"
+                                                                 data-text="36 kg handbag + 200 kg luggage (3 bags, 75 kg max. each)"/>
+                                                            <span class="count_text">8</span>
+                                                        </li>
+                                                        <li>
+                                                            <img src="http://rustrains.com/site1/images/ticket-icon1.png"
+                                                                 alt=""
+                                                                 class="toolt"
+                                                                 data-text="Transportation in a specialised luggage compartment - no more than three pieces of luggage for each electronic ticket. One piece of luggage should not weigh more than 75 kg. The total weight of the three pieces of luggage should not exceed 200 kg."/>
+                                                            <span class="count_text">1</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm">
+                                                    <div class="ticket-data-item"><b>In stock: </b> 113 pcs.</div>
+                                                </div>
+                                                <div class="col-sm">
+                                                    <div class="ticket-data-item"><b>Seats: </b>
+                                                        <span class="count_classes">2 classes </span> available
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-between align-items-end">
+                                            <div class="col">
+                                                <div class="ticket-route">
+                                                    <a href="#" data-toggle="modal" data-target="#routeModal"
+                                                       data-number="020У"
+                                                       data-date_from="18.01.2019" data-time="00:20" data-code0="2000000"
+                                                       data-code1="2004000">
+                                                        Route
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <button type="button" class="tm-button-open btn tm-btn-red collapsed"
+                                                        data-toggle="collapse"
+                                                        data-target="#trainCollapse1"
+                                                        id="data0_0" data-tab="0"
+                                                        data-cars="{&quot;cars&quot;:[{&quot;typeCarLoc&quot;:&quot;1-\u0441l. sleeping compt.&quot;,&quot;freeSeats&quot;:28,&quot;price&quot;:&quot;4989&quot;,&quot;priceMax&quot;:null,&quot;typeCarNumCode&quot;:6,&quot;typeCarCharCode&quot;:&quot;\u041b\u044e\u043a\u0441&quot;,&quot;catLabelLoc&quot;:&quot;1-\u0441l. sleeping compt.&quot;,&quot;compoundCategory&quot;:false,&quot;serviceClasses&quot;:[&quot;1\u0411&quot;,&quot;1\u0423&quot;],&quot;typeLoc&quot;:&quot;1-\u0441l. sleeping compt.&quot;,&quot;type&quot;:&quot;1-\u0441l. sleeping compt.&quot;,&quot;tariff&quot;:4989,&quot;tariff_rub&quot;:4989},{&quot;typeCarLoc&quot;:&quot;2-\u0441l. sleeping compt.&quot;,&quot;freeSeats&quot;:85,&quot;price&quot;:&quot;1490&quot;,&quot;priceMax&quot;:&quot;1750&quot;,&quot;typeCarNumCode&quot;:4,&quot;typeCarCharCode&quot;:&quot;\u041a\u0443\u043f\u0435&quot;,&quot;catLabelLoc&quot;:&quot;2-\u0441l. sleeping compt.&quot;,&quot;compoundCategory&quot;:false,&quot;serviceClasses&quot;:[&quot;2\u0423&quot;,&quot;2\u042d&quot;],&quot;typeLoc&quot;:&quot;2-\u0441l. sleeping compt.&quot;,&quot;type&quot;:&quot;2-\u0441l. sleeping compt.&quot;,&quot;tariff&quot;:1490,&quot;tariff_rub&quot;:1490}],&quot;classes&quot;:{&quot;1-\u0441l. sleeping compt.&quot;:{&quot;id&quot;:8,&quot;name&quot;:&quot;1-sl. sleeping compt.&quot;,&quot;amount&quot;:28},&quot;2-\u0441l. sleeping compt.&quot;:{&quot;id&quot;:7,&quot;name&quot;:&quot;2-sl. sleeping compt.&quot;,&quot;amount&quot;:85}}}"
+                                                        data-load="false" data-key="0" data-number="020У"
+                                                        data-station0="Leningradskiy Railway station"
+                                                        data-station1="Moskovskiy Railway station" data-code0="2000000"
+                                                        data-code1="2004000" data-date_from="18.01.2019" data-time="00:20"
+                                                        data-date_to="18.01.2019" data-time_to="08:59" data-toggle="modal"
+                                                        data-target="#selectSeats">Select seats
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div id="trainCollapse1" class="collapse" data-parent="#ticket-accordion">
+                                            <div class="train-types">
+                                                <div onclick="set_car(this, 46,2959, 2959,1,5)"
+                                                     data-type="Sitting (Economy+ class)"
+                                                     class="train-type">
+                                                    <div class="container-fluid">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
+                                                                <div class="d-flex">
+                                                                    <div class="d-none d-xl-block mr-3">
+                                                                        <div class="train-radio"></div>
+                                                                    </div>
+                                                                    <div class="train-type-text">Sitting (Economy+ class)</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto order-1 order-xl-0">
+                                                                <a href="#trainTypesModal" role="button"
+                                                                   data-toggle="modal">
+                                                                    <i class="tm-icon-train-types fa fa-image"></i>
+                                                                </a>
+                                                            </div>
+
+                                                            <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
+                                                                <div class="train-type-available">available seats:
+                                                                    <span>9699</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto ml-auto order-2 order-xl-0">
+                                                                <div class="train-type-price">2959966
+                                                                    <span class="currency">RUB</span>
+
+                                                                    <a data-toggle="tooltip" data-placement="top"
                                                                        title="" class="btn btn-answer"
                                                                        data-original-title="тут много текста что если покупается место для инвалида то надо купить 2 места">
-                                                                    <i class="far fa-question-circle"></i>
+                                                                        <i class="far fa-question-circle"></i>
+                                                                    </a>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div onclick="set_car(this, 58,3202, 3202,1,5)"
+                                                     data-type="Sitting (Economy class (Disabled Person))"
+                                                     class="train-type active">
+                                                    <div class="container-fluid">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
+                                                                <div class="d-flex">
+                                                                    <div class="d-none d-xl-block mr-3">
+                                                                        <div class="train-radio"></div>
+                                                                    </div>
+                                                                    <div class="train-type-text">Sitting (Economy class
+                                                                        (Disabled Person))
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto order-1 order-xl-0">
+                                                                <a href="#trainTypesModal" role="button"
+                                                                   data-toggle="modal">
+                                                                    <i class="tm-icon-train-types fa fa-image"></i>
                                                                 </a>
+                                                            </div>
 
+                                                            <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
+                                                                <div class="train-type-available">available seats:
+                                                                    <span>2</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto ml-auto order-2 order-xl-0">
+                                                                <div class="train-type-price">3202
+                                                                    <span class="currency">RUB</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div onclick="set_car(this, 46,2959, 2959,1,5)"
+                                                     data-type="Sitting (Economy+ class)"
+                                                     class="train-type">
+                                                    <div class="container-fluid">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
+                                                                <div class="d-flex">
+                                                                    <div class="d-none d-xl-block mr-3">
+                                                                        <div class="train-radio"></div>
+                                                                    </div>
+                                                                    <div class="train-type-text">Sitting (Economy+ class)</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto order-1 order-xl-0">
+                                                                <a href="#trainTypesModal" role="button"
+                                                                   data-toggle="modal">
+                                                                    <i class="tm-icon-train-types fa fa-image"></i>
+                                                                </a>
+                                                            </div>
+
+                                                            <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
+                                                                <div class="train-type-available">available seats:
+                                                                    <span>11</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto ml-auto order-2 order-xl-0">
+                                                                <div class="train-type-price">2959
+                                                                    <span class="currency">RUB</span>
+                                                                </div>
                                                             </div>
                                                         </div>
 
@@ -690,501 +770,423 @@
 
                                                 </div>
 
+                                                <div onclick="set_car(this, 46,2959, 2959,1,5)"
+                                                     data-type="Sitting (Economy+ class)"
+                                                     class="train-type">
+                                                    <div class="container-fluid">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
+                                                                <div class="d-flex">
+                                                                    <div class="d-none d-xl-block mr-3">
+                                                                        <div class="train-radio"></div>
+                                                                    </div>
+                                                                    <div class="train-type-text">Sitting (Economy+ class)</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto order-1 order-xl-0">
+                                                                <a href="#trainTypesModal" role="button"
+                                                                   data-toggle="modal">
+                                                                    <i class="tm-icon-train-types fa fa-image"></i>
+                                                                </a>
+                                                            </div>
+
+                                                            <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
+                                                                <div class="train-type-available">available seats:
+                                                                    <span>11</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto ml-auto order-2 order-xl-0">
+                                                                <div class="train-type-price">2959
+                                                                    <span class="currency">RUB</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div onclick="set_car(this, 46,2959, 2959,1,5)"
+                                                     data-type="Sitting (Economy+ class)"
+                                                     class="train-type">
+                                                    <div class="container-fluid">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
+                                                                <div class="d-flex">
+                                                                    <div class="d-none d-xl-block mr-3">
+                                                                        <div class="train-radio"></div>
+                                                                    </div>
+                                                                    <div class="train-type-text">Sitting (Economy+ class)</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto order-1 order-xl-0">
+                                                                <a href="#trainTypesModal" role="button"
+                                                                   data-toggle="modal">
+                                                                    <i class="tm-icon-train-types fa fa-image"></i>
+                                                                </a>
+                                                            </div>
+
+                                                            <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
+                                                                <div class="train-type-available">available seats:
+                                                                    <span>11</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-auto ml-auto order-2 order-xl-0">
+                                                                <div class="train-type-price">2959
+                                                                    <span class="currency">RUB</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
                                             </div>
 
-                                            <div onclick="set_car(this, 58,3202, 3202,1,5)"
-                                                 data-type="Sitting (Economy class (Disabled Person))"
-                                                 class="train-type active">
+                                            <div class="train-order">
                                                 <div class="container-fluid">
                                                     <div class="row align-items-center">
-                                                        <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
-                                                            <div class="d-flex">
-                                                                <div class="d-none d-xl-block mr-3">
-                                                                    <div class="train-radio"></div>
-                                                                </div>
-                                                                <div class="train-type-text">Sitting (Economy class
-                                                                    (Disabled Person))
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-auto order-1 order-xl-0">
-                                                            <a href="#trainTypesModal" role="button"
-                                                               data-toggle="modal">
-                                                                <i class="tm-icon-train-types fa fa-image"></i>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
-                                                            <div class="train-type-available">available seats:
-                                                                <span>2</span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-auto ml-auto order-2 order-xl-0">
-                                                            <div class="train-type-price">3202
+                                                        <div class="col-md">
+                                                            <div class="seats-total-price">
+                                                                Total: <span class="all price">3825</span>
                                                                 <span class="currency">RUB</span>
                                                             </div>
                                                         </div>
-                                                    </div>
 
-                                                </div>
-                                            </div>
+                                                        <div class="col-md">
 
-                                            <div onclick="set_car(this, 46,2959, 2959,1,5)"
-                                                 data-type="Sitting (Economy+ class)"
-                                                 class="train-type">
-                                                <div class="container-fluid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
-                                                            <div class="d-flex">
-                                                                <div class="d-none d-xl-block mr-3">
-                                                                    <div class="train-radio"></div>
-                                                                </div>
-                                                                <div class="train-type-text">Sitting (Economy+ class)</div>
+
+                                                            <div class="seats-btn">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(-1);$('#do_order').submit();}">
+                                                                    <i class="fa fa-angle-double-left"></i>Previous trip
+                                                                </button>
+                                                                <button type="button" class="btn tm-btn-red"
+                                                                        onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(1);$('#do_order').submit();}">
+                                                                    Next trip<i class="fa fa-angle-double-right"></i>
+                                                                </button>
+
+                                                                <!--<button type="button" class="btn tm-btn-red"
+                                                                        onclick="if(check_selected_seats(0)) {$('#do_order').find('[name=direction]').val(0);$('#do_order').submit();}">
+                                                                    Order
+                                                                </button>-->
                                                             </div>
+
                                                         </div>
-
-                                                        <div class="col-auto order-1 order-xl-0">
-                                                            <a href="#trainTypesModal" role="button"
-                                                               data-toggle="modal">
-                                                                <i class="tm-icon-train-types fa fa-image"></i>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
-                                                            <div class="train-type-available">available seats:
-                                                                <span>11</span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-auto ml-auto order-2 order-xl-0">
-                                                            <div class="train-type-price">2959
-                                                                <span class="currency">RUB</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div onclick="set_car(this, 46,2959, 2959,1,5)"
-                                                 data-type="Sitting (Economy+ class)"
-                                                 class="train-type">
-                                                <div class="container-fluid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
-                                                            <div class="d-flex">
-                                                                <div class="d-none d-xl-block mr-3">
-                                                                    <div class="train-radio"></div>
-                                                                </div>
-                                                                <div class="train-type-text">Sitting (Economy+ class)</div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-auto order-1 order-xl-0">
-                                                            <a href="#trainTypesModal" role="button"
-                                                               data-toggle="modal">
-                                                                <i class="tm-icon-train-types fa fa-image"></i>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
-                                                            <div class="train-type-available">available seats:
-                                                                <span>11</span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-auto ml-auto order-2 order-xl-0">
-                                                            <div class="train-type-price">2959
-                                                                <span class="currency">RUB</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div onclick="set_car(this, 46,2959, 2959,1,5)"
-                                                 data-type="Sitting (Economy+ class)"
-                                                 class="train-type">
-                                                <div class="container-fluid">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-sm-7 col-xl-5 mb-2 mb-xl-0">
-                                                            <div class="d-flex">
-                                                                <div class="d-none d-xl-block mr-3">
-                                                                    <div class="train-radio"></div>
-                                                                </div>
-                                                                <div class="train-type-text">Sitting (Economy+ class)</div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-auto order-1 order-xl-0">
-                                                            <a href="#trainTypesModal" role="button"
-                                                               data-toggle="modal">
-                                                                <i class="tm-icon-train-types fa fa-image"></i>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="col-sm-5 col-xl-3 text-sm-right text-xl-center mb-2 mb-xl-0">
-                                                            <div class="train-type-available">available seats:
-                                                                <span>11</span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-auto ml-auto order-2 order-xl-0">
-                                                            <div class="train-type-price">2959
-                                                                <span class="currency">RUB</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="train-order">
-                                            <div class="container-fluid">
-                                                <div class="row align-items-center">
-                                                    <div class="col-md">
-                                                        <div class="seats-total-price">
-                                                            Total: <span class="all price">3825</span>
-                                                            <span class="currency">RUB</span>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md">
-
-
-                                                        <div class="seats-btn">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                    onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(-1);$('#do_order').submit();}">
-                                                                <i class="fa fa-angle-double-left"></i>Previous trip
-                                                            </button>
-                                                            <button type="button" class="btn tm-btn-red"
-                                                                    onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(1);$('#do_order').submit();}">
-                                                                Next trip<i class="fa fa-angle-double-right"></i>
-                                                            </button>
-
-                                                            <!--<button type="button" class="btn tm-btn-red"
-                                                                    onclick="if(check_selected_seats(0)) {$('#do_order').find('[name=direction]').val(0);$('#do_order').submit();}">
-                                                                Order
-                                                            </button>-->
-                                                        </div>
-
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
 
-                                <div class="modal fade select-seats-modals" id="trainModal0_0" tabindex="-1"
-                                     role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <div class="train-nav">
-                                                    <div class="train-nav-item">
-                                                        <a href="javascript:void(0)"
-                                                           onclick="$('.close0_0').click();setTimeout(function(){$('#data0_1').click();},400)">Next
-                                                            <i class="fas fa-chevron-right"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="close close0_0" data-dismiss="modal"
-                                                    aria-label="close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-
-                                            <div class="tab0" id="train0_0">
-
-                                                <div class="preloader" style="text-align:center"><img
-                                                        src="/icons/black-train.gif"/></div>
-
-                                                <div class="modal-body">
-
-                                                    <div class="train-infos">
-                                                        <div class="train-info active">
-                                                            <div data-nav="thumbs" data-maxwidth="100%"
-                                                                 class="fotorama f91192"></div>
-                                                            <div class="train-info-text"></div>
+                                    <div class="modal fade select-seats-modals" id="trainModal0_0" tabindex="-1"
+                                         role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <div class="train-nav">
+                                                        <div class="train-nav-item">
+                                                            <a href="javascript:void(0)"
+                                                               onclick="$('.close0_0').click();setTimeout(function(){$('#data0_1').click();},400)">Next
+                                                                <i class="fas fa-chevron-right"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <button type="button" class="close close0_0" data-dismiss="modal"
+                                                        aria-label="close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+
+                                                <div class="tab0" id="train0_0">
+
+                                                    <div class="preloader" style="text-align:center"><img
+                                                            src="/icons/black-train.gif"/></div>
+
+                                                    <div class="modal-body">
+
+                                                        <div class="train-infos">
+                                                            <div class="train-info active">
+                                                                <div data-nav="thumbs" data-maxwidth="100%"
+                                                                     class="fotorama f91192"></div>
+                                                                <div class="train-info-text"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
 
-                                            </div>
-                                            <div class="modal-footer">
+                                                </div>
+                                                <div class="modal-footer">
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
+
                                 </div>
 
+                            </div>
 
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <!--Sidebar-->
+                        <div class="sidebar">
+
+                            <!--Ticket filter-->
+                            <div id="ticketFilter" class="ticket-filter">
+                                <a class="ticket-filter-close" href="#ticketFilter" data-toggle="collapse">
+                                    <i class="fas fa-times"></i>
+                                </a>
+
+                                <h3 class="text-center">Filters</h3>
+
+                                <div class="ticket-filter-sliders">
+                                    <div class="ticket-filter-slider">
+                                        <h4>Departure</h4>
+                                        <div class="slider_departure ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                             data-min="0" data-max="24">
+                                            <span class="min">0</span>
+                                            <span class="max">19</span>
+
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                                 style="left: 0%; width: 100%;"></div>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                                  style="left: 0%;"></span>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                                  style="left: 100%;"></span></div>
+                                    </div>
+                                    <div class="ticket-filter-slider">
+                                        <h4>Arrival</h4>
+                                        <div class="slider_arrival ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                             data-min="0" data-max="24">
+                                            <span class="min">0</span>
+                                            <span class="max">24</span>
+
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                                 style="left: 0%; width: 100%;"></div>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                                  style="left: 0%;"></span>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                                  style="left: 100%;"></span></div>
+                                    </div>
+                                    <div class="ticket-filter-slider">
+                                        <h4>Trip duration</h4>
+                                        <div class="slider_duration ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                             data-min="210" data-max="588">
+                                            <span class="min">03h 30min</span>
+                                            <span class="max">09h 48min</span>
+
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                                 style="left: 0%; width: 100%;"></div>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                                  style="left: 0%;"></span>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                                  style="left: 100%;"></span></div>
+                                    </div>
+                                    <div class="ticket-filter-slider">
+                                        <h4>Price</h4>
+                                        <div class="slider_price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                             data-min="741" data-max="16732">
+                                            <span class="min">741</span>
+                                            <span class="max">16732</span>
+
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                                 style="left: 0%; width: 100%;"></div>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                                  style="left: 0%;"></span>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                                  style="left: 100%;"></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="ticket-filter-params">
+                                    <div class="ticket-filter-param">
+                                        <h4>Car type</h4>
+
+                                        <ul>
+                                            <li class="chal">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" id="select_all">
+                                                    <span></span>
+                                                    Select All
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="1-sl. sleeping compt." class="search_class"/>
+                                                    <span></span>
+
+                                                    1-sl. sleeping compt.
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="2-sl. sleeping compt." class="search_class"/>
+                                                    <span></span>
+
+                                                    2-sl. sleeping compt.
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="2-сl. sleeping compt. (2-сl. sleeping compt. (Disabled Person))"
+                                                           class="search_class"/>
+                                                    <span></span>
+
+                                                    2-сl. sleeping compt. (2-сl. sleeping compt. (Disabled Person))
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="2-сl. sleeping compt. (комфорт)" class="search_class"/>
+                                                    <span></span>
+
+                                                    2-сl. sleeping compt. (комфорт)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="3-sl. open sleeping" class="search_class"/>
+                                                    <span></span>
+
+                                                    3-sl. open sleeping
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="De Luxe sleeping" class="search_class"/>
+                                                    <span></span>
+
+                                                    De Luxe sleeping
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (Bistro car)" class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (Bistro car)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (Business class)" class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (Business class)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (Conference compartment)" class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (Conference compartment)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (Economy class (Disabled Person))"
+                                                           class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (Economy class (Disabled Person))
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (Economy class)" class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (Economy class)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (Economy+ class)" class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (Economy+ class)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (First class)" class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (First class)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (Sitting )" class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (Sitting )
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" autocomplete="off" checked="checked"
+                                                           value="Sitting (Standard)" class="search_class"/>
+                                                    <span></span>
+
+                                                    Sitting (Standard)
+                                                </label>
+                                            </li>
+                                        </ul>
+
+                                        <div class="ticket-filter-more">
+                                            <span class="show-more">Show more</span>
+                                            <span class="hide-more">Show less</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="ticket-filter-apply">
+                                    <a href="#" class="clear_f ticket-filter-clear">Clear filters</a>
+                                    <button class="btn tm-btn-red" data-target="#ticketFilter" data-toggle="collapse"
+                                            aria-expanded="true">Apply
+                                    </button>
+                                </div>
                             </div>
 
                         </div>
 
                     </div>
 
-
                 </div>
 
-                <div class="col-lg-3">
-
-                    <!--Sidebar-->
-                    <div class="sidebar">
-
-                        <!--Ticket filter-->
-                        <div id="ticketFilter" class="ticket-filter">
-                            <a class="ticket-filter-close" href="#ticketFilter" data-toggle="collapse">
-                                <i class="fas fa-times"></i>
-                            </a>
-
-                            <h3 class="text-center">Filters</h3>
-
-                            <div class="ticket-filter-sliders">
-                                <div class="ticket-filter-slider">
-                                    <h4>Departure</h4>
-                                    <div class="slider_departure ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                         data-min="0" data-max="24">
-                                        <span class="min">0</span>
-                                        <span class="max">19</span>
-
-                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                             style="left: 0%; width: 100%;"></div>
-                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                              style="left: 0%;"></span>
-                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                              style="left: 100%;"></span></div>
-                                </div>
-                                <div class="ticket-filter-slider">
-                                    <h4>Arrival</h4>
-                                    <div class="slider_arrival ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                         data-min="0" data-max="24">
-                                        <span class="min">0</span>
-                                        <span class="max">24</span>
-
-                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                             style="left: 0%; width: 100%;"></div>
-                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                              style="left: 0%;"></span>
-                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                              style="left: 100%;"></span></div>
-                                </div>
-                                <div class="ticket-filter-slider">
-                                    <h4>Trip duration</h4>
-                                    <div class="slider_duration ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                         data-min="210" data-max="588">
-                                        <span class="min">03h 30min</span>
-                                        <span class="max">09h 48min</span>
-
-                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                             style="left: 0%; width: 100%;"></div>
-                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                              style="left: 0%;"></span>
-                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                              style="left: 100%;"></span></div>
-                                </div>
-                                <div class="ticket-filter-slider">
-                                    <h4>Price</h4>
-                                    <div class="slider_price ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                         data-min="741" data-max="16732">
-                                        <span class="min">741</span>
-                                        <span class="max">16732</span>
-
-                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                             style="left: 0%; width: 100%;"></div>
-                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                              style="left: 0%;"></span>
-                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
-                                              style="left: 100%;"></span></div>
-                                </div>
-                            </div>
-
-                            <div class="ticket-filter-params">
-                                <div class="ticket-filter-param">
-                                    <h4>Car type</h4>
-
-                                    <ul>
-                                        <li class="chal">
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" id="select_all">
-                                                <span></span>
-                                                Select All
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="1-sl. sleeping compt." class="search_class"/>
-                                                <span></span>
-
-                                                1-sl. sleeping compt.
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="2-sl. sleeping compt." class="search_class"/>
-                                                <span></span>
-
-                                                2-sl. sleeping compt.
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="2-сl. sleeping compt. (2-сl. sleeping compt. (Disabled Person))"
-                                                       class="search_class"/>
-                                                <span></span>
-
-                                                2-сl. sleeping compt. (2-сl. sleeping compt. (Disabled Person))
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="2-сl. sleeping compt. (комфорт)" class="search_class"/>
-                                                <span></span>
-
-                                                2-сl. sleeping compt. (комфорт)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="3-sl. open sleeping" class="search_class"/>
-                                                <span></span>
-
-                                                3-sl. open sleeping
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="De Luxe sleeping" class="search_class"/>
-                                                <span></span>
-
-                                                De Luxe sleeping
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (Bistro car)" class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (Bistro car)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (Business class)" class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (Business class)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (Conference compartment)" class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (Conference compartment)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (Economy class (Disabled Person))"
-                                                       class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (Economy class (Disabled Person))
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (Economy class)" class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (Economy class)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (Economy+ class)" class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (Economy+ class)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (First class)" class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (First class)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (Sitting )" class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (Sitting )
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox">
-                                                <input type="checkbox" autocomplete="off" checked="checked"
-                                                       value="Sitting (Standard)" class="search_class"/>
-                                                <span></span>
-
-                                                Sitting (Standard)
-                                            </label>
-                                        </li>
-                                    </ul>
-
-                                    <div class="ticket-filter-more">
-                                        <span class="show-more">Show more</span>
-                                        <span class="hide-more">Show less</span>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="ticket-filter-apply">
-                                <a href="#" class="clear_f ticket-filter-clear">Clear filters</a>
-                                <button class="btn tm-btn-red" data-target="#ticketFilter" data-toggle="collapse"
-                                        aria-expanded="true">Apply
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
+                <a id="fmenu" class="btn-filter btn js__show-more-modal"
+                   href="#ticketFilter" data-toggle="collapse" role="button">
+                    Filters <i class="fas fa-sliders-h"></i>
+                </a>
             </div>
-
-            <a id="fmenu" class="btn-filter btn js__show-more-modal"
-               href="#ticketFilter" data-toggle="collapse" role="button">
-                Filters <i class="fas fa-sliders-h"></i>
-            </a>
 
         </div>
     </div>
