@@ -460,6 +460,7 @@ $(document).ready(function () {
         }
 
         function showMoreFilters($parent) {
+            return;
             var filterSelector = '.ticket-filter-param ul';
             var $filters = $parent && $parent.length ?
                 $parent.find(filterSelector) :
