@@ -5502,6 +5502,9 @@ a.ui-button:active,
   .ticket-filter-clear:hover, .ticket-filter-clear:focus {
     color: #494f54; }
 
+.slider_lock .ui-slider-handle:last-child {
+  left: 100% !important; }
+
 .btn-filter {
   display: none;
   position: sticky;
