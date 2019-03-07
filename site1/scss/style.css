@@ -940,7 +940,8 @@ h1, h2, .head {
   .search-history-title {
     font-size: 18px; }
   .search-history-header {
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    cursor: pointer; }
   .search-history-show {
     display: flex;
     align-items: center;
