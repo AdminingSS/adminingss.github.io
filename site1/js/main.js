@@ -191,6 +191,7 @@ $(document).ready(function () {
         $destinationsSlider.slick({
             infinite: true,
             slidesToShow: 3,
+            lazyLoad: 'ondemand',
             slidesToScroll: 3,
             responsive: [
                 {
