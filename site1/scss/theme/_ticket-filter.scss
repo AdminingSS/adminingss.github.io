@@ -9,47 +9,89 @@
   }
 
   &-slider {
+    position: relative;
     margin-bottom: 30px;
   }
 
-  .ui-slider {
+  .min, .max {
+    position: absolute;
+    top: 115%;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .min {
+    left: 5px;
+  }
+
+  .max {
+    right: 5px;
+  }
+
+  .vue-slider-rail {
     position: relative;
     height: 7px;
     margin: 0 9px;
-    background: #ebebeb;
-
-    .ui-slider-handle {
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 5px solid #d81818;
-      background: #fff;
-      margin: -3px 0 0 -9px;
-      cursor: pointer;
-    }
-
-    .ui-slider-range {
-      position: absolute;
-      height: 100%;
-      background: #555;
-    }
-
-    .min, .max {
-      position: absolute;
-      top: 15px;
-      z-index: 1000;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .min {
-      left: -5px;
-    }
-    .max {
-      right: -5px;
-    }
   }
+
+  .vue-slider-dot {
+    position: absolute;
+    width: 18px!important;
+    height: 18px!important;
+    border-radius: 50%;
+    border: 5px solid #d81818;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .vue-slider-dot-handle-focus {
+    border-color: #d81818;
+    box-shadow: 0 0 0 5px #d65a4a;
+  }
+
+  .vue-slider-process {
+    background-color: #555;
+    border: 1px solid #999;
+  }
+
+  //.ui-slider {
+  //  position: relative;
+  //  height: 7px;
+  //  margin: 0 9px;
+  //  background: #ebebeb;
+  //
+  //  .ui-slider-handle {
+  //    position: absolute;
+  //    width: 18px;
+  //    height: 18px;
+  //    border-radius: 50%;
+  //    border: 5px solid #d81818;
+  //    background: #fff;
+  //    margin: -3px 0 0 -9px;
+  //    cursor: pointer;
+  //  }
+  //
+  //  .ui-slider-range {
+  //    position: absolute;
+  //    height: 100%;
+  //    background: #555;
+  //  }
+  //
+  //  .min, .max {
+  //    position: absolute;
+  //    top: 15px;
+  //    z-index: 1000;
+  //    font-size: 12px;
+  //    font-weight: 700;
+  //  }
+  //
+  //  .min {
+  //    left: -5px;
+  //  }
+  //  .max {
+  //    right: -5px;
+  //  }
+  //}
 
   &-param {
     margin-bottom: 10px;
@@ -143,12 +185,12 @@
   }
 }
 
-.slider_lock {
-
-  .ui-slider-handle:last-child {
-    left: 100% !important;
-  }
-}
+//.slider_lock {
+//
+//  .ui-slider-handle:last-child {
+//    left: 100% !important;
+//  }
+//}
 
 .btn-filter {
   display: none;

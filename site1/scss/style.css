@@ -5337,68 +5337,6 @@ button:focus {
   align-items: center;
   margin-bottom: 10px; }
 
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
-  border: 0;
-  width: 9px;
-  height: 16px;
-  background: url(../images/left.png) no-repeat 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 16px;
-  cursor: pointer; }
-  .ui-datepicker .ui-datepicker-prev span,
-  .ui-datepicker .ui-datepicker-next span {
-    display: none; }
-.ui-datepicker .ui-datepicker-next {
-  background-image: url(../images/right.png);
-  left: auto;
-  right: 16px; }
-
-.ui-widget-header {
-  border: 1px solid #999;
-  background: #999; }
-
-.ui-button,
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default,
-html .ui-button.ui-state-disabled:active,
-html .ui-button.ui-state-disabled:hover {
-  border-color: #ddd;
-  background: #fff;
-  color: #555;
-  text-align: center; }
-
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight,
-.ui-widget-header .ui-state-highlight {
-  color: #fff;
-  background-color: #999;
-  border-color: #999; }
-
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus,
-.ui-button:hover,
-.ui-button:focus {
-  color: #fff;
-  background-color: #999;
-  border-color: #999; }
-
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {
-  color: #fff;
-  background-color: #999;
-  border-color: #999; }
-
 .page-error__title {
   font-size: 144px;
   font-weight: 600;
@@ -5423,35 +5361,35 @@ a.ui-button:active,
 .ticket-filter-sliders {
   padding-bottom: 20px; }
 .ticket-filter-slider {
+  position: relative;
   margin-bottom: 30px; }
-.ticket-filter .ui-slider {
+.ticket-filter .min, .ticket-filter .max {
+  position: absolute;
+  top: 115%;
+  font-size: 12px;
+  font-weight: 700; }
+.ticket-filter .min {
+  left: 5px; }
+.ticket-filter .max {
+  right: 5px; }
+.ticket-filter .vue-slider-rail {
   position: relative;
   height: 7px;
-  margin: 0 9px;
-  background: #ebebeb; }
-  .ticket-filter .ui-slider .ui-slider-handle {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 5px solid #d81818;
-    background: #fff;
-    margin: -3px 0 0 -9px;
-    cursor: pointer; }
-  .ticket-filter .ui-slider .ui-slider-range {
-    position: absolute;
-    height: 100%;
-    background: #555; }
-  .ticket-filter .ui-slider .min, .ticket-filter .ui-slider .max {
-    position: absolute;
-    top: 15px;
-    z-index: 1000;
-    font-size: 12px;
-    font-weight: 700; }
-  .ticket-filter .ui-slider .min {
-    left: -5px; }
-  .ticket-filter .ui-slider .max {
-    right: -5px; }
+  margin: 0 9px; }
+.ticket-filter .vue-slider-dot {
+  position: absolute;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50%;
+  border: 5px solid #d81818;
+  background: #fff;
+  cursor: pointer; }
+.ticket-filter .vue-slider-dot-handle-focus {
+  border-color: #d81818;
+  box-shadow: 0 0 0 5px #d65a4a; }
+.ticket-filter .vue-slider-process {
+  background-color: #555;
+  border: 1px solid #999; }
 .ticket-filter-param {
   margin-bottom: 10px; }
   .ticket-filter-param h4 {
@@ -5502,9 +5440,6 @@ a.ui-button:active,
   color: #6c757d; }
   .ticket-filter-clear:hover, .ticket-filter-clear:focus {
     color: #494f54; }
-
-.slider_lock .ui-slider-handle:last-child {
-  left: 100% !important; }
 
 .btn-filter {
   display: none;
