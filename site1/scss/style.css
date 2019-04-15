@@ -1,3 +1,16 @@
+#refreshPage {
+  position: fixed;
+  display: block;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: 2000;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate3d(-50%, -50%, 0); }
+
 button,
 input[type="submit"] {
   appearance: none;
