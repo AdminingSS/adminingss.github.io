@@ -857,6 +857,16 @@ h1, h2, .head {
   }
 }
 
+@media (max-width: 359px) {
+  .tm-d-xxs-none {
+    display: none!important;
+  }
+
+  .tm-d-xxs {
+    display: block!important;
+  }
+}
+
 // Nav 
 
 .custom-nav {

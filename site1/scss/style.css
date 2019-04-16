@@ -608,6 +608,12 @@ h1, h2, .head {
   .navbar-brand {
     width: 140px;
     margin-right: 5px; } }
+@media (max-width: 359px) {
+  .tm-d-xxs-none {
+    display: none !important; }
+
+  .tm-d-xxs {
+    display: block !important; } }
 .custom-nav {
   display: flex;
   align-items: center;
