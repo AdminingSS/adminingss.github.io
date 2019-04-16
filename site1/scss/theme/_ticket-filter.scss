@@ -36,8 +36,8 @@
 
   .vue-slider-dot {
     position: absolute;
-    width: 18px!important;
-    height: 18px!important;
+    width: 18px !important;
+    height: 18px !important;
     border-radius: 50%;
     border: 5px solid #d81818;
     background: #fff;
@@ -52,6 +52,30 @@
   .vue-slider-process {
     background-color: #555;
     border: 1px solid #999;
+  }
+
+  .vue-slider:hover .vue-slider-process {
+    background-color: #555;
+  }
+
+  .vue-slider-process {
+    background-color: #555;
+  }
+
+  .vue-slider:hover .vue-slider-dot-handle:hover {
+    border-color: transparent;
+  }
+
+  .vue-slider:hover .vue-slider-dot-handle-focus {
+    border-color: transparent;
+  }
+
+  .vue-slider:hover .vue-slider-dot-handle {
+    border-color: transparent;
+  }
+
+  .vue-slider-dot-handle:hover {
+    border-color: transparent;
   }
 
   //.ui-slider {

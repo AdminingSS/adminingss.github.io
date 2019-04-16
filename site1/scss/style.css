@@ -5412,6 +5412,18 @@ button:focus {
 .ticket-filter .vue-slider-process {
   background-color: #555;
   border: 1px solid #999; }
+.ticket-filter .vue-slider:hover .vue-slider-process {
+  background-color: #555; }
+.ticket-filter .vue-slider-process {
+  background-color: #555; }
+.ticket-filter .vue-slider:hover .vue-slider-dot-handle:hover {
+  border-color: transparent; }
+.ticket-filter .vue-slider:hover .vue-slider-dot-handle-focus {
+  border-color: transparent; }
+.ticket-filter .vue-slider:hover .vue-slider-dot-handle {
+  border-color: transparent; }
+.ticket-filter .vue-slider-dot-handle:hover {
+  border-color: transparent; }
 .ticket-filter-param {
   margin-bottom: 10px; }
   .ticket-filter-param h4 {
