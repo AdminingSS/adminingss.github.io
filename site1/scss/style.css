@@ -3578,7 +3578,7 @@ h1, h2, .head {
     transform: scale(1.05); }
 .articles-link-wrap {
   position: relative;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
   .articles-link-wrap img {
     transition: all 0.3s linear; }
 .articles-slider {
