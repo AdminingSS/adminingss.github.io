@@ -5222,6 +5222,8 @@ button:focus {
   text-transform: uppercase; }
 .personal-area .order-info-item .info {
   margin-bottom: 8px; }
+.personal-area .intl-tel-input {
+  display: block; }
 
 .coach-slider .slick-prev, .coach-slider .slick-next {
   width: 40px;
