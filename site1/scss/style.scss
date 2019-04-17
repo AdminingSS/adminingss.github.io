@@ -3803,6 +3803,16 @@ h1, h2, .head {
   }
 }
 
+.destinations-slider {
+  .slick-prev {
+    left: -10px;
+  }
+
+  .slick-next {
+    right: -10px;
+  }
+}
+
 @media (max-width: 1240px) {
 
 }

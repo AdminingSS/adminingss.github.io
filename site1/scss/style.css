@@ -3583,12 +3583,17 @@ h1, h2, .head {
     transition: all 0.3s linear; }
 .articles-slider {
   padding: 0 10px; }
-  .articles-slider .slick-prev, .destinations-slider .slick-prev {
+  .articles-slider .slick-prev {
     left: -10px; }
-  .articles-slider .slick-next, .destinations-slider .slick-next {
+  .articles-slider .slick-next {
     right: -10px; }
   .articles-slider .slick-slide .articles-item {
     display: block; }
+
+.destinations-slider .slick-prev {
+  left: -10px; }
+.destinations-slider .slick-next {
+  right: -10px; }
 
 .cookie {
   display: none;
