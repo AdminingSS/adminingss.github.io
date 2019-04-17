@@ -5372,6 +5372,24 @@ button:focus {
   align-items: center;
   margin-bottom: 10px; }
 
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  border: 0;
+  width: 9px;
+  height: 16px;
+  background: url(../images/left.png) no-repeat 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  cursor: pointer; }
+  .ui-datepicker .ui-datepicker-prev span,
+  .ui-datepicker .ui-datepicker-next span {
+    display: none; }
+.ui-datepicker .ui-datepicker-next {
+  background-image: url(../images/right.png);
+  left: auto;
+  right: 16px; }
+
 .page-error__title {
   font-size: 144px;
   font-weight: 600;

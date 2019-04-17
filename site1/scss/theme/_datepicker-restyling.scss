@@ -1,28 +1,31 @@
-//.ui-datepicker {
-//
-//  .ui-datepicker-prev,
-//  .ui-datepicker-next {
-//    border: 0;
-//    width: 9px;
-//    height: 16px;
-//    background: url(../images/left.png) no-repeat 50%;
-//    top: 50%;
-//    transform: translateY(-50%);
-//    left: 16px;
-//    cursor: pointer;
-//
-//    span {
-//      display: none;
-//    }
-//  }
-//
-//  .ui-datepicker-next {
-//    background-image: url(../images/right.png);
-//    left: auto;
-//    right: 16px;
-//  }
-//}
-//
+.ui-datepicker {
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    border: 0;
+    width: 9px;
+    height: 16px;
+    background: url(../images/left.png) no-repeat 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    cursor: pointer;
+
+    span {
+      display: none;
+    }
+  }
+
+  .ui-datepicker-next {
+    background-image: url(../images/right.png);
+    left: auto;
+    right: 16px;
+  }
+}
+
+
+
+
 //.ui-widget-header {
 // border: 1px solid #999;
 //  background: #999;
