@@ -171,7 +171,7 @@ $(document).ready(function () {
 
     //Destination
     (function () {
-        var $destinationsSlider = $('.articles-slider');
+        var $destinationsSlider = $('.articles-slider, .destinations-slider');
 
         $destinationsSlider.on('setPosition', function (e, slick) {
             var $img = slick.$slides.filter('.slick-current.slick-active').find('.link-image');
