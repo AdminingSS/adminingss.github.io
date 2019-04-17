@@ -3571,7 +3571,7 @@ h1, h2, .head {
         color: #fff; }
 
 .articles-item {
-  padding: 0 20px;
+  padding: 0 10px;
   display: none;
   text-decoration: none; }
   .articles-item:hover img {
