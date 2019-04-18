@@ -329,6 +329,7 @@ $(document).ready(function () {
             changeMonth: true,
             changeYear: true,
             dateFormat: "dd.mm.yy",
+            showOptions: { direction: "down" },
             firstDay: 1,
             maxDate: "+0d",
             minDate: new Date(1920, 0, 1),
