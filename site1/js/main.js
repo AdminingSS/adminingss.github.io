@@ -330,6 +330,7 @@ $(document).ready(function () {
             changeYear: true,
             dateFormat: "dd.mm.yy",
             showOptions: { direction: "down" },
+            defaultDate: '-30y',
             firstDay: 1,
             maxDate: "+0d",
             minDate: new Date(1920, 0, 1),
