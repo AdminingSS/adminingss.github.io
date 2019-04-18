@@ -132,11 +132,11 @@
       overflow: hidden;
 
       > li {
-        display: none;
-
-        &:first-child, &:nth-child(2), &:nth-child(3) {
-          display: block;
-        }
+        //display: none;
+        //
+        //&:first-child, &:nth-child(2), &:nth-child(3) {
+        //  display: block;
+        //}
       }
 
       &.tm-active {

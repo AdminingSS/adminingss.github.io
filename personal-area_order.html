@@ -444,7 +444,7 @@
                                                 <div class="col-md-5 mb-3 mb-md-0">
                                                     <div class="order-info-item">
                                                         <div class="label">Departure / Arrival date</div>
-                                                        <div class="info">13 Feb 2019 / 13 Feb 2019 </div>
+                                                        <div class="info">13 Feb 2019 / 13 Feb 2019</div>
                                                         <div class="">Wednesday</div>
                                                     </div>
                                                 </div>
@@ -506,13 +506,15 @@
 
                                     <!--Order passenger-->
                                     <div class="order-passenger">
-                                        <div class="order-passenger-top" data-toggle="collapse" data-target="#passengerCollapse1">
+                                        <div class="order-passenger-top" data-toggle="collapse"
+                                             data-target="#passengerCollapse1">
                                             <div class="container-fluid">
                                                 <h6 class="mb-0">#1 John J. Smith</h6>
                                             </div>
                                         </div>
 
-                                        <div id="passengerCollapse1" class="collapse show" data-parent="#order-review-passengers-accordion">
+                                        <div id="passengerCollapse1" class="collapse show"
+                                             data-parent="#order-review-passengers-accordion">
                                             <div class="order-passenger-info">
                                                 <div class="container-fluid">
                                                     <div class="row">
@@ -542,13 +544,15 @@
 
                                     <!--One more Order passenger for example-->
                                     <div class="order-passenger">
-                                        <div class="order-passenger-top collapsed" data-toggle="collapse" data-target="#passengerCollapse2">
+                                        <div class="order-passenger-top collapsed" data-toggle="collapse"
+                                             data-target="#passengerCollapse2">
                                             <div class="container-fluid">
                                                 <h6 class="mb-0">#2 Margaret Smith</h6>
                                             </div>
                                         </div>
 
-                                        <div id="passengerCollapse2" class="collapse" data-parent="#order-review-passengers-accordion">
+                                        <div id="passengerCollapse2" class="collapse"
+                                             data-parent="#order-review-passengers-accordion">
                                             <div class="order-passenger-info">
                                                 <div class="container-fluid">
                                                     <div class="row">
@@ -588,7 +592,7 @@
                                             <div class="order-review-text">balalaika <b>17 RUB</b></div>
                                         </div>
                                         <div class="order-services-item">
-                                            <div class="order-review-text">zaaa  <b>12 RUB</b></div>
+                                            <div class="order-review-text">zaaa <b>12 RUB</b></div>
                                         </div>
                                     </div>
                                 </div>
@@ -665,9 +669,129 @@
                                 <div class="order-total-description">Total amount includes all service fees.</div>
                             </div>
                             <div class="order-total-buttons">
-                                <a href="#" class="btn tm-btn-red btn-pay">Pay</a>
-                                <button class="btn btn-secondary">Modify</button>
-                                <button class="btn btn-secondary">Cancel</button>
+                                <a href="/order/pay/20190211-56-183315"
+                                   class="btn tm-btn-red btn-pay">Pay</a>
+                                <div class="d-flex justify-content-between w-100">
+                                    <div id="order_modify" class="w-50">
+                                        <button type="button" class="btn btn-secondary btn  btn-secondary ">
+                                            Modify
+                                        </button>
+                                        <div>
+                                            <div id="modal-modify___BV_modal_outer_">
+                                                <div id="modal-modify" role="dialog" aria-hidden="true"
+                                                     class="modal fade" style="display: none;">
+                                                    <div class="modal-dialog modal-md">
+                                                        <div tabindex="-1" role="document"
+                                                             aria-labelledby="modal-modify___BV_modal_header_"
+                                                             aria-describedby="modal-modify___BV_modal_body_"
+                                                             class="modal-content">
+                                                            <header id="modal-modify___BV_modal_header_"
+                                                                    class="modal-header">
+                                                                <h5 class="modal-title">
+                                                                    Modification request</h5>
+                                                                <button type="button" aria-label="Close" class="close">
+                                                                    ×
+                                                                </button>
+                                                            </header>
+                                                            <div id="modal-modify___BV_modal_body_" class="modal-body">
+                                                                <p>Modification description</p>
+                                                                <form>
+                                                                    <label class="checkbox-wrap d-flex">
+                                                                        <span class="checkbox">
+                                                                            <input type="checkbox"
+                                                                                   autocomplete="off"
+                                                                                   value="trip0">
+                                                                            <span></span>
+                                                                        </span>
+                                                                        <span>Moscow - Saint-Petersburg
+                                                                            12 Sep 2019 Thu - 12 Sep 2019 Thu
+                                                                        </span>
+                                                                    </label>
+                                                                    <div class="order-inputs">
+                                                                        <label
+                                                                            class="order-input">
+                                                                            <span>Details</span>
+                                                                            <textarea
+                                                                            autocomplete="off" required="required"
+                                                                            class="form-control">Leave your request details here.</textarea>
+                                                                        </label>
+                                                                    </div>
+                                                                    <label class="checkbox-wrap my-2 d-flex">
+                                                                        <span class="checkbox">
+                                                                            <input
+                                                                            type="checkbox"
+                                                                            required="required">
+                                                                            <span></span>
+                                                                        </span>
+                                                                        <span>I agree with Terms and Conditions.</span>
+                                                                    </label>
+                                                                    <div class="order-button">
+                                                                        <button type="submit"
+                                                                                class="btn tm-btn-red w-50">Submit request</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div><!---->
+                                                        </div>
+                                                    </div>
+                                                </div><!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="order_cancel" class="w-50 ml-2">
+                                        <button type="button" class="btn btn-secondary btn btn-secondary">
+                                            Cancel
+                                        </button>
+                                        <div>
+                                            <div id="modal-cancel___BV_modal_outer_">
+                                                <div id="modal-cancel" role="dialog" aria-hidden="true"
+                                                     class="modal fade" style="display: none;">
+                                                    <div class="modal-dialog modal-md">
+                                                        <div tabindex="-1" role="document"
+                                                             aria-labelledby="modal-cancel___BV_modal_header_"
+                                                             aria-describedby="modal-cancel___BV_modal_body_"
+                                                             class="modal-content">
+                                                            <header id="modal-cancel___BV_modal_header_"
+                                                                    class="modal-header"><h5 class="modal-title">
+                                                                Cancellation request</h5>
+                                                                <button type="button" aria-label="Close" class="close">
+                                                                    ×
+                                                                </button>
+                                                            </header>
+                                                            <div id="modal-cancel___BV_modal_body_" class="modal-body">
+                                                                <p>Cancellation fees apply according to Terms and
+                                                                    Conditions</p>
+                                                                <form><label class="checkbox-wrap d-flex">
+                                                                    <span
+                                                                        class="checkbox">
+                                                                        <input type="checkbox"
+                                                                                                autocomplete="off"
+                                                                                                value="trip0">
+                                                                        <span></span>
+                                                                    </span>
+                                                                    <span>Moscow - Saint-Petersburg
+                                                                        12 Sep 2019 Thu - 12 Sep 2019 Thu</span>
+                                                                </label>
+                                                                    <div class="order-inputs"><label
+                                                                            class="order-input"><span>Details</span> <textarea
+                                                                            autocomplete="off" required="required"
+                                                                            class="form-control"></textarea></label>
+                                                                    </div>
+                                                                    <label class="checkbox-wrap my-2 d-flex"><span class="checkbox"><input
+                                                                            type="checkbox"
+                                                                            required="required"> <span></span></span>
+                                                                        <span>I agree with Terms and Conditions.</span>
+                                                                    </label>
+                                                                    <div class="order-button">
+                                                                        <button type="submit"
+                                                                                class="btn tm-btn-red w-50">Submit request</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div><!----></div>
+                                                    </div>
+                                                </div><!----></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
