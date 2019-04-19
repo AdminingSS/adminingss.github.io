@@ -5476,8 +5476,10 @@ button:focus {
   border: 5px solid #d81818;
   background: #fff;
   cursor: pointer; }
+.ticket-filter .vue-slider-dot-handle {
+  border: 2px solid transparent; }
 .ticket-filter .vue-slider-dot-handle-focus {
-  border-color: #d81818;
+  border-color: transparent;
   box-shadow: 0 0 0 5px #d65a4a; }
 .ticket-filter .vue-slider-process {
   background-color: #555;

@@ -44,8 +44,12 @@
     cursor: pointer;
   }
 
+  .vue-slider-dot-handle {
+    border: 2px solid transparent;
+  }
+
   .vue-slider-dot-handle-focus {
-    border-color: #d81818;
+    border-color: transparent;
     box-shadow: 0 0 0 5px #d65a4a;
   }
 
