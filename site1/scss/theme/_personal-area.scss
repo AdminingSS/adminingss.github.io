@@ -113,6 +113,10 @@
 
   .intl-tel-input {
     display: block;
+
+    div.flag-container + span {
+      display: none;
+    }
   }
 }
 

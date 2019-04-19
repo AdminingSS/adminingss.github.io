@@ -4226,6 +4226,10 @@ h1, h2, .head {
   font: 300 14px 'Montserrat';
 }
 
+ul.country-list span.country-name {
+  position: static;
+}
+
 .auth-footer {
   display: -webkit-flex;
   display: -moz-flex;
