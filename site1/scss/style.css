@@ -4439,6 +4439,9 @@ h1, h2, .head {
   transition: 300ms;
   font: 300 14px 'Montserrat'; }
 
+ul.country-list span.country-name {
+  position: static; }
+
 .auth-footer {
   display: -webkit-flex;
   display: -moz-flex;
@@ -5240,6 +5243,8 @@ button:focus {
   margin-bottom: 8px; }
 .personal-area .intl-tel-input {
   display: block; }
+  .personal-area .intl-tel-input div.flag-container + span {
+    display: none; }
 
 .coach-slider .slick-prev, .coach-slider .slick-next {
   width: 40px;
