@@ -335,7 +335,7 @@ $(document).ready(function () {
             maxDate: "+0d",
             minDate: new Date(1920, 0, 1),
             yearRange: "1920:c"
-        });
+        }).attr('placeholder', moment().subtract(30, 'years').format('DD.MM.YYYY'));
 
 
     })();
