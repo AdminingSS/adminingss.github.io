@@ -2706,6 +2706,16 @@ h1, h2, .head {
   .order-input .intl-tel-input {
     width: 100%; }
 
+.modal-dialog label.checkbox-wrap:last-of-type {
+  margin-bottom: 1rem; }
+.modal-dialog .order-input span:not(.select2) {
+  font-size: 16px;
+  font-weight: 400; }
+.modal-dialog .order-inputs {
+  margin-bottom: 0.5rem; }
+.modal-dialog .order-button button {
+  margin: 0; }
+
 .vue-tel-input .dropdown-item {
   display: flex;
   align-items: baseline;
@@ -2820,7 +2830,7 @@ h1, h2, .head {
   border-radius: 5px;
   background: #fff;
   transition-duration: .2s;
-  transition-property: border-color,box-shadow,width,height,background-color,opacity;
+  transition-property: border-color, box-shadow, width, height, background-color, opacity;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 .vue-treeselect__multi-value, .vue-treeselect__value-container {

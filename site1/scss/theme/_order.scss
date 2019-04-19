@@ -250,6 +250,26 @@
   }
 }
 
+.modal-dialog {
+
+  label.checkbox-wrap:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .order-input span:not(.select2) {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .order-inputs {
+    margin-bottom: 0.5rem;
+  }
+
+  .order-button button {
+    margin: 0;
+  }
+}
+
 .vue-tel-input {
 
   .dropdown-item {
@@ -447,12 +467,12 @@
   }
 }
 
-
 //for delete later imitation app styles
 .vue-treeselect {
   position: relative;
   text-align: left;
 }
+
 .vue-treeselect__control {
   padding-left: 5px;
   padding-right: 5px;
@@ -464,17 +484,20 @@
   border-radius: 5px;
   background: #fff;
   transition-duration: .2s;
-  transition-property: border-color,box-shadow,width,height,background-color,opacity;
-  transition-timing-function: cubic-bezier(.215,.61,.355,1);
+  transition-property: border-color, box-shadow, width, height, background-color, opacity;
+  transition-timing-function: cubic-bezier(.215, .61, .355, 1);
 }
+
 .vue-treeselect__multi-value, .vue-treeselect__value-container {
   width: 100%;
   vertical-align: middle;
 }
+
 .vue-treeselect__value-container {
   display: table-cell;
   position: relative;
 }
+
 .vue-treeselect__placeholder, .vue-treeselect__single-value {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -494,9 +517,7 @@
   pointer-events: none;
 }
 
-
 //FARSH
-
 
 .order-cheque-header {
   font-weight: bold;
@@ -556,8 +577,6 @@
   font-weight: bold;
 }
 
-
-
 .order-input i {
   position: absolute;
   right: 10px;
@@ -567,7 +586,6 @@
   right: 27px;
   color: #555;
 }
-
 
 .fotorama__wrap {
   margin-bottom: 15px;
@@ -590,9 +608,6 @@
   align-items: center;
   justify-content: center;
 }
-
-
-
 
 // Order total
 
