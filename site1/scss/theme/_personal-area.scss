@@ -114,10 +114,20 @@
   .intl-tel-input {
     display: block;
 
-    div.flag-container + span {
-      display: none;
+    .dial-code {
+      position: static;
+    }
+
+    .country-list {
+      white-space: normal;
+      min-width: 250px;
     }
   }
+
+  .intl-tel-input + span {
+    display: none;
+  }
+
 }
 
 @media (max-width: 576px) {
