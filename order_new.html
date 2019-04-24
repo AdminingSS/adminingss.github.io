@@ -25,6 +25,11 @@
 <div>
 
     <!--Header-->
+    <div class="order-pending-tooltip">
+        <div class="container">
+            Warning! You have only <span>X</span> minutes left to finish order. Otherwise, we will delete this order.
+        </div>
+    </div>
     <header class="header navbar navbar-expand-xl navbar-light bg-light">
         <div class="container">
 
@@ -79,7 +84,8 @@
                 </li>
             </ul>
 
-            <a href="https://rustrains.com/cart" class="tm-link-red tm-d-xxs-none btn d-xl-none"><i class="fas fa-shopping-cart"></i></a>
+            <a href="https://rustrains.com/cart" class="tm-link-red tm-d-xxs-none btn d-xl-none"><i
+                    class="fas fa-shopping-cart"></i></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
                     aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
@@ -216,11 +222,13 @@
                         <a class="nav-link" href="/about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://rustrains.com/cart" class="tm-d-xxs d-none nav-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+                        <a href="https://rustrains.com/cart" class="tm-d-xxs d-none nav-link"><i
+                                class="fas fa-shopping-cart"></i> Cart</a>
                     </li>
                 </ul>
             </div>
-            <a href="https://rustrains.com/cart" class="tm-link-red btn d-none d-xl-block"><i class="fas fa-shopping-cart"></i></a>
+            <a href="https://rustrains.com/cart" class="tm-link-red btn d-none d-xl-block"><i
+                    class="fas fa-shopping-cart"></i></a>
         </div>
     </header>
 
@@ -319,11 +327,16 @@
                             <div class="order-bottom">
                                 <div class="payment">
                                     <ul class="nav align-items-center justify-content-center mb-2">
-                                        <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay1.png" alt=""></a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay2.png" alt=""></a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay3.png" alt=""></a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay4.png" alt=""></a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#"><img src="site1/images/pay5.png" alt=""></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#"><img
+                                                src="site1/images/pay1.png" alt=""></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#"><img
+                                                src="site1/images/pay2.png" alt=""></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#"><img
+                                                src="site1/images/pay3.png" alt=""></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#"><img
+                                                src="site1/images/pay4.png" alt=""></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#"><img
+                                                src="site1/images/pay5.png" alt=""></a></li>
                                     </ul>
                                     <p>secure payment options + SSL encryption</p></div>
                             </div>
@@ -347,7 +360,8 @@
                             </div>
                             <div class="col-9">
                                 <h4>Guaranteed Seat Reservation</h4>
-                                <p>We will issue e-tickets with guaranteed seat reservation. The best seats possible.</p>
+                                <p>We will issue e-tickets with guaranteed seat reservation. The best seats
+                                    possible.</p>
                             </div>
                         </div>
                         <div class="row align-items-center">
@@ -356,7 +370,8 @@
                             </div>
                             <div class="col-9">
                                 <h4>Real Customer Service</h4>
-                                <p>Need help with your order? Our customer support is always there for you via phone, email or chat.</p>
+                                <p>Need help with your order? Our customer support is always there for you via phone,
+                                    email or chat.</p>
                             </div>
                         </div>
                     </div>
@@ -446,7 +461,8 @@
                                             <div class="container-fluid">
                                                 <div>
                                                     <label class="checkbox mb-0">
-                                                        <input type="checkbox" class="form-check-inline" v-model="details" />
+                                                        <input type="checkbox" class="form-check-inline"
+                                                               v-model="details"/>
                                                         <span></span>
                                                         I will provide passenger details later
                                                     </label>
@@ -455,12 +471,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="order-passengers" v-if="details">
                                     <div class="order-passenger">
                                         <div class="order-passenger-info">
                                             <div class="container-fluid">
-                                                <div>If it is less than 89 days prior to your departure we will ask you to fill out the travel card within the following 48 hours. Ticket availability and price are subject to change.</div>
+                                                <div>If it is less than 89 days prior to your departure we will ask you
+                                                    to fill out the travel card within the following 48 hours. Ticket
+                                                    availability and price are subject to change.
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -470,7 +489,8 @@
 
                                     <!--Order passenger-->
                                     <div class="order-passenger">
-                                        <div class="order-passenger-top" data-toggle="collapse" data-target="#passengerCollapse1">
+                                        <div class="order-passenger-top" data-toggle="collapse"
+                                             data-target="#passengerCollapse1">
                                             <div class="container-fluid">
                                                 <h6 class="mb-0">
                                                     <span>Passenger #1</span>
@@ -478,7 +498,8 @@
                                             </div>
                                         </div>
 
-                                        <div id="passengerCollapse1" class="collapse show" data-parent="#order-passengers-accordion">
+                                        <div id="passengerCollapse1" class="collapse show"
+                                             data-parent="#order-passengers-accordion">
                                             <div class="order-passenger-info">
                                                 <div class="container-fluid">
                                                     <div class="order-passenger-inputs mb-4">
@@ -486,17 +507,23 @@
                                                             <div class="col-sm-8 col-lg-8 mb-4">
                                                                 <label class="order-input order-choose">
                                                                     <span>Select a passenger</span>
-                                                                    <input type="hidden" id="u_0" @input="setData" />
-                                                                    <select onchange="setPassenger($(this).val(), 0)" id="sp_0" class="order-select select2-hidden-accessible" autocomplete="off">
+                                                                    <input type="hidden" id="u_0" @input="setData"/>
+                                                                    <select onchange="setPassenger($(this).val(), 0)"
+                                                                            id="sp_0"
+                                                                            class="order-select select2-hidden-accessible"
+                                                                            autocomplete="off">
                                                                         <option value="">----</option>
                                                                         <option value="0">
-                                                                            пппппппппп ппппппппппп ппппппппп 14.12.1965 Andorra 453453535
+                                                                            пппппппппп ппппппппппп ппппппппп 14.12.1965
+                                                                            Andorra 453453535
                                                                         </option>
                                                                         <option value="1">
-                                                                            ffffffff fffffffffff ccccc 01.01.1974 United Arab Emirates 4555555554
+                                                                            ffffffff fffffffffff ccccc 01.01.1974 United
+                                                                            Arab Emirates 4555555554
                                                                         </option>
                                                                         <option value="2">
-                                                                            ddddddddddd ffffffffffs fsedssdfs 08.09.1963 United Arab Emirates 4545345353
+                                                                            ddddddddddd ffffffffffs fsedssdfs 08.09.1963
+                                                                            United Arab Emirates 4545345353
                                                                         </option>
                                                                         <option value="3">
                                                                             gup gop smip 12.10.1963 Nepal 123456
@@ -508,22 +535,29 @@
                                                                             шшш шшш шшш 02.03.1994 Angola шшш
                                                                         </option>
                                                                     </select>
-                                                                    <button type="button" class="close" aria-label="Close">
+                                                                    <button type="button" class="close"
+                                                                            aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </label>
                                                             </div>
 
                                                             <div class="col-sm-4 col-lg-4 mb-4">
-                                                                <button type="button" class="btn btn-clear">Clear passenger</button>
+                                                                <button type="button" class="btn btn-clear">Clear
+                                                                    passenger
+                                                                </button>
                                                             </div>
 
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>First name</span>
-                                                                    <input class="form-control" name="seat[0][first_name]" v-model="first_name"
-                                                                           maxlength="255" required="" type="text" placeholder="John">
-                                                                    <button type="button" class="close" aria-label="Close">
+                                                                    <input class="form-control"
+                                                                           name="seat[0][first_name]"
+                                                                           v-model="first_name"
+                                                                           maxlength="255" required="" type="text"
+                                                                           placeholder="John">
+                                                                    <button type="button" class="close"
+                                                                            aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </label>
@@ -531,9 +565,12 @@
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>Middle name (optional)</span>
-                                                                    <input class="form-control" name="seat[0][middle_name]" v-model="middle_name"
+                                                                    <input class="form-control"
+                                                                           name="seat[0][middle_name]"
+                                                                           v-model="middle_name"
                                                                            maxlength="255" type="text" placeholder="J.">
-                                                                    <button type="button" class="close" aria-label="Close">
+                                                                    <button type="button" class="close"
+                                                                            aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </label>
@@ -541,9 +578,12 @@
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>Last name</span>
-                                                                    <input class="form-control" name="seat[0][last_name]" v-model="last_name" maxlength="255"
+                                                                    <input class="form-control"
+                                                                           name="seat[0][last_name]" v-model="last_name"
+                                                                           maxlength="255"
                                                                            required="" type="text" placeholder="Smith">
-                                                                    <button type="button" class="close" aria-label="Close">
+                                                                    <button type="button" class="close"
+                                                                            aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </label>
@@ -551,9 +591,11 @@
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>Passport number</span>
-                                                                    <input class="form-control" name="seat[0][passport]" maxlength="255" required=""
+                                                                    <input class="form-control" name="seat[0][passport]"
+                                                                           maxlength="255" required=""
                                                                            type="text" value="" placeholder="12345">
-                                                                    <button type="button" class="close" aria-label="Close">
+                                                                    <button type="button" class="close"
+                                                                            aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </label>
@@ -578,10 +620,14 @@
                                                                                 <div class="vue-treeselect__placeholder vue-treeselect-helper-zoom-effect-off">
                                                                                     Citizenship
                                                                                 </div>
-                                                                                <div class="vue-treeselect__input-container"><input
-                                                                                        type="text" autocomplete="off" tabindex="0"
-                                                                                        required="required"
-                                                                                        class="vue-treeselect__input"></div>
+                                                                                <div class="vue-treeselect__input-container">
+                                                                                    <input
+                                                                                            type="text"
+                                                                                            autocomplete="off"
+                                                                                            tabindex="0"
+                                                                                            required="required"
+                                                                                            class="vue-treeselect__input">
+                                                                                </div>
                                                                             </div>
                                                                             <!---->
                                                                             <div class="vue-treeselect__control-arrow-container">
@@ -600,8 +646,10 @@
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>Gender</span>
-                                                                    <select required="" class="order-select select2-hidden-accessible"
-                                                                            autocomplete="off" name="seat[0][sex]" tabindex="-1"
+                                                                    <select required=""
+                                                                            class="order-select select2-hidden-accessible"
+                                                                            autocomplete="off" name="seat[0][sex]"
+                                                                            tabindex="-1"
                                                                             aria-hidden="true">
                                                                         <option value="">----</option>
                                                                         <option value="male">MALE</option>
@@ -634,7 +682,8 @@
 
                                     <!--One more Order passenger for example-->
                                     <div class="order-passenger">
-                                        <div class="order-passenger-top collapsed" data-toggle="collapse" data-target="#passengerCollapse2">
+                                        <div class="order-passenger-top collapsed" data-toggle="collapse"
+                                             data-target="#passengerCollapse2">
                                             <div class="container-fluid">
                                                 <h6 class="mb-0">
                                                     <span>Passenger #2</span>
@@ -642,7 +691,8 @@
                                             </div>
                                         </div>
 
-                                        <div id="passengerCollapse2" class="collapse" data-parent="#order-passengers-accordion">
+                                        <div id="passengerCollapse2" class="collapse"
+                                             data-parent="#order-passengers-accordion">
                                             <div class="order-passenger-info">
                                                 <div class="container-fluid">
                                                     <div class="order-passenger-inputs mb-4">
@@ -650,28 +700,36 @@
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>First name</span>
-                                                                    <input class="form-control" name="seat[0][first_name]" v-model="first_name"
-                                                                           maxlength="255" required="" type="text" placeholder="John">
+                                                                    <input class="form-control"
+                                                                           name="seat[0][first_name]"
+                                                                           v-model="first_name"
+                                                                           maxlength="255" required="" type="text"
+                                                                           placeholder="John">
                                                                 </label>
                                                             </div>
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>Middle name (optional)</span>
-                                                                    <input class="form-control" name="seat[0][middle_name]" v-model="middle_name"
+                                                                    <input class="form-control"
+                                                                           name="seat[0][middle_name]"
+                                                                           v-model="middle_name"
                                                                            maxlength="255" type="text" placeholder="J.">
                                                                 </label>
                                                             </div>
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>Last name</span>
-                                                                    <input class="form-control" name="seat[0][last_name]" v-model="last_name" maxlength="255"
+                                                                    <input class="form-control"
+                                                                           name="seat[0][last_name]" v-model="last_name"
+                                                                           maxlength="255"
                                                                            required="" type="text" placeholder="Smith">
                                                                 </label>
                                                             </div>
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>Passport number</span>
-                                                                    <input class="form-control" name="seat[0][passport]" maxlength="255" required=""
+                                                                    <input class="form-control" name="seat[0][passport]"
+                                                                           maxlength="255" required=""
                                                                            type="text" value="" placeholder="12345">
                                                                 </label>
                                                             </div>
@@ -695,10 +753,14 @@
                                                                                 <div class="vue-treeselect__placeholder vue-treeselect-helper-zoom-effect-off">
                                                                                     Citizenship
                                                                                 </div>
-                                                                                <div class="vue-treeselect__input-container"><input
-                                                                                        type="text" autocomplete="off" tabindex="0"
-                                                                                        required="required"
-                                                                                        class="vue-treeselect__input"></div>
+                                                                                <div class="vue-treeselect__input-container">
+                                                                                    <input
+                                                                                            type="text"
+                                                                                            autocomplete="off"
+                                                                                            tabindex="0"
+                                                                                            required="required"
+                                                                                            class="vue-treeselect__input">
+                                                                                </div>
                                                                             </div>
                                                                             <!---->
                                                                             <div class="vue-treeselect__control-arrow-container">
@@ -717,8 +779,10 @@
                                                             <div class="col-sm-6 col-lg-4 mb-4">
                                                                 <label class="order-input">
                                                                     <span>Gender</span>
-                                                                    <select required="" class="order-select select2-hidden-accessible"
-                                                                            autocomplete="off" name="seat[0][sex]" tabindex="-1"
+                                                                    <select required=""
+                                                                            class="order-select select2-hidden-accessible"
+                                                                            autocomplete="off" name="seat[0][sex]"
+                                                                            tabindex="-1"
                                                                             aria-hidden="true">
                                                                         <option value="">----</option>
                                                                         <option value="male">MALE</option>
@@ -729,7 +793,8 @@
                                                             <div class="col-md-6 col-lg-8 col-xl-6">
                                                                 <label class="order-input date-of-birth">
                                                                     <span>Date of birth</span>
-                                                                    <input type="text" class="date-of-birth-input" required="" name="seat[0][birthday]"
+                                                                    <input type="text" class="date-of-birth-input"
+                                                                           required="" name="seat[0][birthday]"
                                                                            v-model="date[0]" autocomplete="off">
 
                                                                 </label>
@@ -793,14 +858,16 @@
                                                 <div class="col-sm-6 mb-4">
                                                     <label class="order-input">
                                                         <span>Your email</span>
-                                                        <input class="form-control" type="email" required="" name="email" value=""
+                                                        <input class="form-control" type="email" required=""
+                                                               name="email" value=""
                                                                placeholder="email@gmail.com">
                                                     </label>
                                                 </div>
                                                 <div class="col-sm-6 mb-4">
                                                     <label class="order-input">
                                                         <span>Repeat your email</span>
-                                                        <input class="form-control" type="email" autocomplete="off" required="" name="email_confirmation"
+                                                        <input class="form-control" type="email" autocomplete="off"
+                                                               required="" name="email_confirmation"
                                                                value="" placeholder="email@gmail.com">
                                                     </label>
                                                 </div>
@@ -811,13 +878,15 @@
                                                                   placeholder="+1 555 1234567">
                                                         </the-mask>-->
 
-                                                        <input class="form-control" type="text" required="required" name="phone" placeholder="+1 555 1234567">
+                                                        <input class="form-control" type="text" required="required"
+                                                               name="phone" placeholder="+1 555 1234567">
                                                     </label>
                                                 </div>
                                                 <div class="col-sm-6 mb-4">
                                                     <label class="order-input">
                                                         <span>Contact name</span>
-                                                        <input class="form-control" type="text" v-model="contact_name" @change="modify = false;fullname();"
+                                                        <input class="form-control" type="text" v-model="contact_name"
+                                                               @change="modify = false;fullname();"
                                                                required="" name="contact_name" placeholder="John">
                                                     </label>
                                                 </div>
@@ -836,7 +905,8 @@
 
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="#" class="text-secondary"><i class="fas fa-angle-left"></i> Back</a>
-                                <button type="submit" class="btn tm-btn-red">Continue <i class="fa fa-angle-double-right"></i></button>
+                                <button type="submit" class="btn tm-btn-red">Continue <i
+                                        class="fa fa-angle-double-right"></i></button>
                             </div>
 
                         </form>
