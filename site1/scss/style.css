@@ -2581,7 +2581,8 @@ h1, h2, .head {
   font-weight: 500; }
   .order-pending-tooltip.active {
     background-color: rgba(255, 0, 0, 0.5);
-    font-weight: 700; }
+    font-weight: 700;
+    color: #fff; }
 
 .order-trip-item {
   border: 1px solid #eee; }
