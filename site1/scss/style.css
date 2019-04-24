@@ -5246,8 +5246,13 @@ button:focus {
   margin-bottom: 8px; }
 .personal-area .intl-tel-input {
   display: block; }
-  .personal-area .intl-tel-input div.flag-container + span {
-    display: none; }
+  .personal-area .intl-tel-input .dial-code {
+    position: static; }
+  .personal-area .intl-tel-input .country-list {
+    white-space: normal;
+    min-width: 250px; }
+.personal-area .intl-tel-input + span {
+  display: none; }
 
 .coach-slider .slick-prev, .coach-slider .slick-next {
   width: 40px;
