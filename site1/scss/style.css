@@ -5499,6 +5499,18 @@ button:focus {
   border: 5px solid #d81818;
   background: #fff;
   cursor: pointer; }
+  .ticket-filter .vue-slider-dot:first-child .vue-slider-dot-tooltip-top {
+    left: -5px;
+    transform: translate(0, -100%); }
+  .ticket-filter .vue-slider-dot:first-child .vue-slider-dot-tooltip-inner-top::after {
+    left: 9px; }
+  .ticket-filter .vue-slider-dot:last-child .vue-slider-dot-tooltip-top {
+    left: auto;
+    right: -5px;
+    transform: translate(0, -100%); }
+  .ticket-filter .vue-slider-dot:last-child .vue-slider-dot-tooltip-inner-top::after {
+    left: auto;
+    right: -1px; }
 .ticket-filter .vue-slider-dot-handle {
   border: 2px solid transparent; }
 .ticket-filter .vue-slider-dot-handle-focus {

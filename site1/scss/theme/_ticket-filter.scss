@@ -42,6 +42,30 @@
     border: 5px solid #d81818;
     background: #fff;
     cursor: pointer;
+
+    &:first-child {
+      .vue-slider-dot-tooltip-top {
+        left: -5px;
+        transform: translate(0,-100%);
+      }
+
+      .vue-slider-dot-tooltip-inner-top::after {
+        left: 9px;
+      }
+    }
+
+    &:last-child {
+      .vue-slider-dot-tooltip-top {
+        left: auto;
+        right: -5px;
+        transform: translate(0,-100%);
+      }
+
+      .vue-slider-dot-tooltip-inner-top::after {
+        left: auto;
+        right: -1px;
+      }
+    }
   }
 
   .vue-slider-dot-handle {
