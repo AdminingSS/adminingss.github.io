@@ -1005,6 +1005,10 @@ h1, h2, .head {
   padding-top: 30px;
 }
 
+.section {
+  padding: 30px 0;
+}
+
 @media (max-width: 1240px) {
 
 }
@@ -1014,7 +1018,7 @@ h1, h2, .head {
 @media (max-width: 575px) {
 
   .section {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 
 }

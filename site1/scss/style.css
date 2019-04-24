@@ -716,9 +716,12 @@ h1, h2, .head {
 .section-small-top {
   padding-top: 30px; }
 
+.section {
+  padding: 30px 0; }
+
 @media (max-width: 575px) {
   .section {
-    padding: 30px 0; } }
+    padding: 20px 0; } }
 .showcase {
   position: relative;
   padding: 20px 0;
