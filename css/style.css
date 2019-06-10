@@ -887,7 +887,9 @@ p {
     display: none;
     max-width: 100%!important;
     width: 100%;
-    height: 555px;
+    /*height: 555px;*/
+    height: auto;
+    margin: auto;
 }
 
 .tm-catalog-animation canvas {
@@ -900,7 +902,8 @@ p {
     pointer-events:none;
     overflow:hidden;
     width:100%;
-    height:555px;
+    /*height:555px;*/
+    height:auto;
     position: absolute;
     left: 0;
     top: 0;
@@ -948,3 +951,41 @@ p {
     left: 57%;
 }
 
+@media (max-width: 1500px) {
+
+    .tm-catalog>* {
+        min-width: 220px;
+    }
+
+    .tm-image-wrapper {
+        min-width: 150px;
+    }
+
+    .tm-catalog-header span {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1212px) {
+
+    .tm-catalog>* {
+        min-width: 195px;
+    }
+
+    .tm-image-wrapper {
+        min-width: 120px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .tm-catalog-header span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 406px) {
+    .tm-catalog>* {
+        min-width: 100%;
+        width: 100%;
+    }
+}
