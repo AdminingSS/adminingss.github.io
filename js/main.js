@@ -110,9 +110,11 @@
             loader.addEventListener("fileload", function (evt) {
                 handleFileLoad(evt, comp)
             });
-            loader.addEventListener("complete", function (evt) {
-                handleComplete(evt, comp)
-            });
+            try {
+                loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            } catch (e) {
+
+            }
             var lib = comp.getLibrary();
             loader.loadManifest(lib.properties.manifest);
         }
@@ -305,7 +307,11 @@
             var lib=comp.getLibrary();
             var loader = new createjs.LoadQueue(false);
             loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
-            loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            try {
+                loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            } catch (e) {
+
+            }
             var lib=comp.getLibrary();
             loader.loadManifest(lib.properties.manifest);
         }
@@ -410,7 +416,11 @@
             var lib=comp.getLibrary();
             var loader = new createjs.LoadQueue(false);
             loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
-            loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            try {
+                loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            } catch (e) {
+
+            }
             var lib=comp.getLibrary();
             loader.loadManifest(lib.properties.manifest);
         }
@@ -512,7 +522,11 @@
             var lib=comp.getLibrary();
             var loader = new createjs.LoadQueue(false);
             loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
-            loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            try {
+                loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            } catch (e) {
+
+            }
             var lib=comp.getLibrary();
             loader.loadManifest(lib.properties.manifest);
         }
@@ -617,7 +631,11 @@
             var lib=comp.getLibrary();
             var loader = new createjs.LoadQueue(false);
             loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
-            loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            try {
+                loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+            } catch (e) {
+
+            }
             var lib=comp.getLibrary();
             loader.loadManifest(lib.properties.manifest);
         }
