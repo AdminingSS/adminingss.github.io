@@ -441,7 +441,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/_3enface.png", id:"_3enface"},
+		{src:"images/3enface.png", id:"_3enface"},
 		{src:"images/enface.png", id:"enface"},
 		{src:"images/upper_1.png", id:"upper_1"},
 		{src:"images/upper_2.png", id:"upper_2"},
