@@ -12354,14 +12354,14 @@ img.tm-img-main {
   text-decoration: none;
 }
 .slick-arrow:hover::before {
-  color: #3287B9;
+  color: rgba(255, 255, 255, 0.7);
 }
 .slick-prev:before,
 .slick-next:before {
   font-family: "Font Awesome 5 Free";
   font-size: 90px;
   line-height: 1;
-  color: #2980b9;
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 900;
 }
 .slick-prev:before {
@@ -12369,6 +12369,12 @@ img.tm-img-main {
 }
 .slick-next:before {
   content: '\F054';
+}
+.slick-prev {
+  left: 40px;
+}
+.slick-next {
+  right: 170px;
 }
 .tm-timer-blue .tm-timer-cell {
   background-color: #2980b9;
@@ -12499,6 +12505,9 @@ img.tm-img-main {
   .uk-h5 {
     font-size: 30px;
   }
+  .slick-next {
+    right: 130px;
+  }
   .tm-h1-small {
     font-size: 50px;
   }
@@ -12615,6 +12624,12 @@ img.tm-img-main {
   .uk-container {
     padding-left: 50px;
     padding-right: 90px;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 100px;
   }
   .tm-side-controls {
     right: 55px;
@@ -12769,6 +12784,9 @@ img.tm-img-main {
     padding-left: 40px;
     padding-right: 70px;
   }
+  .slick-next {
+    right: 70px;
+  }
   .tm-section-footer {
     padding-top: 20px!important;
   }
@@ -12854,6 +12872,9 @@ img.tm-img-main {
     padding-left: 20px;
     padding-right: 40px;
   }
+  .slick-next {
+    right: 50px;
+  }
   h1,
   .uk-h1,
   .tm-h1 {
@@ -12933,6 +12954,9 @@ img.tm-img-main {
   }
   .tm-list-actors li {
     font-size: 14px;
+  }
+  .slick-next {
+    right: 30px;
   }
 }
 @keyframes slideInLeft {
