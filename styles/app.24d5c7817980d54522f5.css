@@ -4785,7 +4785,7 @@ ul.uk-nav-sub {
  ========================================================================== */
 .uk-accordion-title {
   display: block;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.4;
   color: #000000;
   overflow: hidden;
@@ -12227,6 +12227,19 @@ h6,
   background: url(../images/bg-why-neuro.png) no-repeat;
   background-size: cover;
 }
+.tm-why-neuro::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../fonts/trash-can.svg) no-repeat;
+  -webkit-background-size: cover;
+  z-index: 0;
+}
 .tm-future-today {
   background: url(../images/bg-future-today.png) no-repeat;
   background-size: cover;
@@ -12659,6 +12672,11 @@ h6,
   left: -20px;
   top: -50px;
 }
+.tm-card-primary .tm-card-list li::before {
+  content: url(../fonts/blue-worm-small.svg);
+  left: 0;
+  top: -35px;
+}
 .tm-ten-directions h4 {
   font-weight: normal;
 }
@@ -12861,6 +12879,309 @@ h6,
 }
 .tm-week-width {
   width: 900px;
+}
+.tm-point-map {
+  width: 1369px;
+  height: 676px;
+}
+.tm-point-map-carrier {
+  position: absolute;
+  top: 191px;
+  left: 152px;
+  width: 1369px;
+  height: 676px;
+  background: url(../images/point_map.png);
+  background-size: 100% 100%;
+  mix-blend-mode: multiply;
+}
+.tm-point-img {
+  position: absolute;
+  display: block;
+  z-index: 100;
+}
+.tm-point-img img {
+  width: 100%;
+  height: 100%;
+}
+.tm-poimg-1 {
+  width: 46px;
+  height: 46px;
+  top: 474px;
+  left: 301px;
+}
+.tm-poimg-2 {
+  width: 51px;
+  height: 51px;
+  top: 375px;
+  left: 339px;
+}
+.tm-poimg-3 {
+  width: 82px;
+  height: 82px;
+  top: 459px;
+  left: 389px;
+}
+.tm-poimg-4 {
+  width: 90px;
+  height: 90px;
+  top: 622px;
+  left: 488px;
+}
+.tm-poimg-5 {
+  width: 152px;
+  height: 152px;
+  top: 516px;
+  left: 611px;
+}
+.tm-poimg-6 {
+  width: 82px;
+  height: 82px;
+  top: 321px;
+  left: 841px;
+}
+.tm-poimg-7 {
+  width: 67px;
+  height: 67px;
+  top: 762px;
+  left: 853px;
+}
+.tm-poimg-8 {
+  width: 126px;
+  height: 126px;
+  top: 594px;
+  left: 902px;
+}
+.tm-poimg-9 {
+  width: 47px;
+  height: 47px;
+  top: 811px;
+  left: 1004px;
+}
+.tm-poimg-10 {
+  width: 90px;
+  height: 90px;
+  top: 478px;
+  left: 1170px;
+}
+.tm-poimg-11 {
+  width: 60px;
+  height: 60px;
+  top: 313px;
+  left: 1182px;
+}
+.tm-message {
+  position: absolute;
+  background: url(../fonts/message.svg) no-repeat;
+  background-size: 100% 100%;
+  padding: 15px;
+  font-weight: 300;
+  font-style: italic;
+}
+.tm-mleft {
+  background: url(../fonts/message-left.svg) no-repeat;
+  background-size: 100% 100%;
+}
+.tm-message-1 {
+  font-size: 14px;
+  width: 194px;
+  height: 84px;
+  top: -110px;
+  left: -199px;
+  padding-top: 50px;
+}
+.tm-message-2 {
+  font-size: 11px;
+  width: 408px;
+  height: 139px;
+  top: -152px;
+  left: 13px;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+.tm-message-3 {
+  font-size: 14px;
+  width: 231px;
+  height: 104px;
+  top: -112px;
+  left: 52px;
+  padding-top: 50px;
+}
+.tm-message-4 {
+  font-size: 11px;
+  width: 208px;
+  height: 96px;
+  top: -79px;
+  left: -205px;
+  padding-top: 19px;
+}
+.tm-message-5 {
+  font-size: 11px;
+  width: 422px;
+  height: 139px;
+  top: -129px;
+  left: 100px;
+  padding-top: 50px;
+}
+.tm-message-6 {
+  font-size: 14px;
+  width: 256px;
+  height: 111px;
+  top: -112px;
+  left: 52px;
+  padding-top: 50px;
+}
+.tm-message-7 {
+  font-size: 12px;
+  width: 231px;
+  height: 113px;
+  top: -121px;
+  left: -234px;
+  padding-top: 43px;
+}
+.tm-message-8 {
+  font-size: 11px;
+  width: 271px;
+  height: 103px;
+  top: -42px;
+  left: 95px;
+  padding-top: 50px;
+}
+.tm-message-9 {
+  font-size: 11px;
+  width: 363px;
+  height: 139px;
+  top: -141px;
+  left: 20px;
+  padding-top: 50px;
+}
+.tm-message-10 {
+  font-size: 11px;
+  width: 213px;
+  height: 92px;
+  top: -85px;
+  left: 63px;
+  padding-top: 50px;
+}
+.tm-message-11 {
+  font-size: 14px;
+  width: 321px;
+  height: 139px;
+  top: -142px;
+  left: 24px;
+  padding-top: 50px;
+  line-height: 1.2;
+}
+.tm-point-alt span {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 15px;
+}
+.tm-noafter::after {
+  display: none;
+}
+.trash-panel-1 {
+  position: absolute;
+  top: 25px;
+  left: 85px;
+}
+.trash-panel-2 {
+  position: absolute;
+  top: 25px;
+  left: 85px;
+}
+.trash-panel-3 {
+  position: absolute;
+  top: 130px;
+  right: 10px;
+}
+.trash-panel-4 {
+  position: absolute;
+  top: 50px;
+  right: -100px;
+  z-index: 1;
+}
+.trash-panel-5 {
+  position: absolute;
+  top: 95px;
+  right: -25px;
+  z-index: 1;
+}
+.trash-panel-6 {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  z-index: 1;
+}
+.trash-panel-7 {
+  position: absolute;
+  top: 25px;
+  right: 235px;
+  z-index: 1;
+}
+.trash-panel-8 {
+  position: absolute;
+  top: 50px;
+  right: -25px;
+  z-index: 1;
+}
+.tm-blue-worm::before {
+  position: absolute;
+  display: block;
+  bottom: -80px;
+  left: 0;
+  content: url(../fonts/blue-worm.svg);
+}
+.tm-blue-worm-2::before {
+  position: absolute;
+  display: block;
+  bottom: -40px;
+  left: 0;
+  content: url(../fonts/blue-worm.svg);
+}
+.tm-blue-worm-small::before {
+  position: absolute;
+  display: block;
+  bottom: -50px;
+  left: 0;
+  content: url(../fonts/blue-worm-small.svg);
+}
+.tm-yellow-worm::before {
+  position: absolute;
+  display: block;
+  bottom: -50px;
+  left: 0;
+  content: url(../fonts/yellow-worm.svg);
+}
+.tm-yellow-worm-2 {
+  margin-bottom: 30px;
+}
+.tm-yellow-worm-2::before {
+  position: absolute;
+  display: block;
+  bottom: -30px;
+  left: 0;
+  content: url(../fonts/yellow-worm.svg);
+}
+.tm-yellow-worm-small::before {
+  position: absolute;
+  display: block;
+  bottom: -30px;
+  left: 0;
+  content: url(../fonts/yellow-worm-small.svg);
+}
+.tm-yellow-worm-small-2::before {
+  position: absolute;
+  display: block;
+  top: 200px;
+  right: -10px;
+  content: url(../fonts/yellow-worm-small.svg);
+}
+.tm-white-worm::before {
+  position: absolute;
+  display: block;
+  bottom: -25px;
+  left: 0;
+  content: url(../fonts/white-worm.svg);
 }
 @media (max-width: 1599px) {
   html,
@@ -13405,5 +13726,11 @@ h6,
   }
   .tm-card-large .tm-card-body {
     padding: 15px;
+  }
+}
+@media (min-width: 1390px) {
+  .tm-img-boy-size {
+    bottom: 0;
+    left: 42%;
   }
 }
