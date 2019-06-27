@@ -3819,6 +3819,7 @@ h1, h2, .head {
     .ticket-sort-item.desc::after {
       content: "\f078"; }
 .ticket-item {
+  position: relative;
   padding: 20px 0; }
   .ticket-item + .ticket-item {
     border-top: solid 1px #eee; }
@@ -3885,6 +3886,12 @@ h1, h2, .head {
     .ticket-item .ticket-info span {
       font-size: 16px;
       font-weight: 600; }
+  .ticket-item.high-popular {
+    background-color: #fed444; }
+  .ticket-item.medium-popular {
+    background-color: #fce07f; }
+  .ticket-item.low-popular {
+    background-color: #fdeaaa; }
 .ticket-route a {
   font-weight: 500;
   color: #c70000; }
@@ -3916,6 +3923,75 @@ h1, h2, .head {
     position: absolute;
     right: 3px;
     top: 0; }
+
+.train-notification {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 5px; }
+
+.train-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 12px; }
+  .train-rating .score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%; }
+  .train-rating.high-rating .score {
+    color: #fff;
+    background-color: #28a745; }
+  .train-rating.medium-rating .score {
+    background-color: #ffc107; }
+  .train-rating.low-rating .score {
+    color: #fff;
+    background-color: #dc3545; }
+
+.train-specials-panel {
+  display: flex;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px; }
+  .train-specials-panel .specialty {
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px 5px 30px; }
+    .train-specials-panel .specialty::before {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 18px; }
+    .train-specials-panel .specialty.fastest {
+      color: #fff;
+      background-color: #dc3545; }
+      .train-specials-panel .specialty.fastest::before {
+        content: '\f0fb'; }
+    .train-specials-panel .specialty.fast {
+      background-color: #ffc107; }
+      .train-specials-panel .specialty.fast::before {
+        content: '\f3fd'; }
+    .train-specials-panel .specialty.vip {
+      color: #fff;
+      background-color: #28a745; }
+      .train-specials-panel .specialty.vip::before {
+        content: '\f439'; }
+    .train-specials-panel .specialty.cheapest {
+      color: #fff;
+      background-color: #17a2b8;
+      padding-left: 20px; }
+      .train-specials-panel .specialty.cheapest::before {
+        content: '\f155'; }
 
 .tm-icon-train-types {
   font-weight: 400;
