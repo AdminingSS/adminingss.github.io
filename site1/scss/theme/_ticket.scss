@@ -436,6 +436,7 @@
 
   &-extras {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     list-style: none;
     padding: 5px 0;
@@ -475,14 +476,14 @@
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: 14px;
 
   .score {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 5px;
     font-size: 14px;
     font-weight: bold;
@@ -491,21 +492,64 @@
 
   &.high-rating .score {
     color: #fff;
-    background-color: #28a745;
+    background-color: #0d9700;
   }
 
   &.medium-rating .score {
-    background-color: #ffc107;
+    background-color: #31ff32;
   }
 
   &.low-rating .score {
     color: #fff;
-    background-color: #dc3545;
+    background-color: yellow;
   }
 }
 
+
+
+.rating-best {
+  font-size: 18px;
+  span {
+    color: green;
+    font-weight: 700;
+  }
+}
+
+.rating-high {
+  font-size: 18px;
+  span {
+    color: #0d9700;
+    font-weight: 700;
+  }
+}
+
+.rating-medium {
+  font-size: 18px;
+  span {
+    color: #31ff32;
+    font-weight: 700;
+  }
+}
+
+.rating-low {
+  font-size: 18px;
+
+  span {
+    color: yellow;
+    font-weight: 700;
+  }
+}
+
+.tm-modal-small {
+  max-width: 320px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+
 .train-specials-panel {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -528,15 +572,23 @@
 
     &.fastest {
       color: #fff;
-      background-color: #dc3545;
+      //background-color: #dc3545;
+      background-color: green;
+      padding-left: 40px;
 
       &::before {
-        content: '\f0fb';
+        content: '';
+        display: block;
+        background: url("/rustrains_html/site1/images/fastest.svg");
+        background-size: contain;
+        height: 30px;
+        width: 30px;
       }
     }
 
     &.fast {
-      background-color: #ffc107;
+      //background-color: #ffc107;
+      background-color: greenyellow;
 
       &::before {
         content: '\f3fd';
@@ -545,16 +597,27 @@
 
     &.vip {
       color: #fff;
-      background-color: #28a745;
+      //background-color: #28a745;
+      background-color: #ff8700;
 
       &::before {
-        content: '\f439';
+        content: '\f3a5';
+      }
+    }
+
+    &.cheap {
+      color: #fff;
+      background-color: #17a2b8;
+      padding-left: 35px;
+
+      &::before {
+        content: '\f3d1';
       }
     }
 
     &.cheapest {
       color: #fff;
-      background-color: #17a2b8;
+      background-color: blue;
       padding-left: 20px;
 
       &::before {
@@ -817,6 +880,10 @@
     font-size: 20px;
   }
 
+  .padding-mobile-right {
+    padding-right: 85px;
+  }
+
   .ticket-item .ticket-price .amount {
     font-size: 22px;
     text-align: left;
@@ -835,6 +902,10 @@
 
   .train-order {
     text-align: center;
+  }
+
+  .train-rating {
+    margin: -83px 0 25px 0;
   }
 }
 

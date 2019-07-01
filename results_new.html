@@ -522,6 +522,7 @@
                                         <div class="specialty fastest">Fastest</div>
                                         <div class="specialty fast">Fast</div>
                                         <div class="specialty vip">Premium</div>
+                                        <div class="specialty cheap">Cheap</div>
                                         <div class="specialty cheapest">Cheapest</div>
                                     </div>
 
@@ -575,10 +576,6 @@
                                             </div>
 
                                             <div class="col-sm">
-                                                <div class="train-rating high-rating">
-                                                    <div class="score">9.5</div>
-                                                    <div>Train rating</div>
-                                                </div>
                                                 <div class="ticket-total">
                                                     total for 1: 26097 <span>rub</span>
                                                 </div>
@@ -598,7 +595,7 @@
 
                                         <div class="ticket-description mb-2">
                                             <div class="row align-items-center">
-                                                <div class="col-sm">
+                                                <div class="col-8 col-sm">
                                                     <ul class="ticket-extras">
                                                         <li>
                                                             <img src="http://rustrains.com/site1/images/ticket-icon1.png"
@@ -621,7 +618,7 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div class="col-sm">
+                                                <div class="col-8 col-sm">
                                                     <div class="ticket-data-item"><b>In stock: </b> 113 pcs.</div>
                                                 </div>
                                                 <div class="col-sm">
@@ -632,11 +629,25 @@
                                             </div>
                                         </div>
 
-                                        <div class="train-notification text-danger">осталось 5 билетов</div>
-                                        
-                                        <div class="train-notification text-info">этот поезд просматривает 15 человек</div>
-                                        
-                                        <div class="train-notification text-success">было куплено 20 раз за последние 2 часа</div>
+                                        <div class="d-flex flex-column flex-sm-row justify-content-end justify-content-sm-between align-items-end align-items-sm-center">
+                                            <a class="train-rating high-rating flex-column flex-sm-row"
+                                               href="#trainRatingModal" role="button"
+                                               data-toggle="modal">
+                                                <div class="score">9.57</div>
+                                                <div>Train rating</div>
+                                            </a>
+                                            <div>
+                                                <div class="train-notification text-danger">осталось 5 билетов</div>
+
+                                                <div class="train-notification text-info">этот поезд просматривает 15
+                                                    человек
+                                                </div>
+
+                                                <div class="train-notification text-success">было куплено 20 раз за
+                                                    последние 2 часа
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <div class="row justify-content-between align-items-end">
                                             <div class="col">
@@ -1684,6 +1695,27 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn tm-btn-red">Apply</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tm-train-rating-modal modal fade" id="trainRatingModal" tabindex="-1" role="dialog"
+     aria-labelledby="trainRatingModalLabel"
+     aria-hidden="true">
+    <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
+        <div class="tm-modal-small modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title" id="trainRatingModalLabel">Рейтинг поездов</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-2">
+                <p class="rating-best"><span>10</span> - Best rating</p>
+                <p class="rating-high"><span>9</span> - Very good rating</p>
+                <p class="rating-medium"><span>8</span> - Good rating</p>
+                <p class="rating-low"><span>7 and bellow</span> - Mediocre rating</p>
             </div>
         </div>
     </div>
