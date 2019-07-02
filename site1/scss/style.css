@@ -3882,7 +3882,8 @@ h1, h2, .head {
       .ticket-item .ticket-price .amount .price_m {
         font-size: inherit; }
   .ticket-item .ticket-info {
-    font-size: 14px; }
+    font-size: 14px;
+    padding-right: 80px; }
     .ticket-item .ticket-info span {
       font-size: 16px;
       font-weight: 600; }
@@ -3950,7 +3951,7 @@ h1, h2, .head {
     color: #fff;
     background-color: #0d9700; }
   .train-rating.medium-rating .score {
-    background-color: #31ff32; }
+    background-color: #2fb330; }
   .train-rating.low-rating .score {
     color: #fff;
     background-color: yellow; }
@@ -3970,7 +3971,7 @@ h1, h2, .head {
 .rating-medium {
   font-size: 18px; }
   .rating-medium span {
-    color: #31ff32;
+    color: #2FB330;
     font-weight: 700; }
 
 .rating-low {
@@ -4010,12 +4011,12 @@ h1, h2, .head {
       .train-specials-panel .specialty.fastest::before {
         content: '';
         display: block;
-        background: url("/rustrains_html/site1/images/fastest.svg");
+        background: url("/site1/images/fastest.svg");
         background-size: contain;
         height: 30px;
         width: 30px; }
     .train-specials-panel .specialty.fast {
-      background-color: greenyellow; }
+      background-color: #6cb029; }
       .train-specials-panel .specialty.fast::before {
         content: '\f3fd'; }
     .train-specials-panel .specialty.vip {

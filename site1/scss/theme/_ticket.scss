@@ -394,6 +394,7 @@
 
     .ticket-info {
       font-size: 14px;
+      padding-right: 80px;
 
       span {
         font-size: 16px;
@@ -496,7 +497,7 @@
   }
 
   &.medium-rating .score {
-    background-color: #31ff32;
+    background-color: #2fb330;
   }
 
   &.low-rating .score {
@@ -526,7 +527,7 @@
 .rating-medium {
   font-size: 18px;
   span {
-    color: #31ff32;
+    color: #2FB330;
     font-weight: 700;
   }
 }
@@ -579,7 +580,7 @@
       &::before {
         content: '';
         display: block;
-        background: url("/rustrains_html/site1/images/fastest.svg");
+        background: url("/site1/images/fastest.svg");
         background-size: contain;
         height: 30px;
         width: 30px;
@@ -588,7 +589,7 @@
 
     &.fast {
       //background-color: #ffc107;
-      background-color: greenyellow;
+      background-color: #6cb029;
 
       &::before {
         content: '\f3fd';
