@@ -3951,6 +3951,7 @@ h1, h2, .head {
     color: #fff;
     background-color: #0d9700; }
   .train-rating.medium-rating .score {
+    color: #fff;
     background-color: #2fb330; }
   .train-rating.low-rating .score {
     color: #fff;
@@ -4016,6 +4017,7 @@ h1, h2, .head {
         height: 30px;
         width: 30px; }
     .train-specials-panel .specialty.fast {
+      color: #fff;
       background-color: #6cb029; }
       .train-specials-panel .specialty.fast::before {
         content: '\f3fd'; }
