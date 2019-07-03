@@ -3949,7 +3949,7 @@ h1, h2, .head {
     border-radius: 50%; }
   .train-rating.high-rating .score {
     color: #fff;
-    background-color: #0d9700; }
+    background-color: #0d7300; }
   .train-rating.medium-rating .score {
     color: #fff;
     background-color: #2fb330; }
@@ -3960,13 +3960,13 @@ h1, h2, .head {
 .rating-best {
   font-size: 18px; }
   .rating-best span {
-    color: green;
+    color: #005e00;
     font-weight: 700; }
 
 .rating-high {
   font-size: 18px; }
   .rating-high span {
-    color: #0d9700;
+    color: #0d7300;
     font-weight: 700; }
 
 .rating-medium {
