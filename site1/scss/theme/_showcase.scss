@@ -5,13 +5,13 @@
   background-size: cover;
 
   &-home {
-    height: 624px;
+    min-height: 624px;
     padding-top: 170px;
     padding-bottom: 60px;
   }
 
   &-medium {
-    height: 420px;
+    min-height: 420px;
     padding-top: 50px;
     padding-bottom: 60px;
   }
@@ -532,7 +532,7 @@
     }
 
     &-home, &-medium {
-      height: 396px;
+      min-height: 396px;
       padding-top: 40px;
     }
 
@@ -607,6 +607,7 @@
     }
 
     &-home, &-medium {
+      min-height: 0;
       height: auto;
       padding-top: 35px;
     }

@@ -729,11 +729,11 @@ h1, h2, .head {
   background: url(/storage/photos/shares/rustrains-slider.jpg) no-repeat 50% 20%;
   background-size: cover; }
   .showcase-home {
-    height: 624px;
+    min-height: 624px;
     padding-top: 170px;
     padding-bottom: 60px; }
   .showcase-medium {
-    height: 420px;
+    min-height: 420px;
     padding-top: 50px;
     padding-bottom: 60px; }
   .showcase-custom {
@@ -1077,7 +1077,7 @@ h1, h2, .head {
     position: static;
     transform: translateX(0); }
   .showcase-home, .showcase-medium {
-    height: 396px;
+    min-height: 396px;
     padding-top: 40px; }
   .showcase .select2-container--default .select2-selection--single {
     font-size: 14px; }
@@ -1119,6 +1119,7 @@ h1, h2, .head {
       transform: translateX(-50%);
       padding: 0 20px; }
   .showcase-home, .showcase-medium {
+    min-height: 0;
     height: auto;
     padding-top: 35px; }
   .showcase .select2-container--default .select2-selection--single .select2-selection__rendered {
