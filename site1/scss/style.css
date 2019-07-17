@@ -3822,6 +3822,13 @@ h1, h2, .head {
 .ticket-item {
   position: relative;
   padding: 20px 0; }
+  .ticket-item .bootstrap-datetimepicker-widget.dropdown-menu {
+    left: auto !important;
+    right: -8px !important;
+    top: 45px !important; }
+    .ticket-item .bootstrap-datetimepicker-widget.dropdown-menu::before, .ticket-item .bootstrap-datetimepicker-widget.dropdown-menu::after {
+      left: auto;
+      right: 30px; }
   .ticket-item + .ticket-item {
     border-top: solid 1px #eee; }
   .ticket-item .ticket-to {

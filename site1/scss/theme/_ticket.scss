@@ -300,6 +300,22 @@
     position: relative;
     padding: 20px 0;
 
+    //.bootstrap-datetimepicker-widget .picker-switch td {
+    //  text-align: right;
+    //  padding-right: 15px;
+    //}
+
+    .bootstrap-datetimepicker-widget.dropdown-menu {
+      left: auto!important;
+      right: -8px!important;
+      top: 45px!important;
+
+      &::before, &::after {
+        left: auto;
+        right: 30px;
+      }
+    }
+
     + .ticket-item {
       border-top: solid 1px #eee;
     }
