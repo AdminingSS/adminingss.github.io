@@ -814,6 +814,8 @@ h1, h2, .head {
         color: #ba2830; }
       .showcase-item .close:not(:disabled):not(.disabled):focus, .showcase-item .close:not(:disabled):not(.disabled):hover {
         opacity: 1; }
+    .showcase-item .dropdown-menu {
+      z-index: 1031; }
     .showcase-item_departure .container input {
       padding-right: 50px; }
     .showcase-item_departure .close {
@@ -3496,7 +3498,7 @@ h1, h2, .head {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2000;
+  z-index: 1030;
   line-height: 24px;
   padding: 10px 15px;
   text-align: center;
@@ -3791,6 +3793,8 @@ h1, h2, .head {
     font-size: 16px; }
   .ticket-direction-text span {
     border-bottom: 1px dashed; }
+  .ticket-direction-text_blank::before {
+    display: none; }
 .ticket-sort {
   font-size: 14px;
   background: #eee; }

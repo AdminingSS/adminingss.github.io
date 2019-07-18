@@ -126,6 +126,10 @@
       }
     }
 
+    .dropdown-menu {
+      z-index: 1031;
+    }
+
     &_departure {
 
       .container input {

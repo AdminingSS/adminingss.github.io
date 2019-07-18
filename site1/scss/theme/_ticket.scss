@@ -251,7 +251,15 @@
     span {
       border-bottom: 1px dashed;
     }
+
+    &_blank {
+
+      &::before {
+        display: none;
+      }
+    }
   }
+
 
   &-sort {
     font-size: 14px;
