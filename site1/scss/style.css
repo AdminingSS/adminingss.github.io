@@ -3793,8 +3793,15 @@ h1, h2, .head {
     font-size: 16px; }
   .ticket-direction-text span {
     border-bottom: 1px dashed; }
-  .ticket-direction-text_blank::before {
-    display: none; }
+.ticket-text_blank {
+  position: relative;
+  display: block;
+  padding-right: 30px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700; }
+  .ticket-text_blank span {
+    border-bottom: 1px dashed; }
 .ticket-sort {
   font-size: 14px;
   background: #eee; }

@@ -251,12 +251,18 @@
     span {
       border-bottom: 1px dashed;
     }
+  }
 
-    &_blank {
+  &-text_blank {
+    position: relative;
+    display: block;
+    padding-right: 30px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 700;
 
-      &::before {
-        display: none;
-      }
+    span {
+      border-bottom: 1px dashed;
     }
   }
 
