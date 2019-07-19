@@ -5903,6 +5903,17 @@ article .block-title {
     overflow-y: visible;
   }
 }
+.mini_faq a{
+  border-bottom: 1px dashed;font-size: 13px;
+}
+
+.mini_faq {
+  border:1px solid #555;border-radius:4px;padding:5px 7px;
+  background-color: #e5e5e5;
+}
+.count_i {
+  color:#ba2830;
+}
 
 @import "theme/base";
 
