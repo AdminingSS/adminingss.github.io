@@ -34,6 +34,44 @@
 
 }
 
+.tm-popover-success {
+  background-color: #fff;
+  border-color: green;
+
+  .popover-body {
+    color: green;
+    background-color: rgba(0,255,0,0.15);
+  }
+
+  &.bs-popover-bottom .arrow::before {
+    border-bottom-color: green;
+  }
+
+  &.bs-popover-bottom .arrow::after {
+    border-bottom-color: rgba(255,255,255,0.85);
+  }
+
+}
+
+.tm-popover-info {
+  background-color: #fff;
+  border-color: blue;
+
+  .popover-body {
+    color: blue;
+    background-color: rgba(0,0,255,0.15);
+  }
+
+  &.bs-popover-bottom .arrow::before {
+    border-bottom-color: blue;
+  }
+
+  &.bs-popover-bottom .arrow::after {
+    border-bottom-color: rgba(255,255,255,0.85);
+  }
+
+}
+
 .tm-btn-link {
   color: $red;
 

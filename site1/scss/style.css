@@ -5068,6 +5068,28 @@ article .block-title {
   .tm-popover-danger.bs-popover-bottom .arrow::after {
     border-bottom-color: rgba(255, 255, 255, 0.85); }
 
+.tm-popover-success {
+  background-color: #fff;
+  border-color: green; }
+  .tm-popover-success .popover-body {
+    color: green;
+    background-color: rgba(0, 255, 0, 0.15); }
+  .tm-popover-success.bs-popover-bottom .arrow::before {
+    border-bottom-color: green; }
+  .tm-popover-success.bs-popover-bottom .arrow::after {
+    border-bottom-color: rgba(255, 255, 255, 0.85); }
+
+.tm-popover-info {
+  background-color: #fff;
+  border-color: blue; }
+  .tm-popover-info .popover-body {
+    color: blue;
+    background-color: rgba(0, 0, 255, 0.15); }
+  .tm-popover-info.bs-popover-bottom .arrow::before {
+    border-bottom-color: blue; }
+  .tm-popover-info.bs-popover-bottom .arrow::after {
+    border-bottom-color: rgba(255, 255, 255, 0.85); }
+
 .tm-btn-link {
   color: #ba2830; }
   .tm-btn-link:hover, .tm-btn-link:focus {

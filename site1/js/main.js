@@ -30,9 +30,16 @@ $(document).ready(function () {
 
         };
 
-        console.log(alertTrigger);
-
         alertTrigger.popover(options);
+
+        // alertTrigger.on('shown.bs.popover', function () {
+        //     $(window).on('click', popoverHandle);
+        // });
+        //
+        // function popoverHandle() {
+        //     alertTrigger.popover('hide');
+        //     $(window).off('click', popoverHandle);
+        // }
     })();
 
     // Top line dropdown
