@@ -26,20 +26,32 @@ $(document).ready(function () {
         const alertTrigger = $('.js-button-popover-tickets');
         const options = {
             placement: 'bottom',
+            trigger: 'manual',
             template: '<div class="popover tm-popover-danger" role="tooltip"><div class="arrow"></div><div class="popover-body"></div></div>'
-
         };
 
         alertTrigger.popover(options);
 
-        // alertTrigger.on('shown.bs.popover', function () {
-        //     $(window).on('click', popoverHandle);
-        // });
-        //
-        // function popoverHandle() {
-        //     alertTrigger.popover('hide');
-        //     $(window).off('click', popoverHandle);
-        // }
+        alertTrigger.each(function () {
+            const elem = this;
+            $(this.dataset.target).on('shown.bs.collapse', {el: elem}, function (event) {
+                $(event.data.el).popover('show');
+            });
+            $(this.dataset.target).on('hidden.bs.collapse', {el: elem}, function (event) {
+                $(event.data.el).popover('hide');
+            });
+        });
+
+        alertTrigger.on('shown.bs.popover', function () {
+            const elem = this;
+            $(window).on('click', {el: elem}, popoverHandle);
+        });
+
+        function popoverHandle(event) {
+            $(event.data.el).popover('hide');
+            $(window).off('click', popoverHandle);
+        }
+
     })();
 
     // Top line dropdown
@@ -291,13 +303,13 @@ $(document).ready(function () {
             changeMonth: true,
             changeYear: true,
             dateFormat: "dd.mm.yy",
-            showOptions: { direction: "down" },
+            showOptions: {direction: "down"},
             defaultDate: '-30y',
             firstDay: 1,
             maxDate: "+0d",
             minDate: new Date(1920, 0, 1),
             yearRange: "1920:c"
-        }).attr('placeholder', moment().subtract(30, 'years').format('DD.MM.YYYY')).keyup(function(){
+        }).attr('placeholder', moment().subtract(30, 'years').format('DD.MM.YYYY')).keyup(function () {
             $(this).val('');
         });
     })();
@@ -436,8 +448,8 @@ $(document).ready(function () {
                     $showMoreBtn.toggleClass(activeClassName);
                     $filter.toggleClass(closeClassName);
                     $filter.animate({
-                            height: $showMoreBtn.hasClass(activeClassName) ? filterEndHeight : filterStartHeight
-                        }, 500);
+                        height: $showMoreBtn.hasClass(activeClassName) ? filterEndHeight : filterStartHeight
+                    }, 500);
                 });
             });
         }
