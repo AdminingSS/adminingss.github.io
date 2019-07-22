@@ -15,6 +15,25 @@
   }
 }
 
+.tm-popover-danger {
+  background-color: #fff;
+  border-color: $red;
+
+  .popover-body {
+    color: $red;
+    background-color: rgba(255,0,0,0.15);
+  }
+
+  &.bs-popover-bottom .arrow::before {
+    border-bottom-color: $red;
+  }
+
+  &.bs-popover-bottom .arrow::after {
+    border-bottom-color: rgba(255,255,255,0.85);
+  }
+
+}
+
 .tm-btn-link {
   color: $red;
 

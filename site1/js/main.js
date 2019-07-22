@@ -20,6 +20,21 @@ function initer(fn, n) {
 
 $(document).ready(function () {
 
+    //Select tikets alert
+
+    (function () {
+        const alertTrigger = $('.js-button-popover-tickets');
+        const options = {
+            placement: 'bottom',
+            template: '<div class="popover tm-popover-danger" role="tooltip"><div class="arrow"></div><div class="popover-body"></div></div>'
+
+        };
+
+        console.log(alertTrigger);
+
+        alertTrigger.popover(options);
+    })();
+
     // Top line dropdown
 
     $('[data-toggle="dropdown"]').dropdown();

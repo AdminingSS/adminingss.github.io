@@ -5057,6 +5057,17 @@ article .block-title {
     position: relative;
     width: 100%; }
 
+.tm-popover-danger {
+  background-color: #fff;
+  border-color: #ba2830; }
+  .tm-popover-danger .popover-body {
+    color: #ba2830;
+    background-color: rgba(255, 0, 0, 0.15); }
+  .tm-popover-danger.bs-popover-bottom .arrow::before {
+    border-bottom-color: #ba2830; }
+  .tm-popover-danger.bs-popover-bottom .arrow::after {
+    border-bottom-color: rgba(255, 255, 255, 0.85); }
+
 .tm-btn-link {
   color: #ba2830; }
   .tm-btn-link:hover, .tm-btn-link:focus {
