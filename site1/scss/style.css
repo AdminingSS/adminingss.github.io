@@ -4217,19 +4217,7 @@ h1, h2, .head {
   right: 0;
   padding: 0; }
 
-.tm-mdl-hide {
-  display: none; }
-
-.tm-mdl-show {
-  display: block; }
-
 @media (max-width: 991px) {
-  .tm-mdl-hide {
-    display: block; }
-
-  .tm-mdl-show {
-    display: none; }
-
   .sub-nav-wrap {
     display: block; }
 
