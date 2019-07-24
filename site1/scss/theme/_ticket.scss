@@ -909,6 +909,27 @@
 
 }
 
+.tm-side-blocks {
+
+  .row {
+    display: block;
+  }
+
+  .col-sm-6 {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media(min-width: 992px) {
+  .tm-main-blocks {
+    .tm-hide-lg {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 991px) {
 
   .sub-nav-wrap {

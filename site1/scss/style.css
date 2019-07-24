@@ -4217,6 +4217,16 @@ h1, h2, .head {
   right: 0;
   padding: 0; }
 
+.tm-side-blocks .row {
+  display: block; }
+.tm-side-blocks .col-sm-6 {
+  width: 100%;
+  max-width: 100%;
+  display: block; }
+
+@media (min-width: 992px) {
+  .tm-main-blocks .tm-hide-lg {
+    display: none; } }
 @media (max-width: 991px) {
   .sub-nav-wrap {
     display: block; }
