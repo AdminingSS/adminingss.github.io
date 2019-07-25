@@ -4217,9 +4217,9 @@ h1, h2, .head {
   right: 0;
   padding: 0; }
 
-.tm-side-blocks .row {
+.tm-side-blocks .tm-no-row {
   display: block; }
-.tm-side-blocks .col-sm-6 {
+.tm-side-blocks .tm-no-col {
   width: 100%;
   max-width: 100%;
   display: block; }
