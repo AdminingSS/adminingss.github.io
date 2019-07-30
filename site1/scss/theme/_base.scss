@@ -24,6 +24,14 @@
     background-color: rgba(255,0,0,0.15);
   }
 
+  &.bs-popover-right .arrow::before {
+    border-right-color: $red;
+  }
+
+  &.bs-popover-right .arrow::after {
+    border-right-color: rgba(255,255,255,0.85);
+  }
+
   &.bs-popover-bottom .arrow::before {
     border-bottom-color: $red;
   }
@@ -43,6 +51,14 @@
     background-color: rgba(0,255,0,0.15);
   }
 
+  &.bs-popover-right .arrow::before {
+    border-right-color: green;
+  }
+
+  &.bs-popover-right .arrow::after {
+    border-right-color: rgba(255,255,255,0.85);
+  }
+
   &.bs-popover-bottom .arrow::before {
     border-bottom-color: green;
   }
@@ -50,7 +66,6 @@
   &.bs-popover-bottom .arrow::after {
     border-bottom-color: rgba(255,255,255,0.85);
   }
-
 }
 
 .tm-popover-info {
@@ -60,6 +75,14 @@
   .popover-body {
     color: blue;
     background-color: rgba(0,0,255,0.15);
+  }
+
+  &.bs-popover-right .arrow::before {
+    border-right-color: blue;
+  }
+
+  &.bs-popover-right .arrow::after {
+    border-right-color: rgba(255,255,255,0.85);
   }
 
   &.bs-popover-bottom .arrow::before {
