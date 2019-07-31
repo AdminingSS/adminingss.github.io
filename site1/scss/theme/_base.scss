@@ -15,6 +15,10 @@
   }
 }
 
+.popover {
+  z-index: 1010;
+}
+
 .tm-popover-danger {
   background-color: #fff;
   border-color: $red;

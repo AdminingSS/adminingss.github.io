@@ -5055,6 +5055,9 @@ article .block-title {
     position: relative;
     width: 100%; }
 
+.popover {
+  z-index: 1010; }
+
 .tm-popover-danger {
   background-color: #fff;
   border-color: #ba2830; }
