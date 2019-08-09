@@ -5117,6 +5117,22 @@ count_i {
 button:focus {
   outline: none; }
 
+.stars-bar {
+  background: url("/site1/images/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin-top: -2px; }
+  .stars-bar .stars-rating {
+    background: url("/site1/images/star-rating-sprite.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 21px;
+    display: block; }
+
 @media (min-width: 992px) {
   .column-count-1 {
     -webkit-column-count: 1;

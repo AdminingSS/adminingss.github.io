@@ -119,6 +119,28 @@ button:focus {
   outline: none;
 }
 
+.stars-bar {
+  //background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background: url("/site1/images/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin-top: -2px;
+  //margin: 0 auto;
+
+  .stars-rating {
+    //background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+    background: url("/site1/images/star-rating-sprite.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 21px;
+    display:block;
+  }
+}
+
 // column-count
 
 @media (min-width: 992px) {
