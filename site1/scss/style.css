@@ -4005,7 +4005,7 @@ h1, h2, .head {
     background-color: #2fb330; }
   .train-rating.low-rating .score {
     color: #fff;
-    background-color: yellow; }
+    background-color: #bfc517; }
 
 .rating-best {
   font-size: 18px; }
@@ -4028,7 +4028,7 @@ h1, h2, .head {
 .rating-low {
   font-size: 18px; }
   .rating-low span {
-    color: yellow;
+    color: #bfc517;
     font-weight: 700; }
 
 .tm-modal-small {
