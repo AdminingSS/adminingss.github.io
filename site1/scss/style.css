@@ -2884,8 +2884,7 @@ h1, h2, .head {
     display: none;
     top: 0; }
   .order-progressbar-title {
-    top: 45px;
-    white-space: nowrap; }
+    top: 45px; }
   .order-progressbar-item {
     position: relative;
     padding: 20px 0;
@@ -2949,7 +2948,8 @@ h1, h2, .head {
   .order-progressbar-title {
     display: none; }
   .order-progressbar-item.active .order-progressbar-title {
-    display: block; } }
+    display: block;
+    white-space: nowrap; } }
 .order-review-title {
   margin-bottom: 5px;
   font-size: 12px;

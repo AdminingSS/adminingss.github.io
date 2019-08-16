@@ -26,7 +26,7 @@
   }
   &-title {
     top: 45px;
-    white-space: nowrap;
+    //white-space: nowrap;
   }
 
   &-item {
@@ -140,6 +140,7 @@
 
         .order-progressbar-title {
           display: block;
+          white-space: nowrap;
         }
       }
     }
