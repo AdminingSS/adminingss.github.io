@@ -2884,7 +2884,8 @@ h1, h2, .head {
     display: none;
     top: 0; }
   .order-progressbar-title {
-    top: 45px; }
+    top: 45px;
+    min-width: 99px; }
   .order-progressbar-item {
     position: relative;
     padding: 20px 0;
