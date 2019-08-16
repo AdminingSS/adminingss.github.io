@@ -3779,7 +3779,7 @@ h1, h2, .head {
   border-bottom: solid 1px #eee; }
 .ticket-direction-text {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-right: 30px;
   margin-bottom: 5px;
   font-size: 20px;

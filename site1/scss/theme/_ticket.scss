@@ -232,7 +232,8 @@
 
   &-direction-text {
     position: relative;
-    display: block;
+    //display: block;
+    display: inline-block;
     padding-right: 30px;
     margin-bottom: 5px;
     font-size: 20px;
