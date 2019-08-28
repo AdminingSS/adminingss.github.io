@@ -4184,6 +4184,19 @@ h1, h2, .head {
   .train-order .seats-btn button {
     margin: 10px 0; }
 
+.train-services {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0; }
+  .train-services li {
+    display: inline-block;
+    border: 2px solid #a9a9a9;
+    border-radius: 3px;
+    width: 50px;
+    margin-bottom: 5px; }
+    .train-services li.no-item {
+      border-color: transparent; }
+
 .ticket-notfound {
   padding: 20px 0; }
   .ticket-notfound select {
@@ -4250,7 +4263,10 @@ h1, h2, .head {
     text-align: left; }
 
   .train-order .seats-btn {
-    text-align: center; } }
+    text-align: center; }
+
+  .train-services li {
+    width: 35px; } }
 @media (max-width: 575px) {
   .ticket-item .time {
     font-size: 20px; }

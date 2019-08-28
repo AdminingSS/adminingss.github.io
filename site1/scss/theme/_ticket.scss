@@ -851,6 +851,24 @@
   }
 }
 
+.train-services {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+
+  li {
+    display: inline-block;
+    border: 2px solid #a9a9a9;
+    border-radius: 3px;
+    width: 50px;
+    margin-bottom: 5px;
+
+    &.no-item {
+      border-color: transparent;
+    }
+  }
+}
+
 //Ticket not found part
 
 .ticket-notfound {
@@ -969,6 +987,12 @@
 
   .train-order .seats-btn {
     text-align: center;
+  }
+
+  .train-services {
+    li {
+      width: 35px;
+    }
   }
 }
 
