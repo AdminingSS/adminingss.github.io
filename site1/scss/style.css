@@ -4193,7 +4193,7 @@ h1, h2, .head {
     border: 2px solid #a9a9a9;
     border-radius: 3px;
     width: 50px;
-    margin-bottom: 5px; }
+    margin: 0 5px 5px 0; }
     .train-services li.no-item {
       border-color: transparent; }
 
