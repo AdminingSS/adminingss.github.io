@@ -5765,6 +5765,10 @@ button:focus {
 .des-route-item {
   position: relative;
   border-top: 1px solid #ccc; }
+  .des-route-item:hover {
+    background-color: #eeeeee; }
+  .des-route-item.active {
+    background-color: #fdeaaa; }
 
 .des-route-item-body {
   padding-top: 20px;
@@ -5819,11 +5823,17 @@ button:focus {
   justify-content: flex-start;
   align-items: center; }
   .route-item-controls .btn {
-    width: 100%; }
-  .route-item-controls .tm-btn-red:not(.collapsed) {
-    background-color: #fff;
+    width: 100%;
+    background-color: transparent;
     border-color: #901f25;
     color: #901f25; }
+  .route-item-controls .tm-btn-red:not(.collapsed) {
+    background-color: #901f25;
+    color: #ffffff; }
+  .route-item-controls .tm-button-open::before {
+    content: "\f00c"; }
+  .route-item-controls .tm-button-open.collapsed::before {
+    content: ""; }
 
 .route-rail {
   position: absolute;
@@ -5841,8 +5851,9 @@ button:focus {
     background-color: #fff;
     border: 6px solid #555;
     border-radius: 50px; }
-  .route-rail.active::before {
-    border-color: #901f25; }
+
+.des-route-item.active .route-rail::before {
+  border-color: #901f25; }
 
 .route-rail-start {
   top: 15%;

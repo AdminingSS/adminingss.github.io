@@ -5,6 +5,14 @@
 .des-route-item {
   position: relative;
   border-top: 1px solid #ccc;
+
+  &:hover {
+    background-color: #eeeeee;
+  }
+
+  &.active {
+    background-color: rgb(253, 234, 170);
+  }
 }
 
 .des-route-item-body {
@@ -80,12 +88,22 @@
 
   .btn {
     width: 100%;
+    background-color: transparent;
+    border-color: #901f25;
+    color: #901f25;
   }
 
   .tm-btn-red:not(.collapsed) {
-      background-color: #fff;;
-      border-color: #901f25;
-      color: #901f25;
+    background-color: #901f25;
+    color: #ffffff;
+  }
+
+  .tm-button-open::before {
+    content: "\f00c";
+  }
+
+  .tm-button-open.collapsed::before {
+    content: "";
   }
 }
 
@@ -108,10 +126,16 @@
     border-radius: 50px;
   }
 
-  &.active::before {
-    border-color: #901f25;
-  }
+  //&.active::before {
+  //  border-color: #901f25;
+  //}
 }
+
+.des-route-item.active .route-rail::before {
+  border-color: #901f25;
+}
+
+
 
 .route-rail-start {
   top: 15%;
