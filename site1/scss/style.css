@@ -5759,6 +5759,46 @@ button:focus {
 @media (max-width: 575px) {
   .routes-list > li {
     width: 100%; } }
+.des-route-menu {
+  background-color: #eee;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.des-route-menu-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .des-route-menu-item .label {
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: 700; }
+
+.des-route-datapicker {
+  position: relative;
+  width: 140px;
+  height: 38px;
+  padding-left: 30px; }
+  .des-route-datapicker .form-control {
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 0;
+    cursor: pointer; }
+    .des-route-datapicker .form-control:focus {
+      box-shadow: none; }
+  .des-route-datapicker::before {
+    content: "\f073";
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    line-height: 1;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    font-size: 20px; }
+
 .des-route-table {
   border: 1px solid #ccc; }
 
