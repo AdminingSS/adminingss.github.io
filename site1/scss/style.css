@@ -5928,6 +5928,14 @@ button:focus {
     border-color: #901f25;
     background-color: #901f25; }
 
+.des-route-summary {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
 @media (max-width: 767px) {
   .route-item-controls {
     width: 140px;
@@ -5937,8 +5945,8 @@ button:focus {
       font-size: 14px; } }
 @media (max-width: 575px) {
   .station-image {
-    width: 100%;
-    height: auto;
+    width: 240px;
+    height: 240px;
     margin-right: 0;
     margin-bottom: 20px; }
 
@@ -5946,10 +5954,46 @@ button:focus {
     width: 100%;
     height: auto;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     font-size: 14px; }
+    .route-item-controls .station-days {
+      width: 30%; }
     .route-item-controls input {
       font-size: 14px; }
-    .route-item-controls .route-item-controls .btn {
-      width: 125px; } }
+    .route-item-controls .btn {
+      width: 145px; }
+
+  .route-rail {
+    width: 6px;
+    left: 0; }
+    .route-rail::before {
+      left: -6px;
+      width: 18px;
+      height: 18px;
+      background-color: #fff;
+      border: 6px solid #555; }
+
+  .route-rail-start {
+    top: 290px;
+    bottom: -1px; }
+    .route-rail-start::before {
+      top: -6px;
+      border-color: #901f25;
+      background-color: #901f25; }
+
+  .route-rail-full {
+    top: -1px;
+    bottom: -1px; }
+    .route-rail-full::before {
+      top: 284px; }
+
+  .route-rail-end {
+    top: -1px;
+    bottom: calc(100% - 284px); }
+    .route-rail-end::before {
+      top: 284px;
+      border-color: #901f25;
+      background-color: #901f25; } }
 
 /*# sourceMappingURL=style.css.map */
