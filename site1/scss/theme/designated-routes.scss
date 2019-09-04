@@ -1,8 +1,10 @@
 .des-route-menu {
-  background-color: #eee;
+  //background-color: #eee;
+  background-color: rgba(144,31,37, 0.7);
   margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  color: #fff;
 }
 
 .des-route-menu-item {
@@ -61,6 +63,10 @@
 
   &:hover {
     background-color: #eeeeee;
+
+    .station-description {
+      border-bottom-color: #fff;
+    }
   }
 
   &.active {
@@ -92,6 +98,8 @@
 
 .station-links {
   display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
   margin-bottom: 5px;
   font-size: 12px;
   a {
@@ -113,6 +121,8 @@
   font-size: 12px;
   font-style: italic;
   display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 
@@ -132,7 +142,8 @@
 
 .route-item-controls {
   height: 100%;
-  width: 150px;
+  width: 155px;
+  min-height: 80px;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
@@ -244,3 +255,40 @@
 //  padding-top: 20px;
 //  padding-bottom: 20px;
 //}
+
+
+@media(max-width: 767px) {
+  .route-item-controls {
+    width: 140px;
+    margin: 0;
+    font-size: 14px;
+
+    input {
+      font-size: 14px;
+    }
+  }
+}
+
+@media(max-width: 575px) {
+  .station-image {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .route-item-controls {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    font-size: 14px;
+
+    input {
+      font-size: 14px;
+    }
+
+    .route-item-controls .btn {
+      width: 125px;
+    }
+  }
+}
