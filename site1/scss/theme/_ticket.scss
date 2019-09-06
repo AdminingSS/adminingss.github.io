@@ -11,6 +11,10 @@
     &:checked + span:before {
       opacity: 1;
     }
+
+    &:disabled + span {
+      opacity: 0.5;
+    }
   }
 
   > span {

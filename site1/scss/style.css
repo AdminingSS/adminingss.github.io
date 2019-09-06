@@ -3632,6 +3632,8 @@ h1, h2, .head {
     display: none; }
     .checkbox input:checked + span:before {
       opacity: 1; }
+    .checkbox input:disabled + span {
+      opacity: 0.5; }
   .checkbox > span {
     display: flex;
     align-items: center;
@@ -5002,6 +5004,67 @@ article .block-title {
         color: #999; }
     .tm-modal .tab-pane .form-group label {
       font-weight: 600; }
+
+.tm-modal-seats {
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 17px; }
+  .tm-modal-seats .modal-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee; }
+    .tm-modal-seats .modal-header .ticket-item {
+      padding: 0;
+      width: 100%; }
+  .tm-modal-seats .car-type-header {
+    border: 1px solid #eee;
+    font-weight: 700; }
+  .tm-modal-seats .car-type-data {
+    padding: 10px 0 10px 20px; }
+    .tm-modal-seats .car-type-data .car-type-name {
+      font-size: 18px;
+      font-weight: 700; }
+    .tm-modal-seats .car-type-data .car-type-available {
+      font-size: 14px; }
+      .tm-modal-seats .car-type-data .car-type-available span {
+        font-weight: 700; }
+  .tm-modal-seats .car-type-tariff {
+    padding: 10px;
+    border-left: 1px solid #eee;
+    font-size: 12px;
+    font-weight: 500; }
+    .tm-modal-seats .car-type-tariff .price, .tm-modal-seats .car-type-tariff .currency {
+      font-size: 16px;
+      font-weight: 600; }
+  .tm-modal-seats .car-type-item {
+    border: 2px solid #eee; }
+    .tm-modal-seats .car-type-item .car-type-tariff {
+      text-align: center;
+      padding: 5px; }
+      .tm-modal-seats .car-type-item .car-type-tariff > * {
+        padding: 5px; }
+      .tm-modal-seats .car-type-item .car-type-tariff.active .train-radio::before {
+        opacity: 1; }
+      .tm-modal-seats .car-type-item .car-type-tariff.active > * {
+        box-shadow: 0 0 5px 3px rgba(186, 40, 48, 0.6); }
+    .tm-modal-seats .car-type-item.active {
+      border-color: #bbb; }
+  .tm-modal-seats .seats-modal-main-slider {
+    margin-bottom: 10px; }
+    .tm-modal-seats .seats-modal-main-slider .img-wrap img {
+      width: 100%;
+      height: auto; }
+  .tm-modal-seats .seats-modal-slider-controls {
+    display: flex; }
+    .tm-modal-seats .seats-modal-slider-controls .img-wrap {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover; }
+      .tm-modal-seats .seats-modal-slider-controls .img-wrap img {
+        height: 100%; }
 
 .tm-btn-red {
   background-color: #ba2830;

@@ -5826,6 +5826,119 @@ article .block-title {
 
 }
 
+.tm-modal-seats {
+  //max-width: 1160px;
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 17px;
+
+  .modal-content {
+
+  }
+
+  .modal-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+
+    .ticket-item {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .car-type-header {
+    border: 1px solid #eee;
+    font-weight: 700;
+  }
+
+  .car-type-data {
+    padding: 10px 0 10px 20px;
+
+    .car-type-name {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .car-type-available {
+      font-size: 14px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .car-type-tariff {
+    padding: 10px;
+    border-left: 1px solid #eee;
+    font-size: 12px;
+    font-weight: 500;
+
+    .price, .currency {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .car-type-item {
+    border: 2px solid #eee;
+
+    .car-type-tariff {
+      text-align: center;
+      padding: 5px;
+
+      >* {
+        padding: 5px;
+      }
+
+      &.active {
+        .train-radio::before {
+          opacity: 1;
+        }
+
+        >* {
+          box-shadow: 0 0 5px 3px rgba(186,40,48,0.6);
+        }
+      }
+    }
+
+    &.active {
+      border-color: #bbb;
+    }
+  }
+
+  .car-type-description {
+
+  }
+
+  .seats-modal-main-slider {
+    margin-bottom: 10px;
+
+    .img-wrap img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .seats-modal-slider-controls {
+    display: flex;
+
+    .img-wrap {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
 .tm-btn-red {
   background-color: $red;
   border-color: $red;
