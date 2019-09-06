@@ -5018,6 +5018,8 @@ article .block-title {
   .tm-modal-seats .car-type-header {
     border: 1px solid #eee;
     font-weight: 700; }
+  .tm-modal-seats .car-type-data, .tm-modal-seats .car-type-tariff {
+    height: 100%; }
   .tm-modal-seats .car-type-data {
     padding: 10px 0 10px 20px; }
     .tm-modal-seats .car-type-data .car-type-name {
@@ -5041,13 +5043,20 @@ article .block-title {
       text-align: center;
       padding: 5px; }
       .tm-modal-seats .car-type-item .car-type-tariff > * {
-        padding: 5px; }
+        padding: 5px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
       .tm-modal-seats .car-type-item .car-type-tariff.active .train-radio::before {
         opacity: 1; }
       .tm-modal-seats .car-type-item .car-type-tariff.active > * {
         box-shadow: 0 0 5px 3px rgba(186, 40, 48, 0.6); }
     .tm-modal-seats .car-type-item.active {
       border-color: #bbb; }
+  .tm-modal-seats .train-services li {
+    width: 30px;
+    margin: 0 4px 4px 0; }
   .tm-modal-seats .seats-modal-main-slider {
     margin-bottom: 10px; }
     .tm-modal-seats .seats-modal-main-slider .img-wrap img {
@@ -5065,6 +5074,14 @@ article .block-title {
       object-fit: cover; }
       .tm-modal-seats .seats-modal-slider-controls .img-wrap img {
         height: 100%; }
+  .tm-modal-seats .seats-modal-desc-text {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    margin-top: 10px; }
+    .tm-modal-seats .seats-modal-desc-text p {
+      margin: 0 0 10px 0; }
+    .tm-modal-seats .seats-modal-desc-text a {
+      font-weight: 600; }
 
 .tm-btn-red {
   background-color: #ba2830;
@@ -5826,17 +5843,28 @@ button:focus {
   .routes-list > li {
     width: 100%; } }
 .des-route-menu {
-  background-color: rgba(144, 31, 37, 0.7);
+  background-color: #eee;
   margin-bottom: 20px;
   padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff; }
+  padding-bottom: 20px; }
 
 .des-route-menu-item {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  .des-route-menu-item select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 120px; }
+  .des-route-menu-item .form-control {
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 0;
+    cursor: pointer; }
+    .des-route-menu-item .form-control:focus {
+      box-shadow: none; }
   .des-route-menu-item .label {
     text-transform: uppercase;
     line-height: 1;
@@ -5849,13 +5877,6 @@ button:focus {
   width: 140px;
   height: 38px;
   padding-left: 30px; }
-  .des-route-datapicker .form-control {
-    background-color: #fff;
-    border-color: transparent;
-    border-radius: 0;
-    cursor: pointer; }
-    .des-route-datapicker .form-control:focus {
-      box-shadow: none; }
   .des-route-datapicker::before {
     content: "\f073";
     display: block;

@@ -5851,6 +5851,10 @@ article .block-title {
     font-weight: 700;
   }
 
+  .car-type-data, .car-type-tariff {
+    height: 100%;
+  }
+
   .car-type-data {
     padding: 10px 0 10px 20px;
 
@@ -5889,7 +5893,12 @@ article .block-title {
 
       >* {
         padding: 5px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
       }
+
 
       &.active {
         .train-radio::before {
@@ -5909,6 +5918,11 @@ article .block-title {
 
   .car-type-description {
 
+  }
+
+  .train-services li {
+    width: 30px;
+    margin: 0 4px 4px 0;
   }
 
   .seats-modal-main-slider {
@@ -5935,6 +5949,20 @@ article .block-title {
       img {
         height: 100%;
       }
+    }
+  }
+
+  .seats-modal-desc-text {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+
+    p {
+      margin: 0 0 10px 0;
+    }
+
+    a {
+      font-weight: 600;
     }
   }
 }
