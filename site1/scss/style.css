@@ -5252,6 +5252,9 @@ button:focus {
     height: 21px;
     display: block; }
 
+.price, .currency {
+  color: darkgreen; }
+
 @media (min-width: 992px) {
   .column-count-1 {
     -webkit-column-count: 1;

@@ -141,6 +141,10 @@ button:focus {
   }
 }
 
+.price, .currency {
+  color: $green;
+}
+
 // column-count
 
 @media (min-width: 992px) {
