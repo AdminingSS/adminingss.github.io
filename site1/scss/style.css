@@ -1795,7 +1795,7 @@ h1, h2, .head {
   position: relative;
   padding-top: 10px;
   margin: -10px 0 8px;
-  color: #ba2830;
+  color: darkgreen;
   line-height: 1;
   font-weight: 700; }
   .ticket-price__old {
@@ -5015,6 +5015,9 @@ article .block-title {
     .tm-modal-seats .modal-header .ticket-item {
       padding: 0;
       width: 100%; }
+      .tm-modal-seats .modal-header .ticket-item .ticket-info {
+        font-size: 18px;
+        padding: 0; }
   .tm-modal-seats .car-type-header {
     border: 1px solid #eee;
     font-weight: 700; }
@@ -5032,28 +5035,40 @@ article .block-title {
   .tm-modal-seats .car-type-tariff {
     padding: 10px;
     border-left: 1px solid #eee;
-    font-size: 12px;
-    font-weight: 500; }
+    font-size: 12px; }
     .tm-modal-seats .car-type-tariff .price, .tm-modal-seats .car-type-tariff .currency {
       font-size: 16px;
-      font-weight: 600; }
+      font-weight: 600;
+      color: darkgreen; }
+    .tm-modal-seats .car-type-tariff .car-total-price .price, .tm-modal-seats .car-type-tariff .car-total-price .currency {
+      font-size: 12px; }
   .tm-modal-seats .car-type-item {
-    border: 2px solid #eee; }
+    border: 2px solid #eee;
+    cursor: pointer; }
     .tm-modal-seats .car-type-item .car-type-tariff {
       text-align: center;
-      padding: 5px; }
+      padding: 5px;
+      font-weight: 500;
+      color: #bbb; }
       .tm-modal-seats .car-type-item .car-type-tariff > * {
         padding: 5px;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around; }
-      .tm-modal-seats .car-type-item .car-type-tariff.active .train-radio::before {
-        opacity: 1; }
       .tm-modal-seats .car-type-item .car-type-tariff.active > * {
         box-shadow: 0 0 5px 3px rgba(186, 40, 48, 0.6); }
+    .tm-modal-seats .car-type-item:hover {
+      background-color: #efefef; }
+      .tm-modal-seats .car-type-item:hover .car-type-tariff {
+        border-left: 1px solid #fff; }
+      .tm-modal-seats .car-type-item:hover .train-radio {
+        border-color: #fff; }
     .tm-modal-seats .car-type-item.active {
-      border-color: #bbb; }
+      border-color: #bbb;
+      background-color: #fdeaaa; }
+      .tm-modal-seats .car-type-item.active .train-radio::before {
+        opacity: 1; }
   .tm-modal-seats .train-services li {
     width: 30px;
     margin: 0 4px 4px 0; }
@@ -5075,11 +5090,11 @@ article .block-title {
       .tm-modal-seats .seats-modal-slider-controls .img-wrap img {
         height: 100%; }
   .tm-modal-seats .seats-modal-desc-text {
-    padding: 10px;
+    padding: 10px 0;
     border-top: 1px solid #eee;
     margin-top: 10px; }
     .tm-modal-seats .seats-modal-desc-text p {
-      margin: 0 0 10px 0; }
+      margin-bottom: 10px; }
     .tm-modal-seats .seats-modal-desc-text a {
       font-weight: 600; }
 
@@ -5905,9 +5920,18 @@ button:focus {
   padding-bottom: 20px; }
 
 .station-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   width: 140px;
   height: 140px;
   margin-right: 50px; }
+  .station-image img {
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; }
 
 .station-name {
   margin-bottom: 5px; }
@@ -6029,7 +6053,7 @@ button:focus {
       font-size: 14px; } }
 @media (max-width: 575px) {
   .station-image {
-    width: 240px;
+    width: 100%;
     height: 240px;
     margin-right: 0;
     margin-bottom: 20px; }

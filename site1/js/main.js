@@ -471,6 +471,30 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+    const $carTypeItems = $('.car-type-item');
+
+    // $carTypeItems.click(function () {
+    //     if($(this).hasClass('active')) return;
+    //
+    // });
+
+    $carTypeItems.each(function () {
+        $(this).find('.car-type-tariff').click(function () {
+            const $thisItem = $(this);
+            if($thisItem.hasClass('active')) return;
+            const $parentItem = $(this).parents('.car-type-item');
+            $carTypeItems.removeClass('active');
+            $carTypeItems.find('.car-type-tariff').removeClass('active');
+            $parentItem.addClass('active');
+            $thisItem.addClass('active');
+        });
+    });
+
+    // $('.car-type-item .car-type-tariff').click(function () {
+    //
+    //     $(this).addClass('active');
+    // });
+
     $('.text-field input').blur(function () {
         if ($(this).val() != '') {
             $(this).addClass('complete');

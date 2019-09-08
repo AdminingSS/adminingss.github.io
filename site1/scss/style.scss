@@ -1,4 +1,5 @@
 $red: #ba2830;
+$green: darkgreen;
 $orange: #e49100;
 $blue: #00c5c5;
 $gray: #555;
@@ -2104,7 +2105,8 @@ h1, h2, .head {
   position: relative;
   padding-top: 10px;
   margin: -10px 0 8px;
-  color: $red;
+  //color: $red;
+  color: $green;
   line-height: 1;
   font-weight: 700;
   &__old {
@@ -5827,14 +5829,9 @@ article .block-title {
 }
 
 .tm-modal-seats {
-  //max-width: 1160px;
   max-width: 1200px;
   width: 100%;
   padding-left: 17px;
-
-  .modal-content {
-
-  }
 
   .modal-header {
     background-color: #fff;
@@ -5843,6 +5840,11 @@ article .block-title {
     .ticket-item {
       padding: 0;
       width: 100%;
+
+      .ticket-info {
+        font-size: 18px;
+        padding: 0;
+      }
     }
   }
 
@@ -5876,20 +5878,33 @@ article .block-title {
     padding: 10px;
     border-left: 1px solid #eee;
     font-size: 12px;
-    font-weight: 500;
 
     .price, .currency {
       font-size: 16px;
       font-weight: 600;
+      color: $green;
     }
+
+    .car-total-price {
+      .price, .currency {
+        font-size: 12px;
+      }
+    }
+
+    //.price {
+    //  color: $green;
+    //}
   }
 
   .car-type-item {
     border: 2px solid #eee;
+    cursor: pointer;
 
     .car-type-tariff {
       text-align: center;
       padding: 5px;
+      font-weight: 500;
+      color: #bbb;
 
       >* {
         padding: 5px;
@@ -5901,22 +5916,35 @@ article .block-title {
 
 
       &.active {
-        .train-radio::before {
-          opacity: 1;
-        }
 
         >* {
           box-shadow: 0 0 5px 3px rgba(186,40,48,0.6);
         }
+
+      }
+    }
+
+    &:hover {
+      background-color: #efefef;
+
+      .car-type-tariff {
+        border-left: 1px solid #fff;
+      }
+
+      .train-radio {
+        border-color: #fff;
       }
     }
 
     &.active {
       border-color: #bbb;
-    }
-  }
 
-  .car-type-description {
+      background-color: rgb(253, 234, 170);
+
+      .train-radio::before {
+        opacity: 1;
+      }
+    }
 
   }
 
@@ -5953,12 +5981,12 @@ article .block-title {
   }
 
   .seats-modal-desc-text {
-    padding: 10px;
+    padding: 10px 0;
     border-top: 1px solid #eee;
     margin-top: 10px;
 
     p {
-      margin: 0 0 10px 0;
+      margin-bottom: 10px;
     }
 
     a {
@@ -6057,7 +6085,6 @@ article .block-title {
 }
 
 @import "theme/base";
-
 @import "theme/personal-area";
 @import "theme/coach-class";
 @import "theme/destinations-route";

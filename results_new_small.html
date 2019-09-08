@@ -2603,7 +2603,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="ticket-item">
-                    <div class="row align-items-center">
+                    <div class="row align-items-center justify-content-between">
                         <div class="col-5">
                             <div class="row mb-1">
                                 <div class="col-8">
@@ -2648,12 +2648,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5">
-                            <div class="mb-2">Скорый поезд в глубь себя</div>
-                            <div class="ticket-info"><span>116С</span> Петух Рязани</div>
+                        <div class="col d-flex flex-column align-items-center">
+                            <div>
+                                <div class="ticket-info mb-2">Поезд #<span>116С</span> Петух Рязани</div>
+                                <div>Скорый поезд в глубь себя</div>
+                            </div>
                         </div>
-                        <div class="col">
-
+                        <div class="col-auto">
+                            <button type="button" class="btn tm-btn-red" onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(1);$('#do_order').submit();}">
+                                <i class="fa fa-angle-double-left"></i>Previous Train
+                            </button>
+                            <button type="button" class="btn tm-btn-red" onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(1);$('#do_order').submit();}">
+                                Next train<i class="fa fa-angle-double-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -2661,7 +2668,7 @@
             <div class="modal-body">
                 <div class="">
                     <div class="row">
-                        <div class="col-7">
+                        <div class="col-7 d-flex flex-column justify-content-between">
                             <div class="car-type-selector">
                                 <div class="car-type-header">
                                     <div class="row no-gutters">
@@ -2684,6 +2691,10 @@
                                 </div>
                                 <div class="car-type-item">
                                     <div class="row no-gutters">
+                                        <div class="col-auto px-2 d-flex align-items-center">
+                                            <div class="train-radio">
+                                            </div>
+                                        </div>
                                         <div class="col">
                                             <div class="car-type-data">
                                                 <div class="car-type-name mb-1">
@@ -2692,85 +2703,15 @@
                                                 <div class="car-type-available mb-1">
                                                     (<span>0</span> seats left)
                                                 </div>
-                                                <ul class="train-services">
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Биотуалет в купе"><img
-                                                            src="site1/images/services/biotoilet.png"
-                                                            alt="Биотуалет в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Кондиционер в купе"><img
-                                                            src="site1/images/services/conditioner.png"
-                                                            alt="Кондиционер в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Набор питания"><img
-                                                            src="site1/images/services/food.png"
-                                                            alt="Набор питания"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Мультимедийный портал Попутчик">
-                                                        <img src="site1/images/services/multimedia.png"
-                                                             alt="Мультимедийный портал Попутчик"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Постельное бельё"><img
-                                                            src="site1/images/services/pillows.png"
-                                                            alt="Постельное бельё"></li>
-                                                    <li data-toggle="tooltip" data-original-title="Плед"><img
-                                                            src="site1/images/services/plaid.png" alt="Плед">
-                                                    </li>
-                                                    <li data-toggle="tooltip" data-original-title="Пресса"><img
-                                                            src="site1/images/services/press.png" alt="Пресса">
-                                                    </li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Санитарно-гигиенический набор"><img
-                                                            src="site1/images/services/sanpack.png"
-                                                            alt="Санитарно-гигиенический набор"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Душевая в купе"><img
-                                                            src="site1/images/services/shower.png"
-                                                            alt="Душевая в купе"></li>
-                                                    <li data-toggle="tooltip" data-original-title="Телевизор">
-                                                        <img src="site1/images/services/tv.png" alt="Телевизор">
-                                                    </li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Умывальник в купе"><img
-                                                            src="site1/images/services/washbasin.png"
-                                                            alt="Умывальник в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Возможна перевозка животных"><img
-                                                            src="site1/images/services/car-animals.png"
-                                                            alt="Возможна перевозка животных"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Биотуалет в вагоне"><img
-                                                            src="site1/images/services/car-biotoilet.png"
-                                                            alt="Биотуалет в вагоне"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Кондиционер в вагоне"><img
-                                                            src="site1/images/services/car-conditioner.png"
-                                                            alt="Кондиционер в вагоне"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Провоз животных запрещён"><img
-                                                            src="site1/images/services/no-animals.png"
-                                                            alt="Провоз животных запрещён"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Биотуалет отсутствует"><img
-                                                            src="site1/images/services/no-biotoilet.png"
-                                                            alt="Биотуалет отсутствует"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Кондиционер отсутствует"><img
-                                                            src="site1/images/services/no-conditioner.png"
-                                                            alt="Кондиционер отсутствует"></li>
-                                                </ul>
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
-                                                        <div class="col-auto mr-2">
-                                                            <div class="train-radio"></div>
-                                                        </div>
                                                         <div class="col">
                                                             <div class="car-type-price">
-                                                                <span class="price">97000531</span>
+                                                                <span class="tm-text-price price">97000531</span>
                                                                 <span class="currency">RUB</span>
                                                             </div>
                                                             <div>per seat</div>
@@ -2779,7 +2720,7 @@
                                                     <div>
                                                         <div>Total for 1 passenger:</div>
                                                         <div class="car-total-price">
-                                                            <span class="price">97000531</span>
+                                                            <span class="tm-text-price price">97000531</span>
                                                             <span class="currency">RUB</span>
                                                         </div>
                                                     </div>
@@ -2790,12 +2731,9 @@
                                             <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
-                                                        <div class="col-auto mr-2">
-                                                            <div class="train-radio"></div>
-                                                        </div>
                                                         <div class="col text-center">
                                                             <div class="car-type-price">
-                                                                <span class="price">5</span>
+                                                                <span class="tm-text-price price">5</span>
                                                                 <span class="currency">ILS</span>
                                                             </div>
                                                             <div>per seat</div>
@@ -2804,7 +2742,7 @@
                                                     <div>
                                                         <div class="text-nowrap">Total for 40 passengers:</div>
                                                         <div class="car-total-price">
-                                                            <span class="price">5</span>
+                                                            <span class="tm-text-price price">5</span>
                                                             <span class="currency">ILS</span>
                                                         </div>
                                                     </div>
@@ -2813,8 +2751,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="car-type-item active">
+                                <div class="car-type-item">
                                     <div class="row no-gutters">
+                                        <div class="col-auto px-2 d-flex align-items-center">
+                                            <div class="train-radio">
+                                            </div>
+                                        </div>
                                         <div class="col">
                                             <div class="car-type-data">
                                                 <div class="car-type-name mb-1">
@@ -2823,85 +2765,15 @@
                                                 <div class="car-type-available mb-1">
                                                     (<span>0</span> seats left)
                                                 </div>
-                                                <ul class="train-services">
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Биотуалет в купе"><img
-                                                            src="site1/images/services/biotoilet.png"
-                                                            alt="Биотуалет в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Кондиционер в купе"><img
-                                                            src="site1/images/services/conditioner.png"
-                                                            alt="Кондиционер в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Набор питания"><img
-                                                            src="site1/images/services/food.png"
-                                                            alt="Набор питания"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Мультимедийный портал Попутчик">
-                                                        <img src="site1/images/services/multimedia.png"
-                                                             alt="Мультимедийный портал Попутчик"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Постельное бельё"><img
-                                                            src="site1/images/services/pillows.png"
-                                                            alt="Постельное бельё"></li>
-                                                    <li data-toggle="tooltip" data-original-title="Плед"><img
-                                                            src="site1/images/services/plaid.png" alt="Плед">
-                                                    </li>
-                                                    <li data-toggle="tooltip" data-original-title="Пресса"><img
-                                                            src="site1/images/services/press.png" alt="Пресса">
-                                                    </li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Санитарно-гигиенический набор"><img
-                                                            src="site1/images/services/sanpack.png"
-                                                            alt="Санитарно-гигиенический набор"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Душевая в купе"><img
-                                                            src="site1/images/services/shower.png"
-                                                            alt="Душевая в купе"></li>
-                                                    <li data-toggle="tooltip" data-original-title="Телевизор">
-                                                        <img src="site1/images/services/tv.png" alt="Телевизор">
-                                                    </li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Умывальник в купе"><img
-                                                            src="site1/images/services/washbasin.png"
-                                                            alt="Умывальник в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Возможна перевозка животных"><img
-                                                            src="site1/images/services/car-animals.png"
-                                                            alt="Возможна перевозка животных"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Биотуалет в вагоне"><img
-                                                            src="site1/images/services/car-biotoilet.png"
-                                                            alt="Биотуалет в вагоне"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Кондиционер в вагоне"><img
-                                                            src="site1/images/services/car-conditioner.png"
-                                                            alt="Кондиционер в вагоне"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Провоз животных запрещён"><img
-                                                            src="site1/images/services/no-animals.png"
-                                                            alt="Провоз животных запрещён"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Биотуалет отсутствует"><img
-                                                            src="site1/images/services/no-biotoilet.png"
-                                                            alt="Биотуалет отсутствует"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Кондиционер отсутствует"><img
-                                                            src="site1/images/services/no-conditioner.png"
-                                                            alt="Кондиционер отсутствует"></li>
-                                                </ul>
                                             </div>
                                         </div>
                                         <div class="col-3">
-                                            <div class="car-type-tariff active">
+                                            <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
-                                                        <div class="col-auto mr-2">
-                                                            <div class="train-radio"></div>
-                                                        </div>
                                                         <div class="col">
                                                             <div class="car-type-price">
-                                                                <span class="price">97000531</span>
+                                                                <span class="tm-text-price price">97000531</span>
                                                                 <span class="currency">RUB</span>
                                                             </div>
                                                             <div>per seat</div>
@@ -2910,7 +2782,7 @@
                                                     <div>
                                                         <div>Total for 1 passenger:</div>
                                                         <div class="car-total-price">
-                                                            <span class="price">97000531</span>
+                                                            <span class="tm-text-price price">97000531</span>
                                                             <span class="currency">RUB</span>
                                                         </div>
                                                     </div>
@@ -2921,13 +2793,10 @@
                                             <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
-                                                        <div class="col-auto mr-2">
-                                                            <div class="train-radio"></div>
-                                                        </div>
                                                         <div class="col text-center">
                                                             <div class="car-type-price">
                                                                 <span class="price">5</span>
-                                                                <span class="currency">ILS</span>
+                                                                <span class="tm-text-price currency">ILS</span>
                                                             </div>
                                                             <div>per seat</div>
                                                         </div>
@@ -2946,6 +2815,10 @@
                                 </div>
                                 <div class="car-type-item">
                                     <div class="row no-gutters">
+                                        <div class="col-auto px-2 d-flex align-items-center">
+                                            <div class="train-radio">
+                                            </div>
+                                        </div>
                                         <div class="col">
                                             <div class="car-type-data">
                                                 <div class="car-type-name mb-1">
@@ -2954,82 +2827,12 @@
                                                 <div class="car-type-available mb-1">
                                                     (<span>0</span> seats left)
                                                 </div>
-                                                <ul class="train-services">
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Биотуалет в купе"><img
-                                                            src="site1/images/services/biotoilet.png"
-                                                            alt="Биотуалет в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Кондиционер в купе"><img
-                                                            src="site1/images/services/conditioner.png"
-                                                            alt="Кондиционер в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Набор питания"><img
-                                                            src="site1/images/services/food.png"
-                                                            alt="Набор питания"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Мультимедийный портал Попутчик">
-                                                        <img src="site1/images/services/multimedia.png"
-                                                             alt="Мультимедийный портал Попутчик"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Постельное бельё"><img
-                                                            src="site1/images/services/pillows.png"
-                                                            alt="Постельное бельё"></li>
-                                                    <li data-toggle="tooltip" data-original-title="Плед"><img
-                                                            src="site1/images/services/plaid.png" alt="Плед">
-                                                    </li>
-                                                    <li data-toggle="tooltip" data-original-title="Пресса"><img
-                                                            src="site1/images/services/press.png" alt="Пресса">
-                                                    </li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Санитарно-гигиенический набор"><img
-                                                            src="site1/images/services/sanpack.png"
-                                                            alt="Санитарно-гигиенический набор"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Душевая в купе"><img
-                                                            src="site1/images/services/shower.png"
-                                                            alt="Душевая в купе"></li>
-                                                    <li data-toggle="tooltip" data-original-title="Телевизор">
-                                                        <img src="site1/images/services/tv.png" alt="Телевизор">
-                                                    </li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Умывальник в купе"><img
-                                                            src="site1/images/services/washbasin.png"
-                                                            alt="Умывальник в купе"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Возможна перевозка животных"><img
-                                                            src="site1/images/services/car-animals.png"
-                                                            alt="Возможна перевозка животных"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Биотуалет в вагоне"><img
-                                                            src="site1/images/services/car-biotoilet.png"
-                                                            alt="Биотуалет в вагоне"></li>
-                                                    <li data-toggle="tooltip"
-                                                        data-original-title="Кондиционер в вагоне"><img
-                                                            src="site1/images/services/car-conditioner.png"
-                                                            alt="Кондиционер в вагоне"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Провоз животных запрещён"><img
-                                                            src="site1/images/services/no-animals.png"
-                                                            alt="Провоз животных запрещён"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Биотуалет отсутствует"><img
-                                                            src="site1/images/services/no-biotoilet.png"
-                                                            alt="Биотуалет отсутствует"></li>
-                                                    <li class="no-item" data-toggle="tooltip"
-                                                        data-original-title="Кондиционер отсутствует"><img
-                                                            src="site1/images/services/no-conditioner.png"
-                                                            alt="Кондиционер отсутствует"></li>
-                                                </ul>
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
-                                                        <div class="col-auto mr-2">
-                                                            <div class="train-radio"></div>
-                                                        </div>
                                                         <div class="col">
                                                             <div class="car-type-price">
                                                                 <span class="price">97000531</span>
@@ -3052,9 +2855,6 @@
                                             <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
-                                                        <div class="col-auto mr-2">
-                                                            <div class="train-radio"></div>
-                                                        </div>
                                                         <div class="col text-center">
                                                             <div class="car-type-price">
                                                                 <span class="price">5</span>
@@ -3075,6 +2875,24 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="train-order">
+                                <div class="row align-items-center">
+                                        <div class="col-md">
+                                            <div class="seats-total-price text-left">
+                                                <span>Total for 2 passengers: </span>
+                                                <span class="all price">1108</span>
+                                                <span class="currency">EUR</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="seats-btn">
+                                                <button type="button" class="btn tm-btn-red">
+                                                    Buy tickets <i class="fa fa-angle-double-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                         <div class="col-5 d-none d-md-block">
@@ -3168,7 +2986,8 @@
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias
                                         consequatur, cupiditate doloremque dolores earum eius enim et facere facilis
-                                        illo laborum numquam repellendus sed, sequi temporibus, <a href="">tenetur totam vel?</a>
+                                        illo laborum numquam repellendus sed, sequi temporibus, <a href="">tenetur totam
+                                        vel?</a>
                                     </p>
                                     <p>
                                         lorem iosum
