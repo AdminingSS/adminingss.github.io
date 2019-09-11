@@ -39,9 +39,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['af']);
+    
 
-    var i18nDatepickerAf = datepicker.regional['af'];
+    
 
 
     /* Algerian Arabic Translation for jQuery UI date picker plugin. (can be used for Tunisia)*/
@@ -66,9 +66,9 @@
         isRTL: true,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ar-DZ']);
+    
 
-    var i18nDatepickerArDz = datepicker.regional['ar-DZ'];
+    
 
 
     /* Arabic Translation for jQuery UI date picker plugin. */
@@ -94,9 +94,9 @@
         isRTL: true,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ar']);
+    
 
-    var i18nDatepickerAr = datepicker.regional['ar'];
+    
 
 
     /* Azerbaijani (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -121,9 +121,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['az']);
+    
 
-    var i18nDatepickerAz = datepicker.regional['az'];
+    
 
 
     /* Belarusian initialisation for the jQuery UI date picker plugin. */
@@ -148,9 +148,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['be']);
+    
 
-    var i18nDatepickerBe = datepicker.regional['be'];
+    
 
 
     /* Bulgarian initialisation for the jQuery UI date picker plugin. */
@@ -176,9 +176,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['bg']);
+    
 
-    var i18nDatepickerBg = datepicker.regional['bg'];
+    
 
 
     /* Bosnian i18n for the jQuery UI date picker plugin. */
@@ -203,9 +203,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['bs']);
+    
 
-    var i18nDatepickerBs = datepicker.regional['bs'];
+    
 
 
     /* Inicialització en català per a l'extensió 'UI date picker' per jQuery. */
@@ -230,9 +230,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ca']);
+    
 
-    var i18nDatepickerCa = datepicker.regional['ca'];
+    
 
 
     /* Czech initialisation for the jQuery UI date picker plugin. */
@@ -257,9 +257,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['cs']);
+    
 
-    var i18nDatepickerCs = datepicker.regional['cs'];
+    
 
 
     /* Welsh/UK initialisation for the jQuery UI date picker plugin. */
@@ -284,9 +284,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['cy-GB']);
+    
 
-    var i18nDatepickerCyGb = datepicker.regional['cy-GB'];
+    
 
 
     /* Danish initialisation for the jQuery UI date picker plugin. */
@@ -311,9 +311,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['da']);
+    
 
-    var i18nDatepickerDa = datepicker.regional['da'];
+    
 
 
     /* German initialisation for the jQuery UI date picker plugin. */
@@ -338,9 +338,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['de']);
+    
 
-    var i18nDatepickerDe = datepicker.regional['de'];
+    
 
 
     /* Greek (el) initialisation for the jQuery UI date picker plugin. */
@@ -365,16 +365,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['el']);
+    
 
-    var i18nDatepickerEl = datepicker.regional['el'];
-
-
-    /* English/Australia initialisation for the jQuery UI date picker plugin. */
-    /* Based on the en-GB initialisation. */
-
-
-    datepicker.regional['en-AU'] = {
+    datepicker.regional['en'] = {
         closeText: 'Done',
         prevText: 'Prev',
         nextText: 'Next',
@@ -392,63 +385,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['en-AU']);
+    
 
-    var i18nDatepickerEnAu = datepicker.regional['en-AU'];
-
-
-    /* English/UK initialisation for the jQuery UI date picker plugin. */
-    /* Written by Stuart. */
-
-
-    datepicker.regional['en-GB'] = {
-        closeText: 'Done',
-        prevText: 'Prev',
-        nextText: 'Next',
-        currentText: 'Today',
-        monthNames: ['January','February','March','April','May','June',
-            'July','August','September','October','November','December'],
-        monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-        dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
-        weekHeader: 'Wk',
-        dateFormat: 'dd/mm/yy',
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['en-GB']);
-
-    var i18nDatepickerEnGb = datepicker.regional['en-GB'];
-
-
-    /* English/New Zealand initialisation for the jQuery UI date picker plugin. */
-    /* Based on the en-GB initialisation. */
-
-
-    datepicker.regional['en-NZ'] = {
-        closeText: 'Done',
-        prevText: 'Prev',
-        nextText: 'Next',
-        currentText: 'Today',
-        monthNames: ['January','February','March','April','May','June',
-            'July','August','September','October','November','December'],
-        monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-        dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
-        weekHeader: 'Wk',
-        dateFormat: 'dd/mm/yy',
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['en-NZ']);
-
-    var i18nDatepickerEnNz = datepicker.regional['en-NZ'];
+    
 
 
     /* Esperanto initialisation for the jQuery UI date picker plugin. */
@@ -473,9 +412,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['eo']);
+    
 
-    var i18nDatepickerEo = datepicker.regional['eo'];
+    
 
 
     /* Inicialización en español para la extensión 'UI date picker' para jQuery. */
@@ -500,9 +439,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['es']);
+    
 
-    var i18nDatepickerEs = datepicker.regional['es'];
+    
 
 
     /* Estonian initialisation for the jQuery UI date picker plugin. */
@@ -527,9 +466,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['et']);
+    
 
-    var i18nDatepickerEt = datepicker.regional['et'];
+    
 
 
     /* Karrikas-ek itzulia (karrikas@karrikas.com) */
@@ -553,9 +492,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['eu']);
+    
 
-    var i18nDatepickerEu = datepicker.regional['eu'];
+    
 
 
     /* Persian (Farsi) Translation for the jQuery UI date picker plugin. */
@@ -616,9 +555,9 @@
         isRTL: true,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['fa']);
+    
 
-    var i18nDatepickerFa = datepicker.regional['fa'];
+    
 
 
     /* Finnish initialisation for the jQuery UI date picker plugin. */
@@ -643,9 +582,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['fi']);
+    
 
-    var i18nDatepickerFi = datepicker.regional['fi'];
+    
 
 
     /* Faroese initialisation for the jQuery UI date picker plugin */
@@ -670,9 +609,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['fo']);
+    
 
-    var i18nDatepickerFo = datepicker.regional['fo'];
+    
 
 
     /* Canadian-French initialisation for the jQuery UI date picker plugin. */
@@ -697,9 +636,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    datepicker.setDefaults(datepicker.regional['fr-CA']);
+    
 
-    var i18nDatepickerFrCa = datepicker.regional['fr-CA'];
+    
 
 
     /* Swiss-French initialisation for the jQuery UI date picker plugin. */
@@ -724,9 +663,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['fr-CH']);
+    
 
-    var i18nDatepickerFrCh = datepicker.regional['fr-CH'];
+    
 
 
     /* French initialisation for the jQuery UI date picker plugin. */
@@ -753,9 +692,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['fr']);
+    
 
-    var i18nDatepickerFr = datepicker.regional['fr'];
+    
 
 
     /* Galician localization for 'UI date picker' jQuery extension. */
@@ -780,9 +719,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['gl']);
+    
 
-    var i18nDatepickerGl = datepicker.regional['gl'];
+    
 
 
     /* Hebrew initialisation for the UI Datepicker extension. */
@@ -807,9 +746,9 @@
         isRTL: true,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['he']);
+    
 
-    var i18nDatepickerHe = datepicker.regional['he'];
+    
 
 
     /* Hindi initialisation for the jQuery UI date picker plugin. */
@@ -834,9 +773,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['hi']);
+    
 
-    var i18nDatepickerHi = datepicker.regional['hi'];
+    
 
 
     /* Croatian i18n for the jQuery UI date picker plugin. */
@@ -861,9 +800,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['hr']);
+    
 
-    var i18nDatepickerHr = datepicker.regional['hr'];
+    
 
 
     /* Hungarian initialisation for the jQuery UI date picker plugin. */
@@ -887,9 +826,9 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['hu']);
+    
 
-    var i18nDatepickerHu = datepicker.regional['hu'];
+    
 
 
     /* Armenian(UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -914,9 +853,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['hy']);
+    
 
-    var i18nDatepickerHy = datepicker.regional['hy'];
+    
 
 
     /* Indonesian initialisation for the jQuery UI date picker plugin. */
@@ -941,9 +880,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['id']);
+    
 
-    var i18nDatepickerId = datepicker.regional['id'];
+    
 
 
     /* Icelandic initialisation for the jQuery UI date picker plugin. */
@@ -968,9 +907,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['is']);
+    
 
-    var i18nDatepickerIs = datepicker.regional['is'];
+    
 
 
     /* Italian initialisation for the jQuery UI date picker plugin. */
@@ -995,9 +934,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['it-CH']);
+    
 
-    var i18nDatepickerItCh = datepicker.regional['it-CH'];
+    
 
 
     /* Italian initialisation for the jQuery UI date picker plugin. */
@@ -1022,9 +961,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['it']);
+    
 
-    var i18nDatepickerIt = datepicker.regional['it'];
+    
 
 
     /* Japanese initialisation for the jQuery UI date picker plugin. */
@@ -1049,9 +988,9 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: '年'};
-    datepicker.setDefaults(datepicker.regional['ja']);
+    
 
-    var i18nDatepickerJa = datepicker.regional['ja'];
+    
 
 
     /* Georgian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1074,9 +1013,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ka']);
+    
 
-    var i18nDatepickerKa = datepicker.regional['ka'];
+    
 
 
     /* Kazakh (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1101,9 +1040,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['kk']);
+    
 
-    var i18nDatepickerKk = datepicker.regional['kk'];
+    
 
 
     /* Khmer initialisation for the jQuery calendar extension. */
@@ -1128,9 +1067,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['km']);
+    
 
-    var i18nDatepickerKm = datepicker.regional['km'];
+    
 
 
     /* Korean initialisation for the jQuery calendar extension. */
@@ -1155,9 +1094,9 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: '년'};
-    datepicker.setDefaults(datepicker.regional['ko']);
+    
 
-    var i18nDatepickerKo = datepicker.regional['ko'];
+    
 
 
     /* Kyrgyz (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1183,9 +1122,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    datepicker.setDefaults(datepicker.regional['ky']);
+    
 
-    var i18nDatepickerKy = datepicker.regional['ky'];
+    
 
 
     /* Luxembourgish initialisation for the jQuery UI date picker plugin. */
@@ -1210,9 +1149,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['lb']);
+    
 
-    var i18nDatepickerLb = datepicker.regional['lb'];
+    
 
 
     /* Lithuanian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1237,9 +1176,9 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['lt']);
+    
 
-    var i18nDatepickerLt = datepicker.regional['lt'];
+    
 
 
     /* Latvian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1264,9 +1203,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['lv']);
+    
 
-    var i18nDatepickerLv = datepicker.regional['lv'];
+    
 
 
     /* Macedonian i18n for the jQuery UI date picker plugin. */
@@ -1291,9 +1230,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['mk']);
+    
 
-    var i18nDatepickerMk = datepicker.regional['mk'];
+    
 
 
     /* Malayalam (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1318,9 +1257,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ml']);
+    
 
-    var i18nDatepickerMl = datepicker.regional['ml'];
+    
 
 
     /* Malaysian initialisation for the jQuery UI date picker plugin. */
@@ -1345,9 +1284,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ms']);
+    
 
-    var i18nDatepickerMs = datepicker.regional['ms'];
+    
 
 
     /* Norwegian Bokmål initialisation for the jQuery UI date picker plugin. */
@@ -1371,9 +1310,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    datepicker.setDefaults(datepicker.regional['nb']);
+    
 
-    var i18nDatepickerNb = datepicker.regional['nb'];
+    
 
 
     /* Dutch (Belgium) initialisation for the jQuery UI date picker plugin. */
@@ -1398,9 +1337,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['nl-BE']);
+    
 
-    var i18nDatepickerNlBe = datepicker.regional['nl-BE'];
+    
 
 
     /* Dutch (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1451,9 +1390,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    datepicker.setDefaults(datepicker.regional['nn']);
+    
 
-    var i18nDatepickerNn = datepicker.regional['nn'];
+    
 
 
     /* Norwegian initialisation for the jQuery UI date picker plugin. */
@@ -1478,9 +1417,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    datepicker.setDefaults(datepicker.regional['no']);
+    
 
-    var i18nDatepickerNo = datepicker.regional['no'];
+    
 
 
     /* Polish initialisation for the jQuery UI date picker plugin. */
@@ -1505,9 +1444,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['pl']);
+    
 
-    var i18nDatepickerPl = datepicker.regional['pl'];
+    
 
 
     /* Brazilian initialisation for the jQuery UI date picker plugin. */
@@ -1532,9 +1471,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['pt-BR']);
+    
 
-    var i18nDatepickerPtBr = datepicker.regional['pt-BR'];
+    
 
 
     /* Portuguese initialisation for the jQuery UI date picker plugin. */
@@ -1558,9 +1497,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['pt']);
+    
 
-    var i18nDatepickerPt = datepicker.regional['pt'];
+    
 
 
     /* Romansh initialisation for the jQuery UI date picker plugin. */
@@ -1583,9 +1522,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['rm']);
+    
 
-    var i18nDatepickerRm = datepicker.regional['rm'];
+    
 
 
     /* Romanian initialisation for the jQuery UI date picker plugin.
@@ -1613,9 +1552,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ro']);
+    
 
-    var i18nDatepickerRo = datepicker.regional['ro'];
+    
 
 
     /* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1640,9 +1579,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ru']);
+    
 
-    var i18nDatepickerRu = datepicker.regional['ru'];
+    
 
 
     /* Slovak initialisation for the jQuery UI date picker plugin. */
@@ -1667,9 +1606,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['sk']);
+    
 
-    var i18nDatepickerSk = datepicker.regional['sk'];
+    
 
 
     /* Slovenian initialisation for the jQuery UI date picker plugin. */
@@ -1695,9 +1634,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['sl']);
+    
 
-    var i18nDatepickerSl = datepicker.regional['sl'];
+    
 
 
     /* Albanian initialisation for the jQuery UI date picker plugin. */
@@ -1722,9 +1661,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['sq']);
+    
 
-    var i18nDatepickerSq = datepicker.regional['sq'];
+    
 
 
     /* Serbian i18n for the jQuery UI date picker plugin. */
@@ -1749,9 +1688,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['sr-SR']);
+    
 
-    var i18nDatepickerSrSr = datepicker.regional['sr-SR'];
+    
 
 
     /* Serbian i18n for the jQuery UI date picker plugin. */
@@ -1776,9 +1715,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['sr']);
+    
 
-    var i18nDatepickerSr = datepicker.regional['sr'];
+    
 
 
     /* Swedish initialisation for the jQuery UI date picker plugin. */
@@ -1803,9 +1742,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['sv']);
+    
 
-    var i18nDatepickerSv = datepicker.regional['sv'];
+    
 
 
     /* Tamil (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1830,9 +1769,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['ta']);
+    
 
-    var i18nDatepickerTa = datepicker.regional['ta'];
+    
 
 
     /* Thai initialisation for the jQuery UI date picker plugin. */
@@ -1857,9 +1796,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['th']);
+    
 
-    var i18nDatepickerTh = datepicker.regional['th'];
+    
 
 
     /* Tajiki (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1884,9 +1823,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['tj']);
+    
 
-    var i18nDatepickerTj = datepicker.regional['tj'];
+    
 
 
     /* Turkish initialisation for the jQuery UI date picker plugin. */
@@ -1911,9 +1850,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['tr']);
+    
 
-    var i18nDatepickerTr = datepicker.regional['tr'];
+    
 
 
     /* Ukrainian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1939,9 +1878,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['uk']);
+    
 
-    var i18nDatepickerUk = datepicker.regional['uk'];
+    
 
 
     /* Vietnamese initialisation for the jQuery UI date picker plugin. */
@@ -1966,16 +1905,16 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    datepicker.setDefaults(datepicker.regional['vi']);
+    
 
-    var i18nDatepickerVi = datepicker.regional['vi'];
+    
 
 
     /* Chinese initialisation for the jQuery UI date picker plugin. */
     /* Written by Cloudream (cloudream@gmail.com). */
 
 
-    datepicker.regional['zh-CN'] = {
+    datepicker.regional['zh'] = {
         closeText: '关闭',
         prevText: '&#x3C;上月',
         nextText: '下月&#x3E;',
@@ -1993,64 +1932,7 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: '年'};
-    datepicker.setDefaults(datepicker.regional['zh-CN']);
-
-    var i18nDatepickerZhCn = datepicker.regional['zh-CN'];
-
-
-    /* Chinese initialisation for the jQuery UI date picker plugin. */
-    /* Written by SCCY (samuelcychan@gmail.com). */
-
-
-    datepicker.regional['zh-HK'] = {
-        closeText: '關閉',
-        prevText: '&#x3C;上月',
-        nextText: '下月&#x3E;',
-        currentText: '今天',
-        monthNames: ['一月','二月','三月','四月','五月','六月',
-            '七月','八月','九月','十月','十一月','十二月'],
-        monthNamesShort: ['一月','二月','三月','四月','五月','六月',
-            '七月','八月','九月','十月','十一月','十二月'],
-        dayNames: ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'],
-        dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
-        dayNamesMin: ['日','一','二','三','四','五','六'],
-        weekHeader: '周',
-        dateFormat: 'dd-mm-yy',
-        firstDay: 0,
-        isRTL: false,
-        showMonthAfterYear: true,
-        yearSuffix: '年'};
-    datepicker.setDefaults(datepicker.regional['zh-HK']);
-
-    var i18nDatepickerZhHk = datepicker.regional['zh-HK'];
-
-
-    /* Chinese initialisation for the jQuery UI date picker plugin. */
-    /* Written by Ressol (ressol@gmail.com). */
-
-
-    datepicker.regional['zh-TW'] = {
-        closeText: '關閉',
-        prevText: '&#x3C;上月',
-        nextText: '下月&#x3E;',
-        currentText: '今天',
-        monthNames: ['一月','二月','三月','四月','五月','六月',
-            '七月','八月','九月','十月','十一月','十二月'],
-        monthNamesShort: ['一月','二月','三月','四月','五月','六月',
-            '七月','八月','九月','十月','十一月','十二月'],
-        dayNames: ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'],
-        dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
-        dayNamesMin: ['日','一','二','三','四','五','六'],
-        weekHeader: '周',
-        dateFormat: 'yy/mm/dd',
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: true,
-        yearSuffix: '年'};
-    datepicker.setDefaults(datepicker.regional['zh-TW']);
-
-    var i18nDatepickerZhTw = datepicker.regional['zh-TW'];
-
+  
 
 
 }));
