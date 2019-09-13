@@ -5825,13 +5825,56 @@ article .block-title {
       font-weight: 600;
     }
   }
-
 }
 
 .tm-modal-seats {
   max-width: 1200px;
   width: 100%;
   padding-left: 17px;
+
+  &.tm-modal-seats-slider {
+    max-width: 1080px;
+    padding-right: 17px;
+  }
+
+  .modal-content .close {
+    line-height: 40px;
+    opacity: 1;
+    color: #555;
+
+    &:hover {
+      color: #999;
+    }
+
+    span {
+      line-height: 40px;
+    }
+  }
+
+  .btn-answer {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+  }
+
+  //.tm-modalize {
+  //  position: absolute;
+  //  top: 0;
+  //  margin-bottom: 20px;
+  //  left: 0;
+  //  right: 0;
+  //  display: block!important;
+  //  background-color: white;
+  //  max-width: 100%;
+  //}
+
+  .tm-modalize-trigger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+  }
+
 
   .modal-header {
     background-color: #fff;
@@ -5845,6 +5888,12 @@ article .block-title {
         font-size: 18px;
         padding: 0;
       }
+    }
+
+    .contsh {
+      position: absolute;
+      right: 18px;
+      top: 46px;
     }
   }
 
@@ -5890,10 +5939,6 @@ article .block-title {
         font-size: 12px;
       }
     }
-
-    //.price {
-    //  color: $green;
-    //}
   }
 
   .car-type-item {
@@ -5914,13 +5959,20 @@ article .block-title {
         justify-content: space-around;
       }
 
-
       &.active {
 
         >* {
           box-shadow: 0 0 5px 3px rgba(186,40,48,0.6);
         }
 
+        &.insured {
+          background-color: rgba(255,255,0,0.1);
+        }
+
+      }
+
+      &.insured {
+        background-color: rgba(0,100,0,0.1);
       }
     }
 
@@ -5928,7 +5980,7 @@ article .block-title {
       background-color: #efefef;
 
       .car-type-tariff {
-        border-left: 1px solid #fff;
+        border-left-color: transparent;
       }
 
       .train-radio {
@@ -5984,6 +6036,20 @@ article .block-title {
     padding: 10px 0;
     border-top: 1px solid #eee;
     margin-top: 10px;
+    //height: 165px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: #b4b4b4;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: #eaeaea;
+    }
 
     p {
       margin-bottom: 10px;
@@ -5992,6 +6058,10 @@ article .block-title {
     a {
       font-weight: 600;
     }
+  }
+
+  .lingallery_thumbnails .lingallery_thumbnails_content_elem img {
+    height: auto;
   }
 }
 
@@ -6051,8 +6121,6 @@ article .block-title {
   }
 }
 
-
-
 .img-small {
   width: 40px;
   margin: auto;
@@ -6064,6 +6132,25 @@ article .block-title {
 
 }
 
+@media (max-width: 1199px) {
+
+  .tm-modal-seats {
+
+    .car-type-data .car-type-name {
+      font-size: 16px;
+    }
+
+    .car-type-item .car-type-data {
+      padding: 10px 0 10px 0;
+    }
+
+    .car-type-tariff .price, .car-type-tariff .currency {
+      font-size: 14px;
+    }
+
+  }
+
+}
 
 @media (max-width: 767px) {
 
@@ -6072,6 +6159,39 @@ article .block-title {
     overflow-y: visible;
   }
 }
+
+@media (max-width: 575px) {
+  .tm-modal-seats {
+    .car-type-tariff {
+      border-top: 1px solid #eee;
+      font-size: 12px;
+      padding: 5px;
+
+      .insured {
+        border-left-color: transparent;
+      }
+    }
+
+    .car-type-item .car-type-data, .car-type-data {
+      padding: 5px;
+    }
+
+    .car-type-data .car-type-name {
+      font-size: 14px;
+    }
+
+    .car-type-tariff .price, .car-type-tariff .currency {
+      font-size: 12px;
+    }
+  }
+
+  .car-type-item:hover {
+    .car-type-tariff {
+      border-top: 1px solid #fff;
+    }
+  }
+}
+
 .mini_faq a{
   border-bottom: 1px dashed;font-size: 13px;
 }

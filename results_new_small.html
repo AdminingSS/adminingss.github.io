@@ -2599,12 +2599,23 @@
     <div class="tm-modal-seats modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
+                <div class="d-inline-block contsh">
+                    <div id="share0"
+                         data-a2a-url="https://rustrains.com/trains-from-moscow-to-saint-petersburg?search=true&amp;date_from=13.09.2019#776А"
+                         data-a2a-title="Trains from Moscow to Saint-Petersburg on 13 September 2019 - Train #776А 13.09.2019"
+                         class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_target share-this"
+                         style="line-height: 32px;"><a
+                            href="https://www.addtoany.com/share#url=https%3A%2F%2Frustrains.com%2Ftrains-from-moscow-to-saint-petersburg%3Fsearch%3Dtrue%26date_from%3D13.09.2019%23776%D0%90&amp;title=Trains%20from%20Moscow%20to%20Saint-Petersburg%20on%2013%20September%202019%20-%20Train%20%23776%D0%90%2013.09.2019"
+                            title="Share" class="a2a_dd"><i class="fas fa-share-alt"></i></a>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="ticket-item">
                     <div class="row align-items-center justify-content-between">
-                        <div class="col-5">
+                        <div class="col-md-7 col-xl-5 mb-2 mb-xl-0">
                             <div class="row mb-1">
                                 <div class="col-8">
                                     <div class="row align-items-center">
@@ -2648,19 +2659,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col d-flex flex-column align-items-center">
+                        <div class="col d-flex flex-column align-items-center mb-2 mb-xl-0">
                             <div>
                                 <div class="ticket-info mb-2">Поезд #<span>116С</span> Петух Рязани</div>
                                 <div>Скорый поезд в глубь себя</div>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn tm-btn-red" onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(1);$('#do_order').submit();}">
-                                <i class="fa fa-angle-double-left"></i>Previous Train
-                            </button>
-                            <button type="button" class="btn tm-btn-red" onclick="if(check_selected_seats(1)) {$('#do_order').find('[name=direction]').val(1);$('#do_order').submit();}">
-                                Next train<i class="fa fa-angle-double-right"></i>
-                            </button>
+                        <div class="col-xl-auto d-flex justify-content-between d-xl-block">
+                            <a href="" class="text-secondary text-nowrap mr-2">
+                                <i class="fas fa-angle-double-left"></i>
+                                Previous Train
+                            </a>
+                            <a href="" class="text-secondary text-nowrap">
+                                Next train
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -2668,35 +2681,38 @@
             <div class="modal-body">
                 <div class="">
                     <div class="row">
-                        <div class="col-7 d-flex flex-column justify-content-between">
+                        <div class="col-lg-7 d-flex flex-column justify-content-between">
                             <div class="car-type-selector">
                                 <div class="car-type-header">
                                     <div class="row no-gutters">
-                                        <div class="col">
+                                        <div class="col-sm">
                                             <div class="car-type-data">
                                                 Classes
                                             </div>
                                         </div>
-                                        <div class="col-3">
-                                            <div class="car-type-tariff">
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff insured">
                                                 Insured
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="The price mentioned is for the whole compartment. It is compulsory to buy the whole compartment" class="btn btn-answer" aria-describedby="tooltip957255"><i class="far fa-question-circle"></i></a>
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-6 col-sm-3">
                                             <div class="car-type-tariff">
                                                 Standart
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="The price mentioned is for the whole compartment. It is compulsory to buy the whole compartment" class="btn btn-answer" aria-describedby="tooltip957255"><i class="far fa-question-circle"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="car-type-item">
                                     <div class="row no-gutters">
-                                        <div class="col-auto px-2 d-flex align-items-center">
+                                        <div class="col-auto d-none d-sm-flex px-2 align-items-center">
                                             <div class="train-radio">
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-sm">
                                             <div class="car-type-data">
+                                                <a href="#selectSeatsModalSlider" class="tm-modalize-trigger" role="button" data-toggle="modal"><i class="tm-icon-train-types fa fa-image"></i></a>
                                                 <div class="car-type-name mb-1">
                                                     1-сl. sleeping compt.
                                                 </div>
@@ -2705,8 +2721,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-3">
-                                            <div class="car-type-tariff">
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff insured">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
                                                         <div class="col">
@@ -2727,7 +2743,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-6 col-sm-3">
                                             <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
@@ -2740,7 +2756,7 @@
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div class="text-nowrap">Total for 40 passengers:</div>
+                                                        <div>Total for 40 passengers:</div>
                                                         <div class="car-total-price">
                                                             <span class="tm-text-price price">5</span>
                                                             <span class="currency">ILS</span>
@@ -2753,12 +2769,13 @@
                                 </div>
                                 <div class="car-type-item">
                                     <div class="row no-gutters">
-                                        <div class="col-auto px-2 d-flex align-items-center">
+                                        <div class="col-auto px-2 d-none d-sm-flex align-items-center">
                                             <div class="train-radio">
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-sm">
                                             <div class="car-type-data">
+                                                <a href="#selectSeatsModalSlider" class="tm-modalize-trigger" role="button" data-toggle="modal"><i class="tm-icon-train-types fa fa-image"></i></a>
                                                 <div class="car-type-name mb-1">
                                                     1-сl. sleeping compt.
                                                 </div>
@@ -2767,8 +2784,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-3">
-                                            <div class="car-type-tariff">
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff insured">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
                                                         <div class="col">
@@ -2789,7 +2806,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-6 col-sm-3">
                                             <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
@@ -2802,7 +2819,7 @@
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div class="text-nowrap">Total for 40 passengers:</div>
+                                                        <div>Total for 40 passengers:</div>
                                                         <div class="car-total-price">
                                                             <span class="price">5</span>
                                                             <span class="currency">ILS</span>
@@ -2813,14 +2830,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="car-type-item">
+                                <div class="car-type-item active">
                                     <div class="row no-gutters">
-                                        <div class="col-auto px-2 d-flex align-items-center">
+                                        <div class="col-auto px-2 d-none d-sm-flex align-items-center">
                                             <div class="train-radio">
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-sm">
                                             <div class="car-type-data">
+                                                <a href="#selectSeatsModalSlider" class="tm-modalize-trigger" role="button" data-toggle="modal"><i class="tm-icon-train-types fa fa-image"></i></a>
                                                 <div class="car-type-name mb-1">
                                                     1-сl. sleeping compt.
                                                 </div>
@@ -2829,8 +2847,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-3">
-                                            <div class="car-type-tariff">
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff insured active">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
                                                         <div class="col">
@@ -2851,7 +2869,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-6 col-sm-3">
                                             <div class="car-type-tariff">
                                                 <div>
                                                     <div class="row no-gutters align-items-center mb-1">
@@ -2864,7 +2882,7 @@
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div class="text-nowrap">Total for 40 passengers:</div>
+                                                        <div>Total for 40 passengers:</div>
                                                         <div class="car-total-price">
                                                             <span class="price">5</span>
                                                             <span class="currency">ILS</span>
@@ -2878,25 +2896,26 @@
                             </div>
                             <div class="train-order">
                                 <div class="row align-items-center">
-                                        <div class="col-md">
-                                            <div class="seats-total-price text-left">
-                                                <span>Total for 2 passengers: </span>
-                                                <span class="all price">1108</span>
-                                                <span class="currency">EUR</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="seats-btn">
-                                                <button type="button" class="btn tm-btn-red">
-                                                    Buy tickets <i class="fa fa-angle-double-right"></i>
-                                                </button>
-                                            </div>
+                                    <div class="col-md">
+                                        <div class="seats-total-price text-center text-md-left">
+                                            <span class="text-nowrap mr-2">Total for 2 passengers: </span>
+                                            <span class="text-nowrap"><span class="all price">1108</span>
+                                                <span class="currency">EUR</span></span>
                                         </div>
                                     </div>
+                                    <div class="col-md">
+                                        <div class="seats-btn">
+                                            <button type="button" class="btn tm-btn-red">
+                                                Buy tickets <i class="fa fa-angle-double-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-5 d-none d-md-block">
+                        <div class="col-5 d-none d-lg-block">
                             <div class="car-type-description">
+
                                 <div class="seats-modal-main-slider">
                                     <div class="img-wrap">
                                         <img src="https://via.placeholder.com/150x100" alt="">
@@ -2998,6 +3017,123 @@
                     </div>
                     <div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tm-select-seats-modal modal fade" id="selectSeatsModalSlider" tabindex="-1" role="dialog"
+     aria-labelledby="selectSeatsModalSliderLabel"
+     aria-hidden="true">
+    <div class="tm-modal-seats tm-modal-seats-slider modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <div class="car-type-description">
+
+                        <div class="seats-modal-main-slider">
+                            <div class="img-wrap">
+                                <img src="https://via.placeholder.com/150x100" alt="">
+                            </div>
+                        </div>
+                        <div class="seats-modal-slider-controls">
+                            <div class="img-wrap">
+                                <img src="https://via.placeholder.com/150x100" alt="">
+                            </div>
+                            <div class="img-wrap">
+                                <img src="https://via.placeholder.com/150x100" alt="">
+                            </div>
+                            <div class="img-wrap">
+                                <img src="https://via.placeholder.com/150x100" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <ul class="train-services">
+                                <li data-toggle="tooltip"
+                                    data-original-title="Биотуалет в купе"><img
+                                        src="site1/images/services/biotoilet.png"
+                                        alt="Биотуалет в купе"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Кондиционер в купе"><img
+                                        src="site1/images/services/conditioner.png"
+                                        alt="Кондиционер в купе"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Набор питания"><img
+                                        src="site1/images/services/food.png"
+                                        alt="Набор питания"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Мультимедийный портал Попутчик">
+                                    <img src="site1/images/services/multimedia.png"
+                                         alt="Мультимедийный портал Попутчик"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Постельное бельё"><img
+                                        src="site1/images/services/pillows.png"
+                                        alt="Постельное бельё"></li>
+                                <li data-toggle="tooltip" data-original-title="Плед"><img
+                                        src="site1/images/services/plaid.png" alt="Плед">
+                                </li>
+                                <li data-toggle="tooltip" data-original-title="Пресса"><img
+                                        src="site1/images/services/press.png" alt="Пресса">
+                                </li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Санитарно-гигиенический набор"><img
+                                        src="site1/images/services/sanpack.png"
+                                        alt="Санитарно-гигиенический набор"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Душевая в купе"><img
+                                        src="site1/images/services/shower.png"
+                                        alt="Душевая в купе"></li>
+                                <li data-toggle="tooltip" data-original-title="Телевизор">
+                                    <img src="site1/images/services/tv.png" alt="Телевизор">
+                                </li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Умывальник в купе"><img
+                                        src="site1/images/services/washbasin.png"
+                                        alt="Умывальник в купе"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Возможна перевозка животных"><img
+                                        src="site1/images/services/car-animals.png"
+                                        alt="Возможна перевозка животных"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Биотуалет в вагоне"><img
+                                        src="site1/images/services/car-biotoilet.png"
+                                        alt="Биотуалет в вагоне"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Кондиционер в вагоне"><img
+                                        src="site1/images/services/car-conditioner.png"
+                                        alt="Кондиционер в вагоне"></li>
+                                <li class="no-item" data-toggle="tooltip"
+                                    data-original-title="Провоз животных запрещён"><img
+                                        src="site1/images/services/no-animals.png"
+                                        alt="Провоз животных запрещён"></li>
+                                <li class="no-item" data-toggle="tooltip"
+                                    data-original-title="Биотуалет отсутствует"><img
+                                        src="site1/images/services/no-biotoilet.png"
+                                        alt="Биотуалет отсутствует"></li>
+                                <li class="no-item" data-toggle="tooltip"
+                                    data-original-title="Кондиционер отсутствует"><img
+                                        src="site1/images/services/no-conditioner.png"
+                                        alt="Кондиционер отсутствует"></li>
+                            </ul>
+                        </div>
+                        <div class="seats-modal-desc-text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias
+                                consequatur, cupiditate doloremque dolores earum eius enim et facere facilis
+                                illo laborum numquam repellendus sed, sequi temporibus, <a href="">tenetur totam
+                                vel?</a>
+                            </p>
+                            <p>
+                                lorem iosum
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
