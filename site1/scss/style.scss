@@ -6132,6 +6132,10 @@ article .block-title {
 
 }
 
+.tm-modalize-trigger {
+  display: none;
+}
+
 @media (max-width: 1199px) {
 
   .tm-modal-seats {
@@ -6150,6 +6154,12 @@ article .block-title {
 
   }
 
+}
+
+@media (max-width: 991px) {
+  .tm-modalize-trigger {
+    display: block;
+  }
 }
 
 @media (max-width: 767px) {

@@ -5186,6 +5186,9 @@ article .block-title {
   width: 80px;
   margin: auto; }
 
+.tm-modalize-trigger {
+  display: none; }
+
 @media (max-width: 1199px) {
   .tm-modal-seats .car-type-data .car-type-name {
     font-size: 16px; }
@@ -5193,6 +5196,9 @@ article .block-title {
     padding: 10px 0 10px 0; }
   .tm-modal-seats .car-type-tariff .price, .tm-modal-seats .car-type-tariff .currency {
     font-size: 14px; } }
+@media (max-width: 991px) {
+  .tm-modalize-trigger {
+    display: block; } }
 @media (max-width: 767px) {
   .tm-modal .tab-pane {
     max-height: 100%;
