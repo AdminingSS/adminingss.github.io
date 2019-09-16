@@ -5848,6 +5848,7 @@ article .block-title {
 
     span {
       line-height: 40px;
+      display: block;
     }
   }
 
@@ -5875,7 +5876,6 @@ article .block-title {
     right: 5%;
   }
 
-
   .modal-header {
     background-color: #fff;
     border-bottom: 1px solid #eee;
@@ -5894,6 +5894,7 @@ article .block-title {
       position: absolute;
       right: 18px;
       top: 46px;
+      z-index: 2000;
     }
   }
 

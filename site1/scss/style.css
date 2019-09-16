@@ -5019,7 +5019,8 @@ article .block-title {
     .tm-modal-seats .modal-content .close:hover {
       color: #999; }
     .tm-modal-seats .modal-content .close span {
-      line-height: 40px; }
+      line-height: 40px;
+      display: block; }
   .tm-modal-seats .btn-answer {
     top: 50%;
     transform: translateY(-50%);
@@ -5041,7 +5042,8 @@ article .block-title {
     .tm-modal-seats .modal-header .contsh {
       position: absolute;
       right: 18px;
-      top: 46px; }
+      top: 46px;
+      z-index: 2000; }
   .tm-modal-seats .car-type-header {
     border: 1px solid #eee;
     font-weight: 700; }
