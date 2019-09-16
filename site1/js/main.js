@@ -573,6 +573,20 @@ $(document).ready(function () {
         }
     })();
 
+    (function () {
+        const selectSeatsModal = $('.tm-js-modal-seats');
+        const selectSeatsModalSlider = $('#selectSeatsModalSlider');
+
+        selectSeatsModalSlider.on('show.bs.modal', function () {
+            selectSeatsModal.modal('hide');
+        });
+
+        selectSeatsModalSlider.on('hidden.bs.modal', function () {
+            selectSeatsModal.modal('show');
+        });
+
+    })();
+
 });
 
 
