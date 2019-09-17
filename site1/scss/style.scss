@@ -6176,7 +6176,9 @@ article .block-title {
 }
 
 @media (max-width: 575px) {
+
   .tm-modal-seats {
+    padding-left: 0;
     .car-type-tariff {
       border-top: 1px solid #eee;
       font-size: 12px;
