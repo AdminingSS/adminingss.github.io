@@ -1,15 +1,11 @@
 .des-route-menu {
   background-color: #eee;
-  //background-color: rgba(144,31,37, 0.7);
   margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  //color: #fff;
 }
 
 .des-route-menu-item {
-  //margin-right: 10px;
-  //height: 55px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -207,10 +203,6 @@
     border: 6px solid #555;
     border-radius: 50px;
   }
-
-  //&.active::before {
-  //  border-color: #901f25;
-  //}
 }
 
 .des-route-item.active .route-rail::before {

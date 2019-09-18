@@ -20,7 +20,7 @@ function initer(fn, n) {
 
 $(document).ready(function () {
 
-    //Select tikets alert
+    //Select tickets alert
 
     (function () {
         const alertTrigger = $('.js-button-popover-tickets');
@@ -76,71 +76,6 @@ $(document).ready(function () {
         }
     });
 
-    // Tickets
-
-    // var ticketsSwiper = new Swiper('.tickets-slider', {
-    //     loop: true,
-    //     slidesPerView: 4,
-    //     slidesPerGroup: 4,
-    //     spaceBetween: 22,
-    //     speed: 500,
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         clickable: true
-    //     },
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //         clickable: true
-    //     },
-    //     breakpoints: {
-    //         1240: {
-    //             slidesPerView: 3,
-    //             slidesPerGroup: 3
-    //         },
-    //         1100: {
-    //             slidesPerView: 2,
-    //             slidesPerGroup: 2
-    //         },
-    //         767: {
-    //             slidesPerView: 1,
-    //             slidesPerGroup: 1
-    //         }
-    //     }
-    // });
-    //
-    // ticketsSwiper.on('slideChange', function () {
-    //     $('.tickets-nav .numbers-current').text((ticketsSwiper.realIndex / 4) + 1);
-    // });
-
-    // var count = 0;
-    //
-    // $('.tickets-item').each(function () {
-    //     if (!$(this).hasClass('swiper-slide-duplicate')) {
-    //         count++;
-    //     }
-    // });
-
-    //$('.tickets-nav .numbers-total').text(Math.ceil(count / 4));
-
-    // Tickets info
-
-    // $('.tickets-info').slick({
-    //     infinite: true,
-    //     arrows: false,
-    //     slidesToShow: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 3000,
-    //     speed: 500,
-    //     fade: true,
-    //     cssEase: 'linear',
-    //     draggable: false,
-    //     pauseOnHover: false,
-    //     pauseOnFocus: false,
-    //     swipe: false,
-    //     touchMove: false
-    // });
-
     //Destination
     (function () {
         var $destinationsSlider = $('.articles-slider, .destinations-slider');
@@ -192,46 +127,6 @@ $(document).ready(function () {
             infinite: true
         });
     })();
-
-
-    // Product
-
-    // var productSwiper = new Swiper('.product-slider', {
-    //     loop: true,
-    //     slidesPerView: 2,
-    //     slidesPerGroup: 2,
-    //     spaceBetween: 22,
-    //     speed: 500,
-    //     pagination: {
-    //         el: '.dots',
-    //         clickable: true
-    //     },
-    //     navigation: {
-    //         nextEl: '.next',
-    //         prevEl: '.prev',
-    //         clickable: true
-    //     },
-    //     breakpoints: {
-    //         1240: {
-    //             slidesPerView: 1,
-    //             slidesPerGroup: 1
-    //         }
-    //     }
-    // });
-
-    // productSwiper.on('slideChange', function () {
-    //     $('.product-nav .numbers-current').text((productSwiper.realIndex / 2) + 1);
-    // });
-
-    // var countProduct = 0;
-    //
-    // $('.product-item').each(function () {
-    //     if (!$(this).hasClass('swiper-slide-duplicate')) {
-    //         countProduct++;
-    //     }
-    // });
-    //
-    // $('.product-nav .numbers-total').text(countProduct / 2);
 
     // Content gallery
     //?
@@ -314,30 +209,9 @@ $(document).ready(function () {
         });
     })();
 
-
-    // Seat
-
-    // $('.seat-nav').on('click', 'li:not(.active)', function () {
-    //     $(this)
-    //         .addClass('active').siblings().removeClass('active')
-    //         .closest('.seat').find('.seat-item').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
-    // });
-
-    // Ticket dropdown
-
-//  $('.ticket-form .link').click(function(e){
-//    e.preventDefault();
-//    $(this).closest('.ticket-section').next().slideDown();
-//  });
-
-    // $('.select-close').click(function () {
-    //     $(this).parent().slideUp();
-    // });
-
     // Tickets toggle
 
     var ticket_current,
-        // ticket_text,
         ticket_input;
 
     $('.ticket-toggle .amount li').click(function () {
@@ -354,25 +228,6 @@ $(document).ready(function () {
             ticket_current
         );
     });
-
-
-    // $('.my-select').click(function (e) {
-    //     $('.my-select-options').removeClass('active');
-    //     $('.my-select-arrow').removeClass('active');
-    //     $(this).find('.my-select-options').addClass('active');
-    //     $(this).find('.my-select-arrow').addClass('active');
-    // });
-    //
-    // $('.my-select-option').click(function () {
-    //     $(this).closest('.my-select').find('input').val(
-    //         $(this).children().length > 1 ?
-    //             $(this).find('.ru').text() + ' ' + $(this).find('.eng').text() :
-    //             $(this).find('span').text()
-    //     );
-    //     $('.my-select-options').removeClass('active');
-    //     $(this).closest('.my-select').find('.my-select-arrow').removeClass('active');
-    //     return false;
-    // });
 
     $('.showcase-check').click(function () {
         $('.showcase-check').removeClass('active');
@@ -470,38 +325,6 @@ $(document).ready(function () {
         $(this).parent().find('.train-type').removeClass('active');
         $(this).addClass('active');
     });
-
-    //const $carTypeItems = $('.car-type-item');
-
-    // $carTypeItems.click(function () {
-    //     if($(this).hasClass('active')) return;
-    //
-    // });
-
-    // $carTypeItems.each(function () {
-    //     $(this).find('.car-type-tariff').click(function () {
-    //         const $thisItem = $(this);
-    //         if($thisItem.hasClass('active')) return;
-    //         const $parentItem = $(this).parents('.car-type-item');
-    //         $carTypeItems.removeClass('active');
-    //         $carTypeItems.find('.car-type-tariff').removeClass('active');
-    //         $parentItem.addClass('active');
-    //         $thisItem.addClass('active');
-    //     });
-    // });
-
-    // $('.car-type-item .car-type-tariff').click(function () {
-    //
-    //     $(this).addClass('active');
-    // });
-
-    // const $modalizeItem = $('.tm-modalizable');
-    // const $modalizeTrigger = $('.tm-modalize-trigger');
-    //
-    // $modalizeTrigger.on('click', function () {
-    //     $modalizeItem.addClass('tm-modalize');
-    // });
-
 
     $('.text-field input').blur(function () {
         if ($(this).val() != '') {

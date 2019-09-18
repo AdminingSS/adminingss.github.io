@@ -236,7 +236,6 @@
 
   &-direction-text {
     position: relative;
-    //display: block;
     display: inline-block;
     padding-right: 30px;
     margin-bottom: 5px;
@@ -652,7 +651,6 @@
 
     &.fastest {
       color: #fff;
-      //background-color: #dc3545;
       background-color: green;
       padding-left: 40px;
 
@@ -668,7 +666,6 @@
 
     &.fast {
       color: #fff;
-      //background-color: #ffc107;
       background-color: #6cb029;
 
       &::before {
@@ -678,7 +675,6 @@
 
     &.vip {
       color: #fff;
-      //background-color: #28a745;
       background-color: #ff8700;
 
       &::before {
@@ -760,7 +756,6 @@
 .tm-slider__train-types-main .slick-slide {
   padding: 5px;
   border: 3px solid transparent;
-  //height: 100%;
 
   &.tm-slide-highlight {
     transition: none;
@@ -1036,8 +1031,7 @@
 }
 
 
-//FARSH
-
+//not altered?
 
 .results .nav-tabs {
   border-bottom: 0;
