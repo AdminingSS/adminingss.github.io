@@ -20,40 +20,6 @@ function initer(fn, n) {
 
 $(document).ready(function () {
 
-    //Select tikets alert
-
-    (function () {
-        const alertTrigger = $('.js-button-popover-tickets');
-        const options = {
-            placement: 'bottom',
-            trigger: 'manual',
-            template: '<div class="popover tm-popover-danger" role="tooltip"><div class="arrow"></div><div class="popover-body"></div></div>'
-        };
-
-        alertTrigger.popover(options);
-
-        alertTrigger.each(function () {
-            const elem = this;
-            $(this.dataset.target).on('shown.bs.collapse', {el: elem}, function (event) {
-                $(event.data.el).popover('show');
-            });
-            $(this.dataset.target).on('hidden.bs.collapse', {el: elem}, function (event) {
-                $(event.data.el).popover('hide');
-            });
-        });
-
-        alertTrigger.on('shown.bs.popover', function () {
-            const elem = this;
-            $(window).on('click', {el: elem}, popoverHandle);
-        });
-
-        function popoverHandle(event) {
-            $(event.data.el).popover('hide');
-            $(window).off('click', popoverHandle);
-        }
-
-    })();
-
     // Top line dropdown
 
     $('[data-toggle="dropdown"]').dropdown();
