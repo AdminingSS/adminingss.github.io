@@ -4826,6 +4826,28 @@ article .block-title {
   .tm-modal-seats .lingallery_thumbnails .lingallery_thumbnails_content_elem img {
     height: auto; }
 
+.train-number {
+  position: relative;
+  margin-right: 30px; }
+  .train-number::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -3px;
+    right: -30px;
+    height: 25px;
+    width: 25px;
+    background-image: url(../images/train-name.png);
+    background-size: cover;
+    transform: skewX(-10deg); }
+
+.train-name {
+  transform: skewX(-20deg);
+  display: inline-block;
+  background-color: #ba2830;
+  color: #fff;
+  padding: 0 5px; }
+
 .tm-btn-red {
   background-color: #ba2830;
   border-color: #ba2830;
