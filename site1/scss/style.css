@@ -3521,8 +3521,9 @@ h1, h2, .head {
       content: "\f078"; }
 .ticket-item {
   position: relative;
-  padding: 20px 0;
-  border: 2px solid #d81818; }
+  padding: 20px 0; }
+  .ticket-item.active {
+    border: 2px solid #d81818; }
   .ticket-item .bootstrap-datetimepicker-widget .picker-switch td:first-child a, .ticket-item .bootstrap-datetimepicker-widget .picker-switch td:first-child i {
     height: 0;
     display: block;
