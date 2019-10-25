@@ -20,7 +20,7 @@
     /* Afrikaans initialisation for the jQuery UI date picker plugin. */
     /* Written by Renier Pretorius. */
 
-
+    if(datepicker == undefined) return;
     datepicker.regional['af'] = {
         closeText: 'Selekteer',
         prevText: 'Vorige',
@@ -39,9 +39,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Algerian Arabic Translation for jQuery UI date picker plugin. (can be used for Tunisia)*/
@@ -66,9 +66,9 @@
         isRTL: true,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Arabic Translation for jQuery UI date picker plugin. */
@@ -94,9 +94,9 @@
         isRTL: true,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Azerbaijani (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -121,9 +121,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Belarusian initialisation for the jQuery UI date picker plugin. */
@@ -148,9 +148,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Bulgarian initialisation for the jQuery UI date picker plugin. */
@@ -176,9 +176,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Bosnian i18n for the jQuery UI date picker plugin. */
@@ -203,9 +203,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Inicialització en català per a l'extensió 'UI date picker' per jQuery. */
@@ -230,9 +230,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Czech initialisation for the jQuery UI date picker plugin. */
@@ -257,9 +257,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Welsh/UK initialisation for the jQuery UI date picker plugin. */
@@ -284,9 +284,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Danish initialisation for the jQuery UI date picker plugin. */
@@ -311,9 +311,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* German initialisation for the jQuery UI date picker plugin. */
@@ -338,9 +338,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Greek (el) initialisation for the jQuery UI date picker plugin. */
@@ -365,7 +365,7 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
+
 
     datepicker.regional['en'] = {
         closeText: 'Done',
@@ -385,9 +385,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Esperanto initialisation for the jQuery UI date picker plugin. */
@@ -412,9 +412,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Inicialización en español para la extensión 'UI date picker' para jQuery. */
@@ -439,9 +439,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Estonian initialisation for the jQuery UI date picker plugin. */
@@ -466,9 +466,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Karrikas-ek itzulia (karrikas@karrikas.com) */
@@ -492,9 +492,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Persian (Farsi) Translation for the jQuery UI date picker plugin. */
@@ -555,9 +555,9 @@
         isRTL: true,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Finnish initialisation for the jQuery UI date picker plugin. */
@@ -582,9 +582,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Faroese initialisation for the jQuery UI date picker plugin */
@@ -609,9 +609,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Canadian-French initialisation for the jQuery UI date picker plugin. */
@@ -636,9 +636,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    
 
-    
+
+
 
 
     /* Swiss-French initialisation for the jQuery UI date picker plugin. */
@@ -663,9 +663,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* French initialisation for the jQuery UI date picker plugin. */
@@ -692,9 +692,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Galician localization for 'UI date picker' jQuery extension. */
@@ -719,9 +719,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Hebrew initialisation for the UI Datepicker extension. */
@@ -746,9 +746,9 @@
         isRTL: true,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Hindi initialisation for the jQuery UI date picker plugin. */
@@ -773,9 +773,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Croatian i18n for the jQuery UI date picker plugin. */
@@ -800,9 +800,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Hungarian initialisation for the jQuery UI date picker plugin. */
@@ -826,9 +826,9 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Armenian(UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -853,9 +853,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Indonesian initialisation for the jQuery UI date picker plugin. */
@@ -880,9 +880,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Icelandic initialisation for the jQuery UI date picker plugin. */
@@ -907,9 +907,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Italian initialisation for the jQuery UI date picker plugin. */
@@ -934,9 +934,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Italian initialisation for the jQuery UI date picker plugin. */
@@ -961,9 +961,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Japanese initialisation for the jQuery UI date picker plugin. */
@@ -988,9 +988,9 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: '年'};
-    
 
-    
+
+
 
 
     /* Georgian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1013,9 +1013,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Kazakh (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1040,9 +1040,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Khmer initialisation for the jQuery calendar extension. */
@@ -1067,9 +1067,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Korean initialisation for the jQuery calendar extension. */
@@ -1094,9 +1094,9 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: '년'};
-    
 
-    
+
+
 
 
     /* Kyrgyz (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1122,9 +1122,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    
 
-    
+
+
 
 
     /* Luxembourgish initialisation for the jQuery UI date picker plugin. */
@@ -1149,9 +1149,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Lithuanian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1176,9 +1176,9 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Latvian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1203,9 +1203,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Macedonian i18n for the jQuery UI date picker plugin. */
@@ -1230,9 +1230,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Malayalam (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1257,9 +1257,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Malaysian initialisation for the jQuery UI date picker plugin. */
@@ -1284,9 +1284,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Norwegian Bokmål initialisation for the jQuery UI date picker plugin. */
@@ -1310,9 +1310,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    
 
-    
+
+
 
 
     /* Dutch (Belgium) initialisation for the jQuery UI date picker plugin. */
@@ -1337,9 +1337,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Dutch (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1390,9 +1390,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    
 
-    
+
+
 
 
     /* Norwegian initialisation for the jQuery UI date picker plugin. */
@@ -1417,9 +1417,9 @@
         showMonthAfterYear: false,
         yearSuffix: ''
     };
-    
 
-    
+
+
 
 
     /* Polish initialisation for the jQuery UI date picker plugin. */
@@ -1444,9 +1444,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Brazilian initialisation for the jQuery UI date picker plugin. */
@@ -1471,9 +1471,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Portuguese initialisation for the jQuery UI date picker plugin. */
@@ -1497,9 +1497,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Romansh initialisation for the jQuery UI date picker plugin. */
@@ -1522,9 +1522,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Romanian initialisation for the jQuery UI date picker plugin.
@@ -1552,9 +1552,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1579,9 +1579,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Slovak initialisation for the jQuery UI date picker plugin. */
@@ -1606,9 +1606,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Slovenian initialisation for the jQuery UI date picker plugin. */
@@ -1634,9 +1634,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Albanian initialisation for the jQuery UI date picker plugin. */
@@ -1661,9 +1661,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Serbian i18n for the jQuery UI date picker plugin. */
@@ -1688,9 +1688,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Serbian i18n for the jQuery UI date picker plugin. */
@@ -1715,9 +1715,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Swedish initialisation for the jQuery UI date picker plugin. */
@@ -1742,9 +1742,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Tamil (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1769,9 +1769,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Thai initialisation for the jQuery UI date picker plugin. */
@@ -1796,9 +1796,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Tajiki (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1823,9 +1823,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Turkish initialisation for the jQuery UI date picker plugin. */
@@ -1850,9 +1850,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Ukrainian (UTF-8) initialisation for the jQuery UI date picker plugin. */
@@ -1878,9 +1878,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Vietnamese initialisation for the jQuery UI date picker plugin. */
@@ -1905,9 +1905,9 @@
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: ''};
-    
 
-    
+
+
 
 
     /* Chinese initialisation for the jQuery UI date picker plugin. */
@@ -1932,7 +1932,7 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: '年'};
-  
+
 
 
 }));
