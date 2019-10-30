@@ -1,0 +1,224 @@
+$altMain: #2b3368;
+$altInverse: #CBAE65;
+$altContrast: #fff;
+
+body {
+  font-family: 'Roboto Slab', serif;
+  color: darken($altMain, 10%);
+}
+
+.section {
+  background: lighten($altMain, 60%);
+}
+
+
+.search-history {
+  margin-top: 10px;
+  color: $altMain;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 0 5px lighten($altMain, 50%);
+}
+
+.navbar-brand {
+  width: 150px;
+}
+
+.link {
+  background-color: $altMain;
+  color: $altContrast;
+  font: 700 20px/48px 'Roboto Slab';
+  border-radius: 0 2px 2px 0;
+
+  &:hover, &:focus, &:active, &.active {
+    background-color: lighten($altMain, 20%);
+  }
+}
+
+.showcase-content {
+  border: 2px solid $altMain;
+  border-radius: 5px;
+}
+
+.showcase-item .container input {
+  border-radius: 5px;
+
+  &::placeholder {
+    color: lighten($altMain, 5%);
+  }
+}
+
+.showcase-item .label {
+  color: lighten($altMain, 10%);
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.header {
+  background-color: $altMain;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: $altContrast;
+
+  &::after {
+    content: "";
+    border-bottom: 2px solid $altContrast;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    opacity: 0;
+    width: 0;
+    -webkit-transition: width 0.5s, opacity 0.3s;
+    transition: width 0.5s, opacity 0.3s;
+  }
+
+  &:hover {
+    border-color: transparent;
+
+    &::after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: lighten($altMain, 20%);
+  border-radius: 0;
+  border-color: lighten($altMain, 20%);
+
+
+
+  &:hover {
+    background-color: lighten($altMain, 20%);
+    border-color: lighten($altMain, 40%);
+  }
+}
+
+select {
+  color: darken($altMain, 10%);
+}
+
+.form-control {
+  color: lighten($altMain, 5%);
+
+  &:hover {
+    color: lighten($altMain, 25%);
+  }
+}
+
+.showcase {
+  background: url(/rustrains_html/site1/images/alt_top_bg_2.jpg) no-repeat 50% 50%;
+}
+
+.showcase-check label {
+  font-weight: 700;
+  color: lighten($altMain, 5%);
+
+  &::before {
+    border-color: $altMain;
+  }
+}
+
+.showcase-check input:checked + label::before {
+  background-color: lighten($altMain, 50%);
+}
+
+h1, h2, .head {
+  color: darken($altMain, 10%);
+  font-size: 36px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.ticket-header {
+  padding: 10px 0;
+  margin-bottom: 0;
+  background-color: $altMain;
+  border-bottom: solid 1px $altMain;
+  color: $altContrast;
+}
+
+a {
+  color: lighten($altMain, 40%);
+
+  &:hover {
+    color: lighten($altMain, 60%);
+  }
+}
+
+.ticket-direction-text {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.ticket-result {
+  border: solid 2px $altMain;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.ticket-sort {
+  font-size: 16px;
+  background: lighten($altMain, 20%);
+  color: $altContrast;
+}
+
+.ticket-sort-item.desc, .ticket-sort-item.asc {
+  color: $altInverse;
+  font-weight: 700;
+}
+
+.ticket-sort-item:hover {
+  color: $altMain;
+}
+
+.ticket-item.high-popular {
+  background-color: lighten($altMain, 50%);
+}
+
+.tm-btn-red {
+  background-color: $altMain;
+  border-color: $altMain;
+
+  &:hover, &.active, &:focus {
+    background-color: lighten($altMain, 20%);
+    border-color: lighten($altMain, 20%);
+  }
+}
+
+.checkbox > span {
+  border: 1px solid $altMain;
+}
+
+.checkbox input:checked + span {
+  background-color: #fff;
+}
+
+.checkbox > span::before {
+  color: $altMain;
+}
+
+.train-specials-panel .specialty.fast {
+  background-color: $altInverse;
+}
+
+.train-specials-panel .specialty.fastest {
+  background-color: darken($altInverse, 20%);
+}
+
+.train-name {
+  background-color: $altMain;
+}
+
+
+
+
+
+.cookie {
+  display: none!important;
+}
