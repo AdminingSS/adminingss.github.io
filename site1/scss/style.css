@@ -5888,9 +5888,6 @@ body {
   font-family: 'Roboto Slab', serif;
   color: #1c2144; }
 
-.section {
-  background: #d7daee; }
-
 .search-history {
   margin-top: 10px;
   color: #2b3368;
@@ -5990,6 +5987,10 @@ h1, h2, .head {
 
 a {
   color: #8f97d0; }
+  a .train-number, a.train-rating {
+    color: #2b3368; }
+    a .train-number:hover, a.train-rating:hover {
+      color: #4956b0; }
   a:hover {
     color: #d7daee; }
 
@@ -6033,14 +6034,35 @@ a {
 .checkbox > span::before {
   color: #2b3368; }
 
+.train-specials-panel .specialty {
+  border-radius: 5px;
+  min-width: 102px;
+  margin: 0 5px;
+  text-align: center; }
+
 .train-specials-panel .specialty.fast {
-  background-color: #CBAE65; }
+  background: linear-gradient(to right, #4c852b, #7bc650); }
 
 .train-specials-panel .specialty.fastest {
-  background-color: #977b33; }
+  background: linear-gradient(to right, #203812, #4c852b); }
+
+.train-specials-panel .specialty.cheap {
+  background: linear-gradient(to left, #4956b0, #8f97d0); }
+
+.train-specials-panel .specialty.cheapest {
+  background: linear-gradient(to left, #2b3368, #4956b0); }
+
+.train-specials-panel .specialty.vip {
+  background: linear-gradient(#ffb766, #ff8700, #ffb766); }
 
 .train-name {
   background-color: #2b3368; }
+
+.ticket-menu {
+  margin-bottom: 10px; }
+
+.ticket-menu .nav-link {
+  border-radius: 5px; }
 
 .cookie {
   display: none !important; }
