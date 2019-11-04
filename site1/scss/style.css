@@ -6067,6 +6067,22 @@ a {
 .footer, .tm-footer-popup {
   background-color: #2b3368; }
 
+.tm-modal-seats .car-type-item .car-type-tariff {
+  background-color: #e1a3b1;
+  color: #fff; }
+
+.tm-modal-seats .car-type-item .car-type-tariff.insured {
+  background-color: #b5df9d; }
+
+.tm-modal-seats .car-type-item:hover .car-type-tariff {
+  border-left-color: initial; }
+
+.tm-modal-seats .car-type-item.active {
+  background-color: #d7daee; }
+
+.tm-modal-seats .car-type-item .car-type-tariff.active {
+  background-color: rgba(255, 0, 0, 0.1); }
+
 .cookie {
   display: none !important; }
 
