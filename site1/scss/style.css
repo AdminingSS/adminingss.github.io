@@ -6064,6 +6064,9 @@ a {
 .ticket-menu .nav-link {
   border-radius: 5px; }
 
+.footer, .tm-footer-popup {
+  background-color: #2b3368; }
+
 .cookie {
   display: none !important; }
 
