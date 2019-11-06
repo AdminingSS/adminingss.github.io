@@ -6106,9 +6106,11 @@ a {
     color: #2b3368;
     background-color: #fff; }
   .tm-modal-seats .modal-header .text-secondary {
-    color: #CBAE65 !important; }
+    color: #d8c28b !important; }
     .tm-modal-seats .modal-header .text-secondary:hover {
       color: #e5d6b1 !important; }
+  .tm-modal-seats .modal-header .ticket-item .time {
+    color: #d8c28b; }
 
 .modal-content {
   border-radius: 15px;
@@ -6126,6 +6128,12 @@ a {
   border-color: #2b3368; }
 .tm-modal-seats .car-type-item.active .train-radio {
   border-color: #0d1020; }
+
+.tm-modal-seats .car-type-item .car-type-tariff {
+  color: #2b3368; }
+
+.tm-modal-seats .car-type-tariff {
+  border-left-color: #bbb; }
 
 .cookie {
   display: none !important; }
