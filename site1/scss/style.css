@@ -6115,9 +6115,17 @@ a {
   overflow: hidden; }
 
 .tm-modal-seats .modal-content .close {
-  color: #fff; }
+  color: #fff;
+  font-size: 40px; }
   .tm-modal-seats .modal-content .close:hover {
     color: #cccccc; }
+
+.tm-modal-seats .car-type-item .train-radio {
+  border-color: #4956b0; }
+.tm-modal-seats .car-type-item:hover .train-radio {
+  border-color: #2b3368; }
+.tm-modal-seats .car-type-item.active .train-radio {
+  border-color: #0d1020; }
 
 .cookie {
   display: none !important; }
