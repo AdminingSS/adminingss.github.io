@@ -6083,6 +6083,42 @@ a {
 .tm-modal-seats .car-type-item .car-type-tariff.active {
   background-color: rgba(255, 0, 0, 0.1); }
 
+.tm-modal-seats .car-type-header {
+  border-radius: 15px 15px 0 0;
+  border: 2px solid #2b3368; }
+
+.tm-modal-seats .car-type-item, .tm-modal-seats .car-type-item.active {
+  border: 2px solid #2b3368;
+  border-top-width: 0; }
+
+.tm-modal-seats .car-type-item:last-child {
+  border-radius: 0 0 15px 15px;
+  overflow: hidden; }
+
+.tm-modal-seats .modal-header {
+  background-color: #2b3368;
+  color: #fff; }
+  .tm-modal-seats .modal-header a .train-number {
+    color: #cccccc; }
+    .tm-modal-seats .modal-header a .train-number:hover {
+      color: #999999; }
+  .tm-modal-seats .modal-header .train-name {
+    color: #2b3368;
+    background-color: #fff; }
+  .tm-modal-seats .modal-header .text-secondary {
+    color: #CBAE65 !important; }
+    .tm-modal-seats .modal-header .text-secondary:hover {
+      color: #e5d6b1 !important; }
+
+.modal-content {
+  border-radius: 15px;
+  overflow: hidden; }
+
+.tm-modal-seats .modal-content .close {
+  color: #fff; }
+  .tm-modal-seats .modal-content .close:hover {
+    color: #cccccc; }
+
 .cookie {
   display: none !important; }
 
