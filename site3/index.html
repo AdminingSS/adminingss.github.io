@@ -13,7 +13,7 @@
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js"></script>
-<link href="styles/app.d2949aab65abdcde0e0a.css" rel="stylesheet"><link href="styles/vendors.d2949aab65abdcde0e0a.css" rel="stylesheet"></head>
+<link href="styles/app.aaede0a2d191ba448e88.css" rel="stylesheet"><link href="styles/vendors.aaede0a2d191ba448e88.css" rel="stylesheet"></head>
 <body>
 
 <div class="uk-offcanvas-content">
@@ -56,9 +56,9 @@
                                 <li><a href="#">Загрузить</a></li>
                                 <li><a href="#">Блог</a></li>
                             </ul>
-                            <button class="uk-button uk-button-small uk-button-secondary uk-margin-small-right uk-visible@s" data-uk-toggle="#modalEnter">Войти
+                            <button class="uk-button uk-button-small uk-button-secondary uk-margin-small-right uk-visible@s" data-uk-toggle="target:#modalEnter" type="button">Войти
                             </button>
-                            <button class="uk-button uk-button-small uk-button-primary uk-visible@s" data-uk-toggle="#modalRegister">Начать</button>
+                            <button class="uk-button uk-button-small uk-button-primary uk-visible@s" data-uk-toggle="target:#modalRegister" type="button">Начать</button>
                         </div>
                     </nav>
                 </div>
@@ -184,77 +184,157 @@
         <div class="tm-section-subtop">
             <div class="uk-container">
                 <h2>Как это работает</h2>
-                <div class="tm-twin-button">
+                <div class="tm-twin-button" uk-switcher="animation: uk-animation-fade; active: 1; toggle: > *">
                     <div class="uk-flex uk-flex-center uk-flex-middle">
-                        <div>
-                            <a href="#">Регистрация</a>
+                        <div class="uk-position-relative uk-width-1-1">
+                            <button class="tm-false-button uk-button uk-button-primary">
+                            </button>
+                            <button class="js-reg uk-button uk-button-default uk-position-relative uk-position-z-index">
+                                Регистрация
+                            </button>
                         </div>
                     </div>
                     <div>
                         <div>
-                            <button class="uk-button uk-button-primary">
+                            <button class="js-comm tm-twin-white uk-button uk-button-default uk-position-relative uk-position-z-index">
                                 Общение
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="uk-child-width-1-2@s uk-child-width-1-4@l uk-grid-small uk-grid-divider" data-uk-grid>
-                    <div>
-                        <div class="uk-margin-bottom">
-                            <div class="tm-how-panel-round tm-how-panel-round-1">
+                <ul class="uk-switcher">
+                    <li>
+                        <div class="uk-child-width-1-2@s uk-child-width-1-4@l uk-grid-small uk-grid-divider" data-uk-grid>
+                            <div>
+                                <div class="uk-margin-bottom uk-position-relative">
+                                    <div class="tm-line-1">
+                                    </div>
+                                    <div class="tm-how-panel-round tm-how-panel-round-3">
 
+                                    </div>
+                                    <div class="uk-text-center">
+                                        <h3>Возможность выбора</h3>
+                                        <div>
+                                            Если тебе захотелось работать с другим психологом, просто напиши нам и мы подберем
+                                            тебе нового.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="uk-text-center">
-                                <h3>Удобство</h3>
-                                <div>
-                                    Общайся в чате с психологом в любое время и из любого удобного места. Психолог будет
-                                    отвечать ежедневно
+                            <div>
+                                <div class="uk-margin-bottom uk-position-relative">
+                                    <div class="tm-line-2">
+                                    </div>
+                                    <div class="tm-how-panel-round tm-how-panel-round-4">
+
+                                    </div>
+                                    <div class="uk-text-center">
+                                        <h3>Выгода</h3>
+                                        <div>
+                                            Общение с психологом с помощью нашего сервиса стоит в 20 раз дешевле, чем частный
+                                            часовой прием у психолога.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-margin-bottom uk-position-relative">
+                                    <div class="tm-line-3">
+                                    </div>
+                                    <div class="tm-how-panel-round tm-how-panel-round-1">
+
+                                    </div>
+                                    <div class="uk-text-center">
+                                        <h3>Удобство</h3>
+                                        <div>
+                                            Общайся в чате с психологом в любое время и из любого удобного места. Психолог будет
+                                            отвечать ежедневно
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-margin-bottom">
+                                    <div class="tm-how-panel-round tm-how-panel-round-2">
+
+                                    </div>
+                                    <div class="uk-text-center">
+                                        <h3>Конфиденциальность</h3>
+                                        <div>
+                                            Кроме тебя и психолога никто не увидит переписку и твои личные данные.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="uk-margin-bottom">
-                            <div class="tm-how-panel-round tm-how-panel-round-2">
+                    </li>
+                    <li>
+                        <div class="uk-child-width-1-2@s uk-child-width-1-4@l uk-grid-small uk-grid-divider" data-uk-grid>
+                            <div>
+                                <div class="uk-margin-bottom uk-position-relative">
+                                    <div class="tm-line-1">
+                                    </div>
+                                    <div class="tm-how-panel-round tm-how-panel-round-1">
 
+                                    </div>
+                                    <div class="uk-text-center">
+                                        <h3>Удобство</h3>
+                                        <div>
+                                            Общайся в чате с психологом в любое время и из любого удобного места. Психолог будет
+                                            отвечать ежедневно
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="uk-text-center">
-                                <h3>Конфиденциальность</h3>
-                                <div>
-                                    Кроме тебя и психолога никто не увидит переписку и твои личные данные.
+                            <div>
+                                <div class="uk-margin-bottom uk-position-relative">
+                                    <div class="tm-line-2">
+                                    </div>
+                                    <div class="tm-how-panel-round tm-how-panel-round-2">
+
+                                    </div>
+                                    <div class="uk-text-center">
+                                        <h3>Конфиденциальность</h3>
+                                        <div>
+                                            Кроме тебя и психолога никто не увидит переписку и твои личные данные.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-margin-bottom uk-position-relative">
+                                    <div class="tm-line-3">
+                                    </div>
+                                    <div class="tm-how-panel-round tm-how-panel-round-3">
+
+                                    </div>
+                                    <div class="uk-text-center">
+                                        <h3>Возможность выбора</h3>
+                                        <div>
+                                            Если тебе захотелось работать с другим психологом, просто напиши нам и мы подберем
+                                            тебе нового.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-margin-bottom">
+                                    <div class="tm-how-panel-round tm-how-panel-round-4">
+
+                                    </div>
+                                    <div class="uk-text-center">
+                                        <h3>Выгода</h3>
+                                        <div>
+                                            Общение с психологом с помощью нашего сервиса стоит в 20 раз дешевле, чем частный
+                                            часовой прием у психолога.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="uk-margin-bottom">
-                            <div class="tm-how-panel-round tm-how-panel-round-3">
+                    </li>
+                </ul>
 
-                            </div>
-                            <div class="uk-text-center">
-                                <h3>Возможность выбора</h3>
-                                <div>
-                                    Если тебе захотелось работать с другим психологом, просто напиши нам и мы подберем
-                                    тебе нового.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-margin-bottom">
-                            <div class="tm-how-panel-round tm-how-panel-round-4">
-
-                            </div>
-                            <div class="uk-text-center">
-                                <h3>Выгода</h3>
-                                <div>
-                                    Общение с психологом с помощью нашего сервиса стоит в 20 раз дешевле, чем частный
-                                    часовой прием у психолога.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="uk-section uk-background-muted">
@@ -1066,11 +1146,24 @@
         <div class="uk-offcanvas-bar">
             <button class="uk-offcanvas-close" type="button" uk-close></button>
 
-            <div class="uk-card uk-flex uk-flex-center">
-                <ul class="uk-nav">
-                    <li><a href="#"></a></li>
-                </ul>
+            <div class="uk-height-viewport uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+                <div class="uk-card uk-flex uk-flex-center uk-margin-medium-bottom">
+                    <ul class="uk-nav uk-hidden@m">
+                        <li><a href="#">Психологи</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Вопрос-ответ</a></li>
+                        <li><a href="#">Загрузить</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="uk-flex uk-flex-center">
+                    <button class="uk-button uk-button-small uk-button-secondary uk-margin-small-right uk-hidden@s" data-uk-toggle="#modalEnter">Войти
+                    </button>
+                    <button class="uk-button uk-button-small uk-button-primary uk-hidden@s" data-uk-toggle="#modalRegister">Начать</button>
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -1170,5 +1263,5 @@
     </div>
 </div>
 
-<script type="text/javascript" src="scripts/app.d2949aab65abdcde0e0a.js"></script><script type="text/javascript" src="scripts/vendors.d2949aab65abdcde0e0a.js"></script></body>
+<script type="text/javascript" src="scripts/app.aaede0a2d191ba448e88.js"></script><script type="text/javascript" src="scripts/vendors.aaede0a2d191ba448e88.js"></script></body>
 </html>
