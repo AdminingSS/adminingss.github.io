@@ -419,7 +419,7 @@ $(document).ready(function () {
                 $subHeadHolder.addClass('tm-fixed');
                 $headerMain.addClass('tm-small');
             }
-            else if ($window.scrollTop() < 690 || $window.width() < 1200) {
+            else if ($window.scrollTop() < 500 || $window.width() < 1200) {
                 //$subHeadHolder.removeClass('scrollfixed');
                 $subHeadHolder.removeClass('tm-fixed');
                 $subHeadHolder.removeClass('tm-small');
