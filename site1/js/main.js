@@ -405,6 +405,7 @@ $(document).ready(function () {
     })();
 
     (function () {
+        const $headerMain = $('header');
         const $subHeadHolder = $('.js-free-panel');
         const $window = $(window);
 
@@ -416,11 +417,13 @@ $(document).ready(function () {
                 //$subHeadHolder.addClass('scrollfixed');
                 $subHeadHolder.addClass('tm-small');
                 $subHeadHolder.addClass('tm-fixed');
+                $headerMain.addClass('tm-small');
             }
             else if ($window.scrollTop() < 690 || $window.width() < 1200) {
                 //$subHeadHolder.removeClass('scrollfixed');
                 $subHeadHolder.removeClass('tm-fixed');
                 $subHeadHolder.removeClass('tm-small');
+                $headerMain.removeClass('tm-small');
             }
         }
 

@@ -1061,10 +1061,17 @@ h1, h2, .head {
   .showcase .showcase-item,
   .showcase .showcase-quantity {
     width: 50%; } }
+header, header .navbar-brand img {
+  transition: max-height 1s;
+  max-height: 100px; }
+
+header.tm-small, header.tm-small .navbar-brand img {
+  max-height: 40px; }
+
 .js-free-panel {
   left: 0;
   right: 0;
-  top: 0;
+  top: -50px;
   transition: top 1s;
   z-index: 1029; }
   .js-free-panel .showcase-title, .js-free-panel .showcase-checks, .js-free-panel .search-history {
@@ -1072,12 +1079,15 @@ h1, h2, .head {
     transition: opacity 1s, height 1s; }
   .js-free-panel.tm-fixed {
     position: fixed;
-    top: 110px; }
+    top: 40px;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); }
     .js-free-panel.tm-fixed .showcase-panel {
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 8px; }
+      background-color: transparent;
+      border-radius: 0;
+      box-shadow: none; }
   .js-free-panel.tm-small {
-    opacity: 0.7; }
+    background-color: rgba(0, 0, 0, 0.4); }
     .js-free-panel.tm-small .showcase-title, .js-free-panel.tm-small .showcase-checks, .js-free-panel.tm-small .search-history {
       display: block;
       height: 0;
