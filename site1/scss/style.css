@@ -1083,6 +1083,12 @@ header.tm-small, header.tm-small .navbar-brand img {
     max-width: 100%;
     background-color: #f8f9fa;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2); }
+    .js-free-panel.tm-fixed .showcase-title {
+      display: block;
+      height: 0;
+      opacity: 0;
+      margin: 0;
+      transition: opacity 0s, height 0s; }
     .js-free-panel.tm-fixed .showcase-check label::before {
       border-color: #ccc; }
     .js-free-panel.tm-fixed * {
@@ -1099,6 +1105,8 @@ header.tm-small, header.tm-small .navbar-brand img {
       box-shadow: none; }
   .js-free-panel.tm-small {
     background-color: #f8f9fa; }
+    .js-free-panel.tm-small .showcase-content {
+      transform: scale(0.8); }
     .js-free-panel.tm-small .showcase-title, .js-free-panel.tm-small .showcase-checks, .js-free-panel.tm-small .search-history {
       display: block;
       height: 0;

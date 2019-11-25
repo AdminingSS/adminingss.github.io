@@ -685,6 +685,14 @@ header.tm-small, header.tm-small .navbar-brand img {
     background-color: #f8f9fa;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
 
+    .showcase-title {
+      display: block;
+      height: 0;
+      opacity: 0;
+      margin: 0;
+      transition: opacity 0s, height 0s;
+    }
+
     .showcase-check label::before {
       border-color: #ccc;
     }
@@ -715,6 +723,10 @@ header.tm-small, header.tm-small .navbar-brand img {
   &.tm-small {
     //background-color: rgba(0,0,0,0.4);
     background-color: #f8f9fa;
+
+    .showcase-content {
+      transform: scale(0.8);
+    }
 
     .showcase-title, .showcase-checks, .search-history {
       display: block;
