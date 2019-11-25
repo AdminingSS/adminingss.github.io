@@ -1079,20 +1079,32 @@ header.tm-small, header.tm-small .navbar-brand img {
     transition: opacity 1s, height 1s; }
   .js-free-panel.tm-fixed {
     position: fixed;
-    top: 40px;
+    top: 37px;
     max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.9); }
+    background-color: #f8f9fa;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2); }
+    .js-free-panel.tm-fixed .showcase-check label::before {
+      border-color: #ccc; }
+    .js-free-panel.tm-fixed * {
+      color: #000; }
+    .js-free-panel.tm-fixed .link {
+      color: #fff; }
+    .js-free-panel.tm-fixed .showcase-item {
+      border: 1px solid #ccc; }
+      .js-free-panel.tm-fixed .showcase-item input {
+        border: 1px solid #ccc; }
     .js-free-panel.tm-fixed .showcase-panel {
       background-color: transparent;
       border-radius: 0;
       box-shadow: none; }
   .js-free-panel.tm-small {
-    background-color: rgba(0, 0, 0, 0.4); }
+    background-color: #f8f9fa; }
     .js-free-panel.tm-small .showcase-title, .js-free-panel.tm-small .showcase-checks, .js-free-panel.tm-small .search-history {
       display: block;
       height: 0;
       opacity: 0;
-      margin: 0; }
+      margin: 0;
+      transition: opacity 0s, height 0s; }
 
 @media (max-width: 767px) {
   .showcase-date .dropdown-menu {
