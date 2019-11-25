@@ -1061,6 +1061,29 @@ h1, h2, .head {
   .showcase .showcase-item,
   .showcase .showcase-quantity {
     width: 50%; } }
+.js-free-panel {
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: top 1s;
+  z-index: 1029; }
+  .js-free-panel .showcase-title, .js-free-panel .showcase-checks, .js-free-panel .search-history {
+    opacity: 1;
+    transition: opacity 1s, height 1s; }
+  .js-free-panel.tm-fixed {
+    position: fixed;
+    top: 110px; }
+    .js-free-panel.tm-fixed .showcase-panel {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 8px; }
+  .js-free-panel.tm-small {
+    opacity: 0.7; }
+    .js-free-panel.tm-small .showcase-title, .js-free-panel.tm-small .showcase-checks, .js-free-panel.tm-small .search-history {
+      display: block;
+      height: 0;
+      opacity: 0;
+      margin: 0; }
+
 @media (max-width: 767px) {
   .showcase-date .dropdown-menu {
     max-width: 290px !important; }
@@ -4018,6 +4041,38 @@ h1, h2, .head {
   font-size: 14px;
   margin-top: -6px; }
 
+.tabs-new.ticket-menu {
+  border-bottom: solid 1px #a2a2a2;
+  margin-bottom: 10px; }
+  .tabs-new.ticket-menu .nav-item {
+    padding: 0;
+    margin: 0 5px -1px;
+    border-bottom-color: transparent; }
+    .tabs-new.ticket-menu .nav-item .nav-link {
+      background-color: #BA2830;
+      padding: 20px 40px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: 1px solid #ddd;
+      border-bottom-color: #a2a2a2;
+      text-transform: uppercase; }
+      .tabs-new.ticket-menu .nav-item .nav-link:hover {
+        border-color: #a2a2a2; }
+      .tabs-new.ticket-menu .nav-item .nav-link.active {
+        border-bottom-color: #fff;
+        background-color: #fff;
+        color: #000000; }
+
+.accordion .btn-link {
+  color: #ba2830; }
+  .accordion .btn-link:hover, .accordion .btn-link:focus {
+    color: #901f25; }
+
+@media (max-width: 575px) {
+  .tabs-new.ticket-menu .nav-item .nav-link {
+    padding: 5px;
+    font-size: 12px; } }
 /* Ticket modal */
 .modal-header {
   padding-right: 50px; }
@@ -5160,6 +5215,28 @@ button:focus {
   .page-item.active .page-link:hover {
     color: #fff; }
 
+.link-underline {
+  text-decoration: dashed underline; }
+  .link-underline:hover {
+    text-decoration: none; }
+
+.tm-button-toTop {
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1s;
+  text-transform: uppercase;
+  font-weight: 700; }
+  .tm-button-toTop.displayed {
+    opacity: 0.8;
+    z-index: 1; }
+
+@media (max-width: 1199px) {
+  .tm-button-toTop {
+    top: 10px;
+    left: 20px; } }
 @media (max-width: 767px) {
   .tm-table-responsive {
     display: block; }
@@ -5884,258 +5961,5 @@ button:focus {
       top: 284px;
       border-color: #901f25;
       background-color: #901f25; } }
-body {
-  font-family: 'Roboto Slab', serif;
-  color: #1c2144; }
-
-.search-history {
-  margin-top: 10px;
-  color: #2b3368;
-  text-align: left;
-  font-size: 16px;
-  font-weight: 700;
-  text-shadow: 0 0 5px #b3b8df; }
-
-.navbar-brand {
-  width: 150px; }
-
-.link {
-  background-color: #2b3368;
-  color: #fff;
-  font: 700 20px/48px 'Roboto Slab';
-  border-radius: 0 2px 2px 0; }
-  .link:hover, .link:focus, .link:active, .link.active {
-    background-color: #4956b0; }
-
-.showcase-content {
-  border: 2px solid #2b3368;
-  border-radius: 5px; }
-
-.showcase-item .container input {
-  border-radius: 5px; }
-  .showcase-item .container input::placeholder {
-    color: #323c7a; }
-
-.showcase-item .label {
-  color: #3a458c;
-  font-style: italic;
-  text-transform: capitalize; }
-
-.header {
-  background-color: #2b3368; }
-
-.navbar-nav .nav-link {
-  position: relative;
-  color: #fff; }
-  .navbar-nav .nav-link::after {
-    content: "";
-    border-bottom: 2px solid #fff;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    opacity: 0;
-    width: 0;
-    -webkit-transition: width 0.5s, opacity 0.3s;
-    transition: width 0.5s, opacity 0.3s; }
-  .navbar-nav .nav-link:hover {
-    border-color: transparent; }
-    .navbar-nav .nav-link:hover::after {
-      opacity: 1;
-      width: 100%; }
-
-.btn-secondary {
-  background-color: #4956b0;
-  border-radius: 0;
-  border-color: #4956b0; }
-  .btn-secondary:hover {
-    background-color: #4956b0;
-    border-color: #8f97d0; }
-
-select {
-  color: #1c2144; }
-
-.form-control {
-  color: #323c7a; }
-  .form-control:hover {
-    color: #5865ba; }
-
-.showcase {
-  background: url(/site1/images/alt_top_bg_2.jpg) no-repeat 50% 50%; }
-
-.showcase-check label {
-  font-weight: 700;
-  color: #323c7a; }
-  .showcase-check label::before {
-    border-color: #2b3368; }
-
-.showcase-check input:checked + label::before {
-  background-color: #b3b8df; }
-
-h1, h2, .head {
-  color: #1c2144;
-  font-size: 36px;
-  text-transform: capitalize;
-  font-weight: 700; }
-
-.ticket-header {
-  padding: 10px 0;
-  margin-bottom: 0;
-  background-color: #2b3368;
-  border-bottom: solid 1px #2b3368;
-  color: #fff; }
-
-a {
-  color: #8f97d0; }
-  a .train-number, a.train-rating {
-    color: #2b3368; }
-    a .train-number:hover, a.train-rating:hover {
-      color: #4956b0; }
-  a:hover {
-    color: #d7daee; }
-
-.ticket-direction-text {
-  margin-bottom: 10px;
-  font-size: 22px; }
-
-.ticket-result {
-  border: solid 2px #2b3368;
-  border-radius: 15px;
-  overflow: hidden; }
-
-.ticket-sort {
-  font-size: 16px;
-  background: #4956b0;
-  color: #fff; }
-
-.ticket-sort-item.desc, .ticket-sort-item.asc {
-  color: #CBAE65;
-  font-weight: 700; }
-
-.ticket-sort-item:hover {
-  color: #2b3368; }
-
-.ticket-item.high-popular {
-  background-color: #b3b8df; }
-
-.tm-btn-red {
-  background-color: #2b3368;
-  border-color: #2b3368; }
-  .tm-btn-red:hover, .tm-btn-red.active, .tm-btn-red:focus {
-    background-color: #4956b0;
-    border-color: #4956b0; }
-
-.checkbox > span {
-  border: 1px solid #2b3368; }
-
-.checkbox input:checked + span {
-  background-color: #fff; }
-
-.checkbox > span::before {
-  color: #2b3368; }
-
-.train-specials-panel .specialty {
-  border-radius: 5px;
-  min-width: 102px;
-  margin: 0 5px;
-  text-align: center; }
-
-.train-specials-panel .specialty.fast {
-  background: linear-gradient(to right, #4c852b, #7bc650); }
-
-.train-specials-panel .specialty.fastest {
-  background: linear-gradient(to right, #203812, #4c852b); }
-
-.train-specials-panel .specialty.cheap {
-  background: linear-gradient(to left, #4956b0, #8f97d0); }
-
-.train-specials-panel .specialty.cheapest {
-  background: linear-gradient(to left, #2b3368, #4956b0); }
-
-.train-specials-panel .specialty.vip {
-  background: linear-gradient(#ffb766, #ff8700, #ffb766); }
-
-.train-name {
-  background-color: #2b3368; }
-
-.ticket-menu {
-  margin-bottom: 10px; }
-
-.ticket-menu .nav-link {
-  border-radius: 5px; }
-
-.footer, .tm-footer-popup {
-  background-color: #2b3368; }
-
-.tm-modal-seats .car-type-item .car-type-tariff {
-  background-color: #e1a3b1;
-  color: #fff; }
-
-.tm-modal-seats .car-type-item .car-type-tariff.insured {
-  background-color: #b5df9d; }
-
-.tm-modal-seats .car-type-item:hover .car-type-tariff {
-  border-left-color: initial; }
-
-.tm-modal-seats .car-type-item.active {
-  background-color: #d7daee; }
-
-.tm-modal-seats .car-type-item .car-type-tariff.active {
-  background-color: rgba(255, 0, 0, 0.1); }
-
-.tm-modal-seats .car-type-header {
-  border-radius: 15px 15px 0 0;
-  border: 2px solid #2b3368; }
-
-.tm-modal-seats .car-type-item, .tm-modal-seats .car-type-item.active {
-  border: 2px solid #2b3368;
-  border-top-width: 0; }
-
-.tm-modal-seats .car-type-item:last-child {
-  border-radius: 0 0 15px 15px;
-  overflow: hidden; }
-
-.tm-modal-seats .modal-header {
-  background-color: #2b3368;
-  color: #fff; }
-  .tm-modal-seats .modal-header a .train-number {
-    color: #cccccc; }
-    .tm-modal-seats .modal-header a .train-number:hover {
-      color: #999999; }
-  .tm-modal-seats .modal-header .train-name {
-    color: #2b3368;
-    background-color: #fff; }
-  .tm-modal-seats .modal-header .text-secondary {
-    color: #d8c28b !important; }
-    .tm-modal-seats .modal-header .text-secondary:hover {
-      color: #e5d6b1 !important; }
-  .tm-modal-seats .modal-header .ticket-item .time {
-    color: #d8c28b; }
-
-.modal-content {
-  border-radius: 15px;
-  overflow: hidden; }
-
-.tm-modal-seats .modal-content .close {
-  color: #fff;
-  font-size: 40px; }
-  .tm-modal-seats .modal-content .close:hover {
-    color: #cccccc; }
-
-.tm-modal-seats .car-type-item .train-radio {
-  border-color: #4956b0; }
-.tm-modal-seats .car-type-item:hover .train-radio {
-  border-color: #2b3368; }
-.tm-modal-seats .car-type-item.active .train-radio {
-  border-color: #0d1020; }
-
-.tm-modal-seats .car-type-item .car-type-tariff {
-  color: #2b3368; }
-
-.tm-modal-seats .car-type-tariff {
-  border-left-color: #bbb; }
-
-.cookie {
-  display: none !important; }
 
 /*# sourceMappingURL=style.css.map */

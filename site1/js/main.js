@@ -362,6 +362,34 @@ $(document).ready(function () {
         }
     })();
 
+    //scroll to top new
+    (function () {
+        var $btn = $('.js-scroll-to-top-new');
+        const $window = $(window);
+        var $htmlBody = $("html, body");
+
+        $window.on('scroll', displayScrollTopBtn);
+        $btn.on('click', function () {
+            $htmlBody.animate({
+                    scrollTop: 0
+                },
+                500
+            );
+        });
+
+        function displayScrollTopBtn() {
+            if($window.scrollTop() >= 700) {
+                //$subHeadHolder.addClass('scrollfixed');
+                $btn.addClass('displayed');
+            }
+            else if ($window.scrollTop() < 690) {
+                //$subHeadHolder.removeClass('scrollfixed');
+                $btn.removeClass('displayed');
+            }
+        }
+
+    })();
+
     (function () {
         const selectSeatsModal = $('.tm-js-modal-seats');
         const selectSeatsModalSlider = $('#selectSeatsModalSlider');
@@ -373,6 +401,32 @@ $(document).ready(function () {
         selectSeatsModalSlider.on('hidden.bs.modal', function () {
             selectSeatsModal.modal('show');
         });
+
+    })();
+
+    (function () {
+        const $subHeadHolder = $('.js-free-panel');
+        const $window = $(window);
+
+        $window.on('scroll', fixateSubHead);
+        $subHeadHolder.on('click', displayFullSubHead);
+
+        function fixateSubHead() {
+            if($window.scrollTop() >= 700 && $window.width() >= 1200) {
+                //$subHeadHolder.addClass('scrollfixed');
+                $subHeadHolder.addClass('tm-small');
+                $subHeadHolder.addClass('tm-fixed');
+            }
+            else if ($window.scrollTop() < 690 || $window.width() < 1200) {
+                //$subHeadHolder.removeClass('scrollfixed');
+                $subHeadHolder.removeClass('tm-fixed');
+                $subHeadHolder.removeClass('tm-small');
+            }
+        }
+
+        function displayFullSubHead() {
+            $subHeadHolder.removeClass('tm-small');
+        }
 
     })();
 

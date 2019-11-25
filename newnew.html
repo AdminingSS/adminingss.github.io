@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RUStrains</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="4iffRkuOQ8hhT2tj8XptOE5mHIKL5SzJ1z1Rcrtx">
+
+    <link rel="stylesheet" href="site1/css/slick.css">
+    <link rel="stylesheet" href="site1/css/slick-theme.css">
+    <link rel="stylesheet" href="site1/css/fonts.css">
+    <link rel="stylesheet" href="site1/css/fontawesome-all.css">
+    <link rel="stylesheet" href="site1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site1/css/swiper.min.css">
+    <link rel="stylesheet" href="site1/css/select2.min.css">
+    <link rel="stylesheet" href="site1/scss/style.css">
+
+</head>
+
+<body>
+<div class="tm-page">
+    <div class="tm-page__content">
+        <!-- Header -->
+        <header class="header navbar navbar-expand-xl navbar-light bg-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="site1/images/logo.png" alt="">
+                </a>
+
+                <ul class="menu-lang navbar-nav text-uppercase order-xl-1">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            <span class="flag-icon flag-icon-gb"></span> en
+                        </a>
+                        <div class="dropdown-menu">
+
+                            <a class="dropdown-item" href="https://rustrains.com//">
+                                <span class="flag-icon flag-icon-gb"></span>
+                                en
+                            </a>
+                            <a class="dropdown-item" href="https://es.rustrains.com">
+                                <span class="flag-icon flag-icon-es"></span>
+                                es
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">eur</a>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="https://rustrains.com/set-currency/rub">rub</a>
+                            <a class="dropdown-item" href="https://rustrains.com/set-currency/usd">usd</a>
+                            <a class="dropdown-item" href="https://rustrains.com/set-currency/eur">eur</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerLg"
+                        aria-controls="navbarTogglerLg" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse flex-lg-row-reverse" id="navbarTogglerLg">
+                    <div class="menu-user mr-xl-3">
+                        <a class="btn btn-secondary" href="#" role="button" data-toggle="modal"
+                           data-target="#authModal">
+                            Sign in
+                        </a>
+                    </div>
+
+                    <!-- Menu -->
+                    <ul class="menu-main navbar-nav mr-xl-2">
+                        <li class="nav-item">
+                            <a href="/support " class="nav-link">Customer Support</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+
+        <!--Sub menu (mobile switcher)-->
+        <div class="sub-nav-wrap">
+            <div class="container">
+                <ul class="sub-menu nav">
+                    <li class="nav-item">
+                        <a class="tm-search-link nav-link collapsed" href="#showcaseCollapseWrap" data-toggle="collapse"
+                           role="button">Search <i
+                                class="fas fa-search"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Showcase -->
+
+        <div id="showcaseCollapseWrap" class="showcase-collapse-wrap collapse">
+
+        <div id="app" class="showcase  showcase-home  section"
+             style="background-image: url('https://rustrains.com/storage/photos/shares/rustrains-slider.jpg');">
+            <div class="js-free-panel container d-flex justify-content-center">
+                <div class="showcase-panel"><h1 class="showcase-title">Search Russian Train Tickets</h1>
+                    <div class="one-trip-active">
+                        <form method="GET" action="https://rustrains.com/rzd" accept-charset="UTF-8"
+                              id="rzd_search_from" class="showcase-form">
+                            <div class="showcase-checks">
+                                <div class="showcase-check active"><input id="radioOneTrip" type="radio"
+                                                                          autocomplete="off" value="0" name="trip">
+                                    <label for="radioOneTrip">One-Way Trip</label></div>
+                                <div class="showcase-check"><input id="radioReturnTrip" type="radio" autocomplete="off"
+                                                                   value="1" name="trip"> <label for="radioReturnTrip">Return
+                                    Trip</label></div>
+                                <div class="showcase-check"><input id="radioMultiTrip" type="radio" autocomplete="off"
+                                                                   value="2" name="trip"> <label for="radioMultiTrip">Multi-Destination
+                                    Trip</label></div>
+                            </div>
+                            <div class="showcase-content">
+                                <div class="showcase-items">
+                                    <div class="showcase-item showcase-item_departure">
+                                        <div class="label">departure city</div>
+                                        <div data-v-12331af8="" class="container">
+                                            <div data-v-12331af8=""><input data-v-12331af8="" type="text"
+                                                                           placeholder="From where?" required="required"
+                                                                           autocomplete="off" id="c1801000i"
+                                                                           class="menu__link--toggle"> <!----></div>
+                                        </div>
+                                        <input type="text" name="from" required="required" style="display: none;">
+                                        <button type="button" class="btn btn-primary change-item"><i
+                                                class="fas fa-exchange-alt"></i></button>
+                                        <button type="button" aria-label="Close" class="close"><span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="showcase-item">
+                                        <div class="label">arrival city</div>
+                                        <div data-v-12331af8="" class="container">
+                                            <div data-v-12331af8=""><input data-v-12331af8="" type="text"
+                                                                           placeholder="To where?" required="required"
+                                                                           autocomplete="off" id="to"
+                                                                           class="menu__link--toggle"> <!----></div>
+                                        </div>
+                                        <input type="text" name="to" required="required" style="display: none;">
+                                        <button type="button" aria-label="Close" class="close"><span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <label class="showcase-item  showcase-date">
+                                        <div class="label">date</div>
+                                        <input type="text" class="form-control" required="required" name="date_from"
+                                               readonly="readonly" id="picker" autocomplete="off"
+                                               placeholder=""></label> <!----></div> <!---->
+                                <div class="showcase-buttons">
+                                    <div class="showcase-item showcase-quantity ticket-toggle">
+                                        <div class="label">Passengers</div>
+                                        <select name="amount" autocomplete="off">
+                                            <option value="1">1 passenger</option>
+                                            <option value="2">2 passengers</option>
+                                            <option value="3">3 passengers</option>
+                                            <option value="4">4 passengers</option>
+                                            <option value="5">5 passengers</option>
+                                            <option value="6">6 passengers</option>
+                                            <option value="7">7 passengers</option>
+                                            <option value="8">8 passengers</option>
+                                            <option value="9">9 passengers</option>
+                                            <option value="10">10 passengers</option>
+                                            <option value="11">11 passengers</option>
+                                            <option value="12">12 passengers</option>
+                                            <option value="13">13 passengers</option>
+                                            <option value="14">14 passengers</option>
+                                            <option value="15">15 passengers</option>
+                                            <option value="16">16 passengers</option>
+                                            <option value="17">17 passengers</option>
+                                            <option value="18">18 passengers</option>
+                                            <option value="19">19 passengers</option>
+                                            <option value="20">20 passengers</option>
+                                            <option value="21">21 passengers</option>
+                                            <option value="22">22 passengers</option>
+                                            <option value="23">23 passengers</option>
+                                            <option value="24">24 passengers</option>
+                                            <option value="25">25 passengers</option>
+                                            <option value="26">26 passengers</option>
+                                            <option value="27">27 passengers</option>
+                                            <option value="28">28 passengers</option>
+                                            <option value="29">29 passengers</option>
+                                            <option value="30">30 passengers</option>
+                                            <option value="31">31 passengers</option>
+                                            <option value="32">32 passengers</option>
+                                            <option value="33">33 passengers</option>
+                                            <option value="34">34 passengers</option>
+                                            <option value="35">35 passengers</option>
+                                            <option value="36">36 passengers</option>
+                                            <option value="37">37 passengers</option>
+                                            <option value="38">38 passengers</option>
+                                            <option value="39">39 passengers</option>
+                                            <option value="40">40 passengers</option>
+                                        </select></div> <!----> <!---->
+                                    <button type="submit" class="link">Search</button>
+                                </div>
+                            </div>
+                            <div class="search-history">
+                                <div class="search-history-container">
+                                    <div class="search-history-header">
+                                        <div class="search-history-title">Moscow<span> - </span>Saint-Petersburg</div>
+                                        <div class="search-history-date">24.11.2019</div>
+                                    </div>
+                                    <div class="search-history-show">Search history <i class="fas fa-sort-down"></i>
+                                    </div>
+                                </div>
+                                <div class="search-history-body">
+                                    <div class="container-fluid">
+                                        <div class="search-history-items"><h3>Your recent search history</h3>
+                                            <div class="search-history-item">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="direction">Moscow<span> - </span>Saint-Petersburg
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="date">24.11.2019</div>
+                                                    </div>
+                                                    <div class="col-auto ml-auto">
+                                                        <div class="number">1 passenger</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-history-item">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="direction">Moscow<span> - </span>Saint-Petersburg
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="date">24.11.2019</div>
+                                                    </div>
+                                                    <div class="col-auto ml-auto">
+                                                        <div class="number">1 passenger</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-history-item">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="direction">Moscow<span> - </span>Saint-Petersburg
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="date">24.11.2019</div>
+                                                    </div>
+                                                    <div class="col-auto ml-auto">
+                                                        <div class="number">1 passenger</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-history-item">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="direction">Moscow<span> - </span>Saint-Petersburg
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="date">24.11.2019</div>
+                                                    </div>
+                                                    <div class="col-auto ml-auto">
+                                                        <div class="number">1 passenger</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-history-item">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="direction">Moscow<span> - </span>Saint-Petersburg
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="date">23.11.2019</div>
+                                                    </div>
+                                                    <div class="col-auto ml-auto">
+                                                        <div class="number">1 passenger</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <a name="messages"></a>
+
+        <!-- Destinations -->
+        <div class="section text-center">
+            <div class="container">
+                <h2 class="mb-2">Explore Russia by Train</h2>
+                <div class="text">Quick. Safe. Convenient</div>
+                <div class="articles-slider">
+                            <div>
+                                <a href="/trains-from-moscow-to-saint-petersburg" class="articles-item" tabindex="0">
+                                    <div class="articles-link-wrap">
+                                        <img alt="Trains from Moscow to Saint-Petersburg" class="" style="opacity: 1;"
+                                             src="/storage/thumbs/photos/shares/st-petersburg-destination-big.jpg">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Moscow to Saint-Petersburg</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-saint-petersburg-to-moscow" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img alt="Trains from Saint-Petersburg to Moscow" class="" style="opacity: 1;"
+                                             src="/storage/thumbs/photos/shares/moscow-destination-kremlin-big.jpg">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Saint-Petersburg to Moscow</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-saint-petersburg-to-helsinki" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img alt="Trains from Saint-Petersburg to Helsinki" class="" style="opacity: 1;"
+                                             src="/storage/thumbs/photos/shares/helsinki-destination-big.jpg">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Saint-Petersburg to Helsinki</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-moscow-to-nizhny-novgorod" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img data-lazy="/storage/thumbs/photos/shares/nizhniy-novgorod-destination-big.jpg"
+                                             alt="Trains from Moscow to Nizhny Novgorod" class="slick-loading">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Moscow to Nizhny Novgorod</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-saint-petersburg-to-tallinn" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img data-lazy="/storage/thumbs/photos/shares/tallinn-destination-big.jpg"
+                                             alt="Trains from Saint-Petersburg to Tallinn" class="slick-loading">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Saint-Petersburg to Tallinn</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-moscow-to-vladimir" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img data-lazy="/storage/thumbs/photos/shares/vladimir-destination-big.jpg"
+                                             alt="Trains from Moscow to Vladimir" class="slick-loading">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Moscow to Vladimir</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-saint-petersburg-to-petrozavodsk" class="articles-item"
+                                   tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img data-lazy="/storage/thumbs/photos/shares/petrozavodsk-kizhi-big.jpg"
+                                             alt="Trains from Saint-Petersburg to Petrozavodsk" class="slick-loading">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Saint-Petersburg to Petrozavodsk</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-moscow-to-kazan" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img data-lazy="/storage/thumbs/photos/shares/kazan-destination-big.jpg"
+                                             alt="Trains from Moscow to Kazan" class="slick-loading">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Moscow to Kazan</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-moscow-to-irkutsk" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img data-lazy="/storage/thumbs/photos/shares/irkutsk-destination-big.jpg"
+                                             alt="Trains from Moscow to Irkutsk" class="slick-loading">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Moscow to Irkutsk</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-moscow-to-vladivostok" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img data-lazy="/storage/thumbs/photos/shares/vladivostok-destination-big.jpg"
+                                             alt="Trains from Moscow to Vladivostok" class="slick-loading">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Moscow to Vladivostok</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/trains-from-moscow-to-riga" class="articles-item" tabindex="-1">
+                                    <div class="articles-link-wrap">
+                                        <img data-lazy="/storage/thumbs/photos/shares/riga-destination-big.jpg"
+                                             alt="Trains from Moscow to Riga" class="slick-loading">
+
+                                    </div>
+                                    <div class="articles-content">
+                                        <h3>Trains from Moscow to Riga</h3>
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+
+                <h2 class="text-center">Popular Russian Train Routes</h2>
+                <div class="destinations-slider">
+                            <div>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-moscow-to-saint-petersburg" tabindex="0">
+                                            Moscow - Saint-Petersburg</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-saint-petersburg-to-moscow" tabindex="0">
+                                            Saint-Petersburg - Moscow</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-helsinki-to-saint-petersburg"
+                                           tabindex="0">
+                                            Helsinki - Saint-Petersburg</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-saint-petersburg-to-helsinki"
+                                           tabindex="0">
+                                            Saint-Petersburg - Helsinki</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-moscow-to-nizhny-novgorod" tabindex="0">
+                                            Moscow - Nizhny Novgorod</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-nizhny-novgorod-to-moscow" tabindex="0">
+                                            Nizhny Novgorod - Moscow</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-moscow-to-kazan" tabindex="0">
+                                            Moscow - Kazan</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-kazan-to-moscow" tabindex="-1">
+                                            Kazan - Moscow</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-moscow-to-irkutsk" tabindex="-1">
+                                            Moscow - Irkutsk</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-irkutsk-to-moscow" tabindex="-1">
+                                            Irkutsk - Moscow</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-moscow-to-vladivostok" tabindex="-1">
+                                            Moscow - Vladivostok</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-vladivostok-to-moscow" tabindex="-1">
+                                            Vladivostok - Moscow</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-saint-petersburg-to-petrozavodsk"
+                                           tabindex="-1">
+                                            Saint-Petersburg - Petrozavodsk</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-petrozavodsk-to-saint-petersburg"
+                                           tabindex="-1">
+                                            Petrozavodsk - Saint-Petersburg</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-saint-petersburg-to-velikiy-novgorod"
+                                           tabindex="-1">
+                                            Saint-Petersburg - Velikiy Novgorod</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-velikiy-novgorod-to-saint-petersburg"
+                                           tabindex="-1">
+                                            Velikiy Novgorod - Saint-Petersburg</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-moscow-to-helsinki" tabindex="-1">
+                                            Moscow - Helsinki</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-helsinki-to-moscow" tabindex="-1">
+                                            Helsinki - Moscow</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-saint-petersburg-to-tallinn"
+                                           tabindex="-1">
+                                            Saint-Petersburg - Tallinn</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-tallinn-to-saint-petersburg"
+                                           tabindex="-1">
+                                            Tallinn - Saint-Petersburg</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/trains-from-moscow-to-riga" tabindex="-1">
+                                            Moscow - Riga</a>
+                                    </li>
+                                </ul>
+                            </div>
+                </div>
+
+            </div>
+        </div>
+        <!--Our Advantages-->
+        <div class="section text-center">
+            <div class="container">
+                <h2>Book russian train tickets online</h2>
+
+                <p>&nbsp;</p>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <p><img alt="" src="/storage/photos/shares/icons/01-clock.png"></p>
+
+                        <h3>Fast &amp; easy</h3>
+
+                        <p>Buying train ticket has never been so simple - you can book your russian train ticket in less
+                            than 2 minutes.</p>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <p><img alt="" src="/storage/photos/shares/icons/02-shield.png"></p>
+
+                        <h3>Safe &amp; secure</h3>
+
+                        <p>All your personal and payment information is protected according to the latest security
+                            standards.</p>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <p><img alt="" src="/storage/photos/shares/icons/03-refund.png"></p>
+
+                        <h3>Online refunds</h3>
+
+                        <p>Your plans have changed? Cancel your ticket and get a refund with a single click on the
+                            button in your account</p>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <p><img alt="" src="/storage/photos/shares/icons/04-support.png"></p>
+
+                        <h3>Customer support 24/7</h3>
+
+                        <p>We look forward helping and resolving your concern. Know that we're just one email or phone
+                            call away.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section section-grey text-center">
+            <div class="container">
+                <h2>Epic railway journeys starts here</h2>
+
+                <p>Russia is the biggest country in the world, with over 14000+ railway stations, so when it comes to
+                    rail journey, it is easy to get lost in abundance of trains. We made the booking of Russian train
+                    tickets as easy as never before.</p>
+
+                <p>No matter which train you are looking for - high-speed Sapsan or Allegro, luxury overnight between
+                    Moscow and St. Petersburg or the famous Trans-Siberian - we are at your disposal. Each year we issue
+                    thousands of tickets for customers from all over the world, who choose our trusted brand.</p>
+
+                <p>Plan your journey, check timetables and prices in real time, compare actual photos of travel classes
+                    and share your travel plans with your family and friends - you are just couple of clicks away from
+                    your epic journey of a lifetime.</p>
+
+
+            </div>
+        </div>
+
+        <div class="section text-center">
+            <div class="container">
+                <h2>Meet Russian Trains</h2>
+
+                <p>There are different types of trains in Russia, connecting major cities - from the fastest Sapsan,
+                    Allegro and Swift high-speed trains to the slower regular, double-decker and luxury overnight
+                    trains. High-speed trains are the best choice if you want to get to your destination as fast as
+                    possible. Luxury overnight trains are great, if you are looking for an experience - these trains
+                    between the capitals and Trans-Siberian route remind about Orient Express. Double-deckers and
+                    Regular trains are cheaper but still comfortable and convenient option</p>
+
+                <p>&nbsp;</p>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <p><a href="https://rustrains.com/trains/high-speed-train"><img alt=""
+                                                                                        src="/storage/photos/shares/icons/001-highspeed.jpg"></a>
+                        </p>
+
+                        <h3><a href="https://rustrains.com/trains/high-speed-train">High-Speed Trains</a></h3>
+
+                        <p><a href="https://rustrains.com/trains/high-speed-train">High-speed express bullet trains run
+                            between main Russian cities at speeds up to 250 kph</a></p>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <p><a href="https://rustrains.com/trains/luxury-train"><img alt=""
+                                                                                    src="/storage/photos/shares/icons/002-luxury.jpg"></a>
+                        </p>
+
+                        <h3><a href="https://rustrains.com/trains/luxury-train">Luxury Trains</a></h3>
+
+                        <p><a href="https://rustrains.com/trains/luxury-train">Travel in style between Russian capitals
+                            and Trans-Siberian route on Russian Luxury overnight trains</a></p>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <p><a href="https://rustrains.com/trains/regular-overnight-train"><img alt=""
+                                                                                               src="/storage/photos/shares/icons/004-regular.jpg"></a>
+                        </p>
+
+                        <h3><a href="https://rustrains.com/trains/regular-overnight-train">Regular Trains</a></h3>
+
+                        <p><a href="https://rustrains.com/trains/regular-overnight-train">Most common and affordable
+                            regular trains will take you to literally any Russian town with excellent on-time
+                            performance</a></p>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <p><a href="https://rustrains.com/trains/double-decker-train"><img alt=""
+                                                                                           src="/storage/photos/shares/icons/003-doubledecker.jpg"></a>
+                        </p>
+
+                        <h3><a href="https://rustrains.com/trains/double-decker-train">Double-Decker Trains</a></h3>
+
+                        <p><a href="https://rustrains.com/trains/double-decker-train">Comfortable double-decker trains
+                            are convenient and cheap option to travel between main Russian cities</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section section-grey text-center">
+            <div class="container">
+                <h2>Unforgettable railroad experiences</h2>
+
+                <p>Enrich your journey to Russia by choosing one of our special experiences. We offer big variety of
+                    railway tours from unforgettable weekend tours from main Russian cities to unbeleivable two-week
+                    Trans-Siberian adventure from Moscow to Vladivostok or&nbsp;Beijing.</p>
+
+                <p>Add some steam to your journey on one of historic trains. Explore Moscow suburbs, St. Petersburg
+                    royal palaces, arriving same way emperors did that in XIX century. Amaze yourself with a once in a
+                    lifetime challenge, doing the famous Trans-Siberian in tzar’s comfort.</p>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="tm-page__footer footer section text-left">
+        <div class="container">
+            <div class="tm-overflow-hidden position-relative">
+                <div class="row">
+                    <div class="col-sm-auto order-sm-1">
+                        <ul class="icon-nav nav justify-content-end flex-sm-column mb-4">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footerContact" data-toggle="collapse" role="button">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footerLang" data-toggle="collapse" role="button">en</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md">
+                                <h4>For customers</h4>
+                                <p><a href="/faq/tickets">When will I get my ticket?</a><br>
+                                    <a href="/faq">FAQ</a><br>
+                                    <a href="/faq/ticket-modification">Modification/Cancellation</a><br>
+                                    <a href="/support">Customer support</a><br>
+                                    <a href="/feedback">Feedback</a><br>
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <h4>Contact us</h4>
+                                <p>
+                                    <a href="/for-press">For press</a><br>
+                                    <a href="/for-corporate-customers">For corporate customers</a><br>
+                                    <a href="/for-travel-agencies">For travel agencies</a><br>
+                                    <a href="/for-job-seekers">For job seekers</a><br>
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <h4>Russian Tickets LTD</h4>
+                                <p>Office 12, 15 Furmanny Lane<br>
+                                    Moscow, Russia, 101000
+                                </p>
+                                <h4>Russian Tour Agency LTD</h4>
+                                <p>Probusweg 9, 8057, Zürich, Switzerland
+                                </p>
+                                <h4>From Russia With Love LLC</h4>
+                                <p>Liverpool Row, Basseterre, SKN
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row align-items-end">
+                    <div class="col-md">
+                        <h4>Payment options</h4>
+                        <ul class="nav mb-3">
+                            <li class="nav-item">
+                                <img src="/site1/images/pay2.png" alt="">
+                            </li>
+                            <li class="nav-item">
+                                <img src="/site1/images/pay3.png" alt="">
+                            </li>
+                            <li class="nav-item">
+                                <img src="/site1/images/pay4.png" alt="">
+                            </li>
+                            <li class="nav-item">
+                                <img src="/site1/images/pay5.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="mb-3">Use of this Web site constitutes acceptance of our
+                            <a href="/terms-and-conditions">Terms and Conditions</a> and
+                            <a href="/privacy-policy">Privacy Policy</a></div>
+                    </div>
+
+                    <div class="col-md-auto">
+                        <div class="mb-3" style="width:262px">
+
+                        </div>
+                        <div class="footer-copyright mb-3">© 2016-2019 <b>RUStrains</b></div>
+                    </div>
+
+                </div>
+
+
+                <!--footer popup contact-->
+                <div id="footerContact" class="tm-footer-popup collapse">
+                    <div class="row">
+                        <div class="col-sm-auto d-flex flex-sm-column justify-content-center order-sm-1">
+                            <div>
+                                <a class="p-3" href="#footerContact" data-toggle="collapse"><i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-5 d-flex flex-md-column align-items-center text-center">
+                                    <div class="py-3">
+                                        <div class="tm-footer-icon"><i class="fas fa-phone"></i></div>
+                                    </div>
+                                    <div class="px-3 px-md-0">
+                                        <h2 class="py-2">Call to us</h2>
+                                        <div class="py-2">Get travel advice from our experts</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md d-flex flex-column">
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+34-902-90-61-78</div>
+                                        <div class="col">EU countries</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+7-812-645-08-98</div>
+                                        <div class="col">Russia</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+44-203-514-73-31</div>
+                                        <div class="col">United Kingdom</div>
+                                    </div>
+                                    <div class="row py-2 py-md-3">
+                                        <div class="col">+1-646-513-44-12</div>
+                                        <div class="col">US and Canada</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--footer popup lang-->
+                <div id="footerLang" class="tm-footer-popup collapse">
+                    <div class="row">
+                        <div class="col-sm-auto d-flex flex-sm-column justify-content-center order-sm-1">
+                            <div>
+                                <a class="p-3" href="#footerLang" data-toggle="collapse"><i
+                                        class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+
+                                <div class="col-md-5 d-flex flex-md-column align-items-center text-center">
+                                    <div class="py-3">
+                                        <div class="tm-footer-icon">en</div>
+                                    </div>
+                                    <div class="px-3 px-md-0">
+                                        <h2 class="py-2">Language</h2>
+                                        <div class="py-2">Select your language preferences</div>
+                                    </div>
+                                </div>
+
+                                <div class="tm-flags col-md">
+                                    <div class="row">
+
+                                        <div class="col-6 col-lg-4 d-flex flex-column"><a
+                                                class="py-2 d-flex align-items-center" href="https://rustrains.com//">
+                                            <span class="flag-icon flag-icon-gb"></span>
+                                            <div class="pl-2">
+                                                en
+                                            </div>
+                                        </a>
+                                            <a class="py-2 d-flex align-items-center" href="https://es.rustrains.com">
+                                                <span class="flag-icon flag-icon-es"></span>
+                                                <div class="pl-2">
+                                                    es
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column"></div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column"></div>
+                                        <div class="col-6 col-lg-4 d-flex flex-column">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<h5 class="modal-title" id="authModalLabel"></h5>-->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                        <img src="https://via.placeholder.com/700x800" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="tab-pane">
+                            <div class="p-4">
+                                <h3 class="mb-4 text-center">Welcome back!</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="signinInputEmail">Email address</label>
+                                        <input type="email" class="form-control" id="signinInputEmail"
+                                               placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signinInputPassword">Password</label>
+                                        <div class="tm-password">
+                                            <input type="password" class="form-control" id="signinInputPassword"
+                                                   placeholder="Password">
+                                            <div class="tm-password-eye"><i class="fas fa-eye"></i></div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="tm-btn-red btn w-100 mb-5">Log in</button>
+                                    <div class="text-center">
+                                        <div class="mb-3">
+                                            <a href="http://rustrains.com/register" target="_blank">Sign up (opens in
+                                                new tab)</a>
+                                        </div>
+                                        <div>
+                                            <a href="http://rustrains.com/password/reset" target="_blank">
+                                                Forgot Your Password? (opens in new tab)
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
+     aria-hidden="true">
+    <div class="tm-modal-search modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Modify your search</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Edit destinations</h6>
+                <div class="row align-items-center mb-3">
+                    <div class="col">
+                        Moscow
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-outline-secondary"><i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                        Saint-Petersburg
+                    </div>
+                </div>
+
+                <h6>Edit dates</h6>
+                <div class="row align-items-center mb-3">
+                    <div class="col">
+                        <label class="showcase-item  showcase-date">
+                            <div class="label">date</div>
+                            <input type="text" class="form-control" required="required" readonly="readonly"
+                                   autocomplete="off" placeholder="" value="">
+                        </label>
+                    </div>
+
+                    <div class="col">
+                        <label class="showcase-item  showcase-date">
+                            <div class="label">return date</div>
+                            <input type="text" class="form-control" required="required" readonly="readonly"
+                                   autocomplete="off" placeholder="" value="">
+                        </label>
+                    </div>
+
+                </div>
+
+                <h6>Edit passengers</h6>
+                <div class="showcase-item showcase-quantity ticket-toggle">
+                    <div class="label">Passengers</div>
+                    <select autocomplete="off">
+                        <option value="1">1 passenger</option>
+                        <option value="2">2 passengers</option>
+                        <option value="3">3 passengers</option>
+                        <option value="4">4 passengers</option>
+                        <option value="5">5 passengers</option>
+                        <option value="6">6 passengers</option>
+                        <option value="7">7 passengers</option>
+                        <option value="8">8 passengers</option>
+                        <option value="9">9 passengers</option>
+                        <option value="10">10 passengers</option>
+                        <option value="11">11 passengers</option>
+                        <option value="12">12 passengers</option>
+                        <option value="13">13 passengers</option>
+                        <option value="14">14 passengers</option>
+                        <option value="15">15 passengers</option>
+                        <option value="16">16 passengers</option>
+                        <option value="17">17 passengers</option>
+                        <option value="18">18 passengers</option>
+                        <option value="19">19 passengers</option>
+                        <option value="20">20 passengers</option>
+                        <option value="21">21 passengers</option>
+                        <option value="22">22 passengers</option>
+                        <option value="23">23 passengers</option>
+                        <option value="24">24 passengers</option>
+                        <option value="25">25 passengers</option>
+                        <option value="26">26 passengers</option>
+                        <option value="27">27 passengers</option>
+                        <option value="28">28 passengers</option>
+                        <option value="29">29 passengers</option>
+                        <option value="30">30 passengers</option>
+                        <option value="31">31 passengers</option>
+                        <option value="32">32 passengers</option>
+                        <option value="33">33 passengers</option>
+                        <option value="34">34 passengers</option>
+                        <option value="35">35 passengers</option>
+                        <option value="36">36 passengers</option>
+                        <option value="37">37 passengers</option>
+                        <option value="38">38 passengers</option>
+                        <option value="39">39 passengers</option>
+                        <option value="40">40 passengers</option>
+                    </select></div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn tm-btn-red">Apply</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tm-train-rating-modal modal fade" id="trainRatingModal" tabindex="-1" role="dialog"
+     aria-labelledby="trainRatingModalLabel"
+     aria-hidden="true">
+    <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
+        <div class="tm-modal-small modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title" id="trainRatingModalLabel">Рейтинг поездов</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-2">
+                <p class="rating-best"><span>10</span> - Best rating</p>
+                <p class="rating-high"><span>9</span> - Very good rating</p>
+                <p class="rating-medium"><span>8</span> - Good rating</p>
+                <p class="rating-low"><span>7 and bellow</span> - Mediocre rating</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tm-train-types-modal modal fade" id="trainTypesModal" tabindex="-1" role="dialog"
+     aria-labelledby="trainTypesModalLabel"
+     aria-hidden="true">
+    <div class="tm-modal modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<h5 class="modal-title" id="trainTypesModalLabel"></h5>-->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-2">
+                <div class="row no-gutters">
+                    <div class="col">
+                        <div class="tm-slider__train-types-top">
+                            <div>
+                                <img src="site1/images/train-station.jpg" alt="">
+                            </div>
+                            <div>
+                                <img src="site1/images/bullet-train.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col">
+                        <div class="tm-slider__train-types-main">
+                            <div class="tm-slide-highlight">
+                                <img src="site1/images/train-station.jpg" alt="">
+                            </div>
+                            <div>
+                                <img src="site1/images/bullet-train.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col">
+                        <div class="tm-slider__train-types-desc">
+                            Подмножество монотонно. Комплексное число монотонно. Подмножество изменяет аксиоматичный
+                            Наибольший Общий Делитель (НОД).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tm-route-modal modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="routeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-uppercase" id="routeModalLabel">Moskva OKT - S-Peter-GL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="rout-table table table-hover">
+                        <thead>
+                        <th>
+                            Station
+                        </th>
+                        <th>
+                            Arrival time
+                        </th>
+                        <th>
+                            Standing time
+                        </th>
+                        <th>
+                            Departure time
+                        </th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                MOSKVA
+                            </td>
+                            <td>
+
+                                <!----></td>
+                            <td>
+
+                            </td>
+                            <td>
+                                15:30
+                                <span>UTC +3</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                MOSKVA OKT
+                            </td>
+                            <td>
+
+                                <!----></td>
+                            <td>
+
+                            </td>
+                            <td>
+                                15:30
+                                <span>UTC +3</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                BOLOGOE M
+                            </td>
+                            <td>
+                                17:22
+                                <span>UTC +3</span></td>
+                            <td>
+                                1 min.
+                            </td>
+                            <td>
+                                17:23
+                                <span>UTC +3</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                CHUDOVO MOS
+                            </td>
+                            <td>
+                                18:23
+                                <span>UTC +3</span></td>
+                            <td>
+                                1 min.
+                            </td>
+                            <td>
+                                18:24
+                                <span>UTC +3</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                S-PETERBUR
+                            </td>
+                            <td>
+                                19:16
+                                <span>UTC +3</span></td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                                <!----></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                S-PETER-GL
+                            </td>
+                            <td>
+                                19:16
+                                <span>UTC +3</span></td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                                <!----></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tm-select-seats-modal tm-js-modal-seats modal fade" id="selectSeatsModal" tabindex="-1" role="dialog"
+     aria-labelledby="selectSeatsModalLabel"
+     aria-hidden="true">
+    <div class="tm-modal-seats modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-inline-block contsh">
+                    <div id="share0"
+                         data-a2a-url="https://rustrains.com/trains-from-moscow-to-saint-petersburg?search=true&amp;date_from=13.09.2019#776А"
+                         data-a2a-title="Trains from Moscow to Saint-Petersburg on 13 September 2019 - Train #776А 13.09.2019"
+                         class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_target share-this"
+                         style="line-height: 32px;"><a
+                            href="https://www.addtoany.com/share#url=https%3A%2F%2Frustrains.com%2Ftrains-from-moscow-to-saint-petersburg%3Fsearch%3Dtrue%26date_from%3D13.09.2019%23776%D0%90&amp;title=Trains%20from%20Moscow%20to%20Saint-Petersburg%20on%2013%20September%202019%20-%20Train%20%23776%D0%90%2013.09.2019"
+                            title="Share" class="a2a_dd"><i class="fas fa-share-alt"></i></a>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="ticket-item">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-md-7 col-xl-5 mb-2 mb-xl-0">
+                            <div class="row mb-1">
+                                <div class="col-8">
+                                    <div class="row align-items-center">
+                                        <div class="col-6">
+                                            <div class="ticket-from">
+                                                <div class="time">00:10</div>
+                                                <div class="arrive-date">05 Sep 2019 Thu</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="ticket-duration">
+                                                9h 42min
+                                                <div class="duration-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="ticket-to">
+                                        <div class="time">09:52</div>
+                                        <div class="arrive-date">05 Sep 2019 Thu</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="ticket-from">
+                                        <div class="city">Moscow</div>
+                                        <div class="station">
+                                            Kurskiy Railway station
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="ticket-to">
+                                        <div class="city">Saint-Petersburg</div>
+                                        <div class="station">
+                                            Ladozhskiy Railway station
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-column align-items-center mb-2 mb-xl-0">
+                            <div>
+                                <div class="ticket-info mb-2">
+                                    Поезд #<a href="" target="_blank">
+                                    <span class="train-number">116С</span> <span class="train-name">Петух Рязани</span>
+                                </a>
+
+                                </div>
+                                <div>Скорый поезд в глубь себя</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-auto d-flex justify-content-between d-xl-block">
+                            <a href="" class="text-secondary text-nowrap mr-2">
+                                <i class="fas fa-angle-double-left"></i>
+                                Previous Train
+                            </a>
+                            <a href="" class="text-secondary text-nowrap">
+                                Next train
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <div class="row">
+                        <div class="col-lg-7 d-flex flex-column">
+                            <div class="car-type-selector">
+                                <div class="car-type-header">
+                                    <div class="row no-gutters">
+                                        <div class="col-sm">
+                                            <div class="car-type-data">
+                                                Classes
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff insured">
+                                                Insured
+                                                <a data-toggle="tooltip" data-placement="top" title=""
+                                                   data-original-title="The price mentioned is for the whole compartment. It is compulsory to buy the whole compartment"
+                                                   class="btn btn-answer" aria-describedby="tooltip957255"><i
+                                                        class="far fa-question-circle"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff">
+                                                Standart
+                                                <a data-toggle="tooltip" data-placement="top" title=""
+                                                   data-original-title="The price mentioned is for the whole compartment. It is compulsory to buy the whole compartment"
+                                                   class="btn btn-answer" aria-describedby="tooltip957255"><i
+                                                        class="far fa-question-circle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car-type-item">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto d-none d-sm-flex px-2 align-items-center">
+                                            <div class="train-radio">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="car-type-data">
+                                                <a href="#selectSeatsModalSlider" class="tm-modalize-trigger"
+                                                   role="button" data-toggle="modal"><i
+                                                        class="tm-icon-train-types fa fa-image"></i></a>
+                                                <div class="car-type-name mb-1">
+                                                    1-сl. sleeping compt.
+                                                </div>
+                                                <div class="car-type-available mb-1">
+                                                    (<span>0</span> seats left)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff insured">
+                                                <div>
+                                                    <div class="row no-gutters align-items-center mb-1">
+                                                        <div class="col">
+                                                            <div class="car-type-price">
+                                                                <span class="tm-text-price price">97000531</span>
+                                                                <span class="currency">RUB</span>
+                                                            </div>
+                                                            <div>per seat</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>Total for 1 passenger:</div>
+                                                        <div class="car-total-price">
+                                                            <span class="tm-text-price price">97000531</span>
+                                                            <span class="currency">RUB</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff">
+                                                <div>
+                                                    <div class="row no-gutters align-items-center mb-1">
+                                                        <div class="col text-center">
+                                                            <div class="car-type-price">
+                                                                <span class="tm-text-price price">5</span>
+                                                                <span class="currency">ILS</span>
+                                                            </div>
+                                                            <div>per seat</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>Total for 40 passengers:</div>
+                                                        <div class="car-total-price">
+                                                            <span class="tm-text-price price">5</span>
+                                                            <span class="currency">ILS</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car-type-item">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto px-2 d-none d-sm-flex align-items-center">
+                                            <div class="train-radio">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="car-type-data">
+                                                <a href="#selectSeatsModalSlider" class="tm-modalize-trigger"
+                                                   role="button" data-toggle="modal"><i
+                                                        class="tm-icon-train-types fa fa-image"></i></a>
+                                                <div class="car-type-name mb-1">
+                                                    1-сl. sleeping compt.
+                                                </div>
+                                                <div class="car-type-available mb-1">
+                                                    (<span>0</span> seats left)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff insured">
+                                                <div>
+                                                    <div class="row no-gutters align-items-center mb-1">
+                                                        <div class="col">
+                                                            <div class="car-type-price">
+                                                                <span class="tm-text-price price">97000531</span>
+                                                                <span class="currency">RUB</span>
+                                                            </div>
+                                                            <div>per seat</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>Total for 1 passenger:</div>
+                                                        <div class="car-total-price">
+                                                            <span class="tm-text-price price">97000531</span>
+                                                            <span class="currency">RUB</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff">
+                                                <div>
+                                                    <div class="row no-gutters align-items-center mb-1">
+                                                        <div class="col text-center">
+                                                            <div class="car-type-price">
+                                                                <span class="price">5</span>
+                                                                <span class="tm-text-price currency">ILS</span>
+                                                            </div>
+                                                            <div>per seat</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>Total for 40 passengers:</div>
+                                                        <div class="car-total-price">
+                                                            <span class="price">5</span>
+                                                            <span class="currency">ILS</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car-type-item active">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto px-2 d-none d-sm-flex align-items-center">
+                                            <div class="train-radio">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="car-type-data">
+                                                <a href="#selectSeatsModalSlider" class="tm-modalize-trigger"
+                                                   role="button" data-toggle="modal"><i
+                                                        class="tm-icon-train-types fa fa-image"></i></a>
+                                                <div class="car-type-name mb-1">
+                                                    1-сl. sleeping compt.
+                                                </div>
+                                                <div class="car-type-available mb-1">
+                                                    (<span>0</span> seats left)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff insured active">
+                                                <div>
+                                                    <div class="row no-gutters align-items-center mb-1">
+                                                        <div class="col">
+                                                            <div class="car-type-price">
+                                                                <span class="price">97000531</span>
+                                                                <span class="currency">RUB</span>
+                                                            </div>
+                                                            <div>per seat</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>Total for 1 passenger:</div>
+                                                        <div class="car-total-price">
+                                                            <span class="price">97000531</span>
+                                                            <span class="currency">RUB</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <div class="car-type-tariff">
+                                                <div>
+                                                    <div class="row no-gutters align-items-center mb-1">
+                                                        <div class="col text-center">
+                                                            <div class="car-type-price">
+                                                                <span class="price">5</span>
+                                                                <span class="currency">ILS</span>
+                                                            </div>
+                                                            <div>per seat</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>Total for 40 passengers:</div>
+                                                        <div class="car-total-price">
+                                                            <span class="price">5</span>
+                                                            <span class="currency">ILS</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="train-order">
+                                <div class="row align-items-center">
+                                    <div class="col-md">
+                                        <div class="seats-total-price text-center text-md-left">
+                                            <span class="text-nowrap mr-2">Total for 2 passengers: </span>
+                                            <span class="text-nowrap"><span class="all price">1108</span>
+                                                <span class="currency">EUR</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="seats-btn">
+                                            <button type="button" class="btn tm-btn-red">
+                                                Buy tickets <i class="fa fa-angle-double-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 d-none d-lg-block">
+                            <div class="car-type-description">
+
+                                <div class="seats-modal-main-slider">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/150x100" alt="">
+                                    </div>
+                                </div>
+                                <div class="seats-modal-slider-controls">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/150x100" alt="">
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/150x100" alt="">
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/150x100" alt="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="train-services">
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Биотуалет в купе"><img
+                                                src="site1/images/services/biotoilet.png"
+                                                alt="Биотуалет в купе"></li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Кондиционер в купе"><img
+                                                src="site1/images/services/conditioner.png"
+                                                alt="Кондиционер в купе"></li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Набор питания"><img
+                                                src="site1/images/services/food.png"
+                                                alt="Набор питания"></li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Мультимедийный портал Попутчик">
+                                            <img src="site1/images/services/multimedia.png"
+                                                 alt="Мультимедийный портал Попутчик"></li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Постельное бельё"><img
+                                                src="site1/images/services/pillows.png"
+                                                alt="Постельное бельё"></li>
+                                        <li data-toggle="tooltip" data-original-title="Плед"><img
+                                                src="site1/images/services/plaid.png" alt="Плед">
+                                        </li>
+                                        <li data-toggle="tooltip" data-original-title="Пресса"><img
+                                                src="site1/images/services/press.png" alt="Пресса">
+                                        </li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Санитарно-гигиенический набор"><img
+                                                src="site1/images/services/sanpack.png"
+                                                alt="Санитарно-гигиенический набор"></li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Душевая в купе"><img
+                                                src="site1/images/services/shower.png"
+                                                alt="Душевая в купе"></li>
+                                        <li data-toggle="tooltip" data-original-title="Телевизор">
+                                            <img src="site1/images/services/tv.png" alt="Телевизор">
+                                        </li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Умывальник в купе"><img
+                                                src="site1/images/services/washbasin.png"
+                                                alt="Умывальник в купе"></li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Возможна перевозка животных"><img
+                                                src="site1/images/services/car-animals.png"
+                                                alt="Возможна перевозка животных"></li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Биотуалет в вагоне"><img
+                                                src="site1/images/services/car-biotoilet.png"
+                                                alt="Биотуалет в вагоне"></li>
+                                        <li data-toggle="tooltip"
+                                            data-original-title="Кондиционер в вагоне"><img
+                                                src="site1/images/services/car-conditioner.png"
+                                                alt="Кондиционер в вагоне"></li>
+                                        <li class="no-item" data-toggle="tooltip"
+                                            data-original-title="Провоз животных запрещён"><img
+                                                src="site1/images/services/no-animals.png"
+                                                alt="Провоз животных запрещён"></li>
+                                        <li class="no-item" data-toggle="tooltip"
+                                            data-original-title="Биотуалет отсутствует"><img
+                                                src="site1/images/services/no-biotoilet.png"
+                                                alt="Биотуалет отсутствует"></li>
+                                        <li class="no-item" data-toggle="tooltip"
+                                            data-original-title="Кондиционер отсутствует"><img
+                                                src="site1/images/services/no-conditioner.png"
+                                                alt="Кондиционер отсутствует"></li>
+                                    </ul>
+                                </div>
+                                <div class="seats-modal-desc-text">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias
+                                        consequatur, cupiditate doloremque dolores earum eius enim et facere facilis
+                                        illo laborum numquam repellendus sed, sequi temporibus, <a href="">tenetur totam
+                                        vel?</a>
+                                    </p>
+                                    <p>
+                                        lorem iosum
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tm-select-seats-modal modal fade" id="selectSeatsModalSlider" tabindex="-1" role="dialog"
+     aria-labelledby="selectSeatsModalSliderLabel"
+     aria-hidden="true">
+    <div class="tm-modal-seats tm-modal-seats-slider modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <div class="car-type-description">
+
+                        <div class="seats-modal-main-slider">
+                            <div class="img-wrap">
+                                <img src="https://via.placeholder.com/150x100" alt="">
+                            </div>
+                        </div>
+                        <div class="seats-modal-slider-controls">
+                            <div class="img-wrap">
+                                <img src="https://via.placeholder.com/150x100" alt="">
+                            </div>
+                            <div class="img-wrap">
+                                <img src="https://via.placeholder.com/150x100" alt="">
+                            </div>
+                            <div class="img-wrap">
+                                <img src="https://via.placeholder.com/150x100" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <ul class="train-services">
+                                <li data-toggle="tooltip"
+                                    data-original-title="Биотуалет в купе"><img
+                                        src="site1/images/services/biotoilet.png"
+                                        alt="Биотуалет в купе"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Кондиционер в купе"><img
+                                        src="site1/images/services/conditioner.png"
+                                        alt="Кондиционер в купе"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Набор питания"><img
+                                        src="site1/images/services/food.png"
+                                        alt="Набор питания"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Мультимедийный портал Попутчик">
+                                    <img src="site1/images/services/multimedia.png"
+                                         alt="Мультимедийный портал Попутчик"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Постельное бельё"><img
+                                        src="site1/images/services/pillows.png"
+                                        alt="Постельное бельё"></li>
+                                <li data-toggle="tooltip" data-original-title="Плед"><img
+                                        src="site1/images/services/plaid.png" alt="Плед">
+                                </li>
+                                <li data-toggle="tooltip" data-original-title="Пресса"><img
+                                        src="site1/images/services/press.png" alt="Пресса">
+                                </li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Санитарно-гигиенический набор"><img
+                                        src="site1/images/services/sanpack.png"
+                                        alt="Санитарно-гигиенический набор"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Душевая в купе"><img
+                                        src="site1/images/services/shower.png"
+                                        alt="Душевая в купе"></li>
+                                <li data-toggle="tooltip" data-original-title="Телевизор">
+                                    <img src="site1/images/services/tv.png" alt="Телевизор">
+                                </li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Умывальник в купе"><img
+                                        src="site1/images/services/washbasin.png"
+                                        alt="Умывальник в купе"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Возможна перевозка животных"><img
+                                        src="site1/images/services/car-animals.png"
+                                        alt="Возможна перевозка животных"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Биотуалет в вагоне"><img
+                                        src="site1/images/services/car-biotoilet.png"
+                                        alt="Биотуалет в вагоне"></li>
+                                <li data-toggle="tooltip"
+                                    data-original-title="Кондиционер в вагоне"><img
+                                        src="site1/images/services/car-conditioner.png"
+                                        alt="Кондиционер в вагоне"></li>
+                                <li class="no-item" data-toggle="tooltip"
+                                    data-original-title="Провоз животных запрещён"><img
+                                        src="site1/images/services/no-animals.png"
+                                        alt="Провоз животных запрещён"></li>
+                                <li class="no-item" data-toggle="tooltip"
+                                    data-original-title="Биотуалет отсутствует"><img
+                                        src="site1/images/services/no-biotoilet.png"
+                                        alt="Биотуалет отсутствует"></li>
+                                <li class="no-item" data-toggle="tooltip"
+                                    data-original-title="Кондиционер отсутствует"><img
+                                        src="site1/images/services/no-conditioner.png"
+                                        alt="Кондиционер отсутствует"></li>
+                            </ul>
+                        </div>
+                        <div class="seats-modal-desc-text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias
+                                consequatur, cupiditate doloremque dolores earum eius enim et facere facilis
+                                illo laborum numquam repellendus sed, sequi temporibus, <a href="">tenetur totam
+                                vel?</a>
+                            </p>
+                            <p>
+                                lorem iosum
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="common_preloader" style="display:none">
+    <img src="icons/train.gif"/>
+</div>
+
+<div id="cookie" class="cookie">This website uses cookies and other data to provide a better service.
+    See <a href="#">Privacy policy</a> for more information. <br>
+    If you agree, continue to use our site. <a href="#" class="cookie-accept btn btn-light">I Agree</a>
+</div>
+
+<div class="tm-button-toTop btn tm-btn-red js-scroll-to-top-new">
+    BUY TICKETS <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- Scripts -->
+<!--<script src="js/lang.js"></script>
+<script src="http://rustrains.com/js/app_public.js"></script>-->
+<script src="site1/js/jquery-3.2.1.min.js"></script>
+<script src="site1/js/slick.min.js"></script>
+<script src="site1/js/popper.js"></script>
+<script src="site1/js/bootstrap.min.js"></script>
+<script src="site1/js/swiper.min.js"></script>
+<script src="site1/js/select2.min.js"></script>
+<script src="site1/js/fotorama.js"></script>
+<script src="site1/js/jquery.ui.touch-punch.min.js"></script>
+<script src="site1/js/js.cookie.js"></script>
+<script src="site1/js/main.js"></script>
+
+</body>
+</html>

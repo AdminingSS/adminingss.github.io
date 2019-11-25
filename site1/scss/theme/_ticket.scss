@@ -108,11 +108,9 @@
   }
 }
 
-
 .modal-dialog {
   text-align: left;
 }
-
 
 .sub-nav-wrap {
   display: none;
@@ -266,7 +264,6 @@
     font-weight: 700;
   }
 
-
   &-sort {
     font-size: 14px;
     background: #eee;
@@ -336,7 +333,7 @@
       align-items: center;
       width: 22px;
       height: 22px;
-      border: 1px solid rgba(0,0,0,0.15);
+      border: 1px solid rgba(0, 0, 0, 0.15);
       border-radius: 50%;
       background-color: white;
       font-size: 14px;
@@ -357,17 +354,17 @@
     }
 
     .bootstrap-datetimepicker-widget.dropdown-menu {
-      left: auto!important;
-      right: -8px!important;
-      top: 45px!important;
+      left: auto !important;
+      right: -8px !important;
+      top: 45px !important;
 
       &::before {
-        left: auto!important;
+        left: auto !important;
         right: 30px;
       }
 
       &::after {
-        left: auto!important;
+        left: auto !important;
         right: 31px;
       }
     }
@@ -588,8 +585,6 @@
   }
 }
 
-
-
 .rating-best {
   font-size: 18px;
   span {
@@ -628,7 +623,6 @@
   padding: 10px;
   border-radius: 3px;
 }
-
 
 .train-specials-panel {
   display: flex;
@@ -712,7 +706,7 @@
 .tm-icon-train-types {
   font-weight: 400;
   font-size: 25px;
-  color: rgb(255,0,0);
+  color: rgb(255, 0, 0);
 }
 
 /* Slider Train Types */
@@ -723,9 +717,9 @@
     z-index: 1;
 
     &.slick-disabled:before {
-        opacity: .3;
-      }
+      opacity: .3;
     }
+  }
 
   .slick-prev {
     left: 20px;
@@ -967,7 +961,7 @@
     .ticket-total {
       text-align: left;
 
-      br{
+      br {
         display: none;
       }
     }
@@ -1034,7 +1028,6 @@
   }
 }
 
-
 //not altered?
 
 .results .nav-tabs {
@@ -1078,3 +1071,54 @@
   font-size: 14px;
   margin-top: -6px;
 }
+
+.tabs-new.ticket-menu {
+  border-bottom: solid 1px #a2a2a2;
+  margin-bottom: 10px;
+
+  .nav-item {
+    padding: 0;
+    margin: 0 5px -1px;
+    border-bottom-color: transparent;
+
+    .nav-link {
+      background-color: #BA2830;
+      padding: 20px 40px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: 1px solid #ddd;
+      border-bottom-color: #a2a2a2;
+      text-transform: uppercase;
+
+      &:hover {
+        border-color: #a2a2a2;
+      }
+
+      &.active {
+        border-bottom-color: #fff;
+        background-color: #fff;
+        color: #000000;
+      }
+    }
+  }
+}
+
+.accordion {
+  .btn-link {
+    color: $red;
+
+    &:hover, &:focus {
+      color: #901f25;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .tabs-new.ticket-menu .nav-item .nav-link {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+

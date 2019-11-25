@@ -1,6 +1,9 @@
-$altMain: #2b3368;
-$altInverse: #CBAE65;
+$altMain: #2b3368; //#2b3368
+$altInverse: #CBAE65; //#CBAE65; //$987b31
+$altPositive: #4c852b;
+$altNegative: #8b2d43;
 $altContrast: #fff;
+
 
 body {
   font-family: 'Roboto Slab', serif;
@@ -8,7 +11,7 @@ body {
 }
 
 .section {
-  background: lighten($altMain, 60%);
+  //background: lighten($altMain, 60%);
 }
 
 
@@ -112,7 +115,7 @@ select {
 }
 
 .showcase {
-  background: url(/rustrains_html/site1/images/alt_top_bg_2.jpg) no-repeat 50% 50%;
+  background: url(/site1/images/alt_top_bg_2.jpg) no-repeat 50% 50%;
 }
 
 .showcase-check label {
@@ -145,6 +148,14 @@ h1, h2, .head {
 
 a {
   color: lighten($altMain, 40%);
+
+  .train-number, &.train-rating {
+    color: $altMain;
+
+    &:hover {
+      color: lighten($altMain, 20%);
+    }
+  }
 
   &:hover {
     color: lighten($altMain, 60%);
@@ -196,24 +207,161 @@ a {
 }
 
 .checkbox input:checked + span {
-  background-color: #fff;
+  background-color: $altContrast;
 }
 
 .checkbox > span::before {
   color: $altMain;
 }
 
+.train-specials-panel .specialty {
+  border-radius: 5px;
+  min-width: 102px;
+  margin: 0 5px;
+  text-align: center;
+}
+
 .train-specials-panel .specialty.fast {
-  background-color: $altInverse;
+  background: linear-gradient(to right, $altPositive, lighten($altPositive, 20%)); //linear-gradient(to left, $altPositive, darken($altPositive, 20%));
 }
 
 .train-specials-panel .specialty.fastest {
-  background-color: darken($altInverse, 20%);
+  background: linear-gradient(to right, darken($altPositive, 20%), $altPositive);
+}
+
+.train-specials-panel .specialty.cheap {
+  background: linear-gradient(to left, lighten($altMain, 20%), lighten($altMain, 40%)); //linear-gradient(to left, $altPositive, darken($altPositive, 20%));
+}
+
+.train-specials-panel .specialty.cheapest {
+  background: linear-gradient(to left, $altMain, lighten($altMain, 20%));
+}
+
+.train-specials-panel .specialty.vip {
+  background: linear-gradient(lighten(#ff8700, 20%), #ff8700, lighten(#ff8700, 20%)); //linear-gradient(to left, $altPositive, darken($altPositive, 20%));
 }
 
 .train-name {
   background-color: $altMain;
 }
+
+.ticket-menu {
+  margin-bottom: 10px;
+}
+
+.ticket-menu .nav-link {
+  border-radius: 5px;
+}
+
+.footer, .tm-footer-popup {
+  background-color: $altMain;
+}
+
+.tm-modal-seats .car-type-item .car-type-tariff {
+  background-color: lighten($altNegative, 40%);
+  color: $altContrast;
+}
+
+.tm-modal-seats .car-type-item .car-type-tariff.insured {
+  background-color: lighten($altPositive, 40%);
+}
+
+.tm-modal-seats .car-type-item:hover .car-type-tariff {
+  border-left-color: initial;
+}
+
+.tm-modal-seats .car-type-item.active {
+  background-color: lighten($altMain, 60%);
+}
+
+.tm-modal-seats .car-type-item .car-type-tariff.active {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.tm-modal-seats .car-type-header {
+  border-radius: 15px 15px 0 0;
+  border: 2px solid $altMain;
+}
+
+.tm-modal-seats .car-type-item, .tm-modal-seats .car-type-item.active {
+  border: 2px solid $altMain;
+  border-top-width: 0;
+}
+
+.tm-modal-seats .car-type-item:last-child {
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+}
+
+.tm-modal-seats .modal-header {
+  background-color: $altMain;
+  color: $altContrast;
+
+  a .train-number {
+    color: darken($altContrast,20%);
+
+    &:hover {
+      color: darken($altContrast,40%);
+    }
+  }
+
+  .train-name {
+    color: $altMain;
+    background-color: $altContrast;
+  }
+
+  .text-secondary {
+    color: lighten($altInverse, 10%)!important;
+
+    &:hover {
+      color: lighten($altInverse, 20%)!important;
+    }
+  }
+
+  .ticket-item .time {
+    color: lighten($altInverse, 10%);
+  }
+}
+
+.modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.tm-modal-seats .modal-content .close {
+  color: $altContrast;
+  font-size: 40px;
+
+  &:hover {
+    color: darken($altContrast, 20%);
+  }
+}
+
+.tm-modal-seats .car-type-item {
+
+  .train-radio {
+    border-color: lighten($altMain,20%);
+  }
+
+  &:hover .train-radio {
+    border-color: $altMain;
+  }
+
+  &.active .train-radio {
+    border-color: darken($altMain,20%);
+  }
+}
+
+.tm-modal-seats .car-type-item .car-type-tariff {
+  color: $altMain;
+}
+
+.tm-modal-seats .car-type-tariff {
+  border-left-color: #bbb;
+}
+
+
+
 
 
 
