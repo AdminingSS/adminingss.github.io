@@ -13,7 +13,7 @@
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js"></script>
-<link href="styles/app.bddc8ae56309b8471472.css" rel="stylesheet"><link href="styles/vendors.bddc8ae56309b8471472.css" rel="stylesheet"></head>
+<link href="styles/app.2a9008778b400888ccb3.css" rel="stylesheet"><link href="styles/vendors.2a9008778b400888ccb3.css" rel="stylesheet"></head>
 <body>
 
 <div class="uk-offcanvas-content">
@@ -42,7 +42,7 @@
                             </ul>
 
                             <div class="uk-navbar-item uk-visible@m">
-                                <button class="uk-button uk-button-default uk-button-small">Принять вызов</button>
+                                <button class="uk-button uk-button-default uk-button-small" type="button" uk-toggle="target: #modalEnter">Принять вызов</button>
                             </div>
                             <!--mobile menu toggle-->
                             <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@m"
@@ -58,7 +58,7 @@
                     <div class="tm-sup-h1">Челлендж</div>
                     <h1><span class="uk-text-secondary">28 дней</span> без алкоголя,<br> которые изменят<br> твою жизнь
                     </h1>
-                    <button class="tm-button-top uk-button uk-button-primary">Принять вызов</button>
+                    <button class="tm-button-top uk-button uk-button-primary" type="button" uk-toggle="target: #modalEnter">Принять вызов</button>
 
                     <div class="uk-hidden@s uk-position-relative">
                         <button class="tm-videolink-button uk-button uk-button-secondary">
@@ -90,7 +90,7 @@
                         <span class="tm-subheader-badge">Стань лучшей версией себя, изменив всего лишь одну привычку</span>
                     </div>
                     <div class="uk-text-center">
-                        <button class="uk-button uk-button-primary"> ДА! Я ХОЧУ ПРИНЯТЬ ЭТОТ ВЫЗОВ!</button>
+                        <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modalEnter"> ДА! Я ХОЧУ ПРИНЯТЬ ЭТОТ ВЫЗОВ!</button>
                     </div>
                 </div>
             </div>
@@ -293,7 +293,7 @@
                     </div>
                 </div>
                 <div class="uk-text-center">
-                    <button class="uk-button uk-button-primary"> ДА! Я ХОЧУ ПРИНЯТЬ ЭТОТ ВЫЗОВ!</button>
+                    <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modalEnter"> ДА! Я ХОЧУ ПРИНЯТЬ ЭТОТ ВЫЗОВ!</button>
                 </div>
             </div>
         </div>
@@ -386,7 +386,7 @@
                     </div>
                 </div>
                 <div class="uk-text-center">
-                    <button class="uk-button uk-button-primary"> ДА! Я ХОЧУ ПРИНЯТЬ ЭТОТ ВЫЗОВ!</button>
+                    <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modalEnter"> ДА! Я ХОЧУ ПРИНЯТЬ ЭТОТ ВЫЗОВ!</button>
                 </div>
             </div>
 
@@ -413,7 +413,7 @@
                             <span class="tm-subheader-badge">Подходящего времени не бывает!</span>
                         </div>
                         <div class="uk-text-center">
-                            <button class="uk-button uk-button-primary"> ДА! Я ХОЧУ ПРИНЯТЬ ЭТОТ ВЫЗОВ!</button>
+                            <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modalEnter"> ДА! Я ХОЧУ ПРИНЯТЬ ЭТОТ ВЫЗОВ!</button>
                         </div>
                     </div>
                 </div>
@@ -539,7 +539,7 @@
                                     2 990 <span>a</span>
                                 </div>
                                 <div>
-                                    <button class="uk-button uk-button-primary">Выбрать курс</button>
+                                    <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modalEnter">Выбрать курс</button>
                                 </div>
                             </div>
                         </div>
@@ -573,7 +573,7 @@
                                     5 990 <span>a</span>
                                 </div>
                                 <div>
-                                    <button class="uk-button uk-button-primary">Выбрать курс</button>
+                                    <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modalEnter">Выбрать курс</button>
                                 </div>
                             </div>
                         </div>
@@ -601,7 +601,7 @@
                                     7 990 <span>a</span>
                                 </div>
                                 <div>
-                                    <button class="uk-button uk-button-primary">Выбрать курс</button>
+                                    <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modalEnter">Выбрать курс</button>
                                 </div>
                             </div>
                         </div>
@@ -791,7 +791,7 @@
                 </ul>
 
                 <div class="uk-navbar-item">
-                    <button class="uk-button uk-button-default uk-button-small">Принять вызов</button>
+                    <button class="uk-button uk-button-default uk-button-small" type="button" uk-toggle="target: #modalEnter">Принять вызов</button>
                 </div>
             </div>
         </div>
@@ -799,5 +799,59 @@
 
 </div>
 
-<script type="text/javascript" src="scripts/app.bddc8ae56309b8471472.js"></script><script type="text/javascript" src="scripts/vendors.bddc8ae56309b8471472.js"></script></body>
+<div id="modalEnter" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close" type="button" data-uk-close></button>
+        <h3 class="">Вход в кабинет</h3>
+        <div>
+            <form class="uk-form-stacked" method="post" action="mail/mailer.php">
+                <div class="uk-margin">
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-enter-email" type="text" name="email"
+                               placeholder="Почта" required>
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-enter-password" type="password" name="password"
+                               placeholder="Пароль" required>
+                    </div>
+                </div>
+                <div class="uk-margin uk-grid-small uk-flex-between uk-child-width-auto uk-grid">
+                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox" name="remember"> Запомнить меня</label>
+                </div>
+                <button class="uk-margin-auto uk-display-block uk-button uk-button-primary" type="submit">
+                    Вход
+                </button>
+            </form>
+            <div class="uk-text-center">
+                <a href="#modalLostPassword" uk-toggle>
+                    Забыли пароль?
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modalLostPassword" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close" type="button" data-uk-close></button>
+        <h3 class="">Восстановление пароля</h3>
+        <div>
+            <form class="uk-form-stacked" method="post" action="mail/mailer.php">
+                <div class="uk-margin">
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-lost-email" type="text" name="email"
+                               placeholder="Почта" required>
+                    </div>
+                </div>
+                <button class="uk-margin-auto uk-display-block uk-button uk-button-primary" type="submit">
+                    Подтвердить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/app.2a9008778b400888ccb3.js"></script><script type="text/javascript" src="scripts/vendors.2a9008778b400888ccb3.js"></script></body>
 </html>
