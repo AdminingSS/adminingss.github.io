@@ -13,7 +13,7 @@
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js"></script>
-<link href="styles/app.0baff194e0c5a1b4b9c3.css" rel="stylesheet"><link href="styles/vendors.0baff194e0c5a1b4b9c3.css" rel="stylesheet"></head>
+<link href="styles/app.88c41a579708d5ba55e7.css" rel="stylesheet"></head>
 <body>
 
 <div class="uk-offcanvas-content">
@@ -115,7 +115,7 @@
                             с <span>10:00</span> до <span>22:00</span>
                         </div>
                         <div>
-                            <button class="uk-button uk-button-primary">Забронировать</button>
+                            <button class="uk-button uk-button-primary" type="button" data-uk-toggle="target: #modalGift">Забронировать</button>
                         </div>
                     </div>
                 </div>
@@ -140,5 +140,46 @@
 
 </div>
 
-<script type="text/javascript" src="scripts/app.0baff194e0c5a1b4b9c3.js"></script><script type="text/javascript" src="scripts/vendors.0baff194e0c5a1b4b9c3.js"></script></body>
+<div id="modalGift" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close" type="button" data-uk-close></button>
+        <h2 class="uk-modal-title">Получить подарок</h2>
+        <div class="tm-form-description">и забронировать ёлку</div>
+        <div>
+            <form class="uk-form-stacked" method="post" action="mail/mailer.php" enctype="multipart/form-data">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-gift-text-height">Желаемая высота ёлки</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-gift-text-height" type="text" name="height"
+                               placeholder="2м">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-gift-text-phone">Номер телефона<span>*</span></label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-gift-text-phone" type="text" name="phone"
+                               placeholder="+7 (___) ___ - __ - __" required>
+                    </div>
+                </div>
+                <div class="uk-text-center">
+                    <button class="uk-margin-auto uk-button uk-button-primary" type="submit">
+                        <span>Зафиксировать подарок</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="modalSuccess" data-uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close" type="button" data-uk-close></button>
+        <h2 class="uk-modal-title">Заявка принята</h2>
+        <div>
+            Ваша форма отправлена, спасибо за заявку, с вами свяжутся втечение дня.
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/app.88c41a579708d5ba55e7.js"></script><script type="text/javascript" src="scripts/vendors.88c41a579708d5ba55e7.js"></script></body>
 </html>
