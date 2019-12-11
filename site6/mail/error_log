@@ -1,0 +1,44 @@
+[13-Oct-2019 13:46:46 Europe/Kiev] PHP Notice:  Array to string conversion in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 40
+[13-Oct-2019 13:51:08 Europe/Kiev] PHP Notice:  Undefined index: file in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 40
+[13-Oct-2019 13:51:21 Europe/Kiev] PHP Notice:  Undefined index: file in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 40
+[13-Oct-2019 14:02:00 Europe/Kiev] PHP Notice:  Undefined index: file in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 40
+[13-Oct-2019 14:20:50 Europe/Kiev] PHP Notice:  Undefined variable: tmp in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 59
+[13-Oct-2019 14:20:50 Europe/Kiev] PHP Notice:  Undefined variable: local_adapter in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 63
+[13-Oct-2019 14:20:50 Europe/Kiev] PHP Fatal error:  Class 'FilesystemException' not found in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 66
+[13-Oct-2019 14:22:02 Europe/Kiev] PHP Notice:  Undefined variable: tmp in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 59
+[13-Oct-2019 14:22:02 Europe/Kiev] PHP Notice:  Undefined variable: local_adapter in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 63
+[13-Oct-2019 14:22:02 Europe/Kiev] PHP Fatal error:  Class 'FilesystemException' not found in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 66
+[13-Oct-2019 17:48:23 Europe/Kiev] PHP Notice:  Undefined variable: tmp in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 59
+[13-Oct-2019 17:48:23 Europe/Kiev] PHP Notice:  Undefined variable: local_adapter in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 63
+[13-Oct-2019 17:48:23 Europe/Kiev] PHP Fatal error:  Class 'FilesystemException' not found in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 66
+[13-Oct-2019 17:50:57 Europe/Kiev] PHP Notice:  Undefined variable: tmp in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 58
+[13-Oct-2019 17:50:57 Europe/Kiev] PHP Notice:  Undefined variable: local_adapter in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 62
+[13-Oct-2019 17:50:57 Europe/Kiev] PHP Fatal error:  Class 'FilesystemException' not found in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 65
+[13-Oct-2019 17:53:38 Europe/Kiev] PHP Notice:  Undefined variable: tmp in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 58
+[13-Oct-2019 17:53:38 Europe/Kiev] PHP Notice:  Undefined variable: local_adapter in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 62
+[13-Oct-2019 17:53:38 Europe/Kiev] PHP Fatal error:  Class 'FilesystemException' not found in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 65
+[13-Oct-2019 17:56:51 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 66
+[13-Oct-2019 18:06:20 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 66
+[13-Oct-2019 18:11:56 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 66
+[13-Oct-2019 18:16:14 Europe/Kiev] PHP Notice:  Array to string conversion in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 40
+[13-Oct-2019 18:16:14 Europe/Kiev] PHP Notice:  Undefined offset: 0 in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 42
+[13-Oct-2019 18:16:14 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 71
+[13-Oct-2019 18:26:19 Europe/Kiev] PHP Notice:  Array to string conversion in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 40
+[13-Oct-2019 18:26:19 Europe/Kiev] PHP Notice:  Array to string conversion in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 42
+[13-Oct-2019 18:26:19 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 71
+[13-Oct-2019 18:27:40 Europe/Kiev] PHP Notice:  Array to string conversion in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 40
+[13-Oct-2019 18:27:40 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 71
+[13-Oct-2019 18:31:16 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 63
+[13-Oct-2019 18:32:51 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 63
+[13-Oct-2019 18:34:32 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 61
+[13-Oct-2019 18:37:04 Europe/Kiev] PHP Notice:  Undefined index: files in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 53
+[13-Oct-2019 18:37:04 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 65
+[13-Oct-2019 18:42:27 Europe/Kiev] PHP Notice:  Undefined index: files in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 53
+[13-Oct-2019 18:42:27 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 65
+[13-Oct-2019 18:45:15 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 71
+[13-Oct-2019 19:17:42 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 73
+[13-Oct-2019 19:23:06 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 73
+[13-Oct-2019 19:30:38 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 73
+[13-Oct-2019 19:33:30 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 76
+[13-Oct-2019 19:35:19 Europe/Kiev] PHP Notice:  Undefined variable: msg in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 76
+[13-Oct-2019 19:45:18 Europe/Kiev] PHP Notice:  Array to string conversion in /home/nedvig01/kazan.xn----8sbfkoelnbg5bbbyr.xn--p1ai/mail/mailer.php on line 58
