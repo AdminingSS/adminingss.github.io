@@ -188,8 +188,30 @@ header {
   font-size: 30px;
 }
 .tm-advertising h2 {
+  position: relative;
   font-size: 48px;
   text-transform: uppercase;
+  color: #373737;
+  transition: color 1s;
+}
+.tm-advertising h2::before {
+  position: absolute;
+  display: block;
+  background-color: #428bca;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-5%) skewX(5deg);
+  content: '';
+  z-index: -1;
+  left: 3000px;
+  transition: left 1s;
+}
+.tm-advertising h2.animated {
+  color: #ffffff;
+}
+.tm-advertising h2.animated::before {
+  left: 0;
 }
 .tm-advertising p {
   font-size: 20px;
