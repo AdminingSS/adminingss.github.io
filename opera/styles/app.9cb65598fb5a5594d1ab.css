@@ -31,6 +31,9 @@ h2 {
 header {
   z-index: 1000;
 }
+.uk-section {
+  overflow: hidden;
+}
 .uk-container {
   max-width: 1600px;
 }
@@ -200,7 +203,7 @@ header {
   background-color: #428bca;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -50px;
   transform: translateX(-5%) skewX(5deg);
   content: '';
   z-index: -1;
@@ -218,10 +221,9 @@ header {
 }
 .tm-bg-left {
   position: absolute;
+  top: 0;
   bottom: 0;
   left: 0;
-  max-height: 100%;
-  max-width: 60%;
 }
 .tm-inverse {
   color: #ffffff;
