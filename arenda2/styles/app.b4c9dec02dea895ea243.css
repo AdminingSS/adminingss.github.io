@@ -1224,6 +1224,10 @@ footer a.tm-link-button:active {
     line-height: 1.4;
   }
 }
+.uk-section {
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
 .tm-worker-containers-holder {
   position: relative;
   min-width: 586px;
@@ -1354,7 +1358,7 @@ footer a.tm-link-button:active {
   letter-spacing: 5.4px;
   text-transform: uppercase;
   color: #ffda91;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .tm-marked-text::before {
   position: absolute;
