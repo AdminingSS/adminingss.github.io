@@ -52,7 +52,7 @@ header {
 .uk-button {
   text-transform: none;
   padding: 0 40px;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 54px;
   border-radius: 3px;
 }
@@ -62,17 +62,18 @@ header {
   border-width: 2px;
 }
 .uk-button-default:hover {
-  color: #373737;
-  border-color: #9d9d9d;
+  color: #ffffff;
+  border-color: #f34e58;
+  background-color: #f34e58;
 }
 .uk-navbar-nav > li > a {
   font-family: Roboto, sans-serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 22px;
   color: #ffffff;
 }
 .uk-navbar-nav > li > a:hover {
-  color: #999999;
+  color: #cccccc;
 }
 .uk-logo {
   display: block;
@@ -83,18 +84,43 @@ header {
   background-size: 186px 60px;
   background-position: 0 50%;
 }
+.uk-drop {
+  width: auto;
+  margin-top: 0;
+}
+.uk-navbar-dropdown {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+.uk-navbar-dropdown-nav > li > a {
+  color: #ffffff;
+}
+.uk-navbar-dropdown-nav > li > a:hover {
+  color: #cccccc;
+}
+.uk-navbar-dropdown-nav {
+  font-size: 22px;
+}
 .tm-navbar-scrolled {
   background-color: #f5f5f5;
 }
 .tm-navbar-scrolled .uk-navbar-nav > li > a {
   color: #373737;
 }
-.tm-navbar-scrolled .uk-navbar-nav > li > a:hover {
-  color: #9d9d9d;
+.tm-navbar-scrolled .uk-navbar-nav > li > a:hover,
+.tm-navbar-scrolled .uk-navbar-nav > li > a:active {
+  background-color: #f34e58;
+  color: #ffffff;
 }
 .tm-navbar-scrolled .uk-logo {
   background: url(../images/logo.png) no-repeat;
   background-position: 0 50%;
+}
+.tm-navbar-scrolled .uk-navbar-dropdown {
+  background-color: #f34e58;
+  border-color: #f34e58;
+  border-radius: 0;
 }
 .tm-main {
   position: relative;
@@ -138,6 +164,7 @@ header {
   background-color: #ffffff;
   display: block;
   border-radius: 10px;
+  line-height: 1.2;
   padding: 40px;
   color: #373737;
   overflow: hidden;
@@ -154,15 +181,20 @@ header {
 .tm-panel-horizontal .tm-panel-header {
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 .tm-panel-horizontal .tm-panel-subheader {
-  font-size: 24px;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 .tm-panel-horizontal .tm-panel-subheader span {
   font-weight: bold;
 }
 .tm-panel-horizontal .tm-panel-place {
-  font-size: 20px;
+  font-size: 22px;
+}
+.tm-panel-horizontal .tm-panel-controls .uk-button {
+  width: 250px;
 }
 .tm-panel-horizontal.tm-inverse {
   background-color: #000000;
@@ -181,11 +213,29 @@ header {
 .tm-featured {
   background-color: #f5f5f5;
 }
-.tm-content-right {
+.tm-content-right,
+.tm-content-left {
   position: relative;
   width: 50%;
-  margin-left: auto;
   z-index: 10;
+}
+.tm-content-right {
+  margin-left: auto;
+}
+.tm-content-left {
+  margin-right: auto;
+}
+.tm-bg-left,
+.tm-bg-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.tm-bg-left {
+  left: 0;
+}
+.tm-bg-right {
+  right: 0;
 }
 .tm-advertising {
   font-size: 30px;
@@ -210,20 +260,24 @@ header {
   left: 3000px;
   transition: left 1s;
 }
+.tm-advertising h2.animate-left::before {
+  transform: translateX(5%) skewX(-5deg);
+  left: -50px;
+  right: 3000px;
+  transition: right 1s;
+}
 .tm-advertising h2.animated {
   color: #ffffff;
 }
 .tm-advertising h2.animated::before {
   left: 0;
 }
-.tm-advertising p {
-  font-size: 20px;
+.tm-advertising h2.animated.animate-left::before {
+  left: -50px;
+  right: 0;
 }
-.tm-bg-left {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+.tm-advertising p {
+  font-size: 22px;
 }
 .tm-inverse {
   color: #ffffff;
@@ -245,11 +299,108 @@ header {
 .tm-inverse .uk-button-default:hover,
 .tm-inverse.uk-button-default:focus,
 .tm-inverse .uk-button-default:focus {
-  border-color: #999999;
+  border-color: #f34e58;
 }
 h1 {
   color: #ffffff;
 }
 .tm-main {
   background-image: url(../images/opera.jpg);
+}
+@media (max-width: 1599px) {
+  .tm-panel-horizontal {
+    padding: 20px;
+  }
+  .tm-panel-horizontal .tm-panel-header {
+    font-size: 26px;
+  }
+  .tm-panel-horizontal .tm-panel-subheader {
+    font-size: 22px;
+  }
+  .tm-panel-horizontal .tm-panel-place {
+    font-size: 18px;
+  }
+  .tm-panel-horizontal .tm-panel-controls .uk-button {
+    width: 170px;
+    font-size: 18px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 1199px) {
+  .uk-navbar-nav > li > a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 959px) {
+  html {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .tm-advertising {
+    font-size: 26px;
+  }
+  .tm-advertising h2 {
+    font-size: 32px;
+  }
+  .tm-advertising p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 639px) {
+  .tm-content-right,
+  .tm-content-left {
+    width: 100%;
+  }
+  .tm-panel-horizontal {
+    height: auto;
+    padding: 10px;
+    line-height: 1;
+  }
+  .tm-panel-horizontal .tm-panel-header {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .tm-panel-horizontal .tm-panel-subheader {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .tm-panel-horizontal .tm-panel-place {
+    font-size: 14px;
+  }
+  .tm-panel-horizontal .tm-panel-controls .uk-button {
+    width: 100%;
+  }
+  .tm-advertising {
+    font-size: 22px;
+  }
+  .tm-advertising h2 {
+    font-size: 26px;
+    padding: 0 10px;
+  }
+  .tm-advertising h2::before {
+    right: 0;
+    transform: none;
+    left: 3000px;
+    transition: left 1s;
+  }
+  .tm-advertising h2.animate-left::before {
+    transform: none;
+    left: 0;
+    right: 3000px;
+    transition: right 1s;
+  }
+  .tm-advertising h2.animated::before {
+    left: 0;
+  }
+  .tm-advertising h2.animated.animate-left::before {
+    right: 0;
+  }
+  .tm-advertising p {
+    font-size: 18px;
+  }
 }

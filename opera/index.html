@@ -13,7 +13,7 @@
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js"></script>
-<link href="styles/app.9cb65598fb5a5594d1ab.css" rel="stylesheet"></head>
+<link href="styles/app.4cb1ce54fcad9f3abc24.css" rel="stylesheet"></head>
 <body>
 
 <div class="uk-offcanvas-content">
@@ -29,12 +29,8 @@
 
                         </a>
 
-                        <!--mobile menu toggle-->
-                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@l"
-                           data-uk-navbar-toggle-icon data-uk-toggle></a>
-
                         <!--navbar menu-->
-                        <ul class="uk-navbar-nav uk-visible@l">
+                        <ul class="uk-navbar-nav uk-visible@m">
                             <li><a href="#">Item 1</a></li>
                             <li><a href="#">Item 2</a></li>
                             <li><a href="#">Item 3</a></li>
@@ -54,17 +50,22 @@
 
                     </div>
 
-                    <div class="uk-navbar-center uk-visible@l"></div>
+                    <div class="uk-navbar-center uk-visible@m"></div>
 
                     <div class="uk-navbar-right">
-                        <ul class="uk-navbar-nav uk-visible@l">
+
+                        <!--mobile menu toggle-->
+                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@m"
+                           data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+                        <ul class="uk-navbar-nav uk-visible@m">
                             <li>
                                 <a href="#">Theatres</a>
 
                                 <div class="uk-navbar-dropdown"
-                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
+                                     uk-drop="mode: hover;">
                                     <div class="uk-container">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li><a href="#">Mariinsky Theater</a></li>
                                             <li><a href="#">Hermitage Theater</a></li>
                                         </ul>
@@ -75,9 +76,9 @@
                                 <a href="#">Genres</a>
 
                                 <div class="uk-navbar-dropdown"
-                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
+                                     uk-drop="mode: hover;">
                                     <div class="uk-container">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li><a href="#">Opera</a></li>
                                             <li><a href="#">Ballet</a></li>
                                             <li><a href="#">Folk Show</a></li>
@@ -91,9 +92,9 @@
                                 <a href="#">Spectacles</a>
 
                                 <div class="uk-navbar-dropdown"
-                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
+                                     uk-drop="mode: hover;">
                                     <div class="uk-container">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li><a href="#">Swan Lake</a></li>
                                             <li><a href="#">La traviata</a></li>
                                         </ul>
@@ -110,20 +111,21 @@
             <div class="tm-main tm-inverse uk-section">
                 <div class="tm-main-content">
                     <div class="uk-container">
-                        <h1>Опера</h1>
-                        <div class="tm-sub-h1">есть такой жанр</div>
-                        <button class="uk-button uk-button-default">Афиша и билеты</button>
+                        <h1>Opera</h1>
+                        <div class="tm-sub-h1">there is such a genre</div>
+                        <button class="uk-button uk-button-default">Poster and tickets</button>
                     </div>
                 </div>
             </div>
 
             <!-- Section -->
             <div class="tm-advertising uk-section uk-height-viewport uk-position-relative">
-                <img class="tm-bg-left" src="images/opera-misc-3.jpg" alt="">
+                <img class="tm-bg-left uk-visible@s" src="images/opera-misc-3.jpg" alt="">
                 <div class="uk-container">
                     <div class="tm-content-right">
-                        <h2>Только у нас! Самые оригинальные постановки.</h2>
-                        <div>Такого вы ещё не видели, это не поющее дерево и не Оберон.</div>
+                        <h2>Only here! The most original productions.</h2>
+                        <img class="uk-width-1-1 uk-hidden@s" src="images/opera-misc-3.jpg" alt="">
+                        <div>This you have not seen, it is not a singing tree and not Oberon.</div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque enim magnam mollitia neque
                             quia quo unde, voluptate! Asperiores excepturi hic iure magni, mollitia placeat, rem
                             reprehenderit rerum sit sunt tempore?</p>
@@ -133,11 +135,11 @@
 
             <div class="tm-advertising uk-section">
                 <div class="uk-container uk-margin-xlarge-bottom ">
-                    <div class="uk-flex uk-flex-between uk-flex-middle uk-child-width-1-2">
-                        <div class="uk-margin-large-right">
+                    <div class="uk-child-width-1-2@s" data-uk-grid>
+                        <div>
                             <div>
-                                <h2>Пижоны обижают бедную девушку!</h2>
-                                <div>А вам интересно, что будет дальше? Посмотрите и узнаете.</div>
+                                <h2 class="animate-left">Dudes offend a poor girl!</h2>
+                                <div>And you wonder what will happen next? Take a look and find out.</div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque enim magnam mollitia
                                     neque
                                     quia quo unde, voluptate! Asperiores excepturi hic iure magni, mollitia placeat, rem
@@ -145,18 +147,18 @@
                             </div>
                         </div>
                         <div>
-                            <img data-uk-parallax="y: 150, 0, -150; opacity: 0.5,1, 1; viewport: 0.7" class="uk-width-expand" src="images/opera-misc-5.jpg" alt="">
+                            <img data-uk-parallax="y: 150, 0, -150; opacity: 0.5,1, 1; viewport: 0.7; media: @s" class="uk-width-expand" src="images/opera-misc-5.jpg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="uk-container">
-                    <div class="uk-flex uk-flex-between uk-flex-middle uk-child-width-1-2">
-                        <div class="uk-margin-large-right">
-                            <img data-uk-parallax="y: 150, 0, -150; opacity: 0.5,1, 1; viewport: 0.7" class="uk-width-expand" src="images/opera-misc-6.jpg" alt="">
+                    <div class="uk-child-width-1-2@s" data-uk-grid>
+                        <div class="uk-flex-last uk-flex-first@s">
+                            <img data-uk-parallax="y: 150, 0, -150; opacity: 0.5,1, 1; viewport: 0.7; media: @s" class="uk-width-expand" src="images/opera-misc-6.jpg" alt="">
                         </div>
                         <div>
-                            <h2>Невероятный поворот!</h2>
-                            <div>Вот что случается, когда разрешаешь женщинам ношение холодного оружия.</div>
+                            <h2>An incredible twist!</h2>
+                            <div>This is what happens when you allow women to carry knives.</div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque enim magnam mollitia
                                 neque
                                 quia quo unde, voluptate! Asperiores excepturi hic iure magni, mollitia placeat, rem
@@ -169,8 +171,8 @@
             <!-- Section -->
             <div class="tm-featured uk-section">
                 <div class="uk-container">
-                    <h2>Мы рекомендуем</h2>
-                    <div class="uk-child-width-1-2" data-uk-grid>
+                    <h2>We recommend</h2>
+                    <div class="uk-child-width-1-2@m" data-uk-grid>
                         <div>
                             <a href="" class="tm-panel-horizontal tm-inverse">
                                 <div class="tm-panel-bg">
@@ -182,21 +184,29 @@
                                 <div class="uk-position-relative uk-height-1-1 uk-flex uk-flex-between uk-flex-bottom">
                                     <div class="uk-height-1-1 uk-flex uk-flex-column uk-flex-between">
                                         <div class="tm-panel-header">
-                                            Название чего-нибудь
+                                            Ivan Vasilievich changes his wife
                                         </div>
                                         <div class="tm-panel-subheader">
-                                            Дополнительная <span>информация</span>
+                                            A delightful <span> comedy </span> with a sad ending
                                         </div>
                                         <div class="tm-panel-place">
-                                            Место проведения
+                                            Mariinskii Opera House
+                                        </div>
+                                        <div class="tm-panel-controls uk-margin-top uk-hidden@s">
+                                            <div>
+                                                buy tickets
+                                            </div>
+                                            <div>
+                                                <button class="uk-button uk-button-default">from <span>10 000</span> Rub</button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="tm-panel-controls uk-visible@s">
                                         <div>
-                                            купить билеты
+                                            buy tickets
                                         </div>
                                         <div>
-                                            <button class="uk-button uk-button-default">от ХХХХ Р</button>
+                                            <button class="uk-button uk-button-default">from <span>10 000</span> Rub</button>
                                         </div>
                                     </div>
                                 </div>
@@ -213,21 +223,29 @@
                                 <div class="uk-position-relative uk-height-1-1 uk-flex uk-flex-between uk-flex-bottom">
                                     <div class="uk-height-1-1 uk-flex uk-flex-column uk-flex-between">
                                         <div class="tm-panel-header">
-                                            Название чего-нибудь
+                                            Bachelorette party on the porch
                                         </div>
                                         <div class="tm-panel-subheader">
-                                            Дополнительная информация
+                                            Erotic <span>show</span> for special connoisseurs
                                         </div>
                                         <div class="tm-panel-place">
-                                            Место проведения
+                                            Hermitage Theater
+                                        </div>
+                                        <div class="tm-panel-controls uk-margin-top uk-hidden@s">
+                                            <div>
+                                                buy tickets
+                                            </div>
+                                            <div>
+                                                <button class="uk-button uk-button-default">from <span>10 000</span> Rub</button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="tm-panel-controls uk-visible@s">
                                         <div>
-                                            купить билеты
+                                            buy tickets
                                         </div>
                                         <div>
-                                            <button class="uk-button uk-button-default">от ХХХХ Р</button>
+                                            <button class="uk-button uk-button-default">from <span>10 000</span> Rub</button>
                                         </div>
                                     </div>
                                 </div>
@@ -244,21 +262,29 @@
                                 <div class="uk-position-relative uk-height-1-1 uk-flex uk-flex-between uk-flex-bottom">
                                     <div class="uk-height-1-1 uk-flex uk-flex-column uk-flex-between">
                                         <div class="tm-panel-header">
-                                            Название чего-нибудь
+                                            Koschei the Deathless
                                         </div>
                                         <div class="tm-panel-subheader">
-                                            Дополнительная информация
+                                            <span>Tragedy</span> in 3 parts
                                         </div>
                                         <div class="tm-panel-place">
-                                            Место проведения
+                                            Mikhailovsky Theater
+                                        </div>
+                                        <div class="tm-panel-controls uk-margin-top uk-hidden@s">
+                                            <div>
+                                                buy tickets
+                                            </div>
+                                            <div>
+                                                <button class="uk-button uk-button-default">from <span>10 000</span> Rub</button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="tm-panel-controls uk-visible@s">
                                         <div>
-                                            купить билеты
+                                            buy tickets
                                         </div>
                                         <div>
-                                            <button class="uk-button uk-button-default">от ХХХХ Р</button>
+                                            <button class="uk-button uk-button-default">from <span>10 000</span> Rub</button>
                                         </div>
                                     </div>
                                 </div>
@@ -275,21 +301,29 @@
                                 <div class="uk-position-relative uk-height-1-1 uk-flex uk-flex-between uk-flex-bottom">
                                     <div class="uk-height-1-1 uk-flex uk-flex-column uk-flex-between">
                                         <div class="tm-panel-header">
-                                            Название чего-нибудь
+                                            The Revenant
                                         </div>
                                         <div class="tm-panel-subheader">
-                                            Дополнительная информация
+                                            The incredible <span>story</span> of a round trip
                                         </div>
                                         <div class="tm-panel-place">
-                                            Место проведения
+                                            Nikolaevsky Palace
+                                        </div>
+                                        <div class="tm-panel-controls uk-margin-top uk-hidden@s">
+                                            <div>
+                                                buy tickets
+                                            </div>
+                                            <div>
+                                                <button class="uk-button uk-button-default">from <span>10 000</span> Rub</button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="tm-panel-controls uk-visible@s">
                                         <div>
-                                            купить билеты
+                                            buy tickets
                                         </div>
                                         <div>
-                                            <button class="uk-button uk-button-default">от ХХХХ Р</button>
+                                            <button class="uk-button uk-button-default">from <span>10 000</span> Rub</button>
                                         </div>
                                     </div>
                                 </div>
@@ -310,6 +344,56 @@
             <div class="tm-gallery uk-section">
                 <div class="uk-container">
 
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div class="tm-advertising uk-section uk-height-viewport uk-position-relative">
+                <img class="tm-bg-right uk-visible@s" src="images/opera-misc-4.jpg" alt="">
+                <div class="uk-container">
+                    <div class="tm-content-left">
+                        <h2 class="animate-left">Best decorations!</h2>
+                        <img class="uk-width-1-1 uk-hidden@s" src="images/opera-misc-4.jpg" alt="">
+                        <div>Only the best interior designers and decorators work for you.</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque enim magnam mollitia neque
+                            quia quo unde, voluptate! Asperiores excepturi hic iure magni, mollitia placeat, rem
+                            reprehenderit rerum sit sunt tempore?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tm-advertising uk-section">
+                <div class="uk-container uk-margin-xlarge-bottom ">
+                    <div class="uk-child-width-1-2@s" data-uk-grid>
+                        <div class="uk-flex-last uk-flex-first@s">
+                            <img data-uk-parallax="y: 150, 0, -150; opacity: 0.5,1, 1; viewport: 0.7; media: @s" class="uk-width-expand" src="images/opera-misc-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <div>
+                                <h2>Opera is impossible without a decent place.</h2>
+                                <div>Our opera theatres and houses are the best.</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque enim magnam mollitia
+                                    neque
+                                    quia quo unde, voluptate! Asperiores excepturi hic iure magni, mollitia placeat, rem
+                                    reprehenderit rerum sit sunt tempore?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-container">
+                    <div class="uk-child-width-1-2@s" data-uk-grid>
+                        <div>
+                            <h2 class="animate-left">Actors play like Gods!</h2>
+                            <div>And Gods they play too.</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque enim magnam mollitia
+                                neque
+                                quia quo unde, voluptate! Asperiores excepturi hic iure magni, mollitia placeat, rem
+                                reprehenderit rerum sit sunt tempore?</p>
+                        </div>
+                        <div>
+                            <img data-uk-parallax="y: 150, 0, -150; opacity: 0.5,1, 1; viewport: 0.7; media: @s" class="uk-width-expand" src="images/opera-misc-2.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -366,5 +450,5 @@
 
 </div>
 
-<script type="text/javascript" src="scripts/app.9cb65598fb5a5594d1ab.js"></script><script type="text/javascript" src="scripts/vendors.9cb65598fb5a5594d1ab.js"></script></body>
+<script type="text/javascript" src="scripts/app.4cb1ce54fcad9f3abc24.js"></script><script type="text/javascript" src="scripts/vendors.4cb1ce54fcad9f3abc24.js"></script></body>
 </html>
