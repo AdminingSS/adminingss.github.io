@@ -1,0 +1,102 @@
+/**
+ * Create instance of Cookie.
+ *
+ * @constructor
+ * @this  {Cookie}
+ */
+function Cookie(name) {
+  /** **/
+}
+
+/**
+ * getter
+ *
+ * @this  {Cookie}
+ * @return {string} value
+ *
+ * @static
+ */
+Cookie.prototype.getItem = function(name) {
+  name = name.toString();
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : '';
+};
+
+/**
+ * setter
+ *
+ * @this  {Cookie}
+ *
+ * @static
+ */
+Cookie.prototype.setItem = function(name, value, options) {
+  options = options || {expires: '', path: '/'};
+  name = name.toString();
+  value = value.toString();
+
+  var updatedCookie = name + "=" + encodeURIComponent(value) +
+        ((options.expires) ? "; expires=" + options.expires : "") +
+        ((options.path) ? "; path=" + options.path : "") +
+        ((options.domain) ? "; domain=" + options.domain : "") +
+        ((options.secure) ? "; secure" : "");
+
+  if (byteLength(document.cookie) <= 4000) {
+    document.cookie = updatedCookie;
+  } else {
+    alert(window['overQuotaMessage'] || trans.large_cookie)
+  }
+};
+
+/**
+ * Create instance of Storage.
+ *
+ * @constructor
+ * @this  {Storage}
+ */
+function Storage() {
+  try {
+    localStorage.setItem('foo', 'bar');
+    localStorage.removeItem('foo');
+    this.store = localStorage
+  } catch (e) {
+    this.store =  new Cookie();
+  }
+}
+
+/**
+ * getter
+ *
+ * @this  {Storage}
+ * @return {string} value
+ */
+Storage.prototype.getItem = function(name) {
+  return this.store.getItem(name);
+};
+
+/**
+ * setter
+ *
+ * @this  {Storage}
+ */
+Storage.prototype.setItem = function(name, value) {
+  return this.store.setItem(name, value);
+};
+
+/**
+ * returns the byte length of an utf8 string
+ *
+ * @param  {string} str - utf8 string
+ * @return {number} byte length
+ */
+function byteLength(str) {
+  var s = str.length;
+  for (var i=str.length-1; i>=0; i--) {
+    var code = str.charCodeAt(i);
+    if (code > 0x7f && code <= 0x7ff) s++;
+    else if (code > 0x7ff && code <= 0xffff) s+=2;
+    if (code >= 0xDC00 && code <= 0xDFFF) i--; //trail surrogate
+  }
+  return s;
+}

@@ -1,0 +1,499 @@
+Vue.component('lnk', {
+  props: ['url', 'class', 'style', 'dataTest'],
+  template: '<a :href="url" :data-test="dataTest"><slot></slot></a>'
+});
+
+var afishaList = new Vue({
+
+    el: '#afishaList',
+    data: {
+        events: [], // TODO storage on vuex
+        filteredEvents: [],
+        isComplete: false,
+        isLoading: false,
+        monthNames: [],
+        monthIds: [],
+        nextMonthName: '',
+        monthIndex: window.back_month_index ? window.back_month_index : -1,
+        monthStaticIndex: window.next_month_id ? window.next_month_id : -1,
+        uiReady: false,
+        needDateFilter: false,
+        place_slug: '',
+        static_events: window.static_events,
+        need_sort_unique: false,
+        selectedGenre: window.genre_from_back ? window.genre_from_back : ''
+    },
+    delimiters: ["<%","%>"],
+
+    computed: {
+        eventDay: function() {
+            return function(event) {
+                return event.date.split(' ')[0];
+            }
+        },
+        eventMonth: function() {
+            return function(event) {
+                return event.date.split(' ')[1];
+            }
+        },
+        eventYear: function() {
+            return function(event) {
+                return event.date.split(' ')[2];
+            }
+        },
+        eventGroups: function() {
+            if ( this.events.length == 0 )
+                return {};
+            return this.events.reduce(function (r, a) {
+                r[a.date_alt] = r[a.date_alt] || [];
+                r[a.date_alt].push(a);
+                return r;
+            }, Object.create(null));
+        }
+    },
+
+    beforeCreate: function() {
+        var self = this;
+        currentEventsStep = 50;
+        $(".static_events").remove();
+        if (afishaEventsCropper) {
+            setTimeout(function(){
+                self.afishaEventsCropper();
+            }, 200)
+        }
+    },
+
+    created: function() {
+        var self = this;
+        $('[data-month]').each(function(){
+            self.monthNames.push( $(this).text() );
+            self.monthIds.push( $(this).attr('data-month') );
+        });
+
+        this.monthIndex = this.monthStaticIndex ? this.monthStaticIndex: this.monthIndex;
+        this.nextMonthName = this.monthNames[this.monthIndex];
+        this.initFilters();
+    },
+
+    mounted: function() {
+      this.isComplete = true;
+      this.place_slug = $("body").data("place_slug");
+
+      if (this.static_events.length) {
+        this.loadStaticEvents();
+        this.need_sort_unique = true;
+        $('body').removeClass('loading');
+      } else {
+        this.loadEvents(this.monthIds[this.monthIndex], false, 15, this.place_slug);
+      }
+    },
+
+    methods: {
+
+        afishaEventsCropper: function() {
+            var self = this;
+            $(".big__afisha__load").remove();
+            afishaType = $('#afishaList .date__content').length ? 'pc' : $('#afishaList .best_new__element') ? 'mobile' : false;
+            eventCount = afishaType === 'pc' ? $('#afishaList .date__content').length : $('#afishaList .best_new__element').length;
+            if (afishaType && eventCount > currentEventsStep) {
+                currentEventsCount = currentEventsStep;
+                var nextEventsButton = '<div class="big__afisha__load' + (afishaType === 'pc' ? ' tickets__load' : '' ) + '"><span class="tickets_static">' + trans.show_next + '</span></div>';
+                if (afishaType === 'pc') {
+                    $('#afishaList #t_load').before(nextEventsButton);
+                    $('#afishaList .date__content').slice(currentEventsCount, eventCount).hide();
+                    $('#afishaList #t_load').hide();
+                } else {
+                    $('#afishaList .tickets_new__load').before(nextEventsButton);
+                    $('#afishaList .best_new__element').slice(currentEventsCount, eventCount).hide();
+                    $('#afishaList .tickets_new__load').hide();
+                    self.showHideEventDates();
+                }
+                
+                $(".big__afisha__load").on("click", function() {
+                    self.showNextEvents();
+                });
+            }
+        },
+
+        showNextEvents: function() {
+            var nextStep = currentEventsCount + currentEventsStep;
+            if (afishaType === 'pc') {
+                $('#afishaList .date__content').slice(currentEventsCount, nextStep).fadeIn(400);
+            } else {
+                $('#afishaList .best_new__element').slice(currentEventsCount, nextStep).fadeIn(400);
+                $('#afishaList .best_new__element').slice(currentEventsCount, nextStep).parent().fadeIn(400);
+            }
+            currentEventsCount = nextStep;
+            if (nextStep >= eventCount) {
+                if (afishaType === 'pc') {
+                    $("#t_load").fadeIn(400);
+                } else {
+                    $('#afishaList .tickets_new__load').fadeIn(400);
+                }
+                $(".big__afisha__load").fadeOut(300);
+            }
+        },
+
+        showHideEventDates: function() {
+            $( "#afishaList .best_new__element_wrp" ).each(function(index) {
+                if ($(this).children('.best_new__element').eq(0).is(':hidden')) {
+                    $(this).hide();
+                }
+            });
+        },
+
+        arrayUnique: function () {
+            var self = this,
+                seen = [];
+
+            self.events = self.events.filter(function(em){
+                if (seen.indexOf(em.id) == -1) {
+                    seen.push(em.id);
+                    return true;
+                }
+
+                return false;
+            });
+
+            self.need_sort_unique = false;
+        },
+
+        loadStaticEvents: function () {
+            this.filteredEvents = this.events = this.static_events;
+            this.uiReady = true;
+            this.updateFilters();
+        },
+
+        loadEvents: function (monthId, append, min, place_slug) {
+            if (this.isLoading)
+                return;
+
+            var self = this,
+                needUpdateCalendar = false,
+                place_slug__row = '';
+
+            if (!monthId) {
+                if (this.need_sort_unique) {
+                    monthId = this.monthIds[ ( this.monthIndex  ) ];
+                } else {
+                    monthId = this.monthIds[ ( this.monthIndex + 1 ) ];
+                }
+                if (!monthId) return;
+            } else {
+                $('.new_loader').addClass('active');
+                this.nextMonthName = this.monthNames[ this.monthIds.indexOf(monthId) ];
+                needUpdateCalendar = true;
+
+                $('#filter_search').val('');
+                $('.date__content').show();
+            }
+
+            if (place_slug) {
+                place_slug__row = '&place_slug=' + place_slug;
+            }
+
+            $('body').addClass('loading');
+            this.isLoading = true;
+            this.monthIndex = this.monthIds.indexOf(monthId);
+            this.$http.get('/seances_list/?month=' + monthId + '&lang=' + LANG_CODE + place_slug__row).then(function (response) {
+                this.events = append ? this.events.concat(response.body) : response.body;
+                this.filteredEvents = this.events;
+                
+                if (this.need_sort_unique)
+                    this.arrayUnique();
+
+                this.isLoading = false;
+                this.nextMonthName = this.monthNames[ ( this.monthIndex + 1 ) ];
+                $('body').removeClass('loading');
+                $('.new_loader').removeClass('active');
+
+                if (needUpdateCalendar)
+                    this.updateCalendar(response.body);
+
+                if (min && this.events.length < min && this.nextMonthName !== undefined) {
+                    this.loadEvents(null, true, min);
+                } else {
+                    this.updateFilters();
+                    this.uiReady = true;
+                }
+
+                if (afishaEventsCropper) {
+                    setTimeout(function(){
+                        self.afishaEventsCropper();
+                    }, 200)
+                }
+
+                $(".lazyloaded").addClass("lazyload");
+                
+            }, function(error) {
+                this.isLoading = false;
+                this.nextMonthName = '';
+                this.events = [];
+                // this.filteredEvents = []; returns an empty event list
+                this.uiReady = true;
+                $('body').removeClass('loading');
+                $('.new_loader').removeClass('active');
+                console.log(error.status, error.statusText, error.url)
+            });
+        },
+
+        updateCalendar: function(events){
+            if ( !window.afishaCalendar )
+                return;
+            window.afishaCalendar.setEvents(events);
+        },
+
+        updateFilters: function() {
+            var $stage_f = $('#stage_filter'),
+                $genre_f = $('#genre_filter'),
+                selected_genre = "";
+
+            if ( $stage_f.length == 0 && $genre_f.length == 0 )
+                return;
+            
+            if (!this.needDateFilter && $('#dateFilter').length > 0) {
+                $('#dateFilter').data('dateRangePicker').clear();
+                $('#dateFilter').data('dateRangePicker').showMonth($('#months_filter').val(), 'MMYYYY');
+            }
+
+            $('#stage_filter, #genre_filter').html("");
+            
+            this.events.forEach(function(em) {
+                if (!$stage_f.find('option[value="' + em.hall_id + '"]').length) {
+                    $stage_f.append('<option data-stage="'+em.hall_id+'" value="'+em.hall_id+'" selected>'+em.hall_name+'</option>');
+                }
+
+                if (em.tags) {
+                    em.tags.forEach(function(tag) {
+                        if (tag.name && !$genre_f.find('option[value="' + tag.slug + '"]').length && tag.category !== 'misc') {
+                            if (tag.slug == window.genre_from_back) {
+                                selected_genre = "selected";
+                            } else {
+                                selected_genre = "";
+                            }
+
+                            $genre_f.append('<option data-genre="' + tag.slug + '" value="' + tag.slug + '"' + selected_genre + '>' + tag.name + '</option>');
+                        }
+                    });
+                }
+            });
+
+            $('#stage_filter, #genre_filter').multipleSelect('refresh');
+
+            if (!$genre_f.find('option').length) {
+                $genre_f.multipleSelect('disable');
+                $genre_f.parent().find('.placeholder').html('Все')
+            } else {
+                $genre_f.multipleSelect('enable');
+            }
+
+            $genre_f.parent().find('.placeholder').html($genre_f.data('all'));
+            $stage_f.parent().find('.placeholder').html($stage_f.data('all'));
+        },
+
+        initFilters: function() {
+            var self = this;
+
+            if (window.back_month_id){
+                $('#months_filter').val(window.back_month_id);
+            }
+
+            if ($('#dateFilter').length > 0) {
+                $('#dateFilter').dateRangePicker({
+                    startOfWeek: 'monday',
+                    language: window.LANG_CODE,
+                    singleMonth: true,
+                    showTopbar: false,
+                    separator: ',',
+                    customArrowPrevSymbol: '&lsaquo;',
+                    customArrowNextSymbol: '&rsaquo;',
+                    hoveringTooltip: false,
+                    autoClose: false,
+                    startDate: $('#dateFilter').data('start'),
+                    endDate: $('#dateFilter').data('end')
+                }).bind('datepicker-change',function(event,obj) {
+                    /* This event will be triggered when second date is selected */
+                    var curMonth = moment(obj.date1).format('MMYYYY');
+
+                    if (curMonth == $('#months_filter').val() && !window.td_tmrr){
+                        self.filter();
+                    } else {
+                        $('#months_filter').val(curMonth);
+                        $('#months_filter').multipleSelect('refresh');
+                        self.needDateFilter = true;
+                    }
+                }).bind('datepicker-close',function(){
+                    $(this).removeClass("active");
+                });
+            }
+
+            if (!!jQuery.fn.multipleSelect) {
+                $("#months_filter").multipleSelect({
+                    selectAllText: trans.all,
+                    allSelected: trans.all,
+                    countSelected: trans.selected_from,
+                    noMatchesFound: trans.not_found,
+                    single: 'true',
+                    animate: 'slide'
+                });
+        
+                $("#genre_filter").multipleSelect({
+                    selectAllText: trans.all,
+                    allSelected: trans.all,
+                    countSelected: trans.selected_from,
+                    noMatchesFound: trans.not_found,
+                    animate: 'slide'
+                });
+
+                $("#stage_filter").multipleSelect({
+                    selectAllText: trans.all,
+                    allSelected: trans.all,
+                    countSelected: trans.selected_from,
+                    noMatchesFound: trans.not_found,
+                    animate: 'slide'
+                });
+
+                setTimeout(function () {
+                    $(".filter_wrp__genres .ms-select-all").on("click", function(){
+                        if ($(this).hasClass("selected")) {
+                            $('#genre_filter').multipleSelect('uncheckAll'); 
+                        } else {
+                            $('#genre_filter').multipleSelect('checkAll');
+                        }
+                    });
+
+                    $(".filter_wrp__halls .ms-select-all").on("click", function(){
+                        if ($(this).hasClass("selected")) {
+                            $('#stage_filter').multipleSelect('uncheckAll'); 
+                        } else {
+                            $('#stage_filter').multipleSelect('checkAll');
+                        }
+                    });
+                }, 100);
+            }
+
+            $('#stage_filter, #genre_filter').on('change', function() {
+                self.filter();
+            });
+
+            $('#genre_filter').on('change', function() {
+                if (!self.selectedGenre && $("#afisha_page").length) {
+                    self.selectedGenre = $("#genre_filter :selected").val();
+                    self.changeUrl();
+                }
+            });
+
+
+            $('#months_filter').on('change', function(params) {
+               if (self.uiReady)
+                   self.loadEvents( $(this).val() );
+            });
+
+            var $searchField = $('#t_search');
+
+            $searchField.keydown(function(e){
+                if(e.keyCode === 13) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            $searchField.on('input', function() {
+                self.filter();
+            });
+
+            $('.new__month').on('click', function() {
+                if ( $(this).hasClass('active') )
+                    return;
+                $('.new__month').removeClass('active');
+                $(this).addClass('active');
+                self.loadEvents( $(this).attr('data-month') );
+            });
+        },
+
+        filter: function() {
+            var self = this;
+            
+            if (window.back_date_range_1 && window.back_date_range_2){
+                this.filteredEvents = this.events.filter(function(em){
+                    return (em.date_alt >= window.back_date_range_1 && em.date_alt < window.back_date_range_2)
+                });
+            }
+
+            if (window.back_date){
+                this.filteredEvents = this.events.filter(function(em){
+                    return (em.date_alt === window.back_date)
+                });
+                // TODO: придумать, как более быстро отрисовать все события за первый месяц как на /afisha/
+                // в случае отсутствия событий за сегодня/завтра/в заданный день
+                // урлы, которые могут быть без событий (/afisha/[today, tomorrow], /afisha/july/6/)
+                // if (!this.filteredEvents.length){window.location.href = '/afisha/';}
+            }
+
+            if (window.genre_from_back && $("[data-genre='" + window.genre_from_back + "']").length){
+                //TODO: проставить галочку у жанра
+                var genre_filter = $('#genre_filter');
+
+                genre_filter.val(window.genre_from_back);
+                this.filteredEvents = this.events.filter(function(em){
+                    return (self.filterGenres(genre_filter.val(), em.tags))
+                });
+                // if (!this.filteredEvents.length){window.location.href = '/afisha/';}
+            }
+            
+            if (window.back_premier_slugs){
+                this.filteredEvents = this.events.filter(function(em){
+                    return (em.is_premiere === true)
+                });
+            }
+
+            if (this.isLoading || !this.uiReady)
+                return;
+            this.needDateFilter = false;
+            var genres = $('#genre_filter').val() || [];
+            var stages = $('#stage_filter').val() || [];
+            var dateRange = $('#dateFilter').val() ? $('#dateFilter').val().split(',') : [];
+            var search_row = $('#t_search').val() || "";
+
+            if ( $('[data-name=selectAllgenres]').prop('checked') )
+                genres = [];
+
+            if (!window.back_date 
+                && !window.genre_from_back
+                && !window.back_premier_slugs 
+                && !(window.back_date_range_1 
+                && window.back_date_range_2)){
+            // if (!window.back_date){
+                this.filteredEvents = this.events.filter(function(em){
+                    return em.title.toLowerCase().indexOf(search_row.toLowerCase()) >= 0 && ( genres.length == 0 || self.filterGenres(genres, em.tags) ) &&
+                        ( stages.length == 0 || stages.indexOf(em.hall_id.toString())  != -1 ) &&
+                        ( dateRange.length == 0 || em.date_alt >= dateRange[0] && em.date_alt <= dateRange[1])
+                });
+            }
+
+            $('#filter_search').val('');
+            $('.date__content').show();
+            if (afishaEventsCropper) {
+                setTimeout(function(){
+                    self.afishaEventsCropper();
+                }, 200)
+            }
+        },
+
+        filterGenres: function(genres, tags) {
+            var is_stages = false;
+            tags.forEach(function(tag) {
+                if (genres.indexOf(tag.slug) != -1) {
+                    is_stages = true;
+                }
+            });
+            return is_stages;
+        },
+
+        changeUrl: function() {
+            if (this.selectedGenre) {
+                history.pushState(null, '', this.selectedGenre + '/');
+            }
+        }
+    }
+});
