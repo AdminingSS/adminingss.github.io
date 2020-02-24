@@ -245,7 +245,7 @@
 .slider_official__icon {
     width: 30px;
     height: 30px;
-    background: url(/static/img/slider_official__icon.svg) 50% no-repeat;
+    background: url(../images/slider_official__icon.svg) 50% no-repeat;
     background-size: contain;
     cursor: pointer;
     position: relative;
@@ -386,7 +386,7 @@
 
 .pay_icon-3 {
     min-height: 14px;
-    background: url(/static/img/pay_icon-3.svg) 0 no-repeat;
+    background: url(../images/pay_icon-3.svg) 0 no-repeat;
     background-size: 12px 14px;
     font-size: 10px;
     color: #fff;
@@ -394,7 +394,15 @@
     padding: 0 0 0 21px
 }
 
+.flatpickr-calendar {
+    top: 0;
+}
 
+@media (max-width: 1024px) {
+    #main {
+        margin-top: 0!important;
+    }
+}
 
 @media (max-width: 1000px) {
     .wrapper {
@@ -458,9 +466,9 @@
         display: none
     }
 
-    .slide-top, .slider-top {
-        max-height: 500px
-    }
+    /*.slide-top, .slider-top {*/
+        /*max-height: 500px*/
+    /*}*/
 
     .electron_com svg {
         width: 40px;
@@ -486,13 +494,13 @@
 }
 
 @media (max-width: 640px) {
-    .wrapper {
-        margin: 56px 0 0
-    }
+    /*.wrapper {*/
+        /*margin: 56px 0 0*/
+    /*}*/
 
-    .slide-top, .slider-top {
-        height: 360px
-    }
+    /*.slide-top, .slider-top {*/
+        /*height: 360px*/
+    /*}*/
 
     .slide-top__title {
         font-size: 30px;
