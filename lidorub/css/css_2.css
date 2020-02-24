@@ -2182,7 +2182,7 @@ section:focus {
 .back:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -2395,7 +2395,7 @@ section:focus {
 .btn-arrow:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/blue.svg);
+    background-image: url(../images/blue.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -2438,7 +2438,7 @@ section:focus {
 .arrow-btn:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -2487,7 +2487,7 @@ section:focus {
 .calendar:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/calendar.svg);
+    background-image: url(../images/calendar.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -2899,7 +2899,7 @@ section:focus {
 .owl-nav .owl-prev:before, .owl-nav .owl-next:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/white.svg);
+    background-image: url(../images/white.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -2922,7 +2922,7 @@ section:focus {
 .owl-nav .owl-prev:after, .owl-nav .owl-next:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3062,7 +3062,7 @@ section:focus {
 .dropdown li:first-child:before, #nav .container:nth-of-type(1) .language-switcher-language-url li:first-child:before, #nav #cookie .cookie__content:nth-of-type(1) .language-switcher-language-url li:first-child:before, #cookie #nav .cookie__content:nth-of-type(1) .language-switcher-language-url li:first-child:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3240,7 +3240,7 @@ section:focus {
 .dropup li:first-child:before, #footer .language-switcher-language-url li:first-child:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3469,7 +3469,7 @@ section:focus {
 }
 
 .quantity .less {
-    background-image: url(/themes/lido/img/icon/less.svg);
+    background-image: url(../images/less.svg);
     background-size: 9px auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3477,7 +3477,7 @@ section:focus {
 }
 
 .quantity .more {
-    background-image: url(/themes/lido/img/icon/more.svg);
+    background-image: url(../images/more.svg);
     background-size: 9px auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3839,7 +3839,7 @@ section:focus {
 .section .tarif span:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3918,7 +3918,7 @@ section:focus {
 .social li a.facebook:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/social/facebook_on.svg);
+    background-image: url(../images/facebook_on.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3929,7 +3929,7 @@ section:focus {
 .social li a.facebook:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/social/facebook.svg);
+    background-image: url(../images/facebook.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3940,7 +3940,7 @@ section:focus {
 .social li a.instagram:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/social/instagram_on.svg);
+    background-image: url(../images/instagram_on.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3951,7 +3951,7 @@ section:focus {
 .social li a.instagram:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/social/instagram.svg);
+    background-image: url(../images/instagram.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3962,7 +3962,7 @@ section:focus {
 .social li a.youtube:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/social/youtube_on.svg);
+    background-image: url(../images/youtube_on.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3973,7 +3973,7 @@ section:focus {
 .social li a.youtube:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/social/youtube.svg);
+    background-image: url(../images/youtube.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3984,7 +3984,7 @@ section:focus {
 .social li a.twitter:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/social/twitter_on.svg);
+    background-image: url(../images/twitter_on.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3995,7 +3995,7 @@ section:focus {
 .social li a.twitter:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/social/twitter.svg);
+    background-image: url(../images/twitter.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -4048,7 +4048,7 @@ section:focus {
     margin-top: -3px;
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -4152,7 +4152,7 @@ section:focus {
         margin-top: -3px;
         content: "";
         display: block;
-        background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+        background-image: url(../images/gold.svg);
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center center;
@@ -4833,7 +4833,7 @@ section:focus {
     z-index: -1;
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/block/booking/bg.jpg);
+    background-image: url(../images/bg.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -4899,7 +4899,7 @@ section:focus {
 }
 
 .booking .title .shining-star:before {
-    content: url(/themes/lido/img/page/home/shining-star.png);
+    content: url(../images/shining-star.png);
     display: block
 }
 
@@ -5335,13 +5335,12 @@ section:focus {
 .infos > .container:before, #cookie .infos > .cookie__content:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/block/infos/plumes.png);
+    background-image: url(../images/plumes.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
     width: 61px;
     height: 85px;
-    display: block;
     position: absolute;
     top: -33px;
     left: auto;
@@ -5378,14 +5377,14 @@ section:focus {
 }
 
 .infos:before {
-    background-image: url(/themes/lido/img/block/infos/plumes-left.png);
+    background-image: url(../images/plumes-left.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: bottom left
 }
 
 .infos:after {
-    background-image: url(/themes/lido/img/block/infos/plumes-right.png);
+    background-image: url(../images/plumes-right.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: bottom right
@@ -5491,7 +5490,7 @@ section:focus {
 .infos .content:nth-of-type(3) a:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -6688,12 +6687,12 @@ section:focus {
     right: 20px;
     width: 36px;
     height: 36px;
-    background: transparent url(/themes/lido/img/icon/picto_son_off.svg) no-repeat;
+    background: transparent url(../images/picto_son_off.svg) no-repeat;
     display: none
 }
 
 #header .video-toggle-sound.on {
-    background: transparent url(/themes/lido/img/icon/picto_son_on.svg) no-repeat
+    background: transparent url(../images/picto_son_on.svg) no-repeat
 }
 
 #header .title {
@@ -6704,7 +6703,7 @@ section:focus {
     transform: translate(-50%, -50%);
     width: 350px;
     height: 350px;
-    background-image: url(/themes/lido/img/layout/header/logo.png)
+    background-image: url(../images/logo.png)
 }
 
 #header .title.animated {
@@ -6778,7 +6777,7 @@ section:focus {
     transform: translateX(-50%);
     width: 15px;
     height: 50px;
-    background-image: url(/themes/lido/img/layout/header/scroll.png)
+    background-image: url(../images/scroll.png)
 }
 
 #header .scroll.active {
@@ -7082,7 +7081,7 @@ section:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(/themes/lido/img/icon/active-menu.svg);
+    background-image: url(../images/active-menu.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center 41px
@@ -7184,7 +7183,7 @@ section:focus {
     transform: translateY(-70%);
     width: 20px;
     height: 23px;
-    background: url(/themes/lido/img/icon/picto-gift.svg) 100%
+    background: url(../images/picto-gift.svg) 100%
 }
 
 #nav .container:nth-of-type(1) ul.nav-secondary > li, #nav #cookie .cookie__content:nth-of-type(1) ul.nav-secondary > li, #cookie #nav .cookie__content:nth-of-type(1) ul.nav-secondary > li {
@@ -7256,7 +7255,7 @@ section:focus {
 #nav .container:nth-of-type(1) a.tel:after, #nav #cookie .cookie__content:nth-of-type(1) a.tel:after, #cookie #nav .cookie__content:nth-of-type(1) a.tel:after {
     width: 17px;
     height: 22px;
-    background-image: url(/themes/lido/img/icon/tel.svg);
+    background-image: url(../images/tel.svg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -7342,7 +7341,7 @@ section:focus {
 #nav .container:nth-of-type(2) a.tel:after, #nav #cookie .cookie__content:nth-of-type(2) a.tel:after, #cookie #nav .cookie__content:nth-of-type(2) a.tel:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/tel.svg);
+    background-image: url(../images/tel.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -7463,7 +7462,7 @@ section:focus {
     transform: translateY(-70%);
     width: 20px;
     height: 23px;
-    background: transparent url(/themes/lido/img/icon/picto-gift.svg) 100%;
+    background: transparent url(../images/picto-gift.svg) 100%;
     opacity: 1
 }
 
@@ -7488,7 +7487,7 @@ section:focus {
     left: 25px;
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -7568,7 +7567,7 @@ section:focus {
     right: 26px;
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -8280,7 +8279,7 @@ section:focus {
         bottom: 0;
         content: "";
         display: block;
-        background-image: url(/themes/lido/img/layout/popin/plumes.png);
+        background-image: url('../images/plumes(1).png');
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center center;
@@ -8296,7 +8295,7 @@ section:focus {
         right: 125px;
         content: "";
         display: block;
-        background-image: url(/themes/lido/img/layout/popin/plume.png);
+        background-image: url(../images/plume.png);
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center center;
@@ -8907,7 +8906,7 @@ section:focus {
 }
 
 .offers_page #programme-menu .wrapper:after {
-    background-image: url(/themes/lido/img/page/offer-detail/bg-plumes.png);
+    background-image: url(../images/bg-plumes.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -9267,7 +9266,7 @@ section:focus {
 .offers_page #programme-menu .mentions ul li a:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -9839,7 +9838,7 @@ section:focus {
 .offers_page #autres-offres .container .content .content-block .more:after, .offers_page #autres-offres #cookie .cookie__content .content .content-block .more:after, #cookie .offers_page #autres-offres .cookie__content .content .content-block .more:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -9963,7 +9962,7 @@ section:focus {
 }
 
 .offers_page #main .detail-offre .detail-offre-nav a.detail-offre-prev:before {
-    content: url(/themes/lido/img/icon/arrow/gold.svg);
+    content: url(../images/gold.svg);
     position: absolute;
     left: 0;
     top: 50%;
@@ -10013,7 +10012,7 @@ section:focus {
 }
 
 .offers_page #main .detail-offre .detail-offre-nav a.detail-offre-next:before {
-    content: url(/themes/lido/img/icon/arrow/gold.svg);
+    content: url(../images/gold.svg);
     position: absolute;
     right: 0;
     top: 50%;
@@ -10729,7 +10728,7 @@ section:focus {
 
 @media screen and (max-width: 1024px) {
     .page_casting_recruiting #main .layout-content:before {
-        background-image: url(/themes/lido/img/page/casting/plumes/1.png);
+        background-image: url(../images/plumes-1.png);
         background-size: 100%;
         content: "";
         height: 61px;
@@ -10865,7 +10864,7 @@ section:focus {
     z-index: -1;
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/block/booking/bg.jpg);
+    background-image: url(../images/bg.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -10883,7 +10882,7 @@ section:focus {
     .page_casting_recruiting #reply:before {
         content: "";
         display: block;
-        background-image: url(/themes/lido/img/block/booking/bg.jpg);
+        background-image: url(../images/bg.jpg);
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center center;
@@ -13473,7 +13472,7 @@ section:focus {
 .home_page .section#paris:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/page/home/bg-paris.jpg);
+    background-image: url(../images/bg-paris.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -13501,7 +13500,7 @@ section:focus {
 }
 
 .home_page .section#paris .shining-star:before {
-    content: url(/themes/lido/img/page/home/shining-star.png);
+    content: url(../images/shining-star.png);
     display: block
 }
 
@@ -14045,7 +14044,7 @@ section:focus {
 .home_page .section#show .container:nth-of-type(1) .content:nth-of-type(1):before, .home_page .section#show #cookie .cookie__content:nth-of-type(1) .content:nth-of-type(1):before, #cookie .home_page .section#show .cookie__content:nth-of-type(1) .content:nth-of-type(1):before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/page/home/halos/1.png);
+    background-image: url(../images/halos1.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -15685,7 +15684,7 @@ section:focus {
     .all_offers_page #listing-offres .offre .hover > span:nth-child(2):after, .page_offer_category #listing-offres .offre .hover > span:nth-child(2):after, .page_category_offer_company #listing-offres .offre .hover > span:nth-child(2):after, .evenementiel #listing-offres .offre .hover > span:nth-child(2):after {
         content: "";
         display: block;
-        background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+        background-image: url(../images/gold.svg);
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center center;
@@ -15853,7 +15852,7 @@ section:focus {
     .all_offers_page #listing-offres .offre .hover:after, .page_offer_category #listing-offres .offre .hover:after, .page_category_offer_company #listing-offres .offre .hover:after, .evenementiel #listing-offres .offre .hover:after {
         content: "";
         display: block;
-        background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+        background-image: url(../images/gold.svg);
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center center;
@@ -16240,7 +16239,7 @@ section:focus {
 .all_offers_page #listing-offres .offre .offer-teaser-desc .offer-teaser-avantages-price .offer-teaser-price .offer-teaser-tarif .offer-teaser-hover > span:nth-child(2):after, .page_offer_category #listing-offres .offre .offer-teaser-desc .offer-teaser-avantages-price .offer-teaser-price .offer-teaser-tarif .offer-teaser-hover > span:nth-child(2):after, .page_category_offer_company #listing-offres .offre .offer-teaser-desc .offer-teaser-avantages-price .offer-teaser-price .offer-teaser-tarif .offer-teaser-hover > span:nth-child(2):after, .evenementiel #listing-offres .offre .offer-teaser-desc .offer-teaser-avantages-price .offer-teaser-price .offer-teaser-tarif .offer-teaser-hover > span:nth-child(2):after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -16666,7 +16665,7 @@ section:focus {
 }
 
 #offrir-header .offrir-header-title h1 span:after {
-    content: url(/themes/lido/img/icon/picto-gift.svg);
+    content: url(../images/picto-gift.svg);
     position: absolute;
     right: -40px;
     bottom: 0;
@@ -16906,7 +16905,7 @@ section:focus {
 #order-confirm .order-header {
     position: relative;
     z-index: 3;
-    background: url(/themes/lido/img/page/order-confirm/order-stars.png) no-repeat 50% 0;
+    background: url(../images/order-stars.png) no-repeat 50% 0;
     padding: 0 15px 50px 15px
 }
 
@@ -17648,7 +17647,7 @@ section:focus {
 .page_partners #partners .container .content .partner-desc .partner-link:before, .page_partners #partners #cookie .cookie__content .content .partner-desc .partner-link:before, #cookie .page_partners #partners .cookie__content .content .partner-desc .partner-link:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -19029,7 +19028,7 @@ section:focus {
 .show_page #artists .popin .owl-nav .owl-prev:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -19049,7 +19048,7 @@ section:focus {
 .show_page #artists .popin .owl-nav .owl-next:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -19235,7 +19234,7 @@ section:focus {
         padding: 100px 80px;
         padding-left: 180px;
         min-height: 685px;
-        background-image: url(/themes/lido/img/page/show/bg-plumes.jpg);
+        background-image: url(../images/bg-plumes.jpg);
         background-size: auto;
         background-repeat: no-repeat;
         background-position: -380px 410px;
@@ -19768,7 +19767,7 @@ section:focus {
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -20001,7 +20000,7 @@ section:focus {
 .reservation-tunnel .step .price-more .more:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -20971,7 +20970,7 @@ section:focus {
 .reservation-tunnel .step.step2 .offer-list .offer .content-block .show-menu:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -21110,7 +21109,7 @@ section:focus {
 .reservation-tunnel .step.step2 .offer-list .offer .content-block .menu .menu-informations .consult span:before {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/arrow/gold.svg);
+    background-image: url(../images/gold.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;

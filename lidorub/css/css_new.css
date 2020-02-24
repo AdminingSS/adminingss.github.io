@@ -1,0 +1,12 @@
+.tm-poster {
+    display: block;
+    opacity: 0;
+}
+
+.tm-poster.done {
+    opacity: 1;
+}
+
+#header video {
+    opacity: 1;
+}
