@@ -21343,7 +21343,7 @@ section:focus {
 }
 
 .reservation-tunnel .step.step3 #cake-modif-tab:after {
-    background-image: url(.../images/plumes-right.png);
+    background-image: url(../images/plumes-right.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: bottom right
