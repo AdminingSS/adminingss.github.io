@@ -2110,7 +2110,7 @@ input[type="checkbox"]:not(:checked) + label:before, input[type="checkbox"]:chec
 }
 
 input[type="checkbox"]:not(:checked) + label:after, input[type="checkbox"]:checked + label:after, input[type="radio"]:not(:checked) + label:after, input[type="radio"]:checked + label:after {
-    background: url(/themes/lido/img/icon/check.svg);
+    background: url(../images/check.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 10px auto
@@ -4349,7 +4349,7 @@ section:focus {
 .custom-select-container:after {
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/chevron.svg);
+    background-image: url(../images/chevron.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -10329,7 +10329,7 @@ section:focus {
 }
 
 .offers_page #main .detail-offre .detail-offre-reserver .detail-offre-offrir {
-    background: #f5f5f4 url(/themes/lido/img/icon/gift-detail-offer.svg) no-repeat 75px 25px;
+    background: #f5f5f4 url(../images/gift-detail-offer.svg) no-repeat 75px 25px;
     background-size: 28px 32px;
     width: calc(100% + 150px);
     margin-left: -75px;
@@ -19720,7 +19720,7 @@ section:focus {
     left: 0;
     width: 100vw;
     min-height: calc(100vh - 85px);
-    background: #040e2b url(/themes/lido/img/page/ticketing/bg.png) 50% 0 no-repeat;
+    background: #040e2b url(../images/order-bg.png) 50% 0 no-repeat;
     position: fixed;
     z-index: 666
 }
@@ -20088,7 +20088,7 @@ section:focus {
 }
 
 .reservation-tunnel .step.step1 .offrir-accroche {
-    background: #f5f5f4 url(/themes/lido/img/icon/gift-detail-offer.svg) no-repeat 75px 25px;
+    background: #f5f5f4 url(../images/gift-detail-offer.svg) no-repeat 75px 25px;
     background-size: 28px 32px;
     width: calc(100% + 180px);
     margin-left: -90px;
@@ -20260,7 +20260,7 @@ section:focus {
     z-index: -1;
     content: "";
     display: block;
-    background-image: url(/themes/lido/img/icon/chevron.svg);
+    background-image: url(../images/chevron.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -21336,14 +21336,14 @@ section:focus {
 }
 
 .reservation-tunnel .step.step3 #cake-modif-tab:before {
-    background-image: url(/themes/lido/img/page/ticketing/upsale/plumes-left.png);
+    background-image: url(../images/plumes-left.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: bottom left
 }
 
 .reservation-tunnel .step.step3 #cake-modif-tab:after {
-    background-image: url(/themes/lido/img/page/ticketing/upsale/plumes-right.png);
+    background-image: url(.../images/plumes-right.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: bottom right
@@ -21617,14 +21617,14 @@ section:focus {
 }
 
 .reservation-tunnel .step.step3 .upsale:before {
-    background-image: url(/themes/lido/img/page/ticketing/upsale/plumes-left.png);
+    background-image: url(../images/plumes-left.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: bottom left
 }
 
 .reservation-tunnel .step.step3 .upsale:after {
-    background-image: url(/themes/lido/img/page/ticketing/upsale/plumes-right.png);
+    background-image: url(../images/plumes-right.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: bottom right

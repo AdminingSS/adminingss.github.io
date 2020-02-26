@@ -1353,8 +1353,8 @@ $(document).ready(function () {
         });
     }
     
-    setSEOText(0, 'footer__text', footerSeoText);
-    setSEOText(0, 'callback_title', callbackTitleText);
+    //setSEOText(0, 'footer__text', footerSeoText);
+    //setSEOText(0, 'callback_title', callbackTitleText);
 
     $('#subscribe_form').submit(function (e) {
         e.preventDefault();
