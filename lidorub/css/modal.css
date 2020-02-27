@@ -15,3 +15,12 @@
 .tm-modal.hidden {
     display: none;
 }
+
+.step2 .offers {
+    display: none;
+}
+
+.step3 .options {
+    display: none;
+}
+
