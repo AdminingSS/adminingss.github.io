@@ -62,4 +62,19 @@ $(document).ready(function () {
 
     })();
 
+    //playbill images fix
+    (()=>{
+        const $playbillContent = $('.event-list');
+        const $playbillImages = $playbillContent.find('img.img-thumbnail');
+
+        $playbillImages.each(function () {
+            const $currImg = $(this);
+            const oldSrc = $currImg.attr('src');
+            const newSrc = 'https://russianbroadway.com' + oldSrc;
+
+            $currImg.attr('src', newSrc);
+        });
+
+    })();
+
 });
