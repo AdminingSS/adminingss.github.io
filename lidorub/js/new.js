@@ -85,14 +85,16 @@ $(document).ready(function () {
 
     })();
 
-    //custom scrollbar
+    //custom flatpickr
     (() => {
-        // $(".js-custom-scrollbar").mCustomScrollbar({
-        //     scrollbarPosition: "outside",
-        //     autoHideScrollbar: false,
-        //     theme: "dark",
-        //     advanced:{ updateOnContentResize: true }
-        // });
+        const $flatPickr = $('.js-flatpickr');
+
+        $flatPickr.flatpickr({
+            mode: "range",
+            altInput: true,
+            altFormat: "F j, Y",
+            dateFormat: "Y-m-d"
+        });
 
     })();
 

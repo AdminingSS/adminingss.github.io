@@ -19,6 +19,9 @@
     <!--regaloeb plugin-->
     <link rel="stylesheet" href="./vendor/regaloeb/regaloebParallax.css">
 
+    <!--flapickr-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <!--lido legacy-->
     <link rel="stylesheet" media="all"
           href="./css/css_1.css">
@@ -378,7 +381,7 @@
                                 <img src="./images/Fille_caroline_compresse_v2_0.png"
                                      alt="Un spectacle époustouflant " class="img-bg">
                                 <img class="plume plume-1 js-regaloeb" data-rotate="10#0" data-y="80#-80"
-                                     data-end="1" src="./images/4.png">
+                                     data-end="1" src="./images/4_new.png">
                                 <img class="plume plume-2 js-regaloeb js-regaloeb-slower"
                                      data-rotate="10#0" data-y="110#-110" data-end="1"
                                      src="./images/5.png">
@@ -1411,22 +1414,22 @@
                                                             aria-owns="customSelect-8WY64-panel"
                                                             aria-activedescendant="customSelect-8WY64-selectedOption"
                                                             tabindex="0">
-                                                        <span>Выберите предложение</span>
+                                                        <!--<span>Выберите предложение</span>-->
                                                     </span>
                                                     <select name="cat" tabindex="-1">
-                                                        <option value="">Выберите предложение</option>
+                                                        <!--<option value="">Выберите предложение</option>-->
                                                         <option value="">Выберите предложение</option>
                                                         <option value="19">
-                                                            только спектакли этого театра и жанра
+                                                            Только спектакли этого театра и жанра
                                                         </option>
                                                         <option value="20">
-                                                            спектакли этого театра всех жанров
+                                                            Спектакли этого театра всех жанров
                                                         </option>
                                                         <option value="21">
-                                                            спектакли всех театров этого жанра
+                                                            Спектакли всех театров этого жанра
                                                         </option>
                                                         <option value="22">
-                                                            все спектакли всех театров всех жанров
+                                                            Все спектакли всех театров всех жанров
                                                         </option>
                                                     </select>
                                                     <div id="customSelect-8WY64-panel" class="custom-select-panel"
@@ -1439,16 +1442,16 @@
                                                             Выберите предложение
                                                         </div>
                                                         <div class="custom-select-option" data-value="19" role="option">
-                                                            только спектакли этого театра и жанра
+                                                            Только спектакли этого театра и жанра
                                                         </div>
                                                         <div class="custom-select-option" data-value="20" role="option">
-                                                            спектакли этого театра всех жанров
+                                                            Спектакли этого театра всех жанров
                                                         </div>
                                                         <div class="custom-select-option" data-value="21" role="option">
-                                                            спектакли всех театров этого жанра
+                                                            Спектакли всех театров этого жанра
                                                         </div>
                                                         <div class="custom-select-option" data-value="22" role="option">
-                                                            все спектакли всех театров всех жанров
+                                                            Все спектакли всех театров всех жанров
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1465,32 +1468,33 @@
                                     </div>
 
                                     <div class="content">
-                                        <div class="form-item calendar flatpickr-input" special="promos"
+                                        <div class="form-item _calendar" special="promos"
                                              readonly="readonly">
                                             <div class="block">
-                                                <label class="default">Выберите диапазон дат</label>
-                                                <label class="value"><span></span>/<span></span>/<span></span></label>
-                                                <label class="undefined">Неактуальный билет</label>
-                                                <input type="text" name="d" value="" maxlength="10">
+                                                <input class="js-flatpickr" placeholder="Выберите диапазон дат">
+                                                <!--<label class="default">Выберите диапазон дат</label>-->
+                                                <!--<label class="value"><span></span>/<span></span>/<span></span></label>-->
+                                                <!--<label class="undefined">Неактуальный билет</label>-->
+                                                <!--<input type="text" name="d" value="" maxlength="10">-->
                                             </div>
                                         </div>
 
                                         <script>
-                                            document.calendar_promo_days = [];
+                                            // document.calendar_promo_days = [];
                                         </script>
 
 
                                         <!--Удалить это нахуй-->
-                                        <div class="form-item undated">
-                                            <div class="block">
-                                                <input type="checkbox" id="bo" name="bo" value="1">
-                                                <label for="bo"
-                                                       data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;selectionOpenbillet&quot;, &quot;label&quot;: &quot;&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}">
-                                                    <strong>жми сюда</strong>
-                                                    Эта хрень сохранена для дебажных целей
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <!--<div class="form-item undated">-->
+                                            <!--<div class="block">-->
+                                                <!--<input type="checkbox" id="bo" name="bo" value="1">-->
+                                                <!--<label for="bo"-->
+                                                       <!--data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;selectionOpenbillet&quot;, &quot;label&quot;: &quot;&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}">-->
+                                                    <!--<strong>жми сюда</strong>-->
+                                                    <!--Эта хрень сохранена для дебажных целей-->
+                                                <!--</label>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
                                         <!--до сюда-->
                                     </div>
 
@@ -7851,6 +7855,9 @@
 
 <!--regaloeb plugin-->
 <script src="./vendor/regaloeb/regaloebParallax-plugin.js"></script>
+
+<!--flatpickr-->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <!--new js-->
 <script src="./js/new.js"></script>
