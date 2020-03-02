@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //modal
-    (()=>{
+    (() => {
         const $orderModal = $('.js-order-modal');
         const $orderModalTrigger = $('.js-order-modal-trigger');
         const $orderModalClose = $('.js-order-modal-close');
@@ -36,14 +36,24 @@ $(document).ready(function () {
         });
 
         $jsSubmitStageOne.on('click', function (e) {
-            if(!$(this).hasClass('active')) return;
+            if (!$(this).hasClass('active')) return;
 
             $orderModal.find('.step2 .inactive').fadeOut();
             $orderModal.find('.step2 .offers').slideDown(500).fadeIn({duration: 500, queue: false});
 
-            const $jsSubmitStageTwo = $('.js-submit-stage-2');
+            //$(".js-custom-scrollbar").mCustomScrollbar("update");
 
-            $jsSubmitStageTwo.on('click', function () {
+            $(".js-custom-scrollbar").mCustomScrollbar({
+                scrollbarPosition: "outside",
+                autoHideScrollbar: false,
+                theme: "dark",
+                advanced:{ updateOnContentResize: true }
+            });
+
+            const $jsSubmitStageTwo = $('.event-box .btn.btn-danger');
+
+            $jsSubmitStageTwo.on('click', function (e) {
+                e.preventDefault();
                 $orderModal.find('.step3 .inactive').fadeOut();
                 $orderModal.find('.step3 .options').slideDown(500).fadeIn({duration: 500, queue: false});
 
@@ -55,15 +65,13 @@ $(document).ready(function () {
                 });
             });
 
-
         });
-
 
 
     })();
 
     //playbill images fix
-    (()=>{
+    (() => {
         const $playbillContent = $('.event-list');
         const $playbillImages = $playbillContent.find('img.img-thumbnail');
 
@@ -74,6 +82,24 @@ $(document).ready(function () {
 
             $currImg.attr('src', newSrc);
         });
+
+    })();
+
+    //custom scrollbar
+    (() => {
+        // $(".js-custom-scrollbar").mCustomScrollbar({
+        //     scrollbarPosition: "outside",
+        //     autoHideScrollbar: false,
+        //     theme: "dark",
+        //     advanced:{ updateOnContentResize: true }
+        // });
+
+    })();
+
+    //regaloeb
+    (() => {
+
+        $(".js-regaloeb").regaloebParallax();
 
     })();
 
