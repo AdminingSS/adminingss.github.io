@@ -986,6 +986,19 @@ $(document).ready(function () {
 
     //END OF LEGACY CODE
 
+    //custom flatpickr
+    (() => {
+        const $flatPickr = $('.js-flatpickr');
+
+        $flatPickr.flatpickr({
+            mode: "range",
+            altInput: true,
+            altFormat: "F j, Y",
+            dateFormat: "Y-m-d"
+        });
+
+    })();
+
     //modal
     (() => {
         const $orderModal = $('.js-order-modal');
@@ -1004,7 +1017,27 @@ $(document).ready(function () {
         const $jsSubmitStageFive = $('.js-submit-stage-5');
         const $jsSubmitStageSix = $('.js-submit-stage-6');
 
+        const $mainForm = $('.js-form-main');
+        const $modalFormOne = $orderModal.find('.step1 form');
+
+        $mainForm.on('submit', function(e){
+            e.preventDefault();
+        });
+
+        //main form transfer
+        function transferFormMain() {
+            const quantity = $mainForm.find('[name="na"]').val();
+            const dateRange = $mainForm.find('.flatpickr-input').val();
+            //const fp = document.querySelector("#myInput")._flatpickr;
+
+            $modalFormOne.find('[name="na"]').val(quantity);
+            $modalFormOne.find("#modalFlatpickr").each(function () {
+                this._flatpickr.setDate(dateRange);
+            })
+        }
+
         $orderModalTrigger.on('click', function () {
+            transferFormMain();
             $orderModal.show();
             $('body').addClass('body-noscroll');
         });
@@ -1012,7 +1045,7 @@ $(document).ready(function () {
         $orderModalClose.on('click', function () {
             $orderModal.hide();
             $('body').removeClass('body-noscroll');
-            $orderModal.find('.reservation-tunnel .step.step2').removeClass('active');
+            //$orderModal.find('.reservation-tunnel .step.step2').removeClass('active');
         });
 
         $orderModalClose2.on('click', function () {
@@ -1040,8 +1073,59 @@ $(document).ready(function () {
                 scrollbarPosition: "outside",
                 autoHideScrollbar: false,
                 theme: "dark",
+                mouseWheel:{ scrollAmount: 200 },
                 advanced:{ updateOnContentResize: true }
             });
+
+            //more button
+            const $eventBoxes = $orderModal.find('.event-box');
+
+            $eventBoxes.each(function () {
+                const $moreBlock = $(this).find('.show-more-block');
+                const $showTrigger = $moreBlock.find('.show-menu');
+
+                let openMore = false;
+
+                $showTrigger.on('click', function(e) {
+                    e.preventDefault();
+                    let loaded = false;
+
+                    if(!loaded) {
+                        //ajax2 here
+
+                        var $containerWhite = $moreBlock.find('.container-white');
+                        const $panelAccordions = $containerWhite.find('.panel-group .panel');
+
+                        $panelAccordions.each(function () {
+                            const $trigger = $(this).find('.panel-heading a');
+                            const $data = $(this).find('.panel-collapse');
+
+                            $trigger.on('click', function (e) {
+                                e.preventDefault();
+                                $data.toggleClass('open');
+                            })
+                        })
+
+                        loaded = true;
+                    }
+
+                    //$containerWhite.addClass('loaded');
+
+                    if(!openMore) {
+                        $containerWhite.slideDown(500).fadeIn({duration: 500, queue: false});
+                        $showTrigger.html('Скрыть подробности');
+                        openMore = true;
+                    }
+                    else {
+                        $containerWhite.fadeOut(500).slideUp({duration: 500, queue: false});
+                        $showTrigger.html('Показать подробности')
+                        openMore = false;
+                    }
+
+
+                });
+            });
+
 
             const $jsSubmitStageTwo = $('.event-box .btn.btn-danger');
 
@@ -1049,6 +1133,16 @@ $(document).ready(function () {
                 e.preventDefault();
                 $orderModal.find('.step3 .inactive').fadeOut();
                 $orderModal.find('.step3 .options').slideDown(500).fadeIn({duration: 500, queue: false});
+
+                $orderModal.find('.reservation-tunnel .step.step3').addClass('active');
+
+                $orderModal.find('.reservation-tunnel .step.step3 .js-custom-scrollbar').mCustomScrollbar({
+                    scrollbarPosition: "outside",
+                    autoHideScrollbar: false,
+                    theme: "dark",
+                    mouseWheel:{ scrollAmount: 200 },
+                    advanced:{ updateOnContentResize: true }
+                });
 
                 const $orderModalTrigger2 = $('.js-order-modal-trigger-2');
 
@@ -1078,24 +1172,39 @@ $(document).ready(function () {
 
     })();
 
-    //custom flatpickr
-    (() => {
-        const $flatPickr = $('.js-flatpickr');
-
-        $flatPickr.flatpickr({
-            mode: "range",
-            altInput: true,
-            altFormat: "F j, Y",
-            dateFormat: "Y-m-d"
-        });
-
-    })();
-
     //regaloeb
     (() => {
 
         $(".js-regaloeb").regaloebParallax();
 
     })();
+
+    //quantity controller
+    (()=>{
+        const $quantityHolders = $('.quantity');
+
+        $quantityHolders.each(function () {
+            const $quantityHolder = $(this);
+            const $quantityTriggerLess = $quantityHolder.find('.less');
+            const $quantityTriggerMore = $quantityHolder.find('.more');
+            const $quantitySelect = $quantityHolder.find('select');
+
+            $quantityTriggerLess.on('click', function () {
+                const selectedItem = $quantitySelect.find('option:selected').index();
+                if(selectedItem === 0) return;
+                $quantitySelect.find('option').removeAttr('selected');
+                $quantitySelect.find('option:nth-child(' + (selectedItem) + ')').attr('selected','selected');
+            });
+
+            $quantityTriggerMore.on('click', function () {
+                const selectedItem = $quantitySelect.find('option:selected').index();
+                if(selectedItem === $quantitySelect.find('option:last-child').index()) return;
+                $quantitySelect.find('option').removeAttr('selected');
+                $quantitySelect.find('option:nth-child(' + (selectedItem + 2)  +')').attr('selected','selected');
+            });
+        })
+
+    })();
+
 
 });

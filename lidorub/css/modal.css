@@ -20,6 +20,14 @@
     display: none;
 }
 
+.reservation-tunnel .step.step2, .reservation-tunnel .step.step3 {
+    width: 36%;
+}
+
+.reservation-tunnel .step.step3 {
+    padding: 30px;
+}
+
 .step2 .offers {
     display: none;
 }
@@ -58,7 +66,7 @@
 .event-date {
     margin: 5px 0;
     position: relative;
-    background-color: #8a7e7e;
+    background-color: #0f1e48;
     font-size: 24px;
     color: white;
     padding: 15px 0 15px 40px;
@@ -122,6 +130,7 @@
 
 .event-list .pennon-box {
     position: absolute;
+    display: none;
     top: 5px;
     right: 100%;
     text-align: right;
@@ -229,7 +238,7 @@
 }
 
 .event-list .text-danger {
-    color: #d9534f;
+    color: #0f1e48;
 }
 
 .event-list .buttons .price strong {
@@ -297,6 +306,16 @@
     margin-bottom: 10px;
 }
 
+.event-list h2 {
+    font-family: inherit;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 24px;
+}
+
 .event-list h3 {
     font-family: inherit;
     line-height: 1.2;
@@ -309,6 +328,12 @@
 
     font-size: 24px;
 }
+
+.event-list h3 span time {
+    color: #0f1e48!important;
+}
+
+/*#0f1e48*/
 
 .event-list h3:first-child {
     margin-top: 0;
@@ -339,7 +364,7 @@
 }
 
 .event-list .text-danger {
-    color: #d9534f;
+    color: #0f1e48;
 }
 
 .event-list .event-header .info span+span {
@@ -380,10 +405,69 @@
     width: 50%;
 }
 
+.show-more-block {
+    width: 100%;
+}
+
+.show-menu {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #071846;
+    font-weight: bold;
+    position: relative;
+    font-size: 12px;
+    -webkit-transition: all .2s cubic-bezier(0.25,0.46,0.45,0.94) 0s;
+    transition: all .2s cubic-bezier(0.25,0.46,0.45,0.94) 0s;
+}
+
+.show-menu:hover {
+    color: #0f1e48;
+}
+
+.show-menu:after {
+    content: "";
+    display: block;
+    background-image: url(../images/gold.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 11px;
+    height: 7px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    color: #b8a15d;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%,10px) rotate(0deg);
+    transform: translate(-50%,10px) rotate(0deg);
+    -webkit-transition: all .2s cubic-bezier(0.25,0.46,0.45,0.94) 0s;
+    transition: all .2s cubic-bezier(0.25,0.46,0.45,0.94) 0s;
+}
+
+.show-menu:hover:after {
+    -webkit-transform: translate(-50%,15px) rotate(0deg);
+    transform: translate(-50%,15px) rotate(0deg);
+}
+
+.container-white {
+    display: none;
+}
+
+/*.container-white.loaded {*/
+    /*display: block;*/
+/*}*/
+
 /*Scrollbar*/
 
-.event-list {
+.event-list, .options .options {
     max-height: calc(100vh - 174px);
+}
+
+.reservation-tunnel .step.step3 .options, .reservation-tunnel .step.step2 .offers {
+    margin-right: 0;
+    padding: 0 0 20px 0;
 }
 
 .mCSB_scrollTools {
@@ -410,9 +494,42 @@
     display: inline-block;
 }
 
+.btn.next1 {
+    width: 100%;
+}
 
 /*js*/
 .reservation-tunnel .step.step2.active {
     padding: 30px;
     background: #ffffff;
 }
+
+.reservation-tunnel .step.step3.active {
+    background: #ffffff;
+}
+
+/*bootstrap legacy*/
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row > * {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.panel-collapse {
+    display: none;
+}
+
+.panel-collapse.open {
+    display: block;
+}
+
+/*temp*/
+
+.carousel.slide {
+    display: none;
+}
+
