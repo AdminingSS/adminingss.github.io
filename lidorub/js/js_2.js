@@ -820,7 +820,7 @@
     }
 }
 
-//obso?
+//rPopin
 (jQuery, window, document), function (t, e, i, n) {
     function s(e, i) {
         this.element = e;
@@ -876,8 +876,7 @@
     }
 }
 
-
-
+//unnown
 (jQuery, window, document), function (t, e, i, n) {
     t('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (e) {
         if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
@@ -891,7 +890,7 @@
     })
 }
 
-//section
+//section reveal
 (jQuery, window, document), function (t, e, i, n) {
     function s(e, i) {
         this.element = e;
