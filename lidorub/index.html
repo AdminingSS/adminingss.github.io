@@ -700,7 +700,7 @@
   			<div class="shining-star shining-star-7"></div>
   		</span>
 
-                    <form action="/">
+                    <form class="tm-flex tm-flex-between" action="/">
 
 
                         <div class="content reveal" style="transition-delay: 0.2s;">
@@ -728,52 +728,49 @@
                                 </legend>
                             </div>
                         </div>
-                        <div class="content reveal" style="transition-delay: 0.3s;">
-                            <div class="form-item quantity children" value="0">
-                                <div class="block">
-                                    <label>Детское
-                                        <small>* (- 12 лет)</small>
-                                    </label>
-                                    <div class="number">
-                                        <a class="less" href="#"></a>
-                                        <select name="nc">
-                                            <option value="0" selected="">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                        </select>
-                                        <a class="more" href="#"></a>
-                                    </div>
-                                </div>
-                                <legend>*Бесплатно для детей, за исключением напитков (специальные мероприятия за
-                                    исключением)
-                                </legend>
-                            </div>
-                        </div>
+                        <!--<div class="content reveal" style="transition-delay: 0.3s;">-->
+                            <!--<div class="form-item quantity children" value="0">-->
+                                <!--<div class="block">-->
+                                    <!--<label>Детское-->
+                                        <!--<small>* (- 12 лет)</small>-->
+                                    <!--</label>-->
+                                    <!--<div class="number">-->
+                                        <!--<a class="less" href="#"></a>-->
+                                        <!--<select name="nc">-->
+                                            <!--<option value="0" selected="">0</option>-->
+                                            <!--<option value="1">1</option>-->
+                                            <!--<option value="2">2</option>-->
+                                            <!--<option value="3">3</option>-->
+                                            <!--<option value="4">4</option>-->
+                                            <!--<option value="5">5</option>-->
+                                            <!--<option value="6">6</option>-->
+                                            <!--<option value="7">7</option>-->
+                                            <!--<option value="8">8</option>-->
+                                        <!--</select>-->
+                                        <!--<a class="more" href="#"></a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<legend>*Бесплатно для детей, за исключением напитков (специальные мероприятия за-->
+                                    <!--исключением)-->
+                                <!--</legend>-->
+                            <!--</div>-->
+                        <!--</div>-->
 
-                        <div class="content reveal" style="transition-delay: 0.4s;">
-                            <div class="form-item calendar flatpickr-input calendar--filled" special="promos"
+                        <div class="content reveal">
+                            <div class="form-item" special="promos"
                                  readonly="readonly">
                                 <div class="block">
-                                    <label class="value"><span><strong>19</strong></span>/<span>02</span>/<span>2020</span></label>
-                                    <input type="text" name="d" value="2020-02-19" maxlength="10">
+                                    <input class="calendar js-flatpickr"  placeholder="Выберите диапазон дат">
+                                    <!--<label class="value"><span><strong>19</strong></span>/<span>02</span>/<span>2020</span></label>-->
+                                    <!--<input type="text" name="d" value="2020-02-19" maxlength="10">-->
                                 </div>
                             </div>
                         </div>
-
-                        <script>
-                            document.calendar_promo_days = [];
-                        </script>
 
 
                         <div class="content reveal" style="transition-delay: 0.5s;">
 
-                            <a href="#" class="btn"
+                            <a href="#" class="btn js-order-modal-trigger"
                                data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;ctaBook&quot;, &quot;label&quot;: &quot;footer | %productDate&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}"
                                data-productdate="2020-02-19"><span></span><span>Заказать</span></a>
                         </div>
@@ -1468,10 +1465,10 @@
                                     </div>
 
                                     <div class="content">
-                                        <div class="form-item _calendar" special="promos"
+                                        <div class="form-item" special="promos"
                                              readonly="readonly">
                                             <div class="block">
-                                                <input class="js-flatpickr" placeholder="Выберите диапазон дат">
+                                                <input class="calendar js-flatpickr" placeholder="Выберите диапазон дат">
                                                 <!--<label class="default">Выберите диапазон дат</label>-->
                                                 <!--<label class="value"><span></span>/<span></span>/<span></span></label>-->
                                                 <!--<label class="undefined">Неактуальный билет</label>-->
@@ -7781,11 +7778,11 @@
 
         </footer>
 
-        <section id="player">
-            <iframe width="100%" height="100%" src="./order2_files/saved_resource.html" frameborder="0"
-                    allowfullscreen=""></iframe>
-            <a class="close" href="https://www.lido.fr/ru/%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B#"></a>
-        </section>
+        <!--<section id="player">-->
+            <!--<iframe width="100%" height="100%" src="./order2_files/saved_resource.html" frameborder="0"-->
+                    <!--allowfullscreen=""></iframe>-->
+            <!--<a class="close" href="https://www.lido.fr/ru/%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B#"></a>-->
+        <!--</section>-->
 
         <section id="popin--cgv-voucher" class="popin">
             <div class="popin__bg"></div>
@@ -7839,16 +7836,16 @@
     </div>
 </div>
 
-<!--lido legacy-->
-<script src="./js/js_2.js"></script>
-<img src="./images/px" width="1" height="1">
-<img src="./images/seg" width="1" height="1">
-
 <!--mariinski legacy-->
 <script src="./js/jquery.min.js"></script>
 <script src="./js/script.js"></script>
 <script src="./js/slick.min.js"></script>
 <script src="./js/jquery.youtubebackground.js"></script>
+
+<!--lido legacy-->
+<script src="./js/js_2.js"></script>
+<img src="./images/px" width="1" height="1">
+<img src="./images/seg" width="1" height="1">
 
 <!--Scrollbar plugin-->
 <script src="./vendor/customScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>

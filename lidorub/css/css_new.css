@@ -594,3 +594,28 @@
         order: 2
     }
 }
+
+.booking form .content {
+    width: calc(100% / 3);
+    margin: 15px 20px 0 0;
+}
+
+.booking form .content:last-child {
+    margin-right: 0;
+}
+
+.booking form .form-item input::placeholder, .booking form .form-item select::placeholder {
+    color: #ffffff;
+}
+
+.booking form .form-item .block {
+    min-height: 33px;
+}
+
+.tm-flex {
+    display: flex;
+}
+
+.tm-flex-between {
+    justify-content: space-between;
+}

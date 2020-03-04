@@ -20,19 +20,24 @@ $(document).ready(function () {
 
         $orderModalTrigger.on('click', function () {
             $orderModal.show();
+            $('body').addClass('body-noscroll');
         });
 
         $orderModalClose.on('click', function () {
             $orderModal.hide();
+            $('body').removeClass('body-noscroll');
+            $orderModal.find('.reservation-tunnel .step.step2').removeClass('active');
         });
 
         $orderModalClose2.on('click', function () {
             $orderModal2.hide();
+            $('body').removeClass('body-noscroll');
         });
 
         $orderModalReturn2.on('click', function () {
             $orderModal2.hide();
             $orderModal.show();
+            $orderModal.find('.reservation-tunnel .step.step2').addClass('active');
         });
 
         $jsSubmitStageOne.on('click', function (e) {
@@ -40,6 +45,8 @@ $(document).ready(function () {
 
             $orderModal.find('.step2 .inactive').fadeOut();
             $orderModal.find('.step2 .offers').slideDown(500).fadeIn({duration: 500, queue: false});
+
+            $orderModal.find('.reservation-tunnel .step.step2').addClass('active');
 
             //$(".js-custom-scrollbar").mCustomScrollbar("update");
 
