@@ -1028,7 +1028,6 @@ $(document).ready(function () {
         function transferFormMain() {
             const quantity = $mainForm.find('[name="na"]').val();
             const dateRange = $mainForm.find('.flatpickr-input').val();
-            //const fp = document.querySelector("#myInput")._flatpickr;
 
             $modalFormOne.find('[name="na"]').val(quantity);
             $modalFormOne.find("#modalFlatpickr").each(function () {
@@ -1045,55 +1044,62 @@ $(document).ready(function () {
         $orderModalClose.on('click', function () {
             $orderModal.hide();
             $('body').removeClass('body-noscroll');
-            //$orderModal.find('.reservation-tunnel .step.step2').removeClass('active');
+            // $orderModal.find('.reservation-tunnel .step.step2').removeClass('active');
+            // $orderModal.find('.reservation-tunnel .step.step3').removeClass('active');
         });
 
         $orderModalClose2.on('click', function () {
             $orderModal2.hide();
             $('body').removeClass('body-noscroll');
+            // $orderModal.find('.reservation-tunnel .step.step2').removeClass('active');
+            // $orderModal.find('.reservation-tunnel .step.step3').removeClass('active');
         });
 
         $orderModalReturn2.on('click', function () {
             $orderModal2.hide();
             $orderModal.show();
-            $orderModal.find('.reservation-tunnel .step.step2').addClass('active');
+            //$orderModal.find('.reservation-tunnel .step.step2').addClass('active');
         });
 
         $jsSubmitStageOne.on('click', function (e) {
             if (!$(this).hasClass('active')) return;
 
-            const $formElement = $(this).parents('form');
-            const $aForm = $formElement[0];
-            const data = new FormData($aForm);
+
+            //ajax things
+            // const $formElement = $(this).parents('form');
+            // const $aForm = $formElement[0];
+            // const data = new FormData($aForm);
             //let allowContinue = sendData(data) || false;
-
-            function sendData(data) {
-
-                $.ajax({
-                    url:     '/dir/site.php', //url страницы
-                    type:     "POST", //метод отправки
-                    enctype: 'multipart/form-data',
-                    processData: false,
-                    contentType: false,
-                    data: data, // Сеарилизованая форма
-                    success: function(response) { //Данные отправлены успешно
-                        return true;
-                        //здесь если надо обработать выдачу
-                    },
-                    error: function(response) { // Данные не отправлены
-                        setTimeout(function () {
-                            alert('Ошибка. Данные не отправлены.');
-                        }, 2000);
-                    }
-                });
-            }
-
+            // function sendData(data) {
+            //
+            //     $.ajax({
+            //         url:     '/dir/site.php',
+            //         type:     "POST",
+            //         enctype: 'multipart/form-data',
+            //         processData: false,
+            //         contentType: false,
+            //         data: data,
+            //         success: function(response) {
+            //             return true;
+            //             //здесь если надо обработать выдачу
+            //         },
+            //         error: function(response) {
+            //             setTimeout(function () {
+            //                 alert('Ошибка. Данные не отправлены.');
+            //             }, 2000);
+            //         }
+            //     });
+            // }
             //if(!allowContinue) return;
 
             $orderModal.find('.step2 .inactive').fadeOut();
             $orderModal.find('.step2 .offers').slideDown(500).fadeIn({duration: 500, queue: false});
 
+            $orderModal.find('.step3 .inactive').fadeIn();
+            $orderModal.find('.step3 .options').fadeOut(500).slideUp({duration: 500, queue: false});
+
             $orderModal.find('.reservation-tunnel .step.step2').addClass('active');
+            $orderModal.find('.reservation-tunnel .step.step3').removeClass('active');
 
             //$(".js-custom-scrollbar").mCustomScrollbar("update");
 
@@ -1175,7 +1181,8 @@ $(document).ready(function () {
 
                 const $orderModalTrigger2 = $('.js-order-modal-trigger-2');
 
-                $orderModalTrigger2.on('click', function () {
+                $orderModalTrigger2.on('click', function (e) {
+                    e.preventDefault();
                     $orderModal.hide();
                     $orderModal2.show();
                 });
@@ -1234,6 +1241,5 @@ $(document).ready(function () {
         })
 
     })();
-
 
 });

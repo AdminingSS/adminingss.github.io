@@ -536,14 +536,43 @@
 }
 
 /*other*/
-#map svg {
-    max-width: 100%;
+
+.step.step3 .form-group>p:last-child {
+    display: none;
 }
 
-#map svg >*, #map svg path {
-    max-width: 100%;
-    width: 100%;
+.step.step3 .form-group:nth-last-child(3) {
+    margin-bottom: 70px;
 }
+
+.step.step3 .form-group:nth-last-child(2) {
+    display: none;
+}
+
+.step.step3 .options .options {
+    /*//max-width: 100%;*/
+}
+
+.step.step3 .options .options .form-group:last-child {
+    display: none;
+}
+
+.step.step3 .options .form-group:last-child {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+}
+
+/*#map svg {*/
+    /*max-width: 100%;*/
+/*}*/
+
+/*#map svg >*, #map svg path {*/
+    /*max-width: 100%;*/
+    /*width: 100%;*/
+/*}*/
 
 /*temp*/
 

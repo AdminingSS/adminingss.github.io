@@ -5575,7 +5575,8 @@ section:focus {
 }
 
 #js-book-btn-modele-mobile.visibility-hidden {
-    visibility: hidden
+    visibility: hidden;
+    opacity: 0;
 }
 
 #nav {
