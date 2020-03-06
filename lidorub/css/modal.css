@@ -459,18 +459,11 @@
     display: none;
 }
 
-/*.container-white.loaded {*/
-    /*display: block;*/
-/*}*/
 
 /*Scrollbar*/
 
 .event-list, .options .options {
     max-height: calc(100vh - 174px);
-}
-
-.options .options .mCSB_container>*:nth-child(-n+4) {
-    display: none;
 }
 
 .reservation-tunnel .step.step3 .options, .reservation-tunnel .step.step2 .offers {
@@ -503,7 +496,6 @@
 }
 
 .btn.next1 {
-    /*width: 100%;*/
     display: block;
     width: 80%;
     margin: 20px auto 40px;
@@ -549,27 +541,11 @@
 
 /*other*/
 
-.step.step3 .form-group>p:last-child {
-    display: none;
-}
-
-.step.step3 .form-group:nth-last-child(3) {
+.step.step3 .options .options .form-group:last-child {
     margin-bottom: 110px;
 }
 
-.step.step3 .form-group:nth-last-child(2) {
-    display: none;
-}
-
-.step.step3 .options .options {
-    /*//max-width: 100%;*/
-}
-
-.step.step3 .options .options .form-group:last-child {
-    display: none;
-}
-
-.step.step3 .options .form-group:last-child {
+.step.step3 .options > .form-group:last-child {
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -577,19 +553,3 @@
     background-color: #fff;
     z-index: 2000;
 }
-
-/*#map svg {*/
-    /*max-width: 100%;*/
-/*}*/
-
-/*#map svg >*, #map svg path {*/
-    /*max-width: 100%;*/
-    /*width: 100%;*/
-/*}*/
-
-/*temp*/
-
-/*.carousel.slide {*/
-    /*display: none;*/
-/*}*/
-

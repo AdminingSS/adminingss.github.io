@@ -2,343 +2,79 @@ $(document).ready(function () {
 
     //LEGACY CODE
 
-    //customSelect
-    // (this),
-    //     function t(e, i, n) {
-    //         function s(a, o) {
-    //             if (!i[a]) {
-    //                 if (!e[a]) {
-    //                     var l = "function" == typeof require && require;
-    //                     if (!o && l) return l(a, !0);
-    //                     if (r) return r(a, !0);
-    //                     var c = new Error("Cannot find module '" + a + "'");
-    //                     throw c.code = "MODULE_NOT_FOUND", c
-    //                 }
-    //                 var h = i[a] = {exports: {}};
-    //                 e[a][0].call(h.exports, function (t) {
-    //                     var i = e[a][1][t];
-    //                     return s(i || t)
-    //                 }, h, h.exports, t, e, i, n)
-    //             }
-    //             return i[a].exports
-    //         }
-    //
-    //         for (var r = "function" == typeof require && require, a = 0; a < n.length; a++) s(n[a]);
-    //         return s
-    //     }
-    //
-    //     ({
-    //         1: [function (t, e, i) {
-    //             try {
-    //                 var n = new window.CustomEvent("test");
-    //                 if (n.preventDefault(), !0 !== n.defaultPrevented) throw new Error("Could not prevent default")
-    //             } catch (t) {
-    //                 var s = function (t, e) {
-    //                     var i, n;
-    //                     return e = e || {
-    //                         bubbles: !1,
-    //                         cancelable: !1,
-    //                         detail: void 0
-    //                     }, (i = document.createEvent("CustomEvent")).initCustomEvent(t, e.bubbles, e.cancelable, e.detail), n = i.preventDefault, i.preventDefault = function () {
-    //                         n.call(this);
-    //                         try {
-    //                             Object.defineProperty(this, "defaultPrevented", {
-    //                                 get: function () {
-    //                                     return !0
-    //                                 }
-    //                             })
-    //                         } catch (t) {
-    //                             this.defaultPrevented = !0
-    //                         }
-    //                     }, i
-    //                 };
-    //                 s.prototype = window.Event.prototype, window.CustomEvent = s
-    //             }
-    //         }, {}], 2: [function (t, e, i) {
-    //             "use strict";
-    //
-    //             function n(t, e) {
-    //                 function i(t) {
-    //                     w && w.classList.remove(e.hasFocusClass), void 0 !== t ? ((w = t).classList.add(e.hasFocusClass), D && (t.offsetTop < t.offsetParent.scrollTop || t.offsetTop > t.offsetParent.scrollTop + t.offsetParent.clientHeight - t.clientHeight) && t.dispatchEvent(new CustomEvent("custom-select:focus-outside-panel", {bubbles: !0}))) : w = void 0
-    //                 }
-    //
-    //                 function n(t) {
-    //                     b && (b.classList.remove(e.isSelectedClass), b.removeAttribute("id"), y.removeAttribute("aria-activedescendant")), void 0 !== t ? (t.classList.add(e.isSelectedClass), t.setAttribute("id", k + "-" + S + "-selectedOption"), y.setAttribute("aria-activedescendant", k + "-" + S + "-selectedOption"), b = t, y.children[0].textContent = b.customSelectOriginalOption.text) : (b = void 0, y.children[0].textContent = ""), i(t)
-    //                 }
-    //
-    //                 function s(t) {
-    //                     var e = P.querySelector("option[value='" + t + "']");
-    //                     e || (e = P.options[0]), e.selected = !0, n(P.options[P.selectedIndex].customSelectCstOption)
-    //                 }
-    //
-    //                 function r(t) {
-    //                     var e = [].indexOf.call(P.options, w.customSelectOriginalOption);
-    //                     P.options[e + t] && i(P.options[e + t].customSelectCstOption)
-    //                 }
-    //
-    //                 function a(t) {
-    //                     if (t || void 0 === t) {
-    //                         var n = document.querySelector("." + k + "." + e.isOpenClass);
-    //                         n && (n.customSelect.open = !1), v.classList.add(e.isOpenClass), v.classList.add(e.isOpenClass), y.setAttribute("aria-expanded", "true"), b && (x.scrollTop = b.offsetTop), v.dispatchEvent(new CustomEvent("custom-select:open")), D = !0
-    //                     } else v.classList.remove(e.isOpenClass), y.setAttribute("aria-expanded", "false"), D = !1, i(b), v.dispatchEvent(new CustomEvent("custom-select:close"));
-    //                     return D
-    //                 }
-    //
-    //                 function o(t) {
-    //                     t.target === y || y.contains(t.target) ? D ? a(!1) : a() : t.target.classList.contains(e.optionClass) && x.contains(t.target) ? (n(t.target), b.customSelectOriginalOption.selected = !0, a(!1), P.dispatchEvent(new CustomEvent("change"))) : t.target === P ? y !== document.activeElement && P !== document.activeElement && y.focus() : D && !v.contains(t.target) && a(!1)
-    //                 }
-    //
-    //                 function l(t) {
-    //                     t.target.classList.contains(e.optionClass) && i(t.target)
-    //                 }
-    //
-    //                 function c(t) {
-    //                     if (D) switch (t.keyCode) {
-    //                         case 13:
-    //                         case 32:
-    //                             n(w), b.customSelectOriginalOption.selected = !0, P.dispatchEvent(new CustomEvent("change")), a(!1);
-    //                             break;
-    //                         case 27:
-    //                             a(!1);
-    //                             break;
-    //                         case 38:
-    //                             r(-1);
-    //                             break;
-    //                         case 40:
-    //                             r(1);
-    //                             break;
-    //                         default:
-    //                             if (t.keyCode >= 48 && t.keyCode <= 90) {
-    //                                 C && clearTimeout(C), C = setTimeout(function () {
-    //                                     M = ""
-    //                                 }, 1500), M += String.fromCharCode(t.keyCode);
-    //                                 for (var e = 0, s = P.options.length; e < s; e++) if (P.options[e].text.toUpperCase().substr(0, M.length) === M) {
-    //                                     i(P.options[e].customSelectCstOption);
-    //                                     break
-    //                                 }
-    //                             }
-    //                     } else 40 !== t.keyCode && 38 !== t.keyCode && 32 !== t.keyCode || a()
-    //                 }
-    //
-    //                 function h() {
-    //                     n(P.options[P.selectedIndex].customSelectCstOption)
-    //                 }
-    //
-    //                 function u(t) {
-    //                     var e = t.currentTarget, i = t.target;
-    //                     i.offsetTop < e.scrollTop ? e.scrollTop = i.offsetTop : e.scrollTop = i.offsetTop + i.clientHeight - e.clientHeight
-    //                 }
-    //
-    //                 function d() {
-    //                     document.addEventListener("click", o), x.addEventListener("mouseover", l), x.addEventListener("custom-select:focus-outside-panel", u), P.addEventListener("change", h), v.addEventListener("keydown", c)
-    //                 }
-    //
-    //                 function f() {
-    //                     document.removeEventListener("click", o), x.removeEventListener("mouseover", l), x.removeEventListener("custom-select:focus-outside-panel", u), P.removeEventListener("change", h), v.removeEventListener("keydown", c)
-    //                 }
-    //
-    //                 function p(t) {
-    //                     t && !P.disabled ? (v.classList.add(e.isDisabledClass), P.disabled = !0, y.removeAttribute("tabindex"), v.dispatchEvent(new CustomEvent("custom-select:disabled")), f()) : !t && P.disabled && (v.classList.remove(e.isDisabledClass), P.disabled = !1, y.setAttribute("tabindex", "0"), v.dispatchEvent(new CustomEvent("custom-select:enabled")), d())
-    //                 }
-    //
-    //                 function m(t) {
-    //                     var i = t, s = [];
-    //                     if (void 0 === i.length) throw new TypeError("Invalid Argument");
-    //                     for (var r = 0, a = i.length; r < a; r++) if (i[r] instanceof HTMLElement && "OPTGROUP" === i[r].tagName.toUpperCase()) {
-    //                         var o = document.createElement("div");
-    //                         o.classList.add(e.optgroupClass), o.setAttribute("data-label", i[r].label), o.customSelectOriginalOptgroup = i[r], i[r].customSelectCstOptgroup = o;
-    //                         for (var l = m(i[r].children), c = 0, h = l.length; c < h; c++) o.appendChild(l[c]);
-    //                         s.push(o)
-    //                     } else {
-    //                         if (!(i[r] instanceof HTMLElement && "OPTION" === i[r].tagName.toUpperCase())) throw new TypeError("Invalid Argument");
-    //                         var u = document.createElement("div");
-    //                         u.classList.add(e.optionClass), u.textContent = i[r].text, u.setAttribute("data-value", i[r].value), u.setAttribute("role", "option"), u.customSelectOriginalOption = i[r], i[r].customSelectCstOption = u, i[r].selected && n(u), s.push(u)
-    //                     }
-    //                     return s
-    //                 }
-    //
-    //                 function g(t, e, i) {
-    //                     var n;
-    //                     if (void 0 === i || i === P) n = x; else {
-    //                         if (!(i instanceof HTMLElement && "OPTGROUP" === i.tagName.toUpperCase() && P.contains(i))) throw new TypeError("Invalid Argument");
-    //                         n = i.customSelectCstOptgroup
-    //                     }
-    //                     var s = t instanceof HTMLElement ? [t] : t;
-    //                     if (e) for (var r = 0, a = s.length; r < a; r++) n === x ? P.appendChild(s[r]) : n.customSelectOriginalOptgroup.appendChild(s[r]);
-    //                     for (var o = m(s), l = 0, c = o.length; l < c; l++) n.appendChild(o[l]);
-    //                     return s
-    //                 }
-    //
-    //                 function _(t, e) {
-    //                     var i;
-    //                     if (e instanceof HTMLElement && "OPTION" === e.tagName.toUpperCase() && P.contains(e)) i = e.customSelectCstOption; else {
-    //                         if (!(e instanceof HTMLElement && "OPTGROUP" === e.tagName.toUpperCase() && P.contains(e))) throw new TypeError("Invalid Argument");
-    //                         i = e.customSelectCstOptgroup
-    //                     }
-    //                     var n = m(t.length ? t : [t]);
-    //                     return i.parentNode.insertBefore(n[0], i), e.parentNode.insertBefore(t.length ? t[0] : t, e)
-    //                 }
-    //
-    //                 var v, y, w, b, x, T, C, k = "customSelect", D = !1, S = "", P = t, M = "";
-    //                 (v = document.createElement("div")).classList.add(e.containerClass, k), (y = document.createElement("span")).className = e.openerClass, y.setAttribute("role", "combobox"), y.setAttribute("aria-autocomplete", "list"), y.setAttribute("aria-expanded", "false"), y.innerHTML = "<span>\n   " + (-1 !== P.selectedIndex ? P.options[P.selectedIndex].text : "") + "\n   </span>", x = document.createElement("div");
-    //                 for (var O = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", E = 0; E < 5; E++) S += O.charAt(Math.floor(Math.random() * O.length));
-    //                 return x.id = k + "-" + S + "-panel", x.className = e.panelClass, x.setAttribute("role", "listbox"), y.setAttribute("aria-owns", x.id), g(P.children, !1), v.appendChild(y), P.parentNode.replaceChild(v, P), v.appendChild(P), v.appendChild(x), document.querySelector('label[for="' + P.id + '"]') ? T = document.querySelector('label[for="' + P.id + '"]') : "LABEL" === v.parentNode.tagName.toUpperCase() && (T = v.parentNode), void 0 !== T && (T.setAttribute("id", k + "-" + S + "-label"), y.setAttribute("aria-labelledby", k + "-" + S + "-label")), P.disabled ? v.classList.add(e.isDisabledClass) : (y.setAttribute("tabindex", "0"), P.setAttribute("tabindex", "-1"), d()), v.customSelect = {
-    //                     get pluginOptions() {
-    //                         return e
-    //                     }, get open() {
-    //                         return D
-    //                     }, set open(t) {
-    //                         a(t)
-    //                     }, get disabled() {
-    //                         return P.disabled
-    //                     }, set disabled(t) {
-    //                         p(t)
-    //                     }, get value() {
-    //                         return P.value
-    //                     }, set value(t) {
-    //                         s(t)
-    //                     }, append: function (t, e) {
-    //                         return g(t, !0, e)
-    //                     }, insertBefore: function (t, e) {
-    //                         return _(t, e)
-    //                     }, remove: function (t) {
-    //                         var e, i;
-    //                         if (t instanceof HTMLElement && "OPTION" === t.tagName.toUpperCase() && P.contains(t)) e = t.customSelectCstOption; else {
-    //                             if (!(t instanceof HTMLElement && "OPTGROUP" === t.tagName.toUpperCase() && P.contains(t))) throw new TypeError("Invalid Argument");
-    //                             e = t.customSelectCstOptgroup
-    //                         }
-    //                         return e.parentNode.removeChild(e), i = t.parentNode.removeChild(t), h(), i
-    //                     }, empty: function () {
-    //                         for (var t = []; P.children.length;) x.removeChild(x.children[0]), t.push(P.removeChild(P.children[0]));
-    //                         return n(), t
-    //                     }, destroy: function () {
-    //                         for (var t = 0, e = P.options.length; t < e; t++) delete P.options[t].customSelectCstOption;
-    //                         for (var i = P.getElementsByTagName("optgroup"), n = 0, s = i.length; n < s; n++) delete i.customSelectCstOptgroup;
-    //                         return f(), v.parentNode.replaceChild(P, v)
-    //                     }, opener: y, select: P, panel: x, container: v
-    //                 }, P.customSelect = v.customSelect, v.customSelect
-    //             }
-    //
-    //             Object.defineProperty(i, "__esModule", {value: !0});
-    //             var s = Object.assign || function (t) {
-    //                 for (var e = 1; e < arguments.length; e++) {
-    //                     var i = arguments[e];
-    //                     for (var n in i) Object.prototype.hasOwnProperty.call(i, n) && (t[n] = i[n])
-    //                 }
-    //                 return t
-    //             };
-    //             i.default = function (t, e) {
-    //                 var i = [], a = [];
-    //                 return function () {
-    //                     if (t && t instanceof HTMLElement && "SELECT" === t.tagName.toUpperCase()) i.push(t); else if (t && "string" == typeof t) for (var o = document.querySelectorAll(t), l = 0, c = o.length; l < c; ++l) o[l] instanceof HTMLElement && "SELECT" === o[l].tagName.toUpperCase() && i.push(o[l]); else if (t && t.length) for (var h = 0, u = t.length; h < u; ++h) t[h] instanceof HTMLElement && "SELECT" === t[h].tagName.toUpperCase() && i.push(t[h]);
-    //                     for (var d = 0, f = i.length; d < f; ++d) a.push(n(i[d], s({}, r, e)));
-    //                     return a
-    //                 }()
-    //             }, t("custom-event-polyfill");
-    //             var r = {
-    //                 containerClass: "custom-select-container",
-    //                 openerClass: "custom-select-opener",
-    //                 panelClass: "custom-select-panel",
-    //                 optionClass: "custom-select-option",
-    //                 optgroupClass: "custom-select-optgroup",
-    //                 isSelectedClass: "is-selected",
-    //                 hasFocusClass: "has-focus",
-    //                 isDisabledClass: "is-disabled",
-    //                 isOpenClass: "is-open"
-    //             }
-    //         }, {"custom-event-polyfill": 1}], 3: [function (t, e, i) {
-    //             "use strict";
-    //             var n = function (t) {
-    //                 return t && t.__esModule ? t : {default: t}
-    //             }(t("./index"));
-    //             if ("undefined" == typeof jQuery) throw new Error("Custom Select jQuery requires jQuery");
-    //             !function (t) {
-    //                 var e = jQuery;
-    //                 e.fn.customSelect = function (t) {
-    //                     for (var i = arguments.length, s = Array(i > 1 ? i - 1 : 0), r = 1; r < i; r++) s[r - 1] = arguments[r];
-    //                     var a;
-    //                     return this.each(function () {
-    //                         var i = e(this), r = i.data("customSelect");
-    //                         r ? "string" == typeof t && ("function" == typeof r[t] ? (a = r[t].apply(r, s), "destroy" === t && i.removeData("customSelect")) : s.length ? (r[t] = s[0], a = this) : a = "container" === t || "opener" === t || "select" === t || "panel" === t ? e(r[t]) : r[t]) : (i.data("customSelect", (0, n.default)(this, t)[0]), a = this)
-    //                     }), a
-    //                 }
-    //             }()
-    //         }, {"./index": 2}]
-    //     }, {}, [3]),
-    //     (this),
     (this),
-        function (t) {
-            var e = !1;
-            if ("function" == typeof define && define.amd && (define(t), e = !0), "object" == typeof exports && (module.exports = t(), e = !0), !e) {
-                var i = window.Cookies, n = window.Cookies = t();
-                n.noConflict = function () {
-                    return window.Cookies = i, n
-                }
-            }
-        }
-
-        (function () {
-            function t() {
-                for (var t = 0, e = {}; t < arguments.length; t++) {
-                    var i = arguments[t];
-                    for (var n in i) e[n] = i[n]
-                }
-                return e
-            }
-
-            function e(i) {
-                function n(e, s, r) {
-                    var a;
-                    if ("undefined" != typeof document) {
-                        if (arguments.length > 1) {
-                            if ("number" == typeof(r = t({path: "/"}, n.defaults, r)).expires) {
-                                var o = new Date;
-                                o.setMilliseconds(o.getMilliseconds() + 864e5 * r.expires), r.expires = o
-                            }
-                            r.expires = r.expires ? r.expires.toUTCString() : "";
-                            try {
-                                a = JSON.stringify(s), /^[\{\[]/.test(a) && (s = a)
-                            } catch (t) {
-                            }
-                            s = i.write ? i.write(s, e) : encodeURIComponent(String(s)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent), e = (e = (e = encodeURIComponent(String(e))).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent)).replace(/[\(\)]/g, escape);
-                            var l = "";
-                            for (var c in r) r[c] && (l += "; " + c, !0 !== r[c] && (l += "=" + r[c]));
-                            return document.cookie = e + "=" + s + l
-                        }
-                        e || (a = {});
-                        for (var h = document.cookie ? document.cookie.split("; ") : [], u = /(%[0-9A-Z]{2})+/g, d = 0; d < h.length; d++) {
-                            var f = h[d].split("="), p = f.slice(1).join("=");
-                            this.json || '"' !== p.charAt(0) || (p = p.slice(1, -1));
-                            try {
-                                var m = f[0].replace(u, decodeURIComponent);
-                                if (p = i.read ? i.read(p, m) : i(p, m) || p.replace(u, decodeURIComponent), this.json) try {
-                                    p = JSON.parse(p)
-                                } catch (t) {
-                                }
-                                if (e === m) {
-                                    a = p;
-                                    break
-                                }
-                                e || (a[m] = p)
-                            } catch (t) {
-                            }
-                        }
-                        return a
-                    }
-                }
-
-                return n.set = n, n.get = function (t) {
-                    return n.call(n, t)
-                }, n.getJSON = function () {
-                    return n.apply({json: !0}, [].slice.call(arguments))
-                }, n.defaults = {}, n.remove = function (e, i) {
-                    n(e, "", t(i, {expires: -1}))
-                }, n.withConverter = e, n
-            }
-
-            return e(function () {
-            })
-        }),
+        // function (t) {
+        //     var e = !1;
+        //     if ("function" == typeof define && define.amd && (define(t), e = !0), "object" == typeof exports && (module.exports = t(), e = !0), !e) {
+        //         var i = window.Cookies, n = window.Cookies = t();
+        //         n.noConflict = function () {
+        //             return window.Cookies = i, n
+        //         }
+        //     }
+        // }
+        //
+        // (function () {
+        //     function t() {
+        //         for (var t = 0, e = {}; t < arguments.length; t++) {
+        //             var i = arguments[t];
+        //             for (var n in i) e[n] = i[n]
+        //         }
+        //         return e
+        //     }
+        //
+        //     function e(i) {
+        //         function n(e, s, r) {
+        //             var a;
+        //             if ("undefined" != typeof document) {
+        //                 if (arguments.length > 1) {
+        //                     if ("number" == typeof(r = t({path: "/"}, n.defaults, r)).expires) {
+        //                         var o = new Date;
+        //                         o.setMilliseconds(o.getMilliseconds() + 864e5 * r.expires), r.expires = o
+        //                     }
+        //                     r.expires = r.expires ? r.expires.toUTCString() : "";
+        //                     try {
+        //                         a = JSON.stringify(s), /^[\{\[]/.test(a) && (s = a)
+        //                     } catch (t) {
+        //                     }
+        //                     s = i.write ? i.write(s, e) : encodeURIComponent(String(s)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent), e = (e = (e = encodeURIComponent(String(e))).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent)).replace(/[\(\)]/g, escape);
+        //                     var l = "";
+        //                     for (var c in r) r[c] && (l += "; " + c, !0 !== r[c] && (l += "=" + r[c]));
+        //                     return document.cookie = e + "=" + s + l
+        //                 }
+        //                 e || (a = {});
+        //                 for (var h = document.cookie ? document.cookie.split("; ") : [], u = /(%[0-9A-Z]{2})+/g, d = 0; d < h.length; d++) {
+        //                     var f = h[d].split("="), p = f.slice(1).join("=");
+        //                     this.json || '"' !== p.charAt(0) || (p = p.slice(1, -1));
+        //                     try {
+        //                         var m = f[0].replace(u, decodeURIComponent);
+        //                         if (p = i.read ? i.read(p, m) : i(p, m) || p.replace(u, decodeURIComponent), this.json) try {
+        //                             p = JSON.parse(p)
+        //                         } catch (t) {
+        //                         }
+        //                         if (e === m) {
+        //                             a = p;
+        //                             break
+        //                         }
+        //                         e || (a[m] = p)
+        //                     } catch (t) {
+        //                     }
+        //                 }
+        //                 return a
+        //             }
+        //         }
+        //
+        //         return n.set = n, n.get = function (t) {
+        //             return n.call(n, t)
+        //         }, n.getJSON = function () {
+        //             return n.apply({json: !0}, [].slice.call(arguments))
+        //         }, n.defaults = {}, n.remove = function (e, i) {
+        //             n(e, "", t(i, {expires: -1}))
+        //         }, n.withConverter = e, n
+        //     }
+        //
+        //     return e(function () {
+        //     })
+        // }),
         function (t, e, i) {
             t.Browser = function () {
                 function e() {
@@ -1020,10 +756,10 @@ $(document).ready(function () {
 
         const $jsSubmitStageOne = $('.js-submit-stage-1');
 
-        const $jsSubmitStageThree = $('.js-submit-stage-3');
-        const $jsSubmitStageFour = $('.js-submit-stage-4');
-        const $jsSubmitStageFive = $('.js-submit-stage-5');
-        const $jsSubmitStageSix = $('.js-submit-stage-6');
+        // const $jsSubmitStageThree = $('.js-submit-stage-3');
+        // const $jsSubmitStageFour = $('.js-submit-stage-4');
+        // const $jsSubmitStageFive = $('.js-submit-stage-5');
+        // const $jsSubmitStageSix = $('.js-submit-stage-6');
 
         const $mainForm = $('.js-form-main');
         const $modalFormOne = $orderModal.find('.step1 form');
@@ -1072,6 +808,9 @@ $(document).ready(function () {
         $jsSubmitStageOne.on('click', function (e) {
             if (!$(this).hasClass('active')) return;
 
+            const $oldData = $('.step.step2 .offers .event-list');
+            $oldData.remove();
+
             ajaxStageOne();
             //ajax things
             // const $formElement = $(this).parents('form');
@@ -1111,7 +850,7 @@ $(document).ready(function () {
 
             //$(".js-custom-scrollbar").mCustomScrollbar("update");
 
-            $(".js-custom-scrollbar").mCustomScrollbar({
+            $orderModal.find('.reservation-tunnel .step.step2 .js-custom-scrollbar').mCustomScrollbar({
                 scrollbarPosition: "outside",
                 autoHideScrollbar: false,
                 theme: "dark",
@@ -1165,6 +904,9 @@ $(document).ready(function () {
             $jsSubmitStageTwo.on('click', function (e) {
                 e.preventDefault();
 
+                const $oldData = $('.step.step3 .options .options, .step.step3 .options .form-group');
+                $oldData.remove();
+
                 ajaxStageTwo();
 
                 $orderModal.find('.step3 .inactive').fadeOut();
@@ -1197,7 +939,7 @@ $(document).ready(function () {
     function ajaxStageOne() {
         //ajax imitation
         const $destinationHolder = $('.reservation-tunnel .step.step2 .offers');
-        const $rawData = $('.server-datas .event-list');
+        const $rawData = $('.server-datas .event-list').clone();
         const $eventBoxes = $rawData.find('.event-box');
         const $showMoreBlock = $(
             '<div class="show-more-block">\n' +
@@ -1264,12 +1006,11 @@ $(document).ready(function () {
     function ajaxStageTwo() {
         //ajax imitation
         const $destinationHolder = $('.reservation-tunnel .step.step3 .options');
-        const $rawData = $('.server-datas .options .options');
+        const $rawData = $('.server-datas .options .options').clone();
 
         $rawData.find('>.form-group:first-child').remove();
         $rawData.find('>.form-group:first-child').remove();
         $rawData.find('.form-group>p:last-child').remove();
-
         $rawData.find('>.form-group:last-child').remove();
         $rawData.find('>.form-group:last-child').remove();
 
