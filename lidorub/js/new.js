@@ -417,7 +417,7 @@ $(document).ready(function () {
                     top: m,
                     left: s.parent().offset().left,
                     width: s.parent().width()
-                }), s.next().css({"margin-top": f + o + l + parseInt(0, 10) + "px"}), _ || (g.addClass("fixed"), y(), v.addClass("visibility-hidden"))), a > u ? !s.hasClass("topper") && a > 0 && (s.addClass("topper"), setTimeout(function () {
+                }), s.next().css({"margin-top": f + o + l + parseInt(0, 10) + "px"}), v.addClass("visibility-hidden"), _ || (g.addClass("fixed"), y())), a > u ? !s.hasClass("topper") && a > 0 && (s.addClass("topper"), setTimeout(function () {
                     t("#js-book-btn").addClass("topper")
                 }, 1300)) : a < u && s.hasClass("topper") && (s.removeClass("topper"), setTimeout(function () {
                     t("#js-book-btn").removeClass("topper")

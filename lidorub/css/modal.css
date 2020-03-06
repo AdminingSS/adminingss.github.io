@@ -540,6 +540,11 @@
     max-width: 100%;
 }
 
+#map svg >*, #map svg path {
+    max-width: 100%;
+    width: 100%;
+}
+
 /*temp*/
 
 .carousel.slide {

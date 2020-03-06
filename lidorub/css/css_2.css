@@ -5570,7 +5570,8 @@ section:focus {
 }
 
 #js-book-btn-modele-desktop.visibility-hidden {
-    visibility: hidden
+    visibility: hidden;
+    opacity: 0;
 }
 
 #js-book-btn-modele-mobile.visibility-hidden {
