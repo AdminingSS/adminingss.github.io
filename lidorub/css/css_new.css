@@ -619,3 +619,7 @@
 .tm-flex-between {
     justify-content: space-between;
 }
+
+#nav .container:nth-of-type(1) {
+    max-width: 1200px;
+}
