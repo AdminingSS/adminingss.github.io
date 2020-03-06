@@ -1127,15 +1127,15 @@ $(document).ready(function () {
                 const $showTrigger = $moreBlock.find('.show-menu');
 
                 let openMore = false;
+                let loaded = false;
 
                 $showTrigger.on('click', function (e) {
                     e.preventDefault();
-                    let loaded = false;
 
                     if (!loaded) {
+                        console.log(loaded);
                         //ajax2 here
                         ajaxStageOneShowMore($moreBlock);
-
                         loaded = true;
                     }
 
@@ -1147,13 +1147,13 @@ $(document).ready(function () {
                         $containerWhite.slideDown(500).fadeIn({duration: 500, queue: false});
                         $showTrigger.html('Скрыть подробности');
                         openMore = true;
-                        $('.carousel-inner').slick();
+                        $containerWhite.find('.carousel-inner').slick();
                     }
                     else {
                         $containerWhite.fadeOut(500).slideUp({duration: 500, queue: false});
-                        $showTrigger.html('Показать подробности')
+                        $showTrigger.html('Показать подробности');
                         openMore = false;
-                        $('.carousel-inner').unslick();
+                        $containerWhite.find('.carousel-inner').slick('unslick');
                     }
 
 
@@ -1215,7 +1215,7 @@ $(document).ready(function () {
     function ajaxStageOneShowMore($holder) {
         //ajax imitation
         const $destinationHolder = $holder;
-        const $rawData = $('.server-datas .container-white');
+        const $rawData = $('.server-datas .container-white').clone();
         const $rawImages = $rawData.find('.carousel-inner img');
         const $sliderHolder = $('<div></div>');
         const $panelAccordions = $rawData.find('.panel-group .panel');
