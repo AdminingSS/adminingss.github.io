@@ -316,6 +316,10 @@
     font-size: 24px;
 }
 
+.event-list h2:hover a, .event-list h2.active a {
+    color: #b8a15d;
+}
+
 .event-list h3 {
     font-family: inherit;
     line-height: 1.2;
@@ -465,6 +469,10 @@
     max-height: calc(100vh - 174px);
 }
 
+.options .options .mCSB_container>*:nth-child(-n+4) {
+    display: none;
+}
+
 .reservation-tunnel .step.step3 .options, .reservation-tunnel .step.step2 .offers {
     margin-right: 0;
     padding: 0 0 20px 0;
@@ -525,6 +533,11 @@
 
 .panel-collapse.open {
     display: block;
+}
+
+/*other*/
+#map svg {
+    max-width: 100%;
 }
 
 /*temp*/

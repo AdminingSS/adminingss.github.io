@@ -22,6 +22,9 @@
     <!--flapickr-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
+    <!--custom select-->
+    <link rel="stylesheet" href="./vendor/customSelect/custom-select.css">
+
     <!--lido legacy-->
     <link rel="stylesheet" media="all"
           href="./css/css_1.css">
@@ -1377,52 +1380,43 @@
                                         <div class="form-item formule">
                                             <div class="block">
                                                 <div class="custom-select-container customSelect">
-                                                    <span
-                                                            class="custom-select-opener" role="combobox"
-                                                            aria-autocomplete="list" aria-expanded="false"
-                                                            aria-owns="customSelect-8WY64-panel"
-                                                            aria-activedescendant="customSelect-8WY64-selectedOption"
-                                                            tabindex="0">
-                                                        <!--<span>Выберите предложение</span>-->
-                                                    </span>
-                                                    <select name="cat" tabindex="-1">
-                                                        <!--<option value="">Выберите предложение</option>-->
-                                                        <option value="">Выберите предложение</option>
-                                                        <option value="19">
-                                                            Только спектакли этого театра и жанра
+                                                    <select name="theater" tabindex="-1">
+                                                        <option value="1">
+                                                            Театр 1
                                                         </option>
-                                                        <option value="20">
-                                                            Спектакли этого театра всех жанров
+                                                        <option value="2">
+                                                            Театр 2
                                                         </option>
-                                                        <option value="21">
-                                                            Спектакли всех театров этого жанра
+                                                        <option value="3">
+                                                            Театр 3
                                                         </option>
-                                                        <option value="22">
-                                                            Все спектакли всех театров всех жанров
+                                                        <option value="4">
+                                                            Театр 4
                                                         </option>
                                                     </select>
-                                                    <div id="customSelect-8WY64-panel" class="custom-select-panel"
-                                                         role="listbox">
-                                                        <div class="custom-select-option is-selected has-focus"
-                                                             data-value="" role="option"
-                                                             id="customSelect-8WY64-selectedOption">Выберите предложение
-                                                        </div>
-                                                        <div class="custom-select-option" data-value="" role="option">
-                                                            Выберите предложение
-                                                        </div>
-                                                        <div class="custom-select-option" data-value="19" role="option">
-                                                            Только спектакли этого театра и жанра
-                                                        </div>
-                                                        <div class="custom-select-option" data-value="20" role="option">
-                                                            Спектакли этого театра всех жанров
-                                                        </div>
-                                                        <div class="custom-select-option" data-value="21" role="option">
-                                                            Спектакли всех театров этого жанра
-                                                        </div>
-                                                        <div class="custom-select-option" data-value="22" role="option">
-                                                            Все спектакли всех театров всех жанров
-                                                        </div>
-                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="form-item formule">
+                                            <div class="block">
+                                                <div class="custom-select-container customSelect">
+                                                    <select name="genre" tabindex="-1">
+                                                        <option value="1">
+                                                            Жанр 1
+                                                        </option>
+                                                        <option value="2">
+                                                            Жанр 2
+                                                        </option>
+                                                        <option value="3">
+                                                            Жанр 3
+                                                        </option>
+                                                        <option value="4">
+                                                            Жанр 4
+                                                        </option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -3145,7 +3139,7 @@
                                                     }
 
                                                     .ui-state-default {
-                                                        background: url("/s1/assets/images/layout/datepicker/ui-bg_flat_75_f5f5f5_40x100.png") repeat-x scroll 50% 50% #F5F5F5 !important;
+                                                        /*background: url("/s1/assets/images/layout/datepicker/ui-bg_flat_75_f5f5f5_40x100.png") repeat-x scroll 50% 50% #F5F5F5 !important;*/
                                                         border: 1px solid #F5F5F5 !important;
                                                         color: red !important;
                                                         font-weight: normal !important;
@@ -3156,7 +3150,7 @@
                                                     }
 
                                                     .ui-state-default.ui-state-active, .ui-state-highlight a.ui-state-default {
-                                                        background: url("/s1/assets/images/layout/datepicker/ui-bg_flat_55_428bca_40x100.png") repeat-x scroll 50% 50% #428BCA !important;
+                                                        /*background: url("/s1/assets/images/layout/datepicker/ui-bg_flat_55_428bca_40x100.png") repeat-x scroll 50% 50% #428BCA !important;*/
                                                         border: 1px solid #428BCA !important;
                                                         height: 25px !important;
                                                         color: #FFFFFF !important;
@@ -3164,129 +3158,6 @@
                                                 </style>
                                                 <input type="hidden" id="discount" value="0" autocomplete="off">
                                                 <input type="hidden" id="discount_type" value="0" autocomplete="off">
-
-                                                <script src="/js/jquery.livequery.js"></script>
-                                                <script>
-
-                                                    var discount_ticket = [];
-
-                                                    function recount() {
-                                                        var discount = parseFloat($('#discount').val());
-                                                        var addPrice = parseFloat($('#addPrice').val());
-                                                        var discount_type = parseInt($('#discount_type').val());
-                                                        var count_ticket = parseInt($('#cse').html());
-
-                                                        var sum = parseFloat($('#tp').html()) * count_ticket;
-
-                                                        $('.disc_text').html('');
-                                                        for (var key in discount_ticket) {
-
-                                                            if (count_ticket >= key && discount < discount_ticket[key]) {
-                                                                discount = parseInt(discount_ticket[key]);
-                                                                discount_type = 0;
-                                                                $('.disc_text').html('discount for the number of tickets ' + discount + '%');
-                                                            }
-                                                        }
-
-
-                                                        if (discount > 0) {
-
-                                                            if (discount_type == 1) {
-                                                                sum -= discount * count_ticket;
-                                                            }
-                                                            else {
-                                                                sum = sum - (sum * (discount / 100));
-                                                            }
-                                                        }
-                                                        sum += addPrice;
-                                                        $('.allo, .priceall').html(sum.toFixed(2));
-                                                    }
-
-                                                    $(document).ready(function () {
-                                                        $('.allo').html(parseFloat($('.allo').html()).toFixed(2));
-                                                        $('#gpd').click(function () {
-                                                            $('#discount').val(0);
-                                                            $('#discount_type').val(0);
-                                                            if ($.trim($('#promo').val()) != '') {
-                                                                $('#prr').html('');
-                                                                $.ajax({
-                                                                    url: 'https://russianbroadway.com/cms/promo',
-                                                                    type: 'post',
-                                                                    data: {
-                                                                        promo: $('#promo').val(),
-                                                                        spekt: 14589,
-                                                                        price: $('#tp').html(),
-                                                                        amount: $('#cse').html()
-                                                                    },
-                                                                    dataType: 'json',
-                                                                }).success(function (data) {
-                                                                    if (data.error) {
-                                                                        alert(data.error);
-                                                                        $('#promo').val('');
-                                                                    }
-                                                                    else if (data.type != undefined && data.partner != undefined && data.client != undefined) {
-                                                                        $('#discount').val(data.client);
-                                                                        $('#discount_type').val(data.type);
-                                                                        recount();
-                                                                        $('#prr').html('Discount - ' + (data.type == '0' ? data.client + '%' : (data.client * parseInt($('#cse').html())) + ' EUR') + ' <span class="glyphicon glyphicon-ok" style="margin-left:3px;background:#5cb85c;color:white;padding:3px;border-radius: 50px;"></span>');
-                                                                        return false;
-                                                                    }
-                                                                    else {
-                                                                        alert('Error.');
-                                                                        $('#promo').val('');
-                                                                    }
-                                                                });
-                                                            }
-                                                            else {
-                                                                alert('Enter promo code');
-                                                                $('#promo').val('');
-                                                            }
-
-                                                            recount();
-                                                            return false;
-                                                        });
-                                                        var d = {'1583942400': {0: '11.03.2020', 1: '19:00'},};
-                                                        $('#startat').html('Starts at 19:00');
-                                                        $('#calendar_single1 .ui-state-highlight,#calendar_single1 .ui-state-active,#calendar_single1 .ui-state-default').livequery(function () {
-                                                            if (!$(this).parent().hasClass('ui-state-disabled')) {
-                                                                dd = parseInt($(this).html()) < 10 ? '0' + $(this).html() : $(this).html();
-                                                                mm = parseInt($(this).parent().attr('data-month')) + 1 < 10 ? '0' + (parseInt($(this).parent().attr('data-month')) + 1) : parseInt($(this).parent().attr('data-month')) + 1;
-                                                                str = '';
-                                                                da = dd + '.' + mm + '.' + $(this).parent().attr('data-year');
-                                                                for (a in d) {
-                                                                    if (d[a][0] == da) {
-                                                                        p = d[a][1].split(":");
-                                                                        str += (str != '' ? ' and ' : '') + d[a][1];
-                                                                        //+(p[0] <=12 ? 'am' : 'pm');
-                                                                    }
-                                                                }
-                                                                $(this).attr('rel', 'tooltip').attr('title', str);
-                                                                $(this).tooltip({container: 'body'});
-                                                            }
-                                                        });
-                                                        var disar = ['11.03.2020',];
-
-                                                        $('#calendar_single1').multiDatesPicker({
-                                                            numberOfMonths: 1,
-                                                            dateFormat: "dd.mm.yy",
-                                                            defaultDate: '11.03.2020',
-                                                            minDate: 0,
-                                                            firstDay: 1,
-                                                            mode: 'daysRange',
-                                                            autoselectRange: [0, 0],
-                                                            beforeShowDay: function (date) {
-                                                                var string = jQuery.datepicker.formatDate('dd.mm.yy', date);
-                                                                return [disar.indexOf(string) == -1 ? 0 : 1]
-                                                            },
-
-                                                            onSelect: function (selected, evnt) {
-                                                                if (selected != '11.03.2020') {
-                                                                    document.location = 'https://russianbroadway.com/shows/post/an-evening-of-ballets-by-alexei-ratmansky-mariinsky-theatre-ballet/teatr/mariinsky-ballet-and-opera-theatre/date/' + selected + '#order';
-                                                                }
-                                                            },
-                                                        });
-                                                    });
-                                                </script>
 
                                                 <div id="calendar_single1" class="hasDatepicker">
                                                     <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"
@@ -3449,17 +3320,7 @@
                                                         <p>We always request the best available seats within the selected category, exact seats are assigned by the theater itself.</p>
                                                     </span>
                                                 </span>
-                                                <script>
-                                                    $(document).ready(function () {
-                                                        $('.tooltp').click(function () {
-                                                            $(this).next('span').show();
-                                                            return false;
-                                                        });
-                                                        $('.tooltp').blur(function () {
-                                                            $(this).next('span').hide();
-                                                        });
-                                                    });
-                                                </script>
+
                                             </label>
                                             <p>
                                                 <strong>Mariinsky (ex. Kirov) Ballet and Opera Theatre</strong>
@@ -3507,37 +3368,7 @@
                                                     color: black;
                                                 }
                                             </style>
-                                            <script src="/js/raphael.min.js"></script>
-                                            <script src="/js/init.js"></script>
-                                            <script>
-                                                var select_class_button = 'select_button';
-                                                var hover_class_button = 'hover_button';
-                                                var hover_color = '#ffffff';
-                                                var hover_zone_color = 'orange';
-                                                var select_color = 'orange';
-                                                var tooltip_color = '#fffff';
-                                                var landing = {
-                                                    src: 'https://russianbroadway.com/s1/files/image/mariinsky/mariinsky-hall-zones2.jpg',
-                                                    width: 473,
-                                                    height: 415
-                                                }
-                                                var paths = {
-                                                    obj1411148183: {
-                                                        id: '1411148183',
-                                                        name: '<b>400.71 EUR - Best View Tickets</b>',
-                                                        path: 'm 439.52604,291.25631 -0.39325,14.2882 7.73398,0.26217 7.20964,-1.44193 -0.52434,-9.96241 h -3.93253 l -0.52434,-4.58796 -2.4906,-1.70409 z m -421.305306,-3.01494 0.131084,15.59905 5.374461,2.22843 9.306993,-0.26217 8.389403,-0.7865 7.73398,-2.35952 -0.393253,-14.94363 -3.408195,-0.65542 -10.224584,2.35952 -6.292052,0.52434 z m 180.322696,-86.24455 -24.47034,2.0392 -22.43114,3.893 -13.9036,3.15149 -0.37076,-21.50424 7.41525,-1.11229 0.92691,4.26377 16.49894,-3.52224 v -5.37606 l 19.09428,-2.40996 0.37076,5.0053 17.61123,-0.37077 z m 18.53814,-1.66843 h 39.30085 v -25.58263 h -39.30085 z m 56.91207,2.59534 h 15.57204 l 17.79661,2.40996 14.64513,2.78072 13.34745,3.15148 -0.37076,-15.75742 -9.82521,-2.78072 -16.68432,-3.52224 -0.37077,-6.67373 -26.50953,-2.22458 -1.29767,6.30297 h -7.9714 l -0.18538,14.27436 z m -75.63559,34.11017 0.55615,-0.92691 -0.18539,-12.60593 -4.26377,-0.92691 -0.74152,-5.00529 -9.08369,1.29767 -1.11229,5.74682 -5.00529,-0.92691 -1.66844,-5.19068 -8.71292,3.70763 -0.18538,9.63983 -2.78072,-3.15148 -2.40996,0.37076 -1.11229,-5.0053 -3.89301,0.37077 -4.81991,4.26377 -0.18538,10.01059 -1.85382,-1.66843 -3.33686,-2.40996 -0.92691,0.55614 -1.29767,-4.81991 -1.85381,-0.37076 -7.04449,5.56144 v 20.57733 l 17.98199,-7.22988 16.12818,-6.30296 13.34746,-4.44915 z m 8.52754,-0.18538 16.49894,0.18538 0.18539,-10.38136 -5.19068,-1.11229 -0.18538,-5.19067 -10.9375,0.18538 z m 58.20975,-14.27437 -9.26907,-2.59534 -2.03919,0.92691 -0.18538,4.81992 -4.44916,0.18538 -1.48305,2.22457 0.55615,8.34216 17.05508,0.37077 z m 67.10805,32.44174 -22.61652,-9.63983 -21.50424,-6.67373 -15.75742,-1.11229 -0.18538,-14.45974 4.07839,-1.29767 1.48305,-5.0053 h 3.52225 l 5.00529,1.48305 0.74153,5.37606 4.81991,-0.74153 1.11229,-4.44915 2.9661,-0.37076 7.0445,3.89301 v 4.44915 l 4.81991,1.11229 0.74153,-5.56144 2.22457,-0.18538 7.41526,5.00529 -0.37077,4.81992 5.19068,1.29767 0.55615,-4.81992 3.52224,-0.37076 1.29767,4.07839 4.44915,0.37076 z m 30.77331,92.87606 H 393.75 l -0.18538,-7.78602 -41.89619,-58.39513 -27.99258,-0.18538 -0.37076,8.89831 z M 119.38559,281.34004 h 27.80721 l 0.55614,8.89831 -40.04237,58.20974 -30.773307,-0.18538 v -8.52754 z m 125.21793,0.4782 h 58.46365 l 18.87615,60.03666 -0.26217,5.76771 -60.82317,-0.26217 -16.51663,-58.98798 z m -74.98029,-0.26217 h 58.20148 v 9.70024 l -15.79567,56.75956 -61.21642,0.0655 -0.0655,-7.01302 z m 74.98029,-6.55422 v -32.50894 h 36.9658 l 14.41929,3.14603 11.27326,3.67036 5.50554,4.1947 17.82748,9.43808 v 7.6029 h -6.02988 -4.45687 l -0.26217,4.9812 z m -92.28343,0.26216 h 75.50462 v -33.03327 h -37.49014 l -17.82748,4.45687 -16.77881,8.3894 -14.68145,6.81639 v 8.38941 l 11.01109,0.26217 z'
-                                                    }, obj1411148214: {
-                                                        id: '1411148214',
-                                                        name: '<b>343.47 EUR - Good View Tickets</b>',
-                                                        path: 'm 135.32839,256.68432 -46.53072,25.21187 -26.324153,15.01589 -12.235169,5.19067 0.370762,-16.49894 14.088983,-5.56144 1.668433,1.29767 2.78072,-3.70763 3.893008,-0.55614 -0.185381,-8.8983 10.195975,-3.52225 0.556144,4.81992 6.302966,-3.52225 0.370763,-8.15678 8.156779,-3.89301 2.40996,5.37606 6.30296,-2.03919 v -7.60064 l 9.63983,-4.07839 1.11229,4.63453 1.51293,-1.36835 c 0.19772,-2.39013 0.46488,-4.77378 0.71165,-7.15919 l 7.9714,-4.07839 1.29767,2.0392 -0.18538,4.07839 4.81991,-1.85382 z m 2.40996,-45.97457 -24.28496,8.15678 -27.436441,10.38135 -19.650423,7.41526 -17.611229,4.44915 -17.055085,0.37076 L 17.055085,240 l -1.853814,-1.48305 0.185382,-14.27437 2.595339,-0.37076 14.645127,2.22458 14.088983,-1.11229 13.903602,-2.59534 17.79661,-6.67373 17.611229,-5.74682 9.083687,-3.89301 4.26377,-0.55614 0.18538,-6.67373 8.34216,-2.59534 0.92691,5.37606 4.63453,-1.66843 0.37077,-6.48835 8.15678,-1.66843 0.18538,5.00529 4.81991,-0.9269 z m 60.43432,-45.04767 -22.06038,0.9269 -22.06038,2.59534 -32.07098,7.78602 -22.616523,7.9714 -27.065678,8.8983 -15.01589,4.63454 -11.122881,2.03919 H 35.59322 l -10.566737,-1.66843 -7.229873,-2.22458 0.741526,-6.11758 H 21.875 l 9.083687,2.22457 13.347457,1.29767 15.386653,-2.59534 17.611229,-4.81991 13.347457,-6.11759 13.347457,-4.07839 1.48305,-0.55614 0.18538,-5.37606 10.38136,-3.89301 13.53284,-4.07839 0.18538,-6.11758 7.41525,-1.29767 0.55615,4.63453 4.26377,-0.37076 v -5.56144 l 7.78602,-0.92691 0.74152,4.63454 11.30826,-1.85382 0.92691,-6.11758 22.61653,-1.29767 2.03919,2.22457 -0.37076,3.33687 11.67902,-0.37076 z m 132.73305,-33.92479 -34.29555,-2.9661 -25.76801,-0.92691 -25.02648,-0.18538 -4.81992,-3.52225 -3.70762,1.66843 -1.11229,0.37077 -4.63454,-1.85382 -4.81991,2.78072 -21.13348,0.37077 -2.40995,-0.74153 -2.59534,0.55614 -31.51483,1.85382 -27.80721,2.40996 0.55615,-7.04449 32.62712,-3.24418 30.03178,-2.31727 29.29025,-0.55614 32.25636,0.83421 44.6769,2.9661 13.71822,1.29767 6.39566,1.20499 z m 122.38418,64.74499 -9.96241,3.27711 -10.74892,0.78651 -12.45302,-0.65542 -13.37061,-3.14603 -20.05592,-7.47181 -29.23182,-9.56916 -22.54652,-6.81639 -20.97351,-4.32579 -19.79374,-1.83518 -21.62893,-0.91759 0.52433,-11.7976 1.7041,-1.04867 9.307,0.39325 0.7865,-5.24338 2.35952,-0.39325 21.36676,1.83518 1.7041,1.7041 -0.52434,4.06362 11.66651,1.44192 0.52434,-4.45687 1.96627,-1.04867 6.16096,2.35952 0.39326,5.24337 2.88386,0.9176 0.52433,-4.98121 2.75278,-0.65542 5.24337,3.01494 -0.39325,4.58795 9.70025,3.27711 15.86121,6.02989 0.13108,4.85012 28.31424,10.61784 14.41928,3.93253 12.19085,2.22843 14.55037,0.91759 10.48676,-2.88385 4.06361,0.13108 1.96627,1.96627 z m -117.7138,0.39325 -0.39325,13.76387 22.02218,7.73398 19.66266,7.60289 23.5952,8.38941 10.35566,3.93253 13.76387,2.75277 17.43422,0.39326 11.66652,-1.44193 3.27711,-1.44193 -0.52434,-13.10844 -2.88386,-1.83518 -2.35952,1.83518 -2.22843,-1.7041 -5.50555,1.31084 -16.7788,0.13109 -9.307,-1.57301 -14.81253,-4.06362 -13.23953,-4.71904 -15.33688,-5.63663 -15.99229,-5.8988 -9.96242,-3.53928 0.13108,-4.32578 -7.07855,-2.75278 -1.04868,1.7041 -0.91759,2.62169 -1.83518,-1.04868 z m 103.55669,109.58658 -9.96242,-1.31085 -16.51663,-6.29205 -23.5952,-13.10844 -41.94701,-23.07086 -14.55037,-7.27518 0.65542,-14.22266 3.4082,-0.26217 2.35951,-4.98121 20.71134,9.96242 -1.04867,7.34072 4.9812,0.78651 1.04868,-5.24338 10.48675,5.24338 -0.52433,9.17591 h 4.71903 l 2.88386,-3.93253 7.86507,5.24337 -0.26217,7.86507 8.3894,1.31084 15.9923,8.91374 10.74892,4.98121 8.3894,2.09735 h 5.76772 z'
-                                                    }, obj1411148235: {
-                                                        id: '1411148235',
-                                                        name: '<b>228.98 EUR - Economy Class Tickets</b>',
-                                                        path: 'm 457.48461,87.682218 -0.65543,8.389402 -8.52048,1.310844 -12.97736,1.17976 -11.66651,-0.131084 -33.29544,-7.078559 -23.46411,-5.243376 -20.05592,-4.45687 -27.13447,-3.277111 -15.2058,-1.441928 -0.13108,-6.292052 3.67036,-1.441929 0.52434,-5.374461 2.4906,-0.786506 v -4.45687 l 3.14603,-1.704098 0.13109,-3.539279 2.4906,-1.310844 -1.31085,-0.786506 -3.01494,0.262168 -0.52433,5.63663 -5.63663,-0.131084 -0.13109,4.850123 -7.47181,0.655422 v 1.573013 l 2.62169,0.786507 0.26217,7.73398 -1.7041,0.917591 -0.52434,3.27711 -35.78604,-1.310844 -25.43038,-0.131084 h -35.13062 l -18.74507,0.655422 -0.39326,-2.883857 -2.35952,-0.655422 0.52434,-7.602896 3.14603,-1.048676 0.13108,-2.228435 -2.4906,0.917591 -4.06362,0.131085 -0.39325,-5.374461 h -3.80145 l 0.39325,-5.112292 -5.76771,0.262168 1.44193,1.573013 0.13108,3.014942 2.75277,1.835182 -0.39325,4.325785 1.57301,1.704098 1.04868,4.45687 h 2.88386 l 0.7865,2.09735 -0.65542,4.850124 -32.7711,2.621688 -22.15327,3.27711 -19.79375,3.801448 -28.576397,6.81639 -19.662663,4.719039 -11.666512,1.441928 -13.108442,-0.131084 -17.303143,-3.146026 0.131085,-9.175909 12.453019,3.27711 12.059766,0.786507 10.617838,-1.048675 9.569162,-1.310845 V 81.52125 l 17.82748,-3.27711 18.876156,-4.850123 12.977361,-3.277111 15.20579,-2.228435 7.34073,-0.655422 0.26216,-2.752773 -1.83518,0.655423 -0.65542,0.786506 -4.98121,-0.393253 0.13109,-6.029883 -1.31085,1.704097 -4.71904,-0.786506 0.65543,-8.258318 3.14602,-0.917591 12.19085,-1.835182 11.27326,-0.917591 0.39326,-4.45687 18.87615,-0.917591 37.62123,-1.441929 44.96195,-0.262168 30.41159,0.524337 34.99953,0.524338 27.7899,1.048675 0.91759,4.981208 27.65881,6.160967 v 8.520487 l -5.24337,-0.131084 -2.35952,-0.131085 v 3.53928 l -5.1123,0.131084 -2.09735,-1.17976 -0.26216,2.35952 0.91759,1.704097 1.70409,-1.048675 18.22074,2.621688 32.90218,8.389403 9.17591,1.966266 9.17591,2.09735 0.26217,5.898799 2.35952,1.048675 12.05977,-0.131084 2.09735,-1.573013 2.35952,1.048675 0.7865,-1.441928 z m -1.31085,60.298832 -9.43808,1.83518 -8.52048,0.78651 -8.12724,0.26217 -8.25832,-0.65543 -8.12723,-1.04867 -47.84581,-11.53543 -15.73013,-3.27711 -9.17591,-1.7041 -6.81639,-0.7865 -0.26217,-3.4082 h -2.22843 l -0.13109,-4.32579 -24.90604,-2.62168 -15.20579,-1.7041 -17.30314,-1.04868 -13.89495,-0.52433 -39.06315,-0.26217 -23.5952,0.39325 -35.78604,3.01494 -20.44917,1.96627 -0.78651,5.11229 -2.35952,0.52434 -0.13108,3.01494 -27.92098,4.71904 -35.130625,8.3894 -19.269409,4.1947 -9.569162,1.44193 -11.797597,0.13109 -11.797598,-1.17976 -8.258318,-2.09735 0.524338,-7.34073 2.09735,-1.7041 8.913741,2.09735 5.636629,0.65542 12.059767,0.65543 h 6.947473 l 17.172059,-4.19471 13.239526,-2.88385 13.763863,-3.53928 13.632783,-2.88386 13.23952,-3.14603 4.45687,-1.04867 0.26217,-10.61784 2.88386,-1.7041 4.06361,-1.70409 28.05207,-3.27711 27.92098,-2.35952 0.91759,-5.374464 2.4906,-1.704097 32.50894,-0.262169 1.44193,1.704097 -0.13109,12.059763 18.48291,0.13109 0.26216,-12.977359 2.49061,-1.573013 27.39664,1.048675 h 4.98121 l 1.17976,1.048676 0.13108,6.685301 17.6964,0.26217 7.86506,0.65542 28.18315,3.80145 4.98121,0.65542 4.85012,2.09736 0.13109,12.32193 33.68869,7.20964 23.33303,5.8988 15.20579,3.27711 14.94362,0.78651 13.10845,-1.04868 9.56916,-2.09735 2.09735,2.09735 z'
-                                                    }
-                                                };
 
-                                            </script>
                                             <div style="overflow-x:auto;position:relative;padding:0;">
                                                 <div id="map">
                                                     <svg height="415" version="1.1" width="473"
@@ -3569,38 +3400,6 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <script>
-                                                    $(document).ready(function () {
-                                                        $('#spinEdit').change(function () {
-                                                            if ($(this).val() < 1) $(this).val(1);
-                                                            if ($('#zoneprice') && $('#zoneprice').val()) {
-                                                                ar = $('#zoneprice').val().split('|');
-                                                                v = $(this).val();
-                                                                $('.priceall').html((ar[1] * v).toFixed(2));
-                                                                $('#cse').html(v);
-                                                                $('input[name="OrdersModel[oCount]"]').val(v);
-                                                                $('input[name="OrdersModel[zoneCode]"]').val(ar[2]);
-                                                            }
-                                                            else alert('Select a ticket first!');
-
-                                                            if ($.trim($('#promo').val()) != '') $('#gpd').click();
-                                                            else {
-                                                                recount();
-                                                            }
-                                                        });
-                                                        $('#text').keyup(function () {
-                                                            if ($.trim($(this).val()) == '') {
-                                                                if ($('#d1').prop('checked')) {
-                                                                    $('#hotel').show();
-                                                                }
-                                                                else if ($('#d_p1').prop('checked')) {
-                                                                    $('#cruise').show();
-                                                                }
-                                                            }
-                                                            else $('#hotel,#cruise').hide();
-                                                        });
-                                                    });
-                                                </script>
 
                                                 <select style="display:none;" id="zoneprice"
                                                         onchange="ar = $(this).val().split('|');$('.priceall').html((ar[1]*parseInt($('#spinEdit').val())).toFixed(2));$('input[name=\'OrdersModel[zoneCode]\']').val(ar[2]);$('#zse').html(ar[0]);$('.contract').html(ar[3]);$('#tp').html(ar[1]);$('input[name=\'OrdersModel[spektPrice]\']').val(ar[1]);if($.trim($('#promo').val()) != '' ) $('#gpd').click();else recount();">
@@ -7949,6 +7748,9 @@
 
 <!--flatpickr-->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!--custom select-->
+<script src="./vendor/customSelect/jquery.custom-select.min.js"></script>
 
 <!--new js-->
 <script src="./js/new.js"></script>
