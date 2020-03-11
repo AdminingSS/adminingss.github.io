@@ -862,23 +862,45 @@ $(document).ready(function () {
             const $theaterModal = $('.js-theater-modal');
             const $theaterModalContent = $theaterModal.find('.tm-modal-content');
             const $theaterModalTrigger = $('.event-list .event-header .place-info');
-            const $theaterModalClose = $('.js-theater-modal-close');
+            const $theaterModalClose = $('.js-theater-modal-close, .tm-modal-close');
+
+            // $theaterModalContent.mCustomScrollbar({
+            //     //scrollbarPosition: "outside",
+            //     autoHideScrollbar: false,
+            //     theme: "dark",
+            //     mouseWheel: {scrollAmount: 300},
+            //     advanced: {updateOnContentResize: true}
+            // });
 
             $theaterModalTrigger.attr('href','#');
 
             $theaterModalTrigger.on('click', function (e) {
                 e.preventDefault();
 
+                $theaterModalContent.mCustomScrollbar("destroy");
+
+                const $oldData = $theaterModalContent.find('>*');
+                $oldData.remove();
+
                 ajaxStageOneTheaters($theaterModalContent);
 
                 $theaterModal.show();
-                $('body').addClass('body-noscroll');
+                //$('body').addClass('body-noscroll');
+
+                $theaterModalContent.mCustomScrollbar({
+                    //scrollbarPosition: "outside",
+                    autoHideScrollbar: false,
+                    theme: "dark",
+                    mouseWheel: {scrollAmount: 300},
+                    advanced: {updateOnContentResize: true}
+                });
             });
 
-            $theaterModalClose.on('click', function () {
+            $theaterModalClose.on('click', function (e) {
+                if(e.target !== this) return;
                 $theaterModal.hide();
-                $('body').removeClass('body-noscroll');
-            })
+                //$('body').removeClass('body-noscroll');
+            });
             //theater modals end
 
             //more button
@@ -895,7 +917,6 @@ $(document).ready(function () {
                     e.preventDefault();
 
                     if (!loaded) {
-                        console.log(loaded);
                         //ajax2 here
                         ajaxStageOneShowMore($moreBlock);
                         loaded = true;
@@ -986,6 +1007,9 @@ $(document).ready(function () {
         const $sliderHolder = $('<div></div>');
         const $panelAccordions = $rawData.find('.panel-group .panel');
 
+        $rawData.find('>.row >*:nth-child(2),.btn.btn-primary, >.row:nth-child(2), >p, .jumbotron').remove();
+        $rawData.find('>.row >*').removeClass('col-sm-8 col-md-8');
+
         $rawImages.each(function () {
             const $currImg = $(this);
             const oldSrc = $currImg.attr('src');
@@ -1023,14 +1047,13 @@ $(document).ready(function () {
                 $data.toggleClass('open');
                 $(this).parent().toggleClass('active');
             })
-        })
-
+        });
     }
 
     function ajaxStageOneShowMore($holder) {
         //ajax imitation
         const $destinationHolder = $holder;
-        const $rawData = $('.server-datas .step2-inactive .container-white').clone();
+        const $rawData = $('.server-datas #step2-inactive .container-white').clone();
         const $rawImages = $rawData.find('.carousel-inner img');
         const $sliderHolder = $('<div></div>');
         const $panelAccordions = $rawData.find('.panel-group .panel');
