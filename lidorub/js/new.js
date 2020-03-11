@@ -743,7 +743,7 @@ $(document).ready(function () {
 
     })();
 
-    //modal
+    //main modal
     (() => {
         const $orderModal = $('.js-order-modal');
         const $orderModalTrigger = $('.js-order-modal-trigger');
@@ -858,6 +858,29 @@ $(document).ready(function () {
                 advanced: {updateOnContentResize: true}
             });
 
+            //theater modals
+            const $theaterModal = $('.js-theater-modal');
+            const $theaterModalContent = $theaterModal.find('.tm-modal-content');
+            const $theaterModalTrigger = $('.event-list .event-header .place-info');
+            const $theaterModalClose = $('.js-theater-modal-close');
+
+            $theaterModalTrigger.attr('href','#');
+
+            $theaterModalTrigger.on('click', function (e) {
+                e.preventDefault();
+
+                ajaxStageOneTheaters($theaterModalContent);
+
+                $theaterModal.show();
+                $('body').addClass('body-noscroll');
+            });
+
+            $theaterModalClose.on('click', function () {
+                $theaterModal.hide();
+                $('body').removeClass('body-noscroll');
+            })
+            //theater modals end
+
             //more button
             const $eventBoxes = $orderModal.find('.event-box');
 
@@ -954,10 +977,60 @@ $(document).ready(function () {
         fixImages($destinationHolder);
     }
 
+    function ajaxStageOneTheaters($holder) {
+        //ajax imitation
+        const $destinationHolder = $holder;
+        const $rawData = $('.server-datas .theaters-data .container-white').clone();
+        const $carouselPlace = $rawData.find('.carousel').parent();
+        const $rawImages = $carouselPlace.find('.carousel-inner img');
+        const $sliderHolder = $('<div></div>');
+        const $panelAccordions = $rawData.find('.panel-group .panel');
+
+        $rawImages.each(function () {
+            const $currImg = $(this);
+            const oldSrc = $currImg.attr('src');
+            const newSrc = 'https://russianbroadway.com' + oldSrc;
+
+            $currImg.attr('src', newSrc);
+            $currImg.appendTo($('<div></div>')).appendTo($sliderHolder);
+        });
+
+
+        $carouselPlace.find('.carousel').remove();
+
+        fixImages($rawData);
+
+        $sliderHolder.prependTo($carouselPlace);
+
+        $rawData.appendTo($destinationHolder);
+
+        // var $containerWhite = $holder.find('.container-white');
+
+        $sliderHolder.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: true
+        });
+
+        $panelAccordions.each(function () {
+            const $trigger = $(this).find('.panel-heading a');
+            const $data = $(this).find('.panel-collapse');
+
+            $trigger.on('click', function (e) {
+                e.preventDefault();
+                $data.toggleClass('open');
+                $(this).parent().toggleClass('active');
+            })
+        })
+
+    }
+
     function ajaxStageOneShowMore($holder) {
         //ajax imitation
         const $destinationHolder = $holder;
-        const $rawData = $('.server-datas .container-white').clone();
+        const $rawData = $('.server-datas .step2-inactive .container-white').clone();
         const $rawImages = $rawData.find('.carousel-inner img');
         const $sliderHolder = $('<div></div>');
         const $panelAccordions = $rawData.find('.panel-group .panel');

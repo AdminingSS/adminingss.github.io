@@ -10,13 +10,24 @@
     left: 0;
     right: 0;
     z-index: 2000;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.tm-modal-body {
+    width: 80%;
+    background: #ffffff;
+    padding: 20px;
+    margin: 40px auto auto;
+    overflow: auto;
+    height: 80vh;
+    border-radius: 5px;
 }
 
 .tm-modal .reservation-tunnel {
     position: static;
 }
 
-.tm-modal.hidden {
+.tm-modal.tm-hidden {
     display: none;
 }
 
@@ -36,7 +47,10 @@
     display: none;
 }
 
+
+
 /*playbill*/
+/*event list*/
 
 .event-list {
     -webkit-box-sizing: border-box;
@@ -183,7 +197,7 @@
 
 .event-list a:not(.btn) {
     background: transparent;
-    color: #428bca;
+    /*color: #428bca;*/
     text-decoration: none;
 }
 
@@ -337,6 +351,10 @@
     color: #0f1e48!important;
 }
 
+.event-list h3 span span {
+    left: auto!important;
+}
+
 /*#0f1e48*/
 
 .event-list h3:first-child {
@@ -361,9 +379,11 @@
 
 .event-list .event-header .place-info {
     display: inline-block;
-    color: #428bca;
+    /*color: #428bca;*/
+    color: #0f1e48;
     text-decoration: none;
-    border-bottom: dashed 1px #428bca;
+    /*border-bottom: dashed 1px #428bca;*/
+    border-bottom: dashed 1px #0f1e48;
     margin: 0 5px;
 }
 
@@ -409,6 +429,9 @@
     width: 50%;
 }
 
+
+
+/*show more block*/
 .show-more-block {
     width: 100%;
 }
@@ -455,7 +478,7 @@
     transform: translate(-50%,15px) rotate(0deg);
 }
 
-.container-white {
+.show-more-block .container-white {
     display: none;
 }
 
@@ -474,6 +497,7 @@
 .mCSB_scrollTools {
     background-color: transparent;
 }
+
 
 /*flatpickr*/
 .js-flatpickr {
@@ -552,4 +576,51 @@
     right: 0;
     background-color: #fff;
     z-index: 2000;
+}
+
+
+/*theater modals styles*/
+.js-theater-modal .container-white {
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.42857;
+    color: #373737;
+    font-size: 14px;
+    font-family: "Roboto",sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+}
+
+.js-theater-modal .panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.js-theater-modal .panel-default {
+    border-color: #ddd;
+}
+
+.js-theater-modal .panel-body {
+    padding: 15px;
+}
+
+.js-theater-modal .map-holder iframe {
+    width: 100%;
+}
+
+.js-theater-modal .img-responsive {
+    width: 100%;
+}
+
+.js-theater-modal .btn {
+    width: 100%;
+}
+
+.js-theater-modal .jumbotron {
+    display: none;
 }
