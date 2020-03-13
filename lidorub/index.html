@@ -50,21 +50,6 @@
     <link rel="stylesheet" media="all"
           href="./css/modal.css">
 
-    <!--[if lte IE 8]>
-    <script src="./js/ie8_lte.js"></script>
-    <![endif]-->
-
-    <!--lido legacy-->
-    <script>
-        var dataLayer = [{
-            "userDevice": "desktop",
-            "pageType": "ticketing",
-            "pageName": "Ticketing | RussianBroadway",
-            "pageEnvironement": "prod",
-            "pageLanguage": "ru"
-        }];
-    </script>
-
 </head>
 <body class="home_page">
 
@@ -85,56 +70,8 @@
                     </div>
                     <div class="slide-top__content"><h1 class="slide-top__title">Мариинский театр</h1>
                         <p class="slide-top__date">237-й театральный сезон</p>
-                        <div class="slider_official">
-                            <div class="slider_official__icon">
-                                <div class="slider_official__window">
-                                    <div class="header_back__triangle"></div>
-                                    Сервис по поиску, подбору, бронированию, выкупу по поручению клиента и доставке
-                                    билетов. Не является официальным сайтом площадки.
-                                </div>
-                            </div>
-                            <div class="slider_official__text">Официальные билеты</div>
-                        </div>
-                        <a id="t_afisha_button"
-                           onclick="$(&#39;html, body&#39;).animate({scrollTop: (($(&#39;#tickets&#39;).length)?$(&#39;#tickets&#39;).position().top : $(&#39;.new_best&#39;).position().top) - 40}, 500); return false;"
-                           class="slider-top__link" tabindex="0">Афиша и билеты</a>
-                        <div class="electron_com">
-                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 213.15 213.15">
-                                <circle class="el-1" cx="106.58" cy="106.58" r="100.58"></circle>
-                                <path class="el-2"
-                                      d="M118.48,146.93c.4,23.94,15.69,33.8,33.4,33.8,12.67,0,20.32-2.21,27-5l3,12.67c-6.24,2.82-16.9,6-32.39,6-30,0-47.88-19.72-47.88-49.09s17.3-52.51,45.67-52.51c31.79,0,40.24,28,40.24,45.87a66.77,66.77,0,0,1-.6,8.25Zm51.91-12.67c.2-11.27-4.63-28.77-24.54-28.77-17.91,0-25.75,16.5-27.16,28.77Z"
-                                      transform="translate(-37.75 -38.09)"></path>
-                            </svg>
-                            <div class="electron_com__text">Электронные билеты</div>
-                        </div>
-                    </div>
-                    <div class="slider_utps">
-                        <div class="slider_utps__left">
-                            <div class="slider_utps__element"><img width="21" height="21" class=" lazyloaded"
-                                                                   data-src="./images/slider_utps__element-1.b14c4cec9492.svg"
-                                                                   alt="10% скидка постоянным клиентам"
-                                                                   src="./images/slider_utps__element-1.b14c4cec9492.svg"><span>10% скидка постоянным клиентам</span>
-                            </div>
-                            <div class="slider_utps__element"><img width="20" height="23" class=" lazyloaded"
-                                                                   data-src="./images/slider_utps__element-3.ef2e227ae592.svg"
-                                                                   alt="
-
-                        Доставка за считанные минуты на email
-                    " src="./images/slider_utps__element-3.ef2e227ae592.svg"><span>
-
-                        Доставка за считанные минуты на email
-
-                </span></div>
-                        </div>
-                        <div class="pay_icon">
-                            <div class="pay_icon-3">Безопасная оплата</div>
-                            <img class="pay_icon-1 lazyloaded"
-                                 data-src="https://cdn.tix-system.com/static/img/pay_icon-1.2052bd41f8e4.svg" alt=""
-                                 src="./images/pay_icon-1.2052bd41f8e4.svg"><img
-                                class="pay_icon-2 lazyloaded"
-                                data-src="https://cdn.tix-system.com/static/img/pay_icon-2.1893573ae06f.svg" alt=""
-                                src="./images/pay_icon-2.1893573ae06f.svg"></div>
+                        <a id="t_afisha_button" href="#"
+                           class="slider-top__link js-order-modal-trigger" tabindex="0">Афиша и билеты</a>
                     </div>
                 </div>
             </div>
@@ -143,9 +80,10 @@
 
         <!---->
         <div id="js-book-btn" class="book-btns">
-            <a class="btn order js-order-modal-trigger" href="#"
-               data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;ctaBook&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}"><span
-            ></span><span>Заказать</span></a>
+            <a class="btn order js-order-modal-trigger" href="#">
+                <span></span>
+                <span>Заказать</span>
+            </a>
         </div>
         <div class="topnav-container">
             <nav id="nav">
@@ -159,28 +97,23 @@
 
                         <ul class="nav-primary">
                             <li>
-                                <a href="" data-drupal-link-system-path="&lt;front&gt;"
-                                   class="is-active"> <span>Главная</span>
+                                <a href="" class="is-active"> <span>Главная</span>
                                 </a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/4"> <span>Вечернее шоу</span>
+                                <a href=""> <span>Вечернее шоу</span>
                                 </a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/15"> <span>Предложения</span>
+                                <a href=""> <span>Предложения</span>
                                 </a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/21"> <span>Информация</span>
+                                <a href=""> <span>Информация</span>
                                 </a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/56"> <span>Подарить</span>
+                                <a href=""> <span>Подарить</span>
                                 </a>
                             </li>
                         </ul>
@@ -194,47 +127,49 @@
 
 
                                 <ul class="links">
-                                    <li hreflang="ru" data-drupal-link-system-path="&lt;front&gt;" class="is-active"><a
-                                            href="" class="language-link is-active" hreflang="ru"
-                                            data-drupal-link-system-path="&lt;front&gt;">RU</a></li>
-                                    <li hreflang="en" data-drupal-link-system-path="&lt;front&gt;" class="en"><a
-                                            href="" class="language-link" hreflang="en"
-                                            data-drupal-link-system-path="&lt;front&gt;">EN</a></li>
-                                    <li hreflang="fr" data-drupal-link-system-path="&lt;front&gt;" class="fr"><a
-                                            href="" class="language-link" hreflang="fr"
-                                            data-drupal-link-system-path="&lt;front&gt;">FR</a></li>
-                                    <li hreflang="es" data-drupal-link-system-path="&lt;front&gt;" class="es"><a
-                                            href="" class="language-link" hreflang="es"
-                                            data-drupal-link-system-path="&lt;front&gt;">ES</a></li>
-                                    <li hreflang="de" data-drupal-link-system-path="&lt;front&gt;" class="de"><a
-                                            href="" class="language-link" hreflang="de"
-                                            data-drupal-link-system-path="&lt;front&gt;">DE</a></li>
-                                    <li hreflang="it" data-drupal-link-system-path="&lt;front&gt;" class="it"><a
-                                            href="" class="language-link" hreflang="it"
-                                            data-drupal-link-system-path="&lt;front&gt;">IT</a></li>
-                                    <li hreflang="pt-br" data-drupal-link-system-path="&lt;front&gt;" class="pt-br"><a
-                                            href="" class="language-link" hreflang="pt-br"
-                                            data-drupal-link-system-path="&lt;front&gt;">PT</a></li>
-                                    <li hreflang="zh-hans" data-drupal-link-system-path="&lt;front&gt;" class="zh-hans">
-                                        <a href="" class="language-link" hreflang="zh-hans"
-                                           data-drupal-link-system-path="&lt;front&gt;">CN</a></li>
-                                    <li hreflang="ja" data-drupal-link-system-path="&lt;front&gt;" class="ja"><a
-                                            href="" class="language-link" hreflang="ja"
-                                            data-drupal-link-system-path="&lt;front&gt;">JP</a></li>
+                                    <li hreflang="ru" class="is-active">
+                                        <a href="" class="language-link is-active" hreflang="ru">RU</a>
+                                    </li>
+                                    <li hreflang="en" class="en">
+                                        <a href="" class="language-link" hreflang="en">EN</a>
+                                    </li>
+                                    <li hreflang="fr" class="fr">
+                                        <a href="" class="language-link" hreflang="fr">FR</a>
+                                    </li>
+                                    <li hreflang="es" class="es">
+                                        <a href="" class="language-link" hreflang="es">ES</a>
+                                    </li>
+                                    <li hreflang="de" class="de">
+                                        <a href="" class="language-link" hreflang="de">DE</a>
+                                    </li>
+                                    <li hreflang="it" class="it">
+                                        <a href="" class="language-link" hreflang="it">IT</a>
+                                    </li>
+                                    <li hreflang="pt-br" class="pt-br">
+                                        <a href="" class="language-link" hreflang="pt-br">PT</a>
+                                    </li>
+                                    <li hreflang="zh-hans" class="zh-hans">
+                                        <a href="" class="language-link" hreflang="zh-hans">CN</a>
+                                    </li>
+                                    <li hreflang="ja" class="ja">
+                                        <a href="" class="language-link" hreflang="ja">JP</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
 
                         <li>
-                            <a class="tel" href="tel:+33140765610"
-                               data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;phoneContact&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}">+33
-                                (0)1 40 76 56 10</a>
+                            <a class="tel" href="tel:+78126450898">
+                                +7 (812) 645 08 98
+                            </a>
                         </li>
 
                         <li>
                             <div class="book-btns" id="js-book-btn-modele-desktop">
-                                <a class="btn order js-order-modal-trigger" href="#"
-                                   data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;ctaBook&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}"><span></span><span>Заказать</span></a>
+                                <a class="btn order js-order-modal-trigger" href="#">
+                                    <span></span>
+                                    <span>Заказать</span>
+                                </a>
                             </div>
                         </li>
 
@@ -244,16 +179,19 @@
                 <div class="container">
                     <ul>
                         <li>
-                            <a class="tel" href="tel:+33140765610"
-                               data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;phoneContact&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}"></a>
+                            <a class="tel" href="tel:+78126450898"></a>
                         </li>
                         <li>
                             <div class="book-btns" id="js-book-btn-modele-mobile">
-                                <a class="btn order js-order-modal-trigger" href="#"
-                                   data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;ctaBook&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}"><span></span><span>Заказать</span></a>
+                                <a class="btn order js-order-modal-trigger" href="#">
+                                    <span></span>
+                                    <span>Заказать</span>
+                                </a>
                             </div>
                         </li>
-                        <li><a class="burger" href="#"></a></li>
+                        <li>
+                            <a class="burger" href="#"></a>
+                        </li>
                     </ul>
                 </div>
 
@@ -267,29 +205,19 @@
 
                             <ul class="nav-primary">
                                 <li>
-                                    <a href="" data-drupal-link-system-path="&lt;front&gt;"
-                                       class="is-active"> <span>Главная</span>
-                                    </a>
+                                    <a href="" class="is-active"> <span>Главная</span></a>
                                 </li>
                                 <li>
-                                    <a href=""
-                                       data-drupal-link-system-path="node/4"> <span>Вечернее шоу</span>
-                                    </a>
+                                    <a href=""> <span>Вечернее шоу</span></a>
                                 </li>
                                 <li>
-                                    <a href=""
-                                       data-drupal-link-system-path="node/15"> <span>Предложения</span>
-                                    </a>
+                                    <a href=""> <span>Предложения</span></a>
                                 </li>
                                 <li>
-                                    <a href=""
-                                       data-drupal-link-system-path="node/21"> <span>Информация</span>
-                                    </a>
+                                    <a href=""> <span>Информация</span></a>
                                 </li>
                                 <li>
-                                    <a href=""
-                                       data-drupal-link-system-path="node/56"> <span>Подарить</span>
-                                    </a>
+                                    <a href=""> <span>Подарить</span></a>
                                 </li>
                             </ul>
 
@@ -302,35 +230,29 @@
                             <li><a class="lang" href="">RU</a></li>
 
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/24">Пресс-служба</a>
+                                <a href="">Пресс-служба</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/25">Партнеры</a>
+                                <a href="">Партнеры</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/28">ОТБОР И ПРИЕМ НА РАБОТУ ТАНЦОВЩИЦ И
+                                <a href="">ОТБОР И ПРИЕМ НА РАБОТУ ТАНЦОВЩИЦ И
                                     ТАНЦОРОВ</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/27">Ч3B</a>
+                                <a href="">Ч3B</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/30">ОУП</a>
+                                <a href="">ОУП</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/26">Юридическая информация</a>
+                                <a href="">Юридическая информация</a>
                             </li>
                             <li>
-                                <a href="" data-drupal-link-system-path="node/55">Cookies</a>
+                                <a href="">Cookies</a>
                             </li>
                             <li>
-                                <a href="" data-drupal-link-system-path="node/54">Privacy</a>
+                                <a href="">Privacy</a>
                             </li>
                         </ul>
 
@@ -341,33 +263,33 @@
 
 
                             <ul class="links">
-                                <li hreflang="ru" data-drupal-link-system-path="&lt;front&gt;" class="is-active"><a
-                                        href="" class="language-link is-active" hreflang="ru"
-                                        data-drupal-link-system-path="&lt;front&gt;">RU</a></li>
-                                <li hreflang="en" data-drupal-link-system-path="&lt;front&gt;" class="en"><a
-                                        href="" class="language-link" hreflang="en"
-                                        data-drupal-link-system-path="&lt;front&gt;">EN</a></li>
-                                <li hreflang="fr" data-drupal-link-system-path="&lt;front&gt;" class="fr"><a
-                                        href="" class="language-link" hreflang="fr"
-                                        data-drupal-link-system-path="&lt;front&gt;">FR</a></li>
-                                <li hreflang="es" data-drupal-link-system-path="&lt;front&gt;" class="es"><a
-                                        href="" class="language-link" hreflang="es"
-                                        data-drupal-link-system-path="&lt;front&gt;">ES</a></li>
-                                <li hreflang="de" data-drupal-link-system-path="&lt;front&gt;" class="de"><a
-                                        href="" class="language-link" hreflang="de"
-                                        data-drupal-link-system-path="&lt;front&gt;">DE</a></li>
-                                <li hreflang="it" data-drupal-link-system-path="&lt;front&gt;" class="it"><a
-                                        href="" class="language-link" hreflang="it"
-                                        data-drupal-link-system-path="&lt;front&gt;">IT</a></li>
-                                <li hreflang="pt-br" data-drupal-link-system-path="&lt;front&gt;" class="pt-br"><a
-                                        href="" class="language-link" hreflang="pt-br"
-                                        data-drupal-link-system-path="&lt;front&gt;">PT</a></li>
-                                <li hreflang="zh-hans" data-drupal-link-system-path="&lt;front&gt;" class="zh-hans"><a
-                                        href="" class="language-link" hreflang="zh-hans"
-                                        data-drupal-link-system-path="&lt;front&gt;">CN</a></li>
-                                <li hreflang="ja" data-drupal-link-system-path="&lt;front&gt;" class="ja"><a
-                                        href="" class="language-link" hreflang="ja"
-                                        data-drupal-link-system-path="&lt;front&gt;">JP</a></li>
+                                <li hreflang="ru" class="is-active">
+                                    <a href="" class="language-link is-active" hreflang="ru">RU</a>
+                                </li>
+                                <li hreflang="en" class="en">
+                                    <a href="" class="language-link" hreflang="en">EN</a>
+                                </li>
+                                <li hreflang="fr" class="fr">
+                                    <a href="" class="language-link" hreflang="fr">FR</a>
+                                </li>
+                                <li hreflang="es" class="es">
+                                    <a href="" class="language-link" hreflang="es">ES</a>
+                                </li>
+                                <li hreflang="de" class="de">
+                                    <a href="" class="language-link" hreflang="de">DE</a>
+                                </li>
+                                <li hreflang="it" class="it">
+                                    <a href="" class="language-link" hreflang="it">IT</a>
+                                </li>
+                                <li hreflang="pt-br" class="pt-br">
+                                    <a href="" class="language-link" hreflang="pt-br">PT</a>
+                                </li>
+                                <li hreflang="zh-hans" class="zh-hans">
+                                    <a href="" class="language-link" hreflang="zh-hans">CN</a>
+                                </li>
+                                <li hreflang="ja" class="ja">
+                                    <a href="" class="language-link" hreflang="ja">JP</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -381,9 +303,38 @@
             <a id="main-content" tabindex="-1"></a>
             <div class="layout-content">
                 <div>
-                    <div data-drupal-messages-fallback="" class="hidden"></div>
                     <div id="block-lido-content">
 
+                        <section id="news" class="section">
+                            <div class="container">
+                                <div class="content">
+                                    <p class="push_category">
+                                        FREEDOM JAZZ AT THE LIDO
+                                    </p>
+                                    <img src="./images/FreedomJazz.jpg" class="news-picture small-screen">
+                                    <p class="news_title">
+                                        From 17 to 22 March, exceptional guests for a unique pre-show
+                                    </p>
+                                    <div class="news_desc news_desc--has-dots">
+                                        <p>For the very first time in France, during dinner before the show, this ''Girls Band Cabaret'', comprising 10 extraordinary singers and musicians, promises a unique musical and visual show sweeping audiences away in a whirlwind of unforgettable jazzy, pop and Latino tempo hits, plus a repertoire of the greatest standards of the Hollywood Golden Age.<br>
+                                            <a href="https://youtu.be/9A7KzwAY65M">https://youtu.be/9A7KzwAY65M</a>
+                                        </p>
+                                    </div>
+                                    <p class="reveal" style="transition-delay: 0s;">
+                                        <a class="btn" href="#" target="_blank">
+                                            <span style="top: -44px; left: 208.5px;"></span>
+                                            <span>Discover our offers </span>
+                                        </a>
+                                    </p>
+                                    <img class="js-regaloeb plume news-plume-1" data-y="150#-150" data-rotate="10#-10" data-end="1" src="./images/7.png">
+                                    <img class="halo halo-1" src="./images/halo_4.png">
+                                </div>
+                                <div class="news-picture-block">
+                                    <img src="./images/FreedomJazz.jpg" class="news-picture large-screen">
+                                </div>
+                                <img class="js-regaloeb plume news-plume-2" data-y="250#-250" data-rotate="-8#8" data-end="1" src="./images/8.png">
+                            </div>
+                        </section>
 
                         <section id="show" class="section">
                             <div class="container">
@@ -413,9 +364,7 @@
 
                                     </div>
                                     <p class="js-regaloeb" data-y="70#0" data-o="0#1" data-end="3">
-                                        <a class="btn"
-                                           href=""
-                                           data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;discoverTheShow&quot;, &quot;label&quot;: &quot;&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}">
+                                        <a class="btn" href="">
                                             <span></span>
                                             <span>Подробнее</span>
                                         </a>
@@ -445,7 +394,6 @@
                                 </div>
                             </div>
                         </section>
-
 
                         <section id="place" class="section">
                             <div class="container">
@@ -507,41 +455,43 @@
                                      data-end="1" src="./images/3.png">
                             </div>
                         </section>
-                    </div>
 
-                    <section id="paris" class="section">
-                        <img class="js-regaloeb plume" data-y="150#-150" data-rotate="10#-10" data-end="1"
-                             src="./images/1.png">
-                        <div class="container">
-                            <div class="content">
-
-
-                                <img src="./images/arcdetriomphe_0_BASSEDEF.png"
-                                     width="770" height="746" alt="Arc de Triomphe ">
+                        <section id="paris" class="section">
+                            <img class="js-regaloeb plume" data-y="150#-150" data-rotate="10#-10" data-end="1"
+                                 src="./images/1.png">
+                            <div class="container">
+                                <div class="content">
 
 
-                                <div class="shining-star shining-star-1"></div>
-                                <div class="shining-star shining-star-2"></div>
-                                <div class="shining-star shining-star-3"></div>
-                                <div class="shining-star shining-star-4"></div>
-                                <div class="shining-star shining-star-5"></div>
-                                <div class="shining-star shining-star-6"></div>
-                                <div class="shining-star shining-star-7"></div>
-                            </div>
-                            <div class="content">
-                                <h2 class="title">
-                                    <span class="small js-regaloeb" data-y="50#0" data-o="0#1">Легендарное кабаре</span>
-                                    <span class="js-regaloeb" data-y="75#0"
-                                          data-o="0#1">на Елисейских Полях</span>
-                                </h2>
-                                <div class="description js-regaloeb" data-y="100#0" data-o="0#1">
-                                    <p>На Елисейских Полях всегда кипит жизнь. Эта истинно парижская авеню,
-                                        воплощающая в себе искусство жить по-французски, входит в число красивейших
-                                        улиц в мире.</p>
+                                    <img src="./images/arcdetriomphe_0_BASSEDEF.png"
+                                         width="770" height="746" alt="Arc de Triomphe ">
+
+
+                                    <div class="shining-star shining-star-1"></div>
+                                    <div class="shining-star shining-star-2"></div>
+                                    <div class="shining-star shining-star-3"></div>
+                                    <div class="shining-star shining-star-4"></div>
+                                    <div class="shining-star shining-star-5"></div>
+                                    <div class="shining-star shining-star-6"></div>
+                                    <div class="shining-star shining-star-7"></div>
+                                </div>
+                                <div class="content">
+                                    <h2 class="title">
+                                        <span class="small js-regaloeb" data-y="50#0" data-o="0#1">Легендарное кабаре</span>
+                                        <span class="js-regaloeb" data-y="75#0"
+                                              data-o="0#1">на Елисейских Полях</span>
+                                    </h2>
+                                    <div class="description js-regaloeb" data-y="100#0" data-o="0#1">
+                                        <p>На Елисейских Полях всегда кипит жизнь. Эта истинно парижская авеню,
+                                            воплощающая в себе искусство жить по-французски, входит в число красивейших
+                                            улиц в мире.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
+
+
                 </div>
             </div>
         </main>
@@ -618,9 +568,7 @@
                                 <img class="star" src="./images/0.0.svg">
 
                             </p>
-                            <a href="" target="_blank"
-                               data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;reviews&quot;, &quot;label&quot;: &quot;%reviewPage&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}"
-                               data-reviewpage="Tripadvisor"></a>
+                            <a href="" target="_blank" data-reviewpage="Tripadvisor"></a>
                         </div>
                     </div>
 
@@ -651,9 +599,7 @@
 
 
                             </p>
-                            <a href="https://www.facebook.com/" target="_blank"
-                               data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;reviews&quot;, &quot;label&quot;: &quot;%reviewPage&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}"
-                               data-reviewpage="Facebook">Читать отзывы</a>
+                            <a href="https://www.facebook.com/" target="_blank" data-reviewpage="Facebook">Читать отзывы</a>
                         </div>
                     </div>
 
@@ -685,9 +631,7 @@
 
                             </p>
                             <a href=""
-                               target="_blank"
-                               data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;reviews&quot;, &quot;label&quot;: &quot;%reviewPage&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}"
-                               data-reviewpage="Paris">Читать отзывы</a>
+                               target="_blank" data-reviewpage="Paris">Читать отзывы</a>
                         </div>
                     </div>
 
@@ -709,7 +653,7 @@
   			<div class="shining-star shining-star-7"></div>
   		</span>
 
-                    <form class="tm-flex tm-flex-between js-form-main" action="/">
+                    <form class="tm-flex tm-flex-between js-form-main css-form" action="/">
 
 
                         <div class="content reveal" style="transition-delay: 0.2s;">
@@ -728,13 +672,23 @@
                                             <option value="7">7</option>
                                             <option value="8">8</option>
                                             <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
                                         </select>
                                         <a class="more" href="#"></a>
                                     </div>
                                 </div>
-                                <legend>В случае бронирования билетов на группу более 9 человек, свяжитесь с нами по
-                                    адресу +33 (0) 1 40 76 56 10
-                                </legend>
+                                <!--<legend>В случае бронирования билетов на группу более 9 человек, свяжитесь с нами по-->
+                                    <!--адресу +7 (812) 645 08 98-->
+                                <!--</legend>-->
                             </div>
                         </div>
 
@@ -752,9 +706,7 @@
 
                         <div class="content reveal" style="transition-delay: 0.5s;">
 
-                            <a href="#" class="btn js-order-modal-trigger"
-                               data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;ctaBook&quot;, &quot;label&quot;: &quot;footer | %productDate&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}"
-                               data-productdate="2020-02-19"><span></span><span>Заказать</span></a>
+                            <a href="#" class="btn js-order-modal-trigger" data-productdate="2020-02-19"><span></span><span>Заказать</span></a>
                         </div>
 
                     </form>
@@ -791,37 +743,19 @@
                         Продлите удовольствие
                     </p>
                     <ul class="social">
-
-
                         <li>
                             <a class="facebook" target="_blank"
-                               href="https://www.facebook.com/"
-                               data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;social&quot;, &quot;action&quot;: &quot;page&quot;, &quot;label&quot;: &quot;%socialNetwork&quot;,&quot;value&quot;: &quot;0&quot;, &quot;nonInteraction&quot;: &quot;0&quot;}"
-                               data-socialnetwork="facebook"></a>
+                               href="https://www.facebook.com/" data-socialnetwork="facebook"></a>
                         </li>
-
-
                         <li>
-                            <a class="instagram" target="_blank" href="https://www.instagram.com/"
-                               data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;social&quot;, &quot;action&quot;: &quot;page&quot;, &quot;label&quot;: &quot;%socialNetwork&quot;,&quot;value&quot;: &quot;0&quot;, &quot;nonInteraction&quot;: &quot;0&quot;}"
-                               data-socialnetwork="instagram"></a>
+                            <a class="instagram" target="_blank" href="https://www.instagram.com/" data-socialnetwork="instagram"></a>
                         </li>
-
-
                         <li>
-                            <a class="youtube" target="_blank" href="https://www.youtube.com/user/"
-                               data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;social&quot;, &quot;action&quot;: &quot;page&quot;, &quot;label&quot;: &quot;%socialNetwork&quot;,&quot;value&quot;: &quot;0&quot;, &quot;nonInteraction&quot;: &quot;0&quot;}"
-                               data-socialnetwork="youtube"></a>
+                            <a class="youtube" target="_blank" href="https://www.youtube.com/user/" data-socialnetwork="youtube"></a>
                         </li>
-
-
                         <li>
-                            <a class="twitter" target="_blank" href="https://twitter.com/"
-                               data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;social&quot;, &quot;action&quot;: &quot;page&quot;, &quot;label&quot;: &quot;%socialNetwork&quot;,&quot;value&quot;: &quot;0&quot;, &quot;nonInteraction&quot;: &quot;0&quot;}"
-                               data-socialnetwork="twitter"></a>
+                            <a class="twitter" target="_blank" href="https://twitter.com/" data-socialnetwork="twitter"></a>
                         </li>
-
-
                     </ul>
                 </div>
                 <div class="content">
@@ -830,33 +764,26 @@
                         Обратная связь
                     </p>
                     <ul class="contact">
-                        <li><strong>Тел.:</strong> <a href="tel:+33140765610"
-                                                      data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;phoneContact&quot;,&quot;label&quot;:&quot;footer&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}">+33
-                            (0)1 40 76 56 10</a>
+                        <li><strong>Тел.:</strong> <a href="tel:+78126450898">
+                            +7 (812) 645 08 98
+                        </a>
                         </li>
-                        <li><strong>Эл. адрес:</strong> <a href="mailto:reservation@nigg"
-                                                           data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;emailContact&quot;,&quot;label&quot;:&quot;footer&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}">reservation@nigg</a>
+                        <li><strong>Эл. адрес:</strong> <a href="mailto:reservation@nigg">reservation@nigg</a>
                         </li>
                     </ul>
                     <p class="time">
-
                         Каждый день с 9:00 до 20:30
                     </p>
                 </div>
                 <div class="content">
                     <p class="title">
-
                         Организация частных мероприятий
                     </p>
                     <p>
-
                         Проведите деловое мероприятие в Лидо в Париже и подарите гостям незабываемые
                         впечатления.<br>
                         <br>
-
                     </p>
-
-
                     <a href="https://www.prestige-sodexo.com/collection/" target="_blank">Деловые
                         предложения</a>
 
@@ -866,116 +793,72 @@
 
         <section class="sitemap section">
             <div class="container">
-
-
                 <ul class="sitemap-primary">
                     <li class="content">
-                        <a href="" data-drupal-link-system-path="&lt;front&gt;"
-                           class="is-active">Главная</a>
-
+                        <a href="" class="is-active">Главная</a>
                         <ul>
                             <li>
-                                <a href="#paris" data-drupal-link-system-path="&lt;front&gt;"
-                                   class="is-active">Париже</a>
-
+                                <a href="#paris" class="is-active">Париже</a>
                             </li>
                             <li>
-                                <a href="#place" data-drupal-link-system-path="&lt;front&gt;"
-                                   class="is-active">The Lido</a>
-
+                                <a href="#place" class="is-active">The Lido</a>
                             </li>
                             <li>
-                                <a href="#review" data-drupal-link-system-path="&lt;front&gt;"
-                                   class="is-active">3ахватывающее представление</a>
-
+                                <a href="#review" class="is-active">3ахватывающее представление</a>
                             </li>
                         </ul>
-
                     </li>
                     <li class="content">
-                        <a href=""
-                           data-drupal-link-system-path="node/4">Вечернее шоу</a>
-
+                        <a href="">Вечернее шоу</a>
                         <ul>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/4">Teaser</a>
-
+                                <a href="">Teaser</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/4">Вечернее шоу</a>
-
+                                <a href="">Вечернее шоу</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/4">Художников</a>
-
+                                <a href="">Художников</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/4">Ужин</a>
-
+                                <a href="">Ужин</a>
                             </li>
                         </ul>
-
                     </li>
                     <li class="content">
-                        <a href=""
-                           data-drupal-link-system-path="node/15">Предложения</a>
-
+                        <a href="">Предложения</a>
                         <ul>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/15">Ужин и спектакль</a>
-
+                                <a href="">Ужин и спектакль</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/14">Вечернее шоу</a>
-
+                                <a href="">Вечернее шоу</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/12">дневного шоу</a>
-
+                                <a href="">дневного шоу</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/60">Праздничные вечерние мероприятия</a>
-
+                                <a href="">Праздничные вечерние мероприятия</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/18">Для групп и предприятий</a>
-
+                                <a href="">Для групп и предприятий</a>
                             </li>
                         </ul>
-
                     </li>
                     <li class="content">
-                        <a href=""
-                           data-drupal-link-system-path="node/21">Информация</a>
-
+                        <a href="">Информация</a>
                         <ul>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/21">Адрес и Условия доступа</a>
-
+                                <a href="">Адрес и Условия доступа</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/22">Контакты</a>
-
+                                <a href="">Контакты</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/23">Часы работы и рекомендации для
+                                <a href="">Часы работы и рекомендации для
                                     посетителей </a>
-
                             </li>
                         </ul>
-
                     </li>
                 </ul>
 
@@ -984,36 +867,34 @@
                     <li class="content">
                         <div class="language-switcher-language-url" id="block-selecteurdelangue-2"
                              role="navigation">
-
-
                             <ul class="links">
-                                <li hreflang="ru" data-drupal-link-system-path="&lt;front&gt;" class="is-active"><a
-                                        href="" class="language-link is-active" hreflang="ru"
-                                        data-drupal-link-system-path="&lt;front&gt;">RU</a></li>
-                                <li hreflang="en" data-drupal-link-system-path="&lt;front&gt;" class="en"><a
-                                        href="" class="language-link" hreflang="en"
-                                        data-drupal-link-system-path="&lt;front&gt;">EN</a></li>
-                                <li hreflang="fr" data-drupal-link-system-path="&lt;front&gt;" class="fr"><a
-                                        href="" class="language-link" hreflang="fr"
-                                        data-drupal-link-system-path="&lt;front&gt;">FR</a></li>
-                                <li hreflang="es" data-drupal-link-system-path="&lt;front&gt;" class="es"><a
-                                        href="" class="language-link" hreflang="es"
-                                        data-drupal-link-system-path="&lt;front&gt;">ES</a></li>
-                                <li hreflang="de" data-drupal-link-system-path="&lt;front&gt;" class="de"><a
-                                        href="" class="language-link" hreflang="de"
-                                        data-drupal-link-system-path="&lt;front&gt;">DE</a></li>
-                                <li hreflang="it" data-drupal-link-system-path="&lt;front&gt;" class="it"><a
-                                        href="" class="language-link" hreflang="it"
-                                        data-drupal-link-system-path="&lt;front&gt;">IT</a></li>
-                                <li hreflang="pt-br" data-drupal-link-system-path="&lt;front&gt;" class="pt-br"><a
-                                        href="" class="language-link" hreflang="pt-br"
-                                        data-drupal-link-system-path="&lt;front&gt;">PT</a></li>
-                                <li hreflang="zh-hans" data-drupal-link-system-path="&lt;front&gt;" class="zh-hans">
-                                    <a href="" class="language-link" hreflang="zh-hans"
-                                       data-drupal-link-system-path="&lt;front&gt;">CN</a></li>
-                                <li hreflang="ja" data-drupal-link-system-path="&lt;front&gt;" class="ja"><a
-                                        href="" class="language-link" hreflang="ja"
-                                        data-drupal-link-system-path="&lt;front&gt;">JP</a></li>
+                                <li hreflang="ru" class="is-active">
+                                    <a href="" class="language-link is-active" hreflang="ru">RU</a>
+                                </li>
+                                <li hreflang="en" class="en">
+                                    <a href="" class="language-link" hreflang="en">EN</a>
+                                </li>
+                                <li hreflang="fr" class="fr">
+                                    <a href="" class="language-link" hreflang="fr">FR</a>
+                                </li>
+                                <li hreflang="es" class="es">
+                                    <a href="" class="language-link" hreflang="es">ES</a>
+                                </li>
+                                <li hreflang="de" class="de">
+                                    <a href="" class="language-link" hreflang="de">DE</a>
+                                </li>
+                                <li hreflang="it" class="it">
+                                    <a href="" class="language-link" hreflang="it">IT</a>
+                                </li>
+                                <li hreflang="pt-br" class="pt-br">
+                                    <a href="" class="language-link" hreflang="pt-br">PT</a>
+                                </li>
+                                <li hreflang="zh-hans" class="zh-hans">
+                                    <a href="" class="language-link" hreflang="zh-hans">CN</a>
+                                </li>
+                                <li hreflang="ja" class="ja">
+                                    <a href="" class="language-link" hreflang="ja">JP</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -1021,58 +902,47 @@
                 </ul>
             </div>
             <div class="container">
-
-
                 <ul class="sitemap-tertiary">
-
-
                     <li class="content">
-                        <a href=""
-                           data-drupal-link-system-path="node/24">Пресс-служба</a>
+                        <a href="">Пресс-служба</a>
                     </li>
                     <li class="content">
-                        <a href=""
-                           data-drupal-link-system-path="node/25">Партнеры</a>
+                        <a href="">Партнеры</a>
                     </li>
                     <li class="content">
-                        <a href=""
-                           data-drupal-link-system-path="node/28">ОТБОР И ПРИЕМ НА РАБОТУ ТАНЦОВЩИЦ И ТАНЦОРОВ</a>
+                        <a href="">ОТБОР И ПРИЕМ НА РАБОТУ ТАНЦОВЩИЦ И ТАНЦОРОВ</a>
                     </li>
                     <li class="content">
-                        <a href=""
-                           data-drupal-link-system-path="node/27">Ч3B</a>
+                        <a href="">Ч3B</a>
                     </li>
                     <li class="content">
-                        <a href="" data-drupal-link-system-path="node/30">ОУП</a>
+                        <a href="">ОУП</a>
                     </li>
                     <li class="content">
-                        <a href=""
-                           data-drupal-link-system-path="node/26">Юридическая информация</a>
+                        <a href="">Юридическая информация</a>
                     </li>
                     <li class="content">
-                        <a href="" data-drupal-link-system-path="node/55">Cookies</a>
+                        <a href="">Cookies</a>
                     </li>
                     <li class="content">
-                        <a href="" data-drupal-link-system-path="node/54">Privacy</a>
+                        <a href="">Privacy</a>
                     </li>
                     <li class="content"><a href="https://www.prestige-sodexo.com/" target="_blank"><img
                             src="./images/lep-sodexo.svg"></a></li>
                 </ul>
-
-
             </div>
         </section>
-
     </footer>
-
 </div>
 
 <!--order modal-->
 <div class="tm-modal js-order-modal tm-hidden ticketing">
     <div id="wrapper" class="layout-container">
         <div id="js-book-btn" class="book-btns fixed">
-            <a class="btn order js-order-modal-close" href="#"
-               data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;ctaBook&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}"><span></span><span>Закрыть</span></a>
+            <a class="btn order js-order-modal-close" href="#">
+                <span></span>
+                <span>Закрыть</span>
+            </a>
         </div>
         <div class="_topnav-container fixed fixedActive">
             <nav id="nav">
@@ -1085,27 +955,23 @@
 
                         <ul class="nav-primary">
                             <li>
-                                <a href="" data-drupal-link-system-path="&lt;front&gt;"> <span>Главная</span>
+                                <a href=""> <span>Главная</span>
                                 </a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/4"> <span>Вечернее шоу</span>
+                                <a href=""> <span>Вечернее шоу</span>
                                 </a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/15"> <span>Предложения</span>
+                                <a href=""> <span>Предложения</span>
                                 </a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/21"> <span>Информация</span>
+                                <a href=""> <span>Информация</span>
                                 </a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/56"> <span>Подарить</span>
+                                <a href=""> <span>Подарить</span>
                                 </a>
                             </li>
                         </ul>
@@ -1119,48 +985,49 @@
 
 
                                 <ul class="links">
-                                    <li hreflang="ru" data-drupal-link-system-path="node/11" class="is-active"><a
-                                            href=""
-                                            class="language-link is-active" hreflang="ru"
-                                            data-drupal-link-system-path="node/11">RU</a></li>
-                                    <li hreflang="en" data-drupal-link-system-path="node/11" class="en"><a
-                                            href="" class="language-link" hreflang="en"
-                                            data-drupal-link-system-path="node/11">EN</a></li>
-                                    <li hreflang="fr" data-drupal-link-system-path="node/11" class="fr"><a
-                                            href="" class="language-link"
-                                            hreflang="fr" data-drupal-link-system-path="node/11">FR</a></li>
-                                    <li hreflang="es" data-drupal-link-system-path="node/11" class="es"><a
-                                            href="" class="language-link"
-                                            hreflang="es" data-drupal-link-system-path="node/11">ES</a></li>
-                                    <li hreflang="de" data-drupal-link-system-path="node/11" class="de"><a
-                                            href="" class="language-link"
-                                            hreflang="de" data-drupal-link-system-path="node/11">DE</a></li>
-                                    <li hreflang="it" data-drupal-link-system-path="node/11" class="it"><a
-                                            href="" class="language-link"
-                                            hreflang="it" data-drupal-link-system-path="node/11">IT</a></li>
-                                    <li hreflang="pt-br" data-drupal-link-system-path="node/11" class="pt-br"><a
-                                            href="" class="language-link" hreflang="pt-br"
-                                            data-drupal-link-system-path="node/11">PT</a></li>
-                                    <li hreflang="zh-hans" data-drupal-link-system-path="node/11" class="zh-hans"><a
-                                            href="" class="language-link"
-                                            hreflang="zh-hans" data-drupal-link-system-path="node/11">CN</a></li>
-                                    <li hreflang="ja" data-drupal-link-system-path="node/11" class="ja"><a
-                                            href="" class="language-link"
-                                            hreflang="ja" data-drupal-link-system-path="node/11">JP</a></li>
+                                    <li hreflang="ru" class="is-active">
+                                        <a href="" class="language-link is-active" hreflang="ru">RU</a>
+                                    </li>
+                                    <li hreflang="en" class="en">
+                                        <a href="" class="language-link" hreflang="en">EN</a>
+                                    </li>
+                                    <li hreflang="fr" class="fr">
+                                        <a href="" class="language-link" hreflang="fr">FR</a>
+                                    </li>
+                                    <li hreflang="es" class="es">
+                                        <a href="" class="language-link" hreflang="es">ES</a>
+                                    </li>
+                                    <li hreflang="de" class="de">
+                                        <a href="" class="language-link" hreflang="de">DE</a>
+                                    </li>
+                                    <li hreflang="it" class="it">
+                                        <a href="" class="language-link" hreflang="it">IT</a>
+                                    </li>
+                                    <li hreflang="pt-br" class="pt-br">
+                                        <a href="" class="language-link" hreflang="pt-br">PT</a>
+                                    </li>
+                                    <li hreflang="zh-hans" class="zh-hans">
+                                        <a href="" class="language-link" hreflang="zh-hans">CN</a>
+                                    </li>
+                                    <li hreflang="ja" class="ja">
+                                        <a href="" class="language-link" hreflang="ja">JP</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
 
                         <li>
-                            <a class="tel" href="tel:"
-                               data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;phoneContact&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}">+33
-                                (0)1 40 76 56 10</a>
+                            <a class="tel" href="tel:">
+                                +7 (812) 645 08 98
+                            </a>
                         </li>
 
                         <li>
                             <div class="book-btns visibility-hidden" id="js-book-btn-modele-desktop">
-                                <a class="btn order js-order-modal-close" href="#"
-                                   data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;ctaBook&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}"><span></span><span>Закрыть</span></a>
+                                <a class="btn order js-order-modal-close" href="#">
+                                    <span></span>
+                                    <span>Закрыть</span>
+                                </a>
                             </div>
                         </li>
 
@@ -1170,93 +1037,76 @@
                 <div class="container">
                     <ul>
                         <li>
-                            <a class="tel" href="tel:"
-                               data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;phoneContact&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}"></a>
+                            <a class="tel" href="tel:"></a>
                         </li>
                         <li>
                             <div class="book-btns" id="js-book-btn-modele-mobile">
-                                <a class="btn order js-order-modal-close" href="#"
-                                   data-tag="{&quot;event&quot;:&quot;event&quot;,&quot;category&quot;:&quot;navigation&quot;,&quot;action&quot;:&quot;ctaBook&quot;,&quot;label&quot;:&quot;header&quot;,&quot;value&quot;:&quot;&quot;,&quot;nonInteraction&quot;:&quot;&quot;}"><span></span><span>Закрыть</span></a>
+                                <a class="btn order js-order-modal-close" href="#">
+                                    <span></span>
+                                    <span>Закрыть</span>
+                                </a>
                             </div>
                         </li>
                         <li><a class="burger" href=""></a></li>
                     </ul>
                 </div>
-
-
                 <div class="container">
                     <div class="content">
                         <nav role="navigation" aria-labelledby="block-lido-main-menu-menu" id="block-lido-main-menu">
 
                             <h2 class="visually-hidden" id="block-lido-main-menu-menu">Navigation principale</h2>
 
-
                             <ul class="nav-primary">
                                 <li>
-                                    <a href="" data-drupal-link-system-path="&lt;front&gt;">
+                                    <a href="">
                                         <span>Главная</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href=""
-                                       data-drupal-link-system-path="node/4"> <span>Вечернее шоу</span>
+                                    <a href=""> <span>Вечернее шоу</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href=""
-                                       data-drupal-link-system-path="node/15"> <span>Предложения</span>
+                                    <a href=""> <span>Предложения</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="0"
-                                       data-drupal-link-system-path="node/21"> <span>Информация</span>
+                                    <a href=""> <span>Информация</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href=""
-                                       data-drupal-link-system-path="node/56"> <span>Подарить</span>
+                                    <a href=""> <span>Подарить</span>
                                     </a>
                                 </li>
                             </ul>
-
-
                         </nav>
 
-
                         <ul class="nav-secondary">
-
                             <li><a class="lang" href="">RU</a></li>
-
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/24">Пресс-служба</a>
+                                <a href="">Пресс-служба</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/25">Партнеры</a>
+                                <a href="">Партнеры</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/28">ОТБОР И ПРИЕМ НА РАБОТУ ТАНЦОВЩИЦ И
+                                <a href="">ОТБОР И ПРИЕМ НА РАБОТУ ТАНЦОВЩИЦ И
                                     ТАНЦОРОВ</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/27">Ч3B</a>
+                                <a href="">Ч3B</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/30">ОУП</a>
+                                <a href="">ОУП</a>
                             </li>
                             <li>
-                                <a href=""
-                                   data-drupal-link-system-path="node/26">Юридическая информация</a>
+                                <a href="">Юридическая информация</a>
                             </li>
                             <li>
-                                <a href="" data-drupal-link-system-path="node/55">Cookies</a>
+                                <a href="">Cookies</a>
                             </li>
                             <li>
-                                <a href="" data-drupal-link-system-path="node/54">Privacy</a>
+                                <a href="">Privacy</a>
                             </li>
                         </ul>
 
@@ -1267,34 +1117,33 @@
 
 
                             <ul class="links">
-                                <li hreflang="ru" data-drupal-link-system-path="node/11" class="is-active"><a
-                                        href=""
-                                        class="language-link is-active" hreflang="ru"
-                                        data-drupal-link-system-path="node/11">RU</a></li>
-                                <li hreflang="en" data-drupal-link-system-path="node/11" class="en"><a
-                                        href="" class="language-link" hreflang="en"
-                                        data-drupal-link-system-path="node/11">EN</a></li>
-                                <li hreflang="fr" data-drupal-link-system-path="node/11" class="fr"><a
-                                        href="" class="language-link" hreflang="fr"
-                                        data-drupal-link-system-path="node/11">FR</a></li>
-                                <li hreflang="es" data-drupal-link-system-path="node/11" class="es"><a
-                                        href="" class="language-link" hreflang="es"
-                                        data-drupal-link-system-path="node/11">ES</a></li>
-                                <li hreflang="de" data-drupal-link-system-path="node/11" class="de"><a
-                                        href="" class="language-link" hreflang="de"
-                                        data-drupal-link-system-path="node/11">DE</a></li>
-                                <li hreflang="it" data-drupal-link-system-path="node/11" class="it"><a
-                                        href="" class="language-link" hreflang="it"
-                                        data-drupal-link-system-path="node/11">IT</a></li>
-                                <li hreflang="pt-br" data-drupal-link-system-path="node/11" class="pt-br"><a
-                                        href="" class="language-link" hreflang="pt-br"
-                                        data-drupal-link-system-path="node/11">PT</a></li>
-                                <li hreflang="zh-hans" data-drupal-link-system-path="node/11" class="zh-hans"><a
-                                        href="" class="language-link"
-                                        hreflang="zh-hans" data-drupal-link-system-path="node/11">CN</a></li>
-                                <li hreflang="ja" data-drupal-link-system-path="node/11" class="ja"><a
-                                        href="" class="language-link"
-                                        hreflang="ja" data-drupal-link-system-path="node/11">JP</a></li>
+                                <li hreflang="ru" class="is-active">
+                                    <a href="" class="language-link is-active" hreflang="ru">RU</a>
+                                </li>
+                                <li hreflang="en" class="en">
+                                    <a href="" class="language-link" hreflang="en">EN</a>
+                                </li>
+                                <li hreflang="fr" class="fr">
+                                    <a href="" class="language-link" hreflang="fr">FR</a>
+                                </li>
+                                <li hreflang="es" class="es">
+                                    <a href="" class="language-link" hreflang="es">ES</a>
+                                </li>
+                                <li hreflang="de" class="de">
+                                    <a href="" class="language-link" hreflang="de">DE</a>
+                                </li>
+                                <li hreflang="it" class="it">
+                                    <a href="" class="language-link" hreflang="it">IT</a>
+                                </li>
+                                <li hreflang="pt-br" class="pt-br">
+                                    <a href="" class="language-link" hreflang="pt-br">PT</a>
+                                </li>
+                                <li hreflang="zh-hans" class="zh-hans">
+                                    <a href="" class="language-link" hreflang="zh-hans">CN</a>
+                                </li>
+                                <li hreflang="ja" class="ja">
+                                    <a href="" class="language-link" hreflang="ja">JP</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -1351,10 +1200,9 @@
                             </div>
                             <section class="step step1 anim scroller">
                                 <a href="#r-popin-alert"
-                                   class="backto only-desktop"
-                                   data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;ctaBack&quot;, &quot;label&quot;: &quot;backToTheSite&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}">Назад</a>
+                                   class="backto only-desktop">Назад</a>
                                 <h2 class="title">Ваши заказы</h2>
-                                <form>
+                                <form class="css-form">
                                     <div class="content">
                                         <div class="form-item adults quantity quantity--filled" value="1">
                                             <div class="block">
@@ -1372,38 +1220,47 @@
                                                         <option value="7">7</option>
                                                         <option value="8">8</option>
                                                         <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
                                                     </select>
                                                     <a href="#"
                                                        class="more"></a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="asterisque">В случае бронирования билетов на группу более 9 человек
-                                            <br>просим Вас связаться с нами <a href="tel:">+33 (0)1 40 76 56
-                                                10</a></p>
+                                        <!--<p class="asterisque">В случае бронирования билетов на группу более 9 человек-->
+                                            <!--<br>просим Вас связаться с нами <a href="tel:+78126450898">+7 (812) 645 08 98</a></p>-->
                                     </div>
 
                                     <div class="content">
                                         <div class="form-item formule">
                                             <div class="block">
 
-                                                    <select name="theater" tabindex="-1">
-                                                        <option value="0">
-                                                            Все театры
-                                                        </option>
-                                                        <option value="1">
-                                                            Театр 1
-                                                        </option>
-                                                        <option value="2">
-                                                            Театр 2
-                                                        </option>
-                                                        <option value="3">
-                                                            Театр 3
-                                                        </option>
-                                                        <option value="4">
-                                                            Театр 4
-                                                        </option>
-                                                    </select>
+                                                <select name="theater" tabindex="-1">
+                                                    <option value="0">
+                                                        Все театры
+                                                    </option>
+                                                    <option value="1">
+                                                        Театр 1
+                                                    </option>
+                                                    <option value="2">
+                                                        Театр 2
+                                                    </option>
+                                                    <option value="3">
+                                                        Театр 3
+                                                    </option>
+                                                    <option value="4">
+                                                        Театр 4
+                                                    </option>
+                                                </select>
 
                                             </div>
                                         </div>
@@ -1413,23 +1270,23 @@
                                         <div class="form-item formule">
                                             <div class="block">
                                                 <!--<div class="custom-select-container">-->
-                                                    <select name="genre" tabindex="-1">
-                                                        <option value="0">
-                                                            Все жанры
-                                                        </option>
-                                                        <option value="1">
-                                                            Жанр 1
-                                                        </option>
-                                                        <option value="2">
-                                                            Жанр 2
-                                                        </option>
-                                                        <option value="3">
-                                                            Жанр 3
-                                                        </option>
-                                                        <option value="4">
-                                                            Жанр 4
-                                                        </option>
-                                                    </select>
+                                                <select name="genre" tabindex="-1">
+                                                    <option value="0">
+                                                        Все жанры
+                                                    </option>
+                                                    <option value="1">
+                                                        Жанр 1
+                                                    </option>
+                                                    <option value="2">
+                                                        Жанр 2
+                                                    </option>
+                                                    <option value="3">
+                                                        Жанр 3
+                                                    </option>
+                                                    <option value="4">
+                                                        Жанр 4
+                                                    </option>
+                                                </select>
                                                 <!--</div>-->
                                             </div>
                                         </div>
@@ -1441,48 +1298,20 @@
                                             <div class="block">
                                                 <input id="modalFlatpickr" class="calendar js-flatpickr"
                                                        placeholder="Выберите диапазон дат">
-                                                <!--<label class="default">Выберите диапазон дат</label>-->
-                                                <!--<label class="value"><span></span>/<span></span>/<span></span></label>-->
-                                                <!--<label class="undefined">Неактуальный билет</label>-->
-                                                <!--<input type="text" name="d" value="" maxlength="10">-->
                                             </div>
                                         </div>
-
-                                        <script>
-                                            // document.calendar_promo_days = [];
-                                        </script>
-
-
-                                        <!--Удалить это нахуй-->
-                                        <!--<div class="form-item undated">-->
-                                        <!--<div class="block">-->
-                                        <!--<input type="checkbox" id="bo" name="bo" value="1">-->
-                                        <!--<label for="bo"-->
-                                        <!--data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;selectionOpenbillet&quot;, &quot;label&quot;: &quot;&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}">-->
-                                        <!--<strong>жми сюда</strong>-->
-                                        <!--Эта хрень сохранена для дебажных целей-->
-                                        <!--</label>-->
-                                        <!--</div>-->
-                                        <!--</div>-->
-                                        <!--до сюда-->
                                     </div>
 
                                     <div class="content">
                                         <a href="#"
-                                           class="btn submit js-submit-stage-1 active"
-                                           data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;ctaNext&quot;, &quot;label&quot;: &quot;%productCategory|%productDate&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}"
-                                           data-productcategory=""
-                                           data-productdate=""><span></span><span>Следующий этап</span></a>
+                                           class="btn submit js-submit-stage-1 active">
+                                            <span></span>
+                                            <span>Следующий этап</span>
+                                        </a>
                                     </div>
 
                                     <input type="hidden" value="" name="v" id="offer-id">
                                     <input type="hidden" value="1" name="ts" id="ticket-step">
-                                    <!--
-                                        <div class="content asterisque">
-                                                    <p>* В случае бронирования билетов на группу более 9 человек <br>просим Вас связаться с нами по телефону  <a href="tel:+33140765610">+33 (0)1 40 76 56 10</a></p>
-                                            <p>** Бесплатно для детей до 12 лет</p>
-                                        </div>
-                                    -->
                                 </form>
 
                                 <div class="offrir-accroche">
@@ -1526,18 +1355,14 @@
             <a id="main-content" tabindex="-1"></a>
             <div class="layout-content">
                 <div>
-                    <div data-drupal-messages-fallback="" class="hidden"></div>
                     <div id="block-lido-content">
 
 
                         <div class="checkout">
 
                             <div class="checkout__header">
-                                <a class="back js-order-modal-return-2" href="#"
-                                   data-tag="{&quot;event&quot;: &quot;event&quot;, &quot;category&quot;: &quot;navigation&quot;, &quot;action&quot;: &quot;ctaBack&quot;, &quot;label&quot;: &quot;changeMyBooking&quot;,&quot;value&quot;: &quot;&quot;, &quot;nonInteraction&quot;: &quot;&quot;}">Изменить
-                                    заказ</a>
-                                <p><b>Нужна помощь?</b> Вы можете связаться с нами по номеру <a href="tel:+33140765610">+33
-                                    (0)1 83 77 27 00</a></p>
+                                <a class="back js-order-modal-return-2" href="#">Изменить заказ</a>
+                                <p><b>Нужна помощь?</b> Вы можете связаться с нами по номеру <a href="tel:+78126450898">+7 (812) 645 08 98</a></p>
                             </div>
 
                             <div class="checkout__nav">
@@ -1560,13 +1385,13 @@
                             <div class="checkout__main">
 
 
-                                <form class="checkout-information-form" data-drupal-selector="checkout-information-form"
-                                      action="https://www.lido.fr/ru/%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B" method="post"
+                                <form class="checkout-information-form css-form"
+                                      action="/" method="post"
                                       id="checkout-information-form" accept-charset="UTF-8">
                                     <div class="checkout__content active checkout__form scroller">
 
 
-                                        <fieldset data-drupal-selector="edit-information" id="edit-information"
+                                        <fieldset id="edit-information"
                                                   class="js-form-item form-item js-form-wrapper form-wrapper">
                                             <legend>
                                                 <span class="fieldset-legend">Ваши контактные данные </span>
@@ -1576,8 +1401,7 @@
                                                 конфиденциальность Ваших личных данных.</p>
 
                                             <div class="fieldset-wrapper">
-                                                <fieldset data-drupal-selector="edit-civility"
-                                                          id="edit-civility--wrapper"
+                                                <fieldset id="edit-civility--wrapper"
                                                           class="fieldgroup form-composite required js-form-item form-item js-form-wrapper form-wrapper form-item--valid"
                                                           required="required" aria-required="true">
                                                     <legend>
@@ -1586,16 +1410,14 @@
                                                     <div class="fieldset-wrapper">
                                                         <div id="edit-civility">
                                                             <div class="js-form-item form-item js-form-type-radio form-item-civility js-form-item-civility">
-                                                                <input data-drupal-selector="edit-civility-001"
-                                                                       type="radio" id="edit-civility-001"
+                                                                <input type="radio" id="edit-civility-001"
                                                                        name="civility" value="001" class="form-radio">
 
                                                                 <label for="edit-civility-001"
                                                                        class="option">Господин</label>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-civility js-form-item-civility">
-                                                                <input data-drupal-selector="edit-civility-002"
-                                                                       type="radio" id="edit-civility-002"
+                                                                <input type="radio" id="edit-civility-002"
                                                                        name="civility" value="002" class="form-radio">
 
                                                                 <label for="edit-civility-002" class="option">
@@ -1608,7 +1430,7 @@
 
                                                 <div class="js-form-item form-item js-form-type-textfield form-item-last-name js-form-item-last-name form-item--required">
                                                     <label for="edit-last-name" class="js-form-required form-required">Фамилия*</label>
-                                                    <input data-drupal-selector="edit-last-name" type="text"
+                                                    <input type="text"
                                                            id="edit-last-name" name="last_name" value="" size="64"
                                                            maxlength="64" placeholder="Фамилия*"
                                                            class="form-text required" required="required"
@@ -1618,7 +1440,7 @@
 
                                                 <div class="js-form-item form-item js-form-type-textfield form-item-first-name js-form-item-first-name form-item--required">
                                                     <label for="edit-first-name" class="js-form-required form-required">Имя*</label>
-                                                    <input data-drupal-selector="edit-first-name" type="text"
+                                                    <input type="text"
                                                            id="edit-first-name" name="first_name" value="" size="64"
                                                            maxlength="64" placeholder="Имя*" class="form-text required"
                                                            required="required" aria-required="true">
@@ -1628,7 +1450,7 @@
                                                 <div class="js-form-item form-item js-form-type-email form-item-email js-form-item-email form-item--required">
                                                     <label for="edit-email" class="js-form-required form-required">Эл.
                                                         адрес*</label>
-                                                    <input data-drupal-selector="edit-email" type="email"
+                                                    <input type="email"
                                                            id="edit-email" name="email" value="" size="60"
                                                            maxlength="254" placeholder="Эл. адрес*"
                                                            class="form-email required" required="required"
@@ -1640,7 +1462,7 @@
                                                     <label for="edit-email-confirm"
                                                            class="js-form-required form-required">Подтвердить адрес эл.
                                                         почты*</label>
-                                                    <input data-drupal-selector="edit-email-confirm" type="email"
+                                                    <input type="email"
                                                            id="edit-email-confirm" name="email_confirm" value=""
                                                            size="60" maxlength="254"
                                                            placeholder="Подтвердить адрес эл. почты*"
@@ -1652,7 +1474,7 @@
                                                 <div class="js-form-item form-item js-form-type-tel form-item-phone-number js-form-item-phone-number form-item--required">
                                                     <label for="edit-phone-number"
                                                            class="js-form-required form-required">Телефон*</label>
-                                                    <input data-drupal-selector="edit-phone-number" type="tel"
+                                                    <input type="tel"
                                                            id="edit-phone-number" name="phone_number" value="" size="64"
                                                            maxlength="64" placeholder="Телефон*"
                                                            class="form-tel required" required="required"
@@ -1670,7 +1492,6 @@
                                                             aria-activedescendant="customSelect-Zgbu3-selectedOption"
                                                             aria-labelledby="customSelect-Zgbu3-label"
                                                             tabindex="0"><span>Гражданство*</span></span><select
-                                                            data-drupal-selector="edit-nationality"
                                                             id="edit-nationality" name="nationality"
                                                             class="form-select required" required="required"
                                                             aria-required="true" tabindex="-1">
@@ -2715,7 +2536,7 @@
                                                 <div class="js-form-item form-item js-form-type-textarea form-item-comment js-form-item-comment">
                                                     <label for="edit-comment">Комментарий</label>
                                                     <div>
-                                                        <textarea data-drupal-selector="edit-comment" id="edit-comment"
+                                                        <textarea id="edit-comment"
                                                                   name="comment" rows="1" cols="60"
                                                                   placeholder="Особая просьба? Пищевая аллергия? Пожалуйста сообщите нам об этом"
                                                                   class="form-textarea"></textarea>
@@ -2724,7 +2545,7 @@
                                                 </div>
 
                                                 <div class="js-form-item form-item js-form-type-checkbox form-item-optin js-form-item-optin">
-                                                    <input data-drupal-selector="edit-optin" type="checkbox"
+                                                    <input type="checkbox"
                                                            id="edit-optin" name="optin" value="1" class="form-checkbox">
 
                                                     <label for="edit-optin" class="option">Я желаю получать информацию о
@@ -2736,12 +2557,11 @@
 
 
                                         <a href="https://www.lido.fr/ru/2" class="btn disabled"><span></span><span>Следующий этап</span></a>
-                                        <!--<p><b>Нужна помощь?</b> Вы можете связаться с нами по номеру <a href="tel:+33183772700">+33 (0)1 83 77 27 00</a></p>-->
                                         <p><i>* обязательные поля</i></p>
                                     </div>
                                     <div class="checkout__content checkout__form scroller">
 
-                                        <fieldset data-drupal-selector="edit-is-gift" id="edit-is-gift--wrapper"
+                                        <fieldset id="edit-is-gift--wrapper"
                                                   class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
                                             <legend>
                                                 <span class="fieldset-legend">Желаете сделать подарок? </span>
@@ -2749,14 +2569,14 @@
                                             <div class="fieldset-wrapper">
                                                 <div id="edit-is-gift">
                                                     <div class="js-form-item form-item js-form-type-radio form-item-is-gift js-form-item-is-gift">
-                                                        <input data-drupal-selector="edit-is-gift-yes" type="radio"
+                                                        <input type="radio"
                                                                id="edit-is-gift-yes" name="is_gift" value="yes"
                                                                class="form-radio">
 
                                                         <label for="edit-is-gift-yes" class="option">Да</label>
                                                     </div>
                                                     <div class="js-form-item form-item js-form-type-radio form-item-is-gift js-form-item-is-gift">
-                                                        <input data-drupal-selector="edit-is-gift-no" type="radio"
+                                                        <input type="radio"
                                                                id="edit-is-gift-no" name="is_gift" value="no"
                                                                checked="checked" class="form-radio">
 
@@ -2770,14 +2590,13 @@
                                         <p class="cgv"><a
                                                 href="https://www.lido.fr/ru/%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B#popin--cgv-voucher">Подробнее</a>
                                         </p>
-                                        <fieldset data-drupal-selector="edit-gift" id="edit-gift"
+                                        <fieldset id="edit-gift"
                                                   class="js-form-item form-item js-form-wrapper form-wrapper">
                                             <legend>
                                                 <span class="fieldset-legend"></span>
                                             </legend>
                                             <div class="fieldset-wrapper">
-                                                <fieldset data-drupal-selector="edit-gift-method"
-                                                          id="edit-gift-method--wrapper"
+                                                <fieldset id="edit-gift-method--wrapper"
                                                           class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
                                                     <legend>
                                                         <span class="fieldset-legend">Какой вариант доставки Вы предпочитаете?</span>
@@ -2785,8 +2604,7 @@
                                                     <div class="fieldset-wrapper">
                                                         <div id="edit-gift-method">
                                                             <div class="js-form-item form-item js-form-type-radio form-item-gift-method js-form-item-gift-method">
-                                                                <input data-drupal-selector="edit-gift-method-postal"
-                                                                       type="radio" id="edit-gift-method-postal"
+                                                                <input type="radio" id="edit-gift-method-postal"
                                                                        name="gift_method" value="postal"
                                                                        class="form-radio">
 
@@ -2800,8 +2618,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-gift-method js-form-item-gift-method">
-                                                                <input data-drupal-selector="edit-gift-method-email"
-                                                                       type="radio" id="edit-gift-method-email"
+                                                                <input type="radio" id="edit-gift-method-email"
                                                                        name="gift_method" value="email"
                                                                        class="form-radio">
 
@@ -2812,14 +2629,13 @@
 
                                                     </div>
                                                 </fieldset>
-                                                <fieldset data-drupal-selector="edit-gift-postal" id="edit-gift-postal"
+                                                <fieldset id="edit-gift-postal"
                                                           class="js-form-item form-item js-form-wrapper form-wrapper">
                                                     <legend>
                                                         <span class="fieldset-legend"></span>
                                                     </legend>
                                                     <div class="fieldset-wrapper">
-                                                        <fieldset data-drupal-selector="edit-gift-postal-destination"
-                                                                  id="edit-gift-postal-destination--wrapper"
+                                                        <fieldset id="edit-gift-postal-destination--wrapper"
                                                                   class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
                                                             <legend>
                                                                 <span class="fieldset-legend">На какой адрес Вы хотели бы отправить сертификат? </span>
@@ -2827,8 +2643,7 @@
                                                             <div class="fieldset-wrapper">
                                                                 <div id="edit-gift-postal-destination">
                                                                     <div class="js-form-item form-item js-form-type-radio form-item-gift-postal-destination js-form-item-gift-postal-destination">
-                                                                        <input data-drupal-selector="edit-gift-postal-destination-me"
-                                                                               type="radio"
+                                                                        <input type="radio"
                                                                                id="edit-gift-postal-destination-me"
                                                                                name="gift_postal_destination" value="me"
                                                                                class="form-radio">
@@ -2837,8 +2652,7 @@
                                                                                class="option">На мой адрес</label>
                                                                     </div>
                                                                     <div class="js-form-item form-item js-form-type-radio form-item-gift-postal-destination js-form-item-gift-postal-destination">
-                                                                        <input data-drupal-selector="edit-gift-postal-destination-him"
-                                                                               type="radio"
+                                                                        <input type="radio"
                                                                                id="edit-gift-postal-destination-him"
                                                                                name="gift_postal_destination"
                                                                                value="him" class="form-radio">
@@ -2851,8 +2665,7 @@
 
                                                             </div>
                                                         </fieldset>
-                                                        <fieldset data-drupal-selector="edit-gift-postal-me"
-                                                                  id="edit-gift-postal-me"
+                                                        <fieldset id="edit-gift-postal-me"
                                                                   class="js-form-item form-item js-form-wrapper form-wrapper">
                                                             <legend>
                                                                 <span class="fieldset-legend"></span>
@@ -2860,8 +2673,7 @@
                                                             <div class="fieldset-wrapper">
                                                                 <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-me-address js-form-item-gift-postal-me-address form-item--required">
                                                                     <label for="edit-gift-postal-me-address">Адрес*</label>
-                                                                    <input data-drupal-selector="edit-gift-postal-me-address"
-                                                                           type="text" id="edit-gift-postal-me-address"
+                                                                    <input type="text" id="edit-gift-postal-me-address"
                                                                            name="gift_postal_me_address" value=""
                                                                            size="64" maxlength="64" placeholder="Адрес*"
                                                                            class="form-text">
@@ -2869,8 +2681,7 @@
                                                                 </div>
                                                                 <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-me-postal-code js-form-item-gift-postal-me-postal-code form-item--required">
                                                                     <label for="edit-gift-postal-me-postal-code">Индекс*</label>
-                                                                    <input data-drupal-selector="edit-gift-postal-me-postal-code"
-                                                                           type="text"
+                                                                    <input type="text"
                                                                            id="edit-gift-postal-me-postal-code"
                                                                            name="gift_postal_me_postal_code" value=""
                                                                            size="64" maxlength="64"
@@ -2879,8 +2690,7 @@
                                                                 </div>
                                                                 <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-me-city js-form-item-gift-postal-me-city form-item--required">
                                                                     <label for="edit-gift-postal-me-city">Город*</label>
-                                                                    <input data-drupal-selector="edit-gift-postal-me-city"
-                                                                           type="text" id="edit-gift-postal-me-city"
+                                                                    <input type="text" id="edit-gift-postal-me-city"
                                                                            name="gift_postal_me_city" value="" size="64"
                                                                            maxlength="64" placeholder="Город*"
                                                                            class="form-text">
@@ -2897,7 +2707,6 @@
                                                                               aria-activedescendant="customSelect-xfQX2-selectedOption"
                                                                               aria-labelledby="customSelect-xfQX2-label"
                                                                               tabindex="0"><span>Страна*</span></span><select
-                                                                            data-drupal-selector="edit-gift-postal-me-country"
                                                                             id="edit-gift-postal-me-country"
                                                                             name="gift_postal_me_country"
                                                                             class="form-select" tabindex="-1">
@@ -4058,8 +3867,7 @@
 
                                                             </div>
                                                         </fieldset>
-                                                        <fieldset data-drupal-selector="edit-gift-postal-him"
-                                                                  id="edit-gift-postal-him"
+                                                        <fieldset id="edit-gift-postal-him"
                                                                   class="js-form-item form-item js-form-wrapper form-wrapper">
                                                             <legend>
                                                                 <span class="fieldset-legend"></span>
@@ -4068,8 +3876,7 @@
                                                                 <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-him-address js-form-item-gift-postal-him-address form-item--required">
                                                                     <label for="edit-gift-postal-him-address">Адрес
                                                                         получателя*</label>
-                                                                    <input data-drupal-selector="edit-gift-postal-him-address"
-                                                                           type="text" id="edit-gift-postal-him-address"
+                                                                    <input type="text" id="edit-gift-postal-him-address"
                                                                            name="gift_postal_him_address" value=""
                                                                            size="64" maxlength="64"
                                                                            placeholder="Адрес получателя*"
@@ -4079,8 +3886,7 @@
                                                                 <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-him-postal-code js-form-item-gift-postal-him-postal-code form-item--required">
                                                                     <label for="edit-gift-postal-him-postal-code">Индекс
                                                                         получателя*</label>
-                                                                    <input data-drupal-selector="edit-gift-postal-him-postal-code"
-                                                                           type="text"
+                                                                    <input type="text"
                                                                            id="edit-gift-postal-him-postal-code"
                                                                            name="gift_postal_him_postal_code" value=""
                                                                            size="64" maxlength="64"
@@ -4091,8 +3897,7 @@
                                                                 <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-him-city js-form-item-gift-postal-him-city form-item--required">
                                                                     <label for="edit-gift-postal-him-city">Город
                                                                         получателя*</label>
-                                                                    <input data-drupal-selector="edit-gift-postal-him-city"
-                                                                           type="text" id="edit-gift-postal-him-city"
+                                                                    <input type="text" id="edit-gift-postal-him-city"
                                                                            name="gift_postal_him_city" value=""
                                                                            size="64" maxlength="64"
                                                                            placeholder="Город получателя*"
@@ -4111,7 +3916,6 @@
                                                                               aria-activedescendant="customSelect-1PXw3-selectedOption"
                                                                               aria-labelledby="customSelect-1PXw3-label"
                                                                               tabindex="0"><span>Страна получателя *</span></span><select
-                                                                            data-drupal-selector="edit-gift-postal-him-country"
                                                                             id="edit-gift-postal-him-country"
                                                                             name="gift_postal_him_country"
                                                                             class="form-select" tabindex="-1">
@@ -5276,14 +5080,13 @@
 
                                                     </div>
                                                 </fieldset>
-                                                <fieldset data-drupal-selector="edit-gift-email" id="edit-gift-email"
+                                                <fieldset id="edit-gift-email"
                                                           class="js-form-item form-item js-form-wrapper form-wrapper">
                                                     <legend>
                                                         <span class="fieldset-legend"></span>
                                                     </legend>
                                                     <div class="fieldset-wrapper">
-                                                        <fieldset data-drupal-selector="edit-gift-email-destination"
-                                                                  id="edit-gift-email-destination--wrapper"
+                                                        <fieldset id="edit-gift-email-destination--wrapper"
                                                                   class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
                                                             <legend>
                                                                 <span class="fieldset-legend">На какой электронный адрес Вы хотели бы отправить сертификат? </span>
@@ -5291,8 +5094,7 @@
                                                             <div class="fieldset-wrapper">
                                                                 <div id="edit-gift-email-destination">
                                                                     <div class="js-form-item form-item js-form-type-radio form-item-gift-email-destination js-form-item-gift-email-destination">
-                                                                        <input data-drupal-selector="edit-gift-email-destination-me"
-                                                                               type="radio"
+                                                                        <input type="radio"
                                                                                id="edit-gift-email-destination-me"
                                                                                name="gift_email_destination" value="me"
                                                                                class="form-radio">
@@ -5302,8 +5104,7 @@
                                                                             адрес</label>
                                                                     </div>
                                                                     <div class="js-form-item form-item js-form-type-radio form-item-gift-email-destination js-form-item-gift-email-destination">
-                                                                        <input data-drupal-selector="edit-gift-email-destination-him"
-                                                                               type="radio"
+                                                                        <input type="radio"
                                                                                id="edit-gift-email-destination-him"
                                                                                name="gift_email_destination" value="him"
                                                                                class="form-radio">
@@ -5321,8 +5122,7 @@
 
                                                             </div>
                                                         </fieldset>
-                                                        <fieldset data-drupal-selector="edit-gift-email-him"
-                                                                  id="edit-gift-email-him"
+                                                        <fieldset id="edit-gift-email-him"
                                                                   class="js-form-item form-item js-form-wrapper form-wrapper">
                                                             <legend>
                                                                 <span class="fieldset-legend"></span>
@@ -5331,8 +5131,7 @@
                                                                 <div class="js-form-item form-item js-form-type-email form-item-gift-email-him-email js-form-item-gift-email-him-email form-item--required">
                                                                     <label for="edit-gift-email-him-email">электронный
                                                                         адрес получателя*</label>
-                                                                    <input data-drupal-selector="edit-gift-email-him-email"
-                                                                           aria-describedby="edit-gift-email-him-email--description"
+                                                                    <input aria-describedby="edit-gift-email-him-email--description"
                                                                            type="email" id="edit-gift-email-him-email"
                                                                            name="gift_email_him_email" value=""
                                                                            size="60" maxlength="254"
@@ -5352,8 +5151,7 @@
 
                                                     </div>
                                                 </fieldset>
-                                                <fieldset data-drupal-selector="edit-gift-civility"
-                                                          id="edit-gift-civility--wrapper"
+                                                <fieldset id="edit-gift-civility--wrapper"
                                                           class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
                                                     <legend>
     <span class="fieldset-legend">
@@ -5362,16 +5160,14 @@
                                                     <div class="fieldset-wrapper">
                                                         <div id="edit-gift-civility">
                                                             <div class="js-form-item form-item js-form-type-radio form-item-gift-civility js-form-item-gift-civility">
-                                                                <input data-drupal-selector="edit-gift-civility-001"
-                                                                       type="radio" id="edit-gift-civility-001"
+                                                                <input type="radio" id="edit-gift-civility-001"
                                                                        name="gift_civility" value="001"
                                                                        class="form-radio">
 
                                                                 <label for="edit-gift-civility-001" class="option">Господин</label>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-gift-civility js-form-item-gift-civility">
-                                                                <input data-drupal-selector="edit-gift-civility-002"
-                                                                       type="radio" id="edit-gift-civility-002"
+                                                                <input type="radio" id="edit-gift-civility-002"
                                                                        name="gift_civility" value="002"
                                                                        class="form-radio">
 
@@ -5384,7 +5180,7 @@
                                                 </fieldset>
                                                 <div class="js-form-item form-item js-form-type-textfield form-item-gift-last-name js-form-item-gift-last-name form-item--required">
                                                     <label for="edit-gift-last-name">Фамилия получателя*</label>
-                                                    <input data-drupal-selector="edit-gift-last-name" type="text"
+                                                    <input type="text"
                                                            id="edit-gift-last-name" name="gift_last_name" value=""
                                                            size="64" maxlength="64" placeholder="Фамилия получателя*"
                                                            class="form-text">
@@ -5393,7 +5189,7 @@
                                                 <div class="js-form-item form-item js-form-type-textfield form-item-gift-first-name js-form-item-gift-first-name form-item--required">
                                                     <label for="edit-gift-first-name">Имя получателя мя*
                                                         *</label>
-                                                    <input data-drupal-selector="edit-gift-first-name" type="text"
+                                                    <input type="text"
                                                            id="edit-gift-first-name" name="gift_first_name" value=""
                                                            size="64" maxlength="64" placeholder="Имя получателя мя*
 *" class="form-text">
@@ -5403,8 +5199,7 @@
                                                     <label for="edit-gift-message">Персонализируйте Ваш подарочный
                                                         сертификат</label>
                                                     <div>
-                                                        <textarea data-drupal-selector="edit-gift-message"
-                                                                  aria-describedby="edit-gift-message--description"
+                                                        <textarea aria-describedby="edit-gift-message--description"
                                                                   id="edit-gift-message" name="gift_message" rows="4"
                                                                   cols="60" maxlength="130"
                                                                   class="form-textarea"></textarea>
@@ -5419,18 +5214,18 @@
                                         </fieldset>
 
 
-                                        <fieldset data-drupal-selector="edit-promo" id="edit-promo"
+                                        <fieldset id="edit-promo"
                                                   class="js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
                                             <legend>
                                                 <span class="fieldset-legend">У Вас есть промокод? </span>
                                             </legend>
                                             <div class="fieldset-wrapper">
-                                                <div data-drupal-selector="edit-code-promo" type="text"
+                                                <div type="text"
                                                      id="edit-code-promo" name="code_promo" value="" size="64"
                                                      maxlength="64" placeholder="Введите промокод"
                                                      class="form-text js-form-item form-item js-form-type- form-item- js-form-item- form-no-label"
                                                      accept-charset="UTF-8">
-                                                    <input data-drupal-selector="edit-code-promo" type="text"
+                                                    <input type="text"
                                                            id="edit-code-promo" name="code_promo" value="" size="64"
                                                            maxlength="64" placeholder="Введите промокод"
                                                            class="form-text">
@@ -5448,14 +5243,13 @@
 
 
                                         <!--<div class="gift-mention form-item">Отправка в течение 48 часов максимум и получение с учетом почтовых задержек.</div>-->
-                                        <fieldset data-drupal-selector="edit-payment" id="edit-payment"
+                                        <fieldset id="edit-payment"
                                                   class="js-form-item form-item js-form-wrapper form-wrapper">
                                             <legend>
                                                 <span class="fieldset-legend">Средства оплаты</span>
                                             </legend>
                                             <div class="fieldset-wrapper">
-                                                <fieldset data-drupal-selector="edit-payement-mode"
-                                                          id="edit-payement-mode--wrapper"
+                                                <fieldset id="edit-payement-mode--wrapper"
                                                           class="fieldgroup form-composite required js-form-item form-item js-form-wrapper form-wrapper"
                                                           required="required" aria-required="true">
                                                     <legend>
@@ -5464,64 +5258,52 @@
                                                     <div class="fieldset-wrapper">
                                                         <div id="edit-payement-mode">
                                                             <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input data-drupal-selector="edit-payement-mode-cb"
-                                                                       type="radio" id="edit-payement-mode-cb"
+                                                                <input type="radio" id="edit-payement-mode-cb"
                                                                        name="payement_mode" value="CB"
                                                                        class="form-radio">
 
                                                                 <label for="edit-payement-mode-cb"
-                                                                       data-tag="{&quot;event&quot;:&quot;ecommerce&quot;,&quot;category&quot;:&quot;ecommerce&quot;,&quot;action&quot;:&quot;paymentChoice&quot;,&quot;label&quot;:&quot;cb&quot;,&quot;product&quot;:&quot;&quot;}"
                                                                        class="option">cb</label>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input data-drupal-selector="edit-payement-mode-visa"
-                                                                       type="radio" id="edit-payement-mode-visa"
+                                                                <input type="radio" id="edit-payement-mode-visa"
                                                                        name="payement_mode" value="VISA"
                                                                        class="form-radio">
 
                                                                 <label for="edit-payement-mode-visa"
-                                                                       data-tag="{&quot;event&quot;:&quot;ecommerce&quot;,&quot;category&quot;:&quot;ecommerce&quot;,&quot;action&quot;:&quot;paymentChoice&quot;,&quot;label&quot;:&quot;visa&quot;,&quot;product&quot;:&quot;&quot;}"
                                                                        class="option">visa</label>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input data-drupal-selector="edit-payement-mode-mastercard"
-                                                                       type="radio" id="edit-payement-mode-mastercard"
+                                                                <input type="radio" id="edit-payement-mode-mastercard"
                                                                        name="payement_mode" value="MasterCard"
                                                                        class="form-radio">
 
                                                                 <label for="edit-payement-mode-mastercard"
-                                                                       data-tag="{&quot;event&quot;:&quot;ecommerce&quot;,&quot;category&quot;:&quot;ecommerce&quot;,&quot;action&quot;:&quot;paymentChoice&quot;,&quot;label&quot;:&quot;mastercard&quot;,&quot;product&quot;:&quot;&quot;}"
                                                                        class="option">mastercard</label>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input data-drupal-selector="edit-payement-mode-american-express"
-                                                                       type="radio"
+                                                                <input type="radio"
                                                                        id="edit-payement-mode-american-express"
                                                                        name="payement_mode" value="American Express"
                                                                        class="form-radio">
 
                                                                 <label for="edit-payement-mode-american-express"
-                                                                       data-tag="{&quot;event&quot;:&quot;ecommerce&quot;,&quot;category&quot;:&quot;ecommerce&quot;,&quot;action&quot;:&quot;paymentChoice&quot;,&quot;label&quot;:&quot;amex&quot;,&quot;product&quot;:&quot;&quot;}"
                                                                        class="option">amex</label>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input data-drupal-selector="edit-payement-mode-jcb"
-                                                                       type="radio" id="edit-payement-mode-jcb"
+                                                                <input type="radio" id="edit-payement-mode-jcb"
                                                                        name="payement_mode" value="JCB"
                                                                        class="form-radio">
 
                                                                 <label for="edit-payement-mode-jcb"
-                                                                       data-tag="{&quot;event&quot;:&quot;ecommerce&quot;,&quot;category&quot;:&quot;ecommerce&quot;,&quot;action&quot;:&quot;paymentChoice&quot;,&quot;label&quot;:&quot;jcb&quot;,&quot;product&quot;:&quot;&quot;}"
                                                                        class="option">jcb</label>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input data-drupal-selector="edit-payement-mode-paypal"
-                                                                       type="radio" id="edit-payement-mode-paypal"
+                                                                <input type="radio" id="edit-payement-mode-paypal"
                                                                        name="payement_mode" value="PAYPAL"
                                                                        class="form-radio">
 
                                                                 <label for="edit-payement-mode-paypal"
-                                                                       data-tag="{&quot;event&quot;:&quot;ecommerce&quot;,&quot;category&quot;:&quot;ecommerce&quot;,&quot;action&quot;:&quot;paymentChoice&quot;,&quot;label&quot;:&quot;paypal&quot;,&quot;product&quot;:&quot;&quot;}"
                                                                        class="option">paypal</label>
                                                             </div>
                                                         </div>
@@ -5529,7 +5311,7 @@
                                                     </div>
                                                 </fieldset>
                                                 <div class="js-form-item form-item js-form-type-checkbox form-item-cgv js-form-item-cgv form-item--required">
-                                                    <input data-drupal-selector="edit-cgv" type="checkbox" id="edit-cgv"
+                                                    <input type="checkbox" id="edit-cgv"
                                                            name="cgv" value="1" class="form-checkbox required"
                                                            required="required" aria-required="true">
 
@@ -5552,11 +5334,10 @@
                                         </fieldset>
 
                                         <a href="https://www.lido.fr/ru/3" class="btn disabled"><span></span><span>Следующий этап</span></a>
-                                        <!--<p><b>Нужна помощь?</b> Вы можете связаться с нами по номеру <a href="tel:+33183772700">+33 (0)1 83 77 27 00</a></p>-->
                                         <p><i>* обязательные поля</i></p>
                                     </div>
                                     <div class="hidden">
-                                        <fieldset data-drupal-selector="edit-is-gift" id="edit-is-gift--wrapper"
+                                        <fieldset id="edit-is-gift--wrapper"
                                                   class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--filled form-item--valid">
                                             <legend>
                                                 <span class="fieldset-legend">Желаете сделать подарок? </span>
@@ -5564,14 +5345,14 @@
                                             <div class="fieldset-wrapper">
                                                 <div id="edit-is-gift">
                                                     <div class="js-form-item form-item js-form-type-radio form-item-is-gift js-form-item-is-gift">
-                                                        <input data-drupal-selector="edit-is-gift-yes" type="radio"
+                                                        <input type="radio"
                                                                id="edit-is-gift-yes" name="is_gift" value="yes"
                                                                class="form-radio">
 
                                                         <label for="edit-is-gift-yes" class="option">Да</label>
                                                     </div>
                                                     <div class="js-form-item form-item js-form-type-radio form-item-is-gift js-form-item-is-gift">
-                                                        <input data-drupal-selector="edit-is-gift-no" type="radio"
+                                                        <input type="radio"
                                                                id="edit-is-gift-no" name="is_gift" value="no"
                                                                checked="checked" class="form-radio">
 
@@ -5584,11 +5365,10 @@
 
 
                                         <input autocomplete="off"
-                                               data-drupal-selector="form-b6m3vmqlcr-twanbtuq-pklstqy3y8nadlk3lyaukla"
                                                type="hidden" name="form_build_id"
                                                value="form-b6M3VmqLCr-twAnBtUq-PKLStqY3Y8NadLk3lyauklA">
 
-                                        <input data-drupal-selector="edit-checkout-information-form" type="hidden"
+                                        <input type="hidden"
                                                name="form_id" value="checkout_information_form">
 
                                     </div>
@@ -5635,11 +5415,10 @@
                                             </ul>
                                         </div>
                                         <div>
-
-
-                                            <a href="https://www.lido.fr/ru/%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B#"
-                                               type="submit" class="btn"
-                                               data-tag="{&quot;event&quot;:&quot;ecommerce&quot;,&quot;ecommerceAction&quot;:&quot;checkout&quot;,&quot;category&quot;:&quot;ecommerce&quot;,&quot;action&quot;:&quot;paymentCart&quot;,&quot;label&quot;:&quot;%paymentMethod&quot;,&quot;product&quot;:{&quot;products&quot;:[],&quot;extra&quot;:[]}}"><span></span><span>Оплатить</span></a>
+                                            <a href="#" type="submit" class="btn">
+                                                <span></span>
+                                                <span>Оплатить</span>
+                                            </a>
                                         </div>
                                         <div class="payment-mention">Кликнув по ссылке, Вы перейдете к защищенному
                                             терминалу оплаты, предоставленному нашим партнером INGENICO.
@@ -5737,22 +5516,22 @@
                 </p>
             </div>
         </section>
-        <section id="popin--max-people" class="popin">
-            <div class="popin__bg"></div>
-            <div class="popin__content">
-                <a class="popin__close" href="#"></a>
-                <div class="popin__text">
-                    <div class="popin__warning">
+        <!--<section id="popin&#45;&#45;max-people" class="popin">-->
+            <!--<div class="popin__bg"></div>-->
+            <!--<div class="popin__content">-->
+                <!--<a class="popin__close" href="#"></a>-->
+                <!--<div class="popin__text">-->
+                    <!--<div class="popin__warning">-->
 
-                        В случае бронирования билетов на группу более 9 человек
-                    </div>
-                    <div>
+                        <!--В случае бронирования билетов на группу более 9 человек-->
+                    <!--</div>-->
+                    <!--<div>-->
 
-                        <p>просим Вас связаться с нами по телефону +33 (0)1 40 76 56 10</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <!--<p>просим Вас связаться с нами по телефону +7 (812) 645 08 98</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</section>-->
 
 
     </div>
@@ -5830,7 +5609,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="14061" attr-time="1582905600"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -5955,7 +5735,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="12775" attr-time="1582903800"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -6082,7 +5863,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="14118" attr-time="1582905600"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -6203,7 +5985,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="13668" attr-time="1582905600"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -6326,7 +6109,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="14224" attr-time="1582905600"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -6461,7 +6245,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div style="background:#fce07f" class="event-box" rel="14145"
                      attr-time="1582992000" itemscope=""
                      itemtype="http://data-vocabulary.org/Event">
@@ -6588,7 +6373,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="14062" attr-time="1582993800"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -6638,7 +6424,8 @@
 
                                 <strong itemprop="location" itemscope=""
                                         itemtype="http://data-vocabulary.org/Organization">
-                                    ​<span itemprop="name">Mariinsky (ex. Kirov) Ballet and Opera Theatre​</span></strong>
+                                    ​<span
+                                        itemprop="name">Mariinsky (ex. Kirov) Ballet and Opera Theatre​</span></strong>
 
                                 <a class="place-info"
                                    href="https://russianbroadway.com/theatres/mariinsky-ballet-and-opera-theatre">about
@@ -6716,7 +6503,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="12743" attr-time="1582992000"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -6851,7 +6639,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="12649" attr-time="1583053200"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -6901,7 +6690,8 @@
 
                                 <strong itemprop="location" itemscope=""
                                         itemtype="http://data-vocabulary.org/Organization">
-                                    ​<span itemprop="name">Mariinsky (ex. Kirov) Ballet and Opera Theatre​</span></strong>
+                                    ​<span
+                                        itemprop="name">Mariinsky (ex. Kirov) Ballet and Opera Theatre​</span></strong>
 
                                 <a class="place-info"
                                    href="https://russianbroadway.com/theatres/mariinsky-ballet-and-opera-theatre">about
@@ -6980,7 +6770,8 @@
 
 
 
-                                            </script>
+
+                </script>
                 <div class="event-box" rel="14063" attr-time="1583078400"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
                     <div class="pull-left scroll-animated"
@@ -7030,7 +6821,8 @@
 
                                 <strong itemprop="location" itemscope=""
                                         itemtype="http://data-vocabulary.org/Organization">
-                                    ​<span itemprop="name">Mariinsky (ex. Kirov) Ballet and Opera Theatre​</span></strong>
+                                    ​<span
+                                        itemprop="name">Mariinsky (ex. Kirov) Ballet and Opera Theatre​</span></strong>
 
                                 <a class="place-info"
                                    href="https://russianbroadway.com/theatres/mariinsky-ballet-and-opera-theatre">about
@@ -7752,9 +7544,12 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
 
-                            <div class="carousel slide" data-ride="carousel" id="carousel-example-generic"><!-- Indicators -->
+                            <div class="carousel slide" data-ride="carousel" id="carousel-example-generic">
+                                <!-- Indicators -->
                                 <ol class="carousel-indicators">
-                                    <li class="active" data-slide-to="0" data-target="#carousel-example-generic">&nbsp;</li>
+                                    <li class="active" data-slide-to="0" data-target="#carousel-example-generic">
+                                        &nbsp;
+                                    </li>
                                     <li data-slide-to="1" data-target="#carousel-example-generic" class="">&nbsp;</li>
                                     <li data-slide-to="2" data-target="#carousel-example-generic" class="">&nbsp;</li>
                                     <li data-slide-to="3" data-target="#carousel-example-generic" class="">&nbsp;</li>
@@ -7765,7 +7560,9 @@
 
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img alt="" src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-1.jpg" width="685px" height="285px">
+                                        <img alt=""
+                                             src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-1.jpg"
+                                             width="685px" height="285px">
                                         <div class="carousel-caption">
                                             <h3></h3>
 
@@ -7773,7 +7570,9 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img alt="" src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-2.jpg" width="685px" height="285px">
+                                        <img alt=""
+                                             src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-2.jpg"
+                                             width="685px" height="285px">
                                         <div class="carousel-caption">
                                             <h3></h3>
 
@@ -7781,7 +7580,9 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img alt="" src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-3.jpg" width="685px" height="285px">
+                                        <img alt=""
+                                             src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-3.jpg"
+                                             width="685px" height="285px">
                                         <div class="carousel-caption">
                                             <h3></h3>
 
@@ -7789,7 +7590,9 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img alt="" src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-4.jpg" width="685px" height="285px">
+                                        <img alt=""
+                                             src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-4.jpg"
+                                             width="685px" height="285px">
                                         <div class="carousel-caption">
                                             <h3></h3>
 
@@ -7797,7 +7600,9 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img alt="" src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-5.jpg" width="685px" height="285px">
+                                        <img alt=""
+                                             src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-5.jpg"
+                                             width="685px" height="285px">
                                         <div class="carousel-caption">
                                             <h3></h3>
 
@@ -7805,7 +7610,9 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img alt="" src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-6.jpg" width="685px" height="285px">
+                                        <img alt=""
+                                             src="/s1/files/image/alexandrinsky/1-theatre/slider/alexandrinsky-slider-6.jpg"
+                                             width="685px" height="285px">
                                         <div class="carousel-caption">
                                             <h3></h3>
 
@@ -7813,17 +7620,34 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Controls --><a class="left carousel-control" data-slide="prev" href="#carousel-example-generic" role="button"><span class="glyphicon glyphicon-chevron-left">&nbsp;</span> </a>
-                                <a class="right carousel-control" data-slide="next" href="#carousel-example-generic" role="button"> <span class="glyphicon glyphicon-chevron-right">&nbsp;</span> </a>
+                                <!-- Controls --><a class="left carousel-control" data-slide="prev"
+                                                    href="#carousel-example-generic" role="button"><span
+                                    class="glyphicon glyphicon-chevron-left">&nbsp;</span> </a>
+                                <a class="right carousel-control" data-slide="next" href="#carousel-example-generic"
+                                   role="button"> <span class="glyphicon glyphicon-chevron-right">&nbsp;</span> </a>
 
-                            </div><p>&nbsp;</p>
+                            </div>
+                            <p>&nbsp;</p>
 
-                            <p>The Alexandrinsky Theatre is one of the oldest national theatres in Russia. From the very beginning of its existence this Theatre became one of the empire theatres and the cradle of the dramatic art. Second name -The Russian State Pushkin Academy DramaTheatre. The troupe of the Theatre was created by the order of empress Elizabeth on August 30, 1756, exactly this date is considered to be the birthday of Russian national theatre. In 1832 the Theatre was named in honor of Nicolas I’s wife Alexandra Feodorovna. &nbsp;In 2005 the theatre was closed to the reconstruction and was opened on a date of celebration the 250 anniversary of the theatre, on August 30, 2006. The Theatre returned its historical look and was improved in technical point. In 2012 while celebration the 180 anniversary of the Theatre building, the Theatre educational complex “The New stage of Alexandrinsky theatre” was inaugurated.&nbsp;</p>
+                            <p>The Alexandrinsky Theatre is one of the oldest national theatres in Russia. From the very
+                                beginning of its existence this Theatre became one of the empire theatres and the cradle
+                                of the dramatic art. Second name -The Russian State Pushkin Academy DramaTheatre. The
+                                troupe of the Theatre was created by the order of empress Elizabeth on August 30, 1756,
+                                exactly this date is considered to be the birthday of Russian national theatre. In 1832
+                                the Theatre was named in honor of Nicolas I’s wife Alexandra Feodorovna. &nbsp;In 2005
+                                the theatre was closed to the reconstruction and was opened on a date of celebration the
+                                250 anniversary of the theatre, on August 30, 2006. The Theatre returned its historical
+                                look and was improved in technical point. In 2012 while celebration the 180 anniversary
+                                of the Theatre building, the Theatre educational complex “The New stage of Alexandrinsky
+                                theatre” was inaugurated.&nbsp;</p>
 
                             <hr>
-                            <p><em>Alexandrinsky Theatre,&nbsp;pl. Ostrovskogo, 6,&nbsp;St Petersburg,&nbsp;191011</em></p>
+                            <p><em>Alexandrinsky Theatre,&nbsp;pl. Ostrovskogo, 6,&nbsp;St Petersburg,&nbsp;191011</em>
+                            </p>
                             <div class="map-holder">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1999.0215247723092!2d30.336157000000004!3d59.931785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963107f8736b6d%3A0xf0dd227c1af184ab!2z0JDQu9C10LrRgdCw0L3QtNGA0LjQvdGB0LrQuNC5INCi0LXQsNGC0YA!5e0!3m2!1sru!2s!4v1417267734066" width="685" height="450" frameborder="0" style="border:0"></iframe> </div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1999.0215247723092!2d30.336157000000004!3d59.931785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963107f8736b6d%3A0xf0dd227c1af184ab!2z0JDQu9C10LrRgdCw0L3QtNGA0LjQvdGB0LrQuNC5INCi0LXQsNGC0YA!5e0!3m2!1sru!2s!4v1417267734066"
+                                        width="685" height="450" frameborder="0" style="border:0"></iframe>
+                            </div>
 
                         </div>
                     </div>
@@ -7834,8 +7658,11 @@
                 <div class="col-xs-12 col-sm-4 col-md-4"><!-- Конец закрытия тегов колонки 3/4 и начала 1/4 -->
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <a data-gallery="multiimages" data-title="Alexandrinsky Theatre" data-toggle="lightbox" href="/s1/files/image/alexandrinsky/alexandrinsky-hall-zones2.jpg">
-                                <img class="img-responsive img-round" src="/s1/files/image/alexandrinsky/alexandrinsky-hall-zones2.jpg" width="312px"> </a>
+                            <a data-gallery="multiimages" data-title="Alexandrinsky Theatre" data-toggle="lightbox"
+                               href="/s1/files/image/alexandrinsky/alexandrinsky-hall-zones2.jpg">
+                                <img class="img-responsive img-round"
+                                     src="/s1/files/image/alexandrinsky/alexandrinsky-hall-zones2.jpg" width="312px">
+                            </a>
 
                             <h3>Seating plan</h3>
 
@@ -7844,7 +7671,8 @@
                             <blockquote>
                                 <p>Brilliant</p>
                                 <footer>The Guardian</footer>
-                            </blockquote><p>&nbsp;</p>
+                            </blockquote>
+                            <p>&nbsp;</p>
 
                             <hr>
                             <p>&nbsp;</p>
@@ -7852,17 +7680,118 @@
                             <style type="text/css">div.widSSP {
                                 width: 100% !important;
                             }
+
                             div.widCOE {
                                 width: 100% !important;
                             }
+
                             img.widCOEImg {
                                 margin-left: auto !important;
                                 margin-right: auto !important;
                             }
                             </style>
-                            <div id="TA_certificateOfExcellence957" class="TA_certificateOfExcellence"><iframe style="height:0;width:0;display:none;" src="https://p.travelsmarter.net/api/usersync/sync.html?api_key=TxLExUPOSpaM-4SJwXvYmQ&amp;publisher_browser_id=09daa8e2e321b0ee6449284ab07566b2db85307a&amp;cb=1583871563225"></iframe> <div id="CDSWIDCOE" class="widCOE"> <a class="widCOEClickWrap" target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html" onclick="ta.cds.handleTALink(14348,this);return true;"></a> <div class="widCOETitle"> Certificate of Excellence <span class="widCOEDateText">2016</span> </div> <div class="widCOEReadReviews"> Read Reviews </div> <div class="widCOELogo"> <a target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"><img src="https://www.tripadvisor.co.uk/img/cdsi/img2/awards/CoE2017_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"></a> </div> </div><!--/ #CDSWIDCOE--> </div>
+                            <div id="TA_certificateOfExcellence957" class="TA_certificateOfExcellence">
+                                <iframe style="height:0;width:0;display:none;"
+                                        src="https://p.travelsmarter.net/api/usersync/sync.html?api_key=TxLExUPOSpaM-4SJwXvYmQ&amp;publisher_browser_id=09daa8e2e321b0ee6449284ab07566b2db85307a&amp;cb=1583871563225"></iframe>
+                                <div id="CDSWIDCOE" class="widCOE"><a class="widCOEClickWrap" target="_blank"
+                                                                      href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"
+                                                                      onclick="ta.cds.handleTALink(14348,this);return true;"></a>
+                                    <div class="widCOETitle"> Certificate of Excellence <span class="widCOEDateText">2016</span>
+                                    </div>
+                                    <div class="widCOEReadReviews"> Read Reviews</div>
+                                    <div class="widCOELogo"><a target="_blank"
+                                                               href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"><img
+                                            src="https://www.tripadvisor.co.uk/img/cdsi/img2/awards/CoE2017_WidgetAsset-14348-2.png"
+                                            alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"></a></div>
+                                </div><!--/ #CDSWIDCOE--> </div>
                             <script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&amp;uniq=957&amp;locationId=548251&amp;lang=en_UK&amp;year=2016&amp;display_version=2"></script>
-                            <div id="TA_selfserveprop444" class="TA_selfserveprop"><iframe style="height:0;width:0;display:none;" src="https://p.travelsmarter.net/api/usersync/sync.html?api_key=TxLExUPOSpaM-4SJwXvYmQ&amp;publisher_browser_id=09daa8e2e321b0ee6449284ab07566b2db85307a&amp;cb=1583871563228"></iframe> <div id="CDSWIDSSP" class="widSSP widSSP" style="width: 468px;"> <a class="widSSPClickWrap" target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html" onclick="ta.cds.handleTALink(11900,this);return true;"></a> <div class="widSSPData "> <div class="widSSPBranding"> <dl> <dt> <a target="_blank" href="https://www.tripadvisor.co.uk/"><img src="https://www.tripadvisor.co.uk/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"></a> </dt> <dt class="widSSPTagline">Know better. Book better. Go better.</dt> </dl> </div><!--/ cdsBranding--> <div class="widSSPComponent"> <div class="widSSPSummary"> <dl> <a target="_blank" href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html" onclick="ta.cds.handleTALink(11900,this);return true;" rel="nofollow"> <dt class="widSSPH18">The Alexandrinsky Theater</dt> </a> </dl> </div><!--/ cdsSummary--> </div><!--/ cdsComponent--> <div class="widSSPComponent widSSPOptional"> <div class="widSSPTrvlRtng"> <dl> <dt class="widSSPH11">Tripadvisor Traveller Rating</dt> <dd> <div class="widSSPOverall"> <span class="ui_bubble_rating bubble_40"></span> <div>Based on <b>396</b> traveller reviews</div> </div><!--/ overall --> </dd> </dl> </div> </div><!--/ cdsComponent --> <div class="widSSPWrap widSSPOptional"> <div class="widSSPInformation"> <div class="widSSPWrap"> <div class="widSSPPopIdx widSSPSingle"> <b>Tripadvisor Ranking</b> <span class="widSSPPopIdxData"> <span class="widSSPPopIdxData widSSPPopIdxNumbers"> <sup>#</sup>134 of 2138 </span> things to do in St. Petersburg </span> </div><!--/ popIdx--> </div><!--/ cdsWrap--> </div><!--/ cdsInformation--> </div><!--/ cdsWrap--> <div class="widSSPComponent widSSPOptional"> <dl class="widSSPReviews"> <dt class="widSSPH11">Most Recent Traveller Reviews</dt> <dd class="widSSPOneReview"> <ul class="widSSPBullet"> <li> <span class="widSSPDate">20 Jan 2020:</span> <span class="widSSPQuote">“Designed by Carlo Rossi, named Alexandrinsky in honour of Alexandra Fyodorovna −wife of Tzar Nikolai I−...”</span> <span><a href="https://www.tripadvisor.co.uk/ShowUserReviews-g298507-d548251-r740320476-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html" onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false" rel="nofollow">more</a></span> </li> <li> <span class="widSSPDate">9 Nov 2019:</span> <span class="widSSPQuote">“The Alexandrinsky has mini-Bolshoi vibes, has a beautiful garden out the front and balcony to sip...”</span> <span><a href="https://www.tripadvisor.co.uk/ShowUserReviews-g298507-d548251-r725093567-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html" onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false" rel="nofollow">more</a></span> </li> <li> <span class="widSSPDate">1 Oct 2019:</span> <span class="widSSPQuote">“The theatre itself is a fantastic building and very well decorated inside. The performance of Swan...”</span> <span><a href="https://www.tripadvisor.co.uk/ShowUserReviews-g298507-d548251-r714447119-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html" onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false" rel="nofollow">more</a></span> </li> <li> <span class="widSSPDate">25 Jul 2019:</span> <span class="widSSPQuote">“The Alexandrisky Theater is a beautiful neo-classical building located at the end of Architect Rossi Street...”</span> <span><a href="https://www.tripadvisor.co.uk/ShowUserReviews-g298507-d548251-r692646098-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html" onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false" rel="nofollow">more</a></span> </li> </ul><!--/ bullet--> </dd><!--/ hReview--> </dl> </div> <div class="widSSPAll"> <ul class="widSSPReadReview"> <li><a href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html" id="allreviews" onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false" rel="nofollow">Read reviews</a></li> </ul> </div><!--/ cdsAll--> <div class="widSSPLegal">© 2020 TripAdvisor LLC</div><!--/ cdsLegal--> </div><!--/ cdsData--> </div><!--/ CDSPOP.cdsBx--> </div>
+                            <div id="TA_selfserveprop444" class="TA_selfserveprop">
+                                <iframe style="height:0;width:0;display:none;"
+                                        src="https://p.travelsmarter.net/api/usersync/sync.html?api_key=TxLExUPOSpaM-4SJwXvYmQ&amp;publisher_browser_id=09daa8e2e321b0ee6449284ab07566b2db85307a&amp;cb=1583871563228"></iframe>
+                                <div id="CDSWIDSSP" class="widSSP widSSP" style="width: 468px;"><a
+                                        class="widSSPClickWrap" target="_blank"
+                                        href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"
+                                        onclick="ta.cds.handleTALink(11900,this);return true;"></a>
+                                    <div class="widSSPData ">
+                                        <div class="widSSPBranding">
+                                            <dl>
+                                                <dt><a target="_blank" href="https://www.tripadvisor.co.uk/"><img
+                                                        src="https://www.tripadvisor.co.uk/img/cdsi/img2/branding/150_logo-11900-2.png"
+                                                        alt="TripAdvisor"></a></dt>
+                                                <dt class="widSSPTagline">Know better. Book better. Go better.</dt>
+                                            </dl>
+                                        </div><!--/ cdsBranding-->
+                                        <div class="widSSPComponent">
+                                            <div class="widSSPSummary">
+                                                <dl><a target="_blank"
+                                                       href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"
+                                                       onclick="ta.cds.handleTALink(11900,this);return true;"
+                                                       rel="nofollow">
+                                                    <dt class="widSSPH18">The Alexandrinsky Theater</dt>
+                                                </a></dl>
+                                            </div><!--/ cdsSummary--> </div><!--/ cdsComponent-->
+                                        <div class="widSSPComponent widSSPOptional">
+                                            <div class="widSSPTrvlRtng">
+                                                <dl>
+                                                    <dt class="widSSPH11">Tripadvisor Traveller Rating</dt>
+                                                    <dd>
+                                                        <div class="widSSPOverall"><span
+                                                                class="ui_bubble_rating bubble_40"></span>
+                                                            <div>Based on <b>396</b> traveller reviews</div>
+                                                        </div><!--/ overall --> </dd>
+                                                </dl>
+                                            </div>
+                                        </div><!--/ cdsComponent -->
+                                        <div class="widSSPWrap widSSPOptional">
+                                            <div class="widSSPInformation">
+                                                <div class="widSSPWrap">
+                                                    <div class="widSSPPopIdx widSSPSingle"><b>Tripadvisor Ranking</b>
+                                                        <span class="widSSPPopIdxData"> <span
+                                                                class="widSSPPopIdxData widSSPPopIdxNumbers"> <sup>#</sup>134 of 2138 </span> things to do in St. Petersburg </span>
+                                                    </div><!--/ popIdx--> </div><!--/ cdsWrap--> </div>
+                                            <!--/ cdsInformation--> </div><!--/ cdsWrap-->
+                                        <div class="widSSPComponent widSSPOptional">
+                                            <dl class="widSSPReviews">
+                                                <dt class="widSSPH11">Most Recent Traveller Reviews</dt>
+                                                <dd class="widSSPOneReview">
+                                                    <ul class="widSSPBullet">
+                                                        <li><span class="widSSPDate">20 Jan 2020:</span> <span
+                                                                class="widSSPQuote">“Designed by Carlo Rossi, named Alexandrinsky in honour of Alexandra Fyodorovna −wife of Tzar Nikolai I−...”</span>
+                                                            <span><a
+                                                                    href="https://www.tripadvisor.co.uk/ShowUserReviews-g298507-d548251-r740320476-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"
+                                                                    onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false"
+                                                                    rel="nofollow">more</a></span></li>
+                                                        <li><span class="widSSPDate">9 Nov 2019:</span> <span
+                                                                class="widSSPQuote">“The Alexandrinsky has mini-Bolshoi vibes, has a beautiful garden out the front and balcony to sip...”</span>
+                                                            <span><a
+                                                                    href="https://www.tripadvisor.co.uk/ShowUserReviews-g298507-d548251-r725093567-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"
+                                                                    onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false"
+                                                                    rel="nofollow">more</a></span></li>
+                                                        <li><span class="widSSPDate">1 Oct 2019:</span> <span
+                                                                class="widSSPQuote">“The theatre itself is a fantastic building and very well decorated inside. The performance of Swan...”</span>
+                                                            <span><a
+                                                                    href="https://www.tripadvisor.co.uk/ShowUserReviews-g298507-d548251-r714447119-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"
+                                                                    onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false"
+                                                                    rel="nofollow">more</a></span></li>
+                                                        <li><span class="widSSPDate">25 Jul 2019:</span> <span
+                                                                class="widSSPQuote">“The Alexandrisky Theater is a beautiful neo-classical building located at the end of Architect Rossi Street...”</span>
+                                                            <span><a
+                                                                    href="https://www.tripadvisor.co.uk/ShowUserReviews-g298507-d548251-r692646098-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"
+                                                                    onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false"
+                                                                    rel="nofollow">more</a></span></li>
+                                                    </ul><!--/ bullet--> </dd><!--/ hReview--> </dl>
+                                        </div>
+                                        <div class="widSSPAll">
+                                            <ul class="widSSPReadReview">
+                                                <li>
+                                                    <a href="https://www.tripadvisor.co.uk/Attraction_Review-g298507-d548251-Reviews-The_Alexandrinsky_Theater-St_Petersburg_Northwestern_District.html"
+                                                       id="allreviews"
+                                                       onclick="ta.cds.handleTALink(11900,this);window.open(this.href, 'newTAWindow', 'toolbar=1,resizable=1,menubar=1,location=1,status=1,scrollbars=1,width=800,height=600'); return false"
+                                                       rel="nofollow">Read reviews</a></li>
+                                            </ul>
+                                        </div><!--/ cdsAll-->
+                                        <div class="widSSPLegal">© 2020 TripAdvisor LLC</div><!--/ cdsLegal--> </div>
+                                    <!--/ cdsData--> </div><!--/ CDSPOP.cdsBx--> </div>
                             <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=444&amp;locationId=548251&amp;lang=en_UK&amp;rating=true&amp;nreviews=4&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
                         </div>
                     </div>
@@ -7881,32 +7810,38 @@
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2><a data-parent="#accordion" data-toggle="collapse" href="#collapse0">About the building</a></h2>
+                        <h2><a data-parent="#accordion" data-toggle="collapse" href="#collapse0">About the building</a>
+                        </h2>
                     </div>
 
                     <div class="panel-collapse collapse in" id="collapse0">
                         <div class="panel-body">
-                            <p><span style="font-size: 13.3333339691162px; line-height: 20.7999992370605px;">Nice yellow classical building was created by outstanding Italian architect Carlos Rossi.&nbsp;Being the Empire theatre it was created monumental and luxury like usual, decorated with columns and a bronze sculpture on the top. Rossi chose the Empire stile, using his favorite colors: yellow and white. Inside you’ll see a lot of red velvet, molding and a wonderful curtain that covers the stage. The Theatre is famous for its corridors and numerous stairs, so be careful not to be lost in them.&nbsp;</span></p>
+                            <p><span style="font-size: 13.3333339691162px; line-height: 20.7999992370605px;">Nice yellow classical building was created by outstanding Italian architect Carlos Rossi.&nbsp;Being the Empire theatre it was created monumental and luxury like usual, decorated with columns and a bronze sculpture on the top. Rossi chose the Empire stile, using his favorite colors: yellow and white. Inside you’ll see a lot of red velvet, molding and a wonderful curtain that covers the stage. The Theatre is famous for its corridors and numerous stairs, so be careful not to be lost in them.&nbsp;</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2><a data-parent="#accordion" data-toggle="collapse" href="#collapse1">History of Alexandrinsky Theatre</a></h2>
+                        <h2><a data-parent="#accordion" data-toggle="collapse" href="#collapse1">History of
+                            Alexandrinsky Theatre</a></h2>
                     </div>
 
                     <div class="panel-collapse collapse" id="collapse1">
                         <div class="panel-body">
-                            <p><span style="font-size: 13.3333339691162px; line-height: 20.7999992370605px;">Apart from famous Russian dramatic place like “Uncle Vanya”, “The Seagul” by Chekhov, “A Sunstroke” by Bunin, “The Reviser”, “Marriage” by Gogol, you can enjoy the festival plays of foreign authors: a choreography play “Snow White”, “Macbeth”, “The Marriage of Figaro”, “War and Peace”, etc. From 2005 V.V. Fokin is the director of the Theatre, the laureate of four Russian state awards and the president of the Meyerhold cultural theatre center. Visiting the Alexandrinsky Theatre you need to follow the dress code, black tie for men and evening dresses for women are not really the must, but you’d better keep formal style. During the cold season(autumn, winter, early spring) remember about a possible snow and rain outside, that’s why don’t forget to take shoes to change and to leave your coat and hat in the cloakroom. The Theatre is situated in the middle of the Nevsky prospect at Ostrovskogo Square, one of the nicest squares in Saint Petersburg, 3 minutes walk from Nevsky prospect. It’s very easy to get there by walking along the beautiful streets of Saint Petersburg, by underground (station Nevsky prospect- Gostiny dvor) or by taxi if your hotel is situated far away from the city center. Beside we’ll gladly organize a transfer for you from the hotel or from your cruise ship. The place is worth visiting every time of the year. In June during the marvelous White Nights our city gladly opens its doors for a lot of festivals. Every year the Theatre organize a special festival that is called “Aleksandrinsky” this year it take place in September - October, so people have an opportunity to see a lot of modern plays of Russian and foreign masters. Generally the time May-July is considered the most romantic and nice time for visiting theatres because apart from the precious performance you can enjoy wonderful White Nights of Saint Petersburg!&nbsp;</span></p>
+                            <p><span style="font-size: 13.3333339691162px; line-height: 20.7999992370605px;">Apart from famous Russian dramatic place like “Uncle Vanya”, “The Seagul” by Chekhov, “A Sunstroke” by Bunin, “The Reviser”, “Marriage” by Gogol, you can enjoy the festival plays of foreign authors: a choreography play “Snow White”, “Macbeth”, “The Marriage of Figaro”, “War and Peace”, etc. From 2005 V.V. Fokin is the director of the Theatre, the laureate of four Russian state awards and the president of the Meyerhold cultural theatre center. Visiting the Alexandrinsky Theatre you need to follow the dress code, black tie for men and evening dresses for women are not really the must, but you’d better keep formal style. During the cold season(autumn, winter, early spring) remember about a possible snow and rain outside, that’s why don’t forget to take shoes to change and to leave your coat and hat in the cloakroom. The Theatre is situated in the middle of the Nevsky prospect at Ostrovskogo Square, one of the nicest squares in Saint Petersburg, 3 minutes walk from Nevsky prospect. It’s very easy to get there by walking along the beautiful streets of Saint Petersburg, by underground (station Nevsky prospect- Gostiny dvor) or by taxi if your hotel is situated far away from the city center. Beside we’ll gladly organize a transfer for you from the hotel or from your cruise ship. The place is worth visiting every time of the year. In June during the marvelous White Nights our city gladly opens its doors for a lot of festivals. Every year the Theatre organize a special festival that is called “Aleksandrinsky” this year it take place in September - October, so people have an opportunity to see a lot of modern plays of Russian and foreign masters. Generally the time May-July is considered the most romantic and nice time for visiting theatres because apart from the precious performance you can enjoy wonderful White Nights of Saint Petersburg!&nbsp;</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <p>&nbsp;</p>
             <div class="jumbotron tablet-hide">
-                <h2><p class="h1"><b> Book tickets now!</b> </p></h2>
-                <p>We have the best prices, the best offers, take advantage to get the best seats in one of the most beautiful theatres of Saint Petersburg!</p>
-                <p><a href="#clndr"><img alt="" src="https://russianbroadway.com/s1/files/image/arrdwn.png" style="float:left; height:32px; margin:5px; width:32px"></a></p>
+                <h2><p class="h1"><b> Book tickets now!</b></p></h2>
+                <p>We have the best prices, the best offers, take advantage to get the best seats in one of the most
+                    beautiful theatres of Saint Petersburg!</p>
+                <p><a href="#clndr"><img alt="" src="https://russianbroadway.com/s1/files/image/arrdwn.png"
+                                         style="float:left; height:32px; margin:5px; width:32px"></a></p>
 
                 <p>&nbsp;</p>
             </div>
@@ -7917,13 +7852,7 @@
 <!--mariinski legacy-->
 <script src="./js/jquery.min.js"></script>
 <script src="./js/script.js"></script>
-<script src="./js/slick.min.js"></script>
 <script src="./js/jquery.youtubebackground.js"></script>
-
-<!--lido legacy-->
-<!--<script src="./js/js_2.js"></script>-->
-<!--<img src="./images/px" width="1" height="1">-->
-<!--<img src="./images/seg" width="1" height="1">-->
 
 <!--Scrollbar plugin-->
 <script src="./vendor/customScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
