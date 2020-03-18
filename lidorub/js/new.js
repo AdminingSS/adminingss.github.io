@@ -1,12 +1,48 @@
+if (typeof landing_options === "undefined") {
+    var get_play_bill = function () {
+        return $('.server-datas .event-list >*').clone();
+    };
+
+    var get_theater_info = function (locationHref) {
+        //return $('.server-datas .theaters-data .container-white').clone();
+
+        return $.ajax({
+            url:     locationHref, //url страницы (action_ajax_form.php)
+            type:     "POST", //метод отправки
+            //enctype: 'multipart/form-data',
+            //dataType: "html", //формат данных
+            // processData: false,
+            // contentType: false,
+            data: {
+                nolayout: true
+            }//,
+            // success: function(response) { //Данные отправлены успешно
+            // },
+            // error: function(response) { // Данные не отправлены
+
+            //}
+        });
+    };
+
+    var get_event_info = function () {
+        return $('.server-datas #step2-inactive .container-white').clone();
+    };
+
+    var get_place_selector = function () {
+        return $('.server-datas .options .options').clone();
+    }
+}
+
 function isTouchDevice() {
     try {
         document.createEvent('TouchEvent');
         return true;
     }
-    catch(e) {
+    catch (e) {
         return false;
     }
 }
+
 function getScrollWidth() {
     var div = document.createElement('div');
 
@@ -20,6 +56,7 @@ function getScrollWidth() {
     document.body.removeChild(div);
     window.scrollWidth = sw;
 }
+
 function preventScale() {
     window.addEventListener('wheel', function (e) {
         if (e.ctrlKey) {
@@ -42,22 +79,22 @@ function preventScale() {
 
 // Детект мобильного браузера
 var isMobile = {
-    Android: function() {
+    Android: function () {
         return navigator.userAgent.match(/Android/i);
     },
-    BlackBerry: function() {
+    BlackBerry: function () {
         return navigator.userAgent.match(/BlackBerry/i);
     },
-    iOS: function() {
+    iOS: function () {
         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     },
-    Opera: function() {
+    Opera: function () {
         return navigator.userAgent.match(/Opera Mini/i);
     },
-    Windows: function() {
+    Windows: function () {
         return navigator.userAgent.match(/IEMobile/i);
     },
-    any: function() {
+    any: function () {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
@@ -66,7 +103,7 @@ $(document).ready(function () {
 
     //Top block code from mariinski
     //какие-то манипуляции
-    if ( isTouchDevice() )
+    if (isTouchDevice())
         $('html').addClass('touch');
     window.scrollWidh = getScrollWidth();
     preventScale();
@@ -476,35 +513,97 @@ $(document).ready(function () {
 
     })();
 
+    //regaloeb plugin
+    (() => {
+
+        $(".js-regaloeb").regaloebParallax();
+
+    })();
+
+    //custom select plugin
+    (() => {
+        $('.form-item:not(".quantity") select').customSelect();
+    })();
+
     //modals control (not done)
     (() => {
         const $orderModal = $('.js-order-modal');
         const $orderModalTrigger = $('.js-order-modal-trigger');
         const $orderModalClose = $('.js-order-modal-close');
 
+        const $theaterModal = $('.js-theater-modal');
+        const $theaterModalContent = $theaterModal.find('.tm-modal-content');
+        const $theaterModalClose = $('.js-theater-modal-close, .js-theater-modal-close .tm-modal-close');
+
         const $orderModal2 = $('.js-order-modal-2');
         const $orderModalClose2 = $('.js-order-modal-close-2');
         const $orderModalReturn2 = $('.js-order-modal-return-2');
+
+        const $termsModal = $('.js-terms-modal');
+        const $termsModalTrigger = $('.js-terms-modal-trigger');
+        const $termsModalClose = $('.js-terms-modal-close, .js-terms-modal-close .tm-modal-close');
+
+        const $privacyModal = $('.js-privacy-modal');
+        const $privacyModalTrigger = $('.js-privacy-modal-trigger');
+        const $privacyModalClose = $('.js-privacy-modal-close, .js-privacy-modal-close .tm-modal-close');
+
+        const $contactModal = $('.js-contact-modal');
+        const $contactModalTrigger = $('.js-contact-modal-trigger');
+        const $contactModalClose = $('.js-contact-modal-close, .js-contact-modal-close .tm-modal-close');
 
         const $jsSubmitStageOne = $('.js-submit-stage-1');
 
         const $mainForm = $('.js-form-main');
         const $modalFormOne = $orderModal.find('.step1 form');
 
+        $theaterModalClose.on('click', function (e) {
+            if (e.target !== this) return;
+            $theaterModal.hide();
+            //$('body').removeClass('body-noscroll');
+        });
+
+        $termsModalTrigger.on('click', function (e) {
+            e.preventDefault();
+
+            $termsModal.show();
+            $('body').addClass('body-noscroll');
+        });
+
+        $termsModalClose.on('click', function (e) {
+            if (e.target !== this) return;
+            $termsModal.hide();
+            $('body').removeClass('body-noscroll');
+        });
+
+        $privacyModalTrigger.on('click', function (e) {
+            e.preventDefault();
+
+            $privacyModal.show();
+            $('body').addClass('body-noscroll');
+        });
+
+        $privacyModalClose.on('click', function (e) {
+            if (e.target !== this) return;
+            $privacyModal.hide();
+            $('body').removeClass('body-noscroll');
+        });
+
+        $contactModalTrigger.on('click', function (e) {
+            e.preventDefault();
+
+            $contactModal.show();
+            $('body').addClass('body-noscroll');
+        });
+
+        $contactModalClose.on('click', function (e) {
+            if (e.target !== this) return;
+            $contactModal.hide();
+            $('body').removeClass('body-noscroll');
+        });
+
         $mainForm.on('submit', function (e) {
             e.preventDefault();
         });
-
-        //main form transfer
-        function transferFormMain() {
-            const quantity = $mainForm.find('[name="na"]').val();
-            const dateRange = $mainForm.find('.flatpickr-input').val();
-
-            $modalFormOne.find('[name="na"]').val(quantity);
-            $modalFormOne.find("#modalFlatpickr").each(function () {
-                this._flatpickr.setDate(dateRange);
-            })
-        }
 
         $orderModalTrigger.on('click', function () {
             transferFormMain();
@@ -532,106 +631,52 @@ $(document).ready(function () {
             //$orderModal.find('.reservation-tunnel .step.step2').addClass('active');
         });
 
-        $jsSubmitStageOne.on('click', function (e) {
+        $jsSubmitStageOne.on('click', async function (e) {
             if (!$(this).hasClass('active')) return;
 
             const $oldData = $('.step.step2 .offers .event-list');
             $oldData.remove();
 
-            ajaxStageOne();
-            //ajax things
-            // const $formElement = $(this).parents('form');
-            // const $aForm = $formElement[0];
-            // const data = new FormData($aForm);
-            //let allowContinue = sendData(data) || false;
-            // function sendData(data) {
-            //
-            //     $.ajax({
-            //         url:     '/dir/site.php',
-            //         type:     "POST",
-            //         enctype: 'multipart/form-data',
-            //         processData: false,
-            //         contentType: false,
-            //         data: data,
-            //         success: function(response) {
-            //             return true;
-            //             //здесь если надо обработать выдачу
-            //         },
-            //         error: function(response) {
-            //             setTimeout(function () {
-            //                 alert('Ошибка. Данные не отправлены.');
-            //             }, 2000);
-            //         }
-            //     });
-            // }
-            //if(!allowContinue) return;
+            let $triggerButton;
 
-            $orderModal.find('.step2 .inactive').fadeOut();
-            $orderModal.find('.step2 .offers').slideDown(500).fadeIn({duration: 500, queue: false});
+            await ajaxStageOne();
 
-            $orderModal.find('.step3 .inactive').fadeIn();
-            $orderModal.find('.step3 .options').fadeOut(500).slideUp({duration: 500, queue: false});
+            const $jsSubmitStageTwo = $('.event-box .btn.btn-danger');
 
-            $orderModal.find('.reservation-tunnel .step.step2').addClass('active');
-            $orderModal.find('.reservation-tunnel .step.step3').removeClass('active');
-
-            //$(".js-custom-scrollbar").mCustomScrollbar("update");
-
-            $orderModal.find('.reservation-tunnel .step.step2 .js-custom-scrollbar').mCustomScrollbar({
-                scrollbarPosition: "outside",
-                autoHideScrollbar: false,
-                theme: "dark",
-                mouseWheel: {scrollAmount: 200},
-                advanced: {updateOnContentResize: true}
-            });
-
-            //theater modals
-            const $theaterModal = $('.js-theater-modal');
-            const $theaterModalContent = $theaterModal.find('.tm-modal-content');
-            const $theaterModalTrigger = $('.event-list .event-header .place-info');
-            const $theaterModalClose = $('.js-theater-modal-close, .tm-modal-close');
-
-            // $theaterModalContent.mCustomScrollbar({
-            //     //scrollbarPosition: "outside",
-            //     autoHideScrollbar: false,
-            //     theme: "dark",
-            //     mouseWheel: {scrollAmount: 300},
-            //     advanced: {updateOnContentResize: true}
-            // });
-
-            $theaterModalTrigger.attr('href','#');
-
-            $theaterModalTrigger.on('click', function (e) {
+            $jsSubmitStageTwo.on('click', function (e) {
                 e.preventDefault();
 
-                $theaterModalContent.mCustomScrollbar("destroy");
-
-                const $oldData = $theaterModalContent.find('>*');
+                const $oldData = $('.step.step3 .options .options, .step.step3 .options .form-group');
                 $oldData.remove();
 
-                ajaxStageOneTheaters($theaterModalContent);
+                ajaxStageTwo();
 
-                $theaterModal.show();
-                //$('body').addClass('body-noscroll');
-
-                $theaterModalContent.mCustomScrollbar({
-                    //scrollbarPosition: "outside",
-                    autoHideScrollbar: false,
-                    theme: "dark",
-                    mouseWheel: {scrollAmount: 300},
-                    advanced: {updateOnContentResize: true}
-                });
             });
 
-            $theaterModalClose.on('click', function (e) {
-                if(e.target !== this) return;
-                $theaterModal.hide();
-                //$('body').removeClass('body-noscroll');
-            });
-            //theater modals end
+        });
 
-            //more button
-            const $eventBoxes = $orderModal.find('.event-box');
+        //ajax and processing / modal 1-2 (not done)
+        async function ajaxStageOne() {
+            const $destinationHolder = $('.reservation-tunnel .step.step2 .offers');
+            const $rawData = await get_play_bill();
+            const $eventList = $('<div class="event-list js-custom-scrollbar"></div>');
+
+            const $showMoreBlock = $(
+                '<div class="show-more-block">\n' +
+                '    <a href="#" class="show-menu">Показать\n' +
+                '    подробности</a>' +
+                '</div>');
+
+            $rawData.appendTo($eventList);
+            $eventList.appendTo($destinationHolder);
+
+            fixImages($destinationHolder);
+
+            const $eventBoxes = $destinationHolder.find('.event-box');
+            $showMoreBlock.appendTo($eventBoxes);
+
+            readyStageTwo();
+            initTheaterModal();
 
             $eventBoxes.each(function () {
                 const $moreBlock = $(this).find('.show-more-block');
@@ -640,12 +685,12 @@ $(document).ready(function () {
                 let openMore = false;
                 let loaded = false;
 
-                $showTrigger.on('click', function (e) {
+                $showTrigger.on('click', async function (e) {
                     e.preventDefault();
 
                     if (!loaded) {
                         //ajax2 here
-                        ajaxStageOneShowMore($moreBlock);
+                        await ajaxStageOneShowMore($moreBlock);
                         loaded = true;
                     }
 
@@ -665,223 +710,325 @@ $(document).ready(function () {
                         openMore = false;
                         $containerWhite.find('.carousel-inner').slick('unslick');
                     }
-
-
                 });
             });
 
-            const $jsSubmitStageTwo = $('.event-box .btn.btn-danger');
+            initTriggerButton();
+        }
 
-            $jsSubmitStageTwo.on('click', function (e) {
+        function readyStageTwo() {
+            $orderModal.find('.step2 .inactive').fadeOut();
+            $orderModal.find('.step2 .offers').slideDown(500).fadeIn({duration: 500, queue: false});
+
+            $orderModal.find('.step3 .inactive').fadeIn();
+            $orderModal.find('.step3 .options').fadeOut(500).slideUp({duration: 500, queue: false});
+
+            $orderModal.find('.reservation-tunnel .step.step2').addClass('active');
+            $orderModal.find('.reservation-tunnel .step.step3').removeClass('active');
+
+            $orderModal.find('.reservation-tunnel .step.step2 .js-custom-scrollbar').mCustomScrollbar({
+                scrollbarPosition: "outside",
+                autoHideScrollbar: false,
+                theme: "dark",
+                mouseWheel: {scrollAmount: 200},
+                advanced: {updateOnContentResize: true}
+            });
+        }
+
+        function initTheaterModal($theaterModalTrigger = $('.event-list .event-header .place-info')) {
+
+            //$theaterModalTrigger.attr('href', '#');
+
+            $theaterModalTrigger.on('click', function (e) {
                 e.preventDefault();
 
-                const $oldData = $('.step.step3 .options .options, .step.step3 .options .form-group');
+                const locationHref = $(this).attr('href');
+
+                $theaterModalContent.mCustomScrollbar("destroy");
+
+                const $oldData = $theaterModalContent.find('>*');
                 $oldData.remove();
 
-                ajaxStageTwo();
+                ajaxStageOneTheaters(locationHref);
+            });
+        }
 
-                $orderModal.find('.step3 .inactive').fadeOut();
-                $orderModal.find('.step3 .options').slideDown(500).fadeIn({duration: 500, queue: false});
+        //ajax and processing / modal 1-2 theaters modal (not done)
+        async function ajaxStageOneTheaters(locationHref) {
+            //ajax imitation
+            const $destinationHolder = $theaterModalContent;
+            const $rawData = await get_theater_info(locationHref);
+            console.log($rawData);
+            const $carouselPlace = $rawData.find('.carousel').parent();
+            const $rawImages = $carouselPlace.find('.carousel-inner img');
+            const $sliderHolder = $('<div></div>');
+            const $panelAccordions = $rawData.find('.panel-group .panel');
 
-                $orderModal.find('.reservation-tunnel .step.step3').addClass('active');
+            $rawData.find('>.row >*:nth-child(2),.btn.btn-primary, >.row:nth-child(2), >p, .jumbotron').remove();
+            $rawData.find('>.row >*').removeClass('col-sm-8 col-md-8');
 
-                $orderModal.find('.reservation-tunnel .step.step3 .js-custom-scrollbar').mCustomScrollbar({
-                    scrollbarPosition: "outside",
-                    autoHideScrollbar: false,
-                    theme: "dark",
-                    mouseWheel: {scrollAmount: 200},
-                    advanced: {updateOnContentResize: true}
-                });
+            $rawImages.each(function () {
+                const $currImg = $(this);
+                const oldSrc = $currImg.attr('src');
+                const newSrc = 'https://russianbroadway.com' + oldSrc;
 
-                const $orderModalTrigger2 = $('.js-order-modal-trigger-2');
+                $currImg.attr('src', newSrc);
+                $currImg.appendTo($('<div></div>')).appendTo($sliderHolder);
+            });
 
-                $orderModalTrigger2.on('click', function (e) {
+
+            $carouselPlace.find('.carousel').remove();
+
+            fixImages($rawData);
+
+            $sliderHolder.prependTo($carouselPlace);
+
+            $rawData.appendTo($destinationHolder);
+
+            // var $containerWhite = $holder.find('.container-white');
+
+            $sliderHolder.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                infinite: true
+            });
+
+            $panelAccordions.each(function () {
+                const $trigger = $(this).find('.panel-heading a');
+                const $data = $(this).find('.panel-collapse');
+
+                $trigger.on('click', function (e) {
                     e.preventDefault();
-                    $orderModal.hide();
-                    $orderModal2.show();
+                    $data.toggleClass('open');
+                    $(this).parent().toggleClass('active');
+                })
+            });
+
+            $theaterModal.show();
+            //$('body').addClass('body-noscroll');
+
+            $theaterModalContent.mCustomScrollbar({
+                //scrollbarPosition: "outside",
+                autoHideScrollbar: false,
+                theme: "dark",
+                mouseWheel: {scrollAmount: 300},
+                advanced: {updateOnContentResize: true}
+            });
+        }
+
+        //ajax and processing / modal 1-2 show more (not done)
+        async function ajaxStageOneShowMore($holder) {
+            //ajax imitation
+            const $destinationHolder = $holder;
+            const $rawData = await get_event_info();
+            const $rawImages = $rawData.find('.carousel-inner img');
+            const $sliderHolder = $('<div></div>');
+            const $panelAccordions = $rawData.find('.panel-group .panel');
+
+            $rawImages.each(function () {
+                const $currImg = $(this);
+                const oldSrc = $currImg.attr('src');
+                const newSrc = 'https://russianbroadway.com' + oldSrc;
+
+                $currImg.attr('src', newSrc);
+                $currImg.appendTo($('<div></div>')).appendTo($sliderHolder);
+            });
+
+            $rawData.find('.carousel').remove();
+
+            fixImages($rawData);
+
+            $sliderHolder.prependTo($rawData);
+
+            $rawData.appendTo($destinationHolder);
+
+            // var $containerWhite = $holder.find('.container-white');
+
+            $sliderHolder.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                infinite: true
+            });
+
+            $panelAccordions.each(function () {
+                const $trigger = $(this).find('.panel-heading a');
+                const $data = $(this).find('.panel-collapse');
+
+                $trigger.on('click', function (e) {
+                    e.preventDefault();
+                    $data.toggleClass('open');
+                    $(this).parent().toggleClass('active');
+                })
+            })
+
+        }
+
+        //ajax and processing / modal 1-3 (not done)
+        async function ajaxStageTwo() {
+            //ajax imitation
+            const $destinationHolder = $('.reservation-tunnel .step.step3 .options');
+            const $rawData = await get_place_selector();
+
+            $rawData.find('>.form-group:first-child').remove();
+            $rawData.find('>.form-group:first-child').remove();
+            $rawData.find('.form-group>p:last-child').remove();
+            $rawData.find('>.form-group:last-child').remove();
+            $rawData.find('>.form-group:last-child').remove();
+
+            $rawData.appendTo($destinationHolder);
+
+            $('<div class="form-group button-group">\n' +
+                '    <a class="btn next1 js-order-modal-trigger-2" href="#">Подтвердить заказ</a>\n' +
+                '</div>').appendTo($destinationHolder);
+
+            fixImages($destinationHolder);
+
+            readyStageThree();
+        }
+
+        function readyStageThree() {
+            $orderModal.find('.step3 .inactive').fadeOut();
+            $orderModal.find('.step3 .options').slideDown(500).fadeIn({duration: 500, queue: false});
+
+            $orderModal.find('.reservation-tunnel .step.step3').addClass('active');
+
+            $orderModal.find('.reservation-tunnel .step.step3 .js-custom-scrollbar').mCustomScrollbar({
+                scrollbarPosition: "outside",
+                autoHideScrollbar: false,
+                theme: "dark",
+                mouseWheel: {scrollAmount: 200},
+                advanced: {updateOnContentResize: true}
+            });
+
+            const $orderModalTrigger2 = $('.js-order-modal-trigger-2');
+
+            $orderModalTrigger2.on('click', function (e) {
+                e.preventDefault();
+                $orderModal.hide();
+                $orderModal2.show();
+            });
+        }
+
+        //main form transfer
+        function transferFormMain() {
+            const quantity = $mainForm.find('[name="na"]').val();
+            const dateRange = $mainForm.find('.flatpickr-input').val();
+
+            $modalFormOne.find('[name="na"]').val(quantity);
+            $modalFormOne.find("#modalFlatpickr").each(function () {
+                this._flatpickr.setDate(dateRange);
+            })
+        }
+
+        //
+        function initTriggerButton() {
+            $triggerButton = $('.reservation-tunnel .buttons-action a');
+            $triggerButton.attr('href', '#');
+
+            const string = $triggerButton.attr('onclick');
+
+            const dataStart = string.indexOf('getresult') + 11;
+            const dataEnd = string.indexOf("'", dataStart);
+            const pageStart = dataEnd + 3;
+            const pageEnd = string.indexOf(")", pageStart);
+            newData = string.slice(dataStart, dataEnd);
+            newPage = string.slice(pageStart, pageEnd);
+
+            $triggerButton.attr('onclick', '');
+
+            $triggerButton.on('click', function () {
+                getresult(newData, newPage, $(this));
+            });
+        }
+
+        //load more pages
+        async function getresult(date, page, $triggerButton) {
+            const $destinationHolder = $triggerButton.parent().parent();
+            const $rawData = await get_play_bill(date, page);
+
+            const $showMoreBlock = $(
+                '<div class="show-more-block">\n' +
+                '    <a href="#" class="show-menu">Показать\n' +
+                '    подробности</a>' +
+                '</div>');
+
+            $rawData.appendTo($destinationHolder);
+
+            const $eventBoxes = $rawData.filter('.event-box');
+
+            $showMoreBlock.appendTo($eventBoxes);
+
+            fixImages($rawData);
+
+            initTheaterModal($rawData.find('.event-header .place-info'));
+
+            $eventBoxes.each(function () {
+                const $moreBlock = $(this).find('.show-more-block');
+                const $showTrigger = $moreBlock.find('.show-menu');
+
+                let openMore = false;
+                let loaded = false;
+
+                $showTrigger.on('click', async function (e) {
+                    e.preventDefault();
+
+                    if (!loaded) {
+                        //ajax2 here
+                        await ajaxStageOneShowMore($moreBlock);
+                        loaded = true;
+                    }
+
+                    const $containerWhite = $moreBlock.find('.container-white');
+
+                    //$containerWhite.addClass('loaded');
+
+                    if (!openMore) {
+                        $containerWhite.slideDown(500).fadeIn({duration: 500, queue: false});
+                        $showTrigger.html('Скрыть подробности');
+                        openMore = true;
+                        $containerWhite.find('.carousel-inner').slick();
+                    }
+                    else {
+                        $containerWhite.fadeOut(500).slideUp({duration: 500, queue: false});
+                        $showTrigger.html('Показать подробности');
+                        openMore = false;
+                        $containerWhite.find('.carousel-inner').slick('unslick');
+                    }
                 });
             });
 
-        });
+            $triggerButton.remove();
 
+            initTriggerButton();
 
-    })();
+        }
 
-    function get_play_bill() {
-        return $('.server-datas .event-list').clone();
-    }
+        //playbill images and image links fix (to check)
+        function fixImages($holder) {
+            const $playbillContent = $holder;
+            const $playbillImages = $playbillContent.find('img');
+            const $playbillLinks = $playbillContent.find('a:not(.place-info)');
 
-    //ajax and processing / modal 1-2 (not done)
-    function ajaxStageOne() {
-        //ajax imitation
-        const $destinationHolder = $('.reservation-tunnel .step.step2 .offers');
-        const $rawData = get_play_bill();
-        const $eventBoxes = $rawData.find('.event-box');
-        const $showMoreBlock = $(
-            '<div class="show-more-block">\n' +
-            '    <a href="#" class="show-menu">Показать\n' +
-            '    подробности</a>' +
-            '</div>');
+            $playbillImages.each(function () {
+                const $currImg = $(this);
+                const oldSrc = $currImg.attr('src');
+                const newSrc = 'https://russianbroadway.com' + oldSrc;
 
-        $showMoreBlock.appendTo($eventBoxes);
+                $currImg.attr('src', newSrc);
+            });
 
-        $rawData.appendTo($destinationHolder);
+            $playbillLinks.each(function () {
+                const $currLnk = $(this);
+                const oldSrc = $currLnk.attr('href');
+                const newSrc = 'https://russianbroadway.com' + oldSrc;
 
-        fixImages($destinationHolder);
-    }
-
-    //ajax and processing / modal 1-2 theaters modal (not done)
-    function ajaxStageOneTheaters($holder) {
-        //ajax imitation
-        const $destinationHolder = $holder;
-        const $rawData = $('.server-datas .theaters-data .container-white').clone();
-        const $carouselPlace = $rawData.find('.carousel').parent();
-        const $rawImages = $carouselPlace.find('.carousel-inner img');
-        const $sliderHolder = $('<div></div>');
-        const $panelAccordions = $rawData.find('.panel-group .panel');
-
-        $rawData.find('>.row >*:nth-child(2),.btn.btn-primary, >.row:nth-child(2), >p, .jumbotron').remove();
-        $rawData.find('>.row >*').removeClass('col-sm-8 col-md-8');
-
-        $rawImages.each(function () {
-            const $currImg = $(this);
-            const oldSrc = $currImg.attr('src');
-            const newSrc = 'https://russianbroadway.com' + oldSrc;
-
-            $currImg.attr('src', newSrc);
-            $currImg.appendTo($('<div></div>')).appendTo($sliderHolder);
-        });
-
-
-        $carouselPlace.find('.carousel').remove();
-
-        fixImages($rawData);
-
-        $sliderHolder.prependTo($carouselPlace);
-
-        $rawData.appendTo($destinationHolder);
-
-        // var $containerWhite = $holder.find('.container-white');
-
-        $sliderHolder.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
-            infinite: true
-        });
-
-        $panelAccordions.each(function () {
-            const $trigger = $(this).find('.panel-heading a');
-            const $data = $(this).find('.panel-collapse');
-
-            $trigger.on('click', function (e) {
-                e.preventDefault();
-                $data.toggleClass('open');
-                $(this).parent().toggleClass('active');
-            })
-        });
-    }
-
-    //ajax and processing / modal 1-2 show more (not done)
-    function ajaxStageOneShowMore($holder) {
-        //ajax imitation
-        const $destinationHolder = $holder;
-        const $rawData = $('.server-datas #step2-inactive .container-white').clone();
-        const $rawImages = $rawData.find('.carousel-inner img');
-        const $sliderHolder = $('<div></div>');
-        const $panelAccordions = $rawData.find('.panel-group .panel');
-
-        $rawImages.each(function () {
-            const $currImg = $(this);
-            const oldSrc = $currImg.attr('src');
-            const newSrc = 'https://russianbroadway.com' + oldSrc;
-
-            $currImg.attr('src', newSrc);
-            $currImg.appendTo($('<div></div>')).appendTo($sliderHolder);
-        });
-
-
-        $rawData.find('.carousel').remove();
-
-        fixImages($rawData);
-
-        $sliderHolder.prependTo($rawData);
-
-        $rawData.appendTo($destinationHolder);
-
-        // var $containerWhite = $holder.find('.container-white');
-
-        $sliderHolder.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
-            infinite: true
-        });
-
-        $panelAccordions.each(function () {
-            const $trigger = $(this).find('.panel-heading a');
-            const $data = $(this).find('.panel-collapse');
-
-            $trigger.on('click', function (e) {
-                e.preventDefault();
-                $data.toggleClass('open');
-                $(this).parent().toggleClass('active');
-            })
-        })
-
-    }
-
-    //ajax and processing / modal 1-3 (not done)
-    function ajaxStageTwo() {
-        //ajax imitation
-        const $destinationHolder = $('.reservation-tunnel .step.step3 .options');
-        const $rawData = $('.server-datas .options .options').clone();
-
-        $rawData.find('>.form-group:first-child').remove();
-        $rawData.find('>.form-group:first-child').remove();
-        $rawData.find('.form-group>p:last-child').remove();
-        $rawData.find('>.form-group:last-child').remove();
-        $rawData.find('>.form-group:last-child').remove();
-
-        $rawData.appendTo($destinationHolder);
-
-        $('<div class="form-group button-group">\n' +
-            '    <a class="btn next1 js-order-modal-trigger-2" href="#">Подтвердить заказ</a>\n' +
-            '</div>').appendTo($destinationHolder);
-
-        fixImages($destinationHolder);
-
-    }
-
-    //playbill images and image links fix (to check)
-    function fixImages($holder) {
-        const $playbillContent = $holder;
-        const $playbillImages = $playbillContent.find('img');
-        const $playbillLinks = $playbillContent.find('a');
-
-        $playbillImages.each(function () {
-            const $currImg = $(this);
-            const oldSrc = $currImg.attr('src');
-            const newSrc = 'https://russianbroadway.com' + oldSrc;
-
-            $currImg.attr('src', newSrc);
-        });
-
-        $playbillLinks.each(function () {
-            const $currLnk = $(this);
-            const oldSrc = $currLnk.attr('href');
-            const newSrc = 'https://russianbroadway.com' + oldSrc;
-
-            $currLnk.attr('href', newSrc);
-        });
-    }
-
-    //regaloeb plugin
-    (() => {
-
-        $(".js-regaloeb").regaloebParallax();
+                $currLnk.attr('href', newSrc);
+            });
+        }
 
     })();
 
@@ -912,18 +1059,48 @@ $(document).ready(function () {
 
     })();
 
-    //custom select plugin
+    //gift check transfer
     (() => {
-        $('.form-item:not(".quantity") select').customSelect();
-    })();
-
-    //gift chech transfer
-    (()=>{
         const $giftTrigger = $('.js-gift-trigger');
         const $giftChecker = $('#edit-is-gift-yes');
 
         $giftTrigger.on('click', function () {
             $giftChecker.click();
+        })
+    })();
+
+    //dropdowns with checkboxes
+    (() => {
+        const $dropdownInputs = $('.tm-dropdown-inputs');
+        const $allSelector = $('.js-all-trigger');
+        const $clearSelector = $('.js-clear-trigger');
+
+        $allSelector.on('click', function () {
+            $(this).parent().find('[type="checkbox"]').prop('checked', true);
+        });
+
+        $clearSelector.on('click', function () {
+            $(this).parent().find('[type="checkbox"]').prop('checked', false);
+        });
+
+        $dropdownInputs.each(function () {
+            const $dropdownInput = $(this);
+            const $dropdownContent = $dropdownInput.find('.tm-dropdown-content');
+
+            $dropdownInput.on('click', function () {
+
+                $dropdownInput.toggleClass('active');
+
+                $(document).on('click', closeOutside);
+
+                function closeOutside() {
+
+                    if ($(event.target).is($dropdownContent) || $(event.target).is($dropdownInput)) return;
+                    $dropdownInput.removeClass('active');
+                    $(document).off('click', closeOutside);
+                }
+
+            })
         })
     })();
 });
