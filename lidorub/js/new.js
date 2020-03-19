@@ -15,12 +15,13 @@ if (typeof landing_options === "undefined") {
             // contentType: false,
             data: {
                 nolayout: true
-            }//,
-            // success: function(response) { //Данные отправлены успешно
-            // },
-            // error: function(response) { // Данные не отправлены
+            },
+            success: function(response) { //Данные отправлены успешно
 
-            //}
+            },
+            error: function(response) { // Данные не отправлены
+
+            }
         });
     };
 
