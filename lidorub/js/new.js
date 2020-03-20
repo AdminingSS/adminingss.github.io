@@ -667,7 +667,7 @@ $(document).ready(function () {
             $jsSubmitStageTwo.on('click', function (e) {
                 e.preventDefault();
                 const locationHref = $(this).attr('href');
-                const fixedHref = locationHref.slice(0,-6) + "?nolayot=true";
+                const fixedHref = locationHref.slice(0,-6) + "?nolayout=true";
 
                 const $oldData = $('.step.step3 .options .options, .step.step3 .options .form-group');
                 $oldData.remove();
@@ -902,13 +902,17 @@ $(document).ready(function () {
             const $rawHtml = await get_place_selector(href);
             const $rawData = $($rawHtml);
 
-            $rawData.find('>.form-group:first-child').remove();
-            $rawData.find('>.form-group:first-child').remove();
-            $rawData.find('.form-group>p:last-child').remove();
-            $rawData.find('>.form-group:last-child').remove();
-            $rawData.find('>.form-group:last-child').remove();
-
             $rawData.appendTo($destinationHolder);
+
+            $destinationHolder.find('>*:nth-child(-n+2)').remove();
+            //$rawData.filter('p:first-child').remove();
+            //$rawData.filter('>.form-group:first-child').remove();
+            //$rawData.filter('>.form-group:first-child').remove();
+            // $rawData.filter('.form-group>p:last-child').remove();
+            // $rawData.filter('>.form-group:last-child').remove();
+            // $rawData.filter('>.form-group:last-child').remove();
+
+
 
             $('<div class="form-group button-group">\n' +
                 '    <a class="btn next1 js-order-modal-trigger-2" href="#">Подтвердить заказ</a>\n' +
