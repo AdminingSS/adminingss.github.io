@@ -667,7 +667,7 @@ $(document).ready(function () {
             $jsSubmitStageTwo.on('click', function (e) {
                 e.preventDefault();
                 const locationHref = $(this).attr('href');
-                const fixedHref = locationHref + "?nolayot=true";
+                const fixedHref = locationHref.slice(0,-6) + "?nolayot=true";
 
                 const $oldData = $('.step.step3 .options .options, .step.step3 .options .form-group');
                 $oldData.remove();
