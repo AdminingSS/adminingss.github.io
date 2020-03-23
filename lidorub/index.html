@@ -862,24 +862,41 @@
 
 
                         <ul class="nav-primary">
-                            <li>
-                                <a href=""> <span>Главная</span>
-                                </a>
+                            <li class="tm-dropdown">
+                                <a href="#"><span>Shows</span></a>
+                                <div class="tm-dropdown-content">
+                                    <ul>
+                                        <li><a href="">Show 1</a></li>
+                                        <li><a href="">Show 2</a></li>
+                                        <li><a href="">Show 3</a></li>
+                                        <li><a href="">Show 4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="tm-dropdown">
+                                <a href="#"> <span>Theatres</span></a>
+                                <div class="tm-dropdown-content">
+                                    <ul>
+                                        <li><a href="">Theater 1</a></li>
+                                        <li><a href="">Theater 2</a></li>
+                                        <li><a href="">Theater 3</a></li>
+                                        <li><a href="">Theater 4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="tm-dropdown">
+                                <a href="#"> <span>Genres</span></a>
+                                <div class="tm-dropdown-content">
+                                    <ul>
+                                        <li><a href="">Genre 1</a></li>
+                                        <li><a href="">Genre 2</a></li>
+                                        <li><a href="">Genre 3</a></li>
+                                        <li><a href="">Genre 4</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
-                                <a href=""> <span>Вечернее шоу</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href=""> <span>Предложения</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href=""> <span>Информация</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href=""> <span>Подарить</span>
+                                <a class="js-gift-trigger js-order-modal-trigger" href="#"> <span>Gift</span>
                                 </a>
                             </li>
                         </ul>
@@ -1149,7 +1166,7 @@
                                     <div class="content">
                                         <div class="form-item formule">
                                             <div class="tm-dropdown-inputs">
-                                                <span>Все театры</span>
+                                                <span>All theaters</span>
                                                 <fieldset class="tm-dropdown-content">
                                                     <legend>Select Theater(s)</legend>
                                                     <a href="#" class="js-all-trigger">All</a>
@@ -1171,7 +1188,7 @@
                                     <div class="content">
                                         <div class="form-item formule">
                                             <div class="tm-dropdown-inputs">
-                                                <span>Все жанры</span>
+                                                <span>All genres</span>
                                                 <fieldset class="tm-dropdown-content">
                                                     <legend>Select Genre(s)</legend>
                                                     <a href="#" class="js-all-trigger">All</a>
@@ -1195,8 +1212,11 @@
                                             <div class="block">
                                                 <!--<div class="custom-select-container">-->
                                                 <select name="spectacle" tabindex="-1">
-                                                    <option value="10">
-                                                        All
+                                                    <option value="0">
+                                                        All spectacles
+                                                    </option>
+                                                    <option value="0">
+                                                        All spectacles
                                                     </option>
                                                     <option value="1">
                                                         Popular
@@ -1423,10 +1443,10 @@
                                                 </div>
 
                                                 <div class="js-form-item form-item js-form-type-tel form-item-phone-number js-form-item-phone-number form-item--required">
-                                                    <label for="edit-phone-number"
+                                                    <label for="ph"
                                                            class="js-form-required form-required">Телефон*</label>
                                                     <input type="tel"
-                                                           id="edit-phone-number" name="phone_number" value="" size="64"
+                                                           id="ph" name="phone_number" value="" size="64"
                                                            maxlength="64" placeholder="Телефон*"
                                                            class="form-tel required" required="required"
                                                            aria-required="true">
@@ -1434,10 +1454,10 @@
                                                 </div>
 
                                                 <div class="js-form-item form-item js-form-type-select form-item-nationality js-form-item-nationality form-item--required">
-                                                    <label for="edit-nationality" class="js-form-required form-required"
+                                                    <label for="address-country" class="js-form-required form-required"
                                                            id="customSelect-Zgbu3-label">Гражданство*</label>
                                                     <div class="custom-select-container customSelect">
-                                                        <select id="edit-nationality" name="nationality"
+                                                        <select id="address-country" name="nationality"
                                                                 class="form-select required" required="required"
                                                                 aria-required="true" tabindex="-1">
                                                         </select>
@@ -1495,304 +1515,14 @@
 
                                             </div>
                                         </fieldset>
-
-                                        <p class="cgv"><a class="" onclick="$('#edit-gift').toggle();"
-                                                          href="#">Подробнее</a>
-                                        </p>
                                         <fieldset id="edit-gift"
                                                   class="js-form-item form-item js-form-wrapper form-wrapper">
                                             <legend>
                                                 <span class="fieldset-legend"></span>
                                             </legend>
                                             <div class="fieldset-wrapper">
-                                                <fieldset id="edit-gift-method--wrapper"
-                                                          class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
-                                                    <legend>
-                                                        <span class="fieldset-legend">Какой вариант доставки Вы предпочитаете?</span>
-                                                    </legend>
-                                                    <div class="fieldset-wrapper">
-                                                        <div id="edit-gift-method">
-                                                            <div class="js-form-item form-item js-form-type-radio form-item-gift-method js-form-item-gift-method">
-                                                                <input type="radio" id="edit-gift-method-postal"
-                                                                       name="gift_method" value="postal"
-                                                                       class="form-radio">
-
-                                                                <label for="edit-gift-method-postal" class="option">По
-                                                                    почте</label>
-                                                                <div id="edit-gift-method-postal--description"
-                                                                     class="description">
-                                                                    Мы снимаем с себя всю ответственность за
-                                                                    несвоевременную доставку, связанную с работой
-                                                                    почтовой службы
-                                                                </div>
-                                                            </div>
-                                                            <div class="js-form-item form-item js-form-type-radio form-item-gift-method js-form-item-gift-method">
-                                                                <input type="radio" id="edit-gift-method-email"
-                                                                       name="gift_method" value="email"
-                                                                       class="form-radio">
-
-                                                                <label for="edit-gift-method-email" class="option">По
-                                                                    электронной почте </label>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset id="edit-gift-postal"
-                                                          class="js-form-item form-item js-form-wrapper form-wrapper">
-                                                    <legend>
-                                                        <span class="fieldset-legend"></span>
-                                                    </legend>
-                                                    <div class="fieldset-wrapper">
-                                                        <fieldset id="edit-gift-postal-destination--wrapper"
-                                                                  class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
-                                                            <legend>
-                                                                <span class="fieldset-legend">На какой адрес Вы хотели бы отправить сертификат? </span>
-                                                            </legend>
-                                                            <div class="fieldset-wrapper">
-                                                                <div id="edit-gift-postal-destination">
-                                                                    <div class="js-form-item form-item js-form-type-radio form-item-gift-postal-destination js-form-item-gift-postal-destination">
-                                                                        <input type="radio"
-                                                                               id="edit-gift-postal-destination-me"
-                                                                               name="gift_postal_destination" value="me"
-                                                                               class="form-radio">
-
-                                                                        <label for="edit-gift-postal-destination-me"
-                                                                               class="option">На мой адрес</label>
-                                                                    </div>
-                                                                    <div class="js-form-item form-item js-form-type-radio form-item-gift-postal-destination js-form-item-gift-postal-destination">
-                                                                        <input type="radio"
-                                                                               id="edit-gift-postal-destination-him"
-                                                                               name="gift_postal_destination"
-                                                                               value="him" class="form-radio">
-
-                                                                        <label for="edit-gift-postal-destination-him"
-                                                                               class="option">На адрес
-                                                                            получателя </label>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </fieldset>
-                                                        <fieldset id="edit-gift-postal-me"
-                                                                  class="js-form-item form-item js-form-wrapper form-wrapper">
-                                                            <legend>
-                                                                <span class="fieldset-legend"></span>
-                                                            </legend>
-                                                            <div class="fieldset-wrapper">
-                                                                <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-me-address js-form-item-gift-postal-me-address form-item--required">
-                                                                    <label for="edit-gift-postal-me-address">Адрес*</label>
-                                                                    <input type="text" id="edit-gift-postal-me-address"
-                                                                           name="gift_postal_me_address" value=""
-                                                                           size="64" maxlength="64" placeholder="Адрес*"
-                                                                           class="form-text">
-
-                                                                </div>
-                                                                <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-me-postal-code js-form-item-gift-postal-me-postal-code form-item--required">
-                                                                    <label for="edit-gift-postal-me-postal-code">Индекс*</label>
-                                                                    <input type="text"
-                                                                           id="edit-gift-postal-me-postal-code"
-                                                                           name="gift_postal_me_postal_code" value=""
-                                                                           size="64" maxlength="64"
-                                                                           placeholder="Индекс*" class="form-text">
-
-                                                                </div>
-                                                                <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-me-city js-form-item-gift-postal-me-city form-item--required">
-                                                                    <label for="edit-gift-postal-me-city">Город*</label>
-                                                                    <input type="text" id="edit-gift-postal-me-city"
-                                                                           name="gift_postal_me_city" value="" size="64"
-                                                                           maxlength="64" placeholder="Город*"
-                                                                           class="form-text">
-
-                                                                </div>
-                                                                <div class="js-form-item form-item js-form-type-select form-item-gift-postal-me-country js-form-item-gift-postal-me-country form-item--required">
-                                                                    <label for="edit-gift-postal-me-country"
-                                                                           id="customSelect-xfQX2-label">Страна*</label>
-                                                                    <div class="custom-select-container customSelect">
-                                                                        </span>
-                                                                        <select
-                                                                            id="edit-gift-postal-me-country"
-                                                                            name="gift_postal_me_country"
-                                                                            class="form-select" tabindex="-1">
-                                                                    </select>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </fieldset>
-                                                        <fieldset id="edit-gift-postal-him"
-                                                                  class="js-form-item form-item js-form-wrapper form-wrapper">
-                                                            <legend>
-                                                                <span class="fieldset-legend"></span>
-                                                            </legend>
-                                                            <div class="fieldset-wrapper">
-                                                                <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-him-address js-form-item-gift-postal-him-address form-item--required">
-                                                                    <label for="edit-gift-postal-him-address">Адрес
-                                                                        получателя*</label>
-                                                                    <input type="text" id="edit-gift-postal-him-address"
-                                                                           name="gift_postal_him_address" value=""
-                                                                           size="64" maxlength="64"
-                                                                           placeholder="Адрес получателя*"
-                                                                           class="form-text">
-
-                                                                </div>
-                                                                <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-him-postal-code js-form-item-gift-postal-him-postal-code form-item--required">
-                                                                    <label for="edit-gift-postal-him-postal-code">Индекс
-                                                                        получателя*</label>
-                                                                    <input type="text"
-                                                                           id="edit-gift-postal-him-postal-code"
-                                                                           name="gift_postal_him_postal_code" value=""
-                                                                           size="64" maxlength="64"
-                                                                           placeholder="Индекс получателя*"
-                                                                           class="form-text">
-
-                                                                </div>
-                                                                <div class="js-form-item form-item js-form-type-textfield form-item-gift-postal-him-city js-form-item-gift-postal-him-city form-item--required">
-                                                                    <label for="edit-gift-postal-him-city">Город
-                                                                        получателя*</label>
-                                                                    <input type="text" id="edit-gift-postal-him-city"
-                                                                           name="gift_postal_him_city" value=""
-                                                                           size="64" maxlength="64"
-                                                                           placeholder="Город получателя*"
-                                                                           class="form-text">
-
-                                                                </div>
-                                                                <div class="js-form-item form-item js-form-type-select form-item-gift-postal-him-country js-form-item-gift-postal-him-country form-item--required">
-                                                                    <label for="edit-gift-postal-him-country"
-                                                                           id="customSelect-1PXw3-label">Страна
-                                                                        получателя *</label>
-                                                                    <div class="custom-select-container customSelect">
-                                                                        <select
-                                                                            id="edit-gift-postal-him-country"
-                                                                            name="gift_postal_him_country"
-                                                                            class="form-select" tabindex="-1">
-                                                                    </select>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </fieldset>
-
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset id="edit-gift-email"
-                                                          class="js-form-item form-item js-form-wrapper form-wrapper">
-                                                    <legend>
-                                                        <span class="fieldset-legend"></span>
-                                                    </legend>
-                                                    <div class="fieldset-wrapper">
-                                                        <fieldset id="edit-gift-email-destination--wrapper"
-                                                                  class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
-                                                            <legend>
-                                                                <span class="fieldset-legend">На какой электронный адрес Вы хотели бы отправить сертификат? </span>
-                                                            </legend>
-                                                            <div class="fieldset-wrapper">
-                                                                <div id="edit-gift-email-destination">
-                                                                    <div class="js-form-item form-item js-form-type-radio form-item-gift-email-destination js-form-item-gift-email-destination">
-                                                                        <input type="radio"
-                                                                               id="edit-gift-email-destination-me"
-                                                                               name="gift_email_destination" value="me"
-                                                                               class="form-radio">
-
-                                                                        <label for="edit-gift-email-destination-me"
-                                                                               class="option">На мой электронный
-                                                                            адрес</label>
-                                                                    </div>
-                                                                    <div class="js-form-item form-item js-form-type-radio form-item-gift-email-destination js-form-item-gift-email-destination">
-                                                                        <input type="radio"
-                                                                               id="edit-gift-email-destination-him"
-                                                                               name="gift_email_destination" value="him"
-                                                                               class="form-radio">
-
-                                                                        <label for="edit-gift-email-destination-him"
-                                                                               class="option">На электронный адрес
-                                                                            получателя</label>
-                                                                        <div id="edit-gift-email-destination-him--description"
-                                                                             class="description">
-                                                                            Копия электронного сообщения будет
-                                                                            отправлена Вам автоматически
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </fieldset>
-                                                        <fieldset id="edit-gift-email-him"
-                                                                  class="js-form-item form-item js-form-wrapper form-wrapper">
-                                                            <legend>
-                                                                <span class="fieldset-legend"></span>
-                                                            </legend>
-                                                            <div class="fieldset-wrapper">
-                                                                <div class="js-form-item form-item js-form-type-email form-item-gift-email-him-email js-form-item-gift-email-him-email form-item--required">
-                                                                    <label for="edit-gift-email-him-email">электронный
-                                                                        адрес получателя*</label>
-                                                                    <input aria-describedby="edit-gift-email-him-email--description"
-                                                                           type="email" id="edit-gift-email-him-email"
-                                                                           name="gift_email_him_email" value=""
-                                                                           size="60" maxlength="254"
-                                                                           placeholder="электронный адрес получателя*"
-                                                                           class="form-email">
-
-                                                                    <div id="edit-gift-email-him-email--description"
-                                                                         class="description">
-                                                                        Будьте внимательны при заполнении, электронное
-                                                                        сообщение будет отправлено получателю сразу же
-                                                                        после оформления заказа
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </fieldset>
-
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset id="edit-gift-civility--wrapper"
-                                                          class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper form-item--valid">
-                                                    <legend>
-    <span class="fieldset-legend">
-Приемлемость получателя*</span>
-                                                    </legend>
-                                                    <div class="fieldset-wrapper">
-                                                        <div id="edit-gift-civility">
-                                                            <div class="js-form-item form-item js-form-type-radio form-item-gift-civility js-form-item-gift-civility">
-                                                                <input type="radio" id="edit-gift-civility-001"
-                                                                       name="gift_civility" value="001"
-                                                                       class="form-radio">
-
-                                                                <label for="edit-gift-civility-001" class="option">Господин</label>
-                                                            </div>
-                                                            <div class="js-form-item form-item js-form-type-radio form-item-gift-civility js-form-item-gift-civility">
-                                                                <input type="radio" id="edit-gift-civility-002"
-                                                                       name="gift_civility" value="002"
-                                                                       class="form-radio">
-
-                                                                <label for="edit-gift-civility-002" class="option">
-                                                                    мадам</label>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </fieldset>
-                                                <div class="js-form-item form-item js-form-type-textfield form-item-gift-last-name js-form-item-gift-last-name form-item--required">
-                                                    <label for="edit-gift-last-name">Фамилия получателя*</label>
-                                                    <input type="text"
-                                                           id="edit-gift-last-name" name="gift_last_name" value=""
-                                                           size="64" maxlength="64" placeholder="Фамилия получателя*"
-                                                           class="form-text">
-
-                                                </div>
-                                                <div class="js-form-item form-item js-form-type-textfield form-item-gift-first-name js-form-item-gift-first-name form-item--required">
-                                                    <label for="edit-gift-first-name">Имя получателя мя*
-                                                        *</label>
-                                                    <input type="text"
-                                                           id="edit-gift-first-name" name="gift_first_name" value=""
-                                                           size="64" maxlength="64" placeholder="Имя получателя мя*
-*" class="form-text">
-
-                                                </div>
                                                 <div class="js-form-item form-item js-form-type-textarea form-item-gift-message js-form-item-gift-message">
-                                                    <label for="edit-gift-message">Персонализируйте Ваш подарочный
-                                                        сертификат</label>
+                                                    <label for="edit-gift-message">Введите имя получателя</label>
                                                     <div>
                                                         <textarea aria-describedby="edit-gift-message--description"
                                                                   id="edit-gift-message" name="gift_message" rows="4"
@@ -1836,6 +1566,32 @@
                                             </div>
                                         </fieldset>
 
+                                        <fieldset>
+                                            <legend>
+                                                <span class="fieldset-legend">Select delivery option:</span>
+                                            </legend>
+                                            <div class="fieldset-wrapper">
+                                                <div id="edit-is-delivery">
+                                                    <div class="js-form-item form-item js-form-type-radio form-item-is-delivery js-form-item-is-delivery">
+                                                        <input type="radio"
+                                                               id="edit-is-delivery-one" name="is_gift" value="yes"
+                                                               class="form-radio">
+                                                        <label for="edit-is-delivery-one" class="option">Postal delivery to your country (takes up to 1+ month) + 10.2 EUR</label>
+                                                    </div>
+                                                    <div class="js-form-item form-item js-form-type-radio form-item-is-gift js-form-item-is-gift">
+                                                        <input type="radio"
+                                                               id="edit-is-delivery-two" name="is_gift" value="no"
+                                                               class="form-radio">
+                                                        <label for="edit-is-delivery-two" class="option">E-ticket</label>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#">Learn more about delivery</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </fieldset>
+
 
                                         <!--<div class="gift-mention form-item">Отправка в течение 48 часов максимум и получение с учетом почтовых задержек.</div>-->
                                         <fieldset id="edit-payment"
@@ -1853,45 +1609,12 @@
                                                     <div class="fieldset-wrapper">
                                                         <div id="edit-payement-mode">
                                                             <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input type="radio" id="edit-payement-mode-cb"
-                                                                       name="payement_mode" value="CB"
-                                                                       class="form-radio">
-
-                                                                <label for="edit-payement-mode-cb"
-                                                                       class="option">cb</label>
-                                                            </div>
-                                                            <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
                                                                 <input type="radio" id="edit-payement-mode-visa"
                                                                        name="payement_mode" value="VISA"
                                                                        class="form-radio">
 
                                                                 <label for="edit-payement-mode-visa"
-                                                                       class="option">visa</label>
-                                                            </div>
-                                                            <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input type="radio" id="edit-payement-mode-mastercard"
-                                                                       name="payement_mode" value="MasterCard"
-                                                                       class="form-radio">
-
-                                                                <label for="edit-payement-mode-mastercard"
-                                                                       class="option">mastercard</label>
-                                                            </div>
-                                                            <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input type="radio"
-                                                                       id="edit-payement-mode-american-express"
-                                                                       name="payement_mode" value="American Express"
-                                                                       class="form-radio">
-
-                                                                <label for="edit-payement-mode-american-express"
-                                                                       class="option">amex</label>
-                                                            </div>
-                                                            <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
-                                                                <input type="radio" id="edit-payement-mode-jcb"
-                                                                       name="payement_mode" value="JCB"
-                                                                       class="form-radio">
-
-                                                                <label for="edit-payement-mode-jcb"
-                                                                       class="option">jcb</label>
+                                                                       class="option">credit card</label>
                                                             </div>
                                                             <div class="js-form-item form-item js-form-type-radio form-item-payement-mode js-form-item-payement-mode form-item--required">
                                                                 <input type="radio" id="edit-payement-mode-paypal"
@@ -2081,35 +1804,35 @@
         <!--</section>-->
 
         <!--<section id="popin&#45;&#45;cgv-voucher" class="popin">-->
-            <!--<div class="popin__bg"></div>-->
-            <!--<div class="popin__content">-->
-                <!--<a class="popin__close" href="https://www.lido.fr/ru/%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B#"></a>-->
-                <!--<p class="popin__title">-->
+        <!--<div class="popin__bg"></div>-->
+        <!--<div class="popin__content">-->
+        <!--<a class="popin__close" href="https://www.lido.fr/ru/%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B#"></a>-->
+        <!--<p class="popin__title">-->
 
-                    <!--Общие условия продажи-->
-                <!--</p>-->
-                <!--<p class="popin__subtitle">-->
+        <!--Общие условия продажи-->
+        <!--</p>-->
+        <!--<p class="popin__subtitle">-->
 
-                    <!--Подарочные сертификаты-->
-                <!--</p>-->
-                <!--<div class="popin__text">-->
+        <!--Подарочные сертификаты-->
+        <!--</p>-->
+        <!--<div class="popin__text">-->
 
-                    <!--<p>Au-delà de la date limite, les Chèques Cadeaux ne sont ni remboursables ni échangeables. Les-->
-                        <!--réservations pour les prestations des Chèques Cadeaux se font sous réserve des disponibilités.-->
-                        <!--Il est obligatoire de présenter le carton d’invitation à la réception du Lido le jour de la-->
-                        <!--prestation. Les réservations enregistrées peuvent être modifiées ou annulées dans les mêmes-->
-                        <!--conditions que celles exposées aux articles 1.4 &amp; 1.5 des présentes conditions générales de-->
-                        <!--ventes. Si les clients ou les bénéficiaires ne sont pas présents le jour de la réservation, le-->
-                        <!--Chèque Cadeau n’est ni remboursable ni échangeable. Les Chèques Cadeaux sont payables 100 % à la-->
-                        <!--commande et pourront être envoyés sous réserve d’encaissement du paiement. Les Chèques Cadeaux-->
-                        <!--perdus ou volés ne peuvent donner lieu ni à un échange ni à un remboursement.</p>-->
+        <!--<p>Au-delà de la date limite, les Chèques Cadeaux ne sont ni remboursables ni échangeables. Les-->
+        <!--réservations pour les prestations des Chèques Cadeaux se font sous réserve des disponibilités.-->
+        <!--Il est obligatoire de présenter le carton d’invitation à la réception du Lido le jour de la-->
+        <!--prestation. Les réservations enregistrées peuvent être modifiées ou annulées dans les mêmes-->
+        <!--conditions que celles exposées aux articles 1.4 &amp; 1.5 des présentes conditions générales de-->
+        <!--ventes. Si les clients ou les bénéficiaires ne sont pas présents le jour de la réservation, le-->
+        <!--Chèque Cadeau n’est ni remboursable ni échangeable. Les Chèques Cadeaux sont payables 100 % à la-->
+        <!--commande et pourront être envoyés sous réserve d’encaissement du paiement. Les Chèques Cadeaux-->
+        <!--perdus ou volés ne peuvent donner lieu ni à un échange ni à un remboursement.</p>-->
 
-                <!--</div>-->
-                <!--<p class="popin__legend">-->
+        <!--</div>-->
+        <!--<p class="popin__legend">-->
 
-                    <!--Article 1.13-->
-                <!--</p>-->
-            <!--</div>-->
+        <!--Article 1.13-->
+        <!--</p>-->
+        <!--</div>-->
         <!--</section>-->
         <!--<section id="popin&#45;&#45;max-people" class="popin">-->
         <!--<div class="popin__bg"></div>-->
@@ -2338,6 +2061,7 @@
 
 
 
+
                 </script>
                 <div class="event-box" rel="14061" attr-time="1582905600"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
@@ -2458,6 +2182,7 @@
     "name": "Mariinsky II (New) Theatre troupe"
   }
 }
+
 
 
 
@@ -2604,6 +2329,7 @@
 
 
 
+
                 </script>
                 <div class="event-box" rel="14118" attr-time="1582905600"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
@@ -2720,6 +2446,7 @@
     "name": "Mikhailovsky (ex. Mussorgsky) Theatre troupe"
   }
 }
+
 
 
 
@@ -2850,6 +2577,7 @@
     "name": "Saint-Petersburg Opera Theatre troupe"
   }
 }
+
 
 
 
@@ -3004,6 +2732,7 @@
 
 
 
+
                 </script>
                 <div style="background:#fce07f" class="event-box" rel="14145"
                      attr-time="1582992000" itemscope=""
@@ -3126,6 +2855,7 @@
     "name": "Mariinsky (ex. Kirov) Ballet and Opera Theatre troupe"
   }
 }
+
 
 
 
@@ -3262,6 +2992,7 @@
     "name": "Mariinsky II (New) Theatre troupe"
   }
 }
+
 
 
 
@@ -3416,6 +3147,7 @@
 
 
 
+
                 </script>
                 <div class="event-box" rel="12649" attr-time="1583053200"
                      itemscope="" itemtype="http://data-vocabulary.org/Event">
@@ -3541,6 +3273,7 @@
     "name": "Mariinsky (ex. Kirov) Ballet and Opera Theatre troupe"
   }
 }
+
 
 
 

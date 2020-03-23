@@ -1,6 +1,8 @@
 if (typeof landing_options === "undefined") {
     var get_play_bill = function () {
         return $('.server-datas .event-list >*').clone();
+
+    //return $('<div class="event-box"><strong>Sorry, no perfomances were found!</strong></div>');
     };
 
     var get_theater_info = function (locationHref) {
@@ -27,8 +29,20 @@ if (typeof landing_options === "undefined") {
             url: href,
             type: "GET"
         });
+    };
+
+    var init_scheme = function () {
+
     }
 }
+else {
+
+}
+
+var input = document.querySelector("#ph");
+window.iti =window.intlTelInput(input,{
+    utilsScript: "./vendor/tel4/utils.js?1549804213570",
+});
 
 function isTouchDevice() {
     try {
@@ -77,9 +91,7 @@ function preventScale() {
 (() => {
     const countryData = window.intlTelInputGlobals.getCountryData();
 
-    fillSelect("#edit-nationality");
-    fillSelect("#edit-gift-postal-me-country");
-    fillSelect("#edit-gift-postal-him-country");
+    fillSelect("#address-country");
 
     function fillSelect(selector) {
         const addressDropdown = document.querySelector(selector);
@@ -531,6 +543,7 @@ $(document).ready(function () {
 
         $flatPickr.flatpickr({
             mode: "range",
+            minDate: "today",
             altInput: true,
             altFormat: "F j, Y",
             dateFormat: "Y-m-d"
@@ -673,7 +686,7 @@ $(document).ready(function () {
                 const locationHref = $(this).attr('href');
                 const fixedHref = locationHref.slice(0,-6) + "?nolayout=true";
 
-                const $oldData = $('.step.step3 .options .options, .step.step3 .options .form-group');
+                const $oldData = $('.step.step3 .options .options, .step.step3 .options >div');
                 $oldData.remove();
 
                 ajaxStageTwo(fixedHref);
@@ -686,8 +699,11 @@ $(document).ready(function () {
         async function ajaxStageOne() {
             const $destinationHolder = $('.reservation-tunnel .step.step2 .offers');
             const $rawData = await get_play_bill();
-            if(!$rawData.length) {
-                $('<div>Ничего не найдено.</div>').appendTo($destinationHolder);
+            const checkContent = $($rawData).find('.buttons');
+            if(!checkContent.length) {
+                //$('<div>Ничего не найдено.</div>').appendTo($destinationHolder);
+                $rawData.appendTo($destinationHolder);
+                readyStageTwo();
                 return;
             }
             const $eventList = $('<div class="event-list js-custom-scrollbar"></div>');
@@ -908,10 +924,11 @@ $(document).ready(function () {
             const $destinationHolder = $('.reservation-tunnel .step.step3 .options');
             const $rawHtml = await get_place_selector(href);
             const $rawData = $($rawHtml);
+            const $wrapper = $('<div class="js-custom-scrollbar"></div>')
 
-            $rawData.appendTo($destinationHolder);
+            $rawData.appendTo($wrapper);
 
-            $destinationHolder.find('>*:nth-child(-n+2)').remove();
+            $wrapper.find('>*:nth-child(-n+1)').remove();
             //$rawData.filter('p:first-child').remove();
             //$rawData.filter('>.form-group:first-child').remove();
             //$rawData.filter('>.form-group:first-child').remove();
@@ -919,6 +936,7 @@ $(document).ready(function () {
             // $rawData.filter('>.form-group:last-child').remove();
             // $rawData.filter('>.form-group:last-child').remove();
 
+            $wrapper.appendTo($destinationHolder);
 
 
             $('<div class="form-group button-group">\n' +
@@ -935,6 +953,8 @@ $(document).ready(function () {
             $orderModal.find('.step3 .options').slideDown(500).fadeIn({duration: 500, queue: false});
 
             $orderModal.find('.reservation-tunnel .step.step3').addClass('active');
+
+            init_scheme();
 
             $orderModal.find('.reservation-tunnel .step.step3 .js-custom-scrollbar').mCustomScrollbar({
                 scrollbarPosition: "outside",
@@ -1128,7 +1148,10 @@ $(document).ready(function () {
 
         $dropdownInputs.each(function () {
             const $dropdownInput = $(this);
-            const $dropdownContent = $dropdownInput.find('.tm-dropdown-content');
+            const $dropdownSelect = $dropdownInput.find('>span');
+            const $dropdownContainer = $dropdownInput.find('.tm-dropdown-content');
+            const $dropdownCheckboxes = $dropdownContainer.find('.tm-input');
+            const dropdownType = $dropdownCheckboxes.first().parent().text().slice(0,1);
 
             $dropdownInput.on('click', function () {
 
@@ -1144,7 +1167,36 @@ $(document).ready(function () {
                 }
 
             })
-        })
+
+            $dropdownCheckboxes.on('change', function () {
+                $dropdownSelect.text(getTheaterName($dropdownContainer, dropdownType, $dropdownCheckboxes.length));
+            })
+
+        });
+
+        function getTheaterName($container, type, max) {
+            const $selectedItems = $container.find('.tm-input:checked');
+            let allName;
+
+            switch(type) {
+                case 'T':
+                    allName = " theaters";
+                    break;
+                case 'G':
+                    allName = " genres";
+                    break;
+            }
+
+            switch($selectedItems.length) {
+                case 0:
+                case max:
+                    return "All" + allName;
+                case 1:
+                    return $selectedItems.parent().text();
+                default:
+                    return $selectedItems.length + allName;
+            }
+        }
     })();
 
     //
@@ -1161,57 +1213,19 @@ $(document).ready(function () {
     })();
 
     (() => {
-        const $giftSendPostalSelector = $('#edit-gift-method-postal');
-        const $giftSendEmailSelector = $('#edit-gift-method-email');
-        const $giftSendPostal = $('#edit-gift-postal');
-        const $giftSendEmail = $('#edit-gift-email');
+        const $giftYes = $('#edit-is-gift-yes');
+        const $giftNo = $('#edit-is-gift-no');
+        const $giftEdit = $('#edit-gift');
 
-        const $giftSendPostalMeSelector = $('#edit-gift-postal-destination-me');
-        const $giftSendPostalHimSelector = $('#edit-gift-postal-destination-him');
-        const $giftSendPostalMe = $('#edit-gift-postal-me');
-        const $giftSendPostalHim = $('#edit-gift-postal-him');
-
-        const $giftSendEmailMeSelector = $('#edit-gift-email-destination-me');
-        const $giftSendEmailHimSelector = $('#edit-gift-email-destination-him');
-        const $giftSendEmailHim = $('#edit-gift-email-him');
-
-        $giftSendPostalSelector.on('change', function () {
-            if ($(this).prop('checked') === true) {
-                $giftSendPostal.addClass('active');
-                $giftSendEmail.removeClass('active');
+        $giftYes.on('change', function () {
+            if($(this).prop('checked') === true) {
+                $giftEdit.addClass('active');
             }
         });
 
-        $giftSendEmailSelector.on('change', function () {
-            if ($(this).prop('checked') === true) {
-                $giftSendEmail.addClass('active');
-                $giftSendPostal.removeClass('active');
-            }
-        });
-
-        $giftSendPostalMeSelector.on('change', function () {
-            if ($(this).prop('checked') === true) {
-                $giftSendPostalMe.addClass('active');
-                $giftSendPostalHim.removeClass('active');
-            }
-        });
-
-        $giftSendPostalHimSelector.on('change', function () {
-            if ($(this).prop('checked') === true) {
-                $giftSendPostalHim.addClass('active');
-                $giftSendPostalMe.removeClass('active');
-            }
-        });
-
-        $giftSendEmailMeSelector.on('change', function () {
-            if ($(this).prop('checked') === true) {
-                $giftSendEmailHim.removeClass('active');
-            }
-        });
-
-        $giftSendEmailHimSelector.on('change', function () {
-            if ($(this).prop('checked') === true) {
-                $giftSendEmailHim.addClass('active');
+        $giftNo.on('change', function () {
+            if($(this).prop('checked') === true) {
+                $giftEdit.removeClass('active');
             }
         });
     })();
