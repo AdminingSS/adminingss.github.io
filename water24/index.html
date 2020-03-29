@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css"/>
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js"></script>
+<link href="styles/app.77e2bb8a1f0529434b63.css" rel="stylesheet"></head>
+<body>
+
+<div class="uk-offcanvas-content">
+    <div class="uk-child-width-1-1 uk-height-viewport uk-position-relative uk-flex uk-flex-wrap uk-flex-wrap-between">
+        <div class="tm-screen tm-auth-phone uk-active">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <div>
+                    <!--logo-->
+                    <div class="uk-logo">
+                        <img src="images/logo.svg" alt="">
+                    </div>
+                    <h2 class="tm-screen-name">Аква-счет</h2>
+                    <h3>Для пополнения аква-счета введите номер телефона:</h3>
+                    <input class="uk-input js-phone" type="text" placeholder="+7 (___) ___ - ____">
+                    <button class="uk-button uk-button-primary js-auth">Продолжить</button>
+                </div>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <ul data-uk-accordion>
+                        <li class="uk-open">
+                            <a class="uk-accordion-title" href="#">Как зарегистрироваться?</a>
+                            <div class="uk-accordion-content">
+                                <ol>
+                                    <li>Подойти к любому автомату сети
+                                        “Источник Здоровья”
+                                    </li>
+                                    <li>Набрать бесплатный номер
+                                        телефона, указанный на экране
+                                    </li>
+                                    <li>Дождаться уведомления на экране
+                                        об успешной регистрации
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Как пополнить аква-счет?</a>
+                            <div class="uk-accordion-content">
+                                <ol>
+                                    <li>Подойти к любому автомату сети
+                                        “Источник Здоровья”
+                                    </li>
+                                    <li>Набрать бесплатный номер
+                                        телефона, указанный на экране
+                                    </li>
+                                    <li>Дождаться уведомления на экране
+                                        об успешной регистрации
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Как получить воду?</a>
+                            <div class="uk-accordion-content">
+                                <ol>
+                                    <li>Подойти к любому автомату сети
+                                        “Источник Здоровья”
+                                    </li>
+                                    <li>Набрать бесплатный номер
+                                        телефона, указанный на экране
+                                    </li>
+                                    <li>Дождаться уведомления на экране
+                                        об успешной регистрации
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tm-screen tm-balance">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <nav uk-navbar>
+                    <div class="uk-navbar-center">
+                        <!--logo-->
+                        <div class="uk-navbar-item uk-logo">
+                            <img src="images/logo.svg" alt="">
+                            <span class="tm-screen-name">Аква-счет</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <div class="tm-balance-display">
+                        <div class="uk-margin-right">
+                            <img src="./images/balance-display.svg" alt="">
+                        </div>
+                        <div>
+                            <div class="tm-caption">Ваш баланс</div>
+                            <div class="tm-cash">
+                                <span>100.00</span> руб.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div class="uk-section uk-background-primary">
+                <div class="uk-container">
+                    <div class="tm-balance-control">
+                        <h2>Пополнить баланс</h2>
+                        <h3>Чтобы пополнить баланс аква-счета, выберите сумму или введите свое значение</h3>
+                        <div class="tm-balance-buttons uk-child-width-1-2 uk-grid-small" data-uk-grid>
+                            <div>
+                                <a href="#">
+                                    <span>50</span> руб.
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <span>100</span> руб.
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <span>500</span> руб.
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <span>1000</span> руб.
+                                </a>
+                            </div>
+                            <div class="uk-width-1-1">
+                                <input class="uk-input" type="text" placeholder="Введите вашу сумму">
+                            </div>
+                        </div>
+                        <button class="uk-button uk-button-primary js-balance-add">Пополнить баланс</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tm-screen tm-offers">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <nav uk-navbar>
+                    <div class="uk-navbar-center">
+                        <!--logo-->
+                        <div class="uk-navbar-item uk-logo">
+                            <img src="images/logo.svg" alt="">
+                            <span class="tm-screen-name">Акции</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3 class="uk-text-primary">Что означают вывески на автоматах?</h3>
+                    <div class="uk-child-width-1-2" data-uk-grid>
+                        <div>
+                            <div class="tm-card">
+                                <a href="#">
+                                    <img src="./images/offers-1.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tm-card">
+                                <a href="#">
+                                    <img src="./images/offers-2.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tm-card">
+                                <a href="#">
+                                    <img src="./images/offers-3.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tm-card">
+                                <a href="#">
+                                    <img src="./images/offers-4.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tm-modal-offers">
+                    <div class="tm-modal">
+                        <div class="tm-modal-close"></div>
+                        <div class="tm-modal-content js-content-1">
+                            <h2>АКЦИЯ ДЛЯ МНОГОДЕТНЫХ СЕМЕЙ</h2>
+                            <p>
+                                В автоматах “Источник Здоровья” действует акция для многодетных семей - до 30 литров
+                                воды в месяц абсолютно бесплатно. Для участия в данной акции обратитесь по номеру
+                                телефона, указанному ниже.
+                            </p>
+                            <div class="tm-phone">
+                                8-800-111-22-33
+                            </div>
+                        </div>
+                        <div class="tm-modal-content js-content-2">
+                            <h2>АКЦИЯ ДЛЯ ВЕТЕРАНОВ</h2>
+                            <p>
+                                В автоматах “Источник Здоровья” действует акция для многодетных семей - до 30 литров
+                                воды в месяц абсолютно бесплатно. Для участия в данной акции обратитесь по номеру
+                                телефона, указанному ниже.
+                            </p>
+                            <div class="tm-phone">
+                                8-800-111-22-33
+                            </div>
+                        </div>
+                        <div class="tm-modal-content js-content-3">
+                            <h2>АКЦИЯ ДЛЯ ПЕНСИОНЕРОВ</h2>
+                            <p>
+                                В автоматах “Источник Здоровья” действует акция для многодетных семей - до 30 литров
+                                воды в месяц абсолютно бесплатно. Для участия в данной акции обратитесь по номеру
+                                телефона, указанному ниже.
+                            </p>
+                            <div class="tm-phone">
+                                8-800-111-22-33
+                            </div>
+                        </div>
+                        <div class="tm-modal-content js-content-4">
+                            <h2>Акция береги природу</h2>
+                            <p>
+                                В автоматах “Источник Здоровья” действует акция для многодетных семей - до 30 литров
+                                воды в месяц абсолютно бесплатно. Для участия в данной акции обратитесь по номеру
+                                телефона, указанному ниже.
+                            </p>
+                            <div class="tm-phone">
+                                8-800-111-22-33
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tm-screen tm-info">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <nav uk-navbar>
+                    <div class="uk-navbar-center">
+                        <!--logo-->
+                        <div class="uk-navbar-item uk-logo">
+                            <img src="images/logo.svg" alt="">
+                            <span class="tm-screen-name">Информация</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3 class="uk-text-primary">Просмотрите интересующую вас информацию</h3>
+                    <ul uk-accordion>
+                        <li class="uk-open">
+                            <a class="uk-accordion-title" href="#">Как зарегистрироваться?</a>
+                            <div class="uk-accordion-content">
+                                <ol>
+                                    <li>Подойти к любому автомату сети
+                                        “Источник Здоровья”
+                                    </li>
+                                    <li>Набрать бесплатный номер
+                                        телефона, указанный на экране
+                                    </li>
+                                    <li>Получить СМС пароль для входа
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Как оплатить?</a>
+                            <div class="uk-accordion-content">
+                                <ol>
+                                    <li>Подойти к любому автомату сети
+                                        “Источник Здоровья”
+                                    </li>
+                                    <li>Набрать бесплатный номер
+                                        телефона, указанный на экране
+                                    </li>
+                                    <li>Дождаться уведомления на экране
+                                        об успешной регистрации
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Как набрать воду?</a>
+                            <div class="uk-accordion-content">
+                                <ol>
+                                    <li>Подойти к любому автомату сети
+                                        “Источник Здоровья”
+                                    </li>
+                                    <li>Набрать бесплатный номер
+                                        телефона, указанный на экране
+                                    </li>
+                                    <li>Дождаться уведомления на экране
+                                        об успешной регистрации
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Хочу такой автомат</a>
+                            <div class="uk-accordion-content">
+                                <ol>
+                                    <li>Подойти к любому автомату сети
+                                        “Источник Здоровья”
+                                    </li>
+                                    <li>Набрать бесплатный номер
+                                        телефона, указанный на экране
+                                    </li>
+                                    <li>Дождаться уведомления на экране
+                                        об успешной регистрации
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="#">Как оставить отзыв?</a>
+                            <div class="uk-accordion-content">
+                                <ol>
+                                    <li>Подойти к любому автомату сети
+                                        “Источник Здоровья”
+                                    </li>
+                                    <li>Набрать бесплатный номер
+                                        телефона, указанный на экране
+                                    </li>
+                                    <li>Дождаться уведомления на экране
+                                        об успешной регистрации
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tm-screen tm-map">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <nav uk-navbar>
+                    <div class="uk-navbar-center">
+                        <!--logo-->
+                        <div class="uk-navbar-item uk-logo">
+                            <img src="images/logo.svg" alt="">
+                            <span class="tm-screen-name">Карта</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3 class="uk-text-primary">Найдите ближайший источник чистой воды</h3>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div class="uk-section uk-background-primary">
+                <div class="uk-container">
+                    <div class="tm-map-form">
+                        <div class="uk-width-1-1">
+                            <input class="uk-input" type="text" placeholder="Введите ваш город">
+                        </div>
+                        <button class="uk-button uk-button-primary">Найти</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tm-map-holder" id="map">
+
+            </div>
+
+        </div>
+
+        <div class="tm-swapper-holder">
+            <div class="tm-swapper">
+                <div class="tm-animated-logo-wrapper">
+                    <div class="tm-animated-logo"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer>
+            <div class="tm-navbar">
+                <div>
+                    <a href="balance">
+                        <img src="./images/nav-balance.svg" alt="" data-uk-svg>
+                        <div>Баланс</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="offers">
+                        <img src="./images/nav-offers.svg" alt="" data-uk-svg>
+                        <div>Акции</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="info">
+                        <img src="./images/nav-info.svg" alt="" data-uk-svg>
+                        <div>Инфо</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="map">
+                        <img src="./images/nav-map.svg" alt="" data-uk-svg>
+                        <div>Карта</div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Off-canvas -->
+    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <div class="uk-card uk-flex uk-flex-center">
+                <ul class="uk-nav">
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="tm-message">
+    <div class="tm-message-content-1">
+        Введеный номер телефона еще не зарегистрирован в системе.
+    </div>
+    <div class="tm-message-content-2">
+        На ваш баланс зачислено <span>100</span> рублей.
+    </div>
+    <div class="tm-message-content-3">
+        Введен некорректный телефонный номер
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/vendors.77e2bb8a1f0529434b63.js"></script><script type="text/javascript" src="scripts/app.77e2bb8a1f0529434b63.js"></script></body>
+</html>
