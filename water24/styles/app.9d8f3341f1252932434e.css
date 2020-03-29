@@ -654,26 +654,30 @@ h3 {
 .tm-map-holder {
   min-height: 280px;
 }
+.tm-accordion-desktop {
+  display: none;
+}
 @media (min-width: 768px) {
   h3 {
     text-align: center;
   }
-  .uk-accordion {
-    max-width: 710px;
+  .tm-accordion-mobile {
+    display: none;
+  }
+  .tm-accordion-desktop {
+    min-height: 280px;
+    width: 710px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  .uk-accordion > li {
+  .tm-accordion-desktop > * {
     width: 340px;
   }
-  .uk-accordion > li:nth-child(2n) {
-    margin-left: 30px;
+  .tm-accordion-desktop > * > :nth-child(n+2) {
+    margin-top: 20px;
   }
-  .uk-accordion > li:nth-child(2) {
+  .tm-accordion-desktop > :nth-child(2) {
     margin-top: 0;
-  }
-  .uk-accordion > li:not(.uk-open) {
-    max-height: 52px;
   }
 }
