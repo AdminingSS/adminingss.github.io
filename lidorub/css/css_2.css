@@ -961,6 +961,16 @@ form:not(.myform) label {
     box-sizing: border-box
 }
 
+form:not(.myform) .step3 label {
+    color: black;
+}
+
+form:not(.myform) .step3 label.select_button {
+    background-color: #b8a15d;
+    border-color: #b8a15d;
+    color: #ffffff;
+}
+
 form:not(.myform) input, form:not(.myform) select, form:not(.myform) textarea {
     outline: none;
     -webkit-appearance: none;
@@ -1062,13 +1072,13 @@ form:not(.myform) button, html [type="button"], [type="reset"], [type="submit"] 
     left: 0px
 }
 
-form:not(.myform) input[type="checkbox"]:not(:checked),form:not(.myform) input[type="checkbox"]:checked,form:not(.myform) input[type="radio"]:not(:checked),form:not(.myform) input[type="radio"]:checked {
+.tag-form input[type="checkbox"]:not(:checked),.tag-form input[type="checkbox"]:checked,form:not(.myform) input[type="checkbox"]:not(:checked),form:not(.myform) input[type="checkbox"]:checked,form:not(.myform) input[type="radio"]:not(:checked),form:not(.myform) input[type="radio"]:checked {
     outline: 0;
     position: absolute;
     left: -9999px
 }
 
-form:not(.myform) input[type="checkbox"] + label,form:not(.myform) input[type="radio"] + label {
+.tag-form input[type="checkbox"] + label,form:not(.myform) input[type="checkbox"] + label,form:not(.myform) input[type="radio"] + label {
     outline: 0;
     position: relative;
     padding-left: 30px;
@@ -1088,7 +1098,7 @@ form:not(.myform) input[type="checkbox"] + label,form:not(.myform) input[type="r
     }
 }
 
-form:not(.myform) input[type="checkbox"] + label:before,form:not(.myform) input[type="checkbox"] + label:after,form:not(.myform) input[type="radio"] + label:before,form:not(.myform) input[type="radio"] + label:after {
+.tag-form input[type="checkbox"] + label:before ,form:not(.myform) input[type="checkbox"] + label:before, .tag-form input[type="checkbox"] + label:after, form:not(.myform) input[type="checkbox"] + label:after,form:not(.myform) input[type="radio"] + label:before,form:not(.myform) input[type="radio"] + label:after {
     outline: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1102,45 +1112,73 @@ form:not(.myform) input[type="checkbox"] + label:before,form:not(.myform) input[
 }
 
 @media screen and (max-width: 1024px) {
-   form:not(.myform) input[type="checkbox"] + label:before,form:not(.myform) input[type="checkbox"] + label:after,form:not(.myform) input[type="radio"] + label:before,form:not(.myform) input[type="radio"] + label:after {
+    .tag-form input[type="checkbox"] + label:before,.tag-form input[type="checkbox"] + label:after,form:not(.myform) input[type="checkbox"] + label:before,form:not(.myform) input[type="checkbox"] + label:after,form:not(.myform) input[type="radio"] + label:before,form:not(.myform) input[type="radio"] + label:after {
         width: 22px;
         height: 22px;
         line-height: 22px
     }
 }
 
-form:not(.myform) input[type="checkbox"]:not(:checked) + label:before,form:not(.myform) input[type="checkbox"]:checked + label:before,form:not(.myform) input[type="radio"]:not(:checked) + label:before,form:not(.myform) input[type="radio"]:checked + label:before {
+.tag-form input[type="checkbox"]:not(:checked) + label:before,.tag-form input[type="checkbox"]:checked + label:before,.tag-form input[type="radio"]:not(:checked) + label:before,.tag-form input[type="radio"]:checked + label:before {
     background: transparent;
     border: 1px solid #b8a15d
 }
 
-form:not(.myform) input[type="checkbox"]:not(:checked) + label:after,form:not(.myform) input[type="checkbox"]:checked + label:after,form:not(.myform) input[type="radio"]:not(:checked) + label:after,form:not(.myform) input[type="radio"]:checked + label:after {
+.tag-form input.paypalp[type="radio"]:not(:checked) + label:before,.tag-form input.paypalp[type="radio"]:checked + label:before {
+    background-image: url(../images/paypal-off.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tag-form input.paypalp[type="radio"]:not(:checked) + label:after,.tag-form input.paypalp[type="radio"]:checked + label:after {
+    background-image: url(../images/paypal-on.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tag-form input.visap[type="radio"]:not(:checked) + label:before,.tag-form input.visap[type="radio"]:checked + label:before {
+    background-image: url(../images/payment_off.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tag-form input.visap[type="radio"]:not(:checked) + label:after,.tag-form input.visap[type="radio"]:checked + label:after {
+    background-image: url(../images/payment_on.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tag-form input[type="checkbox"]:not(:checked) + label:after,.tag-form input[type="checkbox"]:checked + label:after,form:not(.myform) input[type="checkbox"]:not(:checked) + label:after,form:not(.myform) input[type="checkbox"]:checked + label:after,form:not(.myform) input[type="radio"]:not(:checked) + label:after,form:not(.myform) input[type="radio"]:checked + label:after {
     background: url(../images/check.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 10px auto
 }
 
-form:not(.myform) input[type="checkbox"]:not(:checked) + label:after,form:not(.myform) input[type="radio"]:not(:checked) + label:after {
+.tag-form input[type="checkbox"]:not(:checked) + label:after,form:not(.myform) input[type="checkbox"]:not(:checked) + label:after,form:not(.myform) input[type="radio"]:not(:checked) + label:after {
     opacity: 0
 }
 
-form:not(.myform) input[type="checkbox"]:checked + label:after,form:not(.myform) input[type="radio"]:checked + label:after {
+.tag-form input[type="checkbox"]:checked + label:after,form:not(.myform) input[type="checkbox"]:checked + label:after,form:not(.myform) input[type="radio"]:checked + label:after {
     opacity: 1
 }
 
-form:not(.myform) input[type="checkbox"]:disabled:not(:checked) + label:before,form:not(.myform) input[type="checkbox"]:disabled:checked + label:before,form:not(.myform) input[type="radio"]:disabled:not(:checked) + label:before,form:not(.myform) input[type="radio"]:disabled:checked + label:before {
+.tag-form input[type="checkbox"]:disabled:not(:checked) + label:before,.tag-form input[type="checkbox"]:disabled:checked + label:before,form:not(.myform) input[type="checkbox"]:disabled:not(:checked) + label:before,form:not(.myform) input[type="checkbox"]:disabled:checked + label:before,form:not(.myform) input[type="radio"]:disabled:not(:checked) + label:before,form:not(.myform) input[type="radio"]:disabled:checked + label:before {
     -webkit-box-shadow: none;
     box-shadow: none;
     border-color: #ccc;
     background-color: #ededed
 }
 
-form:not(.myform) input[type="checkbox"]:disabled:checked + label:after,form:not(.myform) input[type="radio"]:disabled:checked + label:after {
+.tag-form input[type="checkbox"]:disabled:checked + label:after,form:not(.myform) input[type="checkbox"]:disabled:checked + label:after,form:not(.myform) input[type="radio"]:disabled:checked + label:after {
     color: #aaa
 }
 
-form:not(.myform) input[type="checkbox"]:disabled + label,form:not(.myform) input[type="radio"]:disabled + label {
+.tag-form input[type="checkbox"]:disabled + label,form:not(.myform) input[type="checkbox"]:disabled + label,form:not(.myform) input[type="radio"]:disabled + label {
     color: #aaa
 }
 
@@ -1198,7 +1236,8 @@ section:focus {
     position: relative;
     cursor: pointer;
     display: inline-block;
-    color: #fff !important;
+    /*color: #fff !important;*/
+    color: #fff;
     background-color: #cab471;
     padding: 18px 25px;
     -webkit-box-sizing: border-box;
@@ -1277,7 +1316,8 @@ section:focus {
 
 .btn.disabled, button.disabled, html .disabled[type="button"], .disabled[type="reset"], .disabled[type="submit"], .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) a.disabled, .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a.disabled, #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a.disabled, .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) a.disabled, #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) a.disabled, .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a.disabled, #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a.disabled, .btn:disabled, button:disabled, html :disabled[type="button"], :disabled[type="reset"], :disabled[type="submit"], .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) a:disabled, .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a:disabled, #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a:disabled, .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) a:disabled, #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) a:disabled, .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a:disabled, #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a:disabled {
     pointer-events: none;
-    background-color: #ededed
+    background-color: #999999
+    /*background-color: #ededed*/
 }
 
 .btn.cancel, button.cancel, html .cancel[type="button"], .cancel[type="reset"], .cancel[type="submit"], .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) a.cancel, .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a.cancel, #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a.cancel, .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) a.cancel, #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) a.cancel, .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a.cancel, #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a.cancel {
@@ -1511,7 +1551,7 @@ section:focus {
     clear: both
 }
 
-.dropdown, #nav .container:nth-of-type(1) .language-switcher-language-url, #nav #cookie .cookie__content:nth-of-type(1) .language-switcher-language-url, #cookie #nav .cookie__content:nth-of-type(1) .language-switcher-language-url {
+.dropdown, #nav .container:nth-of-type(1) .language-switcher-language-url, .currency-switcher-currency-url, #nav #cookie .cookie__content:nth-of-type(1) .language-switcher-language-url, .currency-switcher-currency-url, #cookie #nav .cookie__content:nth-of-type(1) .language-switcher-language-url {
     position: relative
 }
 
@@ -4624,7 +4664,7 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     }
 }
 
-#nav .container:nth-of-type(1) ul.nav-primary > li:last-child > a, #nav #cookie .cookie__content:nth-of-type(1) ul.nav-primary > li:last-child > a, #cookie #nav .cookie__content:nth-of-type(1) ul.nav-primary > li:last-child > a {
+#nav .container:nth-of-type(1) ul.nav-primary > li > a.js-gift-trigger {
     padding-left: 35px;
     margin-left: 5px;
     font-weight: 700;
@@ -4632,11 +4672,11 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     color: #0f1e48
 }
 
-#nav .container:nth-of-type(1) ul.nav-primary > li:last-child > a span, #nav #cookie .cookie__content:nth-of-type(1) ul.nav-primary > li:last-child > a span, #cookie #nav .cookie__content:nth-of-type(1) ul.nav-primary > li:last-child > a span {
+#nav .container:nth-of-type(1) ul.nav-primary > li > a.js-gift-trigger span {
     position: relative
 }
 
-#nav .container:nth-of-type(1) ul.nav-primary > li:last-child > a span:before, #nav #cookie .cookie__content:nth-of-type(1) ul.nav-primary > li:last-child > a span:before, #cookie #nav .cookie__content:nth-of-type(1) ul.nav-primary > li:last-child > a span:before {
+#nav .container:nth-of-type(1) ul.nav-primary > li > a.js-gift-trigger span:before {
     content: '';
     position: absolute;
     left: -30px;
@@ -4725,7 +4765,7 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
 }
 
 @media screen and (min-width: 1025px) {
-    #nav .container:nth-of-type(1) .language-switcher-language-url, #nav #cookie .cookie__content:nth-of-type(1) .language-switcher-language-url, #cookie #nav .cookie__content:nth-of-type(1) .language-switcher-language-url {
+    #nav .container:nth-of-type(1) .language-switcher-language-url, .currency-switcher-currency-url, #nav #cookie .cookie__content:nth-of-type(1) .language-switcher-language-url, .currency-switcher-currency-url, #cookie #nav .cookie__content:nth-of-type(1) .language-switcher-language-url {
         min-width: 59px
     }
 }
@@ -5641,13 +5681,13 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     line-height: 1.2
 }
 
-.checkout p a {
+.checkout p a, .js-deliv-modal-trigger {
     font-weight: 600;
     color: #0f1e48;
     text-decoration: none
 }
 
-.checkout p a:hover {
+.checkout p a:hover, .js-deliv-modal-trigger:hover {
     color: #b8a15d
 }
 
@@ -5817,7 +5857,7 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding: 30px 70px 0 70px;
+    padding: 30px 30px 0 30px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
@@ -5992,7 +6032,7 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     display: none
 }
 
-.checkout__form #edit-payement-mode--wrapper legend {
+.checkout__form #payments legend {
     display: none
 }
 
@@ -6017,11 +6057,12 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
 
 .checkout__form #edit-payement-mode .form-item input[type="radio"] + label {
     padding: 0;
-    width: 85px;
-    height: 70px;
-    line-height: 70px;
+    width: 440px;
+    height: 80px;
+    color: transparent;
+    line-height: 80px;
     text-align: center;
-    background-color: #f5f5f4
+    background-color: #f5f5f4;
 }
 
 .checkout__form #edit-payement-mode .form-item input[type="radio"] + label:before, .checkout__form #edit-payement-mode .form-item input[type="radio"] + label:after {
@@ -6040,84 +6081,84 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     opacity: 1
 }
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="CB"] + label:before {
-    background-image: url(../images/cb-off.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center
-}
+/*.checkout__form #edit-payement-mode .form-item input[type="radio"][value="CB"] + label:before {*/
+    /*background-image: url(../images/cb-off.png);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center*/
+/*}*/
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="CB"] + label:after {
-    background-image: url(../images/cb-on.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center
-}
+/*.checkout__form #edit-payement-mode .form-item input[type="radio"][value="CB"] + label:after {*/
+    /*background-image: url(../images/cb-on.png);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center*/
+/*}*/
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="VISA"] + label:before {
+.visap + label:before {
     background-image: url(../images/visa-off.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center
 }
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="VISA"] + label:after {
+.visap + label:after {
     background-image: url(../images/visa-on.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center
 }
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="MasterCard"] + label:before {
-    background-image: url(../images/mastercard-off.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center
-}
+/*.checkout__form #edit-payement-mode .form-item input[type="radio"][value="MasterCard"] + label:before {*/
+    /*background-image: url(../images/mastercard-off.png);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center*/
+/*}*/
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="MasterCard"] + label:after {
-    background-image: url(../images/mastercard-on.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center
-}
+/*.checkout__form #edit-payement-mode .form-item input[type="radio"][value="MasterCard"] + label:after {*/
+    /*background-image: url(../images/mastercard-on.png);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center*/
+/*}*/
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="American Express"] + label:before {
-    background-image: url(../images/amex-off.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center
-}
+/*.checkout__form #edit-payement-mode .form-item input[type="radio"][value="American Express"] + label:before {*/
+    /*background-image: url(../images/amex-off.png);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center*/
+/*}*/
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="American Express"] + label:after {
-    background-image: url(../images/amex-on.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center
-}
+/*.checkout__form #edit-payement-mode .form-item input[type="radio"][value="American Express"] + label:after {*/
+    /*background-image: url(../images/amex-on.png);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center*/
+/*}*/
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="JCB"] + label:before {
-    background-image: url(../images/jcb-off.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center
-}
+/*.checkout__form #edit-payement-mode .form-item input[type="radio"][value="JCB"] + label:before {*/
+    /*background-image: url(../images/jcb-off.png);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center*/
+/*}*/
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="JCB"] + label:after {
-    background-image: url(../images/jcb-on.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center
-}
+/*.checkout__form #edit-payement-mode .form-item input[type="radio"][value="JCB"] + label:after {*/
+    /*background-image: url(../images/jcb-on.png);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center*/
+/*}*/
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="PAYPAL"] + label:before {
+.paypalp + label:before {
     background-image: url(../images/paypal-off.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center
 }
 
-.checkout__form #edit-payement-mode .form-item input[type="radio"][value="PAYPAL"] + label:after {
+.paypalp + label:after {
     background-image: url(../images/paypal-on.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -6173,7 +6214,7 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     font-weight: 700
 }
 
-.checkout__summary > p {
+.checkout__summary .mCSB_container > p {
     position: relative;
     font-size: 30px;
     text-transform: uppercase;
@@ -6182,12 +6223,12 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
 }
 
 @media screen and (max-width: 1024px) {
-    .checkout__summary > p {
+    .checkout__summary .mCSB_container > p {
         font-size: 22px
     }
 }
 
-.checkout__summary > p:after {
+.checkout__summary .mCSB_container > p:after {
     display: block;
     content: "";
     background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3'%3E%3Ccircle fill='%23b8a15d' cx='5' cy='1.5' r='1.5' /%3E%3C/svg%3E");
@@ -6198,15 +6239,15 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     margin-top: 20px
 }
 
-.checkout__summary > div {
+.checkout__summary .mCSB_container > div {
     margin-top: 45px
 }
 
-.checkout__summary > div:nth-of-type(4) {
+.checkout__summary .mCSB_container > div:nth-of-type(4) {
     margin-top: 45px
 }
 
-.checkout__summary > div:nth-of-type(4):before {
+.checkout__summary .mCSB_container > div:nth-of-type(3):before {
     display: block;
     content: "";
     background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3'%3E%3Ccircle fill='%23b8a15d' cx='5' cy='1.5' r='1.5' /%3E%3C/svg%3E");
@@ -6216,19 +6257,19 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     height: 3px
 }
 
-.checkout__summary > div:nth-of-type(4) > ul {
+.checkout__summary .mCSB_container > div:nth-of-type(4) > ul {
     margin-top: 20px
 }
 
-.checkout__summary > div:nth-of-type(4) > ul > li {
+.checkout__summary .mCSB_container > div:nth-of-type(4) > ul > li {
     padding-left: 0
 }
 
-.checkout__summary > div:nth-of-type(4) > ul > li:before {
+.checkout__summary .mCSB_container > div:nth-of-type(4) > ul > li:before {
     display: none
 }
 
-.checkout__summary > div:nth-of-type(4) > ul > li span {
+.checkout__summary .mCSB_container > div:nth-of-type(4) > ul > li span {
     float: right;
     font-weight: 600;
     font-style: italic;
@@ -6236,7 +6277,7 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     margin-top: -2px
 }
 
-.checkout__summary > div:nth-of-type(4) > ul > li .reduc {
+.checkout__summary .mCSB_container > div:nth-of-type(4) > ul > li .reduc {
     display: block;
     font-size: 11px;
     color: rgba(255, 255, 255, 0.5);
@@ -6245,34 +6286,34 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     text-transform: none
 }
 
-.checkout__summary > div:nth-of-type(4) {
+.checkout__summary .mCSB_container > div:nth-of-type(4) {
     margin-top: 25px
 }
 
-.checkout__summary > div + div {
+.checkout__summary .mCSB_container > div + div {
     margin-top: 35px
 }
 
-.checkout__summary > div > p {
+.checkout__summary .mCSB_container > div > p {
     font-weight: 600;
     font-style: italic;
     font-size: 20px
 }
 
 @media screen and (max-width: 1024px) {
-    .checkout__summary > div > p {
+    .checkout__summary .mCSB_container > div > p {
         font-size: 15px
     }
 }
 
-.checkout__summary > div > ul {
+.checkout__summary .mCSB_container > div > ul {
     text-transform: uppercase;
     color: #b8a15d;
     font-weight: 300;
     margin-top: 15px
 }
 
-.checkout__summary > div > ul > li {
+.checkout__summary .mCSB_container > div > ul > li {
     *zoom: 1;
     padding-left: 15px;
     position: relative;
@@ -6280,16 +6321,16 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     margin-bottom: 10px
 }
 
-.checkout__summary > div > ul > li:before, .checkout__summary > div > ul > li:after {
+.checkout__summary .mCSB_container > div > ul > li:before, .checkout__summary > div > ul > li:after {
     content: " ";
     display: table
 }
 
-.checkout__summary > div > ul > li:after {
+.checkout__summary .mCSB_container > div > ul > li:after {
     clear: both
 }
 
-.checkout__summary > div > ul > li:before {
+.checkout__summary .mCSB_container > div > ul > li:before {
     content: "";
     display: block;
     width: 3px;
@@ -6306,72 +6347,72 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     left: 3px
 }
 
-.checkout__summary > div > ul > li + li {
+.checkout__summary .mCSB_container > div > ul > li + li {
     margin-top: 8px
 }
 
-.checkout__summary > div > ul > li .title-pourcent {
+.checkout__summary .mCSB_container > div > ul > li .title-pourcent {
     *zoom: 1
 }
 
-.checkout__summary > div > ul > li .title-pourcent:before, .checkout__summary > div > ul > li .title-pourcent:after {
+.checkout__summary .mCSB_container > div > ul > li .title-pourcent:before, .checkout__summary > div > ul > li .title-pourcent:after {
     content: " ";
     display: table
 }
 
-.checkout__summary > div > ul > li .title-pourcent:after {
+.checkout__summary .mCSB_container > div > ul > li .title-pourcent:after {
     clear: both
 }
 
-.checkout__summary > div > ul > li ul {
+.checkout__summary .mCSB_container > div > ul > li ul {
     margin-top: 6px;
     font-weight: 100
 }
 
-.checkout__summary > div > ul > li ul li {
+.checkout__summary .mCSB_container > div > ul > li ul li {
     *zoom: 1;
     margin-bottom: 10px
 }
 
-.checkout__summary > div > ul > li ul li:before, .checkout__summary > div > ul > li ul li:after {
-    content: " ";
-    display: table
-}
+/*.checkout__summary > div > ul > li ul li:before, .checkout__summary > div > ul > li ul li:after {*/
+    /*content: " ";*/
+    /*display: table*/
+/*}*/
 
-.checkout__summary > div > ul > li ul li:after {
+.checkout__summary .mCSB_container > div > ul > li ul li:after {
     clear: both
 }
 
-.checkout__summary > div > ul > li ul li + li {
+.checkout__summary .mCSB_container > div > ul > li ul li + li {
     margin-top: 2px
 }
 
-.checkout__summary > div > ul > li span {
+.checkout__summary .mCSB_container > div > ul > li span {
     color: #fff;
     text-transform: none
 }
 
-.checkout__summary > div > ul > li span:nth-of-type(2) {
-    float: right;
+.checkout__summary .mCSB_container > div > ul > li span:nth-of-type(2) {
+    /*float: right;*/
     font-weight: 600;
     font-style: italic;
     font-size: 16px
 }
 
 @media screen and (max-width: 1024px) {
-    .checkout__summary > div > ul > li span:nth-of-type(2) {
+    .checkout__summary .mCSB_container > div > ul > li span:nth-of-type(2) {
         font-size: 14px
     }
 }
 
-.checkout__summary > div > ul > li span:nth-of-type(2) .price-barre {
+.checkout__summary .mCSB_container > div > ul > li span:nth-of-type(2) .price-barre {
     font-size: 11px;
     color: rgba(255, 255, 255, 0.5);
     line-height: 11px;
     float: right
 }
 
-.checkout__summary > div > ul > li span:nth-of-type(2).pourcent {
+.checkout__summary .mCSB_container > div > ul > li span:nth-of-type(2).pourcent {
     background: #cab471;
     color: #fff;
     display: inline-block;
@@ -6383,20 +6424,20 @@ form:not(.myform) .quantity input, form:not(.myform) .quantity select {
     margin-top: -5px
 }
 
-.checkout__summary > div .btn, .checkout__summary > div button, .checkout__summary > div html [type="button"], html .checkout__summary > div [type="button"], .checkout__summary > div [type="reset"], .checkout__summary > div [type="submit"], .checkout__summary > div .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) a, .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a, .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a {
+.checkout__summary .mCSB_container > div .btn, .checkout__summary .mCSB_container > div button, .checkout__summary .mCSB_container > div html [type="button"], html .checkout__summary .mCSB_container > div [type="button"], .checkout__summary .mCSB_container > div [type="reset"], .checkout__summary .mCSB_container > div [type="submit"], .checkout__summary .mCSB_container > div .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) a, .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a, .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a {
     display: block;
     padding-top: 30px;
     padding-bottom: 30px
 }
 
 @media screen and (max-width: 1024px) {
-    .checkout__summary > div .btn, .checkout__summary > div button, .checkout__summary > div html [type="button"], html .checkout__summary > div [type="button"], .checkout__summary > div [type="reset"], .checkout__summary > div [type="submit"], .checkout__summary > div .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) a, .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a, .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a, .checkout__summary > div #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary > div a {
+    .checkout__summary .mCSB_container > div .btn, .checkout__summary .mCSB_container > div button, .checkout__summary .mCSB_container > div html [type="button"], html .checkout__summary .mCSB_container > div [type="button"], .checkout__summary .mCSB_container > div [type="reset"], .checkout__summary .mCSB_container > div [type="submit"], .checkout__summary .mCSB_container > div .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) a, .show_page #diner > .container .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a, .show_page #cookie #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .cookie__content .container:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, .show_page #diner > .container #cookie .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .container .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, .show_page #cookie #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a, .checkout__summary .mCSB_container > div #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) a, #cookie .show_page #diner > .cookie__content .cookie__content:nth-of-type(2) .content:nth-of-type(2) .checkout__summary .mCSB_container > div a {
         margin-left: -15px;
         margin-right: -15px
     }
 }
 
-.checkout__summary .summary-date {
+.checkout__summary .mCSB_container .summary-date {
     font-size: 14px;
     font-weight: 700;
     margin-top: 20px;

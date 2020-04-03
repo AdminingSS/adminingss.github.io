@@ -1,48 +1,56 @@
-if (typeof landing_options === "undefined") {
+if (typeof prod === "undefined") {
     var get_play_bill = function () {
         return $('.server-datas .event-list >*').clone();
 
     //return $('<div class="event-box"><strong>Sorry, no perfomances were found!</strong></div>');
     };
 
-    var get_theater_info = function (locationHref) {
-        //return $('.server-datas .theaters-data .container-white').clone();
-        const fixedHref = locationHref + "?nolayout=true";
-
-        return $.ajax({
-            url: fixedHref,
-            type: "GET"
-        });
-    };
-
-    var get_event_info = function (href) {
-        //return $('.server-datas #step2-inactive .container-white').clone();
-        return $.ajax({
-            url: href,
-            type: "GET"
-        });
-    };
-
-    var get_place_selector = function (href) {
-        //return $('.server-datas .options .options').clone();
-        return $.ajax({
-            url: href,
-            type: "GET"
-        });
-    };
-
     var init_scheme = function () {
 
-    }
+    };
+
+    var recount = function () {
+
+    };
+
+    var input = document.querySelector("#ph");
+    window.iti =window.intlTelInput(input,{
+        utilsScript: "./vendor/tel4/utils.js?1549804213570",
+    });
 }
 else {
-
+    var input = document.querySelector("#ph");
+    window.iti =window.intlTelInput(input,{
+        utilsScript: "./s1/landing1/vendor/tel4/utils.js?1549804213570",
+    });
 }
 
-var input = document.querySelector("#ph");
-window.iti =window.intlTelInput(input,{
-    utilsScript: "./vendor/tel4/utils.js?1549804213570",
-});
+var get_theater_info = function (locationHref) {
+    //return $('.server-datas .theaters-data .container-white').clone();
+    const fixedHref = locationHref + "?nolayout=true";
+
+    return $.ajax({
+        url: fixedHref,
+        type: "GET"
+    });
+};
+
+var get_event_info = function (href) {
+    //return $('.server-datas #step2-inactive .container-white').clone();
+    return $.ajax({
+        url: href,
+        type: "GET"
+    });
+};
+
+var get_place_selector = function (href) {
+    //return $('.server-datas .options .options').clone();
+    return $.ajax({
+        url: href,
+        type: "GET"
+    });
+};
+
 
 function isTouchDevice() {
     try {
@@ -88,31 +96,18 @@ function preventScale() {
     });
 }
 
-(() => {
-    const countryData = window.intlTelInputGlobals.getCountryData();
+function fixDrops(){
+    const $langDropdown = $('.language-switcher-language-url .links');
 
-    fillSelect("#address-country");
+    $langDropdown.each(function () {
+        const $thisDropdown = $(this);
+        let $thisItem = $thisDropdown.find('.is-active');
 
-    function fillSelect(selector) {
-        const addressDropdown = document.querySelector(selector);
-        const optionNode = document.createElement("option");
-        optionNode.value = '';
-        optionNode.selected = true;
-        const textNode = document.createTextNode('-- Select Country --*');
-        optionNode.appendChild(textNode);
-        addressDropdown.appendChild(optionNode);
+        if($thisItem.index() === 0) return;
 
-        for (var i = 0; i < countryData.length; i++) {
-            const country = countryData[i];
-            const optionNode = document.createElement("option");
-            optionNode.value = country.iso2;
-            //if(optionNode.value == 'us') optionNode.selected = true;
-            const textNode = document.createTextNode(country.name);
-            optionNode.appendChild(textNode);
-            addressDropdown.appendChild(optionNode);
-        }
-    }
-})();
+        $thisItem.prependTo($thisDropdown);
+    })
+}
 
 // Детект мобильного браузера
 var isMobile = {
@@ -137,6 +132,34 @@ var isMobile = {
 };
 
 $(document).ready(function () {
+
+    fixDrops();
+
+    (() => {
+        const countryData = window.intlTelInputGlobals.getCountryData();
+
+        fillSelect("#address-country");
+
+        function fillSelect(selector) {
+            const addressDropdown = document.querySelector(selector);
+            const optionNode = document.createElement("option");
+            optionNode.value = '';
+            optionNode.selected = true;
+            const textNode = document.createTextNode('-- Select Country --*');
+            optionNode.appendChild(textNode);
+            addressDropdown.appendChild(optionNode);
+
+            for (var i = 0; i < countryData.length; i++) {
+                const country = countryData[i];
+                const optionNode = document.createElement("option");
+                optionNode.value = country.iso2;
+                //if(optionNode.value == 'us') optionNode.selected = true;
+                const textNode = document.createTextNode(country.name);
+                optionNode.appendChild(textNode);
+                addressDropdown.appendChild(optionNode);
+            }
+        }
+    })();
 
     //Top block code from mariinski
     //какие-то манипуляции
@@ -594,6 +617,65 @@ $(document).ready(function () {
         const $mainForm = $('.js-form-main');
         const $modalFormOne = $orderModal.find('.step1 form');
 
+        const $stepOneSection = $('.reservation-tunnel .step1');
+        const $stepTwoSection = $('.reservation-tunnel .step2');
+        const $stepThreeSection = $('.reservation-tunnel .step3');
+
+        const $navController = $('.mobile-nav .step-nav');
+
+        const $mobileTriggerOne = $navController.find('.mobile-nav-step1');
+        const $mobileTriggerTwo = $navController.find('.mobile-nav-step2');
+        const $mobileTriggerThree = $navController.find('.mobile-nav-step3');
+
+        const $mobileTitleOne = $navController.find('.mobile-nav-step1 + span');
+        const $mobileTitleTwo = $navController.find('.mobile-nav-step2 + span');
+        const $mobileTitleThree = $navController.find('.mobile-nav-step3 + span');
+
+        $mobileTriggerOne.on('click', function () {
+            if($(this).hasClass('selected')) return;
+            $stepTwoSection.removeClass('anim');
+            $stepThreeSection.removeClass('anim');
+            $stepOneSection.addClass('anim');
+
+            $mobileTriggerOne.addClass('selected');
+            $mobileTitleOne.addClass('selected');
+
+            $mobileTriggerTwo.removeClass('selected');
+            $mobileTriggerThree.removeClass('selected');
+            $mobileTitleTwo.removeClass('selected');
+            $mobileTitleThree.removeClass('selected');
+        });
+
+        $mobileTriggerTwo.on('click', function () {
+            if(!$(this).hasClass('active') || $(this).hasClass('selected')) return;
+            $stepOneSection.removeClass('anim');
+            $stepThreeSection.removeClass('anim');
+            $stepTwoSection.addClass('anim');
+
+            $mobileTriggerTwo.addClass('selected');
+            $mobileTitleTwo.addClass('selected');
+
+            $mobileTriggerOne.removeClass('selected');
+            $mobileTriggerThree.removeClass('selected');
+            $mobileTitleOne.removeClass('selected');
+            $mobileTitleThree.removeClass('selected');
+        });
+
+        $mobileTriggerThree.on('click', function () {
+            if(!$(this).hasClass('active') || $(this).hasClass('selected')) return;
+            $stepOneSection.removeClass('anim');
+            $stepTwoSection.removeClass('anim');
+            $stepThreeSection.addClass('anim');
+
+            $mobileTriggerThree.addClass('selected');
+            $mobileTitleThree.addClass('selected');
+
+            $mobileTriggerOne.removeClass('selected');
+            $mobileTriggerTwo.removeClass('selected');
+            $mobileTitleOne.removeClass('selected');
+            $mobileTitleTwo.removeClass('selected');
+        });
+
         $theaterModalClose.on('click', function (e) {
             if (e.target !== this) return;
             $theaterModal.hide();
@@ -672,12 +754,26 @@ $(document).ready(function () {
         $jsSubmitStageOne.on('click', async function (e) {
             if (!$(this).hasClass('active')) return;
 
-            const $oldData = $('.step.step2 .offers .event-list');
+            const $oldData = $('.step.step2 .offers >*:nth-child(n+2)');
             $oldData.remove();
 
             let $triggerButton;
 
+            $(this).addClass('loading');
             await ajaxStageOne();
+            $(this).removeClass('loading');
+
+            $stepOneSection.removeClass('anim');
+            $stepTwoSection.addClass('anim');
+
+            $mobileTitleOne.removeClass('selected');
+            $mobileTitleTwo.addClass('active').addClass('selected');
+
+            $mobileTriggerOne.removeClass('selected');
+            $mobileTriggerTwo.addClass('active').addClass('selected');
+
+            $mobileTitleThree.removeClass('active').removeClass('selected');
+            $mobileTriggerThree.removeClass('active').removeClass('selected');
 
             const $jsSubmitStageTwo = $('.event-box .btn.btn-danger');
 
@@ -689,6 +785,7 @@ $(document).ready(function () {
                 const $oldData = $('.step.step3 .options .options, .step.step3 .options >div');
                 $oldData.remove();
 
+                $('.reservation-tunnel .step.step3').addClass('loading');
                 ajaxStageTwo(fixedHref);
 
             });
@@ -710,14 +807,14 @@ $(document).ready(function () {
 
             const $showMoreBlock = $(
                 '<div class="show-more-block">\n' +
-                '    <a href="#" class="show-menu">Показать\n' +
-                '    подробности</a>' +
+                '    <a href="#" class="show-menu">Show\n' +
+                '    details</a>' +
                 '</div>');
 
             $rawData.appendTo($eventList);
             $eventList.appendTo($destinationHolder);
 
-            fixImages($destinationHolder);
+            fixImages($destinationHolder, 2);
 
             const $eventBoxes = $destinationHolder.find('.event-box');
             $showMoreBlock.appendTo($eventBoxes);
@@ -738,7 +835,9 @@ $(document).ready(function () {
 
                     if (!loaded) {
                         //ajax2 here
+                        $showTrigger.addClass('loading');
                         await ajaxStageOneShowMore($moreBlock, linkHref);
+                        $showTrigger.removeClass('loading');
                         loaded = true;
                     }
 
@@ -748,13 +847,13 @@ $(document).ready(function () {
 
                     if (!openMore) {
                         $containerWhite.slideDown(500).fadeIn({duration: 500, queue: false});
-                        $showTrigger.html('Скрыть подробности');
+                        $showTrigger.html('Hide details');
                         openMore = true;
                         $containerWhite.find('.carousel-inner').slick();
                     }
                     else {
                         $containerWhite.fadeOut(500).slideUp({duration: 500, queue: false});
-                        $showTrigger.html('Показать подробности');
+                        $showTrigger.html('Show details');
                         openMore = false;
                         $containerWhite.find('.carousel-inner').slick('unslick');
                     }
@@ -905,6 +1004,13 @@ $(document).ready(function () {
                 infinite: true
             });
 
+            $destinationHolder.find('[data-gallery="multiimages"]').attr('data-fancybox', 'gallery');
+
+            $destinationHolder.find('[data-gallery="multiimages"]').fancybox({
+                arrows: true,
+                loop: true
+            });
+
             $panelAccordions.each(function () {
                 const $trigger = $(this).find('.panel-heading a');
                 const $data = $(this).find('.panel-collapse');
@@ -916,11 +1022,13 @@ $(document).ready(function () {
                 })
             })
 
+            $('[style*="background: #fed444"]').attr('style', 'background: #feefaf;');
         }
 
         //ajax and processing / modal 1-3 (not done)
         async function ajaxStageTwo(href) {
             //ajax imitation
+
             const $destinationHolder = $('.reservation-tunnel .step.step3 .options');
             const $rawHtml = await get_place_selector(href);
             const $rawData = $($rawHtml);
@@ -940,7 +1048,7 @@ $(document).ready(function () {
 
 
             $('<div class="form-group button-group">\n' +
-                '    <a class="btn next1 js-order-modal-trigger-2" href="#">Подтвердить заказ</a>\n' +
+                '    <a class="btn next1 js-order-modal-trigger-2" href="#">Confirm order</a>\n' +
                 '</div>').appendTo($destinationHolder);
 
             fixImages($destinationHolder);
@@ -952,9 +1060,25 @@ $(document).ready(function () {
             $orderModal.find('.step3 .inactive').fadeOut();
             $orderModal.find('.step3 .options').slideDown(500).fadeIn({duration: 500, queue: false});
 
-            $orderModal.find('.reservation-tunnel .step.step3').addClass('active');
+            $orderModal.find('.reservation-tunnel .step.step3').addClass('active').removeClass('loading');
+
+            $stepTwoSection.removeClass('anim');
+            $stepThreeSection.addClass('anim');
+
+            $mobileTitleTwo.removeClass('selected');
+            $mobileTitleThree.addClass('active').addClass('selected');
+
+            $mobileTriggerTwo.removeClass('selected');
+            $mobileTriggerThree.addClass('active').addClass('selected');
 
             init_scheme();
+            const $svgMap = $('#map svg');
+            const mapW = $svgMap.attr('width');
+            const mapH = $svgMap.attr('height');
+            $svgMap.removeAttr('width').removeAttr('height');
+            $svgMap.attr('viewBox', '0 0 ' + mapW +' ' + mapH);
+            $svgMap.attr('preserveAspectRatio', 'xMidYMid meet');
+
 
             $orderModal.find('.reservation-tunnel .step.step3 .js-custom-scrollbar').mCustomScrollbar({
                 scrollbarPosition: "outside",
@@ -970,6 +1094,7 @@ $(document).ready(function () {
                 e.preventDefault();
                 $orderModal.hide();
                 $orderModal2.show();
+                recount();
             });
         }
 
@@ -1012,8 +1137,8 @@ $(document).ready(function () {
 
             const $showMoreBlock = $(
                 '<div class="show-more-block">\n' +
-                '    <a href="#" class="show-menu">Показать\n' +
-                '    подробности</a>' +
+                '    <a href="#" class="show-menu">Show\n' +
+                '    details</a>' +
                 '</div>');
 
             $rawData.appendTo($destinationHolder);
@@ -1048,13 +1173,13 @@ $(document).ready(function () {
 
                     if (!openMore) {
                         $containerWhite.slideDown(500).fadeIn({duration: 500, queue: false});
-                        $showTrigger.html('Скрыть подробности');
+                        $showTrigger.html('Hide details');
                         openMore = true;
                         $containerWhite.find('.carousel-inner').slick();
                     }
                     else {
                         $containerWhite.fadeOut(500).slideUp({duration: 500, queue: false});
-                        $showTrigger.html('Показать подробности');
+                        $showTrigger.html('Show details');
                         openMore = false;
                         $containerWhite.find('.carousel-inner').slick('unslick');
                     }
@@ -1068,9 +1193,12 @@ $(document).ready(function () {
         }
 
         //playbill images and image links fix (to check)
-        function fixImages($holder) {
+        function fixImages($holder, type = 1) {
             const $playbillContent = $holder;
             const $playbillImages = $playbillContent.find('img');
+            if(type === 2) {
+                const $playbillLinks = $playbillContent.find('>.panel a:not(.place-info, .btn)');
+            }
             const $playbillLinks = $playbillContent.find('a:not(.place-info, .btn)');
 
             $playbillImages.each(function () {
@@ -1107,6 +1235,7 @@ $(document).ready(function () {
                 if (selectedItem === 0) return;
                 $quantitySelect.find('option').removeAttr('selected');
                 $quantitySelect.find('option:nth-child(' + (selectedItem) + ')').attr('selected', 'selected');
+                $('#spinEdit').change();
             });
 
             $quantityTriggerMore.on('click', function () {
@@ -1114,6 +1243,7 @@ $(document).ready(function () {
                 if (selectedItem === $quantitySelect.find('option:last-child').index()) return;
                 $quantitySelect.find('option').removeAttr('selected');
                 $quantitySelect.find('option:nth-child(' + (selectedItem + 2) + ')').attr('selected', 'selected');
+                $('#spinEdit').change();
             });
         })
 
@@ -1122,7 +1252,7 @@ $(document).ready(function () {
     //gift check transfer
     (() => {
         const $giftTrigger = $('.js-gift-trigger');
-        const $giftChecker = $('#edit-is-gift-yes');
+        const $giftChecker = $('#edit-is-gift-yes, #edit-is-gift-yes1');
 
         $giftTrigger.on('click', function () {
             $giftChecker.click();
@@ -1151,7 +1281,7 @@ $(document).ready(function () {
             const $dropdownSelect = $dropdownInput.find('>span');
             const $dropdownContainer = $dropdownInput.find('.tm-dropdown-content');
             const $dropdownCheckboxes = $dropdownContainer.find('.tm-input');
-            const dropdownType = $dropdownCheckboxes.first().parent().text().slice(0,1);
+            const dropdownType = $dropdownInput.hasClass('tm-input-theaters') ? 'T' : 'G';
 
             $dropdownInput.on('click', function () {
 
@@ -1201,7 +1331,8 @@ $(document).ready(function () {
 
     //
     (() => {
-        const $scrollbars = $('.checkout__content:not(.checkout__summary), .reservation-tunnel .step.step1');
+        const $scrollbars = $('.checkout__content');
+        const $scrollbarsOut = $('.js-scrollbar-step1');
 
         $scrollbars.mCustomScrollbar({
             //scrollbarPosition: "outside",
@@ -1210,23 +1341,144 @@ $(document).ready(function () {
             advanced: {updateOnContentResize: true}
         });
 
+        $scrollbarsOut.mCustomScrollbar({
+            scrollbarPosition: "outside",
+            theme: "dark",
+            mouseWheel: {scrollAmount: 300},
+            advanced: {updateOnContentResize: true}
+        });
+
     })();
 
     (() => {
-        const $giftYes = $('#edit-is-gift-yes');
-        const $giftNo = $('#edit-is-gift-no');
+        const $giftYes = $('#edit-is-gift-yes, #edit-is-gift-yes1');
+        const $giftNo = $('#edit-is-gift-no, #edit-is-gift-no1');
         const $giftEdit = $('#edit-gift');
 
         $giftYes.on('change', function () {
+
             if($(this).prop('checked') === true) {
                 $giftEdit.addClass('active');
+                $giftYes.each(function () {
+                    $(this).prop('checked', true);
+                })
             }
         });
 
         $giftNo.on('change', function () {
+
             if($(this).prop('checked') === true) {
                 $giftEdit.removeClass('active');
+                $giftNo.each(function () {
+                    $(this).prop('checked', true);
+                })
             }
         });
     })();
+
+    //mobile modal2 contols
+    (()=>{
+        const $navController = $('.checkout__nav ul');
+
+        const $navControllerTriggerOne = $navController.find('li:first-child a');
+        const $navControllerTitleOne = $navController.find('li:first-child .title');
+
+        const $navControllerTriggerTwo = $navController.find('li:nth-child(2) a');
+        const $navControllerTitleTwo = $navController.find('li:nth-child(2) .title');
+
+        const $navControllerTriggerThree = $navController.find('li:last-child a');
+        const $navControllerTitleThree = $navController.find('li:last-child .title');
+
+        const $checkoutFormStageOne = $('.checkout__form:first-child');
+        const $checkoutFormStageTwo = $('.checkout__form:nth-child(2)');
+        const $checkoutFormStageThree = $('.checkout__summary');
+
+        const $checkoutFormTriggerOne = $checkoutFormStageOne.find('.btn');
+        const $checkoutFormTriggerTwo = $checkoutFormStageTwo.find('.btn');
+
+        $checkoutFormTriggerOne.on('click', function (e) {
+            e.preventDefault();
+
+            if($(this).prop('disabled')) return;
+
+            $checkoutFormStageOne.removeClass('active');
+            $checkoutFormStageTwo.addClass('active');
+
+            $navControllerTriggerOne.removeClass('selected');
+            $navControllerTitleOne.removeClass('selected');
+
+            $navControllerTriggerTwo.addClass('active').addClass('selected');
+            $navControllerTitleTwo.addClass('active').addClass('selected');
+        });
+
+        $checkoutFormTriggerTwo.on('click', function (e) {
+            e.preventDefault();
+
+            if($(this).prop('disabled')) return;
+
+            $checkoutFormStageTwo.removeClass('active');
+            $checkoutFormStageThree.addClass('active');
+
+            $navControllerTriggerTwo.removeClass('selected');
+            $navControllerTitleTwo.removeClass('selected');
+
+            $navControllerTriggerThree.addClass('active').addClass('selected');
+            $navControllerTitleThree.addClass('active').addClass('selected');
+        });
+
+        $navControllerTriggerOne.on('click', function () {
+            if($(this).hasClass('selected')) return;
+
+            $navControllerTriggerTwo.removeClass('selected');
+            $navControllerTriggerThree.removeClass('selected');
+            $navControllerTriggerOne.addClass('selected');
+
+            $checkoutFormStageTwo.removeClass('active');
+            $checkoutFormStageThree.removeClass('active')
+            $checkoutFormStageOne.addClass('active');
+        });
+
+        $navControllerTriggerTwo.on('click', function () {
+            if($(this).hasClass('selected') || !$(this).hasClass('active')) return;
+
+            $navControllerTriggerOne.removeClass('selected');
+            $navControllerTriggerThree.removeClass('selected');
+            $navControllerTriggerTwo.addClass('selected');
+
+            $checkoutFormStageOne.removeClass('active');
+            $checkoutFormStageThree.removeClass('active')
+            $checkoutFormStageTwo.addClass('active');
+        });
+
+        $navControllerTriggerThree.on('click', function () {
+            if($(this).hasClass('selected') || !$(this).hasClass('active')) return;
+
+            $navControllerTriggerOne.removeClass('selected');
+            $navControllerTriggerTwo.removeClass('selected');
+            $navControllerTriggerThree.addClass('selected');
+
+            $checkoutFormStageOne.removeClass('active');
+            $checkoutFormStageTwo.removeClass('active')
+            $checkoutFormStageThree.addClass('active');
+        });
+
+    })();
+
+    // (()=>{
+    //     const $langDropdown = $('.language-switcher-language-url .links');
+    //
+    //     $langDropdown.each(function () {
+    //         const $thisDropdown = $(this);
+    //         let $thisItem = $thisDropdown.find('.is-active');
+    //         let $thisTriggers = $thisDropdown.find('li a');
+    //
+    //         $thisTriggers.on('click', function () {
+    //             if($(this).parent().is($thisItem)) return;
+    //             $thisItem.removeClass('is-active');
+    //             $thisItem = $(this).parent();
+    //             $thisItem.prependTo($thisDropdown).addClass('is-active');
+    //         })
+    //     })
+    // })();
+
 });

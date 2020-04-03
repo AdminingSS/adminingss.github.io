@@ -497,7 +497,7 @@
 /*Scrollbar*/
 
 .event-list, .options .options {
-    max-height: calc(100vh - 174px);
+    height: calc(100vh - 174px);
 }
 
 .reservation-tunnel .step.step3 .options, .reservation-tunnel .step.step2 .offers {
@@ -667,7 +667,7 @@ form:not(.myform) input.tm-input[type="checkbox"]:not(:checked), form:not(.myfor
     left: auto;
 }
 
-form.tm-form .tm-input[type="checkbox"] {
+form .tm-form .tm-input[type="checkbox"] {
     width: 18px;
     height: 18px;
     /*-webkit-appearance: checkbox;*/
@@ -678,7 +678,7 @@ form.tm-form .tm-input[type="checkbox"] {
     vertical-align: sub;
 }
 
-form.tm-form .tm-input[type="checkbox"]:checked::before {
+form .tm-form .tm-input[type="checkbox"]:checked::before {
     position: absolute;
     display: block;
     content: '';
@@ -692,12 +692,12 @@ form.tm-form .tm-input[type="checkbox"]:checked::before {
     background-size: 10px auto;
 }
 
-form.tm-form label {
+form .tm-form label {
     font-size: 16px;
     display: block;
     text-transform: uppercase;
     cursor: pointer;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 
 .reservation-tunnel .step.step1 form .content .form-item .block label {
@@ -816,7 +816,7 @@ form.tm-form label {
 }
 
 .step3 .options .js-custom-scrollbar {
-    max-height: calc(100vh - 328px);
+    height: calc(100vh - 328px);
 }
 
 .point_raphael {
@@ -840,3 +840,96 @@ form.tm-form label {
 .checkout__form {
     padding: 30px;
 }
+
+.checkout__summary .mCSB_container > div > ul > li ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intl-tel-input .country-list {
+    max-width: 300px;
+}
+
+.form-item.adults .block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking form .form-item .block:before, .booking form .form-item .block:after {
+    display: none;
+}
+
+.tm-form .content {
+    margin-bottom: 20px;
+}
+
+.mCSB_inside>.mCSB_container {
+    margin-right: 45px;
+}
+
+#js-total-price li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.js-submit-stage-1, .show-more-block .show-menu {
+    position: relative;
+}
+
+.js-submit-stage-1::before, .show-more-block .show-menu::before {
+    display: none;
+    position: absolute;
+    content: '';
+    background: url("../images/pre.gif") no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.js-submit-stage-1.loading::before, .show-more-block .show-menu.loading::before {
+    display: block;
+}
+
+.reservation-tunnel .step.step3 {
+    position: relative;
+}
+
+.reservation-tunnel .step.step3::before {
+    display: none;
+    position: absolute;
+    content: '';
+    background: url("../images/pre.gif") no-repeat;
+    background-position: 50% 50%;
+    background-size: 100px 100px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.reservation-tunnel .step.step3.loading::before {
+    display: block;
+}
+
+.checkout__form #edit-payement-mode {
+    height: 90px;
+}
+
+.js-scrollbar-step1 {
+    height: calc(100vh - 174px);
+}
+
+.hover_button {
+    border: 1px solid #cab471;
+}
+
+/*#map svg {*/
+    /*display: block;*/
+    /*margin: auto;*/
+/*}*/

@@ -4,7 +4,15 @@ var landing;
 var arr;
 var mappoint_raphael;
 var objs = {};
+const hover_zone_color = "#cab471";
+
 $(function(){
+    init_scheme();
+});
+
+
+function init_scheme(){
+    if(typeof landing == undefined) return;
     
     raph = Raphael('map', landing.width, landing.height),
         attributes = {
@@ -74,7 +82,7 @@ $(function(){
 	
 	$('.zonelist:first').prop('checked','checked');
 	if(objs['pp'+$('.zonelist:first').val()]) over_(objs['pp'+$('.zonelist:first').val()]);
-});
+}
 
 function over_(obd)
 {	
