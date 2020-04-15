@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css"/>
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js"></script>
+<link href="styles/vendors.e96fd54eb800406f5d8f.css" rel="stylesheet"><link href="styles/app.e96fd54eb800406f5d8f.css" rel="stylesheet"></head>
+<body>
+
+<div class="uk-offcanvas-content">
+    <div class="uk-child-width-1-1 uk-height-viewport uk-position-relative uk-flex uk-flex-wrap uk-flex-wrap-between">
+        <div class="tm-screen tm-auth-full uk-active">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <div>
+                    <!--logo-->
+                    <div class="uk-logo">
+                        <img src="images/logo-login.svg" alt="">
+                    </div>
+                    <h2 class="tm-screen-name">Аква-счет</h2>
+                    <h3>Для пополнения аква-счета введите номер телефона:</h3>
+                    <input class="uk-input js-phone" type="text" placeholder="+7 (___) ___ - ____">
+                    <input class="uk-input js-password" type="text" placeholder="Ваш пароль">
+                    <button class="uk-button uk-button-primary js-auth">Войти</button>
+                </div>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <div class="tm-accordion-desktop">
+
+                    </div>
+                    <div class="tm-accordion-mobile">
+                        <div data-uk-accordion>
+                            <div class="tm-accordion-item uk-open">
+                                <a class="uk-accordion-title" href="#">Как зарегистрироваться?</a>
+                                <div class="uk-accordion-content">
+                                    <ol>
+                                        <li>Подойти к любому автомату сети
+                                            “Источник Здоровья”
+                                        </li>
+                                        <li>Набрать бесплатный номер
+                                            телефона, указанный на экране
+                                        </li>
+                                        <li>Дождаться уведомления на экране
+                                            об успешной регистрации
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-item">
+                                <a class="uk-accordion-title" href="#">Как пополнить аква-счет?</a>
+                                <div class="uk-accordion-content">
+                                    <ol>
+                                        <li>Подойти к любому автомату сети
+                                            “Источник Здоровья”
+                                        </li>
+                                        <li>Набрать бесплатный номер
+                                            телефона, указанный на экране
+                                        </li>
+                                        <li>Дождаться уведомления на экране
+                                            об успешной регистрации
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-item">
+                                <a class="uk-accordion-title" href="#">Как получить воду?</a>
+                                <div class="uk-accordion-content">
+                                    <ol>
+                                        <li>Подойти к любому автомату сети
+                                            “Источник Здоровья”
+                                        </li>
+                                        <li>Набрать бесплатный номер
+                                            телефона, указанный на экране
+                                        </li>
+                                        <li>Дождаться уведомления на экране
+                                            об успешной регистрации
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tm-screen tm-balance">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <nav uk-navbar>
+                    <div class="uk-navbar-center">
+                        <!--logo-->
+                        <div class="uk-navbar-item uk-logo">
+                            <img src="images/logo-main.svg" alt="">
+                            <span class="tm-screen-name">Аква-счет</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="tm-balance-main uk-active">
+                <!-- Section -->
+                <div class="tm-section-operator">
+                    <div class="uk-container">
+                        <div class="uk-text-center uk-margin-small-bottom">
+                            Вас обслуживает оператор:<br/>
+                            <b>ООО “Чистая вода”</b>
+                        </div>
+                        <div>
+                            <a class="uk-button uk-button-default" href="#">
+                            <span class="uk-margin-small-right">
+                                <img src="./images/icon-bulb.svg" alt="">
+                            </span>
+                                Открыть профиль оператора
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section -->
+                <div class="uk-section">
+                    <div class="uk-container">
+                        <div class="tm-balance-display">
+                            <div class="uk-margin-right">
+                                <img src="./images/balance-display.svg" alt="">
+                            </div>
+                            <div>
+                                <div class="tm-caption">Ваш баланс</div>
+                                <div class="tm-cash">
+                                    <span>100.00</span> руб.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section -->
+                <div class="tm-section-tabs">
+                    <div class="uk-container">
+                        <div class="tm-tabs">
+                            <div class="tm-tab uk-active">Пополнение</div>
+                            <div class="tm-tab">Подписка</div>
+                            <div class="tm-tab tm-sheet">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.2143 5.50001H17.2857V0.785729C17.2857 0.351776 16.9339 0 16.5 0H0.785729C0.351776 0 0 0.351776 0 0.785729V18.8571C0 20.5929 1.4071 22 3.14287 22H18.8571C20.5929 22 22 20.5929 22 18.8571V6.28569C22 5.85179 21.6482 5.50001 21.2143 5.50001ZM6.28569 3.92855H11C11.4339 3.92855 11.7857 4.28033 11.7857 4.71428C11.7857 5.14824 11.4339 5.50001 11 5.50001H6.28569C5.85174 5.50001 5.49997 5.14824 5.49997 4.71428C5.49997 4.28033 5.85179 3.92855 6.28569 3.92855ZM13.3571 18.8571H3.92855C3.4946 18.8571 3.14282 18.5054 3.14282 18.0714C3.14282 17.6374 3.4946 17.2857 3.92855 17.2857H13.3571C13.7911 17.2857 14.1428 17.6374 14.1428 18.0714C14.1428 18.5054 13.7911 18.8571 13.3571 18.8571ZM13.3571 15.7143H3.92855C3.4946 15.7143 3.14282 15.3625 3.14282 14.9285C3.14282 14.4946 3.4946 14.1428 3.92855 14.1428H13.3571C13.7911 14.1428 14.1428 14.4946 14.1428 14.9285C14.1428 15.3625 13.7911 15.7143 13.3571 15.7143ZM13.3571 12.5714H3.92855C3.4946 12.5714 3.14282 12.2197 3.14282 11.7857C3.14282 11.3518 3.4946 11 3.92855 11H13.3571C13.7911 11 14.1428 11.3518 14.1428 11.7857C14.1428 12.2197 13.7911 12.5714 13.3571 12.5714ZM13.3571 9.42857H3.92855C3.4946 9.42857 3.14282 9.07679 3.14282 8.64284C3.14282 8.20888 3.4946 7.85711 3.92855 7.85711H13.3571C13.7911 7.85711 14.1428 8.20888 14.1428 8.64284C14.1428 9.07679 13.7911 9.42857 13.3571 9.42857ZM20.4285 18.8571C20.4285 19.725 19.725 20.4285 18.8571 20.4285C17.9893 20.4285 17.2857 19.725 17.2857 18.8571V7.07142H20.4286V18.8571H20.4285Z"
+                                          fill="#0066AE"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section -->
+                <div class="js-tab uk-active uk-section uk-background-primary">
+                    <div class="uk-container">
+                        <div class="tm-balance-control">
+                            <h2>Пополнить баланс</h2>
+                            <h3>Чтобы пополнить баланс аква-счета, выберите сумму или введите свое значение</h3>
+                            <div class="tm-balance-buttons uk-child-width-1-2 uk-grid-small" data-uk-grid>
+                                <div>
+                                    <a href="#">
+                                        <span>50</span> руб.
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span>100</span> руб.
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span>500</span> руб.
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span>1000</span> руб.
+                                    </a>
+                                </div>
+                                <div class="uk-width-1-1">
+                                    <input class="uk-input" type="text" placeholder="Введите вашу сумму">
+                                </div>
+                            </div>
+                            <button class="uk-button uk-button-primary js-balance-add">Пополнить баланс</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section -->
+                <div class="js-tab uk-section uk-background-primary">
+                    <div class="uk-container">
+                        <div class="tm-subscription-control">
+                            <h2>Ваша подписка</h2>
+                            <h3>Текущая подписка</h3>
+                            <div class="tm-subscription-monitor">
+                                <span>200</span> руб. в месяц
+                            </div>
+                            <h3>Введите сумму, которая ежемесячно 1-го числа будет зачисляться на ваш баланс</h3>
+                            <div class="tm-subscription-buttons uk-child-width-1-2 uk-grid-small" data-uk-grid>
+                                <div class="uk-width-1-1">
+                                    <input class="uk-input" type="text" placeholder="Сумма подписки">
+                                </div>
+                            </div>
+                            <button class="uk-button uk-button-primary js-subscription-add">Пополнить баланс</button>
+                            <a class="tm-subscription-cancel" href="#">Отменить текущую подписку</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section -->
+                <div class="js-tab tm-section-last-operations uk-section">
+                    <div class="uk-container">
+                        <div class="tm-last-operations">
+                            <h2>Последние операции</h2>
+                            <div class="uk-margin-bottom js-operations-accordion" data-uk-accordion>
+                                <div class="tm-accordion-item tm-positive uk-open">
+                                    <a class="uk-accordion-title" href="#"><span>+ 100.00</span> руб.</a>
+                                    <div class="uk-accordion-content uk-flex uk-child-width-1-2">
+                                        <div class="uk-margin-right">
+                                            <div class="uk-margin-small-bottom">Дата: <span>15.03.2020</span></div>
+                                            <div class="uk-margin-small-bottom">Автомат: <span>11271</span></div>
+                                            <div>Бонус: <span>11.50 руб.</span></div>
+                                        </div>
+                                        <div>
+                                            <div class="uk-margin-small-bottom">Литры: <span>5 л</span></div>
+                                            <div>Товар: <span>Нет</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tm-accordion-item tm-negative">
+                                    <a class="uk-accordion-title" href="#"><span>- 100.00</span> руб.</a>
+                                    <div class="uk-accordion-content uk-flex uk-child-width-1-2">
+                                        <div class="uk-margin-right">
+                                            <div class="uk-margin-small-bottom">Дата: <span>15.03.2020</span></div>
+                                            <div class="uk-margin-small-bottom">Автомат: <span>11271</span></div>
+                                            <div>Бонус: <span>11.50 руб.</span></div>
+                                        </div>
+                                        <div>
+                                            <div class="uk-margin-small-bottom">Литры: <span>5 л</span></div>
+                                            <div>Товар: <span>Нет</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="uk-button uk-button-primary js-operations-more">Загрузить ещё</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tm-operator-profile">
+
+                <!-- Section -->
+                <div class="tm-section-small uk-background-muted">
+                    <div class="uk-container">
+                        <div class="uk-position-relative">
+                            <div class="tm-profile-heading">Профиль оператора</div>
+                            <a class="tm-button-back" href="#">
+                                <img src="./images/arrow-back.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section -->
+                <div class="tm-section-small">
+                    <div class="uk-container">
+                        <div class="uk-flex uk-flex-middle">
+                            <div>
+                                <div class="tm-logo-inner">
+                                    <img src="./images/logo_inner.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tm-logo-text">
+                                ООО “Чистая вода”
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section -->
+                <div class="tm-section-tabs">
+                    <div class="uk-container">
+                        <div class="tm-tabs tm-two-tabs uk-text-center">
+                            <div class="tm-tab uk-active">Информация</div>
+                            <div class="tm-tab">Поток</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section -->
+                <div class="js-tab uk-active uk-margin-bottom">
+                    <div class="uk-container">
+                        <div>
+                            <h2 class="tm-tab-heading">Информация об операторе</h2>
+                            <div class="uk-margin-small-bottom">Наша компания “Чистая вода” занимается снабжением жилых
+                                комплексов, торговых и производственных предприятий чистой питьевой водой через наши
+                                автоматы.
+                            </div>
+                            <div class="uk-margin-small-bottom"><span class="tm-emphasis">Сайт: </span><a
+                                    href="https://shop.ru">https://shop.ru</a></div>
+                            <div class="uk-margin-bottom"><span
+                                    class="tm-emphasis">Стоимость 1 литра воды: </span><span>4 руб.</span></div>
+                            <div data-uk-accordion>
+                                <div class="tm-accordion-item uk-open">
+                                    <a class="uk-accordion-title" href="#">Контакты и реквизиты</a>
+                                    <div class="uk-accordion-content">
+                                        <div class="tm-contacts-block">
+                                            <div><span>Фактический адрес:</span></div>
+                                            <div class="uk-margin-bottom">111219, Москва, 2-й Рощинский проезд, дом 2,
+                                                строение 12.
+                                            </div>
+                                            <div><span>Электронная почта: </span>shop@shop.ru</div>
+                                            <div class="uk-margin-bottom"><span>Телефон: </span>8-800-500-9876</div>
+                                            <div class="uk-margin-small-bottom"><span>Реквизиты:</span></div>
+                                            <div>ИП Иванов Иван Иванович</div>
+                                            <div class="uk-margin-bottom">ИНН 7778644521 / ОГРНИП 1076564644123</div>
+                                            <div><span>Юридический адрес:</span></div>
+                                            <div>111219, Москва, 2-й Рощинский проезд, дом 2, строение 12.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tm-accordion-item">
+                                    <a class="uk-accordion-title" href="#">Документы</a>
+                                    <div class="uk-accordion-content">
+                                        <a class="tm-button-document uk-button" href="#">
+                                            Документация на воду
+                                        </a>
+                                        <a class="tm-button-document uk-button" href="#">
+                                            Декларация соответствия
+                                        </a>
+                                        <a class="tm-button-document uk-button" href="#">
+                                            Сертификат соответствия
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tm-accordion-item">
+                                    <a class="uk-accordion-title tm-title-long" href="#">Пользовательское соглашение и
+                                        политика
+                                        конфиденциальности</a>
+                                    <div class="uk-accordion-content">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut
+                                        blanditiis consequuntur dicta dignissimos ea enim est et ex exercitationem
+                                        fugiat illo laborum nemo nulla, obcaecati porro rem! Aperiam, cumque?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section -->
+                <div class="js-tab uk-margin-bottom">
+                    <div class="uk-container">
+                        <h2 class="tm-tab-heading">Новостной поток</h2>
+                        <div></div>
+                    </div>
+                    <div class="uk-container uk-background-muted">
+                        <div class="tm-news tm-news-pinned">
+                            <div class="tm-heading">Закрепленные записи</div>
+                            <a href="#" class="tm-news-item">
+                                <div class="uk-width-auto">
+                                    <div class="tm-image-holder ">
+                                        <img src="./images/news-pensioners.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="tm-heading">
+                                        Акция для пенсионеров
+                                    </div>
+                                    <div>
+                                        Мы предлагаем бесплатно 30 литров воды в месяц для пенсионеров.
+                                    </div>
+                                </div>
+                                <div class="js-news-full">
+                                    <h2>АКЦИЯ ДЛЯ ПЕНСИОНЕРОВ</h2>
+                                    <img class="uk-width-1-1" src="./images/news-img-1.png" alt="">
+                                    <p>Мы всегда стараемся заботится о нашем старшем поколении, поэтому мы приготовили
+                                        специальную акцию для пенсионеров. Теперь пенсионеры смогут получать в наших
+                                        автоматах 30 литров воды в месяц абсолютно бесплатно. Для того, чтобы принять
+                                        участие в акции, необходимо зарегистрировать номер телефона пенсионера для
+                                        участия в акции. Для этого нужно связаться с нами по телефону нашей горячей
+                                        линии:</p>
+                                    <div class="tm-phone">
+                                        8-800-111-22-33
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="tm-news-item">
+                                <div class="uk-width-auto">
+                                    <div class="tm-image-holder ">
+                                        <img src="./images/news-families.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="tm-heading">
+                                        Для многотетных семей
+                                    </div>
+                                    <div>
+                                        Мы запустили акцию для многотетных семей - 30 литров воды в месяц бесплатно.
+                                    </div>
+                                </div>
+                                <div class="js-news-full">
+                                    <h2>АКЦИЯ ДЛЯ ПЕНСИОНЕРОВ</h2>
+                                    <img class="uk-width-1-1" src="./images/news-img-1.png" alt="">
+                                    <p>Мы всегда стараемся заботится о нашем старшем поколении, поэтому мы приготовили
+                                        специальную акцию для пенсионеров. Теперь пенсионеры смогут получать в наших
+                                        автоматах 30 литров воды в месяц абсолютно бесплатно. Для того, чтобы принять
+                                        участие в акции, необходимо зарегистрировать номер телефона пенсионера для
+                                        участия в акции. Для этого нужно связаться с нами по телефону нашей горячей
+                                        линии:</p>
+                                    <div class="tm-phone">
+                                        8-800-111-22-33
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="uk-container">
+                        <div class="tm-news tm-news-all">
+                            <div class="tm-heading">Все записи</div>
+                            <a href="#" class="tm-news-item">
+                                <div class="uk-width-auto">
+                                    <div class="tm-image-holder ">
+                                        <img src="./images/news-pensioners.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="tm-heading">
+                                        Акция для пенсионеров
+                                    </div>
+                                    <div>
+                                        Мы предлагаем бесплатно 30 литров воды в месяц для пенсионеров.
+                                    </div>
+                                </div>
+                                <div class="js-news-full">
+                                    <h2>АКЦИЯ ДЛЯ ПЕНСИОНЕРОВ</h2>
+                                    <img class="uk-width-1-1" src="./images/news-img-1.png" alt="">
+                                    <p>Мы всегда стараемся заботится о нашем старшем поколении, поэтому мы приготовили
+                                        специальную акцию для пенсионеров. Теперь пенсионеры смогут получать в наших
+                                        автоматах 30 литров воды в месяц абсолютно бесплатно. Для того, чтобы принять
+                                        участие в акции, необходимо зарегистрировать номер телефона пенсионера для
+                                        участия в акции. Для этого нужно связаться с нами по телефону нашей горячей
+                                        линии:</p>
+                                    <div class="tm-phone">
+                                        8-800-111-22-33
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="tm-news-item">
+                                <div class="uk-width-auto">
+                                    <div class="tm-image-holder ">
+                                        <img src="./images/news-families.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="tm-heading">
+                                        Для многотетных семей
+                                    </div>
+                                    <div>
+                                        Мы запустили акцию для многотетных семей - 30 литров воды в месяц бесплатно.
+                                    </div>
+                                </div>
+                                <div class="js-news-full">
+                                    <h2>ДЛЯ МНОГОДЕТНЫХ СЕМЕЙ</h2>
+                                    <img class="uk-width-1-1" src="./images/news-img-1.png" alt="">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad amet aperiam, aut
+                                        beatae delectus distinctio dolores et eveniet illum, iure maxime minus optio
+                                        perferendis reiciendis rerum sit ut voluptatem!</p>
+                                    <div class="tm-phone">
+                                        8-800-111-22-33
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="tm-news-item">
+                                <div class="uk-width-auto">
+                                    <div class="tm-image-holder ">
+                                        <img src="./images/news-families.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="tm-heading">
+                                        Для многотетных семей
+                                    </div>
+                                    <div>
+                                        Мы запустили акцию для многотетных семей - 30 литров воды в месяц бесплатно.
+                                    </div>
+                                </div>
+                                <div class="js-news-full">
+                                    <h2>АКЦИЯ ДЛЯ ПЕНСИОНЕРОВ</h2>
+                                    <img class="uk-width-1-1" src="./images/news-img-1.png" alt="">
+                                    <p>Мы всегда стараемся заботится о нашем старшем поколении, поэтому мы приготовили
+                                        специальную акцию для пенсионеров. Теперь пенсионеры смогут получать в наших
+                                        автоматах 30 литров воды в месяц абсолютно бесплатно. Для того, чтобы принять
+                                        участие в акции, необходимо зарегистрировать номер телефона пенсионера для
+                                        участия в акции. Для этого нужно связаться с нами по телефону нашей горячей
+                                        линии:</p>
+                                    <div class="tm-phone">
+                                        8-800-111-22-33
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="uk-container uk-text-center">
+                        <button class="uk-button uk-button-primary uk-margin-bottom js-news-more">Загрузить ещё</button>
+                    </div>
+
+                </div>
+
+                <div class="tm-modal-news">
+                    <div class="tm-modal-close"></div>
+                    <div class="tm-modal">
+                        <div class="tm-modal-content">
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="tm-screen tm-offers">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <nav uk-navbar>
+                    <div class="uk-navbar-center">
+                        <!--logo-->
+                        <div class="uk-navbar-item uk-logo">
+                            <img src="images/logo-main.svg" alt="">
+                            <span class="tm-screen-name">Акции</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3 class="uk-text-primary">Что означают вывески на автоматах?</h3>
+                    <div class="uk-child-width-1-2" data-uk-grid>
+                        <div>
+                            <div class="tm-card">
+                                <a href="#">
+                                    <img src="./images/offers-1.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tm-card">
+                                <a href="#">
+                                    <img src="./images/offers-2.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tm-card">
+                                <a href="#">
+                                    <img src="./images/offers-3.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tm-card">
+                                <a href="#">
+                                    <img src="./images/offers-4.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tm-modal-offers">
+                    <div class="tm-modal">
+                        <div class="tm-modal-close"></div>
+                        <div class="tm-modal-content js-content-1">
+                            <h2>АКЦИЯ ДЛЯ МНОГОДЕТНЫХ СЕМЕЙ</h2>
+                            <p>
+                                В автоматах “Источник Здоровья” действует акция для многодетных семей - до 30 литров
+                                воды в месяц абсолютно бесплатно. Для участия в данной акции обратитесь по номеру
+                                телефона, указанному ниже.
+                            </p>
+                            <div class="tm-phone">
+                                8-800-111-22-33
+                            </div>
+                        </div>
+                        <div class="tm-modal-content js-content-2">
+                            <h2>АКЦИЯ ДЛЯ ВЕТЕРАНОВ</h2>
+                            <p>
+                                В автоматах “Источник Здоровья” действует акция для многодетных семей - до 30 литров
+                                воды в месяц абсолютно бесплатно. Для участия в данной акции обратитесь по номеру
+                                телефона, указанному ниже.
+                            </p>
+                            <div class="tm-phone">
+                                8-800-111-22-33
+                            </div>
+                        </div>
+                        <div class="tm-modal-content js-content-3">
+                            <h2>АКЦИЯ ДЛЯ ПЕНСИОНЕРОВ</h2>
+                            <p>
+                                В автоматах “Источник Здоровья” действует акция для многодетных семей - до 30 литров
+                                воды в месяц абсолютно бесплатно. Для участия в данной акции обратитесь по номеру
+                                телефона, указанному ниже.
+                            </p>
+                            <div class="tm-phone">
+                                8-800-111-22-33
+                            </div>
+                        </div>
+                        <div class="tm-modal-content js-content-4">
+                            <h2>Акция береги природу</h2>
+                            <p>
+                                В автоматах “Источник Здоровья” действует акция для многодетных семей - до 30 литров
+                                воды в месяц абсолютно бесплатно. Для участия в данной акции обратитесь по номеру
+                                телефона, указанному ниже.
+                            </p>
+                            <div class="tm-phone">
+                                8-800-111-22-33
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tm-screen tm-info">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <nav uk-navbar>
+                    <div class="uk-navbar-center">
+                        <!--logo-->
+                        <div class="uk-navbar-item uk-logo">
+                            <img src="images/logo-main.svg" alt="">
+                            <span class="tm-screen-name">Информация</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3 class="uk-text-primary">Просмотрите интересующую вас информацию</h3>
+                    <div class="tm-accordion-desktop">
+
+                    </div>
+                    <div class="tm-accordion-mobile">
+                        <div uk-accordion>
+                            <div class="tm-accordion-item uk-open">
+                                <a class="uk-accordion-title" href="#">Как зарегистрироваться?</a>
+                                <div class="uk-accordion-content">
+                                    <ol>
+                                        <li>Подойти к любому автомату сети
+                                            “Источник Здоровья”
+                                        </li>
+                                        <li>Набрать бесплатный номер
+                                            телефона, указанный на экране
+                                        </li>
+                                        <li>Получить СМС пароль для входа
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-item">
+                                <a class="uk-accordion-title" href="#">Как оплатить?</a>
+                                <div class="uk-accordion-content">
+                                    <ol>
+                                        <li>Подойти к любому автомату сети
+                                            “Источник Здоровья”
+                                        </li>
+                                        <li>Набрать бесплатный номер
+                                            телефона, указанный на экране
+                                        </li>
+                                        <li>Дождаться уведомления на экране
+                                            об успешной регистрации
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-item">
+                                <a class="uk-accordion-title" href="#">Как набрать воду?</a>
+                                <div class="uk-accordion-content">
+                                    <ol>
+                                        <li>Подойти к любому автомату сети
+                                            “Источник Здоровья”
+                                        </li>
+                                        <li>Набрать бесплатный номер
+                                            телефона, указанный на экране
+                                        </li>
+                                        <li>Дождаться уведомления на экране
+                                            об успешной регистрации
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-item">
+                                <a class="uk-accordion-title" href="#">Хочу такой автомат</a>
+                                <div class="uk-accordion-content">
+                                    <ol>
+                                        <li>Подойти к любому автомату сети
+                                            “Источник Здоровья”
+                                        </li>
+                                        <li>Набрать бесплатный номер
+                                            телефона, указанный на экране
+                                        </li>
+                                        <li>Дождаться уведомления на экране
+                                            об успешной регистрации
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="tm-accordion-item">
+                                <a class="uk-accordion-title" href="#">Как оставить отзыв?</a>
+                                <div class="uk-accordion-content">
+                                    <ol>
+                                        <li>Подойти к любому автомату сети
+                                            “Источник Здоровья”
+                                        </li>
+                                        <li>Набрать бесплатный номер
+                                            телефона, указанный на экране
+                                        </li>
+                                        <li>Дождаться уведомления на экране
+                                            об успешной регистрации
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tm-screen tm-map">
+
+            <!--Header-->
+            <header class="uk-position-relative uk-background-primary">
+                <nav uk-navbar>
+                    <div class="uk-navbar-center">
+                        <!--logo-->
+                        <div class="uk-navbar-item uk-logo">
+                            <img src="images/logo-main.svg" alt="">
+                            <span class="tm-screen-name">Карта</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Section -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3 class="uk-text-primary">Найдите ближайший источник чистой воды</h3>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div class="uk-section uk-background-primary">
+                <div class="uk-container">
+                    <div class="tm-map-form">
+                        <div class="uk-width-1-1">
+                            <input class="uk-input" type="text" placeholder="Введите ваш город">
+                        </div>
+                        <button class="uk-button uk-button-primary">Найти</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tm-map-holder" id="map">
+
+            </div>
+
+        </div>
+
+        <div class="tm-swapper-holder">
+            <div class="tm-swapper">
+                <div class="tm-animated-logo-wrapper">
+                    <div class="tm-animated-logo"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer>
+            <div class="tm-navbar">
+                <div>
+                    <a class="uk-active" href="balance">
+                        <!--<img src="images/nav-balance.svg" alt="" data-uk-svg>-->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.9843 12.0472C17.4335 12.0472 16.1718 13.3089 16.1718 14.8597C16.1718 16.4105 17.4335 17.6722 18.9843 17.6722H22.9687C22.9846 17.6722 23.0001 17.6706 23.0158 17.6698C23.0314 17.6706 23.0467 17.6722 23.0625 17.6722C23.5802 17.6722 24 17.2525 24 16.7347V9.37532C24 8.12723 23.3865 7.02028 22.4458 6.3383L19.2564 1.10612C19.1264 0.892744 18.9166 0.740119 18.6735 0.682182C18.4304 0.624151 18.1742 0.665635 17.9619 0.797353L15.6098 2.25591L14.5491 0.460885C14.4216 0.245073 14.213 0.0893545 13.9698 0.0284171C13.7268 -0.0325203 13.4693 0.00652654 13.2551 0.136651L4.22385 5.62533H2.81249C2.30339 5.62533 1.88775 5.21742 1.87528 4.71127C1.88775 4.20511 2.30339 3.79721 2.81249 3.79721H4.54687C5.06465 3.79721 5.48436 3.37749 5.48436 2.85971C5.48436 2.34193 5.06465 1.92221 4.54687 1.92221H2.81249C1.48603 1.92221 0.371202 2.84537 0.0764061 4.08291C0.0273749 4.19663 0 4.32178 0 4.45346V4.68783V4.73471V20.2503C0 22.3181 1.68225 24.0003 3.74999 24.0003H20.25C21.8667 24.0003 23.2965 22.9704 23.8078 21.4376C23.9717 20.9464 23.7063 20.4154 23.2152 20.2516C22.7241 20.0878 22.193 20.3531 22.0292 20.8443C21.7736 21.6105 21.0586 22.1253 20.25 22.1253H3.74999C2.71612 22.1253 1.875 21.2842 1.875 20.2503V7.3395C2.16839 7.44356 2.4839 7.50033 2.81249 7.50033H20.25C21.2838 7.50033 22.125 8.34145 22.125 9.37532V12.0472H18.9843ZM22.125 15.7972H18.9843C18.4674 15.7972 18.0468 15.3767 18.0468 14.8597C18.0468 14.3428 18.4674 13.9222 18.9843 13.9222H22.125V15.7972ZM7.83411 5.62538L13.4178 2.23196L14.4161 3.92138C14.4353 3.96755 14.4573 4.01307 14.4845 4.05694C14.5049 4.0898 14.5275 4.12041 14.5511 4.14985L15.4229 5.62538H7.83411ZM17.6008 5.62533L16.5639 3.87052L18.1472 2.88872L19.8153 5.62533H17.6008Z"
+                                  fill="white"/>
+                        </svg>
+                        <div>Баланс</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="offers">
+                        <!--<img src="images/nav-offers.svg" alt="" data-uk-svg>-->
+                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.952 9.4647L11.9991 1.51186C11.177 0.689674 9.83911 0.689627 9.01687 1.51186C8.27775 2.25094 8.21409 3.37814 8.7599 4.18303L8.74884 4.23839C8.17547 7.10549 6.77958 9.7138 4.71197 11.7814L1.06421 15.4291C0.240059 16.2533 0.239918 17.5872 1.06421 18.4114L3.05237 20.3995C3.87647 21.2237 5.21044 21.2237 6.03464 20.3995L6.5317 19.9025L10.011 23.3818C10.8352 24.206 12.1691 24.2061 12.9933 23.3818C13.8155 22.5596 13.8155 21.2218 12.9933 20.3996L11.5021 18.9085L11.9992 18.4114C12.8234 17.5873 12.8234 16.2534 11.9992 15.4292L11.6614 15.0913C13.3231 13.9279 15.2102 13.118 17.2255 12.7149L17.2816 12.7037C18.1044 13.2592 19.229 13.1699 19.952 12.4469H19.952C20.7741 11.6247 20.7741 10.2869 19.952 9.4647ZM5.04057 19.4055C4.76588 19.6801 4.32113 19.6802 4.04644 19.4054L2.05829 17.4173C1.78356 17.1425 1.78356 16.6979 2.05829 16.4232L5.53758 12.9439L8.51986 15.9261C8.17945 16.2665 5.38936 19.0566 5.04057 19.4055ZM11.9991 21.3936C12.2732 21.6677 12.2732 22.1136 11.9991 22.3877C11.7251 22.6617 11.2791 22.6617 11.0051 22.3877L7.52573 18.9084L8.51986 17.9143L11.9991 21.3936ZM9.51394 16.9202C9.72525 16.7089 10.0416 16.3852 10.5408 15.9588L11.0051 16.4232C11.2798 16.6979 11.2798 17.1425 11.0051 17.4173L10.508 17.9143L9.51394 16.9202ZM9.54379 14.962L6.50171 11.9199C8.13197 10.0374 9.29943 7.81532 9.92404 5.40126L16.0624 11.5396C13.6483 12.1642 11.4263 13.3316 9.54379 14.962ZM18.9578 11.4528C18.683 11.7274 18.2384 11.7274 17.9637 11.4528L10.0109 3.50001C9.73622 3.22523 9.73622 2.78067 10.0109 2.50594C10.2857 2.2312 10.7303 2.2312 11.0051 2.50594L18.9578 10.4586C19.2318 10.7327 19.2318 11.1786 18.9578 11.4528Z"
+                                  fill="white"/>
+                        </svg>
+                        <div>Акции</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="info">
+                        <!--<img src="images/nav-info.svg" alt="" data-uk-svg>-->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.937734 24C0.698812 24 0.463547 23.9087 0.285 23.7356C0.0110156 23.47 -0.074625 23.0648 0.0683906 22.7111L2.19703 17.4455C0.757594 15.5744 0 13.3793 0 11.0625C0 8.0918 1.25883 5.30358 3.54469 3.21145C5.80739 1.14052 8.81025 0 12 0C15.1897 0 18.1926 1.14052 20.4553 3.21145C22.7412 5.30358 24 8.0918 24 11.0625C24 13.1929 23.3419 15.2614 22.0968 17.0445C21.8003 17.469 21.2159 17.5728 20.7914 17.2763C20.3668 16.9799 20.263 16.3955 20.5595 15.9709C21.5837 14.5043 22.125 12.807 22.125 11.0625C22.125 5.99648 17.583 1.875 12 1.875C6.41705 1.875 1.875 5.99648 1.875 11.0625C1.875 13.1148 2.60517 15.0563 3.98653 16.6769C4.21312 16.9427 4.27317 17.3125 4.1422 17.6364L2.67192 21.2734L6.95372 19.3859C7.19105 19.2813 7.46119 19.2796 7.69978 19.3815C9.05072 19.9578 10.4975 20.25 12 20.25C13.7293 20.25 15.4359 19.8475 16.9353 19.086C17.397 18.8516 17.9612 19.0357 18.1957 19.4973C18.4301 19.959 18.246 20.5233 17.7844 20.7577C16.0232 21.6522 14.023 22.125 12 22.125C10.3837 22.125 8.82023 21.8348 7.34644 21.2619L1.31569 23.9204C1.19409 23.9739 1.06537 24 0.937734 24ZM12.9375 15.2344V10.1719C12.9375 9.65409 12.5178 9.23438 12 9.23438C11.4822 9.23438 11.0625 9.65409 11.0625 10.1719V15.2344C11.0625 15.7522 11.4822 16.1719 12 16.1719C12.5178 16.1719 12.9375 15.7522 12.9375 15.2344ZM12 6C11.4822 6 11.0625 6.41972 11.0625 6.9375C11.0625 7.45528 11.4822 7.875 12 7.875C12.5178 7.875 12.9375 7.45528 12.9375 6.9375C12.9375 6.41972 12.5178 6 12 6Z"
+                                  fill="white"/>
+                        </svg>
+                        <div>Инфо</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="map">
+                        <!--<img src="images/nav-map.svg" alt="" data-uk-svg>-->
+                        <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.9236 12.1607H15.9369C17.2667 10.1301 17.9642 8.04938 17.9642 6.08367C17.9642 2.79496 15.2887 0.119385 12 0.119385C8.71125 0.119385 6.03567 2.79496 6.03567 6.08367C6.03567 8.04938 6.73322 10.1301 8.06297 12.1607H5.07633L0 19.8806H24L18.9236 12.1607ZM7.46259 6.08372C7.46255 3.58167 9.49805 1.54621 12 1.54621C14.502 1.54621 16.5375 3.58172 16.5375 6.08367C16.5375 8.58413 15.2016 10.8508 14.0809 12.3121C14.0449 12.3589 14.009 12.4047 13.9731 12.4506C13.9365 12.4973 13.8998 12.5434 13.8632 12.5891C13.8515 12.6037 13.8398 12.6183 13.8282 12.6328C13.7917 12.6779 13.7554 12.7225 13.7191 12.7666C13.7074 12.7807 13.6958 12.7949 13.6842 12.8089C13.6479 12.8527 13.6117 12.8959 13.5757 12.9386C13.5643 12.952 13.5529 12.9654 13.5416 12.9788C13.5053 13.0215 13.4692 13.0636 13.4332 13.1052C13.4224 13.1176 13.4117 13.1299 13.401 13.1422C13.3647 13.1839 13.3286 13.225 13.2927 13.2655C13.2825 13.2769 13.2725 13.2882 13.2624 13.2996C13.226 13.3404 13.1898 13.3807 13.1539 13.4202C13.145 13.43 13.1362 13.4397 13.1273 13.4494C13.0906 13.4896 13.054 13.5294 13.0179 13.5683C13.0103 13.5765 13.0027 13.5846 12.9952 13.5927C12.9581 13.6326 12.9212 13.6718 12.8849 13.7101C12.8791 13.7162 12.8735 13.7221 12.8678 13.7281C12.8299 13.7679 12.7925 13.807 12.7556 13.8451C12.7521 13.8488 12.7487 13.8522 12.7452 13.8558C12.7064 13.8958 12.6681 13.9351 12.6306 13.9731C12.6297 13.974 12.6289 13.9748 12.6281 13.9756C12.3874 14.2194 12.1729 14.4228 12.0002 14.5807C10.778 13.4623 7.46259 10.061 7.46259 6.08372ZM5.84587 13.5876H9.1088C10.1577 14.8782 11.1418 15.7395 11.4539 16.0011C11.454 16.0012 11.4541 16.0013 11.4542 16.0014C11.4655 16.0108 11.476 16.0196 11.4855 16.0275C11.4862 16.028 11.4867 16.0284 11.4874 16.029C11.5059 16.0443 11.5212 16.0569 11.5324 16.0659C11.5333 16.0667 11.5338 16.0671 11.5347 16.0679C11.5437 16.0751 11.5501 16.0803 11.5535 16.083C11.5538 16.0833 11.5546 16.0839 11.5549 16.0841L11.555 16.0842H11.555L11.5555 16.0846L12.0001 16.4396L12.4448 16.0846L12.4453 16.0842H12.4453L12.4454 16.0841C12.4457 16.0839 12.4464 16.0833 12.4468 16.083C12.4501 16.0803 12.4566 16.0752 12.4656 16.0679C12.4664 16.0672 12.4669 16.0667 12.4679 16.0659C12.4791 16.0569 12.4943 16.0443 12.5129 16.029C12.5136 16.0284 12.5141 16.028 12.5148 16.0275C12.5243 16.0196 12.5347 16.0108 12.5461 16.0014C12.5462 16.0013 12.5463 16.0012 12.5464 16.0011C12.8586 15.7394 13.8426 14.8782 14.8915 13.5876H18.1544L21.3543 18.4537H2.646L5.84587 13.5876Z"
+                                  fill="white"/>
+                        </svg>
+                        <div>Карта</div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Off-canvas -->
+    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <div class="uk-card uk-flex uk-flex-center">
+                <ul class="uk-nav">
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="tm-message">
+    <div class="tm-message-content-1">
+        Введеный номер телефона еще не зарегистрирован в системе.
+    </div>
+    <div class="tm-message-content-2">
+        На ваш баланс зачислено <span>100</span> рублей.
+    </div>
+    <div class="tm-message-content-3">
+        Введен некорректный телефонный номер или пароль
+    </div>
+    <div class="tm-message-content-4">
+        Ваша подписка пополнена на <span>100</span> рублей.
+    </div>
+    <div class="tm-message-content-5">
+        Ваша подписка отменена.
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/vendors.e96fd54eb800406f5d8f.js"></script><script type="text/javascript" src="scripts/app.e96fd54eb800406f5d8f.js"></script></body>
+</html>
