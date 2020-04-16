@@ -930,6 +930,7 @@ h3 {
   border-right: 2px solid #0066AE;
   transition: all 1s;
   box-sizing: border-box;
+  text-align: center;
 }
 .tm-tabs .tm-tab svg path {
   transition: fill 1s;
@@ -941,11 +942,11 @@ h3 {
   fill: #ffffff;
 }
 .tm-tabs .tm-tab:first-child {
-  padding: 0 20px 0 25px;
+  padding: 0 20px;
   width: 46%;
 }
 .tm-tabs .tm-tab:nth-child(2) {
-  padding: 0 25px 0 20px;
+  padding: 0 20px;
   width: 42%;
 }
 .tm-tabs .tm-sheet {
