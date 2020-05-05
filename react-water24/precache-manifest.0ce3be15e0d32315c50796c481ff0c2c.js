@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-water24/static/media/icon-succ.6bb9bb76.svg"
   },
   {
-    "revision": "8d9c8ac6eda57442ac6d",
+    "revision": "b3a52396c41b102b91ca",
     "url": "/react-water24/static/css/main.e696006c.chunk.css"
   },
   {
@@ -68,8 +68,8 @@ self.__precacheManifest = [
     "url": "/react-water24/static/media/icon-sheet.a00a5e33.svg"
   },
   {
-    "revision": "8d9c8ac6eda57442ac6d",
-    "url": "/react-water24/static/js/main.8d9c8ac6.chunk.js"
+    "revision": "b3a52396c41b102b91ca",
+    "url": "/react-water24/static/js/main.b3a52396.chunk.js"
   },
   {
     "revision": "bbee16f65996e038992434baf3396210",
@@ -128,15 +128,15 @@ self.__precacheManifest = [
     "url": "/react-water24/static/media/Ubuntu-Regular.2505bfbd.ttf"
   },
   {
-    "revision": "8e22c2a6e3a3c679787e763a97fa11f7",
-    "url": "/react-water24/static/media/Ubuntu-Medium.8e22c2a6.ttf"
-  },
-  {
     "revision": "e00e2a77dd88a8fe75573a5d993af76a",
     "url": "/react-water24/static/media/Ubuntu-Bold.e00e2a77.ttf"
   },
   {
-    "revision": "38d49430677c0a3ed30791bb3110f317",
+    "revision": "8e22c2a6e3a3c679787e763a97fa11f7",
+    "url": "/react-water24/static/media/Ubuntu-Medium.8e22c2a6.ttf"
+  },
+  {
+    "revision": "09dc3e4b6916913b3938c1168adbfabd",
     "url": "/react-water24/index.html"
   }
 ];

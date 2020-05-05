@@ -1,7 +1,7 @@
 {
   "main.css": "/react-water24/static/css/main.e696006c.chunk.css",
-  "main.js": "/react-water24/static/js/main.8d9c8ac6.chunk.js",
-  "main.js.map": "/react-water24/static/js/main.8d9c8ac6.chunk.js.map",
+  "main.js": "/react-water24/static/js/main.b3a52396.chunk.js",
+  "main.js.map": "/react-water24/static/js/main.b3a52396.chunk.js.map",
   "static/js/1.db1b28b2.chunk.js": "/react-water24/static/js/1.db1b28b2.chunk.js",
   "static/js/1.db1b28b2.chunk.js.map": "/react-water24/static/js/1.db1b28b2.chunk.js.map",
   "runtime~main.js": "/react-water24/static/js/runtime~main.ff68342c.js",
@@ -14,7 +14,7 @@
   "static/media/offers-2.png": "/react-water24/static/media/offers-2.1a04dda3.png",
   "static/media/offers-3.png": "/react-water24/static/media/offers-3.6745c1f4.png",
   "static/media/offers-4.png": "/react-water24/static/media/offers-4.51067ce9.png",
-  "static/media/styles.css": "/react-water24/static/media/Ubuntu-Bold.e00e2a77.ttf",
+  "static/media/styles.css": "/react-water24/static/media/Ubuntu-Medium.8e22c2a6.ttf",
   "static/media/icon-balloon.svg": "/react-water24/static/media/icon-balloon.a6c9ed64.svg",
   "static/media/icon-sheet.svg": "/react-water24/static/media/icon-sheet.a00a5e33.svg",
   "static/media/logo-login.svg": "/react-water24/static/media/logo-login.ec977f6c.svg",
@@ -29,6 +29,6 @@
   "static/media/news-pensioners.jpg": "/react-water24/static/media/news-pensioners.d2857d3a.jpg",
   "static/css/main.e696006c.chunk.css.map": "/react-water24/static/css/main.e696006c.chunk.css.map",
   "index.html": "/react-water24/index.html",
-  "precache-manifest.37f02b0811417fc3f9076c7e52427408.js": "/react-water24/precache-manifest.37f02b0811417fc3f9076c7e52427408.js",
+  "precache-manifest.0ce3be15e0d32315c50796c481ff0c2c.js": "/react-water24/precache-manifest.0ce3be15e0d32315c50796c481ff0c2c.js",
   "service-worker.js": "/react-water24/service-worker.js"
 }
