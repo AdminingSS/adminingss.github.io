@@ -1432,9 +1432,8 @@ select.disabled {
 }
 .tm-complex-container {
   height: 120px;
-  overflow: hidden;
   background-color: #f1f0f0;
-  padding: 8px 15px 0;
+  padding: 8px 0 0 15px;
   margin-bottom: 10px !important;
 }
 .tm-complex-container .tm-sub-tier {
@@ -1818,6 +1817,12 @@ footer .tm-address::before {
 }
 .mCSB_scrollTools {
   right: -5px;
+}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #2a8d1d !important;
+}
+.mCSB_inside > .mCSB_container {
+  margin-right: 20px;
 }
 @media (min-width: 960px) {
   .uk-section {
