@@ -2144,6 +2144,27 @@ select.disabled {
 .tm-file-input {
   border-radius: 3px;
 }
+.tm-header-fixed {
+  position: fixed;
+  top: -80px;
+  left: 0;
+  right: 0;
+  height: 70px;
+  box-shadow: 0px -20px 40px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 5000;
+  transition: all 0.5s;
+  opacity: 0.5;
+}
+.tm-header-fixed .uk-navbar-item,
+.tm-header-fixed .uk-navbar-nav > li > a,
+.tm-header-fixed .uk-navbar-toggle {
+  min-height: 70px;
+}
+.tm-header-fixed.tm-header-visible {
+  top: 0;
+  opacity: 1;
+}
 .uk-navbar-nav > li > a.tm-icon-dropdown {
   position: relative;
   padding-right: 24px;
