@@ -442,6 +442,8 @@ select.disabled {
 }
 .uk-card {
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
 }
 .uk-card .uk-card-body {
   padding: 15px;
@@ -538,6 +540,15 @@ select.disabled {
   color: #1868a0;
   text-decoration: none;
 }
+.uk-accordion > *:first-child .uk-accordion-title {
+  border-radius: 3px 3px 0 0;
+}
+.uk-accordion > *:last-child:not(.uk-open) .uk-accordion-title {
+  border-radius: 0 0 3px 3px;
+}
+.uk-accordion > *:last-child .uk-accordion-content {
+  border-radius: 0 0 3px 3px;
+}
 .uk-accordion-content {
   border: 1px solid #d8d8d8;
   border-top: none;
@@ -570,9 +581,11 @@ select.disabled {
   box-sizing: border-box;
   height: 30px;
   line-height: 30px;
+  border-radius: 3px;
 }
 .uk-textarea {
   height: 90px;
+  border-radius: 3px;
 }
 .tm-badge {
   padding: 6px 8px;
@@ -641,6 +654,7 @@ select.disabled {
   background-color: #f2f2f2;
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2);
   margin: 60px 0;
+  border-radius: 3px;
 }
 .tm-promobox .tm-promobox-price {
   font-size: 26px;
@@ -662,6 +676,7 @@ select.disabled {
   color: #004085;
   background-color: #bcdeff;
   margin-bottom: 30px;
+  border-radius: 3px;
 }
 .tm-message.warning {
   color: #721c24;
@@ -680,6 +695,8 @@ select.disabled {
   cursor: pointer;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
+  border-radius: 3px;
+  overflow: hidden;
 }
 .tm-navigator .tm-navigator-item.squared::before {
   content: "";
@@ -852,6 +869,12 @@ select.disabled {
   text-decoration: none;
   color: #ffffff;
 }
+.tm-pagination li:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.tm-pagination li:last-child {
+  border-radius: 0 3px 3px 0;
+}
 .tm-switch {
   position: relative;
   display: inline-block;
@@ -977,6 +1000,8 @@ select.disabled {
   position: relative;
   cursor: pointer;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
 }
 .tm-slider-gallery .tm-slider-image-wrapper::before {
   position: relative;
@@ -1097,7 +1122,9 @@ select.disabled {
 .tm-sidemain .tm-content-panel {
   width: 825px;
   height: 255px;
-  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
   display: flex;
   align-items: stretch;
   margin-bottom: 30px;
@@ -1152,6 +1179,7 @@ select.disabled {
   border: solid 1px #e1e1e1;
   cursor: pointer;
   margin-bottom: 10px;
+  border-radius: 3px;
 }
 .tm-sidemain .tm-content-panel .tm-panel-details .tm-tour-dates-other::before {
   position: absolute;
@@ -1175,6 +1203,7 @@ select.disabled {
 .tm-sidemain .tm-content-panel .tm-panel-details .uk-button {
   background-color: #1868a0;
   transition: all 0.5s;
+  border-radius: 0 0 3px 0;
 }
 .tm-sidemain .tm-content-panel .tm-panel-details .uk-button svg {
   transition: all 0.5s;
@@ -1232,6 +1261,7 @@ select.disabled {
   position: relative;
   font-size: 14px;
   padding-left: 25px;
+  border-radius: 3px;
 }
 .tm-tour-type::before {
   position: absolute;
@@ -1469,7 +1499,13 @@ select.disabled {
   position: relative;
   display: inline-block;
   margin-bottom: 8px;
-  width: calc(50% - 2px);
+  width: 50%;
+}
+.tm-input-selector-wrapper:first-child input {
+  border-radius: 3px 0 0 3px;
+}
+.tm-input-selector-wrapper:last-child input {
+  border-radius: 0 3px 3px 0;
 }
 .tm-input-selector-wrapper .uk-input {
   padding: 0 25px;
@@ -1512,6 +1548,8 @@ select.disabled {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 3px;
+  overflow: hidden;
 }
 .tm-global-image-wrapper img {
   min-width: 100%;
@@ -2092,6 +2130,9 @@ select.disabled {
 }
 .tm-zebra-container .tm-zebra-item:nth-child(2n) {
   background-color: #e8e8e8;
+}
+.tm-file-input {
+  border-radius: 3px;
 }
 .uk-navbar-nav > li > a.tm-icon-dropdown {
   position: relative;
