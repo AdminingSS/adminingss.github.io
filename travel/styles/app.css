@@ -477,6 +477,8 @@ select.disabled {
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   overflow: hidden;
+  height: 100%;
+  margin-right: 30px;
 }
 .uk-card .uk-card-body {
   padding: 15px;
@@ -2226,6 +2228,175 @@ select.disabled {
 .tm-top-search-panel > div:nth-child(-n+3) {
   margin-right: 15px;
 }
+.tm-links-slider-controls {
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.tm-links-slider-controls a {
+  padding: 0 15px;
+  line-height: 29px;
+  color: #444444;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.tm-links-slider-controls a:hover,
+.tm-links-slider-controls a.uk-active {
+  background-color: #1868a0;
+  color: #ffffff;
+}
+.tm-news-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 30px;
+}
+.tm-news-container > div {
+  margin-bottom: 15px;
+}
+.tm-news-container .slick-prev,
+.tm-news-container .slick-next {
+  top: auto;
+  bottom: -30px;
+}
+.tm-news-container .slick-prev::before,
+.tm-news-container .slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 26px;
+  color: #1868a0;
+  opacity: 1;
+}
+.tm-news-container .slick-prev:hover::before,
+.tm-news-container .slick-next:hover::before {
+  opacity: 0.75;
+}
+.tm-news-container .slick-prev {
+  left: 15px;
+  z-index: 10;
+}
+.tm-news-container .slick-prev::before {
+  content: "\F104";
+}
+.tm-news-container .slick-next {
+  right: 15px;
+  z-index: 10;
+}
+.tm-news-container .slick-next::before {
+  content: "\F105";
+}
+.tm-news-container .slick-dots {
+  bottom: -20px;
+  top: auto;
+}
+.tm-news-container .slick-dots li button {
+  height: 16px;
+  width: 16px;
+}
+.tm-news-container .slick-dots li button::before {
+  box-sizing: border-box;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 6px;
+  height: 6px;
+  line-height: 6px;
+  background-color: #1868a0;
+  border: none;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.tm-news-container .slick-dots li button:hover::before {
+  opacity: 0.5;
+}
+.tm-news-container .slick-dots li.slick-active button:before {
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  opacity: 1;
+  border: 2px solid #1868a0;
+}
+.tm-mobile-header {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 5001;
+  transition: all 0.5s;
+}
+.tm-mobile-header .uk-navbar-left {
+  width: auto;
+}
+.tm-mobile-header .uk-navbar-right {
+  width: auto;
+  margin-left: auto;
+}
+.tm-mobile-header.top-visible {
+  top: 0;
+}
+.uk-offcanvas-bar {
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #444444;
+  padding: 20px 0;
+  width: 100%;
+}
+.uk-offcanvas-bar a {
+  color: #444444;
+}
+.uk-offcanvas-bar a:hover {
+  color: #444444;
+  background-color: #dee2e6;
+}
+.uk-offcanvas-bar .uk-card {
+  box-shadow: none;
+}
+.uk-offcanvas-bar .uk-nav {
+  width: 100%;
+}
+.uk-offcanvas-bar .uk-nav li a {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.uk-offcanvas-bar .uk-navbar-dropdown {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+.uk-offcanvas-bar .js-dropdown-content {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  align-items: center;
+  background-color: #fff;
+}
+.uk-offcanvas-bar .uk-offcanvas-close {
+  color: #444444;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  top: 0;
+  right: 0;
+}
+.uk-offcanvas-bar .uk-offcanvas-close:hover {
+  color: #000000;
+}
+.uk-offcanvas-bar .uk-offcanvas-close svg {
+  height: 19px;
+  width: 19px;
+  margin: 0 0 3px 8px;
+}
+.uk-offcanvas-bar .uk-offcanvas-close svg line {
+  stroke-width: 4;
+}
 .uk-navbar-nav > li > a.tm-icon-dropdown {
   position: relative;
   padding-right: 24px;
@@ -2682,7 +2853,7 @@ footer .tm-address::before {
     margin: auto;
   }
   .tm-footer-adapitive > div {
-    margin-bottom: 30px;
+    margin: 0 auto 15px;
   }
   .tm-top-search .tm-top-search-caption,
   .tm-top-slider .tm-top-slider-caption {
@@ -2730,5 +2901,14 @@ footer .tm-address::before {
   }
   .tm-breadcrumb-legend {
     font-size: 10px;
+  }
+  .tm-links-slider-controls {
+    display: flex;
+  }
+  .js-slider-mobile-links h6 {
+    display: none;
+  }
+  .uk-card {
+    margin: 0 auto;
   }
 }
