@@ -274,12 +274,16 @@
             </div>
 
             <div class="tm-sidebar-toggle">
-                <button class="uk-button uk-width-1-1 uk-text-center tm-button-primary"><i class="fas fa-filter"></i> Фильтр-поиск по турам</button>
+                <button class="uk-button uk-width-1-1 uk-text-center tm-button-primary"><i class="fas fa-filter"></i>
+                    Фильтр-поиск по турам
+                </button>
             </div>
 
             <!-- Section -->
-            <div class="tm-section-solid tm-top-search uk-section uk-cover-container">
-                <img class="tm-bg-image" src="images/bg-solid-1.jpg" alt="" data-uk-cover>
+            <div class="tm-section-solid tm-top-search uk-section">
+                <div class="tm-cover uk-cover-container">
+                    <img class="tm-bg-image" src="images/bg-solid-1.jpg" alt="" data-uk-cover>
+                </div>
                 <div class="uk-container uk-height-1-1 uk-flex uk-flex-center uk-flex-middle uk-text-center">
                     <div>
                         <div class="tm-top-search-caption">Найди своё путешествие</div>
@@ -287,7 +291,7 @@
                             <div>
                                 <div class="tm-select">
                                     <input class="uk-hidden" name="where">
-                                    <div class="tm-select-pseudo inactive">Куда</div>
+                                    <div class="tm-select-pseudo">Куда?</div>
                                     <div class="tm-select-pseudo-items" data-uk-dropdown="mode: click; delay-hide: 50">
                                         <div class="tm-drop-header">
                                             <div class="tm-where-caption">
@@ -303,7 +307,7 @@
                                                     <input class="" type="checkbox" name="checkbox1">
                                                     Калыма
                                                 </label>
-                                                <div class="tm-sub-tier">
+                                                <div class="tm-sub-tier uk-open">
                                                     <label>
                                                         <input type="checkbox" name="checkbox1">
                                                         Магодан-магодан
@@ -338,9 +342,19 @@
                                 </div>
                             </div>
                             <div>
-                                <select name="when">
-                                    <option value="" selected disabled>Когда</option>
-                                </select>
+                                <div class="tm-select">
+                                    <input class="uk-hidden" name="where">
+                                    <div class="tm-select-pseudo">Когда?</div>
+                                    <div class="tm-select-pseudo-items" data-uk-dropdown="mode: click; delay-hide: 50">
+                                        <div class="tm-drop-header">
+                                            <div class="tm-where-caption">
+                                                Выберите дату
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div>
                                 <div class="tm-select">
@@ -534,6 +548,14 @@
                                     <div class="uk-width-auto@l">
                                         <div class="tm-panel-image-wrapper">
                                             <img src="images/img-panel-1.png" alt="">
+                                            <div class="tm-panel-image-icons">
+                                                <div class="tm-icon-places">
+                                                    <b>2</b> мест осталось
+                                                </div>
+                                                <div class="tm-icon-see">
+                                                    <b>8</b> человек смотрит
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
@@ -626,6 +648,11 @@
                                     <div class="uk-width-auto@l">
                                         <div class="tm-panel-image-wrapper">
                                             <img src="images/img-panel-2.png" alt="">
+                                            <div class="tm-panel-image-icons">
+                                                <div class="tm-icon-see">
+                                                    <b>2</b> человек смотрит
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
@@ -2067,13 +2094,41 @@
                     </li>
                     <li><a href="#">Без выпадайки</a></li>
                     <li><a href="#">100500 пунктов влезет теперь</a></li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Ещё что-нибудь</a></li>
+                    <li><a href="#">И ещё что-нибудь</a></li>
+                    <li>
+                        <a href="#" class="tm-icon-dropdown">In english please</a>
+                        <div class="uk-navbar-dropdown"
+                             data-uk-drop="mode: click">
+                            <div class="uk-container">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
+
             </div>
 
         </div>
     </div>
 
 </div>
+
+<a href="#" class="tm-button-seen tm-visible">
+    <i class="fas fa-eye"></i>
+    <span>22</span>
+</a>
+
+<a href="#" class="tm-button-totop tm-visible">
+    <i class="fas fa-chevron-up"></i>
+</a>
 
 <script type="text/javascript" src="scripts/app.js"></script><script type="text/javascript" src="scripts/vendors.js"></script></body>
 </html>
