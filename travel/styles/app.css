@@ -158,8 +158,8 @@ select.disabled {
 .tm-select .tm-select-pseudo {
   box-sizing: border-box;
   width: 150px;
-  height: 30px;
-  line-height: 30px;
+  height: 48px;
+  line-height: 48px;
   text-align: left;
   padding: 0 10px;
   background-color: #fff;
@@ -183,7 +183,7 @@ select.disabled {
 .tm-select .tm-select-pseudo-items.what {
   width: 600px;
   padding: 15px 0;
-  max-height: 300px;
+  max-height: 320px;
 }
 .tm-select .tm-select-pseudo-items .tm-drop-header {
   padding: 0 15px;
@@ -2289,6 +2289,10 @@ select.disabled {
 }
 .tm-top-search-panel > div:nth-child(-n+3) {
   margin-right: 15px;
+}
+.tm-top-search-panel .uk-button:not(.uk-button-small) {
+  height: 48px;
+  line-height: 48px;
 }
 .tm-links-slider-controls {
   display: none;
