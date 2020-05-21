@@ -2751,6 +2751,9 @@ body .tm-header-fixed .uk-navbar-nav > li > a {
 }
 .tm-order-form {
   position: relative;
+  border: 1px solid #cccccc;
+  padding: 30px;
+  margin-bottom: 30px;
 }
 .tm-order-personal h4 {
   margin-bottom: 8px;
@@ -2776,7 +2779,7 @@ body .tm-header-fixed .uk-navbar-nav > li > a {
 }
 .tm-sidebar-absolute {
   position: absolute;
-  top: -30px;
+  top: 10px;
   left: calc(100% + 30px);
 }
 .tm-sidebar-absolute > * {
