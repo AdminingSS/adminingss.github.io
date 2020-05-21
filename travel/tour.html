@@ -293,15 +293,121 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="uk-button tm-button-primary uk-width-1-1">Оформить заказ<i
+                                    <button class="uk-button tm-button-primary uk-width-1-1 js-order-trigger">Оформить заказ<i
                                             class="fas fa-long-arrow-alt-right uk-margin-small-left"></i></button>
                                     <!--<div class="tm-note">-->
-                                        <!--Указать число участников, выбрать опции и т.д.-->
+                                    <!--Указать число участников, выбрать опции и т.д.-->
                                     <!--</div>-->
                                 </div>
                             </div>
                             <div class="tm-dropdown-top">
                                 <a href="#">2 взрослых, 1 двухместный зиндан (изменить)</a>
+                                <div class="tm-dropdown-simple" data-uk-dropdown="mode: click; pos: bottom-right">
+                                    <div class="uk-container">
+                                        <div><b>Туристы:</b></div>
+                                        <div class="tm-peoples">
+                                            <div class="tm-peoples-adult">
+                                                <div class="tm-people">Взрослых</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="99">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>чел.</div>-->
+                                            </div>
+                                            <div class="tm-peoples-child">
+                                                <div class="tm-people">Дети</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="7">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>чел.</div>-->
+                                            </div>
+                                        </div>
+
+                                        <div><b>Проживание:</b></div>
+                                        <div class="tm-apartments">
+                                            <div class="tm-apts">
+                                                <div class="tm-apt-name">Одноместный зиндан</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="999">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>шт.</div>-->
+                                            </div>
+                                            <div class="tm-apts">
+                                                <div class="tm-apt-name">Двухместный ублиет</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="1">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>шт.</div>-->
+                                            </div>
+                                            <div class="tm-apts">
+                                                <div class="tm-apt-name">Трёхместный острог (детский)</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="1">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>шт.</div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -321,7 +427,7 @@
                     </a>
                 </div>
                 <div class="uk-width-auto">
-                    <a href="#" class="tm-dop-order">
+                    <a href="#" class="tm-dop-order js-order-trigger">
                         оформить<br/>
                         заказ
                     </a>
@@ -337,7 +443,7 @@
                             <div class="tm-top-slider-caption">Бегом по Северному Кавказу
                             </div>
                             <div class="tm-top-slider-desc">Узнайте, что такое Нохчин Джумахария Ичкери!</div>
-                            <button class="uk-button tm-button-primary">Оформить заказ<i
+                            <button class="uk-button tm-button-primary js-order-trigger">Оформить заказ<i
                                     class="fas fa-long-arrow-alt-right uk-margin-left"></i></button>
                         </div>
                     </div>
@@ -350,7 +456,7 @@
                                 пойдёт в 2 строки
                             </div>
                             <div class="tm-top-slider-desc">Тут короткое описание предлагаемого тура или типа того</div>
-                            <button class="uk-button tm-button-primary">Оформить заказ<i
+                            <button class="uk-button tm-button-primary js-order-trigger">Оформить заказ<i
                                     class="fas fa-long-arrow-alt-right uk-margin-left"></i></button>
                         </div>
                     </div>
@@ -362,7 +468,7 @@
                             <div class="tm-top-slider-caption">По православным мечетям Твери
                             </div>
                             <div class="tm-top-slider-desc">Тверь - это мекка воинствующего православия</div>
-                            <button class="uk-button tm-button-primary">Оформить заказ<i
+                            <button class="uk-button tm-button-primary js-order-trigger">Оформить заказ<i
                                     class="fas fa-long-arrow-alt-right uk-margin-left"></i></button>
                         </div>
                     </div>
@@ -562,7 +668,7 @@
                                     </div>
                                     <div class="uk-width-1-2@m">
                                         <div class="tm-promobox-price">55 800 руб.</div>
-                                        <button class="uk-button uk-button-large tm-button-secondary uk-width-expand uk-margin-small-bottom">
+                                        <button class="uk-button uk-button-large tm-button-secondary uk-width-expand uk-margin-small-bottom js-order-trigger">
                                             Оформить заказ<i
                                                 class="fas fa-long-arrow-alt-right uk-margin-left"></i></button>
                                         <div class="tm-note">Указать число участников, выбрать опции и т.д.</div>
@@ -1010,14 +1116,17 @@
                                 <div class="tm-order-personal">
                                     <h2>Покупка тура онлайн</h2>
                                     <div class="uk-margin-medium-bottom">Для покупки необходимо заполнить оба поля</div>
-                                    <div class="uk-grid-small uk-child-width-1-2@s uk-flex-bottom uk-margin-medium-bottom" data-uk-grid>
+                                    <div class="uk-grid-small uk-child-width-1-2@s uk-flex-bottom uk-margin-medium-bottom"
+                                         data-uk-grid>
                                         <div class="uk-margin-small-bottom">
                                             <label class="uk-form-label">Телефон:</label>
-                                            <input class="uk-input uk-width-expand" type="text" placeholder="+7 953 635 86 34">
+                                            <input class="uk-input uk-width-expand" type="text"
+                                                   placeholder="+7 953 635 86 34">
                                         </div>
                                         <div class="uk-margin-small-bottom">
                                             <label class="uk-form-label">Email:</label>
-                                            <input class="uk-input uk-width-expand" type="text" placeholder="papa.piy_mamu.biy@gnobil.su">
+                                            <input class="uk-input uk-width-expand" type="text"
+                                                   placeholder="papa.piy_mamu.biy@gnobil.su">
                                         </div>
                                     </div>
                                     <div class="uk-margin-bottom uk-flex uk-flex-middle">
@@ -1055,10 +1164,12 @@
                                     <div class="uk-margin-medium-bottom">
                                         <h4>Покупатель</h4>
                                         <div class="uk-margin-small-bottom">
-                                            Если документы под рукой, можете сразу заполнить информацию о покупателе. Это
+                                            Если документы под рукой, можете сразу заполнить информацию о покупателе.
+                                            Это
                                             можно сделать и позже.
                                         </div>
-                                        <a class="tm-toggler-proximity uk-margin-bottom" href="#">Заполнить информацию</a>
+                                        <a class="tm-toggler-proximity uk-margin-bottom" href="#">Заполнить
+                                            информацию</a>
                                         <div class="uk-hidden">
                                             <div class="tm-grid-margin-small uk-grid-small uk-flex-middle uk-margin-bottom"
                                                  data-uk-grid>
@@ -1102,7 +1213,8 @@
                                             Если документы под рукой, можете сразу заполнить информацию о туристах. Это
                                             можно сделать и позже.
                                         </div>
-                                        <a class="tm-toggler-proximity uk-margin-bottom" href="#">Заполнить информацию</a>
+                                        <a class="tm-toggler-proximity uk-margin-bottom" href="#">Заполнить
+                                            информацию</a>
                                         <div class="uk-hidden">
                                             <div><b>Первый турист</b></div>
                                             <div class="tm-grid-margin-small uk-grid-small uk-flex-middle uk-margin-bottom"
@@ -1201,23 +1313,124 @@
 
                                 </div>
                                 <div class="tm-sidebar-absolute">
-                                    <div class="price">999 999 руб.</div>
-                                    <a href="#" class="tm-button-link">
-                                    <span>2 взрослых,
-                                    1 двухместный зиндан
-                                    (изменить)</span>
-                                    </a>
                                     <div class="name">По православным мечетям Твери</div>
+                                    <div class="price">999 999 руб.</div>
+                                    <!--<a href="#" class="tm-button-link">-->
+                                    <!--<span>2 взрослых,-->
+                                    <!--1 двухместный зиндан-->
+                                    <!--(изменить)</span>-->
+                                    <!--</a>-->
+
+                                    <div><b>Туристы:</b></div>
+                                    <div class="tm-peoples">
+                                        <div class="tm-peoples-adult">
+                                            <div class="tm-people">Взрослых</div>
+                                            <div>
+                                                <div class="tm-qty-form">
+                                                    <div>
+                                                        <button class="tm-button-minus">
+                                                            -
+                                                        </button>
+                                                    </div>
+                                                    <input class="uk-input" type="text" value="99">
+                                                    <div>
+                                                        <button class="tm-button-plus">
+                                                            +
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<div>чел.</div>-->
+                                        </div>
+                                        <div class="tm-peoples-child">
+                                            <div class="tm-people">Дети</div>
+                                            <div>
+                                                <div class="tm-qty-form">
+                                                    <div>
+                                                        <button class="tm-button-minus">
+                                                            -
+                                                        </button>
+                                                    </div>
+                                                    <input class="uk-input" type="text" value="7">
+                                                    <div>
+                                                        <button class="tm-button-plus">
+                                                            +
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<div>чел.</div>-->
+                                        </div>
+                                    </div>
+
+                                    <div><b>Проживание:</b></div>
+                                    <div class="tm-apartments">
+                                        <div class="tm-apts">
+                                            <div class="tm-apt-name">Одноместный зиндан</div>
+                                            <div>
+                                                <div class="tm-qty-form">
+                                                    <div>
+                                                        <button class="tm-button-minus">
+                                                            -
+                                                        </button>
+                                                    </div>
+                                                    <input class="uk-input" type="text" value="999">
+                                                    <div>
+                                                        <button class="tm-button-plus">
+                                                            +
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<div>шт.</div>-->
+                                        </div>
+                                        <div class="tm-apts">
+                                            <div class="tm-apt-name">Двухместный ублиет</div>
+                                            <div>
+                                                <div class="tm-qty-form">
+                                                    <div>
+                                                        <button class="tm-button-minus">
+                                                            -
+                                                        </button>
+                                                    </div>
+                                                    <input class="uk-input" type="text" value="1">
+                                                    <div>
+                                                        <button class="tm-button-plus">
+                                                            +
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<div>шт.</div>-->
+                                        </div>
+                                        <div class="tm-apts">
+                                            <div class="tm-apt-name">Трёхместный острог (детский)</div>
+                                            <div>
+                                                <div class="tm-qty-form">
+                                                    <div>
+                                                        <button class="tm-button-minus">
+                                                            -
+                                                        </button>
+                                                    </div>
+                                                    <input class="uk-input" type="text" value="1">
+                                                    <div>
+                                                        <button class="tm-button-plus">
+                                                            +
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<div>шт.</div>-->
+                                        </div>
+                                    </div>
+
+                                    <div><b>Питание:</b></div>
+                                    <div class="tm-tour-meal uk-margin-bottom">Помои</div>
+
                                     <div><b>Даты тура:</b></div>
-                                    <div class="tm-dates">2 июня 2020 - 6 июня 2020</div>
+                                    <div class="tm-dates  uk-margin-bottom">2 июня 2020 - 6 июня 2020</div>
                                     <div><b>Место тура:</b></div>
                                     <div class="tm-tour-place">Грозный, Чечня</div>
-                                    <div><b>Проживание:</b></div>
-                                    <div><a href="#">Зиндан Баура 6*</a></div>
-                                    <div class="tm-tour-meal">Помои</div>
-                                    <div class="tm-tour-night tm-tour-camp">
-                                        1 Двухместный ублиет
-                                    </div>
 
                                     <hr class="uk-margin-top uk-margin-medium-bottom">
 
@@ -1331,12 +1544,118 @@
                                     1 двухместный зиндан
                                     (изменить)</span>
                                 </a>
+                                <div class="tm-dropdown-simple" data-uk-dropdown="mode: click; pos: bottom-right">
+                                    <div class="uk-container">
+                                        <div><b>Туристы:</b></div>
+                                        <div class="tm-peoples">
+                                            <div class="tm-peoples-adult">
+                                                <div class="tm-people">Взрослых</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="99">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>чел.</div>-->
+                                            </div>
+                                            <div class="tm-peoples-child">
+                                                <div class="tm-people">Дети</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="7">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>чел.</div>-->
+                                            </div>
+                                        </div>
+
+                                        <div><b>Проживание:</b></div>
+                                        <div class="tm-apartments">
+                                            <div class="tm-apts">
+                                                <div class="tm-apt-name">Одноместный зиндан</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="999">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>шт.</div>-->
+                                            </div>
+                                            <div class="tm-apts">
+                                                <div class="tm-apt-name">Двухместный ублиет</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="1">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>шт.</div>-->
+                                            </div>
+                                            <div class="tm-apts">
+                                                <div class="tm-apt-name">Трёхместный острог (детский)</div>
+                                                <div>
+                                                    <div class="tm-qty-form">
+                                                        <div>
+                                                            <button class="tm-button-minus">
+                                                                -
+                                                            </button>
+                                                        </div>
+                                                        <input class="uk-input" type="text" value="1">
+                                                        <div>
+                                                            <button class="tm-button-plus">
+                                                                +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div>шт.</div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="uk-margin-small-bottom">
-                                <button class="uk-button tm-button-order tm-button-primary">Оформить заказ</button>
+                                <button class="uk-button tm-button-order tm-button-primary js-order-trigger">Оформить заказ</button>
                             </div>
                             <!--<div class="tm-note uk-margin-bottom">Указать число участников, выбрать-->
-                                <!--опции и т.д.-->
+                            <!--опции и т.д.-->
                             <!--</div>-->
                             <div class="tm-tour-features">
                                 <div class="tm-tour-feature">
