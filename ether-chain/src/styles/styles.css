@@ -75,7 +75,8 @@ a {
   border: none;
   color: #ffffff;
   text-transform: uppercase;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; }
   .button:focus {
     outline: none; }
   .button .button-content {
