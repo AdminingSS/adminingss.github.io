@@ -39,8 +39,19 @@ p {
   margin: 0 0 35px;
 }
 
+a {
+  color: #ff00ff;
+}
+
 .section {
   padding: 50px 0 50px;
+
+  &.bg-hidden {
+    background-image: url(../images/bg-hidden.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
 }
 
 .section-top {
@@ -62,10 +73,11 @@ p {
   margin: 0 auto 45px;
   box-sizing: border-box;
   border: 5px solid #a523ff;
-  background: #040107;
-  background: radial-gradient(#9508fe, #040107);
-  line-height: 70px;
-  font-size: 70px;
+  background: #040107!important;
+  background: radial-gradient(#9508fe, #040107)!important;
+  line-height: 70px!important;
+  font-size: 50px;
+  color: #ffffff!important;
 }
 
 .button {
@@ -138,6 +150,7 @@ p {
   padding: 35px;
   border: 1px solid cyan;
   margin-bottom: 30px;
+  max-width: 100%;
 }
 
 .panel-join-display {
@@ -156,10 +169,10 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 25px;
   margin-bottom: 30px;
 
   a {
+    white-space: nowrap;
     width: 30%;
     position: relative;
     display: block;
@@ -191,7 +204,7 @@ p {
       transition: all 0.5s;
     }
 
-    &:hover {
+    &:hover, &.active {
       &::before {
         background-color: #ef00f0;
       }
@@ -257,6 +270,8 @@ p {
   margin-bottom: 100px;
 
   text-align: left;
+
+  max-width: 100%;
 }
 
 .panel-info-item {
@@ -307,4 +322,142 @@ p {
     color: #ff00ff;
   }
 
+}
+
+
+//adaptive
+@media (max-width: 767px) {
+  .container {
+    max-width: 610px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 639px) {
+  h2 {
+    font-size: 42px;
+    margin: 0 0 25px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+
+  .section {
+    padding: 20px 0 20px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .button {
+    width: 300px;
+    height: 90px;
+
+    .button-content {
+      margin: 0 26px;
+      line-height: 90px;
+
+      &::before {
+        left: -26px;
+        border-width: 45px 26px 45px 0;
+      }
+
+      &::after {
+        right: -26px;
+        border-width: 45px 0 45px 26px;
+      }
+    }
+
+    .button-image {
+      top: 3px;
+      left: 6px;
+      bottom: 3px;
+      right: 6px;
+    }
+  }
+
+  .panel-join {
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .panel-join-values a {
+    padding: 15px 10px;
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+
+  .panel-join-controls {
+    .button {
+      width: 130px;
+      height: 42px;
+      font-size: 16px;
+      margin: 0 0 20px;
+
+      .button-content {
+        line-height: 42px;
+        margin: 0 12px;
+
+        &::before {
+          left: -12px;
+          border-width: 22px 12px 22px 0;
+        }
+
+        &::after {
+          right: -12px;
+          border-width: 22px 0 22px 12px;
+        }
+      }
+
+      .button-image {
+        top: 3px;
+        left: 6px;
+        right: 6px;
+        bottom: 3px;
+      }
+    }
+  }
+
+  .panel-info {
+    margin-bottom: 40px;
+    padding: 40px 40px 40px 50px;
+  }
+
+  .panel-info-item {
+    font-size: 10px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 424px) {
+  .panel-join-values a {
+    padding: 12px 6px;
+    margin-bottom: 25px;
+    font-size: 12px;
+  }
+
+  .panel-info {
+    margin-bottom: 40px;
+    padding: 40px 40px 40px 50px;
+  }
+
+  .panel-info-item {
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+
+    >*:first-child {
+      width: 100%;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    >*, a {
+      margin: auto;
+      margin-right: auto;
+    }
+  }
 }
