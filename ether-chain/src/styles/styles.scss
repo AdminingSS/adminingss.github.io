@@ -59,7 +59,7 @@ a {
   background-image: url(../images/bg-top.png);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .container {
@@ -73,11 +73,11 @@ a {
   margin: 0 auto 45px;
   box-sizing: border-box;
   border: 5px solid #a523ff;
-  background: #040107!important;
-  background: radial-gradient(#9508fe, #040107)!important;
-  line-height: 70px!important;
+  background: #040107 !important;
+  background: radial-gradient(#9508fe, #040107) !important;
+  line-height: 70px !important;
   font-size: 50px;
-  color: #ffffff!important;
+  color: #ffffff !important;
 }
 
 .button {
@@ -326,9 +326,31 @@ a {
 
 }
 
-
 //adaptive
+
+@media (max-width: 1599px) {
+  .section-top {
+    padding: 320px 0 25px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .section-top {
+    padding: 250px 0 25px;
+  }
+}
+
+@media (max-width: 959px) {
+  .section-top {
+    padding: 200px 0 25px;
+  }
+}
+
 @media (max-width: 767px) {
+  .section-top {
+    padding: 160px 0 25px;
+  }
+
   .container {
     max-width: 610px;
     padding: 5px;
@@ -336,6 +358,19 @@ a {
 }
 
 @media (max-width: 639px) {
+
+  .section-top {
+    padding: 140px 0 25px;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  .section-top {
+    padding: 140px 0 25px;
+  }
+
   h2 {
     font-size: 42px;
     margin: 0 0 25px;
@@ -436,6 +471,15 @@ a {
 }
 
 @media (max-width: 424px) {
+
+  .section-top {
+    padding: 100px 0 25px;
+  }
+
+  html {
+    font-size: 12px;
+  }
+
   .panel-join-values a {
     padding: 12px 6px;
     margin-bottom: 25px;
@@ -451,13 +495,13 @@ a {
     flex-wrap: wrap;
     margin-bottom: 22px;
 
-    >*:first-child {
+    > *:first-child {
       width: 100%;
       margin-bottom: 8px;
       text-align: center;
     }
 
-    >*, a {
+    > *, a {
       margin: auto;
       margin-right: auto;
     }
