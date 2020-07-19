@@ -204,10 +204,11 @@ p {
   justify-content: space-between;
   align-items: center;
 
-  button {
+  .button {
     width: 215px;
     height: 70px;
     font-size: 20px;
+    margin: 0 0 20px;
 
     .button-content {
       line-height: 70px;

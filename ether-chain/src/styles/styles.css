@@ -161,14 +161,15 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .panel-join-controls button {
+  .panel-join-controls .button {
     width: 215px;
     height: 70px;
-    font-size: 20px; }
-    .panel-join-controls button .button-content {
+    font-size: 20px;
+    margin: 0 0 20px; }
+    .panel-join-controls .button .button-content {
       line-height: 70px;
       margin: 0 20px; }
-      .panel-join-controls button .button-content::before {
+      .panel-join-controls .button .button-content::before {
         position: absolute;
         left: -20px;
         display: inline-block;
@@ -178,7 +179,7 @@ p {
         border-width: 35px 20px 35px 0;
         border-color: transparent #7100ff transparent transparent;
         content: ''; }
-      .panel-join-controls button .button-content::after {
+      .panel-join-controls .button .button-content::after {
         position: absolute;
         right: -20px;
         display: inline-block;
@@ -188,7 +189,7 @@ p {
         border-width: 35px 0 35px 20px;
         border-color: transparent transparent transparent #7100ff;
         content: ''; }
-    .panel-join-controls button .button-image {
+    .panel-join-controls .button .button-image {
       top: 3px;
       left: 6px;
       right: 6px;
