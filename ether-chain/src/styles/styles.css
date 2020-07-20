@@ -121,7 +121,7 @@ a {
 
 .panel-join-background {
   position: absolute;
-  top: -318px;
+  top: -50px;
   left: -369px;
   right: -360px;
   z-index: -1; }
@@ -278,7 +278,7 @@ a {
     padding: 5px; }
 
   .panel-join-background {
-    top: -303px;
+    top: -48px;
     left: -351px;
     right: -343px; }
 
@@ -367,7 +367,13 @@ a {
 
   .panel-info-item {
     font-size: 10px;
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+
+  .panel-join-background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; } }
 @media (max-width: 424px) {
   .section-top {
     padding: 100px 0 25px; }
