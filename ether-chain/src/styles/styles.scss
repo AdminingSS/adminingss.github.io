@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Nebulosa';
-  src: url('../fonts/NebulosaBlackDisplaySolid.eot');
-  src: local('Nebulosa Black Display Solid'), local('NebulosaBlackDisplaySolid'),
-  url('../fonts/NebulosaBlackDisplaySolid.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/NebulosaBlackDisplaySolid.woff2') format('woff2'),
-  url('../fonts/NebulosaBlackDisplaySolid.woff') format('woff'),
-  url('../fonts/NebulosaBlackDisplaySolid.ttf') format('truetype');
+  src: url('../fonts/NebulosaBlack.otf');
+  //src: local('Nebulosa Black Display Solid'), local('NebulosaBlackDisplaySolid'),
+  //url('../fonts/NebulosaBlackDisplaySolid.eot?#iefix') format('embedded-opentype'),
+  //url('../fonts/NebulosaBlackDisplaySolid.woff2') format('woff2'),
+  //url('../fonts/NebulosaBlackDisplaySolid.woff') format('woff'),
+  //url('../fonts/NebulosaBlackDisplaySolid.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
 }
@@ -149,10 +149,19 @@ a {
 }
 
 .panel-join {
+  position: relative;
   padding: 35px;
   border: 1px solid cyan;
   margin-bottom: 30px;
   max-width: 100%;
+}
+
+.panel-join-background {
+  position: absolute;
+  top: -318px;
+  left: -369px;
+  right: -360px;
+  z-index: -1;
 }
 
 .panel-join-display {
@@ -163,7 +172,7 @@ a {
   padding: 15px 20px;
   line-height: 1;
   font-size: 36px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .panel-join-values {
@@ -171,7 +180,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   a {
     white-space: nowrap;
@@ -181,7 +190,7 @@ a {
     color: #ffffff;
     text-decoration: none;
     padding: 25px 20px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -281,7 +290,6 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  text-transform: lowercase;
   margin-bottom: 57px;
 
   a {
@@ -324,6 +332,9 @@ a {
     color: #ff00ff;
   }
 
+  &>*:first-child {
+    text-transform: capitalize;
+  }
 }
 
 //adaptive
@@ -354,6 +365,24 @@ a {
   .container {
     max-width: 610px;
     padding: 5px;
+  }
+
+  .panel-join-background {
+    top: -303px;
+    left: -351px;
+    right: -343px;
+  }
+
+  .panel-join-display {
+    margin-bottom: 30px;
+  }
+
+  .panel-join-values {
+    margin-bottom: 35px;
+
+    a {
+      margin-bottom: 30px;
+    }
   }
 }
 
