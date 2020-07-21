@@ -1,7 +1,7 @@
 $(() => {
 
     (()=> {
-        var odometer = new Odometer({el: $('.counter-wrapper')[0], value: 87360, format: '', theme: 'digital'});
+        var odometer = new Odometer({el: $('.counter-wrapper .odometer')[0], value: 3232749, format: 'd,ddd,ddd', theme: 'digital'});
         odometer.render();
     })();
 
